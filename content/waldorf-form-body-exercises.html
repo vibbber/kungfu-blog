@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 30-Year Exercise — How 5 Minutes of Movement at Age 8 Shapes Thinking for Life | Kung Fu Family</title>
+  <meta name="description" content="Steiner claimed exercises done at age 7-8 create visible wisdom at 35. Three types of body-based exercises — form completion, cross-body coordination, and color harmony — that build thinking through movement.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF6F0;
+      --warm-white: #FFFDF9;
+      --ink: #1A1A2E;
+      --ink-light: #4A4A5A;
+      --ink-faint: #8A8A96;
+      --sage: #5C7A5A;
+      --sage-light: #8BA888;
+      --sage-bg: #F0F5EF;
+      --rose: #C4524A;
+      --rose-light: #E8A598;
+      --rose-bg: #FEF0EE;
+      --gold: #B8860B;
+      --gold-light: #D4A944;
+      --gold-bg: #FDF8EE;
+      --border: #E8E2D8;
+      --radius: 12px;
+      --shadow-sm: 0 2px 8px rgba(26,26,46,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,46,0.1);
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.85;
+    }
+
+    .page-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 1rem 0 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    /* Story */
+    .story p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .story p.opening {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    /* Section headers */
+    h2 {
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin: 3rem 0 1.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--ink);
+      margin: 2rem 0 1rem;
+    }
+
+    /* Full-width image */
+    .story-image {
+      margin: 2rem -1.5rem;
+    }
+
+    .story-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .story-image figcaption {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+      text-align: center;
+      padding: 0.75rem 1.5rem 0;
+      font-style: italic;
+    }
+
+    /* Key insight */
+    .key-insight {
+      background: var(--sage-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      border-left: 4px solid var(--sage);
+    }
+
+    .key-insight p {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .key-insight strong {
+      font-style: normal;
+      color: var(--ink);
+    }
+
+    /* Steiner quote */
+    .steiner-quote {
+      background: var(--gold-bg);
+      border-left: 4px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2rem 0;
+    }
+
+    .steiner-quote p {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .steiner-quote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .steiner-quote cite {
+      display: block;
+      font-family: system-ui, sans-serif;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      margin-top: 0.5rem;
+    }
+
+    /* ========================================
+       EXERCISE CARDS
+       ======================================== */
+    .exercises-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .exercises-section > h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+      border: none;
+    }
+
+    .exercises-section > .intro {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .exercise-card {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+
+    .exercise-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .exercise-card h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--sage);
+      margin-bottom: 0.5rem;
+    }
+
+    .exercise-card p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      margin: 0 0 0.35rem 0;
+      line-height: 1.5;
+    }
+
+    .exercise-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .exercise-card .say {
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    .exercise-card .progression {
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+      margin-top: 0.5rem;
+    }
+
+    /* ========================================
+       COMMAND LIST - Body exercises
+       ======================================== */
+    .command-list {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .command-list > h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+      border: none;
+    }
+
+    .command-list > .intro {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .command-group-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--rose-light);
+      margin: 1rem 0 0.5rem;
+    }
+
+    .command-group-label:first-child {
+      margin-top: 0;
+    }
+
+    .command {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.4rem;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    /* ========================================
+       COLOR EXERCISE
+       ======================================== */
+    .color-demo {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .color-pair {
+      text-align: center;
+    }
+
+    .color-pair .swatches {
+      display: flex;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .color-pair .swatch {
+      width: 60px;
+      height: 50px;
+    }
+
+    .color-pair .label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      margin-top: 0.5rem;
+    }
+
+    .arrow-between {
+      font-size: 1.5rem;
+      color: var(--ink-faint);
+    }
+
+    /* Comparison */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .comparison { grid-template-columns: 1fr; }
+    }
+
+    .comparison-card {
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      font-family: system-ui, sans-serif;
+    }
+
+    .comparison-card.wrong {
+      background: var(--rose-bg);
+      border: 1px solid var(--rose-light);
+    }
+
+    .comparison-card.right {
+      background: var(--sage-bg);
+      border: 1px solid var(--sage-light);
+    }
+
+    .comparison-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .comparison-card.wrong .comparison-label { color: var(--rose); }
+    .comparison-card.right .comparison-label { color: var(--sage); }
+
+    .comparison-card .main-text {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .comparison-card p {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Remember box */
+    .remember-box {
+      background: linear-gradient(135deg, var(--sage) 0%, #4A6A4A 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+
+    .remember-box h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: white;
+    }
+
+    .remember-box p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-section h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: var(--ink);
+    }
+
+    .cta-section p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--sage);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .cta-button:hover {
+      background: #4A6A4A;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      text-align: center;
+    }
+
+    footer em {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <p class="hero-eyebrow">Thinking &middot; Ages 7&ndash;9</p>
+      <h1>The 30-Year Exercise</h1>
+      <p class="hero-subtitle">How 5 minutes of movement at age 8 shapes thinking for life</p>
+    </header>
+
+    <article class="story">
+      <p class="opening">Your child can&rsquo;t sit still during homework.</p>
+
+      <p>They fidget. They tap. They swing their legs under the table. You&rsquo;ve tried everything &mdash; shorter sessions, reward charts, removing distractions. The standard advice says: more focus, more discipline, more stillness. Sit down and think.</p>
+
+      <p>In 1924, Rudolf Steiner told a room full of teachers the opposite: <strong>stop trying to develop thinking through the head.</strong></p>
+
+      <div class="steiner-quote">
+        <p>&ldquo;Doing these exercises when children are eight years old will teach them how to think &mdash; to think for the rest of their lives.&rdquo;</p>
+        <cite>Rudolf Steiner, The Kingdom of Childhood, Lecture 4 (1924)</cite>
+      </div>
+
+      <p>He wasn&rsquo;t talking about meditation or brain games. He was talking about drawing half-finished shapes, touching your right ear with your left hand, and painting red next to green. Physical exercises. Done in five minutes. With effects, he claimed, visible thirty years later.</p>
+
+      <h2>What If the Best Thinking Exercise Isn&rsquo;t Mental?</h2>
+
+      <p>Steiner made a distinction that sounds strange at first: there are two kinds of thinking. One is built &ldquo;directly through the head&rdquo; &mdash; worksheets, drills, memorization. This kind, he argued, makes people &ldquo;thought-tired&rdquo; later in life. It wears out.</p>
+
+      <p>The other kind is built through the body &mdash; through physical activity and spatial perception. This kind lasts.</p>
+
+      <div class="key-insight">
+        <p><strong>Thinking developed through movement and spatial perception lasts a lifetime.</strong> Thinking developed &ldquo;directly through the head&rdquo; makes people thought-tired later. The body builds the mind that endures.</p>
+      </div>
+
+      <p>The claim sounds bold. But the exercises themselves are surprisingly concrete. Steiner described three types, each targeting a different mode of body-based thinking.</p>
+
+      <h2>What Are the Three Types of Exercises?</h2>
+
+      <p>Each type works a different channel: visual-spatial perception, body awareness, and color sensitivity. Together, they develop what Steiner called &ldquo;observation permeated with thought, and thinking permeated with imaginative observation.&rdquo;</p>
+
+      <h3>Type 1: Form Completion</h3>
+
+      <p>Draw an incomplete figure on paper or a board. Ask the child: &ldquo;Does this look complete? What&rsquo;s missing?&rdquo; The child must <em>feel</em> the missing part before drawing it.</p>
+
+      <figure class="story-image">
+        <img src="/images/blog/waldorf-form-body-exercises/form-completion.webp" alt="An incomplete symmetrical curve on paper with a colored pencil nearby">
+        <figcaption>Half a figure. The child feels what&rsquo;s missing before drawing it.</figcaption>
+      </figure>
+
+      <div class="exercises-section">
+        <h3>Form Completion Exercises</h3>
+        <p class="intro">Start simple, progress as the child develops confidence. These build spatial reasoning and the ability to &ldquo;see&rdquo; what isn&rsquo;t there yet.</p>
+
+        <div class="exercise-card">
+          <h4>1. Simple Asymmetry</h4>
+          <p>Draw a figure that&rsquo;s unfinished on one side. The child completes the other half.</p>
+          <p class="say">&ldquo;Look at this shape. Does it feel finished? Draw what&rsquo;s missing.&rdquo;</p>
+          <p class="progression">Start with obvious gaps. Let attempts be clumsy at first.</p>
+        </div>
+
+        <div class="exercise-card">
+          <h4>2. Complex Symmetry</h4>
+          <p>Show a flowing curve (an S-shape, a wave). Give the outer line. The child must find the inner line &mdash; close where the outer is wide, wide where the outer is narrow.</p>
+          <p class="say">&ldquo;Here&rsquo;s the outside. Can you draw the inside line that belongs with it?&rdquo;</p>
+        </div>
+
+        <div class="exercise-card">
+          <h4>3. Curved to Straight</h4>
+          <p>Show a curved figure with its inner line. Then show the same figure made straight (with angles). The child discovers what the inner line should become.</p>
+          <p class="say">&ldquo;This curved shape became this straight shape. What happened to the inside?&rdquo;</p>
+          <p class="progression">This is hard for 8-year-olds but &ldquo;a wonderful achievement.&rdquo;</p>
+        </div>
+
+        <div class="exercise-card">
+          <h4>4. Mirror Reflection</h4>
+          <p>Draw a &ldquo;water line&rdquo; and an object above it. The child draws the reflection below.</p>
+          <p class="say">&ldquo;Imagine water here. What would this look like reflected?&rdquo;</p>
+          <p class="progression">Leads to perception of &ldquo;harmony found in the world.&rdquo;</p>
+        </div>
+      </div>
+
+      <p>Notice what&rsquo;s happening. The child isn&rsquo;t solving a math problem or answering a question. They&rsquo;re training their perception &mdash; learning to sense what&rsquo;s incomplete, what belongs, what fits. That&rsquo;s a thinking skill, built without a single abstract concept.</p>
+
+      <h2>How Does Cross-Body Coordination Build Thinking?</h2>
+
+      <p>The second type is faster, louder, and more physical. Rapid-fire commands that require the child to think about their own body: which hand, which side, which direction.</p>
+
+      <figure class="story-image">
+        <img src="/images/blog/waldorf-form-body-exercises/cross-body.webp" alt="Stylized illustration of a child doing a cross-body touch exercise">
+        <figcaption>Cross-body movement: the brain has to coordinate across hemispheres.</figcaption>
+      </figure>
+
+      <div class="command-list">
+        <h3>Cross-Body Coordination Drills</h3>
+        <p class="intro">Give these as rapid commands. Start slow, then speed up as the child gains confidence. The goal is alertness and forethought, not perfection.</p>
+
+        <p class="command-group-label">Touch Exercises</p>
+        <div class="command">&ldquo;Touch your right eye with your left hand!&rdquo;</div>
+        <div class="command">&ldquo;Touch your left ear with your right hand!&rdquo;</div>
+        <div class="command">&ldquo;Touch your left shoulder with your right hand from behind!&rdquo;</div>
+        <div class="command">&ldquo;Touch the big toe of your right foot with your right hand!&rdquo;</div>
+
+        <p class="command-group-label">Circle Exercises</p>
+        <div class="command">&ldquo;Make a circle with your right hand around your left!&rdquo;</div>
+        <div class="command">&ldquo;Now both hands &mdash; circles cutting each other!&rdquo;</div>
+        <div class="command">&ldquo;One hand clockwise, the other counter-clockwise!&rdquo;</div>
+        <div class="command">&ldquo;Faster!&rdquo;</div>
+
+        <p class="command-group-label">Finger Exercises</p>
+        <div class="command">&ldquo;Move the middle finger of your right hand &mdash; quickly!&rdquo;</div>
+        <div class="command">&ldquo;Now the thumb!&rdquo;</div>
+        <div class="command">&ldquo;Now the little finger!&rdquo;</div>
+      </div>
+
+      <p>These exercises demand something specific: the child must think <em>before</em> moving. Right ear, left hand, from behind. Each command forces a split-second of spatial planning. That planning &mdash; fast, physical, embodied &mdash; is the thinking Steiner believed lasted.</p>
+
+      <h2>What Do Colors Have to Do With Thinking?</h2>
+
+      <p>The third type is the quietest. Give the child paints. Show them how colors &ldquo;belong together.&rdquo;</p>
+
+      <figure class="story-image">
+        <img src="/images/blog/waldorf-form-body-exercises/color-harmony.webp" alt="Watercolor swatches showing complementary color pairs">
+        <figcaption>Red calls for green. The child discovers the harmony themselves.</figcaption>
+      </figure>
+
+      <p>Paint a red surface. Place green beside it. Ask: &ldquo;Do these belong together?&rdquo; The child sees it &mdash; yes, they do. Something about the combination feels right.</p>
+
+      <p>Then reverse it: &ldquo;I&rsquo;ll put green in the middle. What color should go around it?&rdquo;</p>
+
+      <p>The child discovers: if red inside needs green outside, then green inside needs red outside. They&rsquo;re not told. They <em>see</em> it. The perception develops through experience, not explanation.</p>
+
+      <div class="color-demo">
+        <div class="color-pair">
+          <div class="swatches">
+            <div class="swatch" style="background: #c62828;"></div>
+            <div class="swatch" style="background: #5C8A5A;"></div>
+          </div>
+          <p class="label">Red needs green</p>
+        </div>
+        <span class="arrow-between">&harr;</span>
+        <div class="color-pair">
+          <div class="swatches">
+            <div class="swatch" style="background: #5C8A5A;"></div>
+            <div class="swatch" style="background: #c62828;"></div>
+          </div>
+          <p class="label">Green needs red</p>
+        </div>
+      </div>
+
+      <h2>Why Would This Last 30 Years?</h2>
+
+      <p>Here&rsquo;s Steiner&rsquo;s core claim, the one that sounds almost impossible:</p>
+
+      <div class="steiner-quote">
+        <p>&ldquo;There will be a noticeable connection between the wisdom of such people in their thirty-fifth or thirty-sixth year and the exercises they did as a child of six or seven.&rdquo;</p>
+        <cite>Rudolf Steiner, The Kingdom of Childhood (1924)</cite>
+      </div>
+
+      <p>His reasoning: intellectual thinking &mdash; the kind built through worksheets and drills &mdash; lives in the head. It depends on memory, repetition, and the energy to maintain focus. That energy fades with age.</p>
+
+      <p>But thinking built through the body lives deeper. A child who has trained their perception &mdash; who can feel what&rsquo;s missing in a shape, who can coordinate opposite limbs without hesitation, who can sense which colors belong together &mdash; has built a foundation that doesn&rsquo;t require ongoing effort to maintain.</p>
+
+      <div class="comparison">
+        <div class="comparison-card wrong">
+          <p class="comparison-label">Head-based thinking</p>
+          <p class="main-text">&ldquo;Think harder&rdquo;</p>
+          <p>Built through drills and memorization. Requires ongoing effort. Leads to &ldquo;thought-tiredness&rdquo; later.</p>
+        </div>
+        <div class="comparison-card right">
+          <p class="comparison-label">Body-based thinking</p>
+          <p class="main-text">&ldquo;Move and perceive&rdquo;</p>
+          <p>Built through physical coordination and spatial awareness. Becomes part of who you are. Lasts.</p>
+        </div>
+      </div>
+
+      <h2>How Can You Use This at Home?</h2>
+
+      <p>You don&rsquo;t need a Waldorf classroom. These exercises take five minutes and need nothing more than paper, pencils, and a willing child.</p>
+
+      <p><strong>Form completion:</strong> Draw half a butterfly, half a house, half a snowflake. Ask your child to finish it. Start obvious, get harder. The key: let them <em>feel</em> it before they draw. Don&rsquo;t explain symmetry &mdash; let them discover it.</p>
+
+      <p><strong>Body coordination:</strong> Make it a game. Rapid-fire commands at breakfast. &ldquo;Touch your right knee with your left hand!&rdquo; Speed up as they get faster. They&rsquo;ll love it &mdash; it feels like play, not school.</p>
+
+      <p><strong>Color harmony:</strong> Get watercolors. Paint a blob of red. Ask: &ldquo;What color wants to be next to this?&rdquo; No right answer at first. Let them experiment. Then show them how green &ldquo;completes&rdquo; the red.</p>
+
+      <div class="remember-box">
+        <h3>The Core Idea</h3>
+        <p>The thinking that endures isn&rsquo;t built at the desk.<br>It&rsquo;s built through movement, perception, and the body&rsquo;s own intelligence.<br>Five minutes of form, coordination, and color &mdash; and the results last decades.</p>
+      </div>
+
+      <div class="cta-section">
+        <h3>Want More Strategies Like This?</h3>
+        <p>We extract actionable parenting techniques from research and books &mdash; no fluff, just what works.</p>
+        <a href="/" class="cta-button">Browse All Strategies</a>
+      </div>
+    </article>
+
+    <footer>
+      <em>Based on: Steiner, R. (1924). The Kingdom of Childhood. Lecture 4: Form Drawing and Body Exercises. Rudolf Steiner Press.</em>
+      <p style="margin-top: 0.5rem;">Kung Fu Family</p>
+    </footer>
+  </div>
+</body>
+</html>

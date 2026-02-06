@@ -52,6 +52,19 @@ export const articles: Article[] = [
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
   },
+  {
+    slug: 'waldorf-form-body-exercises',
+    title: 'The 30-Year Exercise',
+    subtitle: 'How 5 minutes of movement at age 8 shapes thinking for life',
+    description: 'Steiner claimed exercises done at age 7-8 create visible wisdom at 35. Three types of body-based exercises \u2014 form completion, cross-body coordination, and color harmony \u2014 that build thinking through movement.',
+    image: '/images/cards/waldorf-form-body-exercises.webp',
+    imageAlt: 'Timeline showing a child doing exercises connected by a dotted path to an adult with a glowing mind',
+    topic: 'Thinking',
+    book: 'Kingdom of Childhood',
+    bookSlug: 'steiner-kingdom-of-childhood',
+    datePublished: '2026-02-06',
+    dateModified: '2026-02-06',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
