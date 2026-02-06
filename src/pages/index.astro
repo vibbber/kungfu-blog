@@ -28,17 +28,17 @@ import { articles, topics } from '../data/articles';
       </nav>
     </aside>
 
-    <!-- Card grid -->
-    <main class="grid-container">
-      <div class="card-grid" id="card-grid">
+    <!-- Masonry grid -->
+    <main class="masonry-container">
+      <div class="masonry" id="masonry">
         {articles.map(a => (
           <a
             href={`/${a.slug}`}
             class="card"
             data-topic={a.topic}
           >
-            <div class="card-image">
-              <img src={a.image} alt={a.imageAlt} loading="lazy" width="400" height="400" />
+            <div class="card-image" style={`aspect-ratio: ${a.imageAspect}`}>
+              <img src={a.image} alt={a.imageAlt} loading="lazy" width={a.imageWidth} height={a.imageHeight} />
             </div>
             <div class="card-content">
               <span class="card-topic">{a.topic}</span>
@@ -142,18 +142,22 @@ import { articles, topics } from '../data/articles';
       background: var(--accent-light);
     }
 
-    .grid-container {
+    .masonry-container {
       flex: 1;
       padding: 24px;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
+    .masonry {
+      column-count: 4;
+      column-gap: 24px;
     }
 
     .card {
+      display: block;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      margin-bottom: 24px;
       background: var(--bg-card);
       border-radius: 12px;
       overflow: hidden;
@@ -168,7 +172,6 @@ import { articles, topics } from '../data/articles';
     }
 
     .card-image {
-      aspect-ratio: 1;
       overflow: hidden;
     }
 
@@ -257,16 +260,28 @@ import { articles, topics } from '../data/articles';
       border-color: var(--accent);
     }
 
+    @media (max-width: 1200px) {
+      .masonry {
+        column-count: 3;
+      }
+    }
+
     @media (max-width: 768px) {
       .sidebar { display: none; }
       .mobile-filters { display: block; }
-      .grid-container { padding: 16px 16px 80px; }
-      .card-grid { gap: 16px; }
+      .masonry-container { padding: 16px 16px 80px; }
+      .masonry {
+        column-count: 2;
+        column-gap: 16px;
+      }
+      .card {
+        margin-bottom: 16px;
+      }
     }
 
     @media (max-width: 480px) {
-      .card-grid {
-        grid-template-columns: 1fr;
+      .masonry {
+        column-count: 1;
       }
     }
   </style>
