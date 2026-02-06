@@ -65,6 +65,19 @@ export const articles: Article[] = [
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
   },
+  {
+    slug: 'waldorf-writing-from-pictures',
+    title: 'Writing Before Reading',
+    subtitle: 'Why Waldorf kids pick up a crayon before a book \u2014 ages 7\u20139',
+    description: 'We teach reading first, then writing. Steiner said that\'s backwards. Writing engages the whole body; reading only the head. A 5-step method where letters emerge from pictures \u2014 M from a mouth, S from a snake.',
+    image: '/images/cards/waldorf-writing-from-pictures.webp',
+    imageAlt: 'Split illustration showing a child drawing a letter emerging from a picture versus an open book',
+    topic: 'Literacy',
+    book: 'Kingdom of Childhood',
+    bookSlug: 'steiner-kingdom-of-childhood',
+    datePublished: '2026-02-06',
+    dateModified: '2026-02-06',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
