@@ -39,6 +39,19 @@ export const articles: Article[] = [
     datePublished: '2026-02-04',
     dateModified: '2026-02-06',
   },
+  {
+    slug: 'waldorf-arithmetic-whole-parts',
+    title: 'Division Before Addition',
+    subtitle: 'The counterintuitive order that makes math click for ages 7\u20139',
+    description: 'Standard math asks children to build something from nothing. Waldorf flips it: start with 12, ask what parts make it. All four operations reversed \u2014 and it matches how children actually think.',
+    image: '/images/cards/waldorf-arithmetic-whole-parts.webp',
+    imageAlt: 'Colorful pie chart circle dividing into separate segments with arrows',
+    topic: 'Math',
+    book: 'Kingdom of Childhood',
+    bookSlug: 'steiner-kingdom-of-childhood',
+    datePublished: '2026-02-06',
+    dateModified: '2026-02-06',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
