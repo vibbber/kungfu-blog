@@ -1,0 +1,16 @@
+{
+  "name": "kungfu-blog",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "images:convert": "node scripts/convert-images.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.17.1",
+    "sharp": "^0.33.5"
+  }
+}

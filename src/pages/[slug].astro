@@ -1,0 +1,54 @@
+---
+import Article from '../layouts/Article.astro';
+import { articles, type Article as ArticleType } from '../data/articles';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
+
+export async function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props as { article: ArticleType };
+
+// Read HTML content
+const contentPath = join(process.cwd(), 'content', `${article.slug}.html`);
+let rawHtml: string;
+try {
+  rawHtml = await readFile(contentPath, 'utf-8');
+} catch (err) {
+  throw new Error(`Missing content file: content/${article.slug}.html`);
+}
+
+// Extract body content (between <body> and </body>)
+const bodyMatch = rawHtml.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+const bodyContent = bodyMatch ? bodyMatch[1] : rawHtml;
+
+// Extract embedded styles (between <style> and </style> in head)
+const styleMatch = rawHtml.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+const embeddedStyles = styleMatch ? styleMatch[1] : '';
+
+// Replace .png/.jpg/.jpeg with .webp in image paths
+const webpContent = bodyContent
+  .replace(/\.(png|jpg|jpeg)"/g, '.webp"')
+  .replace(/\.(png|jpg|jpeg)'/g, ".webp'");
+
+// Scope blog CSS to prevent overriding site-level styles.
+// 1. Strip universal * reset (Base.astro already has one)
+// 2. Replace :root and body with scoped .article-content class
+// 3. Scope bare element selectors (h2, h3, footer, etc.) to .article-content
+const scopedStyles = embeddedStyles
+  .replace(/\*,?\s*\*::before,?\s*\*::after\s*\{[^}]*\}/g, '')
+  .replace(/:root\s*\{/g, '.article-content {')
+  .replace(/^\s*body\s*\{/gm, '.article-content {')
+  .replace(/^(\s*)(h[1-6]|footer|header|nav|main|section|article|aside|p|ul|ol|li|table|blockquote|figure|figcaption|a)\s*\{/gm, '$1.article-content $2 {');
+---
+
+<Article article={article}>
+  {scopedStyles && <Fragment set:html={`<style>${scopedStyles}</style>`} />}
+  <div class="article-content">
+    <Fragment set:html={webpContent} />
+  </div>
+</Article>

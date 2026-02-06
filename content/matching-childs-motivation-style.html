@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speaking the Wrong Dialect — Why Your Requests Fall Flat (And How to Translate) | Kung Fu Family</title>
+  <meta name="description" content="The same pep talk inspires one child and bounces off another. It's not about effort — it's about direction. Learn to identify your child's motivation style and speak their language.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF6F0;
+      --warm-white: #FFFDF9;
+      --ink: #1A1A2E;
+      --ink-light: #4A4A5A;
+      --ink-faint: #8A8A96;
+      --sage: #5C7A5A;
+      --sage-light: #8BA888;
+      --sage-bg: #F0F5EF;
+      --ocean: #2D6A8A;
+      --ocean-light: #4A8AAA;
+      --ocean-bg: #EDF4F7;
+      --rose: #C4524A;
+      --rose-light: #E8A598;
+      --rose-bg: #FEF0EE;
+      --gold: #B8860B;
+      --gold-bg: #FDF8EC;
+      --toward-green: #27AE60;
+      --toward-bg: #EDF7ED;
+      --away-orange: #E67E22;
+      --away-bg: #FEF6ED;
+      --border: #E8E2D8;
+      --radius: 12px;
+      --shadow-sm: 0 2px 8px rgba(26,26,46,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,46,0.1);
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.85;
+    }
+
+    .page-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 1rem 0 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ocean);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    /* Story narrative */
+    .story p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .story p.opening {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    /* Section headers - Question format for SEO */
+    h2 {
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin: 3rem 0 1.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--ink);
+      margin: 2rem 0 1rem;
+    }
+
+    /* Dialogue boxes */
+    .dialogue {
+      background: var(--warm-white);
+      border-left: 3px solid var(--ink-faint);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+
+    .dialogue .speaker {
+      font-family: system-ui, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Full-width image */
+    .story-image {
+      margin: 2rem -1.5rem;
+    }
+
+    .story-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .story-image figcaption {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+      text-align: center;
+      padding: 0.75rem 1.5rem 0;
+      font-style: italic;
+    }
+
+    /* Key insight */
+    .key-insight {
+      background: var(--ocean-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      border-left: 4px solid var(--ocean);
+    }
+
+    .key-insight p {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .key-insight strong {
+      font-style: normal;
+      color: var(--ink);
+    }
+
+    /* ========================================
+       TWO PROFILE CARDS - Side by Side
+       ======================================== */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 550px) {
+      .profile-grid { grid-template-columns: 1fr; }
+    }
+
+    .profile-card {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .profile-header {
+      padding: 0.85rem 1rem;
+      color: white;
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .profile-header.toward {
+      background: var(--toward-green);
+    }
+
+    .profile-header.away-from {
+      background: var(--away-orange);
+    }
+
+    .profile-body {
+      padding: 1.25rem;
+    }
+
+    .profile-body h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .profile-body h4:first-child {
+      margin-top: 0;
+    }
+
+    .profile-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .profile-body li {
+      padding: 0.3rem 0 0.3rem 1.25rem;
+      position: relative;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .profile-body li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .toward .profile-body li::before {
+      background: var(--toward-green);
+    }
+
+    .away-from .profile-body li::before {
+      background: var(--away-orange);
+    }
+
+    /* ========================================
+       TRANSLATION TABLE - The Core Tool
+       ======================================== */
+    .translation-section {
+      margin: 2.5rem 0;
+    }
+
+    .translation-intro {
+      margin-bottom: 1rem;
+    }
+
+    .translation-wrapper {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .translation-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: system-ui, sans-serif;
+    }
+
+    .translation-table th {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .translation-table th:first-child {
+      background: var(--ink-light);
+      color: white;
+      width: 22%;
+    }
+
+    .translation-table th:nth-child(2) {
+      background: var(--toward-green);
+      color: white;
+    }
+
+    .translation-table th:nth-child(3) {
+      background: var(--away-orange);
+      color: white;
+    }
+
+    .translation-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      vertical-align: top;
+    }
+
+    .translation-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .translation-table tr:nth-child(even) {
+      background: rgba(0,0,0,0.02);
+    }
+
+    .translation-table .situation {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.85rem;
+    }
+
+    .script-box {
+      background: var(--cream);
+      border-radius: 6px;
+      padding: 0.65rem 0.85rem;
+      font-style: italic;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .script-box.toward-script {
+      border-left: 3px solid var(--toward-green);
+    }
+
+    .script-box.away-script {
+      border-left: 3px solid var(--away-orange);
+    }
+
+    /* Mobile table handling */
+    @media (max-width: 600px) {
+      .translation-table th,
+      .translation-table td {
+        padding: 0.75rem 0.65rem;
+        font-size: 0.8rem;
+      }
+      .script-box {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* ========================================
+       NUANCE BOX - Collapsible
+       ======================================== */
+    .nuance-section {
+      background: var(--gold-bg);
+      border: 1px solid #E8D9A8;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+    }
+
+    .nuance-section summary {
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      font-family: system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--gold);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nuance-section summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nuance-section summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .nuance-section[open] summary::after {
+      content: "−";
+    }
+
+    .nuance-content {
+      padding: 0 1.25rem 1.25rem;
+    }
+
+    .nuance-content p {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .nuance-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .nuance-content strong {
+      color: var(--ink);
+    }
+
+    /* Remember box */
+    .remember-box {
+      background: linear-gradient(135deg, var(--ocean) 0%, #1D5A7A 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+
+    .remember-box h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: white;
+    }
+
+    .remember-box p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-section h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: var(--ink);
+    }
+
+    .cta-section p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--ocean);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .cta-button:hover {
+      background: #1D5A7A;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      text-align: center;
+    }
+
+    footer em {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <p class="hero-eyebrow">Communication</p>
+      <h1>Speaking the Wrong Dialect</h1>
+      <p class="hero-subtitle">Why your requests fall flat — and how to translate</p>
+    </header>
+
+    <article class="story">
+      <p class="opening">"Think how great you'll feel when this is done!"</p>
+
+      <p>Maria had used this line on her daughter Lily a hundred times. It worked beautifully. Lily would light up, picture the finish line, and get moving.</p>
+
+      <p>So when her son Jake was dragging his feet on a school project, Maria tried the same approach.</p>
+
+      <div class="dialogue">
+        <p class="speaker">Maria</p>
+        <p>"Imagine how proud you'll be when you hand it in! You could even get extra credit!"</p>
+      </div>
+
+      <p>Jake stared at her blankly. Then went back to his game.</p>
+
+      <p>Maria tried louder. More enthusiasm. More descriptions of success. Nothing. It was like speaking to a wall.</p>
+
+      <p>Eventually, frustrated, she switched tactics: "If you don't finish this tonight, you're going to be stressed all weekend, and you might not even get to go to Sam's party."</p>
+
+      <p>Jake looked up. Closed his game. Started working.</p>
+
+      <figure class="story-image">
+        <img src="/images/blog/matching-childs-motivation-style/dialect-mismatch.png" alt="Two speech bubbles that don't connect - one pointing toward a trophy, one pointing away from a storm cloud">
+        <figcaption>Same parent. Same intention. Two completely different languages.</figcaption>
+      </figure>
+
+      <h2>What's Wrong With Jake?</h2>
+
+      <p>Nothing. Jake isn't lazy, difficult, or unmotivated. He's <strong>away-from motivated</strong>.</p>
+
+      <p>Lily lights up when she pictures success, achievement, rewards. She moves <em>toward</em> good things.</p>
+
+      <p>Jake lights up when he pictures avoiding problems, stress, and consequences. He moves <em>away from</em> bad things.</p>
+
+      <div class="key-insight">
+        <p>This isn't about effort or desire. It's about <strong>direction</strong>. Lily's motivational compass points toward the trophy. Jake's points away from the storm. <strong>Both get you moving — but only if you speak the right language.</strong></p>
+      </div>
+
+      <p>Maria wasn't failing to motivate Jake. She was speaking French to someone who only speaks Spanish.</p>
+
+      <h2>How Do You Identify Your Child's Style?</h2>
+
+      <p>Listen to how they talk. The words they choose reveal which direction their compass points.</p>
+
+      <div class="profile-grid">
+        <div class="profile-card toward">
+          <div class="profile-header toward">Toward Child</div>
+          <div class="profile-body">
+            <h4>You'll notice</h4>
+            <ul>
+              <li>Excited about new possibilities</li>
+              <li>Talks about what they <em>want</em></li>
+              <li>Loves setting goals</li>
+              <li>Gets bored with routine</li>
+              <li>May skip over risks</li>
+            </ul>
+            <h4>Language they use</h4>
+            <ul>
+              <li>"I want to..."</li>
+              <li>"That would be so cool!"</li>
+              <li>"What if we tried..."</li>
+              <li>"Can we go to..."</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="profile-card away-from">
+          <div class="profile-header away-from">Away-From Child</div>
+          <div class="profile-body">
+            <h4>You'll notice</h4>
+            <ul>
+              <li>Careful, checks for problems</li>
+              <li>Talks about what they <em>don't want</em></li>
+              <li>Good at spotting what could go wrong</li>
+              <li>May seem cautious about new things</li>
+              <li>Relieved when things go smoothly</li>
+            </ul>
+            <h4>Language they use</h4>
+            <ul>
+              <li>"I don't want to..."</li>
+              <li>"What if it goes wrong?"</li>
+              <li>"I just don't want to get in trouble"</li>
+              <li>"Make sure it doesn't..."</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2>How Do You Translate Your Requests?</h2>
+
+      <p>Once you know their style, translation is straightforward. Here's the same request in both languages:</p>
+
+      <div class="translation-section">
+        <div class="translation-wrapper">
+          <table class="translation-table">
+            <thead>
+              <tr>
+                <th>Situation</th>
+                <th>Toward Child</th>
+                <th>Away-From Child</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="situation">Homework</td>
+                <td>
+                  <div class="script-box toward-script">"When you finish, you'll have the whole evening free to do what you want."</div>
+                </td>
+                <td>
+                  <div class="script-box away-script">"If you get it done now, you won't have it hanging over you all night."</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="situation">Trying something new</td>
+                <td>
+                  <div class="script-box toward-script">"Think about what you might discover! You might really love it."</div>
+                </td>
+                <td>
+                  <div class="script-box away-script">"You can always stop if it's not for you. There's no risk in trying."</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="situation">Being kind to a sibling</td>
+                <td>
+                  <div class="script-box toward-script">"Imagine how happy she'd be if you shared that with her."</div>
+                </td>
+                <td>
+                  <div class="script-box away-script">"If you share, there won't be a fight, and nobody ends up upset."</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="situation">Chores</td>
+                <td>
+                  <div class="script-box toward-script">"Once it's done, the kitchen will look great and we can all enjoy it."</div>
+                </td>
+                <td>
+                  <div class="script-box away-script">"If we clean up now, we won't have that gross mess later."</div>
+                </td>
+              </tr>
+              <tr>
+                <td class="situation">Goal-setting</td>
+                <td>
+                  <div class="script-box toward-script">"What would you love to be able to do by the end of the year?"</div>
+                </td>
+                <td>
+                  <div class="script-box away-script">"What would you like to make sure doesn't happen this year?"</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>Notice: both columns are equally valid. Neither is "positive thinking" vs "negative thinking." They're just different compass directions.</p>
+
+      <details class="nuance-section">
+        <summary>Important nuances (click to expand)</summary>
+        <div class="nuance-content">
+          <p><strong>Most kids use both styles depending on context.</strong> Your child might be toward about sports but away-from about social situations. Look at the pattern in each domain, not globally.</p>
+          <p><strong>Don't pathologize away-from.</strong> An away-from child isn't "anxious" or "negative." They have a sharp eye for risk that serves them well. Trying to force them into toward language will feel dismissive. Meet them where they are.</p>
+          <p><strong>Don't over-indulge toward.</strong> A toward child may need help learning to pause and assess risks. Their enthusiasm is a strength, but "look before you leap" is a valuable complementary skill.</p>
+          <p><strong>Check your own style.</strong> If you're strongly toward and your child is away-from (or vice versa), your natural language will consistently miss them. This isn't personality clash — it's a translation gap.</p>
+        </div>
+      </details>
+
+      <h2>Why Does This Work?</h2>
+
+      <p>This isn't just parenting intuition. Psychologist E. Tory Higgins developed "Regulatory Focus Theory" in the 1990s, identifying two distinct motivational systems: <strong>promotion focus</strong> (pursuing gains) and <strong>prevention focus</strong> (avoiding losses).</p>
+
+      <p>Research shows people are more persuaded by messages that match their regulatory focus. A promotion-focused person responds better to "here's what you could gain." A prevention-focused person responds better to "here's what you could avoid losing."</p>
+
+      <p>The toward/away-from framework from NLP maps directly onto this research. It's the same insight, translated into practical parenting language.</p>
+
+      <div class="remember-box">
+        <h3>The Bottom Line</h3>
+        <p>You don't need to change your child's motivation style.<br>You need to <strong>translate your message into their language.</strong><br>When they feel understood, they can actually hear you.</p>
+      </div>
+
+      <div class="cta-section">
+        <h3>Want More Communication Strategies?</h3>
+        <p>We extract actionable parenting techniques from research and books — no fluff, just what works.</p>
+        <a href="/" class="cta-button">Browse All Strategies</a>
+      </div>
+    </article>
+
+    <footer>
+      <em>Based on: Jago, W. (2012). Wired for Success. Tarcher/Penguin.<br>Supported by Higgins' Regulatory Focus Theory (1997).</em>
+      <p style="margin-top: 0.5rem;">Kung Fu Family</p>
+    </footer>
+  </div>
+</body>
+</html>

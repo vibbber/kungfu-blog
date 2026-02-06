@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Difficult" Isn't a Trait — Why the Same Child Thrives in One Setting and Struggles in Another | Kung Fu Family</title>
+  <meta name="description" content="Roy was a 'good baby.' By 8, his mother called him 'impossible.' What changed wasn't Roy. Learn the goodness-of-fit framework with 4 diagnostic questions and actionable steps.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF6F0;
+      --warm-white: #FFFDF9;
+      --ink: #1A1A2E;
+      --ink-light: #4A4A5A;
+      --ink-faint: #8A8A96;
+      --sage: #5C7A5A;
+      --sage-light: #8BA888;
+      --sage-bg: #F0F5EF;
+      --rose: #C4524A;
+      --rose-light: #E8A598;
+      --rose-bg: #FEF0EE;
+      --border: #E8E2D8;
+      --radius: 12px;
+      --shadow-sm: 0 2px 8px rgba(26,26,46,0.06);
+      --shadow-md: 0 4px 16px rgba(26,26,46,0.1);
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.85;
+    }
+
+    .page-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 1rem 0 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      font-family: system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    /* Story narrative */
+    .story p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .story p.opening {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    /* Section headers - Question format for SEO */
+    h2 {
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin: 3rem 0 1.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--ink);
+      margin: 2rem 0 1rem;
+    }
+
+    /* Side-by-side images */
+    .image-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .image-pair { grid-template-columns: 1fr; }
+    }
+
+    .image-pair figure { margin: 0; }
+
+    .image-pair img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .image-pair figcaption {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      text-align: center;
+      padding-top: 0.5rem;
+    }
+
+    .image-pair figcaption.good { color: var(--sage); font-weight: 600; }
+    .image-pair figcaption.poor { color: var(--rose); font-weight: 600; }
+
+    /* Full-width image */
+    .story-image {
+      margin: 2rem -1.5rem;
+    }
+
+    .story-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .story-image figcaption {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--ink-faint);
+      text-align: center;
+      padding: 0.75rem 1.5rem 0;
+      font-style: italic;
+    }
+
+    /* Story highlight / key insight */
+    .key-insight {
+      background: var(--sage-bg);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      border-left: 4px solid var(--sage);
+    }
+
+    .key-insight p {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .key-insight strong {
+      font-style: normal;
+      color: var(--ink);
+    }
+
+    /* ========================================
+       DIAGNOSTIC QUESTIONS - Visual Card Grid
+       ======================================== */
+    .diagnostic-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .diagnostic-section h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+      border: none;
+    }
+
+    .diagnostic-intro {
+      font-size: 1rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 550px) {
+      .question-grid { grid-template-columns: 1fr; }
+    }
+
+    .question-card {
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+    }
+
+    .question-card h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--rose-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .question-card p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ========================================
+       REFRAME TABLE - Prominent & Clear
+       ======================================== */
+    .reframe-section {
+      margin: 2.5rem 0;
+    }
+
+    .reframe-section > p {
+      margin-bottom: 1rem;
+    }
+
+    .reframe-table-wrapper {
+      background: var(--warm-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .reframe-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: system-ui, sans-serif;
+    }
+
+    .reframe-table th {
+      background: var(--sage);
+      color: white;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .reframe-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      vertical-align: top;
+    }
+
+    .reframe-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .reframe-table tr:nth-child(even) {
+      background: rgba(0,0,0,0.02);
+    }
+
+    .reframe-table .trait {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .reframe-table .difficult {
+      color: var(--rose);
+    }
+
+    .reframe-table .fit-aware {
+      color: var(--sage);
+    }
+
+    /* ========================================
+       STEPS - Visually Distinct
+       ======================================== */
+    .steps-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .steps-section h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin: 0 0 1.25rem 0;
+      padding: 0;
+      border: none;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-num {
+      background: var(--rose-light);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-content p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Insight boxes */
+    .insight-box {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .insight-box h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sage);
+      margin-bottom: 0.75rem;
+    }
+
+    .insight-box p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .insight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Remember box */
+    .remember-box {
+      background: linear-gradient(135deg, var(--sage) 0%, #4A6A4A 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 3rem 0 2rem;
+    }
+
+    .remember-box h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: white;
+    }
+
+    .remember-box p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-section h3 {
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem 0;
+      padding: 0;
+      border: none;
+      color: var(--ink);
+    }
+
+    .cta-section p {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--sage);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .cta-button:hover {
+      background: #4A6A4A;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+      text-align: center;
+    }
+
+    footer em {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="hero">
+      <p class="hero-eyebrow">Temperament</p>
+      <h1>"Difficult" Isn't a Trait</h1>
+      <p class="hero-subtitle">Why the same child thrives in one setting and struggles in another</p>
+    </header>
+
+    <article class="story">
+      <p class="opening">Roy was a "good baby."</p>
+
+      <p>When he cried, his parents could redirect his attention in seconds. Upset about a wet diaper? Show him a toy. Frustrated during a car ride? Point out the window. He was easily soothed, endlessly distractible, a joy to be around.</p>
+
+      <p>His parents congratulated themselves on their easy child.</p>
+
+      <div class="image-pair">
+        <figure>
+          <img src="/images/blog/goodness-of-fit/roy-baby-happy.png" alt="Happy baby being easily distracted with a toy">
+          <figcaption class="good">Roy at 6 months: "Such a good baby"</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/blog/goodness-of-fit/roy-8yo-frustrated.png" alt="Same child at 8, frustrated at desk">
+          <figcaption class="poor">Roy at 8 years: "Impossible"</figcaption>
+        </figure>
+      </div>
+
+      <p>By the time Roy was eight, his mother used different words: "impossible," "doesn't listen," "can't be counted on." She nagged constantly. He tuned her out constantly. They were locked in a cycle neither could escape.</p>
+
+      <h2>What Changed?</h2>
+
+      <p>Not Roy. Roy's distractibility — the exact same trait — stayed constant. What changed was what the world expected of him.</p>
+
+      <div class="key-insight">
+        <p>As a baby, distractibility meant <strong>"easy to soothe."</strong> As a child, distractibility meant <strong>"can't focus, forgets everything, never listens."</strong></p>
+        <p style="margin-top: 1rem;"><strong>The trait was identical. The label flipped from gift to curse.</strong></p>
+      </div>
+
+      <h2>What Is "Goodness of Fit"?</h2>
+
+      <p>Psychologists call it <strong>goodness of fit</strong>: the match (or mismatch) between a child's temperament and the environment's demands.</p>
+
+      <figure class="story-image">
+        <img src="/images/blog/goodness-of-fit/plants-comparison.png" alt="Same plant wilting in poor soil, thriving in rich soil">
+        <figcaption>Same plant. Different soil. The plant didn't change.</figcaption>
+      </figure>
+
+      <p>"Difficult" doesn't describe the child. It describes the gap between who they are and what the environment expects.</p>
+
+      <div class="image-pair">
+        <figure>
+          <img src="/images/blog/goodness-of-fit/child-energy-good-fit.png" alt="Child running joyfully in a park">
+          <figcaption class="good">Good fit: Energy welcomed</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/blog/goodness-of-fit/child-energy-poor-fit.png" alt="Same child stuck at desk">
+          <figcaption class="poor">Poor fit: Same energy, wrong context</figcaption>
+        </figure>
+      </div>
+
+      <p>An active child in an athletic family? Good fit. That same child in a family that values quiet, controlled behavior? Poor fit. The child feels wrong. The parents feel frustrated. Everyone suffers.</p>
+
+      <p><strong>Same child. Same trait. Different fit.</strong></p>
+
+      <h2>Why Do We Call Some Children "Difficult"?</h2>
+
+      <p>Here's what the research actually shows about traits we call "difficult":</p>
+
+      <div class="insight-box">
+        <h4>Surprising Findings</h4>
+        <p><strong>Fear/withdrawal</strong> (labeled "difficult") actually predicts higher conscience and lower aggression later in life.</p>
+        <p><strong>A long attention span</strong> is "easy" when they amuse themselves, "difficult" when you call them for dinner.</p>
+        <p><strong>Negative emotionality</strong> is "difficult" in Western cultures but seen completely differently in others.</p>
+      </div>
+
+      <p>When you label a child "difficult," you're describing the fit, not the child.</p>
+
+      <h2>How Do You Know If It's a Fit Problem?</h2>
+
+      <p>When your child is struggling in a situation, run through these four questions:</p>
+
+      <div class="diagnostic-section">
+        <h3>Four Diagnostic Questions</h3>
+        <p class="diagnostic-intro">Ask yourself these when your child is struggling:</p>
+
+        <div class="question-grid">
+          <div class="question-card">
+            <h4>1. What Trait?</h4>
+            <p>What temperament trait is this situation pressing on? (Fear, high activity, distractibility, low adaptability?)</p>
+          </div>
+          <div class="question-card">
+            <h4>2. What Demands?</h4>
+            <p>What does this environment demand that clashes with my child's temperament?</p>
+          </div>
+          <div class="question-card">
+            <h4>3. Same Trait, Different Age?</h4>
+            <p>Was this trait seen positively before? Has the situation changed, not the child?</p>
+          </div>
+          <div class="question-card">
+            <h4>4. Good Fit Where?</h4>
+            <p>Where does this trait serve my child well? What environments bring out its strengths?</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>How Can the Same Trait Be Both "Good" and "Bad"?</h2>
+
+      <p>Every trait has a situation where it's an asset and a situation where it's a liability. The difference is the fit, not the trait.</p>
+
+      <div class="reframe-section">
+        <div class="reframe-table-wrapper">
+          <table class="reframe-table">
+            <thead>
+              <tr>
+                <th>Trait</th>
+                <th>"Difficult" Framing</th>
+                <th>Fit-Aware Framing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="trait">High activity</td>
+                <td class="difficult">"Can't sit still, always in trouble"</td>
+                <td class="fit-aware">"Needs physical outlets; environment asks for too much stillness"</td>
+              </tr>
+              <tr>
+                <td class="trait">Fearful / shy</td>
+                <td class="difficult">"Too clingy, won't try things"</td>
+                <td class="fit-aware">"Cautious and careful; needs gradual introductions and time to warm up"</td>
+              </tr>
+              <tr>
+                <td class="trait">High intensity</td>
+                <td class="difficult">"So dramatic, overreacts to everything"</td>
+                <td class="fit-aware">"Experiences emotions strongly; needs more support during transitions"</td>
+              </tr>
+              <tr>
+                <td class="trait">Distractible</td>
+                <td class="difficult">"Never listens, forgetful"</td>
+                <td class="fit-aware">"Notices everything; needs fewer competing stimuli and shorter task segments"</td>
+              </tr>
+              <tr>
+                <td class="trait">Low adaptability</td>
+                <td class="difficult">"Rigid, inflexible, fights every change"</td>
+                <td class="fit-aware">"Needs predictability; give advance warning before transitions"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2>What Could Roy's Parents Have Done Differently?</h2>
+
+      <p>If they'd understood goodness of fit, here's how they could have changed their approach:</p>
+
+      <div class="steps-section">
+        <h3>Four Steps to Improve the Fit</h3>
+
+        <div class="step-item">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>See the trait, not the behavior</h4>
+            <p>"Roy doesn't listen" becomes "Roy is distractible." It's not defiance — it's temperament. "He won't come to dinner" is about attention persistence, not disrespect.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Adjust the press</h4>
+            <p>Reduce the environmental demand on that trait. For Roy: fewer competing stimuli, shorter instructions, visual reminders instead of verbal nagging.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Find the strength side</h4>
+            <p>Distractibility = noticing everything. Where is that an asset? Creative thinking? Spotting things others miss? Find those situations and create more of them.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <span class="step-num">4</span>
+          <div class="step-content">
+            <h4>Communicate the fit</h4>
+            <p>Tell teachers and caregivers what works, not what's "wrong." Say "Roy does best with one instruction at a time" — not "Roy has attention problems."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="remember-box">
+        <h3>The Bottom Line</h3>
+        <p>A child labeled "difficult" is almost always a child in a poor-fit environment.<br>Your job isn't to fix the child. It's to improve the fit.</p>
+      </div>
+
+      <div class="cta-section">
+        <h3>Want More Strategies Like This?</h3>
+        <p>We extract actionable parenting techniques from research and books — no fluff, just what works.</p>
+        <a href="/" class="cta-button">Browse All Strategies</a>
+      </div>
+    </article>
+
+    <footer>
+      <em>Based on: Rothbart, M.K. (2011). Becoming Who We Are: Temperament and Personality in Development. The Guilford Press.<br>Concept originated by Thomas, A. & Chess, S. (1977), New York Longitudinal Study.</em>
+      <p style="margin-top: 0.5rem;">Kung Fu Family</p>
+    </footer>
+  </div>
+</body>
+</html>

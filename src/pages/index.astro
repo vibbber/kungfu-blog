@@ -1,0 +1,311 @@
+---
+import Base from '../layouts/Base.astro';
+import { articles, topics } from '../data/articles';
+---
+
+<Base
+  title="Kung Fu Family — Parenting Strategies from Books"
+  description="Evidence-based parenting strategies extracted from research and books. Practical techniques for raising children with purpose."
+>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <a href="/" class="logo">Kung Fu <span>Family</span></a>
+    <span class="article-count">{articles.length} articles</span>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-label">TOPIC</div>
+          <button class="sidebar-item active" data-filter="topic" data-value="">All</button>
+          {topics.map(t => (
+            <button class="sidebar-item" data-filter="topic" data-value={t}>{t}</button>
+          ))}
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Card grid -->
+    <main class="grid-container">
+      <div class="card-grid" id="card-grid">
+        {articles.map(a => (
+          <a
+            href={`/${a.slug}`}
+            class="card"
+            data-topic={a.topic}
+          >
+            <div class="card-image">
+              <img src={a.image} alt={a.imageAlt} loading="lazy" width="400" height="400" />
+            </div>
+            <div class="card-content">
+              <span class="card-topic">{a.topic}</span>
+              <h2 class="card-title">{a.title}</h2>
+              <p class="card-subtitle">{a.subtitle}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile filter bar -->
+  <div class="mobile-filters">
+    <div class="mobile-filter-scroll">
+      <button class="mobile-chip active" data-filter="topic" data-value="">All</button>
+      {topics.map(t => (
+        <button class="mobile-chip" data-filter="topic" data-value={t}>{t}</button>
+      ))}
+    </div>
+  </div>
+
+  <style>
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .logo span { color: var(--text); }
+
+    .article-count {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .layout {
+      display: flex;
+      min-height: calc(100vh - 53px);
+    }
+
+    .sidebar {
+      width: 180px;
+      flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      padding: 20px 0;
+      position: sticky;
+      top: 53px;
+      height: calc(100vh - 53px);
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+
+    .sidebar-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      padding: 0 20px;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .sidebar-item:hover {
+      background: var(--bg-hover);
+      color: var(--text);
+    }
+
+    .sidebar-item.active {
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--accent-light);
+    }
+
+    .grid-container {
+      flex: 1;
+      padding: 24px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .card-image {
+      aspect-ratio: 1;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .card:hover .card-image img {
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      padding: 16px 20px 20px;
+    }
+
+    .card-topic {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .card-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .card.hidden {
+      display: none;
+    }
+
+    .mobile-filters {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(250, 250, 248, 0.97);
+      backdrop-filter: blur(20px);
+      border-top: 1px solid var(--border);
+      padding: 10px 0;
+      z-index: 100;
+    }
+
+    .mobile-filter-scroll {
+      display: flex;
+      gap: 8px;
+      padding: 0 12px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .mobile-filter-scroll::-webkit-scrollbar { display: none; }
+
+    .mobile-chip {
+      flex-shrink: 0;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .mobile-chip.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .mobile-filters { display: block; }
+      .grid-container { padding: 16px 16px 80px; }
+      .card-grid { gap: 16px; }
+    }
+
+    @media (max-width: 480px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>;
+    let currentFilter = '';
+
+    function applyFilter(value: string) {
+      currentFilter = value;
+      cards.forEach(card => {
+        const match = !value || card.dataset.topic === value;
+        card.classList.toggle('hidden', !match);
+      });
+    }
+
+    document.querySelectorAll('.sidebar-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const el = btn as HTMLElement;
+        const value = el.dataset.value || '';
+
+        document.querySelectorAll('.sidebar-item').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+
+        applyFilter(value);
+      });
+    });
+
+    document.querySelectorAll('.mobile-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const el = btn as HTMLElement;
+        const value = el.dataset.value || '';
+
+        document.querySelectorAll('.mobile-chip').forEach(b => b.classList.remove('active'));
+        el.classList.add('active');
+
+        applyFilter(value);
+      });
+    });
+  </script>
+
+</Base>
