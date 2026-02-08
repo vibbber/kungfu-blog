@@ -18,11 +18,11 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: 'goodness-of-fit',
-    title: '"Difficult" Isn\'t a Trait',
-    subtitle: 'Why the same child thrives in one setting and struggles in another',
-    description: 'Roy was a "good baby." By 8, his mother called him "impossible." What changed wasn\'t Roy. Learn the goodness-of-fit framework with 4 diagnostic questions and actionable steps.',
+    title: 'Stop Fixing Your Child',
+    subtitle: 'The one shift that turns "difficult" into "thriving"',
+    description: 'Exhausted from correcting and managing? The problem isn\'t your child — it\'s the match between their temperament and the environment. Four diagnostic questions and a reframe table to find the fit.',
     image: '/images/cards/goodness-of-fit.webp',
-    imageAlt: 'Same plant wilting in wrong environment, thriving in right one - same child, different fit',
+    imageAlt: 'Wilting seedling transforming into thriving plant - watercolor illustration showing change of environment',
     imageWidth: 1024,
     imageHeight: 1024,
     imageAspect: 1,
@@ -30,7 +30,7 @@ export const articles: Article[] = [
     book: 'Becoming Who We Are',
     bookSlug: 'rothbart-becoming-who-we-are',
     datePublished: '2026-02-04',
-    dateModified: '2026-02-06',
+    dateModified: '2026-02-08',
   },
   {
     slug: 'matching-childs-motivation-style',
