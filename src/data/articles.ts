@@ -96,6 +96,22 @@ export const articles: Article[] = [
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
   },
+  {
+    slug: 'three-period-lesson',
+    title: 'Fewer Words, Faster Learning',
+    subtitle: 'Montessori\'s 3-step technique for teaching any concept — ages 2-6',
+    description: 'You explain, repeat, re-explain — and it\'s not sticking. Montessori\'s Three-Period Lesson uses almost no words to teach colors, shapes, letters, and more. Three steps, a no-correction protocol, and 8 ready-to-use applications.',
+    image: '/images/cards/three-period-lesson.webp',
+    imageAlt: 'Three wooden blocks numbered 1, 2, 3 in sage green, soft blue, and coral — representing the three periods of Montessori\'s teaching method',
+    imageWidth: 1024,
+    imageHeight: 681,
+    imageAspect: 1.504,
+    topic: 'Teaching',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-02-08',
+    dateModified: '2026-02-08',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
