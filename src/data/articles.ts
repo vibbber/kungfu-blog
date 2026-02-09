@@ -112,6 +112,22 @@ export const articles: Article[] = [
     datePublished: '2026-02-08',
     dateModified: '2026-02-08',
   },
+  {
+    slug: 'both-and-boundary',
+    title: 'The HOLD Method',
+    subtitle: 'Set limits and stay connected — in the same sentence',
+    description: 'Stop choosing between firm and warm. The HOLD method gives you 4 steps to set a boundary and validate your child\'s feelings — in the same sentence. Scripts included.',
+    image: '/images/cards/both-and-boundary.webp',
+    imageAlt: 'H-O-L-D letter grid with anchor, eye, chain, and hand icons representing the four steps',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Communication',
+    book: 'Good Inside',
+    bookSlug: 'good-inside-kennedy',
+    datePublished: '2026-02-09',
+    dateModified: '2026-02-09',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
