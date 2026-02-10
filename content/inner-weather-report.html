@@ -3,576 +3,574 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Family Weather Report | Kung Fu Family</title>
-  <meta name="description" content="A daily check-in ritual that gives your family a shared language for feelings. One question — 'What's your weather?' — works from age 3 to teens. Scripts and setup guide included.">
+  <meta name="description" content="The four hardest words in parenting aren't 'I love you.' They're 'Thanks for telling me.' How one family therapist's weather metaphor changes everything.">
+  <title>The Four Hardest Words in Parenting | Kung Fu</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
+      font-family: 'Lora', Georgia, serif;
       background: #FAF6F0;
       color: #1A1A2E;
       line-height: 1.75;
+      padding: 0;
     }
 
-    .hero {
-      position: relative;
-      width: 100%;
-      min-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.05) 0%,
-        rgba(0,0,0,0.25) 40%,
-        rgba(0,0,0,0.75) 100%
-      );
-    }
-
-    .hero-text {
-      position: relative;
-      z-index: 1;
-      padding: 0 48px 64px;
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 4.5rem;
-      font-weight: 700;
-      color: #FFFDF9;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-
-    .hero .subtitle {
-      font-size: 1.35rem;
-      color: rgba(255,253,249,0.85);
-      font-style: italic;
-      line-height: 1.4;
-      max-width: 600px;
-    }
-
-    .hero .meta {
-      margin-top: 24px;
-      font-size: 0.85rem;
-      color: rgba(255,253,249,0.5);
-    }
-
-    .content {
-      max-width: 680px;
+    .blog-container {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 40px 24px 60px;
+    }
+
+    /* ---- Typography ---- */
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(32px, 5vw, 44px);
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.15;
+      margin-bottom: 16px;
     }
 
     h2 {
-      font-size: 1.5rem;
-      color: #2D6A8A;
-      margin: 48px 0 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-top: 48px;
+      margin-bottom: 20px;
       line-height: 1.3;
     }
 
-    p { margin-bottom: 20px; }
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
 
-    .scene {
-      background: #FFFDF9;
-      border-left: 4px solid #5C7A5A;
-      padding: 24px 28px;
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .age-badge {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    /* ---- Blog Images ---- */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
       margin: 32px 0;
-      border-radius: 0 8px 8px 0;
-      color: #4A4A5A;
-      line-height: 1.8;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .blog-img-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 32px;
       font-style: italic;
     }
 
-    .insight-box {
-      background: linear-gradient(135deg, #2D6A8A, #3a85a8);
+    /* ---- Callout Box ---- */
+    .callout {
+      background: #5C8A5A;
       color: white;
-      border-radius: 12px;
       padding: 28px 32px;
-      margin: 32px 0;
+      border-radius: 12px;
+      margin: 36px 0;
       text-align: center;
     }
 
-    .insight-box .label {
+    .callout p {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .callout .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-size: 0.75rem;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* ---- Comparison Table ---- */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .compare-table th {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 20px;
+      text-align: left;
+    }
+
+    .compare-table th.col-dont {
+      background: #F3E0DB;
+      color: #8B4513;
+    }
+
+    .compare-table th.col-do {
+      background: #D5E8D4;
+      color: #2D5A2D;
+    }
+
+    .compare-table td {
+      padding: 14px 20px;
+      font-size: 15px;
+      border-bottom: 1px solid #f0ebe4;
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table td.cell-dont {
+      background: #FEF6F3;
+    }
+
+    .compare-table td.cell-do {
+      background: #F5FAF4;
+    }
+
+    /* ---- Script Cards ---- */
+    .script-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .script-card .step-num {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .script-card .step-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: #1A1A2E;
+      display: inline;
+    }
+
+    .script-card .step-desc {
+      font-size: 15px;
+      color: #555;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .script-card .say-this {
+      background: #F0F7EF;
+      border: 1px solid #C5DCC3;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 15px;
+      color: #2D5A2D;
+      line-height: 1.6;
+    }
+
+    .script-card .say-this::before {
+      content: 'Say:';
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+      color: #5C8A5A;
+    }
+
+    /* ---- Age Grid ---- */
+    .age-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (min-width: 600px) {
+      .age-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .age-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .age-card .age-range {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #5C8A5A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .age-card p {
+      font-size: 14px;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ---- Warning Box ---- */
+    .warning-box {
+      background: #FEF6F3;
+      border: 2px solid #E8A598;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .warning-box .warning-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #8B4513;
+      margin-bottom: 8px;
+    }
+
+    .warning-box p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #5A3A20;
+    }
+
+    /* ---- Remember Box ---- */
+    .remember {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .remember .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       opacity: 0.8;
       margin-bottom: 12px;
     }
 
-    .insight-box .text {
-      font-size: 1.25rem;
-      font-style: italic;
-      line-height: 1.4;
-    }
-
-    .diagram-img {
-      display: block;
-      max-width: 480px;
-      margin: 32px auto;
-      border-radius: 12px;
-    }
-
-    .comparison-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 28px 0;
-    }
-
-    @media (max-width: 500px) { .comparison-row { grid-template-columns: 1fr; } }
-
-    .comparison-card {
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .comparison-card.old {
-      background: #fef3f0;
-      border-top: 4px solid #C4524A;
-    }
-
-    .comparison-card.new {
-      background: #eef5f0;
-      border-top: 4px solid #5C7A5A;
-    }
-
-    .comparison-card .tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 10px;
-    }
-
-    .comparison-card.old .tag { color: #C4524A; }
-    .comparison-card.new .tag { color: #5C7A5A; }
-
-    .comparison-card .line {
-      font-size: 0.95rem;
-      margin-bottom: 10px;
+    .remember p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
       line-height: 1.5;
     }
 
-    .comparison-card .result {
-      font-size: 0.85rem;
-      color: #4A4A5A;
-      font-style: italic;
-      margin-bottom: 0;
-    }
-
-    .ritual-step {
-      background: #FFFDF9;
-      border-radius: 12px;
-      padding: 28px;
-      margin: 20px 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .ritual-step::before {
-      content: attr(data-num);
-      position: absolute;
-      top: -10px;
-      right: 12px;
-      font-size: 5rem;
-      font-weight: 700;
-      opacity: 0.05;
-      line-height: 1;
-      color: #2D6A8A;
-    }
-
-    .ritual-step h3 {
-      font-size: 1.15rem;
-      color: #2D6A8A;
-      margin-bottom: 4px;
-    }
-
-    .ritual-step .when {
-      font-size: 0.85rem;
-      color: #999;
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    .ritual-step p {
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-
-    .ritual-step p:last-child { margin-bottom: 0; }
-
-    .script {
-      background: #eef5f0;
-      border: 1px solid #5C7A5A;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 12px 0;
-      font-family: 'Georgia', serif;
-      font-style: italic;
-      font-size: 0.95rem;
-      color: #2a3a2a;
-      line-height: 1.7;
-    }
-
-    .script .who {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #5C7A5A;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .warning {
-      background: #fff8f0;
-      border: 1px solid #e8c89a;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin: 12px 0;
-      font-size: 0.9rem;
-      color: #4A4A5A;
-    }
-
-    .warning strong { color: #B8860B; }
-
-    details {
-      background: #FFFDF9;
-      border-radius: 12px;
-      margin: 16px 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-
-    summary {
-      padding: 18px 24px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #1A1A2E;
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    /* ---- Checklist ---- */
+    .checklist {
       list-style: none;
+      padding: 0;
+      margin: 24px 0;
     }
 
-    summary::-webkit-details-marker { display: none; }
-
-    summary .icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 0.85rem;
-      font-weight: 700;
-      flex-shrink: 0;
-      background: #5C7A5A;
-      font-family: system-ui, sans-serif;
+    .checklist li {
+      padding: 12px 0 12px 36px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid #EDE8E0;
     }
 
-    summary .arrow {
-      margin-left: auto;
-      transition: transform 0.2s;
-      color: #2D6A8A;
+    .checklist li:last-child {
+      border-bottom: none;
     }
 
-    details[open] summary .arrow { transform: rotate(90deg); }
-
-    .age-content {
-      padding: 0 24px 24px;
-      border-top: 1px solid #f0ebe3;
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #5C8A5A;
+      border-radius: 4px;
     }
 
-    .age-content p { margin-top: 16px; font-size: 0.95rem; }
-
-    .research-note {
-      background: #eef3f7;
-      border: 1px solid #c5d8e4;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin: 32px 0;
-      font-size: 0.9rem;
-      color: #4A4A5A;
+    /* ---- Divider ---- */
+    .section-divider {
+      border: none;
+      border-top: 2px solid #EDE8E0;
+      margin: 48px 0;
     }
 
-    .research-note .label {
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #2D6A8A;
-      margin-bottom: 8px;
-    }
-
-    .weather-scale {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 28px 0;
-    }
-
-    .weather-chip {
-      padding: 10px 18px;
-      border-radius: 24px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      font-family: system-ui, sans-serif;
-    }
-
-    .w-sunny { background: #f0f7e6; color: #4a7a3a; border: 1px solid #c5dba8; }
-    .w-partly { background: #eef5f7; color: #2D6A8A; border: 1px solid #b8d4e0; }
-    .w-cloudy { background: #f5f0e6; color: #8a7a5a; border: 1px solid #d8cdb4; }
-    .w-rainy { background: #f0eef5; color: #6a5a8a; border: 1px solid #c5bdd8; }
-    .w-stormy { background: #fef3f0; color: #9a4a3a; border: 1px solid #e0b4ac; }
-
-    .remember {
-      background: linear-gradient(135deg, #2D6A8A, #3a85a8);
-      color: white;
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin: 48px 0 32px;
+    /* ---- Footer ---- */
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #DDD;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #999;
       text-align: center;
     }
 
-    .remember h3 { font-size: 1.1rem; margin-bottom: 12px; opacity: 0.85; }
-    .remember p { font-size: 1.2rem; font-style: italic; margin-bottom: 0; }
-
-    .cta {
-      text-align: center;
-      padding: 32px;
-      font-size: 0.95rem;
-      color: #4A4A5A;
-    }
-
-    .cta a { color: #2D6A8A; text-decoration: underline; }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2.8rem; }
-      .hero-text { padding: 0 24px 40px; }
+    footer a {
+      color: #5C8A5A;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <img class="hero-img" src="/images/blog/inner-weather-report/hero.webp" alt="A warm kitchen scene with a family sitting at a table, a weather chart visible on the fridge behind them">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h1>The Family<br>Weather Report</h1>
-      <p class="subtitle">A daily ritual that makes feelings speakable — from age 3 to teens</p>
-      <p class="meta">Informed by decades of family therapy research</p>
-    </div>
-  </div>
+  <div class="blog-container">
 
-  <div class="content">
+    <div class="meta">Virginia Satir's Family Therapy</div>
+    <span class="age-badge">Ages 3+</span>
+    <h1>The Four Hardest Words in Parenting Aren't "I Love You"</h1>
 
-    <div class="scene">
-      You pick up your kid from school. "How was your day?" Fine. Dinner. "Everything okay?" Yeah. Bedtime. You can see something's off — the way they're curled up, the short answers, the edge in their voice. But when you ask, you get the wall. Fine. Good. Nothing. You're standing right next to them, and you've never felt further away.
-    </div>
+    <p class="lead">Your kid tells you they had a terrible day. Every instinct screams: <em>Ask what happened. Find the problem. Fix it.</em> But the single most powerful response is one that will feel completely wrong the first time you say it.</p>
 
-    <p>Here's what most of us do next: we push harder. "You seem upset." We try softer: "You know you can tell me anything." We try sideways: "Did something happen with your friend?" Each attempt lands the same way — as pressure. And pressure makes the wall thicker.</p>
+    <p>"Thanks for telling me."</p>
 
-    <p>The problem isn't that your child won't share. It's that the tools we give them for sharing don't work. "How do you feel?" requires a vocabulary most adults don't have. "What's wrong?" assumes something is wrong. "Talk to me" is an open-ended demand that a 6-year-old — or a 14-year-old — has no idea how to answer.</p>
+    <p>That's it. No follow-up. No detective work. No "Was it that kid again?" Just acknowledgment that they trusted you enough to say something honest, and you didn't turn it into a project.</p>
 
-    <div class="insight-box">
-      <div class="label">The surprising thing</div>
-      <div class="text">Families don't need deeper conversations. They need simpler vocabulary. One shared metaphor can do what years of "tell me how you feel" can't.</div>
-    </div>
+    <p>This comes from Virginia Satir, a family therapist who spent decades watching families talk past each other. She noticed something specific: most people -- adults and kids -- can't talk about how they actually feel. Not because they lack vocabulary. Because every time they try, the other person does something with it. Gives advice. Minimizes it. Turns it into a conversation about themselves. So people stop trying.</p>
 
-    <h2>What if you could check in without interrogating?</h2>
+    <p>Satir's fix was deceptively simple. She gave families a metaphor.</p>
 
-    <p>The idea is almost too simple: give your family a weather metaphor for how they're feeling inside. Sunny means you're good. Cloudy means something's off. Stormy means you're struggling. That's it.</p>
+    <img src="/images/blog/inner-weather-report/family-weather-dinner.webp" alt="A family sitting at a dinner table, each person with a different weather icon above their head -- sun, clouds, rain, partial clouds -- all comfortable with their different emotional states" class="blog-img">
+    <p class="blog-img-caption">Everyone carries different weather. The family that can say it out loud weathers everything better.</p>
 
-    <p>No explanation required. No follow-up questions. A 4-year-old can hold up a hand for sunshine. A teenager can mutter "cloudy" without it turning into A Whole Conversation. The metaphor does the heavy lifting — it gives people a way to signal their inner state without having to dissect it.</p>
+    <h2>The Metaphor That Removes the Pressure</h2>
 
-    <div class="weather-scale">
-      <span class="weather-chip w-sunny">Sunny</span>
-      <span class="weather-chip w-partly">Partly cloudy</span>
-      <span class="weather-chip w-cloudy">Overcast</span>
-      <span class="weather-chip w-rainy">Rainy</span>
-      <span class="weather-chip w-stormy">Stormy</span>
-    </div>
+    <p>Imagine your inner world has weather. Some days are clear and warm. Other days are overcast, rainy, freezing. There's no wrong weather -- the only problem is pretending the sun is out when you're actually in a storm.</p>
 
-    <p>And here's the part that makes it actually work: one rule. When someone shares their weather, the only acceptable response is <strong>"Thanks for telling me."</strong> No judging. No fixing. No interrogating. Just acknowledgment. This is what makes the metaphor safe enough to use honestly.</p>
+    <p>"What's your weather today?" is a different question than "How are you feeling?" It's lighter. Less clinical. A six-year-old can answer it. A teenager can answer it without feeling interrogated. And it comes with a built-in escape hatch: weather changes. Saying "I'm stormy" doesn't mean you're broken -- it means right now is rough.</p>
 
-    <img class="diagram-img" src="/images/blog/inner-weather-report/diagram.webp" alt="Before and after diagram: before shows a parent asking and child turning away, after shows both relaxed with a weather icon between them">
+    <img src="/images/blog/inner-weather-report/weather-scale.webp" alt="A horizontal emotional weather scale showing six states from sunshine to thunderstorm, each with a simple icon and one-line feeling description" class="blog-img">
+    <p class="blog-img-caption">The scale isn't about precision -- it's about giving people a fast, low-pressure way to signal where they are.</p>
 
-    <h2>Why does a silly metaphor work better than a real conversation?</h2>
+    <p>The scale doesn't need to be complicated. Most families land on something like this:</p>
 
-    <p>Because "real conversations" about feelings carry invisible pressure. When you ask "What's wrong?", your child hears: explain yourself. Justify your mood. Give me something I can fix. That's a lot of cognitive and emotional work — especially when you're already depleted.</p>
+    <table class="compare-table" style="margin: 28px 0;">
+      <tr>
+        <th class="col-do" style="width: 30%; background: #D5E8D4;">Weather</th>
+        <th class="col-do" style="background: #D5E8D4;">What It Feels Like</th>
+      </tr>
+      <tr>
+        <td class="cell-do" style="font-weight: 600;">Sunshine</td>
+        <td class="cell-do">Good energy. Open. Ready for anything.</td>
+      </tr>
+      <tr>
+        <td class="cell-do" style="font-weight: 600;">Partly Cloudy</td>
+        <td class="cell-do">Fine overall, but something's sitting in the back of my mind.</td>
+      </tr>
+      <tr>
+        <td class="cell-do" style="font-weight: 600;">Overcast</td>
+        <td class="cell-do">Low energy. Everything feels heavier than usual.</td>
+      </tr>
+      <tr>
+        <td class="cell-do" style="font-weight: 600;">Rainy</td>
+        <td class="cell-do">Sad, drained, or just want to be left alone.</td>
+      </tr>
+      <tr>
+        <td class="cell-do" style="font-weight: 600;">Thunderstorm</td>
+        <td class="cell-do">Angry, overwhelmed, or falling apart inside.</td>
+      </tr>
+    </table>
 
-    <p>A metaphor short-circuits all of it. "Stormy" contains everything your child needs to communicate — <em>I'm not okay right now</em> — without the interrogation that usually follows. It's a pressure valve disguised as a game.</p>
+    <p>Kids don't have to explain <em>why</em> they're rainy. They just have to say the word. That alone is a massive shift. It turns "I can't articulate this complicated feeling" into "I can point to a cloud."</p>
 
-    <div class="comparison-row">
-      <div class="comparison-card old">
-        <div class="tag">The usual approach</div>
-        <div class="line">"How are you feeling?"</div>
-        <div class="line">"What's wrong?"</div>
-        <div class="line">"Talk to me."</div>
-        <p class="result">Requires vocabulary, self-awareness, and willingness to be vulnerable — all at once.</p>
-      </div>
-      <div class="comparison-card new">
-        <div class="tag">The weather report</div>
-        <div class="line">"What's your weather?"</div>
-        <div class="line">"Cloudy."</div>
-        <div class="line">"Thanks for telling me."</div>
-        <p class="result">One word. No follow-up. The door is open without anyone having to walk through it.</p>
-      </div>
-    </div>
+    <hr class="section-divider">
 
-    <div class="research-note">
-      <div class="label">Why this works</div>
-      <p>Family systems researchers have consistently found that clinical or direct language about emotions tends to shut people down — adults and children alike. But when families adopt playful, shared shorthand for emotional states, the unspoken becomes speakable. The mechanism is simple: metaphors reduce the social cost of vulnerability. Saying "I'm stormy" feels lighter than "I feel worthless today." And that lightness is exactly what makes honesty possible.</p>
-    </div>
+    <h2>Why the "Fix It" Instinct Kills the Whole Thing</h2>
 
-    <h2>How do you start the ritual?</h2>
+    <p>Here's where most parents -- most people, honestly -- break the ritual without realizing it.</p>
 
-    <p>There are four moves. They build on each other. The whole thing unfolds over a week or two — not in a single awkward family meeting.</p>
+    <p>A child says, "My weather is stormy." And the parent, because they love this child, immediately responds with some version of:</p>
 
-    <div class="ritual-step" data-num="1">
-      <h3>Plant the idea</h3>
-      <div class="when">Dinner, bedtime, or a car ride — wherever your family is relaxed</div>
-      <p>Float the metaphor casually. Don't make it A Thing. Just mention that everyone carries invisible weather inside them, and it changes day to day.</p>
-      <div class="script">
-        <span class="who">Try this:</span>
-        You know how the weather changes every day outside? I think we all have weather inside us too. Some days I feel like sunshine — ready for anything. Other days it's more like rain — heavy, slow, just want to be left alone. What if we started telling each other our weather?
-      </div>
-    </div>
+    <img src="/images/blog/inner-weather-report/interrogation-vs-checkin.webp" alt="Split illustration comparing interrogation style (parent leaning forward, question marks, child shrinking) with check-in style (parent relaxed, child sharing openly, calm atmosphere)" class="blog-img">
+    <p class="blog-img-caption">Same kid, same bad day. The difference is what happens in the next five seconds.</p>
 
-    <div class="ritual-step" data-num="2">
-      <h3>Go first — every time</h3>
-      <div class="when">At arrival home, at dinner, at bedtime — model it repeatedly</div>
-      <p>Share your own weather before you ever ask about theirs. This is not optional. If you never show vulnerability, asking about theirs feels like surveillance.</p>
-      <div class="script">
-        <span class="who">Examples:</span>
-        "My weather is mostly sunny today — I finished something I'd been putting off and it felt great."<br><br>
-        "I'm pretty overcast right now. Long day. I just need a few quiet minutes."
-      </div>
-      <div class="warning">
-        <strong>The key:</strong> When you share cloudy or stormy weather, don't immediately explain it away or perform being fine. Let it sit. Your kids are watching to see if it's actually safe to not be okay.
-      </div>
-    </div>
+    <table class="compare-table">
+      <tr>
+        <th class="col-dont">What feels natural</th>
+        <th class="col-do">What actually works</th>
+      </tr>
+      <tr>
+        <td class="cell-dont">"Why? What happened?"</td>
+        <td class="cell-do">"Thanks for telling me."</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">"Was it something at school?"</td>
+        <td class="cell-do"><em>(Silence. Warmth.)</em></td>
+      </tr>
+      <tr>
+        <td class="cell-dont">"Well, at least you have the weekend."</td>
+        <td class="cell-do">"I'm glad you told me."</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">"Do you want to talk about it?"</td>
+        <td class="cell-do">"I'm here if you want to say more. No pressure."</td>
+      </tr>
+    </table>
 
-    <div class="ritual-step" data-num="3">
-      <h3>Invite — never interrogate</h3>
-      <div class="when">After you've modeled it for several days</div>
-      <p>Ask once. Accept whatever comes. If they shrug, let it go. The moment this becomes mandatory, it stops working.</p>
-      <div class="script">
-        <span class="who">The question:</span>
-        "What's your weather tonight?"
-      </div>
-      <div class="script">
-        <span class="who">If they share:</span>
-        "Thanks for telling me."
-      </div>
-      <p>That's it. No "Why are you cloudy?" No "What happened?" No "Well, at least..." Just acknowledgment. This is the hardest part and the most important. Every instinct will tell you to fix or dig deeper. Resist.</p>
+    <p>The left column isn't bad parenting. It's loving parenting with the wrong timing. Every one of those responses sends the same unintentional message: <em>Your feeling is a problem to be solved.</em></p>
+
+    <p>The right column sends a different message: <em>Your feeling is information I'm grateful to have.</em></p>
+
+    <div class="callout">
+      <span class="label">The One Rule</span>
+      <p>When someone shares their weather, you say:<br>"Thanks for telling me."<br>No judging. No fixing. No interrogating.</p>
     </div>
 
-    <div class="ritual-step" data-num="4">
-      <h3>Let it become language</h3>
-      <div class="when">After a few weeks — don't rush this</div>
-      <p>Once the vocabulary sticks, family members start using it spontaneously to communicate needs — without having to explain or justify themselves.</p>
-      <div class="script">
-        <span class="who">What this sounds like:</span>
-        "I'm in a thunderstorm right now. I could really use a hug."<br><br>
-        "Leave me alone for a bit — my weather is rough."<br><br>
-        "Can we talk later? I need my skies to clear first."
+    <p>This is genuinely hard. It will feel insufficient. You'll worry you're doing nothing. But think about it from the child's perspective: every other adult in their life responds to feelings with action. You're the one person who responds with presence. That's rare. And they'll come back to it.</p>
+
+    <hr class="section-divider">
+
+    <h2>How to Start (Without It Feeling Forced)</h2>
+
+    <p>The ritual has four steps. The first three take about a week. The fourth takes care of itself.</p>
+
+    <div class="script-card">
+      <span class="step-num">1</span>
+      <span class="step-title">Float the metaphor</span>
+      <p class="step-desc">Pick a casual moment -- dinner, a car ride, bedtime. Don't make it a big announcement. Just introduce the idea that people carry invisible weather.</p>
+      <div class="say-this">"You know how weather changes every day? I think we have weather inside us too. Some days I feel like sunshine -- ready for anything. Other days it's more like rain -- heavy, slow, just want to be quiet. What if we started telling each other our weather?"</div>
+    </div>
+
+    <div class="script-card">
+      <span class="step-num">2</span>
+      <span class="step-title">Go first. Repeatedly.</span>
+      <p class="step-desc">Use the language yourself for several days before you ever ask your kid about theirs. Let them hear you be honest -- including on the cloudy days. If you only ever report sunshine, they'll learn this is performative.</p>
+      <div class="say-this">"My weather today is mostly sunny -- I finished that thing I'd been putting off and it feels great."<br><br>"I'm pretty overcast right now. Long day. I just need a few quiet minutes."</div>
+    </div>
+
+    <div class="script-card">
+      <span class="step-num">3</span>
+      <span class="step-title">Invite once. Accept whatever comes.</span>
+      <p class="step-desc">After a few days of modeling, ask casually. If they share, thank them. If they shrug or say "I don't know" -- let it go. The moment this becomes mandatory, it stops being safe.</p>
+      <div class="say-this">"What's your weather tonight?"</div>
+    </div>
+
+    <div class="script-card">
+      <span class="step-num">4</span>
+      <span class="step-title">Let it become language.</span>
+      <p class="step-desc">When the metaphor sticks, something shifts. Family members start using it unprompted to communicate needs -- without justifying or explaining.</p>
+      <div class="say-this">"I'm in a thunderstorm right now. I could really use a hug."<br><br>"Leave me alone for a bit -- my weather is rough."<br><br>"Can we talk later? I need my skies to clear first."</div>
+    </div>
+
+    <div class="warning-box">
+      <div class="warning-title">The trap to watch for</div>
+      <p>If you ask about their weather and then probe with "Why? What happened?" -- you've just turned a check-in into an interrogation. They won't make that mistake twice. The rule is: they share, you thank them. That's the whole move.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Adjusting for Age</h2>
+
+    <p>The metaphor works across a surprisingly wide range. How you use it just shifts.</p>
+
+    <div class="age-grid">
+      <div class="age-card">
+        <div class="age-range">Ages 3-5</div>
+        <p>Skip words. Use their bodies: arms spread wide overhead for "sunshine," arms hanging low for "rainy." You can also draw suns, clouds, and storms on a whiteboard by the door.</p>
+      </div>
+      <div class="age-card">
+        <div class="age-range">Ages 6-9</div>
+        <p>Add a number. "My weather's about a 6 out of 10 -- partly cloudy." Ask what made it go up or down. They'll start connecting events to feelings on their own.</p>
+      </div>
+      <div class="age-card">
+        <div class="age-range">Ages 10+</div>
+        <p>Introduce the real distinction: having a rough day is normal. <em>Pretending</em> you're fine when you're not is what's dangerous. Teens need permission to drop the mask.</p>
       </div>
     </div>
 
-    <h2>How do you adapt this for different ages?</h2>
+    <img src="/images/blog/inner-weather-report/sunny-stormy-shadow.webp" alt="A child standing with a bright smile, but their shadow shows a hunched figure surrounded by storm clouds -- illustrating the gap between the mask and what's really happening inside" class="blog-img">
+    <p class="blog-img-caption">The danger isn't having stormy weather. It's the gap between what they show and what they feel.</p>
 
-    <p>The metaphor scales naturally. Here's how it looks at each stage.</p>
+    <hr class="section-divider">
 
-    <details open>
-      <summary>
-        <span class="icon">3-5</span>
-        <span>Toddlers and preschoolers</span>
-        <span class="arrow">&#9654;</span>
-      </summary>
-      <div class="age-content">
-        <p>Use their bodies. Arms spread wide overhead means sunshine. Arms hanging low means rainy. They can show you their weather even when they can't name it.</p>
-        <p>You can also draw suns, clouds, and storms on a whiteboard by the door. When they arrive home, they point to one. No words needed.</p>
-        <p>At this age, don't expect explanations. A child pointing to the storm cloud is doing everything they need to do. Your job: "I see. Thanks for showing me."</p>
-      </div>
-    </details>
+    <h2>Making It Stick (Without Making It a Chore)</h2>
 
-    <details>
-      <summary>
-        <span class="icon">6-9</span>
-        <span>School-age kids</span>
-        <span class="arrow">&#9654;</span>
-      </summary>
-      <div class="age-content">
-        <p>Add a number scale. "My weather is about a 6 out of 10 today — partly cloudy." This gives them a way to communicate degree without narrating every detail.</p>
-        <p>At this age, you can start asking what moved the needle: "What brought your weather up today?" or "Was there anything that made it cloudier?" But only if they seem open. The invitation, not the interrogation.</p>
-        <p>Kids this age also love rituals. Making the weather check-in a consistent part of dinner or bedtime gives it structure — and structure makes it feel safe.</p>
-      </div>
-    </details>
-
-    <details>
-      <summary>
-        <span class="icon">10+</span>
-        <span>Tweens and teens</span>
-        <span class="arrow">&#9654;</span>
-      </summary>
-      <div class="age-content">
-        <p>Introduce the key distinction: there's a difference between having a rough day (normal, everyone does) and pretending you're fine when you're not (dangerous, isolating). Teens especially need permission to drop the mask.</p>
-        <p>With older kids, the metaphor also works as a boundary-setter: "My weather is rough right now — I need 20 minutes before we talk about the grade." This teaches them that managing your own emotional state is a skill, not a weakness.</p>
-        <p>Don't be surprised if teens resist at first. That's fine. Keep modeling it yourself. Eventually the vocabulary tends to seep in — you'll hear them use it with friends or with you, often when you least expect it.</p>
-      </div>
-    </details>
-
-    <h2>What about the person who always says "sunny"?</h2>
-
-    <p>Every family has one. The person who's always fine, always good, always sunny — even when you can see they're clearly not. This is the family member who might need the ritual most.</p>
-
-    <p>Don't push. Don't say "You don't look sunny to me." Instead, notice it gently over time. One day, when the moment feels right: <em>"I've noticed you always say sunny. I want you to know it's okay to say cloudy. I won't try to fix it. I'll just be glad you told me."</em></p>
-
-    <p>Sometimes one sentence like that, said at the right moment, is what finally opens the door. Not because you demanded entry — but because you made it clear the door was never locked.</p>
-
-    <h2>What if the ritual stops working?</h2>
-
-    <p>Some weeks nobody wants to check in. That's fine. The ritual should feel like an invitation, never an obligation. If it becomes a chore, let it breathe. It'll come back.</p>
-
-    <p>The real sign of success isn't daily compliance — it's spontaneous use. The first time your child says "I'm stormy" without being asked, or your partner says "My weather is rough, can we talk later?", the ritual has done its job. The vocabulary has become part of how your family talks to each other.</p>
-
-    <p>And when someone shares and you accidentally jump into fix-it mode — because you will — catch yourself. "Sorry. I just started problem-solving. What you said matters. Thanks for telling me." Modeling repair teaches more than getting it right every time.</p>
+    <ul class="checklist">
+      <li><strong>Anchor it to one moment.</strong> Dinner, bedtime, the car ride home. One consistent touchpoint is enough. Don't try to do it all day.</li>
+      <li><strong>Let it breathe.</strong> Some days nobody wants to check in. That's fine. An invitation that becomes an obligation stops working immediately.</li>
+      <li><strong>Repair when you slip.</strong> You'll accidentally jump into fix-it mode. When you catch it: "Sorry -- I just started problem-solving. What you said matters. Thanks for telling me." Modeling the repair teaches more than doing it perfectly ever could.</li>
+      <li><strong>Watch the "always sunny" person.</strong> The family member who never reports clouds might need the ritual most. Don't push, but notice. Sometimes just saying "I've noticed you always say sunny -- I want you to know it's okay to say cloudy" opens everything up.</li>
+    </ul>
 
     <div class="remember">
-      <h3>The One Rule</h3>
-      <p>When someone shares their weather, you thank them.<br>No judging. No fixing. No interrogating.<br>Just: "Thanks for telling me."</p>
+      <div class="label">The whole thing in one sentence</div>
+      <p>Give your family a metaphor that makes feelings speakable, and respond to honesty with the only words that keep people coming back:<br><strong>"Thanks for telling me."</strong></p>
     </div>
 
-    <div class="cta">
-      <p>Explore more strategies at <a href="https://kungfu.family">kungfu.family</a></p>
-    </div>
+    <footer>
+      <p>Based on the work of Virginia Satir, <em>The New Peoplemaking</em>. Published by <a href="https://kungfu.family">kungfu.family</a></p>
+    </footer>
+
   </div>
 </body>
 </html>
