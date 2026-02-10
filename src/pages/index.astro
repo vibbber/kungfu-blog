@@ -45,6 +45,34 @@ import { articles, topics } from '../data/articles';
               <h2 class="card-title">{a.title}</h2>
               <p class="card-subtitle">{a.subtitle}</p>
             </div>
+            {a.forProblems && (
+              <div class="card-hover-details">
+                <div class="hover-section">
+                  <div class="hover-label">For</div>
+                  <ul class="hover-list">
+                    {a.forProblems.split(/[;]/).map(item => item.trim() && <li>{item.trim()}</li>)}
+                  </ul>
+                </div>
+                <div class="hover-section">
+                  <div class="hover-label">Approach</div>
+                  <ul class="hover-list">
+                    {a.approach!.split(/[.]/).filter(item => item.trim()).map(item => <li>{item.trim()}</li>)}
+                  </ul>
+                </div>
+                <div class="hover-section">
+                  <div class="hover-label">Evidence</div>
+                  <ul class="hover-list">
+                    {a.evidence!.split(/[;]/).map(item => item.trim() && <li>{item.trim()}</li>)}
+                  </ul>
+                </div>
+                <div class="hover-section">
+                  <div class="hover-label">Inside</div>
+                  <ul class="hover-list">
+                    {a.inside!.split(/[,]/).map(item => item.trim() && <li>{item.trim()}</li>)}
+                  </ul>
+                </div>
+              </div>
+            )}
           </a>
         ))}
       </div>
@@ -154,6 +182,7 @@ import { articles, topics } from '../data/articles';
 
     .card {
       display: block;
+      position: relative;
       -webkit-column-break-inside: avoid;
       page-break-inside: avoid;
       break-inside: avoid;
@@ -215,6 +244,63 @@ import { articles, topics } from '../data/articles';
 
     .card.hidden {
       display: none;
+    }
+
+    /* Hover details panel */
+    .card-hover-details {
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 20, 20, 0.95);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      overflow-y: auto;
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    .card:hover .card-hover-details {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .hover-section {
+      margin-bottom: 4px;
+    }
+
+    .hover-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 2px;
+    }
+
+    .hover-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hover-list li {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 1px;
+    }
+
+    .hover-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .mobile-filters {
