@@ -128,6 +128,22 @@ export const articles: Article[] = [
     datePublished: '2026-02-09',
     dateModified: '2026-02-09',
   },
+  {
+    slug: 'inner-weather-report',
+    title: 'The Family Weather Report',
+    subtitle: 'A daily ritual that makes feelings speakable \u2014 from age 3 to teens',
+    description: 'A daily check-in ritual that gives your family a shared language for feelings. One question \u2014 "What\'s your weather?" \u2014 works from age 3 to teens. Scripts and setup guide included.',
+    image: '/images/cards/inner-weather-report.webp',
+    imageAlt: 'A cozy kitchen with a hand-drawn weather chart on the fridge, family sitting at the table in warm light',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Communication',
+    book: 'The New Peoplemaking',
+    bookSlug: 'new-peoplemaking-satir',
+    datePublished: '2026-02-10',
+    dateModified: '2026-02-10',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
