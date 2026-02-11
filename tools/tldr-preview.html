@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLDR Preview — Kung Fu Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #E8E2D8;
+      --bg-card: #FAF6F0;
+      --text: #1A1A2E;
+      --text-secondary: #6b6b6b;
+      --text-muted: #999;
+      --accent: #5C8A5A;
+      --border: rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 246, 240, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .logo span { color: var(--text); }
+    .preview-badge {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+    }
+    .preview-info {
+      padding: 16px 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: rgba(250, 246, 240, 0.5);
+    }
+    .preview-info strong { color: var(--text-secondary); }
+
+    .options-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+    }
+
+    .option-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 32px 36px 28px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .option-number {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* Simulated article context */
+    .context-meta {
+      font-size: 12px;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .context-title {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(22px, 4vw, 30px);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    /* ---- TLDR Box (locked-in design) ---- */
+    .tldr-box {
+      background: white;
+      border: 1px solid #E0DDD6;
+      border-radius: 10px;
+      padding: 18px 22px;
+    }
+
+    .tldr-anchor {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .tldr-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tldr-box ul li {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #333;
+      padding: 3px 0 3px 20px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .tldr-box ul li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0;
+      color: #BDBDB5;
+      font-weight: 600;
+    }
+
+    .tldr-divider {
+      border: none;
+      border-top: 1px solid #EEEAE4;
+      margin: 10px 0;
+    }
+
+    .tldr-inside {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #aaa;
+      padding-left: 20px;
+    }
+
+    .tldr-inside strong {
+      color: #999;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .error {
+      text-align: center;
+      padding: 4rem;
+      color: #C4524A;
+    }
+    .error code {
+      display: block;
+      margin-top: 1rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Kung Fu <span>Family</span></div>
+    <span class="preview-badge">TLDR Preview</span>
+  </header>
+  <div class="preview-info" id="preview-info"></div>
+  <main class="options-container" id="options"></main>
+  <div class="error" id="error" style="display:none">
+    <p>Could not load TLDR data.</p>
+    <code>Place tldr-data.js in this same folder.</code>
+  </div>
+
+  <script src="tldr-data.js"></script>
+  <script>
+    function load() {
+      try {
+        if (typeof TLDR_DATA === 'undefined') throw new Error('No data');
+        const data = TLDR_DATA;
+
+        const info = document.getElementById('preview-info');
+        info.innerHTML = `<strong>${data.strategy || ''}</strong> — ${data.book || ''}`;
+
+        const container = document.getElementById('options');
+        (data.options || []).forEach((opt, i) => {
+          const card = document.createElement('div');
+          card.className = 'option-card';
+
+          const insideHtml = (opt.inside || []).join(' &middot; ');
+
+          card.innerHTML = `
+            <div class="option-number">${i + 1}</div>
+            <div class="context-meta">${data.book || ''}</div>
+            <div class="context-title">${data.blogTitle || ''}</div>
+            <div class="tldr-box">
+              <p class="tldr-anchor">${opt.anchor || ''}</p>
+              <ul>
+                <li>${opt.payoff || ''}</li>
+                <li>${opt.move || ''}</li>
+              </ul>
+              <hr class="tldr-divider">
+              <div class="tldr-inside"><strong>Inside: </strong>${insideHtml}</div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (e) {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('options').style.display = 'none';
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

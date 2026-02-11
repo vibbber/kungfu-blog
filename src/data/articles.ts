@@ -13,10 +13,10 @@ export interface Article {
   bookSlug: string;
   datePublished: string;
   dateModified: string;
-  forProblems?: string;
-  approach?: string;
-  evidence?: string;
-  inside?: string;
+  tldrAnchor?: string;
+  tldrPayoff?: string;
+  tldrMove?: string;
+  tldrInside?: string;
 }
 
 export const articles: Article[] = [
@@ -35,10 +35,10 @@ export const articles: Article[] = [
     bookSlug: 'new-peoplemaking-satir',
     datePublished: '2026-02-10',
     dateModified: '2026-02-10',
-    forProblems: 'Child can\'t articulate feelings; parents respond with advice instead of presence; kids stop sharing',
-    approach: 'Give your family a metaphor where emotions are "weather." Ask "What\'s your weather?" and respond only with "Thanks for telling me."',
-    evidence: 'Virginia Satir, family therapist; The New Peoplemaking',
-    inside: 'Weather metaphor (5-point scale), four-step ritual, age-adjusted approaches (3-5, 6-9, 10+)',
+    tldrAnchor: 'Most kids stop talking about feelings because of what happens when they try.',
+    tldrPayoff: 'Kids who grow up with this ritual tell you when something\'s wrong — before it becomes a crisis. They learn to name their emotions, ask for space, and trust that honesty won\'t be punished.',
+    tldrMove: 'The move: give your family a weather metaphor for feelings, and when someone shares, say only "Thanks for telling me."',
+    tldrInside: '5-level weather scale, 4 word-for-word scripts, comparison table: fix-it vs. check-in responses, 3 age adaptations (3-5, 6-9, 10+)',
   },
   {
     slug: 'dawdling-cure-protocol',
@@ -55,10 +55,10 @@ export const articles: Article[] = [
     bookSlug: 'charlotte-mason-home-education-1906',
     datePublished: '2026-02-10',
     dateModified: '2026-02-10',
-    forProblems: 'Constant "hurry up" not working; nagging spiral; mornings chaotic; dawdling worsens over time',
-    approach: 'One honest conversation, then four weeks of complete silence. Use your face and lightest physical cues instead of words.',
-    evidence: 'Charlotte Mason, Home Education (1906); based on neural groove theory of habit formation',
-    inside: 'One-talk protocol, four-week timeline, the "absolutely fatal" week-2/3 moment, reward structure',
+    tldrAnchor: 'Dawdling isn\'t laziness. It\'s a brain groove your reminders are deepening.',
+    tldrPayoff: 'Kids who build their own starting signal get ready without prompts, self-correct mid-drift, and own their mornings by week four.',
+    tldrMove: 'The move: one honest conversation, then four weeks of silence and the lightest physical cues you can manage.',
+    tldrInside: 'Word-for-word script for the one talk, 4 non-verbal redirect techniques, Week-by-week progress timeline, Reminders vs. silence comparison table',
   },
   {
     slug: 'both-and-boundary',
@@ -75,10 +75,10 @@ export const articles: Article[] = [
     bookSlug: 'good-inside-kennedy',
     datePublished: '2026-02-09',
     dateModified: '2026-02-09',
-    forProblems: 'Boundary-setting turns into power struggles or guilt; forced to choose between firm or warm',
-    approach: 'Your boundary and your child\'s feelings can both be true. Use the HOLD framework to hold limits while validating feelings.',
-    evidence: 'Attachment research and relationship science; decades of research across parent-child pairs',
-    inside: 'HOLD acronym (Hold Your Ground, Open to Their Feelings, Link Both Truths, Deliver Permission), reframe table, four scenario scripts',
+    tldrAnchor: 'Kids who feel seen during a boundary stop fighting the boundary.',
+    tldrPayoff: 'They learn to handle no without melting down, hold their emotions without exploding, and trust you enough to come to you when it actually matters.',
+    tldrMove: 'The move: state the limit and name their feeling in the same sentence — then give them permission to be upset.',
+    tldrInside: '4-step HOLD framework, 4 word-for-word scripts, either/or vs both-and reframe table, 4 habit-building practices',
   },
   {
     slug: 'three-period-lesson',
@@ -95,10 +95,10 @@ export const articles: Article[] = [
     bookSlug: 'montessori-method-1912',
     datePublished: '2026-02-08',
     dateModified: '2026-02-08',
-    forProblems: 'Child isn\'t retaining concepts despite repeated explanations; learning feels slow or ineffective',
-    approach: 'Strip lessons to three bare steps (name, find, say) using minimal words. Fewer words create more room for the child\'s brain to learn.',
-    evidence: 'Édouard Séguin (19th-century); Maria Montessori adopted and refined in the Montessori Method (1912)',
-    inside: 'Three periods (naming, recognition, recall), readiness diagnostics, error protocol (smile/put away/try later), 8 applications',
+    tldrAnchor: 'A 3-step method that turns toddlers into kids who learn new words fast.',
+    tldrPayoff: 'Kids raised on this pick up vocabulary like sponges — colors at 2, letters at 3, reading foundations by 4. They stay focused during short lessons and retrieve words from memory on command.',
+    tldrMove: 'The move: strip the lesson to three bare steps — name, recognize, recall — and use almost no words at all.',
+    tldrInside: '3 scripts for each lesson period, 4-card readiness check, what to do when they get it wrong, 8 domains you can teach at home',
   },
   {
     slug: 'waldorf-writing-from-pictures',
@@ -115,10 +115,10 @@ export const articles: Article[] = [
     bookSlug: 'steiner-kingdom-of-childhood',
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
-    forProblems: 'Child sees letters as meaningless symbols; early reading struggles',
-    approach: 'Never teach letters as abstract symbols. Paint the mouth, say "mmm," discover the M shape.',
-    evidence: 'Rudolf Steiner (1924), based on how letters evolved from pictographs',
-    inside: '5-step method, consonant examples (M, F, S), vowel examples from gestures',
+    tldrAnchor: 'Kids who use their whole body to learn letters become kids who actually love writing.',
+    tldrPayoff: 'Kids taught this way grip the crayon with purpose, not dread. They see F in a fish, W in waves, S in a snake. Every letter has a story. Every story lives in their hands before it reaches their head.',
+    tldrMove: 'The move: replace letter worksheets with painting — let letters emerge from pictures the child draws, then practice writing before reading.',
+    tldrInside: '5-step picture-to-letter method, 5 consonant picture-to-letter cards, 3 vowel gesture examples, the full life-to-reading sequence',
   },
   {
     slug: 'waldorf-form-body-exercises',
@@ -135,10 +135,10 @@ export const articles: Article[] = [
     bookSlug: 'steiner-kingdom-of-childhood',
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
-    forProblems: 'Developing thinking through the body; coordination and spatial awareness',
-    approach: 'Quick, alert exercises requiring children to think about their bodies. Form completion drawing.',
-    evidence: 'Rudolf Steiner (1924)',
-    inside: 'Form completion exercises, cross-body touch commands, circle exercises',
+    tldrAnchor: 'Five minutes of physical exercise at age 8 builds thinking that lasts decades.',
+    tldrPayoff: 'Kids who do these exercises develop spatial reasoning, quick coordination, and perceptual sharpness that shows up as genuine wisdom in their thirties.',
+    tldrMove: 'The move: replace desk-based drills with three body exercises — form completion, cross-body commands, and color harmony.',
+    tldrInside: '4 form completion exercises with progressions, 11 rapid-fire cross-body drill commands, color harmony exercise with complementary pairs, head-based vs body-based thinking comparison',
   },
   {
     slug: 'waldorf-arithmetic-whole-parts',
@@ -155,10 +155,10 @@ export const articles: Article[] = [
     bookSlug: 'steiner-kingdom-of-childhood',
     datePublished: '2026-02-06',
     dateModified: '2026-02-06',
-    forProblems: 'Child struggles with arithmetic; math feels like memorizing rules',
-    approach: 'Children naturally understand "I have something, let me share it." Division is easier than addition when you start from the whole.',
-    evidence: 'Rudolf Steiner (1924), Waldorf curriculum used worldwide',
-    inside: 'Reversed order for all four operations, apple/cookie scripts, body-based counting',
+    tldrAnchor: 'Kids who start with the whole number grasp math faster than kids who build from parts.',
+    tldrPayoff: 'Kids who learn this way see patterns in numbers naturally, split quantities without counting on fingers, and treat arithmetic like a puzzle they already know how to solve.',
+    tldrMove: 'The move: give the whole first. Say "here are 12 apples — how can we share them?" instead of "3 + 4 = what?"',
+    tldrInside: '4 reversed operations with scripts, 4 body-based number introductions, before/after comparison, Pythagorean theorem discovery method',
   },
   {
     slug: 'matching-childs-motivation-style',
@@ -175,10 +175,10 @@ export const articles: Article[] = [
     bookSlug: 'wired-for-success',
     datePublished: '2026-02-04',
     dateModified: '2026-02-06',
-    forProblems: 'Requests that work on one kid fall flat on another',
-    approach: 'Kids respond to "what you\'ll gain" or "what you\'ll avoid" — rarely both. Match their language.',
-    evidence: 'NLP motivation framework, backed by Higgins\' Regulatory Focus Theory',
-    inside: 'Spot your child\'s type; translation table with exact scripts',
+    tldrAnchor: 'Your child isn\'t ignoring you — you\'re speaking the wrong motivational language.',
+    tldrPayoff: 'Kids who hear requests in their own language cooperate faster, push back less, and actually internalize the reason behind the ask.',
+    tldrMove: 'The move: match your phrasing to their compass — toward kids get the upside, away-from kids get the risk removed.',
+    tldrInside: 'Toward vs. away-from profile cards, 5-scenario translation table with scripts for both styles, collapsible nuance guide for mixed-style kids',
   },
   {
     slug: 'goodness-of-fit',
@@ -195,10 +195,10 @@ export const articles: Article[] = [
     bookSlug: 'rothbart-becoming-who-we-are',
     datePublished: '2026-02-04',
     dateModified: '2026-02-08',
-    forProblems: 'Child labeled "difficult," "too sensitive," "can\'t sit still" — constant conflict',
-    approach: '"Difficult" describes the mismatch, not the child. Change the environment\'s demands to match their temperament.',
-    evidence: 'Thomas & Chess NYLS study (130+ children, infancy to adulthood, since 1956)',
-    inside: 'Four diagnostic questions, reframe table for 5 common traits, 4-step fit improvement process',
+    tldrAnchor: '"Difficult" isn\'t a trait — it\'s a mismatch between your child and their environment.',
+    tldrPayoff: 'Kids whose parents adjust the setting instead of the child stay confident through school transitions, handle new teachers without falling apart, and build self-knowledge early.',
+    tldrMove: 'The move: when your child struggles, diagnose the fit before you diagnose the child.',
+    tldrInside: '4 diagnostic questions, 5-trait reframe table, 4-step fit improvement plan, before-and-after trait examples',
   },
 ];
 

@@ -45,31 +45,16 @@ import { articles, topics } from '../data/articles';
               <h2 class="card-title">{a.title}</h2>
               <p class="card-subtitle">{a.subtitle}</p>
             </div>
-            {a.forProblems && (
+            {a.tldrAnchor && (
               <div class="card-hover-details">
-                <div class="hover-section">
-                  <div class="hover-label">For</div>
-                  <ul class="hover-list">
-                    {a.forProblems.split(/[;]/).map(item => item.trim() && <li>{item.trim()}</li>)}
+                <div class="hover-tldr">
+                  <p class="hover-anchor">{a.tldrAnchor}</p>
+                  <ul class="hover-bullets">
+                    <li>{a.tldrPayoff}</li>
+                    <li>{a.tldrMove}</li>
                   </ul>
-                </div>
-                <div class="hover-section">
-                  <div class="hover-label">Approach</div>
-                  <ul class="hover-list">
-                    {a.approach!.split(/[.]/).filter(item => item.trim()).map(item => <li>{item.trim()}</li>)}
-                  </ul>
-                </div>
-                <div class="hover-section">
-                  <div class="hover-label">Evidence</div>
-                  <ul class="hover-list">
-                    {a.evidence!.split(/[;]/).map(item => item.trim() && <li>{item.trim()}</li>)}
-                  </ul>
-                </div>
-                <div class="hover-section">
-                  <div class="hover-label">Inside</div>
-                  <ul class="hover-list">
-                    {a.inside!.split(/[,]/).map(item => item.trim() && <li>{item.trim()}</li>)}
-                  </ul>
+                  <hr class="hover-divider" />
+                  <div class="hover-inside"><strong>Inside: </strong>{a.tldrInside}</div>
                 </div>
               </div>
             )}
@@ -246,16 +231,15 @@ import { articles, topics } from '../data/articles';
       display: none;
     }
 
-    /* Hover details panel */
+    /* Hover TLDR panel */
     .card-hover-details {
       position: absolute;
       inset: 0;
-      background: rgba(20, 20, 20, 0.95);
+      background: rgba(255, 255, 255, 0.97);
       padding: 16px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      gap: 8px;
+      justify-content: center;
       opacity: 0;
       transition: opacity 0.25s ease;
       overflow-y: auto;
@@ -268,39 +252,60 @@ import { articles, topics } from '../data/articles';
       pointer-events: auto;
     }
 
-    .hover-section {
-      margin-bottom: 4px;
+    .hover-tldr {
+      padding: 0 4px;
     }
 
-    .hover-label {
-      font-size: 0.65rem;
+    .hover-anchor {
+      font-size: 0.8rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: rgba(255, 255, 255, 0.5);
-      margin-bottom: 2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      line-height: 1.45;
     }
 
-    .hover-list {
+    .hover-bullets {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    .hover-list li {
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1.4;
-      padding-left: 12px;
+    .hover-bullets li {
+      font-size: 0.78rem;
+      color: var(--text);
+      line-height: 1.45;
+      padding-left: 16px;
       position: relative;
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     }
 
-    .hover-list li::before {
-      content: '•';
+    .hover-bullets li::before {
+      content: '\2192';
       position: absolute;
       left: 0;
-      color: rgba(255, 255, 255, 0.5);
+      color: #BDBDB5;
+      font-weight: 600;
+    }
+
+    .hover-divider {
+      border: none;
+      border-top: 1px solid #EEEAE4;
+      margin: 8px 0;
+    }
+
+    .hover-inside {
+      font-size: 0.7rem;
+      color: #aaa;
+      padding-left: 16px;
+      line-height: 1.45;
+    }
+
+    .hover-inside strong {
+      color: #999;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      letter-spacing: 0.5px;
     }
 
     .mobile-filters {
