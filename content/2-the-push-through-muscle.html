@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kids who pretend to be Batman stick with boring tasks longer than kids being themselves. The science of teaching persistence — with age-specific scripts that actually work.">
+  <title>The Batman Effect: Why Your Kid Quits (And How to Build the Muscle That Fixes It) | Kung Fu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.75;
+      padding: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .age-badge {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    /* ---- Blog Images ---- */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 32px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .blog-img-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    /* ---- Callout Box ---- */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin: 36px 0;
+      text-align: center;
+    }
+
+    .callout p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .callout .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* ---- Comparison Table ---- */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .compare-table th {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 20px;
+      text-align: left;
+    }
+
+    .compare-table th.col-dont {
+      background: #F3E0DB;
+      color: #8B4513;
+    }
+
+    .compare-table th.col-do {
+      background: #D5E8D4;
+      color: #2D5A2D;
+    }
+
+    .compare-table td {
+      padding: 14px 20px;
+      font-size: 15px;
+      border-bottom: 1px solid #f0ebe4;
+      vertical-align: top;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table td.cell-dont {
+      background: #FEF6F3;
+    }
+
+    .compare-table td.cell-do {
+      background: #F5FAF4;
+    }
+
+    /* ---- Trap Cards ---- */
+    .trap-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border-top: 4px solid #E8A598;
+    }
+
+    .trap-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #8B4513;
+      margin-bottom: 8px;
+    }
+
+    .trap-card p {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .trap-card .scenario {
+      background: #FEF6F3;
+      border: 1px solid #E8D5C3;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #5A3A20;
+      margin: 12px 0;
+    }
+
+    .trap-card .scenario::before {
+      content: 'What it looks like:';
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+      color: #8B4513;
+    }
+
+    .trap-card .fix {
+      background: #F0F7EF;
+      border: 1px solid #C5DCC3;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: #2D5A2D;
+      margin: 12px 0;
+    }
+
+    .trap-card .fix::before {
+      content: 'The fix:';
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+      color: #5C8A5A;
+    }
+
+    /* ---- Age Technique Cards ---- */
+    .technique-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 24px 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border-left: 5px solid #5C8A5A;
+    }
+
+    .technique-card .age-label {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .technique-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+    }
+
+    .technique-card p {
+      font-size: 16px;
+    }
+
+    .technique-card .say-this {
+      background: #F0F7EF;
+      border: 1px solid #C5DCC3;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 15px;
+      color: #2D5A2D;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    .technique-card .say-this::before {
+      content: 'Say this:';
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+      color: #5C8A5A;
+    }
+
+    .technique-card .debrief {
+      background: #FFF8F0;
+      border: 1px solid #F0DCC4;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #6B5A40;
+      margin-top: 12px;
+    }
+
+    .technique-card .debrief::before {
+      content: 'Then debrief:';
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+      color: #B8860B;
+    }
+
+    /* ---- Anchor Box ---- */
+    .anchor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .anchor-item {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .anchor-phrase {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+
+    .anchor-when {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    /* ---- Direct Answer Box ---- */
+    .direct-answer {
+      background: white;
+      border-left: 4px solid #5C8A5A;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      border-radius: 0 8px 8px 0;
+      font-size: 16px;
+      color: #333;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    }
+
+    .direct-answer strong {
+      color: #5C8A5A;
+    }
+
+    /* ---- Daily Reps Box ---- */
+    .reps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .rep-item {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid #E8A598;
+    }
+
+    .rep-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+
+    .rep-item p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* ---- Remember Box ---- */
+    .remember {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .remember .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+
+    .remember p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ---- Section Divider ---- */
+    .section-divider {
+      border: none;
+      border-top: 2px solid #EDE8E0;
+      margin: 48px 0;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #DDD;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    footer a {
+      color: #5C8A5A;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .anchor-grid, .reps-grid { grid-template-columns: 1fr; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <div class="meta">Self-Control & Persistence</div>
+    <span class="age-badge">Ages 3-17</span>
+    <h1>The Batman Effect: Why Your Kid Quits (And How to Build the Muscle That Fixes It)</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Persistence isn't a personality trait. It's a muscle that grows under load.</p>
+      <ul>
+        <li>Kids who build this muscle handle frustration on their own, stick with boring tasks without melting down, and carry a quiet confidence that they can get through hard things.</li>
+        <li>The move: stop rescuing them from discomfort and start giving them small, daily reps of pushing through it.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 age-matched scripts (ages 3-6, 7-12, 13+) &middot; 2 persistence traps with fixes &middot; 4 self-talk anchor phrases &middot; 4 daily rep exercises</div>
+    </div>
+
+    <p class="lead">Researchers gave preschoolers a painfully boring task. Half the kids worked as themselves. The other half pretended to be a strong character -- a firefighter, a superhero, whatever they picked. The kids in costume stayed on task significantly longer. Same kids. Same boring job. The only difference was who they believed they were while doing it.</p>
+
+    <p>That finding cracks open something every parent senses but can't quite name: your child's ability to push through hard, boring, or frustrating things isn't fixed. It's a muscle. And like any muscle, it grows under load -- or atrophies without it.</p>
+
+    <p>The uncomfortable part? Most of us are accidentally weakening that muscle every day. Not through neglect. Through love. Through the instinct to rescue our kids from discomfort the moment we see it.</p>
+
+    <hr class="section-divider">
+
+    <h2>Why does my child always take the easy way out?</h2>
+
+    <div class="direct-answer">
+      <strong>Short answer:</strong> Their brain is wired for immediate reward -- the prefrontal cortex that handles delayed gratification isn't fully built until the mid-twenties. But here's the good news: longitudinal research shows self-control is a skill, not a trait. Kids who practice tolerating discomfort early show better academic outcomes, healthier relationships, and fewer behavioral problems well into adulthood.
+    </div>
+
+    <p>Children aren't lazy. They're following their biology. When something feels hard, their brain screams "stop" -- and if they've learned that fussing, whining, or melting down gets someone to rescue them, they'll use that strategy every time. Not because they're manipulative. Because it works.</p>
+
+    <p>The fix isn't punishment. It's gradually proving to them -- through small, stackable experiences -- that they <em>can</em> handle discomfort. Every time they push through something uncomfortable on their own, it deposits a coin in their "I can handle hard things" account.</p>
+
+    <div class="callout">
+      <span class="label">Core Principle</span>
+      <p>Every rep of discomfort your child completes on their own deposits confidence in their "I can handle hard things" account.</p>
+    </div>
+
+    <img src="/images/blog/2-the-push-through-muscle/persistence-muscle.webp" alt="A visual metaphor showing a child's confidence growing like a muscle with each small challenge completed -- a jar filling with coins labeled with small wins" class="blog-img">
+    <p class="blog-img-caption">Persistence isn't born. It's built -- one small rep at a time.</p>
+
+    <hr class="section-divider">
+
+    <h2>The two traps that kill persistence</h2>
+
+    <p>When your child hits a wall, you'll feel a powerful urge to do one of two things. Both feel like helping. Both teach your child the opposite of what you intend.</p>
+
+    <div class="trap-card">
+      <h3>Trap 1: The Rescue</h3>
+      <p>You solve the problem because watching them struggle is painful -- for you.</p>
+      <div class="scenario">Your daughter has been staring at her science project for 20 minutes without starting. You sit down and "help" by doing most of it. She gets an A. She learns nothing about pushing through confusion.</div>
+      <div class="fix">Sit nearby. Ask one question: "What's the first tiny piece you could figure out?" Then wait. Silence is okay. The discomfort of not knowing is where the muscle grows.</div>
+    </div>
+
+    <div class="trap-card">
+      <h3>Trap 2: The Distraction</h3>
+      <p>You dodge the discomfort entirely by changing the subject, offering a treat, or creating a diversion.</p>
+      <div class="scenario">Your son is whining about practicing piano. Instead of addressing it, you suggest ice cream. The whining stops. The piano stays unplayed. Tomorrow's whining will be louder.</div>
+      <div class="fix">Name what's happening: "You're frustrated. That's normal when you're learning something new. Five more minutes, then you're done." The frustration IS the workout.</div>
+    </div>
+
+    <table class="compare-table">
+      <tr>
+        <th class="col-dont">Kills the muscle</th>
+        <th class="col-do">Builds the muscle</th>
+      </tr>
+      <tr>
+        <td class="cell-dont">Jumping in the moment they show discomfort</td>
+        <td class="cell-do">Letting them sit with frustration before stepping in</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">Doing their tasks because it's faster and quieter</td>
+        <td class="cell-do">Celebrating effort and strategy, not just results</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">Offering treats or screens to stop complaints</td>
+        <td class="cell-do">Asking "what could you try next?" instead of giving answers</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">Caving after they escalate (this trains them to escalate harder)</td>
+        <td class="cell-do">Holding the line calmly -- especially when you're tired</td>
+      </tr>
+      <tr>
+        <td class="cell-dont">Modeling your own shortcuts when things get hard</td>
+        <td class="cell-do">Narrating your own push-throughs out loud</td>
+      </tr>
+    </table>
+
+    <p>That last row matters more than you'd think. "I really don't feel like going for a run, but I know I'll feel better after" -- said out loud, in front of your kid -- does more than any lecture about persistence.</p>
+
+    <hr class="section-divider">
+
+    <h2>Three techniques, matched to their age</h2>
+
+    <p>The push-through muscle looks different at 4, 9, and 15. Here's what works at each stage -- with the exact words to use.</p>
+
+    <div class="technique-card">
+      <span class="age-label">Ages 3-6</span>
+      <h3>The Character Power-Up</h3>
+      <p>This is the Batman Effect in action. Young children persist longer at tedious tasks when they pretend to be a strong, capable character. It works because stepping outside their own frustration gives them distance from the "I don't wanna" feeling. They're not quitting -- <em>Batman</em> wouldn't quit.</p>
+      <div class="say-this">"I think this job needs a firefighter. Can you show me how a firefighter would tackle this mess? Firefighters don't quit!"</div>
+      <div class="debrief">Pick any character your child admires who works hard -- a doctor, a builder, a space explorer. Pop in after a few minutes: "How's the mission going, Captain?"</div>
+    </div>
+
+    <div class="technique-card">
+      <span class="age-label">Ages 7-12</span>
+      <h3>The "Prove It" Challenge</h3>
+      <p>When school-age kids say "I can't," their brain is lying to them. They're confusing "this is uncomfortable" with "this is impossible." You break that pattern by giving them a small, timed challenge -- then showing them they went further than they predicted.</p>
+      <div class="say-this">"Okay, you say you can't do any more. Let's test that. Give me just two more minutes -- set a timer -- and then we'll compare. I bet you'll surprise yourself."</div>
+      <div class="debrief">"Your brain said 'stop' at minute one. But you made it to minute two. What does that tell you about next time your brain says you're done?"</div>
+    </div>
+
+    <div class="technique-card">
+      <span class="age-label">Ages 13+</span>
+      <h3>The Honest Trade-Off Talk</h3>
+      <p>Teens see through "just say no" lectures instantly. What lands is acknowledging the appeal of the easy path and laying out the math of what it costs. Credibility comes from honesty, not prohibition.</p>
+      <div class="say-this">"I get why scrolling feels better than studying right now -- your brain literally wants the dopamine hit. But here's the trade: an hour of comfort tonight buys you a week of stress when the exam shows up. Your call, but make it with your eyes open."</div>
+      <div class="debrief">No follow-up lecture needed. The respect of treating them like someone who can weigh trade-offs IS the teaching.</div>
+    </div>
+
+    <img src="/images/blog/2-the-push-through-muscle/age-techniques.webp" alt="Three panels showing age-appropriate persistence techniques: a young child in a cape cleaning up toys, a school-age kid with a timer proving they can do more, and a teenager weighing choices on a balance scale" class="blog-img">
+    <p class="blog-img-caption">Same muscle. Different exercises. Matched to where their brain is.</p>
+
+    <hr class="section-divider">
+
+    <h2>Self-talk anchors: the phrases that hold</h2>
+
+    <p>Help your child pick one short phrase they can grab when the urge to quit hits. The best anchors are physical and specific to the moment -- not inspirational posters, but handholds.</p>
+
+    <div class="anchor-grid">
+      <div class="anchor-item">
+        <div class="anchor-phrase">"One more step"</div>
+        <p class="anchor-when">When the task feels endless. Shrink the horizon to the next single action.</p>
+      </div>
+      <div class="anchor-item">
+        <div class="anchor-phrase">"Not yet"</div>
+        <p class="anchor-when">When they want to quit. Reframes quitting as a choice they haven't made yet.</p>
+      </div>
+      <div class="anchor-item">
+        <div class="anchor-phrase">"I've done hard things before"</div>
+        <p class="anchor-when">Connects present struggle to past evidence of capability.</p>
+      </div>
+      <div class="anchor-item">
+        <div class="anchor-phrase">"Almost there"</div>
+        <p class="anchor-when">For the final stretch when willpower is at its lowest.</p>
+      </div>
+    </div>
+
+    <p>Once they've picked their phrase, use it yourself when you see them struggling. Hearing "one more step!" from you activates the anchor without a lecture.</p>
+
+    <hr class="section-divider">
+
+    <h2>Daily reps: where the muscle actually grows</h2>
+
+    <p>Don't wait for big moments. The persistence muscle gets its reps from everyday friction -- tiny, forgettable moments that add up.</p>
+
+    <div class="reps-grid">
+      <div class="rep-item">
+        <h4>Wait for dinner</h4>
+        <p>Instead of snacking. Ten minutes of hunger won't hurt them -- but it builds the "I can wait" circuit.</p>
+      </div>
+      <div class="rep-item">
+        <h4>Finish before screens</h4>
+        <p>Complete the chore first. The delay between effort and reward is the entire exercise.</p>
+      </div>
+      <div class="rep-item">
+        <h4>Walk past the candy aisle</h4>
+        <p>Not every time. But enough that "no" becomes something they can tolerate, not a crisis.</p>
+      </div>
+      <div class="rep-item">
+        <h4>Stick with the boring part</h4>
+        <p>Every skill has a boring middle. Sitting through it -- not switching to something fun -- is the rep.</p>
+      </div>
+    </div>
+
+    <p>Most shortcut-taking happens when everyone is exhausted. If you're running on empty by 7 PM every night, the fix isn't more willpower -- it's restructuring the day so you have gas in the tank when it matters.</p>
+
+    <hr class="section-divider">
+
+    <h2>When they slip -- and they will</h2>
+
+    <p>Your child pushes through on Tuesday. Caves on Wednesday. That's not failure. That's normal.</p>
+
+    <p>Persistence isn't a streak. It's a batting average. Highlight Tuesday. Let Wednesday go. Over time, the ratio shifts -- not because you forced it, but because they proved to themselves, enough times, that they could.</p>
+
+    <div class="remember">
+      <div class="label">The whole strategy in one line</div>
+      <p>Stop rescuing. Start repping. The muscle only grows under load -- and every small push-through your child completes on their own is a deposit in the confidence account that lasts a lifetime.</p>
+    </div>
+
+    <p>Pick one technique from this page. Use it this week. Not all of them -- just one. The persistence muscle grows through reps, not overhauls.</p>
+
+    <footer>
+      <p>Published by <a href="https://kungfu.family">kungfu.family</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>

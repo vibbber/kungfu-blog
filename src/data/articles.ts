@@ -21,6 +21,26 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: '2-the-push-through-muscle',
+    title: 'Built, Not Born',
+    subtitle: 'Persistence is a muscle — these reps grow it at every age',
+    description: 'Kids who pretend to be Batman stick with boring tasks longer than kids being themselves. The science of teaching persistence — with age-specific scripts that actually work.',
+    image: '/images/cards/2-the-push-through-muscle.webp',
+    imageAlt: 'Warm illustration showing persistence as a muscle being built through small daily reps at different ages',
+    imageWidth: 1024,
+    imageHeight: 678,
+    imageAspect: 1.510,
+    topic: 'Self-Control',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'Persistence isn\'t a personality trait. It\'s a muscle that grows under load.',
+    tldrPayoff: 'Kids who build this muscle handle frustration on their own, stick with boring tasks without melting down, and carry a quiet confidence that they can get through hard things.',
+    tldrMove: 'The move: stop rescuing them from discomfort and start giving them small, daily reps of pushing through it.',
+    tldrInside: '3 age-matched scripts (ages 3-6, 7-12, 13+), 2 persistence traps with fixes, 4 self-talk anchor phrases, 4 daily rep exercises',
+  },
+  {
     slug: 'training-attention-infancy',
     title: 'The Attention Habit',
     subtitle: 'How the smartest parents build focus without saying a word',
