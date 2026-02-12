@@ -280,6 +280,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair clear rules with linked consequences — and always name the path back to normal.',
     tldrInside: 'compass vs. alarm framework, 3 age-band correction methods, Notice-Name-Reinforce loop, 4 long-term maintenance habits',
   },
+  {
+    slug: 'the-mood-reset',
+    title: 'The Reset Box',
+    subtitle: 'Your child\'s meltdown toolkit — built calm, grabbed in crisis',
+    description: 'Hitting a pillow doesn\'t release anger — it trains it. Here\'s what actually works when your kid is overwhelmed, stuck, or spiraling.',
+    image: '/images/cards/the-mood-reset.webp',
+    imageAlt: 'Warm illustration of a child\'s mood reset box with calming tools inside, ready to be grabbed during a meltdown',
+    imageWidth: 1424,
+    imageHeight: 752,
+    imageAspect: 1.894,
+    topic: 'Emotional Regulation',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'Venting anger doesn\'t drain it. It trains it.',
+    tldrPayoff: 'Kids who have a personal feelings toolkit handle meltdowns on their own, name what they\'re feeling instead of exploding, and reach for a specific tool instead of waiting for you to fix it.',
+    tldrMove: 'The move: build a physical reset box together during a calm moment, then point to it instead of saying \'calm down.\'',
+    tldrInside: 'Cool-down and warm-up toolkit lists, 4-step reset box build guide, 3 age-specific scripts, 5-row what-backfires vs what-works table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
