@@ -300,6 +300,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: build a physical reset box together during a calm moment, then point to it instead of saying \'calm down.\'',
     tldrInside: 'Cool-down and warm-up toolkit lists, 4-step reset box build guide, 3 age-specific scripts, 5-row what-backfires vs what-works table',
   },
+  {
+    slug: 'control-of-error',
+    title: 'Self-Correcting Play',
+    subtitle: 'How the right materials teach kids to think without you',
+    description: 'One question reveals whether a toy builds independence or dependency. The Montessori principle of control of error — applied to every activity in your house.',
+    image: '/images/cards/control-of-error.webp',
+    imageAlt: 'A child focused on fitting wooden cylinders into a Montessori block, discovering errors independently',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1.0,
+    topic: 'Independence',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'The difference between a toy that teaches and a toy that creates dependency.',
+    tldrPayoff: 'Kids who discover their own errors stay on task, feel zero shame about mistakes, and develop the habit of trying again — without being told to.',
+    tldrMove: 'The move: stop being the feedback loop. Pick activities where the material does the correcting, then sit down and say nothing.',
+    tldrInside: '10-item activity audit with verdicts, 5-point comparison grid, 3 scenario cards with parent scripts, walk-to-the-playroom challenge',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
