@@ -493,6 +493,16 @@
       display: block;
       margin-bottom: 0.5rem;
     }
+
+    /* ---- TL;DR Box ---- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -502,6 +512,16 @@
       <h1>Speaking the Wrong Dialect</h1>
       <p class="hero-subtitle">Why your requests fall flat — and how to translate</p>
     </header>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Your child isn't ignoring you — you're speaking the wrong motivational language.</p>
+      <ul>
+        <li>Kids who hear requests in their own language cooperate faster, push back less, and actually internalize the reason behind the ask.</li>
+        <li>The move: match your phrasing to their compass — toward kids get the upside, away-from kids get the risk removed.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>Toward vs. away-from profile cards, 5-scenario translation table with scripts for both styles, collapsible nuance guide for mixed-style kids</div>
+    </div>
 
     <article class="story">
       <p class="opening">"Think how great you'll feel when this is done!"</p>

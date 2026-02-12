@@ -462,6 +462,16 @@
       display: block;
       margin-bottom: 0.5rem;
     }
+
+    /* ---- TL;DR Box ---- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -471,6 +481,16 @@
       <h1>Division Before Addition</h1>
       <p class="hero-subtitle">The counterintuitive order that makes math click for ages 7&ndash;9</p>
     </header>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Kids who start with the whole number grasp math faster than kids who build from parts.</p>
+      <ul>
+        <li>Kids who learn this way see patterns in numbers naturally, split quantities without counting on fingers, and treat arithmetic like a puzzle they already know how to solve.</li>
+        <li>The move: give the whole first. Say &quot;here are 12 apples — how can we share them?&quot; instead of &quot;3 + 4 = what?&quot;</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>4 reversed operations with scripts, 4 body-based number introductions, before/after comparison, Pythagorean theorem discovery method</div>
+    </div>
 
     <article class="story">
       <p class="opening">"Three plus four equals &hellip; ?"</p>

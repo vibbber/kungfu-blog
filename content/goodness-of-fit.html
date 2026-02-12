@@ -448,6 +448,16 @@
       display: block;
       margin-bottom: 0.5rem;
     }
+
+    /* ---- TL;DR Box ---- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -457,6 +467,16 @@
       <h1>Stop Fixing Your Child</h1>
       <p class="hero-subtitle">The one shift that turns "difficult" into "thriving"</p>
     </header>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">&quot;Difficult&quot; isn't a trait — it's a mismatch between your child and their environment.</p>
+      <ul>
+        <li>Kids whose parents adjust the setting instead of the child stay confident through school transitions, handle new teachers without falling apart, and build self-knowledge early.</li>
+        <li>The move: when your child struggles, diagnose the fit before you diagnose the child.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>4 diagnostic questions, 5-trait reframe table, 4-step fit improvement plan, before-and-after trait examples</div>
+    </div>
 
     <article class="story">
       <p class="opening">She was the easiest toddler on the block.</p>

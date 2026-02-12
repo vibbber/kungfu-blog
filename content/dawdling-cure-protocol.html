@@ -441,6 +441,16 @@
       .touch-grid { grid-template-columns: 1fr; }
       .count-box { flex-direction: column; text-align: center; }
     }
+
+    /* ---- TL;DR Box ---- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -449,6 +459,16 @@
     <div class="meta">Charlotte Mason &middot; Home Education (1906)</div>
     <span class="age-badge">Ages 3-9</span>
     <h1>Stop Saying "Hurry Up"</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Dawdling isn't laziness. It's a brain groove your reminders are deepening.</p>
+      <ul>
+        <li>Kids who build their own starting signal get ready without prompts, self-correct mid-drift, and own their mornings by week four.</li>
+        <li>The move: one honest conversation, then four weeks of silence and the lightest physical cues you can manage.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>Word-for-word script for the one talk, 4 non-verbal redirect techniques, Week-by-week progress timeline, Reminders vs. silence comparison table</div>
+    </div>
 
     <p class="lead">You've said it eleven times this morning. It hasn't worked any of the eleven times. The most effective dawdling cure ever written says the problem isn't your child's speed. It's your voice.</p>
 

@@ -308,6 +308,16 @@
     }
 
     .cta a { color: #5C7A5A; text-decoration: underline; }
+
+    /* ---- TL;DR Box ---- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
@@ -322,6 +332,16 @@
   </div>
 
   <div class="content">
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">A 3-step method that turns toddlers into kids who learn new words fast.</p>
+      <ul>
+        <li>Kids raised on this pick up vocabulary like sponges — colors at 2, letters at 3, reading foundations by 4. They stay focused during short lessons and retrieve words from memory on command.</li>
+        <li>The move: strip the lesson to three bare steps — name, recognize, recall — and use almost no words at all.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 scripts for each lesson period, 4-card readiness check, what to do when they get it wrong, 8 domains you can teach at home</div>
+    </div>
 
     <div class="story">
       In the 1800s, a French physician named Édouard Séguin was trying to teach children with severe developmental delays. The conventional wisdom was to explain more, explain better, explain again. Séguin tried the opposite. He stripped lessons down to three bare steps — name it, find it, say it — and used almost no words at all. The children learned. Decades later, Maria Montessori adopted his method for typical children and discovered something unexpected: <em>it worked even better.</em>
