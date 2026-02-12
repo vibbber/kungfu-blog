@@ -260,6 +260,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: separate the feeling from the story. One is real. The other needs editing.',
     tldrInside: '4 named thought traps with scripts, 60-second reset sequence, after-school question comparison, 4 rules for the long game',
   },
+  {
+    slug: 'the-next-time-response',
+    title: 'Discipline That Teaches',
+    subtitle: 'Build self-correcting kids — not sneaky ones',
+    description: 'Discipline either builds a compass or an alarm. One question after any misbehavior tells you which one you just installed — plus age-specific scripts that actually teach.',
+    image: '/images/cards/the-next-time-response.webp',
+    imageAlt: 'Warm illustration of a parent and child in a calm teaching moment about discipline',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Discipline',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'Discipline either builds a compass or an alarm system. The difference is structural.',
+    tldrPayoff: 'Compass kids think \'next time I\'ll use my words.\' Alarm kids think \'next time I won\'t get caught.\' Same situation, opposite wiring.',
+    tldrMove: 'The move: pair clear rules with linked consequences — and always name the path back to normal.',
+    tldrInside: 'compass vs. alarm framework, 3 age-band correction methods, Notice-Name-Reinforce loop, 4 long-term maintenance habits',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
