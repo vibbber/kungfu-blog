@@ -240,6 +240,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: when your child struggles, diagnose the fit before you diagnose the child.',
     tldrInside: '4 diagnostic questions, 5-trait reframe table, 4-step fit improvement plan, before-and-after trait examples',
   },
+  {
+    slug: 'thought-traps',
+    title: 'Editing Upset Thinking',
+    subtitle: 'The framework that teaches kids to question their worst thoughts',
+    description: 'Your kid\'s brain runs four predictable glitches when things go wrong. Learn the BLUE framework to help them catch distorted thoughts before those thoughts run the show.',
+    image: '/images/cards/thought-traps.webp',
+    imageAlt: 'Illustration of a child editing their upset thoughts, transforming distorted thinking into accurate thinking',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Resilience',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'A thought that arrives with a big emotion feels like evidence. It isn\'t.',
+    tldrPayoff: 'Kids raised to check their thinking handle friend drama, school setbacks, and unfairness without collapsing into learned helplessness.',
+    tldrMove: 'The shift: separate the feeling from the story. One is real. The other needs editing.',
+    tldrInside: '4 named thought traps with scripts, 60-second reset sequence, after-school question comparison, 4 rules for the long game',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your kid's brain runs four predictable glitches when things go wrong. Learn the BLUE framework to help them catch distorted thoughts before those thoughts run the show.">
+  <title>Your Kid's Brain Has Four Predictable Glitches. Here's How to Fix Them.</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .blog-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #E8A598;
+    }
+    .blog-header h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .blog-header .deck {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px 0;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+
+    /* Highlight box */
+    .insight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .insight-box .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+    .insight-box p {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+      color: white;
+      line-height: 1.5;
+    }
+
+    /* Images */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    /* Trap cards */
+    .trap-grid {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .trap-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      border-left: 5px solid;
+    }
+    .trap-card.blame { border-color: #3498DB; }
+    .trap-card.look { border-color: #E67E22; }
+    .trap-card.unhappy { border-color: #9B59B6; }
+    .trap-card.exaggerate { border-color: #E74C3C; }
+
+    .trap-card .trap-letter {
+      font-size: 36px;
+      font-weight: 800;
+      float: left;
+      margin-right: 14px;
+      line-height: 1;
+    }
+    .trap-card.blame .trap-letter { color: #3498DB; }
+    .trap-card.look .trap-letter { color: #E67E22; }
+    .trap-card.unhappy .trap-letter { color: #9B59B6; }
+    .trap-card.exaggerate .trap-letter { color: #E74C3C; }
+
+    .trap-card h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #1A1A2E;
+    }
+    .trap-card .trap-desc {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 10px;
+      clear: both;
+    }
+    .trap-card .kid-says {
+      background: #FEF3F0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-style: italic;
+      color: #C0392B;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .trap-card .parent-says {
+      background: #EDF7ED;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 15px;
+    }
+    .trap-card .parent-says strong {
+      color: #5C8A5A;
+    }
+    .trap-card .parent-says em {
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* Steps */
+    .steps {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 28px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      background: #E8A598;
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .step-body h4 {
+      color: #5C8A5A;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+    .step-body p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 0;
+    }
+    .step-body .script {
+      background: #FAF6F0;
+      border-left: 3px solid #E8A598;
+      padding: 8px 12px;
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 14px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Comparison table */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .compare-col {
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .compare-col.good { background: #EDF7ED; }
+    .compare-col.bad { background: #FEF3F0; }
+    .compare-col h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .compare-col.good h3 { color: #5C8A5A; }
+    .compare-col.bad h3 { color: #C0392B; }
+    .compare-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .compare-col li {
+      padding: 6px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .compare-col.good li::before { content: '\2713 '; color: #5C8A5A; font-weight: bold; }
+    .compare-col.bad li::before { content: '\2717 '; color: #C0392B; font-weight: bold; }
+
+    /* Longterm box */
+    .longterm {
+      background: #F0EBF8;
+      border: 1px solid #C4B5D9;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+    .longterm h3 {
+      color: #6B4C8A;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+    }
+    .longterm ul {
+      list-style: none;
+      padding: 0;
+    }
+    .longterm li {
+      padding: 10px 0;
+      font-size: 15px;
+      color: #444;
+      border-bottom: 1px solid #DDD5E8;
+    }
+    .longterm li:last-child { border-bottom: none; }
+    .longterm li strong { color: #6B4C8A; }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .blog-header h1 { font-size: 26px; }
+      .compare { grid-template-columns: 1fr; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="blog-header">
+    <h1>Your Kid's Brain Has Four Predictable Glitches. Here's How to Fix Them.</h1>
+    <p class="deck">The BLUE framework turns emotional meltdowns into a 60-second thinking reset.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">A thought that arrives with a big emotion feels like evidence. It isn't.</p>
+    <ul>
+      <li>Kids raised to check their thinking handle friend drama, school setbacks, and unfairness without collapsing into learned helplessness.</li>
+      <li>The shift: separate the feeling from the story. One is real. The other needs editing.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4 named thought traps with scripts &middot; 60-second reset sequence &middot; after-school question comparison &middot; 4 rules for the long game</div>
+  </div>
+
+  <p>"I <em>never</em> get picked for anything. <em>Nobody</em> wants me on their team."</p>
+
+  <p>That was after one kickball game. One. Not a pattern of exclusion. Not a social crisis. A single round of not getting picked first.</p>
+
+  <p>But inside a kid's head, that moment didn't stay a moment. It became a verdict: <em>I'm the kid nobody wants.</em></p>
+
+  <p>Here's what's actually happening. When something goes wrong, your child's brain doesn't just report events. It adds a story on top -- whose fault it is, how permanent the damage is, what terrible thing comes next. And the story feels completely, unshakably true. Because it arrived <em>with</em> the emotion, it feels like evidence.</p>
+
+  <p>It isn't. It's a rough draft.</p>
+
+  <img src="/images/blog/thought-traps/rough-draft-vs-truth.webp" alt="A rough draft thought vs an edited accurate thought -- showing how upset brains exaggerate and how to find the real version" class="blog-img">
+
+  <div class="insight-box">
+    <div class="label">The core idea</div>
+    <p>A thought that shows up when your child is upset is not evidence. It's a rough draft. Teach them to edit before they believe it.</p>
+  </div>
+
+  <p>Research on learned helplessness -- decades of it -- shows that children who habitually believe they have no control over outcomes stop trying to change their situation. Not because they're lazy. Because their own thinking has convinced them there's no point.</p>
+
+  <p>The fix isn't positive thinking. It's <em>accurate</em> thinking. And it starts with knowing exactly which glitch is running.</p>
+
+  <h2>The Four Glitches (BLUE)</h2>
+
+  <p>Cognitive behavioral therapy identified four predictable patterns kids fall into when upset. The BLUE acronym, widely used in child therapy, gives them something kids can actually remember:</p>
+
+  <img src="/images/blog/thought-traps/blue-brain-map.webp" alt="The BLUE framework: four thought traps mapped inside a child's brain -- Blaming, Looking for bad news, Unhappy guessing, Exaggeratedly negative" class="blog-img">
+
+  <div class="trap-grid">
+
+    <div class="trap-card blame">
+      <span class="trap-letter">B</span>
+      <h3>Blaming Everyone Else</h3>
+      <p class="trap-desc">100% of the responsibility lands on other people. Your child is left with zero power to change anything.</p>
+      <div class="kid-says">"I only lost the race because Aiden tripped me. He always does stuff like that."</div>
+      <div class="parent-says">
+        <strong>Try:</strong>
+        <em>"That sounds really frustrating. Aiden bumping you wasn't okay. But if we put that aside -- is there anything about your race you'd want to work on for next time?"</em>
+      </div>
+    </div>
+
+    <div class="trap-card look">
+      <span class="trap-letter">L</span>
+      <h3>Looking for the Bad News</h3>
+      <p class="trap-desc">Everything good gets deleted. The one bad thing becomes the whole story.</p>
+      <div class="kid-says">"The whole birthday party was terrible because Nora didn't come." (Eight friends were there. They played for three hours.)</div>
+      <div class="parent-says">
+        <strong>Try:</strong>
+        <em>"I can tell you're really sad Nora missed it. What was the most fun part with the friends who were there?"</em>
+      </div>
+    </div>
+
+    <div class="trap-card unhappy">
+      <span class="trap-letter">U</span>
+      <h3>Unhappy Guessing</h3>
+      <p class="trap-desc">The worst outcome is predicted as guaranteed. Helplessness kicks in before anything has even happened.</p>
+      <div class="kid-says">"Nobody's going to sit with me at lunch on the first day. I just know it."</div>
+      <div class="parent-says">
+        <strong>Try:</strong>
+        <em>"That sounds scary. Let's say that does happen -- what could you do? And what could you do tomorrow to make it less likely?"</em>
+      </div>
+    </div>
+
+    <div class="trap-card exaggerate">
+      <span class="trap-letter">E</span>
+      <h3>Exaggeratedly Negative</h3>
+      <p class="trap-desc">One thing gets stretched to cover everything. Watch for "always," "never," "nobody," "everyone."</p>
+      <div class="kid-says">"I never get picked for anything! Nobody ever wants me on their team."</div>
+      <div class="parent-says">
+        <strong>Try:</strong>
+        <em>"Never ever? Not once? Can you think of a time when you did get picked -- even if it wasn't today?"</em>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>The 60-Second Thought Check</h2>
+
+  <p>Knowing the four traps is step one. Using them in the heat of the moment is where it actually matters. Here's the sequence:</p>
+
+  <img src="/images/blog/thought-traps/thought-check-steps.webp" alt="Five-step flowchart: Listen, Name the pattern, Spot the trap, Find the truth, Next move" class="blog-img">
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Let them vent (60 seconds)</h4>
+        <p>They need to feel heard before they can think clearly. Pure listening. No problem-solving.</p>
+        <div class="script">"I hear you." / "That sounds really hard."</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Name the pattern</h4>
+        <p>Create a tiny gap between the thought and the belief.</p>
+        <div class="script">"Do you think your brain might be trapping you right now?"<br>Younger kids: "Is your brain being tricky, or is that really true?"</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Spot which trap</h4>
+        <p>Get specific. Over time, kids start naming their own traps unprompted.</p>
+        <div class="script">"Sounds like your brain is doing the 'everyone/always' thing." / "Are we guessing the future right now?"</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Find the accurate version</h4>
+        <p>Swap the distortion for what's actually, literally true. Not sugarcoated -- just precise.</p>
+        <div class="script">"What's the version of this that's actually, literally true?"</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <h4>Move to what's next</h4>
+        <p>Once the thought is accurate, shift to action. This moves them from narrator to protagonist.</p>
+        <div class="script">"Okay, so that's what happened. What do you want to do about it?"</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>The After-School Questions That Shape Everything</h2>
+
+  <p>The questions you ask after school train what your child's brain scans for. Lead with problems and they'll find problems. Flip it:</p>
+
+  <div class="compare">
+    <div class="compare-col bad">
+      <h3>Trains the Negativity Filter</h3>
+      <ul>
+        <li>"How was school?" (gets "fine" or a complaint)</li>
+        <li>"Was anyone mean to you?"</li>
+        <li>"Did you get in trouble?"</li>
+        <li>"Any problems with friends?"</li>
+      </ul>
+    </div>
+    <div class="compare-col good">
+      <h3>Trains the Strengths Filter</h3>
+      <ul>
+        <li>"What went well today?"</li>
+        <li>"Who did you laugh with?"</li>
+        <li>"What's one thing you figured out on your own?"</li>
+        <li>"Did you help anyone today?"</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size: 15px; color: #666;">You're not banning complaints -- you're just not leading with them. The hard stuff still comes up. You're changing the opening act, not censoring the show.</p>
+
+  <h2>What Builds Resilient Thinkers vs. What Doesn't</h2>
+
+  <div class="compare">
+    <div class="compare-col good">
+      <h3>Builds Resilience</h3>
+      <ul>
+        <li>Teaching kids to name their thinking patterns</li>
+        <li>Asking "what can you do?" instead of "what happened to you?"</li>
+        <li>Leading daily conversations with strength-finding questions</li>
+        <li>Letting kids sit with disappointment before fixing it</li>
+        <li>Celebrating when they catch their own traps</li>
+        <li>Modeling your own corrections out loud</li>
+      </ul>
+    </div>
+    <div class="compare-col bad">
+      <h3>Reinforces Helplessness</h3>
+      <ul>
+        <li>Agreeing with distorted thoughts to comfort them</li>
+        <li>Rushing to solve every problem before they try</li>
+        <li>Defaulting to "poor you" as comfort</li>
+        <li>Labeling: "you're just a worrier" / "you're so sensitive"</li>
+        <li>Always leading with what went wrong</li>
+        <li>Making their excuses for them</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="longterm">
+    <h3>The Long Game: Making This Stick</h3>
+    <ul>
+      <li><strong>Model it yourself.</strong> When you catch your own distorted thinking, say it out loud: "I'm doing the 'everything is ruined' thing. Let me find what's actually true." Kids absorb what you demonstrate far more than what you teach.</li>
+      <li><strong>Make it a shared vocabulary.</strong> Once your family knows the four traps, shorthand it: "Is that an 'always/never' thought?" Best as curiosity, never accusation.</li>
+      <li><strong>Never weaponize it.</strong> "You're just blaming again" shuts a child down. "I wonder if your brain might be trapping you" invites investigation. Tone is everything.</li>
+      <li><strong>Watch your own traps about your child.</strong> "She's always so dramatic" and "He never listens" are the same distortions -- from the parent side. Run the same check on yourself.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>
