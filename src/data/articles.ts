@@ -21,6 +21,26 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'training-attention-infancy',
+    title: 'The Attention Habit',
+    subtitle: 'How the smartest parents build focus without saying a word',
+    description: 'Attention isn\'t a character trait — it\'s a habit trained from infancy. Short lessons, fast subject switches, and natural time rewards build the kind of focus that runs on autopilot.',
+    image: '/images/cards/training-attention-infancy.webp',
+    imageAlt: 'Warm illustration of a mother and toddler examining a small flower together in soft morning light',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Focus',
+    book: 'Home Education',
+    bookSlug: 'charlotte-mason-home-education-1906',
+    datePublished: '2026-02-12',
+    dateModified: '2026-02-12',
+    tldrAnchor: 'A baby holding a gaze for two minutes is doing the same work a surgeon does in the OR.',
+    tldrPayoff: 'Kids who build this habit early finish schoolwork without dawdling, handle sustained effort without meltdowns, and never need to be told \'pay attention\' again.',
+    tldrMove: 'The move: start in infancy with sustained gaze, graduate to 20-minute lessons with fast switches, and let saved time be the only reward.',
+    tldrInside: 'infant gaze-training technique, toddler \'day\'s eye\' story method, before/after grid of parent responses, natural consequence reward box',
+  },
+  {
     slug: 'inner-weather-report',
     title: 'Stop Fixing, Start Hearing',
     subtitle: 'Your kid shares something hard \u2014 the response that keeps them coming back',

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Telling Your Kid to Focus | Kung Fu Family</title>
+  <meta name="description" content="The century-old method that builds bulletproof attention isn't about willpower. It's about short lessons, fast switches, and never once saying 'pay attention.'">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.75;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(42,50,42,0.05) 0%,
+        rgba(26,26,46,0.30) 45%,
+        rgba(26,26,46,0.88) 100%
+      );
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      padding: 0 48px 64px;
+      max-width: 880px;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: #FFFDF9;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+    }
+
+    .hero .subtitle {
+      font-size: 1.3rem;
+      color: rgba(255,253,249,0.85);
+      font-style: italic;
+      line-height: 1.45;
+      max-width: 600px;
+    }
+
+    .hero .meta {
+      margin-top: 24px;
+      font-size: 0.82rem;
+      color: rgba(255,253,249,0.45);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      color: #5C7A5A;
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+
+    p { margin-bottom: 20px; }
+
+    /* ===== PULL QUOTE ===== */
+    .pull-quote {
+      background: linear-gradient(135deg, #5C7A5A, #6E8E6C);
+      color: white;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 36px 0;
+      text-align: center;
+    }
+
+    .pull-quote .label {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+      opacity: 0.75;
+      margin-bottom: 10px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .pull-quote .text {
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .pull-quote.warm {
+      background: linear-gradient(135deg, #8B6B4A, #A68060);
+    }
+
+    .pull-quote.coral {
+      background: linear-gradient(135deg, #C4524A, #D06A62);
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      border: none;
+      border-top: 1px solid #E8E2D8;
+      margin: 48px 0;
+    }
+
+    /* ===== CHAIN DEMO ===== */
+    .chain-demo {
+      background: #FEF0EE;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 36px 0;
+      text-align: center;
+    }
+
+    .chain-demo h3 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #C4524A;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .chain-demo .chain {
+      font-size: 1.05rem;
+      color: #5A3A30;
+      line-height: 2;
+      font-style: italic;
+    }
+
+    .chain-demo .chain .arrow {
+      color: #C4524A;
+      font-style: normal;
+      margin: 0 4px;
+    }
+
+    .chain-demo .footnote {
+      font-size: 0.82rem;
+      color: #8A6A5A;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+      margin: 36px 0;
+    }
+
+    .timeline-stage {
+      background: #FFFDF9;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C7A5A;
+      position: relative;
+    }
+
+    .timeline-stage .stage-tag {
+      font-family: system-ui, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #5C7A5A;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .timeline-stage h3 {
+      font-size: 1.1rem;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+
+    .timeline-stage p {
+      font-size: 0.95rem;
+      color: #4A4A5A;
+      margin-bottom: 10px;
+    }
+
+    .timeline-stage p:last-child { margin-bottom: 0; }
+
+    /* ===== SCRIPT BLOCKS ===== */
+    .script {
+      background: #F0F5EF;
+      border: 1px solid #B8CCB6;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #2A3A2A;
+      line-height: 1.7;
+    }
+
+    .script .who {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #5C7A5A;
+      display: block;
+      margin-bottom: 4px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .script.bad {
+      background: #FEF0EE;
+      border-color: #E8A598;
+      color: #5A3A30;
+    }
+
+    .script.bad .who { color: #C4524A; }
+
+    /* ===== BEFORE / AFTER ===== */
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 32px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .ba-col {
+      padding: 28px 24px;
+    }
+
+    .ba-col.before { background: #FEF0EE; }
+    .ba-col.after { background: #F0F5EF; }
+
+    .ba-col .col-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 14px;
+    }
+
+    .ba-col.before .col-label { color: #C4524A; }
+    .ba-col.after .col-label { color: #5C7A5A; }
+
+    .ba-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ba-col li {
+      font-size: 0.9rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      line-height: 1.5;
+    }
+
+    .ba-col li:last-child { border-bottom: none; }
+    .ba-col.before li { color: #7A4040; }
+    .ba-col.after li { color: #3A5A3A; }
+
+    /* ===== LESSON GRID ===== */
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      margin: 32px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .lesson-slot {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .lesson-slot:nth-child(odd) {
+      background: #EDF5ED;
+    }
+
+    .lesson-slot:nth-child(even) {
+      background: #FFFDF9;
+    }
+
+    .lesson-slot .slot-num {
+      font-family: system-ui, sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #5C7A5A;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .lesson-slot .slot-type {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+
+    .lesson-slot .slot-ex {
+      font-size: 0.78rem;
+      color: #6A6A7A;
+      font-style: italic;
+    }
+
+    /* ===== REWARD BOX ===== */
+    .reward-box {
+      background: #EDF4F7;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 32px 0;
+      border: 1px solid #C5D8E4;
+    }
+
+    .reward-box h3 {
+      font-size: 1rem;
+      color: #2D6A8A;
+      margin-bottom: 12px;
+    }
+
+    .reward-box p {
+      font-size: 0.95rem;
+      color: #4A4A5A;
+      margin-bottom: 12px;
+    }
+
+    .reward-box p:last-child { margin-bottom: 0; }
+
+    /* ===== PRINCIPLE CARDS ===== */
+    .principle-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 32px 0;
+    }
+
+    .principle-card {
+      background: #FFFDF9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border-top: 3px solid #5C7A5A;
+    }
+
+    .principle-card h4 {
+      font-family: system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #5C7A5A;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .principle-card p {
+      font-size: 0.88rem;
+      color: #4A4A5A;
+      margin-bottom: 0;
+      line-height: 1.55;
+    }
+
+    /* ===== IMAGES ===== */
+    .blog-img {
+      display: block;
+      max-width: 100%;
+      margin: 32px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .blog-img-caption {
+      font-size: 0.8rem;
+      color: #8A8A96;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    /* ===== CLOSING ===== */
+    .closing {
+      background: linear-gradient(135deg, #5C7A5A, #6E8E6C);
+      color: white;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 48px 0 32px;
+      text-align: center;
+    }
+
+    .closing h3 { font-size: 1.05rem; margin-bottom: 12px; opacity: 0.85; }
+    .closing p { font-size: 1.15rem; font-style: italic; margin-bottom: 0; }
+
+    .cta {
+      text-align: center;
+      padding: 32px;
+      font-size: 0.92rem;
+      color: #6A6A7A;
+    }
+
+    .cta a { color: #5C7A5A; text-decoration: underline; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.4rem; }
+      .hero-text { padding: 0 24px 40px; }
+      .before-after { grid-template-columns: 1fr; }
+      .lesson-grid { grid-template-columns: 1fr; }
+      .principle-cards { grid-template-columns: 1fr; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img class="hero-img" src="/images/blog/training-attention-infancy/hero.webp" alt="A mother kneeling beside a toddler outdoors, both examining a small flower together, soft morning light filtering through trees">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Stop Telling<br>Your Kid<br>to Focus</h1>
+      <p class="subtitle">The century-old method that builds bulletproof attention has nothing to do with willpower &mdash; and it starts before your child can talk.</p>
+      <p class="meta">Published by kungfu.family</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">A baby holding a gaze for two minutes is doing the same work a surgeon does in the OR.</p>
+      <ul>
+        <li>Kids who build this habit early finish schoolwork without dawdling, handle sustained effort without meltdowns, and never need to be told 'pay attention' again.</li>
+        <li>The move: start in infancy with sustained gaze, graduate to 20-minute lessons with fast switches, and let saved time be the only reward.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>infant gaze-training technique&middot; toddler 'day's eye' story method&middot; before/after grid of parent responses&middot; natural consequence reward box</div>
+    </div>
+
+    <p>Here's a scene Charlotte Mason once described: a mother picks up a toy her baby just dropped. She holds it up, says "Pretty!" and keeps the infant's eyes fixed on it for two full minutes.</p>
+
+    <p>That's it. That's the first lesson in attention.</p>
+
+    <p>Not a flashcard. Not an app. Not "look at me when I'm talking to you." A mother making a discarded rattle interesting enough that a baby doesn't look away.</p>
+
+    <p>Mason spent decades watching children learn, and she landed on something the modern world still hasn't caught up with: attention isn't a character trait. It isn't genetic luck. It's a habit &mdash; one you start building from the crib, not the classroom.</p>
+
+    <div class="pull-quote warm">
+      <div class="label">Charlotte Mason, educator</div>
+      <div class="text">"The highest intellectual gifts depend upon the measure of attention cultivated."</div>
+    </div>
+
+    <p>The lawyer who catches the critical detail on first hearing. The surgeon who notices what everyone else missed. Mason argued these aren't born talents &mdash; they're the result of attention trained early, trained consistently, and trained in a way that most modern parents would find surprisingly counterintuitive.</p>
+
+    <hr class="divider">
+
+    <h2>The enemy is called "association of ideas"</h2>
+
+    <p>Mason had a name for what happens when attention isn't trained. She called it being a slave to "association of ideas" &mdash; the mind bouncing from thought to thought without direction:</p>
+
+    <div class="chain-demo">
+      <h3>An untrained mind at work</h3>
+      <div class="chain">
+        glass <span class="arrow">&rarr;</span> Cinderella's slipper <span class="arrow">&rarr;</span> fairy godmother <span class="arrow">&rarr;</span> boat <span class="arrow">&rarr;</span> Uncle Harry's trip...
+      </div>
+      <p class="footnote">Each hop makes sense. None of them go anywhere useful.</p>
+    </div>
+
+    <p>Association of ideas is "a good servant but a bad master." Everyone's mind hops this way naturally. The difference is whether you can pull it back &mdash; whether you can choose what to think about, or whether every passing thought hijacks you.</p>
+
+    <p>Mason saw this as the great divider. Not intelligence. Not effort. Attention. "To differentiate people according to their power of attention is to employ a legitimate test."</p>
+
+    <hr class="divider">
+
+    <h2>How you actually build it &mdash; stage by stage</h2>
+
+    <p>The method isn't complicated. But it does start earlier than most parents expect, and it works differently than most parents assume.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-stage">
+        <div class="stage-tag">Infancy</div>
+        <h3>The Discarded Toy</h3>
+        <p>Baby drops a toy. Instead of handing it back and moving on, you pick it up, hold it in the baby's line of sight, and make it interesting. Show how it moves. Point out a color. Keep their eyes on one thing for as long as you can.</p>
+        <p>The goal isn't the toy. It's the sustained gaze. Two minutes of fixed attention from an infant is a real achievement &mdash; and the first rep in a lifelong workout.</p>
+      </div>
+
+      <div class="timeline-stage">
+        <div class="stage-tag">Toddler years</div>
+        <h3>The Butterfly Cure</h3>
+        <p>Every toddler is a "butterfly child" &mdash; flitting from thing to thing, glancing and moving on. That's normal. The parent's job is interception, not correction.</p>
+        <div class="script">
+          <span class="who">What this looks like</span>
+          Child glances at a daisy and starts to walk away. You kneel down, say "Do you know why it's called a day's eye?" and suddenly the daisy has a story. The child stays. Not because you told them to &mdash; because you made it worth staying for.
+        </div>
+        <p>You aren't commanding attention. You're earning it by making things interesting enough that the child attends voluntarily.</p>
+      </div>
+
+      <div class="timeline-stage">
+        <div class="stage-tag">Under 8</div>
+        <h3>Short Lessons, Fast Switches</h3>
+        <p>This is where Mason breaks most sharply from what modern parents do. Her rule for children under 8:</p>
+        <p style="font-weight: 700; font-size: 1.15rem; text-align: center; color: #5C7A5A; margin: 16px 0;">No lesson longer than 20 minutes. Ever.</p>
+        <p>Not because children can't focus longer. Because short lessons prevent dawdling. If you have 20 minutes to do math, there is no time to stare out the window. The constraint creates the focus.</p>
+      </div>
+
+    </div>
+
+    <img class="blog-img" src="/images/blog/training-attention-infancy/attention-stages.webp" alt="A warm illustration showing three stages of childhood attention development: an infant looking at a toy, a toddler examining a flower with a parent, and a young child at a desk with a short timer">
+    <p class="blog-img-caption">Attention isn't demanded. It's designed &mdash; from infancy through the school years.</p>
+
+    <hr class="divider">
+
+    <h2>The secret is in the schedule, not the speech</h2>
+
+    <p>Mason never said "tell your child to pay attention." She engineered situations where inattention became nearly impossible. The schedule itself does the work.</p>
+
+    <p>Her rule: never put two "thinking" lessons back to back. Alternate between types so the brain keeps getting refreshed.</p>
+
+    <div class="lesson-grid">
+      <div class="lesson-slot">
+        <div class="slot-num">Lesson 1</div>
+        <div class="slot-type">Thinking</div>
+        <div class="slot-ex">Math, reasoning</div>
+      </div>
+      <div class="lesson-slot">
+        <div class="slot-num">Lesson 2</div>
+        <div class="slot-type">Painstaking</div>
+        <div class="slot-ex">Writing, drawing</div>
+      </div>
+      <div class="lesson-slot">
+        <div class="slot-num">Lesson 3</div>
+        <div class="slot-type">Thinking</div>
+        <div class="slot-ex">Geography, history</div>
+      </div>
+    </div>
+
+    <p>Think of it like interval training for the brain. A runner doesn't improve by jogging at the same pace for three hours. They sprint, recover, sprint. Mason was doing the same thing with cognitive effort &mdash; alternating intense focus with a different kind of work so the child comes back fresh each time.</p>
+
+    <hr class="divider">
+
+    <h2>What to do when focus drops</h2>
+
+    <p>This is the move that changes everything. When a child zones out, goes blank, starts fidgeting through a lesson &mdash; the instinct is to push harder. Say "pay attention." Repeat the instruction louder. Mason says: do the opposite.</p>
+
+    <div class="before-after">
+      <div class="ba-col before">
+        <div class="col-label">What most parents do</div>
+        <ul>
+          <li>"Pay attention!"</li>
+          <li>Repeat the question, louder</li>
+          <li>Make the child sit there until they finish</li>
+          <li>Threaten consequences for not focusing</li>
+          <li>Give a lecture about responsibility</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <div class="col-label">What Mason says to do</div>
+        <ul>
+          <li>Switch to a completely different subject</li>
+          <li>Make the new lesson fresh and vivid</li>
+          <li>Come back to the original topic later</li>
+          <li>Never let the child sit dreaming over work</li>
+          <li>Ask: "Is this lesson interesting enough?"</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The principle behind this is deceptively simple: a child who "goes stupid" &mdash; Mason's exact phrase &mdash; isn't being defiant. Their brain is spent on that subject. Forcing them to stay is training them to sit in front of work while not thinking. You're literally practicing inattention.</p>
+
+    <div class="pull-quote coral">
+      <div class="label">The line worth remembering</div>
+      <div class="text">"It is not the things we do, but the things we fail to do, which fatigue us."</div>
+    </div>
+
+    <p>A child staring at a math page without thinking is more exhausting &mdash; for the child &mdash; than actually doing the math. The fix isn't more willpower. It's a different subject.</p>
+
+    <hr class="divider">
+
+    <h2>The reward that teaches itself</h2>
+
+    <p>Mason's reward system is elegant because it's not really a reward system at all. It's just cause and effect.</p>
+
+    <div class="reward-box">
+      <h3>The Natural Consequence</h3>
+      <p>When a child finishes their arithmetic promptly, they earn <strong>10 minutes of free time</strong> before the next lesson. Not as a prize you bestow. As a natural outcome: you were efficient, so now there's leftover time, and it's yours.</p>
+      <p>No praise. No sticker chart. No "good job!" The child simply learns: <strong>attention saves me time. Inattention wastes it.</strong></p>
+    </div>
+
+    <p>This is important because it shifts the locus of control. The child isn't focusing to please you. They're focusing because it directly benefits them. That's a fundamentally different kind of motivation &mdash; and it's the kind that lasts.</p>
+
+    <img class="blog-img" src="/images/blog/training-attention-infancy/natural-reward.webp" alt="A warm illustration of a child finishing schoolwork at a table, then happily running outside to play, with a small clock showing time saved">
+    <p class="blog-img-caption">The reward isn't a bribe. It's the natural result of being efficient.</p>
+
+    <hr class="divider">
+
+    <h2>The six principles on one page</h2>
+
+    <div class="principle-cards">
+      <div class="principle-card">
+        <h4>Start in the crib</h4>
+        <p>Attention training begins in infancy. A baby holding a gaze for two minutes is practicing the same skill a lawyer uses in a courtroom.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Earn it, don't demand it</h4>
+        <p>Make things interesting enough that the child attends voluntarily. Supplement with stories, wonder, and genuine enthusiasm.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Keep lessons short</h4>
+        <p>Under 8? Never more than 20 minutes. The time constraint eliminates dawdling without a single word about focus.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Alternate subjects</h4>
+        <p>Thinking, then painstaking, then thinking. Different types of effort refresh the brain instead of draining it.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Switch, don't scold</h4>
+        <p>When focus drops, change the subject immediately. Sitting in front of work without thinking is worse than walking away.</p>
+      </div>
+      <div class="principle-card">
+        <h4>Let time teach</h4>
+        <p>Efficient work earns free time. Not as a reward you grant &mdash; as a natural consequence the child experiences.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h2>Where this leads</h2>
+
+    <p>Mason's endgame isn't a child who pays attention because you're watching. It's a child who learns to bring their own will to bear &mdash; who can make themselves attend. She called this "self-directed attention" and considered it a genuine triumph of self-control.</p>
+
+    <p>The habit, once built, runs on autopilot. The child who was trained this way doesn't need to be told to focus. They don't need an app to block distractions. They don't need fidget spinners or focus music or a quiet room. They have something better: an automatic, well-trained capacity to lock onto what matters and stay there.</p>
+
+    <p>And it started with a mother picking up a dropped rattle and saying "Pretty!"</p>
+
+    <div class="closing">
+      <h3>The whole method in one line</h3>
+      <p>Don't demand attention. Design for it &mdash; short lessons, vivid material, fast switches, and natural rewards.</p>
+    </div>
+
+    <div class="cta">
+      <p>More strategies at <a href="https://kungfu.family">kungfu.family</a></p>
+    </div>
+  </div>
+</body>
+</html>
