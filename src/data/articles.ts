@@ -440,6 +440,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: name who they are, not what you want done — then use "when you finish X, then Y" instead of threats or reminders.',
     tldrInside: '4 script cards from toddler to teen, earn-it deal formula, 3 side-by-side reframes, responsibility ladder across 5 age ranges, independence builders vs killers',
   },
+  {
+    slug: 'mistakes-as-fuel',
+    title: 'Read Before You Speak',
+    subtitle: 'Why your face is the first conversation after every mistake',
+    description: 'Your child reads your face before they process their own feelings about a mistake. Here\'s how to nail that first moment -- and the 5-question conversation that follows.',
+    image: '/images/cards/mistakes-as-fuel.webp',
+    imageAlt: 'Child\'s eye reflecting a parent\'s calm face, representing how kids read your reaction before processing their own feelings',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Resilience',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-13',
+    dateModified: '2026-02-13',
+    tldrAnchor: 'Your child reads your face before they process their own feelings about a mistake.',
+    tldrPayoff: 'Kids raised this way bring you their failures instead of hiding them, take on harder challenges voluntarily, and bounce back from setbacks without falling apart.',
+    tldrMove: 'The move: control your face for two seconds, then run a 5-question debrief that turns regret into a plan.',
+    tldrInside: 'danger vs. safety reaction grid, 3 mistake types with matched responses, 5-question debrief sequence with scripts, 4 daily habits to normalize failure talk',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
