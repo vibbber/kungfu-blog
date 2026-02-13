@@ -326,7 +326,7 @@ export const articles: Article[] = [
     subtitle: 'Kids who fear imperfection stop trying -- one shift unlocks everything',
     description: 'The parent who deliberately sucks at painting is teaching the most powerful lesson. Why fearlessness beats flawlessness every time.',
     image: '/images/cards/the-perfection-trap.webp',
-    imageAlt: 'Cracked trophy with a green plant growing through it, representing growth through imperfection',
+    imageAlt: 'Two easels side by side — a perfect but lifeless grey painting versus a wild colorful messy painting bursting with energy',
     imageWidth: 1024,
     imageHeight: 1024,
     imageAspect: 1,
