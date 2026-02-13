@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Helping Your Kid (Seriously) | Kung Fu Parenting</title>
+  <meta name="description" content="Montessori's checklist of skills kids should do alone by age 6 — and why every time you help, you're quietly building a dependent human.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #5C8A5A;
+      margin: 48px 0 16px;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #1A1A2E;
+      margin: 32px 0 12px;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+    }
+
+    .source-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #6b7c93;
+      margin-bottom: 8px;
+    }
+
+    .big-quote {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #5C8A5A;
+      text-align: center;
+      padding: 36px 24px;
+      margin: 40px 0;
+      border-top: 2px solid #E8A598;
+      border-bottom: 2px solid #E8A598;
+      line-height: 1.4;
+    }
+
+    .big-quote cite {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #8795a1;
+      margin-top: 12px;
+      font-style: normal;
+    }
+
+    /* The Swap Table */
+    .swap-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0 32px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .swap-table thead th {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .swap-table thead th:first-child {
+      background: #f5d4ce;
+      color: #9a4a3a;
+    }
+
+    .swap-table thead th:last-child {
+      background: #d4edda;
+      color: #3a6b3a;
+    }
+
+    .swap-table td {
+      padding: 14px 18px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+
+    .swap-table tr:last-child td { border-bottom: none; }
+
+    .swap-table td:first-child {
+      background: #fff8f6;
+      color: #7a5a5a;
+    }
+
+    .swap-table td:last-child {
+      background: #f8fdf8;
+      color: #3d5c3d;
+    }
+
+    /* Challenge Cards */
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+
+    .day-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .day-num {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #5C8A5A, #7aa878);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .day-num span {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .day-content h4 {
+      color: #1A1A2E;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .day-content p {
+      color: #6b7c93;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    .day-content .script {
+      background: #FAF6F0;
+      border-left: 3px solid #E8A598;
+      padding: 8px 12px;
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 0.88rem;
+      color: #5a5a5a;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* Principle Columns */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+
+    @media (max-width: 560px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .col-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .col-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .col-card p {
+      font-size: 0.92rem;
+      color: #6b7c93;
+      margin-bottom: 0;
+    }
+
+    .col-bad h4 { color: #c0392b; }
+    .col-good h4 { color: #5C8A5A; }
+
+    /* Warning callout */
+    .callout {
+      background: #fff3e0;
+      border-left: 4px solid #E8A598;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 32px 0;
+    }
+
+    .callout strong { color: #c0392b; }
+
+    /* Skills checklist visual */
+    .skill-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .skill-age {
+      background: #5C8A5A;
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .skill-detail {
+      font-size: 0.85rem;
+      color: #8795a1;
+      margin-left: auto;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 560px) {
+      h1 { font-size: 1.7rem; }
+      .big-quote { font-size: 1.3rem; padding: 28px 16px; }
+      .skill-detail { display: none; }
+      .day-card { grid-template-columns: 48px 1fr; }
+      .day-num { width: 48px; height: 48px; }
+    }
+  .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+  .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+  .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+  .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+  .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+  .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+  .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+  .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <span class="source-tag">Montessori Independence</span>
+  <h1>Stop Helping Your Kid. Seriously.</h1>
+  <p class="subtitle">Maria Montessori's checklist of what kids should do alone by age 6 -- and the uncomfortable math on what your "help" actually costs.</p>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">There's a checklist of skills every kid should handle alone by age six.</p>
+    <ul>
+      <li>Kids who hit these benchmarks clean their own spills, get dressed without being asked, and order their own food at restaurants.</li>
+      <li>The shift: trade your speed for their competence -- hold back for 90 seconds and let them struggle through it.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>Body, self-care, and communication skill rows &middot; 7 daily handoff scripts &middot; the uncomfortable equation (what you gain vs. what they lose)</div>
+  </div>
+
+  <img src="/images/blog/independence-training-checklist/hero-pouring.webp" alt="Young child confidently pouring milk by themselves in morning light" class="hero-img">
+
+  <p>Your four-year-old reaches for the cereal box. Before their fingers even close around it, you've already grabbed it, poured the bowl, added the milk, and set the spoon in their hand.</p>
+
+  <p>Thirty seconds saved. Zero skills built.</p>
+
+  <p>Maria Montessori, the physician and educator who spent decades observing how children actually learn, saw this pattern and called it exactly what it was: treating children like puppets. Her argument was blunt -- every act of unnecessary help is a tiny act of oppression. Not because you mean harm. Because the math doesn't lie.</p>
+
+  <div class="big-quote">
+    "He who is served is limited in his independence."
+    <cite>Maria Montessori</cite>
+  </div>
+
+  <h2>The Uncomfortable Equation</h2>
+
+  <p>Here's the trade Montessori identified. Every time you do something for your kid that they could do themselves, you're making a deal:</p>
+
+  <div class="two-col">
+    <div class="col-card col-bad">
+      <h4>You Get</h4>
+      <p>30 seconds saved right now. A cleaner floor. One fewer spill to mop.</p>
+    </div>
+    <div class="col-card col-good">
+      <h4>They Lose</h4>
+      <p>One rep of practice. One shot at competence. One small brick in the wall of "I can handle things."</p>
+    </div>
+  </div>
+
+  <p>Multiply that trade across every meal, every morning getting dressed, every shoe-tying, every jacket-zipping -- and by age six, you've either built a kid who moves through the world with quiet confidence, or one who stands at the door waiting for someone to zip them up.</p>
+
+  <p>Montessori didn't sugarcoat which one most parents build.</p>
+
+  <div class="callout">
+    <strong>"The child who does not do, does not know how to do."</strong> That's it. There's no workaround, no shortcut, no "they'll figure it out eventually." The only way to learn to pour milk is to pour milk. Badly, at first. Then better. Then without thinking.
+  </div>
+
+  <h2>What "Done Alone by Age 6" Actually Looks Like</h2>
+
+  <p>Montessori's checklist isn't aspirational. It's baseline. These are skills she expected three-to-six-year-olds to master through daily practice:</p>
+
+  <h3>Body</h3>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Walk on varied surfaces</span>
+    <span class="skill-detail">grass, gravel, stairs</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Run with coordination</span>
+    <span class="skill-detail">stop, turn, control speed</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">4+</span>
+    <span class="skill-name">Navigate stairs alone</span>
+    <span class="skill-detail">up and down, no railing</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Pick up dropped objects</span>
+    <span class="skill-detail">bend, grab, carry</span>
+  </div>
+
+  <h3>Self-Care</h3>
+  <div class="skill-row">
+    <span class="skill-age">4+</span>
+    <span class="skill-name">Dress themselves fully</span>
+    <span class="skill-detail">buttons, zippers, snaps</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Undress themselves</span>
+    <span class="skill-detail">remove all clothing layers</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">4+</span>
+    <span class="skill-name">Wash hands, face, body</span>
+    <span class="skill-detail">minimal supervision</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Feed themselves completely</span>
+    <span class="skill-detail">utensils, cup, no spills</span>
+  </div>
+
+  <img src="/images/blog/independence-training-checklist/child-dressing.webp" alt="Young child pulling a shirt on by themselves with determination" class="inline-img">
+
+  <h3>Communication</h3>
+  <div class="skill-row">
+    <span class="skill-age">4+</span>
+    <span class="skill-name">Speak so others understand</span>
+    <span class="skill-detail">clear pronunciation</span>
+  </div>
+  <div class="skill-row">
+    <span class="skill-age">3+</span>
+    <span class="skill-name">Express needs in words</span>
+    <span class="skill-detail">not pointing, not crying</span>
+  </div>
+
+  <p>Look at that list. None of it is extraordinary. All of it is trainable. The question isn't "can my kid do this?" -- it's "have I stopped doing it for them?"</p>
+
+  <h2>The Swap: What You Stop vs. What They Start</h2>
+
+  <p>This is where it gets concrete. Montessori's method isn't "let them figure it out." It's a deliberate handoff: you trade your speed for their competence.</p>
+
+  <table class="swap-table">
+    <thead>
+      <tr>
+        <th>You Stop Doing This</th>
+        <th>They Start Doing This</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pouring their cereal and milk</td>
+        <td>Small pitcher, small bowl. They pour. You breathe.</td>
+      </tr>
+      <tr>
+        <td>Zipping their jacket</td>
+        <td>You hold the bottom. They pull. Takes 3x longer. Worth it.</td>
+      </tr>
+      <tr>
+        <td>Picking up everything they drop</td>
+        <td>"Oops! Can you grab that?" Wait. They will.</td>
+      </tr>
+      <tr>
+        <td>Answering for them when people ask their name</td>
+        <td>Silence. They find the words. You smile.</td>
+      </tr>
+      <tr>
+        <td>Carrying them up the stairs</td>
+        <td>They climb. One step at a time. You stand behind.</td>
+      </tr>
+      <tr>
+        <td>Putting on their shoes</td>
+        <td>Velcro first, laces later. Their hands, not yours.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <img src="/images/blog/independence-training-checklist/contrast-served-vs-independent.webp" alt="Comparison: parent doing everything for child versus child doing it proudly alone" class="inline-img">
+
+  <h2>The 7-Day Step-Back Challenge</h2>
+
+  <p>Pick one week. Each day, hand off one thing you've been doing for your kid. Not all at once -- one skill per day. By Sunday, seven things have shifted from your hands to theirs.</p>
+
+  <div class="challenge-grid">
+    <div class="day-card">
+      <div class="day-num">Day<span>1</span></div>
+      <div class="day-content">
+        <h4>Pouring Drinks</h4>
+        <p>Small pitcher, small cup. Set it up and step away.</p>
+        <div class="script">"Your pitcher is on the counter. Pour as much as you want."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>2</span></div>
+      <div class="day-content">
+        <h4>Getting Dressed</h4>
+        <p>Lay out two outfit options the night before. Morning: they choose and dress.</p>
+        <div class="script">"Your clothes are on the chair. Come find me when you're ready."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>3</span></div>
+      <div class="day-content">
+        <h4>Putting on Shoes</h4>
+        <p>Velcro or slip-ons for now. Laces are a later victory.</p>
+        <div class="script">"Shoes are by the door. We leave when your feet are ready."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>4</span></div>
+      <div class="day-content">
+        <h4>Cleaning Up Spills</h4>
+        <p>Small towel, accessible location. Spills are their jurisdiction now.</p>
+        <div class="script">"The cloth is in the bottom drawer. You got this."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>5</span></div>
+      <div class="day-content">
+        <h4>Washing Hands and Face</h4>
+        <p>Step stool at the sink. Soap within reach. Towel at their height.</p>
+        <div class="script">"Go wash up for dinner. Everything you need is at the sink."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>6</span></div>
+      <div class="day-content">
+        <h4>Speaking for Themselves</h4>
+        <p>At the store, restaurant, playground. They order. They answer.</p>
+        <div class="script">"The waiter is going to ask what you'd like. You tell them."</div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-num">Day<span>7</span></div>
+      <div class="day-content">
+        <h4>Setting Their Place at the Table</h4>
+        <p>Plate, cup, fork, napkin. Show them once. Then it's their job forever.</p>
+        <div class="script">"You're in charge of setting your spot. Everything is in the low cabinet."</div>
+      </div>
+    </div>
+  </div>
+
+  <p>By day seven, your mornings look different. Not because you discovered a hack. Because you stopped doing seven things that were never your job in the first place.</p>
+
+  <h2>The Hardest Part Isn't the Kid</h2>
+
+  <p>Montessori's sharpest insight wasn't about children at all. It was about us.</p>
+
+  <div class="big-quote">
+    "Teaching a child to feed himself is much more tedious than feeding him, but the former is the work of an educator, the latter is the easy and inferior work of a servant."
+    <cite>Maria Montessori</cite>
+  </div>
+
+  <p>The hard part is watching your three-year-old struggle with a zipper for ninety seconds when you could do it in two. The hard part is sitting through a messy, slow pour when you could have it done before they even reached for the pitcher.</p>
+
+  <p>The hard part is choosing the longer path -- every single time -- because you know where the short one leads.</p>
+
+  <p>That longer path? It leads to a six-year-old who walks into a room and handles things. Who pours their own drink, dresses themselves, cleans their own mess, and looks you in the eye with the quiet confidence of someone who knows: <em>I can do this.</em></p>
+
+  <p>That's not a parenting philosophy. That's a kid who is ready for the world.</p>
+
+  <p>Start tomorrow. Pick one thing. Step back. Watch what happens.</p>
+
+</body>
+</html>
