@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The parent who deliberately sucks at painting is teaching the most powerful lesson. Why fearlessness beats flawlessness every time.">
+  <title>Be Terrible at Something (Your Kids Are Watching)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      font-size: 17px;
+      color: #6B7280;
+      font-weight: 400;
+    }
+
+    /* Body text */
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+    .lead {
+      font-size: 18px;
+      color: #1A1A2E;
+      font-weight: 400;
+      line-height: 1.8;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      line-height: 1.3;
+    }
+    h3 {
+      font-size: 18px;
+      color: #5C8A5A;
+      margin: 24px 0 10px;
+    }
+
+    /* Callout */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      color: white;
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Warning signs */
+    .signs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .sign-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .sign-card .sign-num {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 26px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .sign-card h4 {
+      font-size: 15px;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+    }
+    .sign-card p {
+      font-size: 13px;
+      color: #6B7280;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .sign-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* In-blog images */
+    .blog-img {
+      margin: 32px 0;
+      text-align: center;
+    }
+    .blog-img img {
+      width: 100%;
+      border-radius: 14px;
+    }
+    .blog-img .caption {
+      font-size: 13px;
+      color: #9CA3AF;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Comparison table */
+    .shift-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin: 24px 0;
+    }
+    .shift-table th {
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .shift-table th:first-child {
+      background: #F3D5CF;
+      color: #9B3B26;
+    }
+    .shift-table th:last-child {
+      background: #D4EDDA;
+      color: #2D6A3F;
+    }
+    .shift-table td {
+      padding: 13px 18px;
+      font-size: 15px;
+      background: white;
+      border-bottom: 1px solid #F3F4F6;
+    }
+    .shift-table tr:last-child td { border-bottom: none; }
+    .shift-table td:first-child { color: #9B3B26; }
+    .shift-table td:last-child { color: #2D6A3F; font-weight: 500; }
+
+    /* Script cards */
+    .script-cards {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .script-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .script-card .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #5C8A5A;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .script-card .moment {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 10px;
+    }
+    .script-card .script {
+      font-size: 17px;
+      color: #1A1A2E;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .script-card .why {
+      font-size: 13px;
+      color: #9CA3AF;
+      margin-top: 8px;
+    }
+
+    /* Daily moves */
+    .daily-moves {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .move {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .move-icon {
+      background: #EDF7ED;
+      color: #5C8A5A;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .move h4 {
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+    .move p {
+      font-size: 14px;
+      color: #6B7280;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E5E7EB;
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .hero h1 { font-size: 26px; }
+      .signs-grid { grid-template-columns: 1fr; }
+      .callout p { font-size: 17px; }
+      .shift-table { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/the-perfection-trap/hero-art-together.webp" alt="Parent and child joyfully doing art together, the parent laughing at their own terrible painting">
+    <h1>Be Terrible at Something<br>(Your Kids Are Watching)</h1>
+    <p class="subtitle">The most powerful parenting move nobody talks about</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Kids who fear imperfection stop trying new things entirely.</p>
+    <ul>
+      <li>Kids raised with effort-first language take on hard things, recover from losses, and actually enjoy what they accomplish instead of scanning for flaws.</li>
+      <li>The move: lead with experience questions, not outcome questions -- and let them watch you enjoy being bad at something.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>5 warning signs your child is in the trap &middot; outcome-vs-experience question table &middot; 4 word-for-word scripts &middot; 4 weekly moves</div>
+  </div>
+
+  <p class="lead">Last week a dad told me he started playing guitar. He's awful at it. Genuinely, impressively bad. His eight-year-old daughter heard him from the other room, came in, watched for a minute, and said: "Dad, that sounds terrible." He grinned and kept strumming.</p>
+
+  <p>The next day, she asked if she could try the piano. She'd been refusing for months.</p>
+
+  <p>That little sequence tells you everything you need to know about the perfection trap and how to break it. His daughter wasn't avoiding piano because she didn't want to play. She was avoiding it because she wasn't sure she'd be good at it. The moment she watched her dad enjoy being bad at something, the equation changed. Doing things no longer required excelling at them.</p>
+
+  <div class="callout">
+    <p>Expecting your child to be perfect sets them up for failure.<br>Expecting them to give their best effort sets them up for fearlessness.</p>
+  </div>
+
+  <h2>The Five Tells</h2>
+
+  <p>Kids under too much pressure don't send a memo about it. They show you through behavior. Here's what to watch for -- the pattern matters more than any single bad day.</p>
+
+  <div class="signs-grid">
+    <div class="sign-card">
+      <span class="sign-num">1</span>
+      <h4>They only do sure things</h4>
+      <p>New activity? Hard pass. If there's a chance they'll be average, they'd rather not start at all.</p>
+    </div>
+    <div class="sign-card">
+      <span class="sign-num">2</span>
+      <h4>Small mistakes, big meltdowns</h4>
+      <p>One wrong answer, one missed note -- and the response is tears, rage, or total shutdown. Way out of proportion.</p>
+    </div>
+    <div class="sign-card">
+      <span class="sign-num">3</span>
+      <h4>They stall before finishing</h4>
+      <p>Looks like laziness. It's actually fear. If the result can't be perfect, not trying feels safer.</p>
+    </div>
+    <div class="sign-card">
+      <span class="sign-num">4</span>
+      <h4>Wins don't land</h4>
+      <p>Great performance, good grade -- but their attention goes straight to the one flaw. The win never registers.</p>
+    </div>
+    <div class="sign-card full-width">
+      <span class="sign-num">5</span>
+      <h4>Their body is keeping score</h4>
+      <p>Stomachaches before tests. Headaches before performances. Trouble sleeping the night before a big game. When stress shows up in the body, the pressure has crossed a line.</p>
+    </div>
+  </div>
+
+  <div class="blog-img">
+    <img src="/images/blog/the-perfection-trap/fear-vs-freedom.webp" alt="Two sides: a child frozen by fear of imperfection versus a child running freely and fearlessly">
+    <p class="caption">Same kid, different message received at home</p>
+  </div>
+
+  <h2>The One-Word Diagnostic</h2>
+
+  <p>After a game, a test, a recital -- what's your first question? That first question tells your child exactly what you value. It's a tiny moment with enormous weight.</p>
+
+  <table class="shift-table">
+    <tr>
+      <th>Outcome First</th>
+      <th>Experience First</th>
+    </tr>
+    <tr>
+      <td>"How'd you do?"</td>
+      <td>"How was it?"</td>
+    </tr>
+    <tr>
+      <td>"Did you win?"</td>
+      <td>"What was the best part?"</td>
+    </tr>
+    <tr>
+      <td>"What'd you get on the test?"</td>
+      <td>"What are you proudest of?"</td>
+    </tr>
+    <tr>
+      <td>"Why didn't you score more?"</td>
+      <td>"I loved watching you hustle out there."</td>
+    </tr>
+    <tr>
+      <td>Result = your child's value</td>
+      <td>Effort = your child's value</td>
+    </tr>
+  </table>
+
+  <p>The score comes up anyway. It always does. But which question comes <em>first</em> is the message your child absorbs about what actually matters to you.</p>
+
+  <div class="blog-img">
+    <img src="/images/blog/the-perfection-trap/asking-about-experience.webp" alt="Parent kneeling to child's eye level after a soccer game, asking about the experience">
+    <p class="caption">Lead with curiosity about their experience, not the score</p>
+  </div>
+
+  <h2>Scripts That Actually Work</h2>
+
+  <p>Knowing the shift is one thing. Having the words ready in the moment is another. Steal these.</p>
+
+  <div class="script-cards">
+    <div class="script-card">
+      <div class="label">After a loss</div>
+      <div class="moment">They just lost the championship game</div>
+      <div class="script">"That was a tough one. Tell me about the play you're most proud of."</div>
+      <div class="why">Separates their worth from the outcome. The effort still counted.</div>
+    </div>
+    <div class="script-card">
+      <div class="label">After a bad grade</div>
+      <div class="moment">They bring home a test they bombed</div>
+      <div class="script">"What felt hard about this one? Let's look at it together."</div>
+      <div class="why">Makes the mistake a data point, not a verdict. You're on their team.</div>
+    </div>
+    <div class="script-card">
+      <div class="label">When they won't try</div>
+      <div class="moment">They refuse to sign up for something new</div>
+      <div class="script">"You don't have to be good at it. You just have to try it once."</div>
+      <div class="why">Removes the performance expectation entirely. Trying IS the win.</div>
+    </div>
+    <div class="script-card">
+      <div class="label">When they melt down over a mistake</div>
+      <div class="moment">Tears over an erased answer, a wrong note, a spelling error</div>
+      <div class="script">"Mistakes mean you're working on something hard. That's a good sign."</div>
+      <div class="why">Reframes the mistake from failure to evidence of effort.</div>
+    </div>
+  </div>
+
+  <h2>Four Moves to Build Into Your Week</h2>
+
+  <div class="daily-moves">
+    <div class="move">
+      <div class="move-icon">&#127912;</div>
+      <div>
+        <h4>Be bad at something (on purpose)</h4>
+        <p>Play a sport you stink at. Sing off-key. Draw stick figures. When your kid sees you enjoy something without being good at it, the permission is instant.</p>
+      </div>
+    </div>
+    <div class="move">
+      <div>
+        <h4>Audit your all-or-nothing language</h4>
+        <p>"That meeting was a total disaster" because one thing went wrong? Your child is absorbing that framing. Talk about mixed results with nuance, not absolutes.</p>
+      </div>
+    </div>
+    <div class="move">
+      <div>
+        <h4>Leave blank space in the schedule</h4>
+        <p>One block per week with nothing to achieve, no performance to deliver, no skill to build. Just... time. Overscheduling is a perfection trap in disguise.</p>
+      </div>
+    </div>
+    <div class="move">
+      <div>
+        <h4>Watch for the creep</h4>
+        <p>Expectations naturally rise as your child grows. Check: is the bar rising because they're growing, or because you moved the goalposts? The bar should follow their ability, not lead it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>The kid who's free to be bad at things is the kid who'll try everything.<br>And the kid who tries everything? That's the kid who finds the thing they're extraordinary at.</p>
+  </div>
+
+  <p>That dad with the guitar? His daughter is three weeks into piano now. She's not great. She doesn't care. She's having a blast. That's the whole game.</p>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>
