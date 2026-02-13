@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let Your Kid Design Their Own Courage | Kung Fu Parenting</title>
+  <meta name="description" content="The bravery staircase puts your child in charge of conquering their fears — one self-chosen step at a time. Here's how to build one tonight.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+    }
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .hero .subtitle {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 26px;
+      color: #5C8A5A;
+      margin: 48px 0 20px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
+      color: #2D2D3A;
+    }
+    .lead {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #1A1A2E;
+    }
+    .blog-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 32px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin: 36px 0;
+      text-align: center;
+    }
+    .callout p {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .callout .small {
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-top: 8px;
+    }
+    .step-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .step-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .step-card.full-width {
+      grid-column: 1 / -1;
+    }
+    .step-card h3 {
+      font-size: 14px;
+      color: #5C8A5A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .step-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #444;
+    }
+    .step-card .number {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .script {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+      font-style: italic;
+      font-size: 16px;
+      color: #2D4A2D;
+      line-height: 1.7;
+    }
+    .script .label {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5C8A5A;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .comparison-table th {
+      padding: 14px 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    .comparison-table th:first-child {
+      background: #FEF3F0;
+      color: #C0392B;
+      text-align: left;
+    }
+    .comparison-table th:last-child {
+      background: #EDF7ED;
+      color: #5C8A5A;
+      text-align: left;
+    }
+    .comparison-table td {
+      padding: 12px 20px;
+      font-size: 15px;
+      background: white;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .ladder {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .ladder h3 {
+      font-size: 18px;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+    }
+    .ladder .context {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .rung {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    .rung:nth-child(odd) { background: #FAF6F0; }
+    .rung:nth-child(even) { background: #EDF7ED; }
+    .rung .num {
+      background: #E8A598;
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .rung .desc {
+      font-size: 15px;
+      color: #2D2D3A;
+    }
+    .rung .desc strong {
+      color: #5C8A5A;
+    }
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .rule-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid #5C8A5A;
+    }
+    .rule-card h4 {
+      font-size: 15px;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+    .rule-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 0;
+    }
+    .worry-check {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .worry-check h3 {
+      color: #5C8A5A;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .check-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .check-item .qnum {
+      background: #5C8A5A;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check-item .qtxt {
+      font-size: 15px;
+    }
+    .check-item .qtxt strong {
+      color: #1A1A2E;
+    }
+    .tip-box {
+      background: #FFF9E6;
+      border: 1px solid #F0C674;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .tip-box .tip-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #B8860B;
+      margin-bottom: 6px;
+    }
+    .tip-box p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 0;
+    }
+    .closing {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 2px solid #E8A598;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .step-card-grid { grid-template-columns: 1fr; }
+      .rules-grid { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 14px; }
+      .blog-container { padding: 24px 16px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+<div class="blog-container">
+
+  <div class="hero">
+    <span class="hero-tag">Bravery Builder</span>
+    <h1>Let Your Kid Design Their Own Courage</h1>
+    <p class="subtitle">The bravery staircase hands your child the blueprint. They pick the steps. They set the pace. You just show up and cheer.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The child who picks their own brave steps actually takes them.</p>
+    <ul>
+      <li>Kids who design their own courage plan stop freezing before tests, skipping parties, and eating lunch alone. They build the kind of confidence that no amount of 'you'll be fine' can create.</li>
+      <li>The move: sit down tonight, draw six steps from barely uncomfortable to the big goal, and let your child fill in every rung.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>6-rung staircase with real example &middot; word-for-word script for mid-spiral moments &middot; 3-rule card grid for making it stick &middot; 5-row anxiety habits comparison</div>
+  </div>
+
+  <p class="lead">Your six-year-old won't go to birthday parties. Your nine-year-old freezes before every math test. Your twelve-year-old eats lunch alone rather than sit with new people.</p>
+
+  <p>You've tried reassurance ("It'll be fine!"), you've tried logic ("What's the worst that can happen?"), you've tried just... avoiding the thing. None of it sticks. The fear keeps winning.</p>
+
+  <p>Here's the move that actually works: stop trying to convince your child they shouldn't be afraid. Instead, hand them a marker and a blank sheet of paper and say, <em>"Let's build your staircase."</em></p>
+
+  <img src="/images/blog/one-step-braver/bravery-staircase.webp" alt="A child looking up a colorful staircase of building blocks with small flags on each step" class="blog-img">
+
+  <h2>Why Your Child Needs to Be the Architect</h2>
+
+  <p>Gradual exposure is the single most studied, most effective tool for childhood anxiety. Decades of clinical research confirm it. But there's a detail that makes or breaks it: <strong>the child has to own the plan.</strong></p>
+
+  <p>When you decide the steps, it's a chore. When they decide the steps, it's a quest. The difference matters because anxiety is fundamentally about feeling out of control. Handing your child the pen — letting them decide what feels "a little scary" versus "way too scary right now" — starts undoing that helplessness before they take a single step.</p>
+
+  <div class="callout">
+    <p>Avoidance shrinks your child's world. Exposure expands it.</p>
+    <p class="small">Every time they dodge a scary situation, their brain files it as "confirmed dangerous." Every time they face one and survive, the file gets updated.</p>
+  </div>
+
+  <h2>The Avoidance Trap vs. The Staircase</h2>
+
+  <p>Most parents fall into the avoidance trap with the best intentions. Your child says "I can't" and you think, "I'll protect them." But each removal of discomfort teaches the child's brain something specific: <em>you weren't able to handle that.</em></p>
+
+  <img src="/images/blog/one-step-braver/avoidance-vs-exposure.webp" alt="Comparison of avoidance making a child smaller versus gradual exposure making a child more confident" class="blog-img">
+
+  <table class="comparison-table">
+    <tr>
+      <th>What Avoidance Teaches</th>
+      <th>What the Staircase Teaches</th>
+    </tr>
+    <tr>
+      <td>"That situation is dangerous"</td>
+      <td>"That situation is manageable"</td>
+    </tr>
+    <tr>
+      <td>"I need someone to rescue me"</td>
+      <td>"I can handle discomfort"</td>
+    </tr>
+    <tr>
+      <td>"My fear is always right"</td>
+      <td>"My fear is sometimes just noise"</td>
+    </tr>
+    <tr>
+      <td>"The world should shrink to fit me"</td>
+      <td>"I can expand to fit the world"</td>
+    </tr>
+  </table>
+
+  <h2>Build the Staircase Tonight</h2>
+
+  <p>Pick a real fear that's already affecting your child's life. Not a hypothetical. The birthday parties they skip, the restaurant orders they won't place, the playground they avoid. Real stakes create real motivation.</p>
+
+  <p>Sit down together. Draw a staircase. Six steps works well. The bottom step should be barely uncomfortable. The top step is the big goal. Everything in between is their call.</p>
+
+  <div class="ladder">
+    <h3>Example: Afraid of Speaking Up in Class</h3>
+    <p class="context">A real staircase built by a real kid. Your child's will look different.</p>
+    <div class="rung">
+      <div class="num">6</div>
+      <div class="desc"><strong>The goal:</strong> Raise hand and answer a question in front of the class</div>
+    </div>
+    <div class="rung">
+      <div class="num">5</div>
+      <div class="desc"><strong>Big step:</strong> Ask the teacher a question after a lesson</div>
+    </div>
+    <div class="rung">
+      <div class="num">4</div>
+      <div class="desc"><strong>Medium-big:</strong> Read one sentence aloud during group reading</div>
+    </div>
+    <div class="rung">
+      <div class="num">3</div>
+      <div class="desc"><strong>Medium:</strong> Share an answer in a small group of three or four kids</div>
+    </div>
+    <div class="rung">
+      <div class="num">2</div>
+      <div class="desc"><strong>Small step:</strong> Whisper the answer to a friend and let them share it</div>
+    </div>
+    <div class="rung">
+      <div class="num">1</div>
+      <div class="desc"><strong>Starting point:</strong> Say the answer out loud at home during dinner</div>
+    </div>
+  </div>
+
+  <img src="/images/blog/one-step-braver/planning-together.webp" alt="A parent and child drawing a staircase plan together at a table" class="blog-img">
+
+  <div class="rules-grid">
+    <div class="rule-card">
+      <h4>They Build It</h4>
+      <p>Don't assume what's easy or hard. Ask them. What feels small to you might feel enormous to them.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Stay Until Bored</h4>
+      <p>Don't rush to the next step. Repeat the current one until the anxiety genuinely drops and it feels routine.</p>
+    </div>
+    <div class="rule-card">
+      <h4>Celebrate Stepping</h4>
+      <p>Every rung they stand on is a win. Even if they never reach the top, progress is the entire point.</p>
+    </div>
+  </div>
+
+  <h2>The Four-Question Worry Fact-Check</h2>
+
+  <p>When your child is mid-spiral — convinced tomorrow will be a catastrophe — don't argue with the feeling. Walk them through the thinking instead. Four questions. Takes two minutes. Changes everything.</p>
+
+  <div class="worry-check">
+    <h3>Run This Before Every Staircase Step</h3>
+    <div class="check-item">
+      <div class="qnum">1</div>
+      <div class="qtxt"><strong>"What's the scariest thing that could happen?"</strong><br>Let them say it. Naming the fear out loud takes some of its power away.</div>
+    </div>
+    <div class="check-item">
+      <div class="qnum">2</div>
+      <div class="qtxt"><strong>"What's the best thing that could happen?"</strong><br>Anxious kids forget this version exists. Make them picture it.</div>
+    </div>
+    <div class="check-item">
+      <div class="qnum">3</div>
+      <div class="qtxt"><strong>"What will probably actually happen?"</strong><br>Almost always somewhere in the middle — and far less dramatic than the worry predicted.</div>
+    </div>
+    <div class="check-item">
+      <div class="qnum">4</div>
+      <div class="qtxt"><strong>"Even if the scary thing happened, could you survive it?"</strong><br>This is the question that builds real resilience. The answer is almost always yes.</div>
+    </div>
+  </div>
+
+  <div class="script">
+    <span class="label">Try This Script</span>
+    "I can see you're worried about tomorrow. Let's do a quick fact-check on that worry. What's the absolute worst version? ... Okay. Now what's the best version? ... And what do you think will probably actually happen? ... Now — even in the worst version, could you handle it?"
+  </div>
+
+  <h2>Danger Signal or Worry Signal?</h2>
+
+  <p>Before your child can climb any staircase, they need one foundational skill: telling the difference between a fire alarm and a smoke detector going off because someone burned toast.</p>
+
+  <div class="step-card-grid">
+    <div class="step-card">
+      <h3>Danger Signal</h3>
+      <p>A real threat is present. An unfamiliar dog is growling and running toward you.</p>
+      <p><strong>Right move:</strong> Listen to the signal. Get safe.</p>
+    </div>
+    <div class="step-card">
+      <h3>Worry Signal</h3>
+      <p>The fear feels identical, but nothing dangerous is actually happening. Walking into a new classroom on the first day.</p>
+      <p><strong>Right move:</strong> Name it as worry. Face it anyway.</p>
+    </div>
+    <div class="step-card full-width">
+      <h3>How to Practice</h3>
+      <p>Don't wait for a high-stakes moment. When your child mentions being nervous about something small — a playdate, a test, ordering food — ask: <strong>"Danger signal or worry signal?"</strong> Over time, they start categorizing on their own. That pause between feeling fear and deciding what to do with it is everything.</p>
+    </div>
+  </div>
+
+  <h2>What Accidentally Feeds the Fear</h2>
+
+  <p>You're probably doing some of these with love. That's the tricky part.</p>
+
+  <table class="comparison-table">
+    <tr>
+      <th>Feeds Anxiety</th>
+      <th>Builds Bravery</th>
+    </tr>
+    <tr>
+      <td>Removing discomfort before they feel it</td>
+      <td>Facing feared situations in small, planned doses</td>
+    </tr>
+    <tr>
+      <td>Repeating "it'll be fine" without teaching them to think it through</td>
+      <td>Helping them sort real threats from worry noise</td>
+    </tr>
+    <tr>
+      <td>Dropping activities the moment they say they're scared</td>
+      <td>Celebrating the attempt, not just the outcome</td>
+    </tr>
+    <tr>
+      <td>Letting your own worries shape what they're allowed to try</td>
+      <td>Letting them sit with discomfort instead of rescuing</td>
+    </tr>
+    <tr>
+      <td>Throwing them into the deep end without building up to it</td>
+      <td>Handling your own anxieties where they can see it</td>
+    </tr>
+  </table>
+
+  <div class="tip-box">
+    <div class="tip-label">Watch Yourself Too</div>
+    <p>Parents have their own worry signals. If you're steering your child away from situations because they make <em>you</em> nervous — a neighborhood they could walk to, a class trip, a new social situation — check yourself first. Your child reads your body language before your words. If you look terrified, they'll file the situation as dangerous regardless of what you say.</p>
+  </div>
+
+  <div class="closing">
+    <h2>The Staircase Keeps Working</h2>
+
+    <p>Expect backslides. Your child might cruise through three steps and freeze on the fourth. That's normal. Go back one step. Let them rebuild momentum. Anxiety doesn't follow a straight line down — the overall trend matters more than any single day.</p>
+
+    <p>And when you're brave about something yourself — a tough conversation at work, trying something new, speaking up when it's uncomfortable — narrate it. <em>"I was nervous about that presentation today, but I did it anyway and it went fine."</em> Your child needs to see that adults feel fear and move through it. Not that adults never feel afraid.</p>
+
+    <p>Tonight, grab a marker. Draw a staircase. Ask your kid what goes on each step. Then let them climb.</p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting. Strategy informed by clinical research on gradual exposure and cognitive-behavioral therapy for childhood anxiety.</p>
+  </footer>
+
+</div>
+</body>
+</html>

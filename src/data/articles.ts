@@ -380,6 +380,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop being the feedback loop. Pick activities where the material does the correcting, then sit down and say nothing.',
     tldrInside: '10-item activity audit with verdicts, 5-point comparison grid, 3 scenario cards with parent scripts, walk-to-the-playroom challenge',
   },
+  {
+    slug: 'one-step-braver',
+    title: 'Kid-Designed Courage',
+    subtitle: 'When your child picks the steps, fear stops winning every time',
+    description: 'The bravery staircase puts your child in charge of conquering their fears — one self-chosen step at a time. A gradual exposure plan they build themselves, with scripts for mid-spiral moments.',
+    image: '/images/cards/one-step-braver.webp',
+    imageAlt: 'Warm illustration of a child climbing colorful steps representing gradual courage building',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Anxiety',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-13',
+    dateModified: '2026-02-13',
+    tldrAnchor: 'The child who picks their own brave steps actually takes them.',
+    tldrPayoff: 'Kids who design their own courage plan stop freezing before tests, skipping parties, and eating lunch alone. They build the kind of confidence that no amount of \'you\'ll be fine\' can create.',
+    tldrMove: 'The move: sit down tonight, draw six steps from barely uncomfortable to the big goal, and let your child fill in every rung.',
+    tldrInside: '6-rung staircase with real example, word-for-word script for mid-spiral moments, 3-rule card grid for making it stick, 5-row anxiety habits comparison',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
