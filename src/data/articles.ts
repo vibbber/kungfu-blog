@@ -400,6 +400,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: sit down tonight, draw six steps from barely uncomfortable to the big goal, and let your child fill in every rung.',
     tldrInside: '6-rung staircase with real example, word-for-word script for mid-spiral moments, 3-rule card grid for making it stick, 5-row anxiety habits comparison',
   },
+  {
+    slug: 'let-them-work-for-it',
+    title: '"Work for It" Formula',
+    subtitle: '"When...then" — the structure that replaces nagging with follow-through',
+    description: 'Asking a kid to "be a helper" works dramatically better than asking them to "help." The identity shift plus earn-it structure that builds kids who handle things on their own.',
+    image: '/images/cards/let-them-work-for-it.webp',
+    imageAlt: 'Warm illustration showing earn-it formula with a broom leading to a game controller through a when-then arrow',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Responsibility',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-13',
+    dateModified: '2026-02-13',
+    tldrAnchor: 'Asking a kid to "be a helper" works better than asking them to "help."',
+    tldrPayoff: 'Kids who get identity language plus structure become teens who manage their own schedules, earn and budget money, and solve conflicts without you.',
+    tldrMove: 'The move: name who they are, not what you want done — then use "when you finish X, then Y" instead of threats or reminders.',
+    tldrInside: '4 script cards from toddler to teen, earn-it deal formula, 3 side-by-side reframes, responsibility ladder across 5 age ranges, independence builders vs killers',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
