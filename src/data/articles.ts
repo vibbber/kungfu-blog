@@ -520,6 +520,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: name what they feel, sit in it without silver-lining, then turn the experience into signal once the wave passes.',
     tldrInside: '3 SIT steps with word-for-word scripts, fixer vs. coach side-by-side, 3 age-matched conversation cards, 4 long-term habits to lock it in',
   },
+  {
+    slug: 'bedtime-check-ins',
+    title: 'Bedtime by Friday',
+    subtitle: 'From 45-minute rocking marathons to "goodnight" and done',
+    description: 'The check-in method that teaches babies to fall asleep on their own — most families see real results within a week. Step-by-step with scripts, timeline, and signals.',
+    image: '/images/cards/bedtime-check-ins.webp',
+    imageAlt: 'Warm illustration of a peaceful nursery at dusk with a baby settling calmly in a crib',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Sleep',
+    book: 'Becoming Who We Are',
+    bookSlug: 'rothbart-becoming-who-we-are',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Most families see bedtime transform within five nights.',
+    tldrPayoff: 'Kids go from screaming for 45 minutes to fussing for 3 and falling asleep alone. Parents get their evenings back.',
+    tldrMove: 'The shift: stop solving the problem for them -- say goodnight while they\'re still awake and let them find their own way down.',
+    tldrInside: '4-step check-in sequence, night-by-night timeline from hard to easy, 1 word-for-word bedtime script, 3 mistakes that reset progress',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
