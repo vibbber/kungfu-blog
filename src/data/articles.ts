@@ -460,6 +460,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: control your face for two seconds, then run a 5-question debrief that turns regret into a plan.',
     tldrInside: 'danger vs. safety reaction grid, 3 mistake types with matched responses, 5-question debrief sequence with scripts, 4 daily habits to normalize failure talk',
   },
+  {
+    slug: 'proactive-response-toolkit',
+    title: 'The Soda Can Test',
+    subtitle: 'Build a teen who stays cool when life shakes them up',
+    description: 'Shake a soda can, it explodes. Shake a water bottle, nothing. The difference is a skill — one pause button, four mental tools, and seven phrase swaps that turn reactive teens into unshakeable ones.',
+    image: '/images/cards/proactive-response-toolkit.webp',
+    imageAlt: 'Illustration of a soda can exploding next to a calm water bottle, representing reactive vs proactive teen responses',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Self-Control',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Reactive teens let the world push their buttons. Proactive teens pick their own response.',
+    tldrPayoff: 'Kids raised with this toolkit handle friend drama without imploding, take ownership of bad grades instead of blaming teachers, and stay calm when things feel unfair. They keep their power instead of giving it away.',
+    tldrMove: 'The shift: swap reactive language for proactive language -- \'I have to\' becomes \'I choose to\' -- and practice with low-stakes scenarios until it becomes automatic.',
+    tldrInside: 'soda can vs water bottle test, 7 language swaps, 4 human tools grid, 3 reactive-vs-proactive scenarios',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
