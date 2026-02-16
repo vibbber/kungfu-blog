@@ -560,6 +560,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: run your own behavior through the friction map, then use the catch-repair-trace-bank cycle to break inherited patterns.',
     tldrInside: 'Friction map with 3 severity levels, 8 pattern cards with exact phrases to watch for, 4-step cycle: catch, repair, trace, bank, One-line parenting stance that prevents most harm',
   },
+  {
+    slug: 'truth-wont-break-them',
+    title: 'The Gap They Fill Alone',
+    subtitle: 'When you say nothing, they write the scariest story — name what\'s real instead',
+    description: 'Your kid heard you crying on the phone. You said everything\'s fine. You didn\'t get away with it. Here\'s the five-step BRAVE method for honest conversations about death, divorce, illness, and everything else that\'s hard to say.',
+    image: '/images/cards/truth-wont-break-them.webp',
+    imageAlt: 'Illustration of an empty speech bubble casting a shadow over a small figure, representing the gap children fill with their own fears when adults stay silent',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1.0,
+    topic: 'Communication',
+    book: 'Good Inside',
+    bookSlug: 'good-inside-kennedy',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'The conversation you\'re avoiding is less scary than the story your kid is making up.',
+    tldrPayoff: 'Kids who get honest answers stop filling gaps with self-blame, process grief in healthy waves, and build trust that carries into the teenage years.',
+    tldrMove: 'The shift: replace protective silence with a simple, age-matched explanation — even a clumsy one counts.',
+    tldrInside: 'BRAVE talk method, 3-row euphemism swap table, surprise question playbook, 5-point long-game checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
