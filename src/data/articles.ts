@@ -580,6 +580,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace protective silence with a simple, age-matched explanation — even a clumsy one counts.',
     tldrInside: 'BRAVE talk method, 3-row euphemism swap table, surprise question playbook, 5-point long-game checklist',
   },
+  {
+    slug: '922-grandparent-bridge',
+    title: 'Licensed to Hover',
+    subtitle: 'The one relationship where helicopter attention is exactly what kids need',
+    description: 'Your kid needs one adult who\'s allowed to hover. Research says that\'s the grandparent — three superpowers, a boundary framework, and a redirect script that changes everything.',
+    image: '/images/cards/922-grandparent-bridge.webp',
+    imageAlt: 'Whimsical illustration of a soft helicopter with a heart, representing grandparent hovering as a superpower',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Family',
+    book: 'The Secrets of Happy Families',
+    bookSlug: 'secrets-happy-families-feiler',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Grandparents aren\'t backup parents — they\'re a completely different role.',
+    tldrPayoff: 'Kids with an invested grandparent handle sibling transitions without regression, stay grounded during family stress, and build deeper social confidence through their teen years.',
+    tldrMove: 'The move: stop treating grandparents as lighter-duty parents and unlock three specific superpowers they\'re built for.',
+    tldrInside: '3 grandparent superpowers with timing cues, parent vs grandparent role comparison table, 3-part boundary framework, word-for-word redirect script',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
