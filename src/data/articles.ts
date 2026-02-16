@@ -500,6 +500,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: run every commitment through a should-vs-must filter, then cut or shrink until you can be genuinely present.',
     tldrInside: '6-question audit filter, 5-point before/after comparison, 3-step tonight\'s-move plan, litmus test for presence',
   },
+  {
+    slug: 'the-resilience-switch',
+    title: 'Sit With the Storm',
+    subtitle: 'Your child is hurting — why doing nothing is the bravest move',
+    description: 'When your child is in pain, your instinct is to fix it. Here\'s a 3-step method (SIT) that builds emotional resilience instead of learned helplessness — with age-specific scripts.',
+    image: '/images/cards/the-resilience-switch.webp',
+    imageAlt: 'Warm illustration of a parent and child sitting together on a bench as a storm clears, representing presence through difficulty',
+    imageWidth: 1024,
+    imageHeight: 766,
+    imageAspect: 1.337,
+    topic: 'Resilience',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Resilience isn\'t born. It\'s built — in the gap between pain and recovery.',
+    tldrPayoff: 'Kids raised with this approach handle disappointment without falling apart, trust their own problem-solving, and enter adulthood knowing that hard things pass.',
+    tldrMove: 'The move: name what they feel, sit in it without silver-lining, then turn the experience into signal once the wave passes.',
+    tldrInside: '3 SIT steps with word-for-word scripts, fixer vs. coach side-by-side, 3 age-matched conversation cards, 4 long-term habits to lock it in',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
