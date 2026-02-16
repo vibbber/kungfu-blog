@@ -540,6 +540,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop solving the problem for them -- say goodnight while they\'re still awake and let them find their own way down.',
     tldrInside: '4-step check-in sequence, night-by-night timeline from hard to easy, 1 word-for-word bedtime script, 3 mistakes that reset progress',
   },
+  {
+    slug: 'toxic-patterns-that-damage-kids',
+    title: 'The Invisible Drag',
+    subtitle: 'Hidden habits that cap your child \u2014 how to find and remove them',
+    description: 'Eight parenting behaviors predict lasting emotional damage \u2014 most look completely normal. A severity map, pattern cards, and a 4-step upgrade protocol to spot and remove them.',
+    image: '/images/cards/toxic-patterns-that-damage-kids.webp',
+    imageAlt: 'Child silhouette stepping free from dissolving chain-wisps representing invisible parenting patterns',
+    imageWidth: 1024,
+    imageHeight: 573,
+    imageAspect: 1.787,
+    topic: 'Attachment',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Eight parenting behaviors predict lasting emotional damage -- most look completely normal.',
+    tldrPayoff: 'Kids raised without these patterns can sit with discomfort, ask for what they need, and walk into relationships without bracing for abandonment.',
+    tldrMove: 'The move: run your own behavior through the friction map, then use the catch-repair-trace-bank cycle to break inherited patterns.',
+    tldrInside: 'Friction map with 3 severity levels, 8 pattern cards with exact phrases to watch for, 4-step cycle: catch, repair, trace, bank, One-line parenting stance that prevents most harm',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
