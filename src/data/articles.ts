@@ -480,6 +480,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: swap reactive language for proactive language -- \'I have to\' becomes \'I choose to\' -- and practice with low-stakes scenarios until it becomes automatic.',
     tldrInside: 'soda can vs water bottle test, 7 language swaps, 4 human tools grid, 3 reactive-vs-proactive scenarios',
   },
+  {
+    slug: 'energy-envelope-for-parents',
+    title: 'The Energy Envelope',
+    subtitle: "Chronic overcommitment isn't dedication — how matching output to capacity changes everything",
+    description: 'The energy envelope concept from chronic illness research applies to every parent. Match your energy output to actual capacity and your kids get the one thing they need most: your genuine presence.',
+    image: '/images/cards/energy-envelope-for-parents.webp',
+    imageAlt: 'Illustration of a parent inside a glowing energy envelope, calm and present with their child',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Self-Care',
+    book: 'Sigh, See, Start',
+    bookSlug: 'sigh-see-start-escalante',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: "Chronic overcommitment doesn't make you a better parent. It makes you absent.",
+    tldrPayoff: 'Kids raised by a parent who shows up calm for 30 minutes outperform kids whose parent sprints through a packed schedule and collapses every night.',
+    tldrMove: 'The shift: run every commitment through a should-vs-must filter, then cut or shrink until you can be genuinely present.',
+    tldrInside: '6-question audit filter, 5-point before/after comparison, 3-step tonight\'s-move plan, litmus test for presence',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
