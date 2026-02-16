@@ -600,6 +600,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop treating grandparents as lighter-duty parents and unlock three specific superpowers they\'re built for.',
     tldrInside: '3 grandparent superpowers with timing cues, parent vs grandparent role comparison table, 3-part boundary framework, word-for-word redirect script',
   },
+  {
+    slug: 'the-neighbor-effect',
+    title: 'Go First',
+    subtitle: 'Everyone on your street is waiting for someone to break the ice — here\'s the 4-move playbook',
+    description: 'Your street is already full of people who want to connect. Here\'s how to be the one who goes first — and why it changes everything for your kids.',
+    image: '/images/cards/the-neighbor-effect.webp',
+    imageAlt: 'Open sage-green front door with warm light and clementines, inviting neighbors to connect',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Community',
+    book: 'Please Yell at My Kids',
+    bookSlug: 'please-yell-at-my-kids-marina-lopes',
+    datePublished: '2026-02-16',
+    dateModified: '2026-02-16',
+    tldrAnchor: 'Community starts by asking for help, not offering it.',
+    tldrPayoff: 'Kids who see themselves as contributors on the block — delivering soup, raking leaves, carrying groceries — develop belonging that outlasts any single friendship.',
+    tldrMove: 'The move: borrow a stepladder, return it with jam, and let the favor loop build itself.',
+    tldrInside: '4-step favor loop, 4 first-move cards, word-for-word neighbor script, loose ties vs. close friends table, making-it-stick guide',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
