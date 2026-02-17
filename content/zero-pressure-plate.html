@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Highest-Skill Parenting Move at Dinner? Doing Nothing.</title>
+  <meta name="description" content="Your toddler won't eat. You've tried everything. Here's the counterintuitive approach that actually works: stop trying.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+      margin-bottom: 36px;
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,26,46,0.85));
+      padding: 40px 28px 24px;
+    }
+
+    .hero-overlay h1 {
+      color: #fff;
+      font-size: 28px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .hero-overlay .tagline {
+      color: #E8A598;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .content {
+      padding: 0 24px 40px;
+    }
+
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin: 36px 0 14px;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .opener {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .opener strong {
+      color: #5C8A5A;
+    }
+
+    /* The split card */
+    .split-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin: 24px 0;
+    }
+
+    .split-card .side {
+      padding: 20px;
+    }
+
+    .split-card .parent-side {
+      background: #5C8A5A;
+      color: #fff;
+    }
+
+    .split-card .child-side {
+      background: #E8A598;
+      color: #1A1A2E;
+    }
+
+    .split-card .side-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+
+    .split-card .side ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .split-card .side li {
+      font-size: 15px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .split-card .child-side li {
+      border-bottom-color: rgba(0,0,0,0.08);
+    }
+
+    .split-card .side li:last-child {
+      border-bottom: none;
+    }
+
+    .img-block {
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .img-block img {
+      width: 100%;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      padding: 8px;
+      background: #f5f2ed;
+    }
+
+    /* Before/After strip */
+    .ba-strip {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: stretch;
+      gap: 0;
+      margin: 24px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .ba-col {
+      padding: 18px;
+      font-size: 14px;
+    }
+
+    .ba-col.before {
+      background: #FEF0ED;
+    }
+
+    .ba-col.after {
+      background: #EDF7ED;
+    }
+
+    .ba-divider {
+      width: 3px;
+      background: #ddd;
+    }
+
+    .ba-col .ba-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .ba-col.before .ba-label { color: #C0392B; }
+    .ba-col.after .ba-label { color: #5C8A5A; }
+
+    .ba-col .script {
+      background: rgba(255,255,255,0.7);
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Step cards */
+    .step-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px;
+      margin: 18px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 5px solid #5C8A5A;
+    }
+
+    .step-card h3 {
+      color: #5C8A5A;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .step-num {
+      display: inline-block;
+      background: #E8A598;
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 26px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-right: 8px;
+    }
+
+    .step-card p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .step-card .say-this {
+      background: #EDF7ED;
+      border: 1px solid #B8D8B8;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .step-card .say-this::before { content: '\201C'; font-size: 20px; color: #5C8A5A; }
+    .step-card .say-this::after { content: '\201D'; font-size: 20px; color: #5C8A5A; }
+
+    /* Scenario table */
+    .scenario-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      margin: 20px 0;
+    }
+
+    .scenario-table th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .scenario-table td {
+      padding: 14px 16px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    .scenario-table tr:last-child td { border-bottom: none; }
+
+    .scenario-table td:first-child {
+      font-weight: 600;
+      color: #C0392B;
+      width: 40%;
+    }
+
+    .scenario-table td:last-child {
+      color: #333;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .callout .small-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .callout p {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Nerve note */
+    .nerve-note {
+      background: #FFF9E6;
+      border: 1px solid #F0C674;
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    .nerve-note strong { color: #B8860B; }
+
+    /* Timeline */
+    .timeline {
+      margin: 24px 0;
+      padding: 0 0 0 24px;
+      border-left: 3px solid #E8A598;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 18px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background: #E8A598;
+      border-radius: 50%;
+      border: 3px solid #FAF6F0;
+    }
+
+    .timeline-item .day-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #E8A598;
+      margin-bottom: 4px;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 24px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero-overlay h1 { font-size: 22px; }
+      .split-card { grid-template-columns: 1fr; }
+      .ba-strip { grid-template-columns: 1fr; }
+      .ba-divider { width: auto; height: 2px; }
+      .content { padding: 0 16px 32px; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/zero-pressure-plate/hero-calm-table.webp" alt="A parent calmly eating dinner while their toddler explores food independently">
+    <div class="hero-overlay">
+      <h1>The Highest-Skill Parenting Move at Dinner? Doing Nothing.</h1>
+      <span class="tagline">Three rules. Zero pressure. Actual eating.</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">The less you do at dinner, the more your toddler eats.</p>
+      <ul>
+        <li>Kids who eat without an audience of anxious parents develop real appetite awareness, handle new foods without drama, and actually look forward to meals.</li>
+        <li>The move: present the food, sit down, eat your own plate, say nothing about theirs.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 numbered steps with scripts &middot; pressure-mode vs. zero-pressure strip &middot; 5 real-scenario responses &middot; 4 setup tweaks</div>
+    </div>
+
+    <p class="opener">
+      Picture this: your toddler sits down, looks at the plate, picks up a piece of chicken, and eats it. No coaxing. No airplane spoons. No deal-making. Just... eating. <strong>The secret? You didn't do anything.</strong> That's the whole technique.
+    </p>
+
+    <p>It sounds like giving up. It's actually the opposite. Every parent who's wrestled a toddler through dinner knows that more effort produces less eating. The bribing, the cheerleading, the "just one more bite" -- it all backfires. The child digs in harder. The meal becomes a standoff.</p>
+
+    <p>Zero-pressure feeding flips that dynamic completely. And it works fast -- often within days.</p>
+
+    <h2>The Line You Draw (Then Never Cross)</h2>
+
+    <p>The entire approach rests on one clean division. Two jobs at the table. Yours and theirs. No overlap.</p>
+
+    <div class="split-card">
+      <div class="side parent-side">
+        <div class="side-label">Your Job</div>
+        <ul>
+          <li>What food is on the plate</li>
+          <li>When the meal happens</li>
+          <li>Where everyone sits</li>
+        </ul>
+      </div>
+      <div class="side child-side">
+        <div class="side-label">Their Job</div>
+        <ul>
+          <li>Whether they eat at all</li>
+          <li>How much they eat</li>
+          <li>Which foods they pick</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="img-block">
+      <img src="/images/blog/zero-pressure-plate/division-responsibility.webp" alt="Diagram showing the parent's role versus the child's role at mealtime">
+      <div class="img-caption">Two jobs. No overlap. That's the whole system.</div>
+    </div>
+
+    <p>That's it. You control the supply chain. They control the consumption. The moment you cross into their territory -- nudging, commenting, celebrating a bite -- the pressure switch flips and you're back to square one.</p>
+
+    <h2>Three Moves. That's the Playbook.</h2>
+
+    <div class="step-card">
+      <h3><span class="step-num">1</span> Drop the Temperature</h3>
+      <p>Your face is the first thing your toddler reads at the table. Not the food. Not the plate. Your eyes, your posture, your energy. If you light up when they eat a pea, eating becomes a performance for you. If your face falls when they push the plate away, dinner becomes a guilt trip.</p>
+      <p>The move: be as emotionally flat about mealtime as you are about them putting on socks. Present the food. Sit down. Eat your own meal.</p>
+
+      <div class="ba-strip">
+        <div class="ba-col before">
+          <div class="ba-label">Pressure Mode</div>
+          <div class="script">"Yay, you ate your peas!"</div>
+          <div class="script">"Ugh, you didn't even try it."</div>
+          <div class="script">Hovering. Counting bites. Watching.</div>
+        </div>
+        <div class="ba-divider"></div>
+        <div class="ba-col after">
+          <div class="ba-label">Zero Pressure</div>
+          <div class="script">No commentary on what they eat or don't.</div>
+          <div class="script">Talk about the dog, the rain, their day.</div>
+          <div class="script">Eat your food. Be present. That's all.</div>
+        </div>
+      </div>
+
+      <div class="nerve-note">
+        <strong>Hardest rule of the three.</strong> If your kid's been undereating, every instinct screams to celebrate when they take a bite. Resist. The celebration is what keeps the cycle going. Neutral now means relaxed eating later.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <h3><span class="step-num">2</span> Hand Over the Steering Wheel</h3>
+      <p>Put out a couple of options in small amounts. If they want more, they ask. If they don't touch something, you leave it alone. No narrating. No reminding them "they liked this last week."</p>
+      <div class="say-this">We're having pasta and carrots and chicken. Take whatever you want.</div>
+
+      <div class="nerve-note">
+        <strong>Small portions matter.</strong> A toddler plate piled high is overwhelming. Start with less than you think they'll eat. It's easier for them to ask for more than to face a mountain of expectations.
+      </div>
+    </div>
+
+    <div class="step-card">
+      <h3><span class="step-num">3</span> End It Clean</h3>
+      <p>When they signal the meal is over -- pushing the plate, climbing down, losing interest -- accept it immediately. No "one more bite." No renegotiation. Clear the plate. Help them down.</p>
+      <div class="say-this">Looks like you're all done. I'll put this away. Next time we eat is at snack time.</div>
+      <p>Then hold the line. Next food comes at the next scheduled meal or snack. Not ten minutes later when they ask for crackers. This isn't punishment -- it's giving them the chance to learn what hunger actually feels like.</p>
+    </div>
+
+    <div class="callout">
+      <div class="small-label">The Core Truth</div>
+      <p>You can't make a toddler eat. You were never supposed to. Your job is the plate. Their job is the appetite.</p>
+    </div>
+
+    <h2>When It Gets Real</h2>
+
+    <p>Theory is nice. But what about Tuesday at 5:45 PM when they throw broccoli on the floor? Here's the cheat sheet.</p>
+
+    <table class="scenario-table">
+      <tr>
+        <th>What Happens</th>
+        <th>Your Move</th>
+      </tr>
+      <tr>
+        <td>Two bites, then "I'm done"</td>
+        <td>Accept it. "Okay, you're done. I'll clear your plate." They'll eat more next meal if they're hungry. Two bites today doesn't mean two bites forever.</td>
+      </tr>
+      <tr>
+        <td>Food hits the floor</td>
+        <td>Read it as a signal, not a provocation. "Food's going on the floor -- that tells me you're finished. Let's get you down." Matter-of-fact. End the meal.</td>
+      </tr>
+      <tr>
+        <td>Only wants bread. Every meal.</td>
+        <td>Include it alongside other options. Don't make a separate "safe" meal. Today's untouched broccoli is next month's curiosity bite.</td>
+      </tr>
+      <tr>
+        <td>Wants snacks 20 minutes after refusing dinner</td>
+        <td>Hold the line kindly. "I know you're hungry. Our next eating time is breakfast. It'll come soon." This is how they learn meals are when eating happens.</td>
+      </tr>
+      <tr>
+        <td>Grandparent undermines the approach</td>
+        <td>Have the conversation away from the table. Most people come around within a week once they see the results.</td>
+      </tr>
+    </table>
+
+    <h2>What the First Week Actually Looks Like</h2>
+
+    <p>Fair warning: the first few days can feel worse before they feel better. That's normal. Your child is testing whether this new calm is real.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="day-label">Days 1-2</div>
+        <p>You stay neutral. They eat less than usual. Your brain screams. You eat your dinner and say nothing. It feels wrong. You're doing it right.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="day-label">Days 3-4</div>
+        <p>They test harder. Maybe refuse a full meal. Maybe ask for snacks immediately after. You hold the schedule. You stay boring.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="day-label">Days 5-6</div>
+        <p>Something shifts. They stop watching your face for reactions. They start looking at the plate instead. A curious bite happens. You don't react.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="day-label">Day 7+</div>
+        <p>Meals get quieter. Shorter. More actual eating happens. Not every meal is a win. But the tension is gone. Dinner stops being a battlefield and starts being a meal.</p>
+      </div>
+    </div>
+
+    <div class="img-block">
+      <img src="/images/blog/zero-pressure-plate/independent-eater.webp" alt="A toddler confidently eating on their own at a small table">
+      <div class="img-caption">The goal: a kid who eats because they're hungry, not because you're watching.</div>
+    </div>
+
+    <h2>The Setups That Make This Easier</h2>
+
+    <p>Not rules. Just adjustments that help the rules stick.</p>
+
+    <table class="scenario-table">
+      <tr>
+        <th>Setup</th>
+        <th>Why It Helps</th>
+      </tr>
+      <tr>
+        <td>Eat together</td>
+        <td>Mealtimes work better as a shared activity than a performance you watch. Sit down with your own plate.</td>
+      </tr>
+      <tr>
+        <td>Kid-height table</td>
+        <td>Some toddlers do better where they can get in and out themselves. The autonomy carries over to eating.</td>
+      </tr>
+      <tr>
+        <td>Keep prep low-effort</td>
+        <td>If you spent an hour cooking, you'll care more about whether they eat it. Quick meals make neutrality easier.</td>
+      </tr>
+      <tr>
+        <td>Scheduled meals + snacks</td>
+        <td>Three meals, two snacks, same times each day. No grazing. Predictability builds appetite.</td>
+      </tr>
+    </table>
+
+    <h2>When You Slip (You Will)</h2>
+
+    <p>You'll catch yourself mid-sentence: "Oh, you're eating the--" Stop. Breathe. Redirect. No drama needed, just reset. Track how they eat by the week, not the meal. Toddler intake is wildly uneven day to day. Zoom out to seven days and most kids are eating a surprisingly balanced mix.</p>
+
+    <p>When in doubt, do less. Almost every mealtime mistake is a version of doing too much -- too much talking, too much watching, too much caring about the outcome. The less you do, the more space your child has to develop their own relationship with food.</p>
+
+    <div class="callout">
+      <div class="small-label">Remember</div>
+      <p>The highest-skill move at the dinner table is the discipline to do nothing. That's kung fu.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting Knowledge Engine</p>
+  </footer>
+
+</body>
+</html>

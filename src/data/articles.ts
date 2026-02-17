@@ -700,6 +700,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: talk straight, show the path instead of naming the problem, and acknowledge before you correct.',
     tldrInside: '3 communication shifts with scripts, 5-scenario cheat sheet table, before/after comparison cards, 4 steps to make it stick',
   },
+  {
+    slug: 'zero-pressure-plate',
+    title: 'The Mealtime Reset',
+    subtitle: 'Picky toddlers — three rules, zero pressure, actual eating',
+    description: 'Your toddler won\'t eat because you care too much. Three rules for zero-pressure mealtimes that get picky toddlers eating again — often within days.',
+    image: '/images/cards/zero-pressure-plate.webp',
+    imageAlt: 'A child\'s wooden bowl with a small spoon resting in it on a sunlit table, simple and calm',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1.000,
+    topic: 'Feeding',
+    book: 'No Bad Kids',
+    bookSlug: 'no-bad-kids-lansbury',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'The less you do at dinner, the more your toddler eats.',
+    tldrPayoff: 'Kids who eat without an audience of anxious parents develop real appetite awareness, handle new foods without drama, and actually look forward to meals.',
+    tldrMove: 'The move: present the food, sit down, eat your own plate, say nothing about theirs.',
+    tldrInside: '3 numbered steps with scripts, pressure-mode vs. zero-pressure strip, 5 real-scenario responses, 4 setup tweaks',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
