@@ -680,6 +680,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace "she\'s being difficult" with "she doesn\'t have this skill yet" — then match your expectations to what\'s actually possible.',
     tldrInside: '4 scripts for hard moments, age-by-age playbook, 5 signs the wiring is coming online, permissiveness vs. patience clarification',
   },
+  {
+    slug: 'three-sentence-parent',
+    title: 'Less Talk, More Listen',
+    subtitle: 'Short sentences that toddlers actually hear — and follow',
+    description: 'The most effective parents in the room aren\'t the loudest. Three precise sentence shifts that turn toddler chaos into calm cooperation — tonight.',
+    image: '/images/cards/three-sentence-parent.webp',
+    imageAlt: 'Warm illustration of a calm parent kneeling at eye level with a toddler, connecting through simple words',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Communication',
+    book: 'No Bad Kids',
+    bookSlug: 'no-bad-kids-lansbury',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'The calmest parent in the room is always the one using fewer words.',
+    tldrPayoff: 'Kids who get short, warm direction handle transitions without fights, choose cooperation over defiance, and recover from disappointment without spiraling.',
+    tldrMove: 'The shift: talk straight, show the path instead of naming the problem, and acknowledge before you correct.',
+    tldrInside: '3 communication shifts with scripts, 5-scenario cheat sheet table, before/after comparison cards, 4 steps to make it stick',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
