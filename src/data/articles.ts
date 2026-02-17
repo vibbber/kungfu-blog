@@ -620,6 +620,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: borrow a stepladder, return it with jam, and let the favor loop build itself.',
     tldrInside: '4-step favor loop, 4 first-move cards, word-for-word neighbor script, loose ties vs. close friends table, making-it-stick guide',
   },
+  {
+    slug: 'when-little-hands-get-big',
+    title: 'Steady, Not Perfect',
+    subtitle: 'When little fists fly — scripts and a method that teach without shame',
+    description: 'Every parent instinct is wrong when your toddler gets physical. Here\'s the 4-step HOLD method and exact scripts that actually work — no shame, no lectures.',
+    image: '/images/cards/when-little-hands-get-big.webp',
+    imageAlt: 'Calm tree with swirling leaves representing steady parenting through toddler physical behavior',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Discipline',
+    book: 'No Bad Kids',
+    bookSlug: 'no-bad-kids-lansbury',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'Your calm is the single most powerful parenting tool you own.',
+    tldrPayoff: 'Kids raised by steady parents handle rejection, bounce back from conflict, and regulate their own bodies when no adult is watching.',
+    tldrMove: 'The move: pause one beat, use your body to stop the action, then let whatever emotions follow run their course.',
+    tldrInside: '4-row instinct-correction table, 5 scripts with follow-ups, HOLD method breakdown, 5 long-term consistency tips',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
