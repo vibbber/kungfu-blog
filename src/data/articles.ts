@@ -780,6 +780,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: ask what you\'d do to cause the behavior on purpose, match it to one of four needs, and swap in a replacement that\'s faster and easier.',
     tldrInside: 'backwards question technique, 4 worked examples (pencil throwing, grocery, interrupting, skin picking), swap sheet with 4 replacement sets, hypothesis sentence template',
   },
+  {
+    slug: 'stop-playing-referee',
+    title: 'The Sibling Mediator',
+    subtitle: 'Stop picking winners — three moves that teach kids to solve their own fights',
+    description: 'You don\'t need to figure out who started it. Three simple moves turn sibling blowups into negotiation practice — and get you out of the middle for good.',
+    image: '/images/cards/stop-playing-referee.webp',
+    imageAlt: 'Referee jersey with a coral-red X and whistle on a light background',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Siblings',
+    book: 'How to Talk When Kids Won\'t Listen',
+    bookSlug: 'how-to-talk-when-kids-wont-listen-faber',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'Kids who solve their own fights are practicing a skill most adults never learned.',
+    tldrPayoff: 'Kids who negotiate screen time, split resources, and recover from blowups without needing you to pick a winner.',
+    tldrMove: 'The move: narrate both sides, name the stalemate, then hand them the problem and wait.',
+    tldrInside: '3-step mediation system, 7 scripted scenarios with exact words, referee vs. mediator comparison table, 4 long-term habits that reduce fights',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

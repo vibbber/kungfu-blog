@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Three moves that turn sibling screaming matches into moments where your kids actually solve their own problems. No more picking winners.">
+  <title>Stop Playing Referee: The 3-Move System That Gets Your Kids Solving Their Own Fights | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 48px 20px 40px;
+      margin-bottom: 32px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: #5C8A5A;
+    }
+
+    .hero .subtitle {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* BODY TEXT */
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+      color: #2a2a3e;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #1A1A2E;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    /* IMAGES */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: -20px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* HIGHLIGHT BOX */
+    .insight-card {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 36px 0;
+      text-align: center;
+    }
+
+    .insight-card p {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .comparison-table thead th {
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .comparison-table thead th:first-child {
+      background: #f0f0f0;
+      color: #666;
+      text-align: left;
+    }
+
+    .comparison-table thead th.col-ref {
+      background: #E8A598;
+      color: #7a2e20;
+    }
+
+    .comparison-table thead th.col-med {
+      background: #5C8A5A;
+      color: white;
+    }
+
+    .comparison-table td {
+      padding: 14px 20px;
+      font-size: 15px;
+      background: white;
+      border-bottom: 1px solid #f0ebe4;
+      vertical-align: top;
+    }
+
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: #555;
+      background: #faf8f5;
+      width: 28%;
+    }
+
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* SCRIPT CARDS */
+    .script-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .script-card .scenario-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #E8A598;
+      margin-bottom: 10px;
+    }
+
+    .script-card .say {
+      background: #f2f8f2;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 8px 0;
+      font-style: italic;
+      font-size: 15px;
+      color: #3a5a3a;
+      position: relative;
+    }
+
+    .script-card .say::before {
+      content: '\201C';
+      font-size: 22px;
+      color: #5C8A5A;
+      font-weight: bold;
+      margin-right: 2px;
+    }
+
+    .script-card .say::after {
+      content: '\201D';
+      font-size: 22px;
+      color: #5C8A5A;
+      font-weight: bold;
+      margin-left: 2px;
+    }
+
+    .script-card .note {
+      font-size: 13px;
+      color: #888;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    /* STEP CARDS */
+    .step-row {
+      display: flex;
+      gap: 16px;
+      margin: 28px 0;
+      flex-wrap: wrap;
+    }
+
+    .step-card {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border-radius: 12px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .step-num {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 50%;
+      background: #5C8A5A;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .step-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    /* LONG-TERM SECTION */
+    .long-term-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .lt-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .lt-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+
+    .lt-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* EMERGENCY BOX */
+    .emergency-box {
+      background: #FEF3F0;
+      border-left: 5px solid #E74C3C;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+
+    .emergency-box h3 {
+      color: #C0392B;
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .emergency-box p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .emergency-box .say {
+      background: #fff;
+      border: 1px solid #e8c8c2;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-style: italic;
+      font-size: 14px;
+      color: #7a3a2a;
+      margin: 8px 0;
+    }
+
+    /* CLOSING */
+    .closing {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 36px 32px;
+      border-radius: 14px;
+      margin: 40px 0 0;
+      text-align: center;
+    }
+
+    .closing p {
+      color: white;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .closing p strong {
+      display: block;
+      margin-top: 12px;
+      font-size: 21px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e0dbd4;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* TLDR BOX */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      h2 { font-size: 24px; }
+      .container { padding: 16px 16px 40px; }
+      .step-row { flex-direction: column; }
+      .long-term-grid { grid-template-columns: 1fr; }
+      .comparison-table td, .comparison-table th { padding: 10px 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <h1>Your Kids Can <span>Solve Their Own Fights</span></h1>
+    <p class="subtitle">Three moves that turn screaming matches into the moment you realize your children are better negotiators than most adults.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Kids who solve their own fights are practicing a skill most adults never learned.</p>
+    <ul>
+      <li>Kids who negotiate screen time, split resources, and recover from blowups without needing you to pick a winner.</li>
+      <li>The move: narrate both sides, name the stalemate, then hand them the problem and wait.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>3-step mediation system &middot; 7 scripted scenarios with exact words &middot; referee vs. mediator comparison table &middot; 4 long-term habits that reduce fights</div>
+  </div>
+
+  <p>Last Tuesday, two kids wanted the same seat on the couch. Forty-five seconds of yelling. Then one said, "What if we switch at the commercial break?" The other thought about it, countered with "every ten minutes," and they shook on it.</p>
+
+  <p>Nobody told them to do that. They just... did it. Because they'd practiced.</p>
+
+  <p>That moment? That's the whole game. Not the fight stopping -- that's just noise reduction. The real win is watching your kids build a skill most adults still struggle with: solving a conflict without a third party making the call.</p>
+
+  <p>Here's how you get there.</p>
+
+  <div class="insight-card">
+    <p>Refereeing teaches kids that conflict gets them a judge.<br>Mediating teaches them they can work it out.</p>
+  </div>
+
+  <h2>The Problem With Playing Referee</h2>
+
+  <p>When you jump in and pick a side, you're not actually resolving anything. You're just making a ruling. And what do kids learn from rulings? How to build a better case next time. How to cry louder, tattle faster, look more innocent.</p>
+
+  <p>Research on sibling conflict backs this up: when parents act as judges, children get better at fighting for validation, not at finding solutions. When parents act as mediators -- helping each child feel heard, then stepping back -- kids develop negotiation skills they carry into every relationship for the rest of their lives.</p>
+
+  <img src="/images/blog/stop-playing-referee/referee-vs-mediator.webp" alt="Comparison showing referee approach versus mediator approach to sibling conflicts" class="blog-img">
+  <p class="img-caption">Same fight, completely different outcome depending on how you step in.</p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Situation</th>
+        <th class="col-ref">Referee Says</th>
+        <th class="col-med">Mediator Says</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tablet fight</td>
+        <td>"Give it back, it's her turn"</td>
+        <td>"You both want the tablet and there's only one. That's a real problem."</td>
+      </tr>
+      <tr>
+        <td>Hurt feelings</td>
+        <td>"Say sorry to your brother"</td>
+        <td>"Something happened that really upset you. And something happened that really upset <em>you</em>."</td>
+      </tr>
+      <tr>
+        <td>TV remote</td>
+        <td>"You picked last time, it's his turn"</td>
+        <td>"Two people want to pick tonight's show and there's one TV. Tough one."</td>
+      </tr>
+      <tr>
+        <td>What kids learn</td>
+        <td>Whoever argues better wins</td>
+        <td>Problems are solvable when you work together</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>The Three Moves</h2>
+
+  <p>This isn't complicated. Three moves, in order. You'll get faster at them every time. Within a few weeks, your kids start doing them on their own -- and that's when it gets fun.</p>
+
+  <img src="/images/blog/stop-playing-referee/three-steps-flow.webp" alt="Three-step flow: Sportscaster, Name the Stalemate, Pass the Ball" class="blog-img">
+
+  <div class="step-row">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h4>Be the Sportscaster</h4>
+      <p>Narrate what each kid is feeling. No sides, no judgment.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h4>Name the Stalemate</h4>
+      <p>Frame the conflict as one neutral sentence. Us vs. the problem.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h4>Pass the Ball</h4>
+      <p>Ask for their ideas. Write them all down. Let <em>them</em> pick the winner.</p>
+    </div>
+  </div>
+
+  <h3>Move 1: Be the Sportscaster</h3>
+
+  <p>Your instinct says figure out who's right. Resist it. Instead, narrate what each child is experiencing -- like a commentator describing a match, not a judge ruling on it.</p>
+
+  <p>When a kid hears their own perspective reflected back accurately, something shifts. The volume drops. The fists unclench. They stop performing for the judge and start thinking again.</p>
+
+  <div class="script-card">
+    <div class="scenario-label">The Tablet Tug-of-War</div>
+    <div class="say">You were in the middle of your game and she grabbed it. That's really frustrating.</div>
+    <div class="say">And you've been waiting ages for your turn and it feels like it's never coming. That's frustrating too.</div>
+    <div class="say">So you both want the tablet and there's only one. That's a real problem.</div>
+    <p class="note">Often this is enough. When children feel genuinely heard, the need to fight for validation disappears and they solve it themselves.</p>
+  </div>
+
+  <div class="script-card">
+    <div class="scenario-label">The "He's Looking at Me" Car Ride</div>
+    <div class="say">You want some space to yourself and it feels like your brother keeps invading it.</div>
+    <div class="say">And you're bored and you want someone to talk to.</div>
+    <p class="note">Name both sides without minimizing either. To them, these are real problems.</p>
+  </div>
+
+  <h3>Move 2: Name the Stalemate</h3>
+
+  <p>One neutral sentence. No spin. No "it's not a big deal." Treat the conflict as a real problem worth solving -- because to them, it is. This does something powerful: it shifts both kids from "me versus you" to "us versus the problem."</p>
+
+  <div class="script-card">
+    <div class="scenario-label">What This Sounds Like</div>
+    <div class="say">Two people want to pick tonight's show, and there's only one TV. Tough one.</div>
+    <div class="say">One person's art project got drawn on, and the other person thought they were helping. This needs figuring out.</div>
+    <p class="note">Watch for the physical shift: shoulders drop, eyes come up, brains re-engage.</p>
+  </div>
+
+  <h3>Move 3: Pass the Ball</h3>
+
+  <p>This is where it gets good. And where most parents short-circuit by imposing their own solution. Don't. Ask for ideas. Then wait. The silence feels excruciating. Sit in it anyway.</p>
+
+  <div class="script-card">
+    <div class="scenario-label">Opening It Up</div>
+    <div class="say">What could work for both of you? I need ideas -- any ideas. There are no bad ones right now.</div>
+    <p class="note">Write down or repeat back every suggestion. "Take turns by the hour... get a second tablet... throw the tablet out the window..." All of it. Filtering comes next.</p>
+  </div>
+
+  <div class="script-card">
+    <div class="scenario-label">Filtering Together</div>
+    <p>Once the ideas are out, go through them together. Which ones work for both people? Which ones are off the table? Let <em>them</em> cross things out. Let <em>them</em> circle the winner.</p>
+    <p class="note">If the plan doesn't stick, that's fine. Come back and brainstorm again. The process is the skill, not the outcome.</p>
+  </div>
+
+  <img src="/images/blog/stop-playing-referee/siblings-solving-together.webp" alt="Two siblings collaborating to solve their own problem while a parent watches proudly from the background" class="blog-img">
+  <p class="img-caption">The goal: kids who solve it while you watch from the doorway.</p>
+
+  <div class="emergency-box">
+    <h3>If Someone's Getting Hurt Right Now</h3>
+    <p><strong>Step in physically. Separate them.</strong> Your only job is safety. Not fairness, not lessons, not who started it.</p>
+    <div class="say">"Whoa -- I need everyone in a safe spot. You over here, you over there."</div>
+    <p>Once they're apart and the adrenaline is dropping:</p>
+    <div class="say">"Something big just happened between you two. You're both really upset."</div>
+    <p style="font-size: 13px; color: #888; margin-bottom: 0;">Don't mediate while anyone is in fight-or-flight. Wait until breathing slows. Two minutes. Maybe twenty. Then run the three moves.</p>
+  </div>
+
+  <h2>The Long Game: Fewer Fights Over Time</h2>
+
+  <p>The three moves handle what's happening right now. These four habits reduce how often it happens in the first place.</p>
+
+  <div class="long-term-grid">
+    <div class="lt-card">
+      <h4>Solo Time With Each Kid</h4>
+      <p>Much sibling fighting is competition for your attention. Even ten minutes of undivided time daily changes the math entirely.</p>
+    </div>
+    <div class="lt-card">
+      <h4>Stop Comparing</h4>
+      <p>"Your sister finished her homework already" doesn't motivate. It poisons. Each kid needs to feel valued for who they are, not ranked.</p>
+    </div>
+    <div class="lt-card">
+      <h4>Leave the Room</h4>
+      <p>If nobody's getting hurt, try walking away. Kids solve a surprising number of disagreements when there's no audience and no judge available.</p>
+    </div>
+    <div class="lt-card">
+      <h4>Celebrate Their Wins</h4>
+      <p>"You two figured out how to share the hammock without anyone falling off. That took real teamwork." Name it when you see it.</p>
+    </div>
+  </div>
+
+  <h3>When One Kid Keeps Starting It</h3>
+
+  <p>The one who keeps starting fights usually has a backlog of grievances they haven't been able to express. Find a quiet moment -- not right after a blowup -- and open the door.</p>
+
+  <div class="script-card">
+    <div class="scenario-label">Private Conversation</div>
+    <div class="say">I've noticed things have been tense between you and your sister lately. I want to hear what's going on from your side.</div>
+    <p class="note">Listen to the whole list. Don't defend the other child. Don't fix anything yet. Then help them pick one specific thing they want to address -- and practice how to bring it up without fists or insults.</p>
+  </div>
+
+  <h3>When You're Running on Empty</h3>
+
+  <p>Full mediation takes bandwidth. You won't always have it. On those days, do the minimum: name each position in one sentence, separate them, come back later.</p>
+
+  <div class="script-card">
+    <div class="scenario-label">Honest Low-Energy Move</div>
+    <div class="say">I can see you both feel strongly about this. I don't have the energy to work through it right now, so I'm going to make a call that might not feel perfect to either of you. We'll revisit it after dinner.</div>
+    <p class="note">This is still better than refereeing. You're being honest about your limits rather than making a snap judgment about who's right.</p>
+  </div>
+
+  <div class="closing">
+    <p>Picking a winner teaches kids to fight harder next time.<br>Helping them find a solution teaches them they don't need you to.<br><strong>That's the whole goal.</strong></p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting &mdash; kungfu.family</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
