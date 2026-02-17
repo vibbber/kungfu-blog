@@ -760,6 +760,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: ride out the 3-second adrenaline peak in silence, then respond from authority instead of panic.',
     tldrInside: '3-step 10-Second Rule, 2 word-for-word scripts, 3 anchor-setting prep steps, 3 honest FAQ answers',
   },
+  {
+    slug: 'behavior-detective',
+    title: 'Behavior Code Breaker',
+    subtitle: 'Repeating meltdowns and tantrums — decode the message your child is sending',
+    description: 'Forget asking "how do I stop this?" One backwards question reveals exactly why your child does what they do — and what to do about it in two minutes flat.',
+    image: '/images/cards/behavior-detective.webp',
+    imageAlt: 'Colorful illustration of tangled scribbles transforming into clear writing through a decoder lens',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'Applied Behavior Analysis in Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'You can decode any repeated behavior in about two minutes.',
+    tldrPayoff: 'Kids who learn replacement behaviors carry them everywhere -- fewer blowups at school, smoother transitions, and the ability to say \'I need a break\' instead of losing it.',
+    tldrMove: 'The move: ask what you\'d do to cause the behavior on purpose, match it to one of four needs, and swap in a replacement that\'s faster and easier.',
+    tldrInside: 'backwards question technique, 4 worked examples (pencil throwing, grocery, interrupting, skin picking), swap sheet with 4 replacement sets, hypothesis sentence template',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

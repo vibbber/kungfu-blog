@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The One Question That Cracks Any Behavior Problem</title>
+  <meta name="description" content="Forget asking 'how do I stop this?' Instead, ask the question that reveals exactly why your child does what they do — and what to do about it.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+    h3 {
+      color: #1A1A2E;
+      font-size: 1.2rem;
+      margin: 2rem 0 0.75rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+
+    /* The Question Box */
+    .question-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .question-box p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-style: italic;
+      margin: 0;
+      line-height: 1.4;
+    }
+    .question-box .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Scenario Cards */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scenario-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .scenario-card .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #E8A598;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .scenario-card h4 {
+      color: #5C8A5A;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .scenario-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* Needs Table */
+    .needs-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .needs-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .needs-table td {
+      padding: 0.85rem 1rem;
+      background: white;
+      border-bottom: 1px solid #f0ece6;
+      font-size: 0.95rem;
+      vertical-align: top;
+    }
+    .needs-table tr:last-child td { border-bottom: none; }
+    .needs-table td:first-child {
+      font-weight: 600;
+      color: #5C8A5A;
+      white-space: nowrap;
+    }
+
+    /* Flip Table */
+    .flip-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .flip-table th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .flip-table th:first-child {
+      background: #ddd;
+      color: #666;
+    }
+    .flip-table th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+    .flip-table td {
+      padding: 0.85rem 1rem;
+      background: white;
+      border-bottom: 1px solid #f0ece6;
+      font-size: 0.95rem;
+      vertical-align: top;
+    }
+    .flip-table tr:last-child td { border-bottom: none; }
+    .flip-table td:first-child {
+      color: #999;
+    }
+    .flip-table td:last-child {
+      color: #1A1A2E;
+      font-weight: 500;
+    }
+
+    /* Hypothesis Builder */
+    .hypothesis-builder {
+      background: white;
+      border: 2px solid #5C8A5A;
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin: 2rem 0;
+    }
+    .hypothesis-builder h4 {
+      color: #5C8A5A;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .hypothesis-template {
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+    .blank {
+      display: inline-block;
+      border-bottom: 2px solid #E8A598;
+      min-width: 140px;
+      padding: 0 0.25rem;
+      color: #E8A598;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+    .hypothesis-example {
+      background: #FAF6F0;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Swap Cards */
+    .swap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .swap-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .swap-card h4 {
+      color: #5C8A5A;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+    .swap-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .swap-card li {
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+    .swap-card li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0;
+      color: #5C8A5A;
+    }
+
+    /* Callout */
+    .callout {
+      background: #fff;
+      border-left: 4px solid #E8A598;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .callout strong {
+      color: #E8A598;
+    }
+    .callout p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    /* Steps */
+    .step-cards {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 1rem;
+      align-items: start;
+    }
+    .step-num {
+      background: #5C8A5A;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .step-card p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .step-card strong {
+      color: #1A1A2E;
+    }
+
+    .source {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.8rem;
+      color: #999;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.25rem 1rem; }
+      h1 { font-size: 1.7rem; }
+      .scenario-grid { grid-template-columns: 1fr; }
+      .swap-grid { grid-template-columns: 1fr; }
+      .question-box p { font-size: 1.15rem; }
+    }
+  .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+  .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+  .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+  .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+  .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+  .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+  .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+  .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>The One Question That Cracks Any Behavior Problem</h1>
+  <p class="subtitle">Most parents ask "how do I stop this?" There's a better question. One that flips the whole problem inside out and hands you the answer.</p>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">You can decode any repeated behavior in about two minutes.</p>
+    <ul>
+      <li>Kids who learn replacement behaviors carry them everywhere -- fewer blowups at school, smoother transitions, and the ability to say 'I need a break' instead of losing it.</li>
+      <li>The move: ask what you'd do to cause the behavior on purpose, match it to one of four needs, and swap in a replacement that's faster and easier.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>backwards question technique &middot; 4 worked examples (pencil throwing, grocery, interrupting, skin picking) &middot; swap sheet with 4 replacement sets &middot; hypothesis sentence template</div>
+  </div>
+
+  <img src="/images/blog/behavior-detective/parent-detective.webp" alt="Parent sitting at a table having a lightbulb moment while looking at a notebook">
+
+  <p>Your kid throws their pencil every time you mention homework. Or they scream bloody murder in the grocery store. Or they interrupt you the second you pick up your phone.</p>
+
+  <p>You've tried consequences, bribes, ignoring it, not ignoring it, and some combination of all four in a single afternoon.</p>
+
+  <p>Here's the problem: you've been asking the wrong question.</p>
+
+  <p>"How do I stop this?" is a dead end. It treats the behavior like the problem. It's not. The behavior is a <em>message</em>. And until you decode that message, every strategy you try is a shot in the dark.</p>
+
+  <p>The question that actually works?</p>
+
+  <div class="question-box">
+    <p class="label">Ask yourself</p>
+    <p>"If I had to MAKE this behavior happen on purpose, what would I do?"</p>
+  </div>
+
+  <p>Read that again. It's backwards. Counter-intuitive. And the moment you answer it, you've cracked the case.</p>
+
+  <h2>Why This Question Works</h2>
+
+  <p>When you try to <em>stop</em> a behavior, you're working against something you don't understand. When you figure out how to <em>trigger</em> it on demand, you've just mapped the entire mechanism.</p>
+
+  <p>Think about it:</p>
+
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="label">Scenario</div>
+      <h4>Pencil throwing</h4>
+      <p>"I'd hand him a hard math worksheet right after he's been playing." There it is -- the trigger is the transition from fun to difficult work.</p>
+    </div>
+    <div class="scenario-card">
+      <div class="label">Scenario</div>
+      <h4>Grocery meltdown</h4>
+      <p>"I'd walk past the candy aisle and say no." Now you know -- the behavior is about being denied something she wants.</p>
+    </div>
+    <div class="scenario-card">
+      <div class="label">Scenario</div>
+      <h4>Constant interrupting</h4>
+      <p>"I'd start talking to another adult and not acknowledge him for 5 minutes." Bingo -- he's bidding for attention.</p>
+    </div>
+    <div class="scenario-card">
+      <div class="label">Scenario</div>
+      <h4>Picking at skin</h4>
+      <p>"I'd...actually, I couldn't make it happen. She does it randomly." That tells you something too -- it's self-soothing, not connected to anyone else.</p>
+    </div>
+  </div>
+
+  <p>One question. Four answers. Each one leads you somewhere different.</p>
+
+  <h2>The Four Needs Behind Every Behavior</h2>
+
+  <p>Decades of developmental research boil down to this: every challenging behavior your child does is serving one of four purposes. Your detective work tells you which one.</p>
+
+  <img src="/images/blog/behavior-detective/four-needs.webp" alt="Four needs diagram showing escape, attention, access, and sensory categories">
+
+  <table class="needs-table">
+    <thead>
+      <tr>
+        <th>Need</th>
+        <th>What They're Getting</th>
+        <th>The Tell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Escape</td>
+        <td>Gets them out of something hard, boring, or uncomfortable</td>
+        <td>Happens when demands are placed on them</td>
+      </tr>
+      <tr>
+        <td>Attention</td>
+        <td>Gets a reaction from you -- positive or negative</td>
+        <td>Happens when you're focused elsewhere</td>
+      </tr>
+      <tr>
+        <td>Access</td>
+        <td>Gets them a thing, activity, or privilege they want</td>
+        <td>Happens when they've been told no</td>
+      </tr>
+      <tr>
+        <td>Sensory</td>
+        <td>Produces its own physical comfort or stimulation</td>
+        <td>Happens whether anyone else is around or not</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>This isn't theoretical. It's mechanical. Your child throws the pencil and homework disappears -- that's escape, operating like clockwork. Your child whines for the iPad and you cave -- that's access, running exactly as designed.</p>
+
+  <p>The behavior isn't random. It's working.</p>
+
+  <h2>From Trigger to Fix in Three Steps</h2>
+
+  <p>Once you know the need, the solution reveals itself. Here's the whole process:</p>
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div>
+        <p><strong>Ask the backwards question.</strong> "If I had to make this happen, what would I do?" Write down your answer. You now have the trigger.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div>
+        <p><strong>Match it to the need.</strong> Look at what your child gets out of the behavior. Task disappears? Escape. You stop what you're doing? Attention. They get the thing? Access. Nobody else is involved? Sensory.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div>
+        <p><strong>Teach a replacement that serves the same need.</strong> This is the part most parents skip. You can't just remove a behavior -- you have to give them a better way to get what they need.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The golden rule:</strong> The replacement must be faster and easier than the problem behavior. If asking for a break takes 5 minutes of negotiation but screaming ends homework in 10 seconds, screaming wins every time.</p>
+  </div>
+
+  <h2>The Swap Sheet</h2>
+
+  <p>Once you've identified the need, here's what to teach instead:</p>
+
+  <img src="/images/blog/behavior-detective/before-after.webp" alt="Before and after illustration showing a child replacing tantrum behavior with a break card">
+
+  <div class="swap-grid">
+    <div class="swap-card">
+      <h4>Escape behaviors</h4>
+      <ul>
+        <li>"I need a break" card or signal</li>
+        <li>"Can you help me?"</li>
+        <li>"Can I do this later?"</li>
+        <li>Thumbs down = I'm stuck</li>
+      </ul>
+    </div>
+    <div class="swap-card">
+      <h4>Attention behaviors</h4>
+      <ul>
+        <li>Tap your shoulder</li>
+        <li>Hand raise</li>
+        <li>"Mom, I need you"</li>
+        <li>Scheduled 1-on-1 time so they're not running on empty</li>
+      </ul>
+    </div>
+    <div class="swap-card">
+      <h4>Access behaviors</h4>
+      <ul>
+        <li>"Can I have ___ ?"</li>
+        <li>"Is it my turn yet?"</li>
+        <li>Wait for a timer</li>
+        <li>Trade for something else</li>
+      </ul>
+    </div>
+    <div class="swap-card">
+      <h4>Sensory behaviors</h4>
+      <ul>
+        <li>Fidget tool</li>
+        <li>Movement break (jump, spin)</li>
+        <li>Stress ball or textured item</li>
+        <li>Deep breathing routine</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Write Your Hypothesis</h2>
+
+  <p>Take what you've figured out and write it down. One sentence. This becomes your working theory -- the thing you test over the next week.</p>
+
+  <div class="hypothesis-builder">
+    <h4>Your behavior hypothesis</h4>
+    <div class="hypothesis-template">
+      When <span class="blank">trigger situation</span>,
+      my child <span class="blank">specific behavior</span>
+      in order to <span class="blank">meet this need</span>.
+    </div>
+    <div class="hypothesis-example">
+      "When I ask her to put away her toys, she screams and throws them in order to escape the cleanup task."
+    </div>
+  </div>
+
+  <p>If someone who's never met your child could read that sentence and picture exactly what happens, you've nailed it. If it's vague -- "acts out," "gets upset" -- tighten it. Specifics are everything.</p>
+
+  <h2>The Part Nobody Warns You About</h2>
+
+  <p>When you stop reinforcing the old behavior, it gets worse before it gets better. Your child is running an experiment: "Does screaming still work? Let me try LOUDER screaming."</p>
+
+  <p>This is called an extinction burst, and it's actually good news. It means your plan is working. They're testing the system one last time.</p>
+
+  <table class="flip-table">
+    <thead>
+      <tr>
+        <th>What it feels like</th>
+        <th>What it actually means</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"It's getting worse, this isn't working"</td>
+        <td>They noticed the rules changed and are testing the new boundary</td>
+      </tr>
+      <tr>
+        <td>"Maybe I should just give in this once"</td>
+        <td>Giving in now teaches them to escalate harder next time</td>
+      </tr>
+      <tr>
+        <td>"They seem more upset than before"</td>
+        <td>The old strategy is failing them -- they need you to hold steady so they can learn the new one</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Hold the line. Compare week to week, not day to day. Is it happening less? Are episodes shorter? Is your child starting to use the replacement? Those are your signals.</p>
+
+  <h2>Tonight's Assignment</h2>
+
+  <p>Pick the one behavior that's driving you the most crazy right now. Ask yourself the backwards question: "If I had to make this happen on purpose, what would I do?"</p>
+
+  <p>Write down your answer. That's the trigger.</p>
+
+  <p>Now look at what your child gets out of it. That's the need.</p>
+
+  <p>You just did in two minutes what most parents spend months circling around. The behavior isn't a mystery anymore. It's a message -- and now you can read it.</p>
+
+  <div class="source">
+    <strong>Kung Fu Parenting</strong> | Published by kungfu.family
+  </div>
+
+</body>
+</html>
