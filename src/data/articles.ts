@@ -800,6 +800,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: narrate both sides, name the stalemate, then hand them the problem and wait.',
     tldrInside: '3-step mediation system, 7 scripted scenarios with exact words, referee vs. mediator comparison table, 4 long-term habits that reduce fights',
   },
+  {
+    slug: 'be-the-anchor',
+    title: 'Anchor Protocol',
+    subtitle: 'Your kid\'s tantrum is one storm — here\'s how not to be the second',
+    description: 'Your child\'s meltdown is one storm. Your reaction is the second. The 3-phase Anchor Protocol — ground yourself, hold the space, bridge back — that turns tantrums into trust.',
+    image: '/images/cards/be-the-anchor.webp',
+    imageAlt: 'Calm anchor illustration representing steadiness during a child\'s emotional storm',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Meltdowns',
+    book: 'Good Inside',
+    bookSlug: 'good-inside-kennedy',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'Their prefrontal cortex is offline. Yours is the only one available.',
+    tldrPayoff: 'Kids who get co-regulation instead of correction during meltdowns build faster self-regulation, stronger attachment, and the ability to narrate their own hard moments.',
+    tldrMove: 'The move: ground yourself first, hold the space without teaching, then bridge back with warmth — not a lecture.',
+    tldrInside: 'ground-hold-bridge 3-phase protocol, internal mantra for staying calm, \'I hate you\' reframe, replay script for after the storm',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
