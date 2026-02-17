@@ -640,6 +640,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pause one beat, use your body to stop the action, then let whatever emotions follow run their course.',
     tldrInside: '4-row instinct-correction table, 5 scripts with follow-ups, HOLD method breakdown, 5 long-term consistency tips',
   },
+  {
+    slug: 'mealtime-isnt-a-battleground',
+    title: 'Ice Cream Next to Broccoli',
+    subtitle: 'The counterintuitive dinner move that ends mealtime wars for good',
+    description: 'Put dessert on the plate next to the broccoli. Sounds wrong? It\'s the move that ends mealtime wars for good. The lane-based system that makes dinner easy.',
+    image: '/images/cards/mealtime-isnt-a-battleground.webp',
+    imageAlt: 'Overhead view of a child\'s dinner plate with ice cream served alongside broccoli, chicken, and pasta as equals',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1.000,
+    topic: 'Food & Eating',
+    book: 'Good Inside',
+    bookSlug: 'good-inside-kennedy',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'Dessert as a reward turns dinner into a hostage negotiation.',
+    tldrPayoff: 'Kids raised with dessert alongside stop obsessing over sweets, eat a wider range of foods, and come to dinner without dread.',
+    tldrMove: 'The move: put the ice cream on the plate next to the broccoli -- no earning, no sequencing, no lever.',
+    tldrInside: 'parent lane vs. kid lane breakdown, 4 real-scenario scripts, snack routine reset script, 5-row old pattern vs. new pattern table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
