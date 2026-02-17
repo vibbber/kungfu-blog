@@ -720,6 +720,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: present the food, sit down, eat your own plate, say nothing about theirs.',
     tldrInside: '3 numbered steps with scripts, pressure-mode vs. zero-pressure strip, 5 real-scenario responses, 4 setup tweaks',
   },
+  {
+    slug: 'breaking-the-yelling-cycle',
+    title: 'The 10-Second Rule',
+    subtitle: 'Yelling is a reflex, not a personality — train the pause that changes everything',
+    description: 'The difference between a parent who yells and one who doesn\'t? Exactly 10 seconds. Learn the 10-Second Rule — a trainable technique that replaces yelling with calm authority.',
+    image: '/images/cards/breaking-the-yelling-cycle.webp',
+    imageAlt: 'Bold countdown timer with parent silhouette inside the zero, surrounded by sage-green calm waves',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Regulation',
+    book: 'Peaceful Parent, Happy Kids',
+    bookSlug: 'peaceful-parent-happy-kids-markham',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'The gap between a parent who yells and one who doesn\'t is exactly 10 seconds.',
+    tldrPayoff: 'Kids who grow up with firm-and-quiet parents trust the household, negotiate instead of melting down, and learn that anger doesn\'t break relationships.',
+    tldrMove: 'The move: ride out the 3-second adrenaline peak in silence, then respond from authority instead of panic.',
+    tldrInside: '3-step 10-Second Rule, 2 word-for-word scripts, 3 anchor-setting prep steps, 3 honest FAQ answers',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
