@@ -660,6 +660,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: put the ice cream on the plate next to the broccoli -- no earning, no sequencing, no lever.',
     tldrInside: 'parent lane vs. kid lane breakdown, 4 real-scenario scripts, snack routine reset script, 5-row old pattern vs. new pattern table',
   },
+  {
+    slug: 'dont-discipline-what-isnt-built-yet',
+    title: 'The Borrowed Calm',
+    subtitle: 'She took your words and made them hers',
+    description: 'Your toddler isn\'t ignoring you. Her brain literally can\'t do what you\'re asking yet. Here\'s how to build real self-control — on her timeline, not yours.',
+    image: '/images/cards/dont-discipline-what-isnt-built-yet.webp',
+    imageAlt: 'Child\'s head silhouette with neural pathways glowing and building, some still dim, representing brain development stages',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Self-Control',
+    book: 'Never in Anger',
+    bookSlug: 'never-in-anger-briggs',
+    datePublished: '2026-02-17',
+    dateModified: '2026-02-17',
+    tldrAnchor: 'You can\'t discipline a skill into a brain that hasn\'t built it yet.',
+    tldrPayoff: 'Kids raised this way regulate themselves when you\'re not in the room, use words instead of fists, and actually want to be the kind of person who stays calm.',
+    tldrMove: 'The shift: replace "she\'s being difficult" with "she doesn\'t have this skill yet" — then match your expectations to what\'s actually possible.',
+    tldrInside: '4 scripts for hard moments, age-by-age playbook, 5 signs the wiring is coming online, permissiveness vs. patience clarification',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
