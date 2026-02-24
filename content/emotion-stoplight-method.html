@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The One Word That Stops a Meltdown Before It Starts | Kung Fu</title>
+  <meta name="description" content="Teach your family a single code word that pauses escalating emotions instantly. The Emotion Stoplight method gives kids (and parents) a system for turning big feelings into smart choices.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero .subtitle {
+      font-size: 17px;
+      color: #6B7280;
+      font-weight: 400;
+    }
+
+    /* Sections */
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin: 36px 0 14px;
+      line-height: 1.3;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #F0F7EE;
+      border-left: 5px solid #5C8A5A;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .callout p {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout strong { color: #5C8A5A; }
+
+    /* Script box */
+    .script {
+      background: white;
+      border-left: 5px solid #E8A598;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .script .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #E8A598;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .script p {
+      font-style: italic;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    /* Stoplight visual */
+    .stoplight-section {
+      text-align: center;
+      margin: 32px 0;
+    }
+    .stoplight-section img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    /* Step cards */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+    .step {
+      padding: 22px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-red { background: #FEF2F0; }
+    .step-yellow { background: #FFFBEB; }
+    .step-green { background: #F0FAF4; }
+    .step .dot {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+    }
+    .step-red .dot { background: #E74C3C; }
+    .step-yellow .dot { background: #F59E0B; }
+    .step-green .dot { background: #27AE60; }
+    .step .content h3 {
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+    .step-red .content h3 { color: #DC2626; }
+    .step-yellow .content h3 { color: #D97706; }
+    .step-green .content h3 { color: #16A34A; }
+    .step .content p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    /* Emotion grid */
+    .emotion-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    @media (max-width: 560px) {
+      .emotion-grid { grid-template-columns: 1fr; }
+    }
+    .emotion-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      border: 2px solid #E5E7EB;
+    }
+    .emotion-card h4 {
+      font-size: 15px;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+    .emotion-card table {
+      width: 100%;
+      font-size: 13px;
+      border-collapse: collapse;
+    }
+    .emotion-card td {
+      padding: 4px 6px;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+    .emotion-card td:first-child {
+      font-weight: 700;
+      white-space: nowrap;
+      width: 50px;
+    }
+    .td-red { color: #DC2626; }
+    .td-yellow { color: #D97706; }
+    .td-green { color: #16A34A; }
+
+    /* Warning box */
+    .warning {
+      background: #FEF2F0;
+      border-left: 5px solid #E74C3C;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .warning strong { color: #DC2626; }
+    .warning p { margin-bottom: 0; font-size: 15px; }
+
+    /* Inline image */
+    .inline-img {
+      margin: 28px 0;
+      text-align: center;
+    }
+    .inline-img img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    /* Practice checklist */
+    .practice {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .practice h3 {
+      color: #5C8A5A;
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+    .practice-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .practice-item:last-child { margin-bottom: 0; }
+    .practice-check {
+      color: #5C8A5A;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Before/After table */
+    .comparison {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      font-size: 14px;
+    }
+    .comparison th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .comparison th:first-child { background: #FEE2E2; color: #DC2626; }
+    .comparison th:last-child { background: #DCFCE7; color: #16A34A; }
+    .comparison td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #F3F4F6;
+      vertical-align: top;
+    }
+    .comparison tr:last-child td { border-bottom: none; }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 2px solid #E8A598;
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+      line-height: 1.8;
+    }
+    /* TLDR box */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/emotion-stoplight-method/hero.webp" alt="Family drawing a stoplight together at the kitchen table">
+    <h1>The One Word That Stops a Meltdown Before It Starts</h1>
+    <p class="subtitle">Give your whole family a code word that pauses big emotions instantly</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The gap between impulse and action is a trainable skill, starting at age four.</p>
+    <ul>
+      <li>Kids who drill this resolve sibling conflicts without adult intervention, name their own emotional state out loud, and bounce back from bad days faster than their peers.</li>
+      <li>The shift: stop lecturing about calm and give kids a visual system -- three lights, three moves -- that they run themselves.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>3-light stoplight diagram &middot; family code word agreement &middot; 4 emotion-specific response cards &middot; 4 habit-building strategies</div>
+  </div>
+
+  <p>Picture this: your kids are fighting over the remote. Voices rising. Someone shoves. You feel your own jaw clench. Then your six-year-old looks up and says, calmly: <strong>"Stoplight."</strong></p>
+
+  <p>Everyone freezes. Takes a breath. The fight dissolves before it erupts.</p>
+
+  <p>That is not a fantasy. It is a trainable skill, and kids as young as four can learn it. The method is called the Emotion Stoplight, and it works because it gives every person in the house -- adults included -- the same shared language for one critical moment: the gap between impulse and action.</p>
+
+  <h2>Why That Gap Matters More Than You Think</h2>
+
+  <p>When big emotions hit, stress hormones flood the body in two waves. The first wave triggers fight-or-flight and lasts just minutes. But if you react during that first wave -- yelling, slamming, shoving -- a second wave follows. That second wave lasts <em>hours</em>, sometimes days, and it makes everyone overreact to everything.</p>
+
+  <p>Interrupt wave one, and wave two never happens.</p>
+
+  <p>That is the entire game. The stoplight teaches your kid to interrupt wave one.</p>
+
+  <h2>The System: Three Lights, Three Moves</h2>
+
+  <div class="stoplight-section">
+    <img src="/images/blog/emotion-stoplight-method/stoplight-diagram.webp" alt="Emotion Stoplight diagram showing Stop, Think, and Go phases">
+  </div>
+
+  <div class="steps">
+    <div class="step step-red">
+      <div class="dot">1</div>
+      <div class="content">
+        <h3>STOP -- Freeze and Breathe</h3>
+        <p>Notice the feeling. Freeze your body. Three slow breaths. This interrupts the stress hormone surge before it spirals into wave two.</p>
+      </div>
+    </div>
+    <div class="step step-yellow">
+      <div class="dot">2</div>
+      <div class="content">
+        <h3>THINK -- What Are My Options?</h3>
+        <p>Count to ten. Walk away. Draw the feeling. Talk to someone safe. Go outside. The act of brainstorming options activates the brain's planning center, which calms the emotional alarm system.</p>
+      </div>
+    </div>
+    <div class="step step-green">
+      <div class="dot">3</div>
+      <div class="content">
+        <h3>GO -- Choose the Best Response</h3>
+        <p>Pick the option your calm brain would approve of. Try it. If it does not work, go back to yellow and pick another one.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The Family Code Word</h2>
+
+  <p>The stoplight is powerful on its own. But what makes it a family superpower is the code word. Here is how to set it up:</p>
+
+  <div class="script">
+    <div class="label">Say this at dinner tonight</div>
+    <p>"Starting today, anyone can say 'Stoplight!' when emotions are getting too big. When someone says it, we all pause, take space, and breathe. No one gets in trouble for calling a stoplight. Ever."</p>
+  </div>
+
+  <p>Two things make this work. First, <em>anyone</em> can call it -- including the kids. Giving children the power to pause the family, even to pause a parent, is transformative. Second, calling it is always safe. No punishment, no eye-rolling, no "you're being dramatic." The code word is sacred.</p>
+
+  <div class="script">
+    <div class="label">When you need it yourself</div>
+    <p>"I can feel myself getting frustrated. I'm at yellow right now, heading toward red. I'm going to take a minute to cool down before we talk about this."</p>
+  </div>
+
+  <p>When your kid sees you use the stoplight on yourself, two things happen. They learn adults have big emotions too. And they see that the tool actually works -- it is not just something grown-ups impose on kids.</p>
+
+  <h2>How to Teach It (10 Minutes, One-Time Setup)</h2>
+
+  <div class="practice">
+    <h3>Tonight's Activity</h3>
+    <div class="practice-item">
+      <span class="practice-check">1.</span>
+      <span><strong>Draw it together.</strong> Grab paper and crayons. Three circles: red on top, yellow in the middle, green at the bottom. Let them color it.</span>
+    </div>
+    <div class="practice-item">
+      <span class="practice-check">2.</span>
+      <span><strong>Explain the metaphor.</strong> "Just like stoplights help cars avoid crashes, this stoplight helps you avoid emotional crashes."</span>
+    </div>
+    <div class="practice-item">
+      <span class="practice-check">3.</span>
+      <span><strong>Practice with a past event.</strong> "Remember when you got really mad about ___? What if you'd stopped and breathed? What options could you have thought of?"</span>
+    </div>
+    <div class="practice-item">
+      <span class="practice-check">4.</span>
+      <span><strong>Hang it somewhere visible.</strong> Bedroom door, fridge, bathroom mirror -- wherever emotions tend to run hot.</span>
+    </div>
+    <div class="practice-item">
+      <span class="practice-check">5.</span>
+      <span><strong>Announce the code word.</strong> Make the family agreement. Everyone gets the power to call "Stoplight!"</span>
+    </div>
+  </div>
+
+  <h2>Works for Every Big Emotion</h2>
+
+  <p>The same three-step pattern adapts to whatever your kid is feeling. The lights stay the same -- only the "go" options shift.</p>
+
+  <div class="emotion-grid">
+    <div class="emotion-card">
+      <h4>Anger</h4>
+      <table>
+        <tr><td class="td-red">Stop</td><td>Freeze. Don't yell or hit. Breathe deep.</td></tr>
+        <tr><td class="td-yellow">Think</td><td>Count to ten. Draw. Walk outside. Tell someone safe.</td></tr>
+        <tr><td class="td-green">Go</td><td>Use words to say what you need. Ask for help solving it.</td></tr>
+      </table>
+    </div>
+    <div class="emotion-card">
+      <h4>Anxiety</h4>
+      <table>
+        <tr><td class="td-red">Stop</td><td>Sit down. Notice where you feel it in your body.</td></tr>
+        <tr><td class="td-yellow">Think</td><td>Talk to a grown-up. Remember past fears you survived.</td></tr>
+        <tr><td class="td-green">Go</td><td>Try one thing. If it does not help, try another.</td></tr>
+      </table>
+    </div>
+    <div class="emotion-card">
+      <h4>Sadness</h4>
+      <table>
+        <tr><td class="td-red">Stop</td><td>Sit quietly. It is okay to cry. Don't push it away.</td></tr>
+        <tr><td class="td-yellow">Think</td><td>A hug. Something funny. Baking. Happy photos.</td></tr>
+        <tr><td class="td-green">Go</td><td>Pick one comforting thing and do it.</td></tr>
+      </table>
+    </div>
+    <div class="emotion-card">
+      <h4>Frustration</h4>
+      <table>
+        <tr><td class="td-red">Stop</td><td>Step back from the task. Shake out your hands.</td></tr>
+        <tr><td class="td-yellow">Think</td><td>Need help? A break? A different approach?</td></tr>
+        <tr><td class="td-green">Go</td><td>Get help, take a break, or try a new angle.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="warning">
+    <p><strong>Skip the punching bag.</strong> Telling kids to "punch a pillow" or "get it out" physically backfires. Research shows this reinforces aggressive impulses and deepens the neural pathways for reactive behavior. The stoplight works because it interrupts the reaction cycle -- not amplifies it.</p>
+  </div>
+
+  <h2>Before vs. After the Stoplight</h2>
+
+  <table class="comparison">
+    <tr>
+      <th>Without Stoplight</th>
+      <th>With Stoplight</th>
+    </tr>
+    <tr>
+      <td>Kid gets angry, shoves sibling immediately</td>
+      <td>Kid gets angry, freezes, takes three breaths</td>
+    </tr>
+    <tr>
+      <td>Parent escalates: "Stop that RIGHT NOW!"</td>
+      <td>Parent narrates: "I'm at yellow. Give me a minute."</td>
+    </tr>
+    <tr>
+      <td>Wave two kicks in -- everyone irritable for hours</td>
+      <td>Wave one interrupted -- everyone resets in minutes</td>
+    </tr>
+    <tr>
+      <td>Kids learn emotions are scary and uncontrollable</td>
+      <td>Kids learn emotions are signals they can manage</td>
+    </tr>
+  </table>
+
+  <div class="inline-img">
+    <img src="/images/blog/emotion-stoplight-method/family-activity.webp" alt="Parent and child practicing calm breathing together with a stoplight drawing on the wall">
+  </div>
+
+  <h2>Building the Habit</h2>
+
+  <p>The stoplight gets stronger with practice. Here is what makes it stick:</p>
+
+  <div class="callout">
+    <p><strong>Rehearse when calm.</strong> Role-play scenarios during relaxed moments. "What would you do if someone took your toy? Let's walk through the stoplight." Neural pathways build faster without emotional charge.</p>
+    <p><strong>Catch it at yellow.</strong> Teach kids to notice the early signs -- tight chest, clenched jaw, racing heart. The earlier they catch it, the easier it is to stop before red.</p>
+    <p><strong>Know the triggers.</strong> "You have a harder time with your stoplight when you're hungry / tired / had a rough day." Build prevention into the routine: snacks before homework, downtime after school, earlier bedtime before big days.</p>
+    <p><strong>Celebrate yellow-light wins.</strong> When your kid stops at yellow before melting down, name it: "You were getting mad, and you walked away to cool down. That is exactly what the stoplight teaches. You're getting stronger at this."</p>
+  </div>
+
+  <h2>Why This Is a Superpower</h2>
+
+  <p>Neuroimaging research shows that when you shift from emotional overwhelm to considering multiple responses, you activate the prefrontal cortex -- the brain's planning and self-control region. This directly inhibits the amygdala, the emotional alarm system, and reduces the intensity of the feeling.</p>
+
+  <p>Every time your child runs through the stoplight, that circuit gets stronger. Every time you model it yourself, the lesson doubles. It is not about suppressing feelings. It is about giving the brain a different job to do -- which physiologically calms the storm.</p>
+
+  <p>A crayon drawing on the fridge. A single code word. Ten minutes of setup. And suddenly your family has a shared language for the hardest moments -- one that works for a four-year-old and a forty-year-old equally well.</p>
+
+  <footer>
+    <p><strong>Kung Fu</strong> -- Expert parenting strategies, delivered when you need them.</p>
+  </footer>
+
+</body>
+</html>

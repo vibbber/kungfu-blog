@@ -980,6 +980,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace the one big decision with a milestone ladder — each upgrade tied to a real-world change, not a birthday.',
     tldrInside: 'Before/after comparison of plan vs. no plan, 5-stage device timeline, Annual check-in framework, Already-gave-a-phone rescue plan',
   },
+  {
+    slug: 'emotion-stoplight-method',
+    title: 'Emotion Stoplight Method',
+    subtitle: 'Three lights teach kids to pause, think, and choose — not just react',
+    description: 'Give your family a shared code word that pauses big emotions instantly. The Emotion Stoplight gives kids as young as four a visual system for turning impulses into smart choices.',
+    image: '/images/cards/emotion-stoplight-method.webp',
+    imageAlt: 'Colorful illustration of a traffic stoplight with red, yellow, and green lights representing stop, think, and go steps for emotional regulation',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Regulation',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'The gap between impulse and action is a trainable skill, starting at age four.',
+    tldrPayoff: 'Kids who drill this resolve sibling conflicts without adult intervention, name their own emotional state out loud, and bounce back from bad days faster than their peers.',
+    tldrMove: 'The shift: stop lecturing about calm and give kids a visual system — three lights, three moves — that they run themselves.',
+    tldrInside: '3-light stoplight diagram, family code word agreement, 4 emotion-specific response cards, 4 habit-building strategies',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
