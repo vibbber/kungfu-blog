@@ -860,6 +860,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: play cheerleader early, practice partner next, logistics chief when costs scale, quiet investor when they own it.',
     tldrInside: '4 detailed role cards, 3 transition signals, quit-conversation script, family tradeoff breakdown',
   },
+  {
+    slug: 'metal-insets-pencil-control',
+    title: 'The Hidden Writing Lesson',
+    subtitle: 'A drawing game that builds handwriting muscles — without a single letter',
+    description: 'Writing requires two separate muscle systems, and most kids are forced to learn both at once. A geometric tracing game trains instrument control through art — so when letters finally arrive, handwriting appears fully formed on day one.',
+    image: '/images/cards/metal-insets-pencil-control.webp',
+    imageAlt: 'Geometric metal inset frame with colorful parallel pencil lines filling a square shape, colored pencils nearby',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Fine Motor',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'Handwriting is not one skill. It is two completely different muscular mechanisms.',
+    tldrPayoff: 'Kids who train both mechanisms separately don\'t slowly learn to write -- they sit down and produce fluid letters on day one, stunning every adult in the room.',
+    tldrMove: 'The shift: replace alphabet drills with geometric shape-filling. The parallel lines train the exact strokes letters need.',
+    tldrInside: '4-step numbered walkthrough with scripts, Progression path from circles to cross-hatching, DIY version with household materials, Hidden-training breakdown for 5 activities',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
