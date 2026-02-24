@@ -960,6 +960,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: kill the threats, move toward the storm, and when you slip — go back, say sorry, mean it. Repair is the whole lesson.',
     tldrInside: '5-scenario flip test table, 4-stage origin diagram, 4 concrete replacement scripts, before/after repair comparison',
   },
+  {
+    slug: 'smartphone-readiness-plan',
+    title: 'Phone Milestones',
+    subtitle: 'Five stages from zero to smartphone — every upgrade earned, never argued',
+    description: 'Stop arguing about phones. A 5-stage milestone plan from ages 0-18 that tells your kid exactly when each upgrade happens — so there\'s nothing left to negotiate.',
+    image: '/images/cards/smartphone-readiness-plan.webp',
+    imageAlt: 'Five devices on ascending platforms showing the progression from no phone to smartphone',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'Most families treat the phone decision as a single yes-or-no moment. It\'s not.',
+    tldrPayoff: 'Kids raised on a staged plan hit 16 with years of practice managing devices. They self-regulate screen time, handle social media with guardrails already in place, and never felt punished along the way.',
+    tldrMove: 'The shift: replace the one big decision with a milestone ladder — each upgrade tied to a real-world change, not a birthday.',
+    tldrInside: 'Before/after comparison of plan vs. no plan, 5-stage device timeline, Annual check-in framework, Already-gave-a-phone rescue plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
