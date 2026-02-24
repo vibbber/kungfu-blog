@@ -820,6 +820,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: ground yourself first, hold the space without teaching, then bridge back with warmth — not a lecture.',
     tldrInside: 'ground-hold-bridge 3-phase protocol, internal mantra for staying calm, \'I hate you\' reframe, replay script for after the storm',
   },
+  {
+    slug: 'calm-down-breathing',
+    title: 'The Bedtime Cheat Code',
+    subtitle: 'Install a stress-management system while your kid falls asleep',
+    description: 'The breathing technique elite athletes use before competition — adapted for kids. Three minutes, twice a day, and your child handles pressure like a pro.',
+    image: '/images/cards/calm-down-breathing.webp',
+    imageAlt: 'Overhead view of a child in bed with soft glowing breath rings radiating outward, representing the bedtime breathing practice',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Regulation',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'Bedtime is the cheat code for teaching kids to breathe.',
+    tldrPayoff: 'Kids who breathe before sleep fall asleep faster, sleep deeper, and wake up with a tool they can use during tests, arguments, and performances.',
+    tldrMove: 'The shift: anchor the BELLY practice to bedtime first, then expand to other moments once the habit holds.',
+    tldrInside: '5-step BELLY breakdown, starting and ending scripts, 5-row age guide with durations, 4 real-world application cards',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
