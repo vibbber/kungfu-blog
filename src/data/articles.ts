@@ -900,6 +900,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: treat the disruptive child as \'almost ill\' -- extra comfort, favorite activities, a front-row seat to watch peers thrive -- and wait for them to want back in.',
     tldrInside: '5-step room setup, traditional time-out vs. Montessori isolation breakdown, why-it-works mechanism table, medical-check-first callout',
   },
+  {
+    slug: 'mutual-gains-mindset',
+    title: 'The Door Nobody Saw',
+    subtitle: 'Teaching your teen the negotiation move that changes everything',
+    description: 'Your teen\'s secret weapon isn\'t winning arguments — it\'s inventing options nobody else thought of. The GAIN method turns every conflict into a collaboration.',
+    image: '/images/cards/mutual-gains-mindset.webp',
+    imageAlt: 'Wall with hidden doorway opening in center, representing the third option in negotiation',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Social Skills',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'The strongest negotiators don\'t fight harder — they invent better options.',
+    tldrPayoff: 'Kids raised this way resolve conflict without caving or dominating, keep friendships through real disagreements, and develop the emotional confidence to walk away from bad deals.',
+    tldrMove: 'The move: replace \'how do we split this fairly\' with \'what if we could both get what we actually want?\'',
+    tldrInside: 'GAIN method: Ground, Ask, Invent, Name, 4 interaction patterns mapped out, real dialogue showing the method in action, 4 tips for building mutual gains over time',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
