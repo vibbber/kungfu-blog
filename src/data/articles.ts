@@ -920,6 +920,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: replace \'how do we split this fairly\' with \'what if we could both get what we actually want?\'',
     tldrInside: 'GAIN method: Ground, Ask, Invent, Name, 4 interaction patterns mapped out, real dialogue showing the method in action, 4 tips for building mutual gains over time',
   },
+  {
+    slug: 'the-launchpad-effect',
+    title: 'Hold Steady, Let Go',
+    subtitle: 'Three modes that turn you into a launchpad for brave kids',
+    description: 'The kids who explore furthest have the steadiest parents behind them. Three simple modes — standby, refuel, release — that build brave, capable kids from toddlerhood through the teenage years.',
+    image: '/images/cards/the-launchpad-effect.webp',
+    imageAlt: 'Warm illustration of a lighthouse with a small sailboat heading out to sea at sunset',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Attachment',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'The kids who explore furthest have the steadiest parents behind them.',
+    tldrPayoff: 'Kids raised this way try harder things, bounce back faster, and handle stress without falling apart -- from toddlerhood through the teenage years.',
+    tldrMove: 'The move: operate in three modes -- standby (be present), refuel (match comfort to distress), release (send them back out).',
+    tldrInside: '3-mode launchpad framework, 3-level refuel cheat sheet, 5-row less/more comparison table, 4 habit-building steps',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
