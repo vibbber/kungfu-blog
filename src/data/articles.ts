@@ -880,6 +880,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace alphabet drills with geometric shape-filling. The parallel lines train the exact strokes letters need.',
     tldrInside: '4-step numbered walkthrough with scripts, Progression path from circles to cross-hatching, DIY version with household materials, Hidden-training breakdown for 5 activities',
   },
+  {
+    slug: 'montessori-isolation-technique',
+    title: 'The Comfort Cure',
+    subtitle: 'When your kid acts out — add warmth, not consequences',
+    description: 'Montessori discovered that disruptive children transform when given more comfort, not less. The counterintuitive technique of treating misbehavior as illness -- with a cozy seat, favorite toys, and extra affection -- produces lasting self-correction.',
+    image: '/images/cards/montessori-isolation-technique.webp',
+    imageAlt: 'Cozy sage armchair with stuffed animals and books by a sunlit window, warm and inviting classroom corner',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'More warmth, not more consequences -- Montessori\'s approach to disruptive behavior.',
+    tldrPayoff: 'Kids who were the biggest disruptors converted into the most focused, self-directed members of the group. Montessori called the change \'complete and lasting.\'',
+    tldrMove: 'The move: treat the disruptive child as \'almost ill\' -- extra comfort, favorite activities, a front-row seat to watch peers thrive -- and wait for them to want back in.',
+    tldrInside: '5-step room setup, traditional time-out vs. Montessori isolation breakdown, why-it-works mechanism table, medical-check-first callout',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
