@@ -1000,6 +1000,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop lecturing about calm and give kids a visual system — three lights, three moves — that they run themselves.',
     tldrInside: '3-light stoplight diagram, family code word agreement, 4 emotion-specific response cards, 4 habit-building strategies',
   },
+  {
+    slug: 'screen-free-spaces-blueprint',
+    title: 'Making Room',
+    subtitle: 'You\'re not taking screens away — you\'re giving something better back',
+    description: 'The generation with the most entertainment options in history reports the highest boredom. Here\'s the room-by-room blueprint for screen-free zones that actually stick.',
+    image: '/images/cards/screen-free-spaces-blueprint.webp',
+    imageAlt: 'Open doorway leading from a dim room into a bright sunlit garden, symbolizing making room for something better',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'The generation with the most entertainment options reports the highest boredom.',
+    tldrPayoff: 'Kids who grow up with protected screen-free time sleep better, hold real conversations, and stop needing a device to fill every quiet moment.',
+    tldrMove: 'The move: designate specific rooms and times as phone-free — meals first, then bedtime, then weekends — and make the rule universal.',
+    tldrInside: '4-row bedtime swap table, 3-step mealtime setup, 4-phase rollout plan, 25-item Fridge List activity',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
