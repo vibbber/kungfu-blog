@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your kid doesn't need the same parent at 7 and at 17. Research on world-class performers reveals four distinct roles parents play — and when to switch between them.">
+  <title>Your Kid Needs Four Different Parents | Kung Fu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* — Header — */
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #E8A598;
+    }
+    h1 {
+      font-size: 28px;
+      color: #5C8A5A;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #6B7B7B;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* — Blog images — */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* — Section headings — */
+    h2 {
+      font-size: 22px;
+      color: #5C8A5A;
+      margin: 36px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E8A598;
+    }
+
+    /* — Body text — */
+    p {
+      font-size: 16px;
+      margin: 14px 0;
+      color: #2A2A3E;
+    }
+
+    /* — Opening hook — */
+    .hook {
+      font-size: 18px;
+      font-weight: 500;
+      color: #1A1A2E;
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+
+    /* — Callout box — */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 22px 26px;
+      border-radius: 12px;
+      margin: 28px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .callout strong { color: #FFE4C4; }
+
+    /* — Role cards — */
+    .role-card {
+      background: white;
+      border-radius: 14px;
+      margin: 24px 0;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    }
+    .role-card-header {
+      padding: 16px 22px;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .role-card-header .emoji { font-size: 22px; }
+    .rc-cheerleader { background: #E8A598; }
+    .rc-partner { background: #D4956A; }
+    .rc-logistics { background: #5C8A5A; }
+    .rc-investor { background: #3A4A5E; }
+    .role-card-body { padding: 22px; }
+
+    /* — Script blocks — */
+    .script-block {
+      background: #F8F4EE;
+      border-left: 4px solid #E8A598;
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 14px 0;
+      font-size: 15px;
+    }
+    .script-block .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+    }
+    .script-block .script {
+      font-style: italic;
+      color: #333;
+    }
+
+    /* — Action rows — */
+    .action-row {
+      display: flex;
+      gap: 14px;
+      margin: 12px 0;
+      align-items: flex-start;
+    }
+    .action-tag {
+      background: #EDF7ED;
+      color: #5C8A5A;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      min-width: 90px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .action-detail {
+      font-size: 15px;
+      color: #444;
+      padding-top: 4px;
+    }
+
+    /* — Comparison table — */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      margin: 24px 0;
+    }
+    .compare-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .compare-table td {
+      background: white;
+      padding: 12px 16px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* — Insight banner — */
+    .insight-banner {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .insight-banner .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+    .insight-banner p {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* — Warning card — */
+    .warning-card {
+      background: #FEF3F0;
+      border-left: 4px solid #E74C3C;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+    }
+    .warning-card h4 { color: #C0392B; margin-bottom: 8px; font-size: 15px; }
+    .warning-card p { font-size: 14px; color: #555; margin: 6px 0; }
+
+    /* — Transition signal table — */
+    .signal-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      margin: 24px 0;
+    }
+    .signal-table th {
+      background: #3A4A5E;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+    }
+    .signal-table td {
+      background: white;
+      padding: 12px 16px;
+      border-bottom: 1px solid #EEE;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    .signal-table tr:last-child td { border-bottom: none; }
+    .signal-table .from { color: #888; }
+    .signal-table .to { color: #5C8A5A; font-weight: 600; }
+
+    /* — Tip box — */
+    .tip-box {
+      background: #FFF9E6;
+      border-left: 4px solid #F0C674;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      font-size: 15px;
+      color: #555;
+    }
+    .tip-box strong { color: #B8860B; }
+
+    /* — Footer — */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 14px; }
+      h1 { font-size: 24px; }
+      .action-row { flex-direction: column; gap: 6px; }
+      .action-tag { min-width: auto; }
+      .compare-table, .signal-table { font-size: 13px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Kid Needs Four Different Parents</h1>
+    <p class="subtitle">The four roles that build world-class performers &mdash; and the signals that tell you when to switch</p>
+  </header>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Your kid doesn't need the same parent at every stage of skill development.</p>
+    <ul>
+      <li>Kids whose parents get the timing right build discipline young, navigate setbacks mid-journey, and run their own training by the time it matters most.</li>
+      <li>The move: play cheerleader early, practice partner next, logistics chief when costs scale, quiet investor when they own it.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4 detailed role cards &middot; 3 transition signals &middot; quit-conversation script &middot; family tradeoff breakdown</div>
+  </div>
+
+  <p class="hook">Here's what nobody told you about raising a kid who gets really, really good at something: you don't do one thing well for 15 years. You do four completely different jobs, one after another, and the whole trick is knowing when to drop the old one and pick up the next.</p>
+
+  <p>Researchers who studied the families behind Olympic athletes, concert pianists, and top scientists found this pattern over and over. These parents weren't following a playbook. They were just responding to what their kid needed &mdash; and what their kid needed kept changing.</p>
+
+  <img src="/images/blog/the-talent-support-playbook/four-roles-timeline.webp" alt="Four parent roles evolving as a child grows — from cheerleader to practice partner to logistics chief to quiet investor" class="blog-img">
+
+  <h2>Before the Roles: Two Things These Families Had in Common</h2>
+
+  <p>Before we get into the four roles, there's something underneath all of it. Two beliefs that showed up in virtually every family that produced a high-level performer.</p>
+
+  <img src="/images/blog/the-talent-support-playbook/effort-and-passion.webp" alt="Two pillars of talent-building families: effort culture and family passion" class="blog-img">
+
+  <table class="compare-table">
+    <tr>
+      <th>Belief</th>
+      <th>What It Looked Like at Home</th>
+    </tr>
+    <tr>
+      <td><strong>Effort is non-negotiable</strong></td>
+      <td>Chores done properly. Homework before play. Projects finished once started. High standards everywhere, not just in the talent area. Modeled by the parents, not just imposed on the kids.</td>
+    </tr>
+    <tr>
+      <td><strong>The activity is part of who we are</strong></td>
+      <td>Music playing during dinner. Weekend trips to the gym. Books about the field on the shelf. When lessons began, it felt like a deeper step into something the family already loved &mdash; not a new direction.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>The parents' passions determined the domain.</strong> Sporty families produced athletes. Musical families produced musicians. Intellectually curious families produced scholars. The specific discipline often came down to opportunity &mdash; which teacher was nearby, which program had openings, which instrument was affordable.
+  </div>
+
+  <h2>Role 1: The Cheerleader</h2>
+
+  <div class="role-card">
+    <div class="role-card-header rc-cheerleader">The Cheerleader &mdash; Getting Started</div>
+    <div class="role-card-body">
+      <p style="font-size: 15px; color: #555; margin-bottom: 16px;">Your job right now: make the activity feel like a natural, exciting part of your child's world. Not a test. Not a talent search. Just something your family does.</p>
+
+      <div class="action-row">
+        <div class="action-tag">Immerse</div>
+        <div class="action-detail">Weave the activity into daily life before formal lessons. Play music during meals. Watch games on the weekend. Discuss ideas at the table. When lessons start, it already feels familiar.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Expose Early</div>
+        <div class="action-detail">Sign up around age 6 or 7 as a normal childhood experience. Give every child in the family the same shot. The goal is exploration.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">First Teacher</div>
+        <div class="action-detail">Pick for personality, not credentials. The teacher needs to make your kid feel excited and welcome. If the chemistry isn't there, switch quickly.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Be Present</div>
+        <div class="action-detail">Sit in on lessons. Take notes on what the teacher assigns. Then sit with your child during practice &mdash; young kids can't focus alone. You don't need to know the material. You just need to be there.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Celebrate</div>
+        <div class="action-detail">Show genuine excitement. Ask your kid to perform for family. Attend every recital. Make their growing ability a source of family pride.</div>
+      </div>
+
+      <div class="script-block">
+        <div class="label">What this sounds like</div>
+        <div class="script">"Show Grandma what you learned this week!" &mdash; "I loved watching you at that recital." &mdash; "You're getting so much better, I can hear the difference."</div>
+      </div>
+
+      <div class="tip-box">
+        <strong>Don't skip this part:</strong> Some of these kids didn't want to practice at first. Their parents kept them at it &mdash; not with force, but with the same matter-of-fact expectation they applied to homework. The joy came later, once competence kicked in.
+      </div>
+    </div>
+  </div>
+
+  <h2>Role 2: The Practice Partner</h2>
+
+  <div class="role-card">
+    <div class="role-card-header rc-partner">The Practice Partner &mdash; Building Habits</div>
+    <div class="role-card-body">
+      <p style="font-size: 15px; color: #555; margin-bottom: 16px;">Your kid is progressing. Now it's about daily routine and navigating the rough patches that will absolutely come.</p>
+
+      <div class="action-row">
+        <div class="action-tag">Set Routine</div>
+        <div class="action-detail">Establish a daily practice window and protect it. Enforce the time commitment, not the quality &mdash; that's the teacher's job.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Learn Along</div>
+        <div class="action-detail">Teach yourself the basics. Read about the field. Attend events. Talk to other parents on the sideline. You don't need expertise &mdash; you need engagement.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Navigate Walls</div>
+        <div class="action-detail">When your kid wants to quit, acknowledge the frustration without caving. Help them push through. Wait until a strong moment &mdash; after a win or a breakthrough &mdash; before having any conversation about whether to continue.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Upgrade</div>
+        <div class="action-detail">When the first teacher signals your child has outgrown them (or when progress plateaus), start looking for a more advanced instructor. The next one will be farther away and more expensive.</div>
+      </div>
+    </div>
+  </div>
+
+  <img src="/images/blog/the-talent-support-playbook/crossroads-moment.webp" alt="A parent guiding their child through a frustrating moment, pointing toward the path forward" class="blog-img">
+
+  <div class="script-block">
+    <div class="label">When they want to quit</div>
+    <div class="script">"I know this feels hard right now. Let's get through this week, and we'll talk about it after your next performance." &mdash; Never have the quit conversation during a low moment. Wait for a high.</div>
+  </div>
+
+  <h2>Role 3: The Logistics Chief</h2>
+
+  <div class="role-card">
+    <div class="role-card-header rc-logistics">The Logistics Chief &mdash; Scaling Up</div>
+    <div class="role-card-body">
+      <p style="font-size: 15px; color: #555; margin-bottom: 16px;">The commitment has grown. Your household is quietly reorganizing itself around your child's training. This is where the real sacrifices happen.</p>
+
+      <div class="action-row">
+        <div class="action-tag">Reorganize</div>
+        <div class="action-detail">Family schedules adjust around the training calendar. Mealtimes shift. Vacations align with competitions. Weekends revolve around the activity.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Fund It</div>
+        <div class="action-detail">Equipment, lesson fees, competition travel, registration &mdash; costs escalate significantly. Absorb it without making your child feel guilty.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Shield</div>
+        <div class="action-detail">Handle school scheduling conflicts. Manage extended family who question the investment. Shield your child from the logistical complexity so they can focus.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Balance</div>
+        <div class="action-detail">Resources tilt toward the child showing the most drive. Other siblings notice. Acknowledge it honestly rather than pretending it isn't happening.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-card">
+    <h4>The tradeoffs are real</h4>
+    <p><strong>Money:</strong> Equipment that costs more than a family vacation. Lesson fees that rival a car payment.</p>
+    <p><strong>Time:</strong> Two-a-day drop-offs. Every weekend scheduled around tournaments or rehearsals.</p>
+    <p><strong>Family balance:</strong> Some families end up in separate cities for the right coach. Other children's activities get compressed.</p>
+    <p><strong>Normal life:</strong> Free time narrows. Social events get skipped. This only works if the child is choosing it too &mdash; not just complying.</p>
+  </div>
+
+  <h2>Role 4: The Quiet Investor</h2>
+
+  <div class="role-card">
+    <div class="role-card-header rc-investor">The Quiet Investor &mdash; Letting Go</div>
+    <div class="role-card-body">
+      <p style="font-size: 15px; color: #555; margin-bottom: 16px;">Your child now runs their own show. Teachers, mentors, and the child make the decisions. You're the funding, the emotional bedrock, and the person who gets out of the way.</p>
+
+      <div class="action-row">
+        <div class="action-tag">Keep Funding</div>
+        <div class="action-detail">Tuition, living expenses, training costs. Many parents continue supporting well past college while their child establishes themselves.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Stay Close</div>
+        <div class="action-detail">Your years of involvement give you a unique ability to understand what they're going through. Be the safe place after a loss. Share the wins. Listen more than you advise.</div>
+      </div>
+      <div class="action-row">
+        <div class="action-tag">Trust</div>
+        <div class="action-detail">Decisions belong to your child and their mentors now. You can offer perspective. The driving seat is theirs.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>How to Know When to Switch</h2>
+
+  <p>This is the part most parents get wrong. They stay in a role too long because it's comfortable, not because their kid still needs it.</p>
+
+  <table class="signal-table">
+    <tr>
+      <th>Transition</th>
+      <th>The Signal</th>
+    </tr>
+    <tr>
+      <td><span class="from">Cheerleader</span> &rarr; <span class="to">Practice Partner</span></td>
+      <td>Your child stops needing convincing and starts needing structure. They enjoy the activity but can't organize their own practice yet.</td>
+    </tr>
+    <tr>
+      <td><span class="from">Practice Partner</span> &rarr; <span class="to">Logistics Chief</span></td>
+      <td>Your child surpasses what you can meaningfully help with technically. The teacher is the authority now, not you.</td>
+    </tr>
+    <tr>
+      <td><span class="from">Logistics Chief</span> &rarr; <span class="to">Quiet Investor</span></td>
+      <td>Internal drive has replaced external pressure. Your child practices because they're good and they know it, not because you told them to.</td>
+    </tr>
+  </table>
+
+  <div class="insight-banner">
+    <div class="label">The Research Finding That Changes Everything</div>
+    <p>Many parents of high achievers reported that a sibling seemed to have more natural ability. What set the eventual star apart wasn't raw gift &mdash; it was willingness to work, desire to improve, and persistence through difficulty. Drive, not talent, was the differentiator.</p>
+  </div>
+
+  <div class="tip-box">
+    <strong>The bottom line:</strong> None of these parents planned to raise a world-class performer. They followed their own passions, brought their children along, and responded to what they saw. The commitment grew so gradually that by the time it was enormous, it felt like the only natural path. That can be you too &mdash; you just need to know which role to play right now.
+  </div>
+
+  <footer>
+    <p>Kung Fu &mdash; kungfu.family</p>
+  </footer>
+
+</body>
+</html>

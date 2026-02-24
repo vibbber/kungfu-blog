@@ -840,6 +840,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: anchor the BELLY practice to bedtime first, then expand to other moments once the habit holds.',
     tldrInside: '5-step BELLY breakdown, starting and ending scripts, 5-row age guide with durations, 4 real-world application cards',
   },
+  {
+    slug: 'the-talent-support-playbook',
+    title: 'Parent in Four Acts',
+    subtitle: 'Olympic families, concert pianists, top scientists \u2014 their parents all played the same four roles in the same order',
+    description: 'Research on world-class performers found their parents played four distinct roles in sequence. The trick isn\'t doing one thing well for 15 years \u2014 it\'s knowing when to switch.',
+    image: '/images/cards/the-talent-support-playbook.webp',
+    imageAlt: 'Stage curtain revealing four numbered doors representing the four parent roles in talent development',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'Your kid doesn\'t need the same parent at every stage of skill development.',
+    tldrPayoff: 'Kids whose parents get the timing right build discipline young, navigate setbacks mid-journey, and run their own training by the time it matters most.',
+    tldrMove: 'The move: play cheerleader early, practice partner next, logistics chief when costs scale, quiet investor when they own it.',
+    tldrInside: '4 detailed role cards, 3 transition signals, quit-conversation script, family tradeoff breakdown',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
