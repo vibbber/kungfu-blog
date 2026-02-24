@@ -940,6 +940,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: operate in three modes -- standby (be present), refuel (match comfort to distress), release (send them back out).',
     tldrInside: '3-mode launchpad framework, 3-level refuel cheat sheet, 5-row less/more comparison table, 4 habit-building steps',
   },
+  {
+    slug: 'stopping-the-inherited-anger-pattern',
+    title: 'Your Child Is Not Your Therapist',
+    subtitle: 'The invisible pattern behind generational anger — spotted and stopped',
+    description: 'There\'s a hidden pattern where parents accidentally ask their children to do the emotional heavy lifting. Spot the invisible flip and break the generational anger cycle.',
+    image: '/images/cards/stopping-the-inherited-anger-pattern.webp',
+    imageAlt: 'A child standing in a beam of warm light, pushing back a large dark shadow behind them',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Attachment',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-02-24',
+    dateModified: '2026-02-24',
+    tldrAnchor: 'The anger you feel at your child is almost never about your child.',
+    tldrPayoff: 'Kids raised by a parent who broke the cycle sleep easier, play louder, cry when they need to, and grow up knowing that conflict doesn\'t destroy love.',
+    tldrMove: 'The shift: kill the threats, move toward the storm, and when you slip — go back, say sorry, mean it. Repair is the whole lesson.',
+    tldrInside: '5-scenario flip test table, 4-stage origin diagram, 4 concrete replacement scripts, before/after repair comparison',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
