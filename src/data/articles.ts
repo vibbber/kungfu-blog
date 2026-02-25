@@ -1060,6 +1060,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: cap total gaming across all devices, fill the vacuum with real alternatives, and evolve the rules as they grow.',
     tldrInside: 'weekday and weekend time caps, new game safety scan, 5-step response ladder for when it spirals, 4 habits to keep the system running long-term',
   },
+  {
+    slug: 'stacking-the-deck',
+    title: 'Invisible Armor',
+    subtitle: 'Every chore they master is a shield they\'ll carry for life',
+    description: 'Kids who fold napkins at 3 and plan family hikes at 10 are building invisible defenses. The age-by-age playbook for stacking protective factors before they ever need them.',
+    image: '/images/cards/stacking-the-deck.webp',
+    imageAlt: 'Warm illustration of a child surrounded by glowing layers of invisible protective armor',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Resilience',
+    book: 'The Addiction Inoculation',
+    bookSlug: 'addiction-inoculation-lahey',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'Self-belief is the single strongest defense a kid can carry.',
+    tldrPayoff: 'Kids raised with real challenges -- not just encouragement -- develop the kind of confidence that holds up under peer pressure, rejection, and stress.',
+    tldrMove: 'The move: replace hollow praise with stretch goals, honest feedback, and tasks that actually matter.',
+    tldrInside: 'age-by-age responsibility ladder, praise do-vs-don\'t comparison, 2 word-for-word scripts, 3-step optimism reframe',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
