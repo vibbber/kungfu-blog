@@ -1020,6 +1020,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: designate specific rooms and times as phone-free — meals first, then bedtime, then weekends — and make the rule universal.',
     tldrInside: '4-row bedtime swap table, 3-step mealtime setup, 4-phase rollout plan, 25-item Fridge List activity',
   },
+  {
+    slug: 'screen-free-sleep-zone',
+    title: 'The 1 a.m. Extraction',
+    subtitle: 'Your kid\'s secret phone mission — and the system that cancels it',
+    description: 'Your kid is running midnight phone retrieval ops. Here\'s the two-layer system — physical removal plus software lockdown — that makes it impossible and gives them back hours of sleep.',
+    image: '/images/cards/screen-free-sleep-zone.webp',
+    imageAlt: 'Illustration of a child on a secret midnight phone retrieval mission through a moonlit hallway',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Sleep',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'Of all screen boundaries, this one has the clearest evidence and biggest payoff.',
+    tldrPayoff: 'Kids get back hours of sleep, better moods, sharper focus, and a brain that actually recovers overnight instead of scrolling through it.',
+    tldrMove: 'The move: every device leaves the bedroom every night — backed by software downtime so sleepovers and vacations don\'t blow the system.',
+    tldrInside: '3 sleep-attack mechanisms, 3 device removal methods, 5 kid objections defeated, model-it-yourself compliance trick',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
