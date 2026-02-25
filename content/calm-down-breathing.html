@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3 Minutes That Rewire Your Kid's Brain | Kung Fu</title>
-  <meta name="description" content="The breathing technique elite athletes use before competition — adapted for kids. Three minutes, twice a day, and your child handles pressure like a pro.">
+  <title>Three Minutes to a Calmer Kid (No, Really) | Kung Fu Parenting</title>
+  <meta name="description" content="The breathing technique that rewires your child's brain in 3 minutes flat. Three short sessions beat one long meditation every time. Here's the BELLY method.">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -17,224 +17,222 @@
       margin: 0 auto;
     }
 
-    /* Header */
+    /* Hero */
     .hero {
       text-align: center;
       margin-bottom: 40px;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #5C8A5A 0%, #7BAF78 100%);
-      border-radius: 16px;
-      color: white;
+      padding-bottom: 28px;
+      border-bottom: 3px solid #E8A598;
     }
     .hero-tag {
       display: inline-block;
-      background: rgba(255,255,255,0.2);
-      padding: 4px 16px;
+      background: #5C8A5A;
+      color: white;
+      padding: 5px 14px;
       border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
       margin-bottom: 16px;
     }
     .hero h1 {
       font-size: 32px;
+      color: #1A1A2E;
       line-height: 1.2;
       margin-bottom: 12px;
-      font-weight: 800;
     }
-    .hero p {
+    .hero h1 span { color: #5C8A5A; }
+    .hero-sub {
       font-size: 17px;
-      opacity: 0.9;
+      color: #666;
       max-width: 600px;
       margin: 0 auto;
     }
 
-    /* Sections */
-    h2 {
-      color: #5C8A5A;
-      font-size: 24px;
-      margin: 40px 0 16px;
-      font-weight: 700;
-    }
-    p {
-      margin-bottom: 16px;
-      font-size: 16px;
-    }
-
-    /* The math box */
-    .math-box {
-      background: white;
-      border: 2px solid #5C8A5A;
-      border-radius: 12px;
-      padding: 28px;
-      margin: 28px 0;
-      text-align: center;
-    }
-    .math-box .equation {
-      font-size: 28px;
-      font-weight: 800;
-      color: #5C8A5A;
-      margin-bottom: 8px;
-    }
-    .math-box .subtext {
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* Comparison table */
-    .comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      margin: 28px 0;
+    /* Hero image */
+    .hero-img {
+      margin: 28px auto 0;
+      max-width: 100%;
       border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #ddd;
     }
-    .comparison-header {
-      padding: 14px 16px;
-      font-weight: 700;
-      font-size: 14px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    .comparison-header.before { background: #f0e6e6; color: #8B4A4A; }
-    .comparison-header.after { background: #e6f0e6; color: #4A6B4A; }
-    .comparison-cell {
+
+    /* Body text */
+    p { margin-bottom: 18px; font-size: 16px; }
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin: 36px 0 14px;
+      line-height: 1.3;
+    }
+
+    /* Highlight box */
+    .insight-box {
+      background: #FEF3F0;
+      border-left: 5px solid #E8A598;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
+      margin: 24px 0;
+      font-size: 16px;
+    }
+    .insight-box strong { color: #E8A598; }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .compare-table th {
+      background: #5C8A5A;
+      color: white;
       padding: 12px 16px;
       font-size: 14px;
-      border-top: 1px solid #eee;
+      text-align: left;
+      font-weight: 600;
     }
-    .comparison-cell.before { background: #faf5f5; color: #666; }
-    .comparison-cell.after { background: #f5faf5; color: #333; font-weight: 500; }
+    .compare-table td {
+      padding: 12px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      background: white;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .winner { color: #5C8A5A; font-weight: 700; }
+    .loser { color: #999; }
 
-    /* Step cards (BELLY) */
+    /* BELLY method cards */
     .belly-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 24px 0;
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
     }
     .belly-card {
       background: white;
-      border-radius: 12px;
-      padding: 20px 20px 20px 72px;
+      border-radius: 10px;
+      padding: 18px 18px 18px 58px;
+      border: 1px solid #e8e4de;
       position: relative;
-      border: 1px solid #e8e8e8;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     .belly-letter {
       position: absolute;
-      left: 16px;
-      top: 16px;
-      width: 44px;
-      height: 44px;
+      left: 14px;
+      top: 18px;
       background: #5C8A5A;
       color: white;
-      border-radius: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 15px;
     }
     .belly-card h4 {
-      font-size: 16px;
       color: #1A1A2E;
-      margin-bottom: 6px;
+      font-size: 15px;
+      margin-bottom: 4px;
     }
     .belly-card p {
       font-size: 14px;
       color: #555;
       margin-bottom: 0;
+      line-height: 1.55;
     }
-
-    /* Script box */
-    .script-box {
-      background: #F0EDE6;
-      border-radius: 12px;
-      padding: 24px;
-      margin: 24px 0;
-      border-left: 4px solid #E8A598;
-    }
-    .script-box .label {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #E8A598;
-      margin-bottom: 10px;
-    }
-    .script-box p {
+    .belly-card .script {
+      background: #F5F0E8;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 8px;
       font-style: italic;
-      color: #444;
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-    .script-box p:last-child { margin-bottom: 0; }
-
-    /* Timing grid */
-    .timing-grid {
-      display: grid;
-      grid-template-columns: 120px 1fr 1fr;
-      gap: 0;
-      margin: 24px 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      font-size: 14px;
-    }
-    .timing-grid .header {
-      background: #5C8A5A;
-      color: white;
-      padding: 12px;
-      font-weight: 700;
-      text-align: center;
-    }
-    .timing-grid .cell {
-      padding: 12px;
-      background: white;
-      border-top: 1px solid #eee;
-      text-align: center;
-    }
-    .timing-grid .cell.age {
-      background: #f8f8f5;
-      font-weight: 600;
-      color: #5C8A5A;
+      font-size: 13px;
+      color: #666;
     }
 
-    /* Callout */
-    .callout {
-      background: linear-gradient(135deg, #FEF3F0, #fff5f0);
-      border: 1px solid #E8A598;
-      border-radius: 12px;
-      padding: 24px;
+    /* Blog image */
+    .blog-img {
       margin: 28px 0;
+      border-radius: 10px;
+      overflow: hidden;
     }
-    .callout strong { color: #c0705e; }
+    .blog-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .blog-img .caption {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      padding: 8px 0 0;
+    }
 
-    /* Use-case cards */
-    .use-cases {
+    /* Age guide */
+    .age-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 24px 0;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    @media (max-width: 520px) {
+      .age-grid { grid-template-columns: 1fr; }
+    }
+    .age-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid #e8e4de;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .age-card .age-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #5C8A5A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .age-card .age-duration {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 2px;
+    }
+    .age-card .age-freq {
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* Use-it cards */
+    .use-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    @media (max-width: 520px) {
+      .use-grid { grid-template-columns: 1fr; }
     }
     .use-card {
       background: white;
-      border-radius: 12px;
-      padding: 18px;
-      border: 1px solid #e8e8e8;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .use-card .icon {
-      font-size: 24px;
-      margin-bottom: 8px;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid #e8e4de;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     .use-card h4 {
-      font-size: 15px;
+      font-size: 14px;
       color: #5C8A5A;
       margin-bottom: 6px;
     }
@@ -242,59 +240,72 @@
       font-size: 13px;
       color: #555;
       margin-bottom: 0;
+      line-height: 1.5;
     }
 
-    /* Timeline bar */
-    .timeline {
-      background: white;
-      border-radius: 12px;
-      padding: 28px;
-      margin: 28px 0;
-      border: 1px solid #e8e8e8;
+    /* Tip callout */
+    .tip {
+      background: #EBF5EB;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 24px 0;
+      border: 1px solid rgba(92,138,90,0.15);
+      font-size: 15px;
     }
-    .timeline h3 {
-      font-size: 18px;
-      color: #5C8A5A;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+    .tip strong { color: #5C8A5A; }
+
+    /* Timeline */
     .timeline-bar {
       display: flex;
       align-items: stretch;
-      gap: 0;
-      border-radius: 8px;
+      margin: 24px 0;
+      border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
-    .timeline-segment {
+    .tl-segment {
       flex: 1;
-      padding: 14px 12px;
+      padding: 16px 14px;
       text-align: center;
       color: white;
-      font-size: 13px;
     }
-    .timeline-segment.week1 { background: #a8c5a6; }
-    .timeline-segment.week3 { background: #7BAF78; }
-    .timeline-segment.week9 { background: #5C8A5A; }
-    .timeline-segment strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .tl-segment:nth-child(1) { background: #c9d9c8; color: #2a4a29; }
+    .tl-segment:nth-child(2) { background: #5C8A5A; }
+    .tl-segment:nth-child(3) { background: #3a6a38; }
+    .tl-segment .tl-when {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.85;
+    }
+    .tl-segment .tl-what {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
 
-    /* Sticky tip */
-    .sticky-tip {
-      background: #EBF5EB;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin: 24px 0;
-      border: 1px solid rgba(92,138,90,0.2);
+    /* Stick tips */
+    .stick-list {
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
     }
-    .sticky-tip strong { color: #5C8A5A; }
-
-    /* Blog image */
-    .blog-img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 28px 0;
-      display: block;
+    .stick-list li {
+      padding: 12px 0 12px 32px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      font-size: 15px;
     }
+    .stick-list li:last-child { border-bottom: none; }
+    .stick-list li::before {
+      content: attr(data-icon);
+      position: absolute;
+      left: 0;
+      top: 12px;
+      font-size: 18px;
+    }
+    .stick-list li strong { color: #1A1A2E; }
 
     /* Footer */
     footer {
@@ -302,17 +313,8 @@
       padding-top: 20px;
       border-top: 2px solid #E8A598;
       font-size: 13px;
-      color: #999;
+      color: #aaa;
       text-align: center;
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 26px; }
-      .comparison { grid-template-columns: 1fr 1fr; }
-      .use-cases { grid-template-columns: 1fr; }
-      .timing-grid { grid-template-columns: 90px 1fr 1fr; font-size: 13px; }
-      .math-box .equation { font-size: 22px; }
     }
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
     .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
@@ -327,206 +329,217 @@
 <body>
 
   <div class="hero">
-    <div class="hero-tag">Performance Hack</div>
-    <h1>3 Minutes That Rewire Your Kid's Brain</h1>
-    <p>The same technique elite performers use before high-pressure moments — scaled down for your seven-year-old.</p>
+    <div class="hero-tag">Ages 4+</div>
+    <h1>Three Minutes to a <span>Calmer Kid</span><br>(No, Really)</h1>
+    <p class="hero-sub">The breathing trick that actually rewires your child's brain &mdash; and it works faster than you think.</p>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Three minutes of breathing, three times a day, rewires your kid's brain.</p>
+      <ul>
+        <li>Kids who practice this fall asleep faster, handle big emotions without melting down, and self-settle at 2 AM instead of showing up at your door.</li>
+        <li>The move: swap one long meditation for three short breathing sessions spread across the day — frequency builds the neural pathways, not duration.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5-step BELLY method with scripts &middot; 3x3 vs 1x20 comparison table &middot; 4-age dosing guide &middot; 3-phase results timeline</div>
+    </div>
+    <div class="hero-img">
+      <img src="/images/blog/calm-down-breathing/parent-child-breathing.webp" alt="Parent and child sitting together doing calm breathing practice" loading="lazy">
+    </div>
   </div>
 
-  <div class="tldr-box">
-    <p class="tldr-anchor">Bedtime is the cheat code for teaching kids to breathe.</p>
-    <ul>
-      <li>Kids who breathe before sleep fall asleep faster, sleep deeper, and wake up with a tool they can use during tests, arguments, and performances.</li>
-      <li>The shift: anchor the BELLY practice to bedtime first, then expand to other moments once the habit holds.</li>
-    </ul>
-    <hr class="tldr-divider">
-    <div class="tldr-inside"><strong>Inside: </strong>5-step BELLY breakdown &middot; starting and ending scripts &middot; 5-row age guide with durations &middot; 4 real-world application cards</div>
-  </div>
+  <p>Here's something that doesn't sound right: three minutes of breathing, done three times a day, changes your kid's brain more than a twenty-minute meditation session.</p>
 
-  <p>Olympic athletes do it in the tunnel before they race. Surgeons do it before they cut. Fighter pilots do it before they fly.</p>
+  <p>Not "helps them relax a little." <em>Physically changes the structure of their brain.</em> Stronger prefrontal cortex. Better emotional regulation. Improved focus. The kind of changes that show up on brain scans.</p>
 
-  <p>Controlled breathing. Three minutes. And the person on the other side of those three minutes handles pressure differently than the person who walked in.</p>
-
-  <p>Here's what's wild: the research says it works just as well for a kid facing a math test as it does for an adult facing a boardroom. Same mechanism. Same brain regions. Same results.</p>
-
-  <img src="/images/blog/calm-down-breathing/hero-breathing.webp" alt="Parent and child sitting together practicing calm breathing" class="blog-img">
-
-  <div class="math-box">
-    <div class="equation">3 min x 2/day = rewired stress response</div>
-    <div class="subtext">Research shows measurable brain changes from as little as 3 minutes of focused breathing per day</div>
-  </div>
+  <p>And it starts working in three weeks.</p>
 
   <h2>Why Short Beats Long</h2>
 
-  <p>Here's the counterintuitive finding: three 3-minute breathing sessions beat one 20-minute meditation. Every time.</p>
+  <p>The research is counterintuitive. You'd assume more time = more benefit. But what actually builds emotional regulation is <em>frequency</em> &mdash; how often your brain practices shifting gears, not how long it stays in one gear.</p>
 
-  <p>The reason is mechanical. You're not training your kid to "be calm." You're training their brain to <em>shift gears on demand</em>. Each time they move from chaos to calm, they strengthen that neural pathway. More transitions = more reps = stronger pathway.</p>
-
-  <div class="comparison">
-    <div class="comparison-header before">Old Approach</div>
-    <div class="comparison-header after">The Kung Fu Way</div>
-    <div class="comparison-cell before">One 20-minute session</div>
-    <div class="comparison-cell after">Three 3-minute sessions</div>
-    <div class="comparison-cell before">1 gear-shift per day</div>
-    <div class="comparison-cell after">3 gear-shifts per day</div>
-    <div class="comparison-cell before">Feels like a chore</div>
-    <div class="comparison-cell after">Barely interrupts the day</div>
-    <div class="comparison-cell before">Kids resist it</div>
-    <div class="comparison-cell after">Kids actually do it</div>
-    <div class="comparison-cell before">Hard to maintain</div>
-    <div class="comparison-cell after">Stacks onto existing routines</div>
+  <div class="blog-img">
+    <img src="/images/blog/calm-down-breathing/frequency-vs-duration.webp" alt="Diagram showing three short sessions throughout the day vs one long session" loading="lazy">
+    <div class="caption">Three short sessions train the brain to shift gears on demand. One long session just parks it.</div>
   </div>
 
-  <h2>The BELLY Method</h2>
+  <table class="compare-table">
+    <tr>
+      <th></th>
+      <th>3 x 3 minutes</th>
+      <th>1 x 20 minutes</th>
+    </tr>
+    <tr>
+      <td>Total time</td>
+      <td class="winner">9 min</td>
+      <td class="loser">20 min</td>
+    </tr>
+    <tr>
+      <td>Brain "gear shifts"</td>
+      <td class="winner">3 per day</td>
+      <td class="loser">1 per day</td>
+    </tr>
+    <tr>
+      <td>Kid cooperation</td>
+      <td class="winner">High (it's short)</td>
+      <td class="loser">Good luck</td>
+    </tr>
+    <tr>
+      <td>Fits into your day</td>
+      <td class="winner">Easily</td>
+      <td class="loser">Barely</td>
+    </tr>
+    <tr>
+      <td>Neural pathway building</td>
+      <td class="winner">Stronger</td>
+      <td class="loser">Weaker</td>
+    </tr>
+  </table>
 
-  <p>Five letters. Five steps. Teach it once, your kid owns it forever.</p>
+  <div class="insight-box">
+    <strong>The key insight:</strong> You're not training your child to be calm for three minutes. You're training their brain to <em>switch into calm</em> on command. That's a fundamentally different skill &mdash; and it requires repetition across different moments, not one long stretch.
+  </div>
+
+  <h2>The BELLY Method: How to Actually Do It</h2>
+
+  <p>Five steps. Each one takes about 30 seconds. Do it together &mdash; your kid follows your lead.</p>
 
   <div class="belly-grid">
     <div class="belly-card">
       <div class="belly-letter">B</div>
-      <h4>Body settled</h4>
-      <p>Sit together anywhere comfortable. Couch, floor, kitchen chair. Eyes closed or soft-focused on something in the room.</p>
+      <h4>Body Settled</h4>
+      <p>Sit somewhere comfortable. Couch, floor, bed, kitchen chair. Hands wherever feels natural. Eyes can close or just rest on something.</p>
+      <div class="script">"Let's just settle in. Hands on your lap, or on your belly &mdash; wherever feels good."</div>
     </div>
+
     <div class="belly-card">
       <div class="belly-letter">E</div>
-      <h4>Expand from the bottom</h4>
-      <p>Breathe in slowly, filling lungs from the belly up. Hands on the stomach so you both feel it rise. Deep breath, not shallow chest breath.</p>
+      <h4>Expand From the Bottom</h4>
+      <p>Breathe in slowly, filling lungs from the bottom up. Hands on belly to feel it rise. This catches shallow chest-breathing and redirects it.</p>
+      <div class="script">"Breathe in through your nose &mdash; slow &mdash; and feel your belly push your hands out."</div>
     </div>
+
     <div class="belly-card">
       <div class="belly-letter">L</div>
-      <h4>Let it out slowly</h4>
-      <p>The exhale is where relaxation lives. Air out, tension out. In-breath energizes. Out-breath releases.</p>
+      <h4>Let It Out Slowly</h4>
+      <p>The exhale is where relaxation lives. In-breath energizes. Out-breath releases tension. Make the exhale slightly longer than the inhale.</p>
+      <div class="script">"Now let it all out, slowly &mdash; like you're blowing through a straw."</div>
     </div>
+
     <div class="belly-card">
       <div class="belly-letter">L</div>
-      <h4>Lost your train of thought? Return.</h4>
-      <p>Mind wandered to dinner or that argument? Good. Noticing the drift and coming back IS the exercise. Thoughts are cars passing by — notice them, don't climb in.</p>
+      <h4>Lose Your Train of Thought? Come Back.</h4>
+      <p>Minds wander. That's not failure &mdash; that's the exercise. Noticing you've drifted and bringing focus back is the mental muscle you're building.</p>
+      <div class="script">"If your mind wanders, that's okay. Just come back to your belly rising and falling."</div>
     </div>
+
     <div class="belly-card">
       <div class="belly-letter">Y</div>
-      <h4>Your reflections</h4>
-      <p>When you finish, talk about it. "What did you notice?" "Where did your mind go?" "When could you use this?" Connecting practice to real situations is what makes kids actually deploy it.</p>
+      <h4>Your Reflections</h4>
+      <p>Finish gently. Then connect it to real life: when could you use this? Before a test? When someone's annoying you? At bedtime?</p>
+      <div class="script">"What did you notice? Where did your mind go? When could this help you this week?"</div>
     </div>
   </div>
 
-  <img src="/images/blog/calm-down-breathing/belly-method.webp" alt="Visual diagram of the BELLY breathing method steps" class="blog-img">
+  <h2>How Long, How Often, What Age</h2>
 
-  <h2>What to Actually Say</h2>
+  <p>Start shorter than you think. A successful 90-second session builds more habit than an abandoned 10-minute one.</p>
 
-  <p>You don't need a meditation voice. Just talk like yourself, a little softer than usual.</p>
-
-  <div class="script-box">
-    <div class="label">Starting Script</div>
-    <p>"Let's do our breathing. Get comfortable... hands on your belly... close your eyes or look at something..."</p>
-    <p>"Breathe in slowly... feel your belly push out against your hands... now let it out, nice and slow..."</p>
-    <p>"If your brain starts thinking about something else, that's fine. Just notice it and come back to your breathing."</p>
+  <div class="age-grid">
+    <div class="age-card">
+      <div class="age-label">Ages 4&ndash;6</div>
+      <div class="age-duration">1&ndash;2 min</div>
+      <div class="age-freq">2&ndash;3 times daily (even 30 seconds counts)</div>
+    </div>
+    <div class="age-card">
+      <div class="age-label">Ages 7&ndash;9</div>
+      <div class="age-duration">3&ndash;5 min</div>
+      <div class="age-freq">2&ndash;3 times daily</div>
+    </div>
+    <div class="age-card">
+      <div class="age-label">Ages 10&ndash;12</div>
+      <div class="age-duration">5&ndash;10 min</div>
+      <div class="age-freq">2&ndash;3 times daily</div>
+    </div>
+    <div class="age-card">
+      <div class="age-label">Teens</div>
+      <div class="age-duration">10+ min</div>
+      <div class="age-freq">2 times daily</div>
+    </div>
   </div>
 
-  <div class="script-box">
-    <div class="label">Ending Script</div>
-    <p>"Slowly open your eyes... how do you feel? ... What did you notice? ... When could you use that this week?"</p>
+  <div class="tip">
+    <strong>Best anchor points:</strong> Morning before school, after-school wind-down, and bedtime. Attach it to routines that already exist and it becomes automatic.
   </div>
 
-  <div class="callout">
-    <strong>Skip the perfection trap.</strong> Your kid will giggle. Squirm. Peek at you. Ask random questions mid-breath. That's not failure — it's a 6-year-old doing exactly what 6-year-olds do. Just guide their attention gently back each time. Your calm tone does more than their technique.
+  <h2>Bedtime Is the Power Move</h2>
+
+  <div class="blog-img">
+    <img src="/images/blog/calm-down-breathing/bedtime-calm.webp" alt="Child peacefully falling asleep after breathing practice" loading="lazy">
   </div>
 
-  <h2>Start Here (By Age)</h2>
+  <p>Of all the times to practice, bedtime delivers the biggest payoff. Kids who do calm-down breathing before sleep fall asleep faster and sleep more deeply. And if they wake up anxious at 2 AM? They already have a tool to settle back down instead of lying there spiraling.</p>
 
-  <div class="timing-grid">
-    <div class="header">Age</div>
-    <div class="header">Duration</div>
-    <div class="header">Frequency</div>
-    <div class="cell age">4 - 6</div>
-    <div class="cell">1-2 minutes</div>
-    <div class="cell">2-3x daily</div>
-    <div class="cell age">7 - 9</div>
-    <div class="cell">3-5 minutes</div>
-    <div class="cell">2-3x daily</div>
-    <div class="cell age">10 - 12</div>
-    <div class="cell">5-10 minutes</div>
-    <div class="cell">2-3x daily</div>
-    <div class="cell age">Teens</div>
-    <div class="cell">10+ minutes</div>
-    <div class="cell">2x daily</div>
-    <div class="cell age">You</div>
-    <div class="cell">5+ minutes</div>
-    <div class="cell">2x daily</div>
-  </div>
+  <p>That alone is worth the three minutes.</p>
 
-  <div class="sticky-tip">
-    <strong>Pro tip:</strong> Bedtime is the cheat code. Kids who breathe before sleep fall asleep faster and sleep deeper. If they wake up anxious at 2am, they already have the tool to settle themselves back down.
-  </div>
+  <h2>Four Situations Where This Shines</h2>
 
-  <h2>Where This Gets Interesting</h2>
-
-  <p>The breathing itself is table stakes. Where it gets good is when your kid starts using it without being told.</p>
-
-  <div class="use-cases">
+  <div class="use-grid">
     <div class="use-card">
-      <h4>Before the Big Test</h4>
-      <p>Quiet breaths at the desk. Stress hormones drop, focus sharpens, recall improves. No one even notices they're doing it.</p>
+      <h4>Sleep Struggles</h4>
+      <p>Fall asleep faster, sleep deeper, and self-settle at 2 AM without coming to your room.</p>
     </div>
     <div class="use-card">
-      <h4>Mid-Meltdown Interrupt</h4>
-      <p>Anger rising, frustration spiking — they catch it, breathe, and the fight-or-flight response loses its grip. Rational brain comes back online.</p>
+      <h4>Big Emotions</h4>
+      <p>Pause before reacting. Breathing dials down fight-or-flight and brings rational thinking back online.</p>
     </div>
     <div class="use-card">
-      <h4>Pre-Performance</h4>
-      <p>Before the recital. Before the game. Before the presentation. Same thing the pros do — calm the system, sharpen the edge.</p>
+      <h4>Test & Performance Nerves</h4>
+      <p>A few quiet breaths at their desk or on the bench cuts stress hormones and sharpens focus.</p>
     </div>
     <div class="use-card">
-      <h4>Parent Reset</h4>
-      <p>Five minutes on the couch, eyes closed, slow breaths. Even with noise all around you. Your nervous system resets and you return to the chaos clearer.</p>
+      <h4>Your Own Reset</h4>
+      <p>Five minutes on the couch, eyes closed, slow breathing. You come back to the chaos with a clearer head.</p>
     </div>
   </div>
 
-  <img src="/images/blog/calm-down-breathing/child-calm.webp" alt="Child calmly focusing before an activity, demonstrating composure" class="blog-img">
+  <h2>When to Expect What</h2>
 
-  <h2>The Timeline</h2>
-
-  <p>This isn't instant. It's better than instant — it's permanent.</p>
-
-  <div class="timeline">
-    <h3>What to Expect</h3>
-    <div class="timeline-bar">
-      <div class="timeline-segment week1">
-        <strong>Week 1</strong>
-        Building the habit
-      </div>
-      <div class="timeline-segment week3">
-        <strong>Week 3</strong>
-        Noticeable changes
-      </div>
-      <div class="timeline-segment week9">
-        <strong>Week 9</strong>
-        Lasting rewiring
-      </div>
+  <div class="timeline-bar">
+    <div class="tl-segment">
+      <div class="tl-when">Week 1&ndash;2</div>
+      <div class="tl-what">Building the habit</div>
     </div>
-    <p style="font-size:14px; color:#666; text-align:center;">Neuroplasticity research confirms repeated practice creates permanent structural changes in prefrontal cortex regions tied to emotional regulation.</p>
+    <div class="tl-segment">
+      <div class="tl-when">Week 3</div>
+      <div class="tl-what">Noticeable changes</div>
+    </div>
+    <div class="tl-segment">
+      <div class="tl-when">Week 9+</div>
+      <div class="tl-what">Lasting brain changes</div>
+    </div>
   </div>
 
-  <h2>Make It Stick</h2>
+  <p>Research shows measurable shifts start around week 3. By week 9, study participants report significantly improved mood and stress resilience. The reason it sticks: neuroplasticity. Repeated practice builds new neural pathways that become permanent structural changes.</p>
 
-  <p>The technique is simple. The hard part is doing it tomorrow, and the day after, and the day after that. Here's how to make that automatic.</p>
+  <p>You're not teaching a coping trick. You're literally remodeling your child's brain architecture.</p>
 
-  <div class="sticky-tip">
-    <strong>Anchor it to what already happens.</strong> Morning before school. Car ride home. Pre-homework. Bedtime. Don't create a new slot — piggyback on an existing routine.
+  <h2>Making It Stick</h2>
+
+  <ul class="stick-list">
+    <li data-icon="&#x1F441;" style="list-style:none"><strong>Let them catch you using it.</strong> Say it out loud: "I need a minute to breathe so I can think clearly." Kids copy what they see, not what they're told.</li>
+    <li data-icon="&#x2B50;" style="list-style:none"><strong>Name it when they use it on their own.</strong> "I noticed you used your breathing before your game. Smart move." That's the moment it becomes theirs.</li>
+    <li data-icon="&#x1F517;" style="list-style:none"><strong>Anchor to transitions.</strong> Morning. Car ride home. Pre-homework. Bedtime. Attach it to what already happens and it stops being a separate activity.</li>
+    <li data-icon="&#x23F1;" style="list-style:none"><strong>Keep it short early on.</strong> Two successful minutes every day beats ten ambitious minutes that fizzle out by Thursday.</li>
+    <li data-icon="&#x26A0;" style="list-style:none"><strong>Skip it when they're hungry, tired, or rushed.</strong> The practice won't land. Pick calm, fed moments and build from there.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>The wiggle factor:</strong> Young kids will giggle, squirm, peek at you, and ask questions. That's normal. Don't force stillness. Just gently guide their attention back. Your calm tone sets the mood more than perfect execution ever will.
   </div>
 
-  <div class="sticky-tip">
-    <strong>Model it visibly.</strong> Let your kid catch you doing it when you're stressed. Say it out loud: "I need a minute to breathe so I can think clearly." Now it's not something you make them do. It's something the family does.
-  </div>
-
-  <div class="sticky-tip">
-    <strong>Name what you see.</strong> When your kid uses breathing on their own — before bed, in the car, after an argument — say it: "I noticed you used your breathing. Smart move." That one sentence does more than a week of reminders.
-  </div>
-
-  <div class="callout">
-    <strong>Start smaller than you think.</strong> Two minutes that happen every day beats ten minutes that happens twice and gets abandoned. Build the habit first. Duration comes later.
-  </div>
+  <p>Three minutes. Three times a day. Three weeks to see it working. That's the whole formula. Tonight at bedtime, sit down together, put your hands on your bellies, and breathe.</p>
 
   <footer>
-    <p>Kung Fu Family &mdash; kungfu.family</p>
+    Kung Fu Parenting &mdash; kungfu.family
   </footer>
 
 </body>
