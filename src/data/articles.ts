@@ -1160,6 +1160,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: watch their body — leaning forward means coach from behind, shoulders hunched means be the calm they can\'t produce yet.',
     tldrInside: '4 Stretch moves (let them lead, coach from behind, be nearby, name what you notice), 4 Steady moves (stay through it, paint the feeling, daily rituals, safe zone), 5 scripts ready to use tonight, Growth ratio by age',
   },
+  {
+    slug: 'gifted-late-talker-pattern-guide',
+    title: 'The Silent Builder',
+    subtitle: 'When late talking is early thinking — the pattern most milestone charts miss',
+    description: 'Some kids skip first words entirely, then speak in full sentences. Research reveals a specific profile — puzzles, music, memory, analytical families — that separates internal builders from children who need intervention.',
+    image: '/images/cards/gifted-late-talker-pattern-guide.webp',
+    imageAlt: 'Iceberg illustration showing a quiet toddler above the surface and vast neural circuits of cognitive activity below',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Child Development',
+    book: 'The Einstein Syndrome',
+    bookSlug: 'einstein-syndrome-sowell',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'A child who understands everything but says nothing is building, not broken.',
+    tldrPayoff: 'Kids who fit the pattern — fierce independence, deep focus, music obsession, spatial intelligence — often skip single words and arrive at language fully assembled.',
+    tldrMove: 'The shift: separate comprehension from production. A child who follows instructions nonverbally is in a completely different situation than a child who doesn\'t understand.',
+    tldrInside: 'comprehension vs. production distinction, 4 temperament markers, family background checklist, 5-step action plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
