@@ -1100,6 +1100,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: run built-in controls and third-party filtering together so each one covers the other\'s blind spots.',
     tldrInside: 'built-in vs. third-party side-by-side, 3-layer visual breakdown, 9 setup steps across device types, 4 kid workarounds with fixes',
   },
+  {
+    slug: 'let-reality-do-the-teaching',
+    title: 'Reality\'s Better Teacher',
+    subtitle: 'Why stepping back teaches more than cracking down',
+    description: 'One question separates parents who punish from parents who teach. The litmus test, five side-by-side rewrites, and the LEARN method that lets reality deliver the lesson.',
+    image: '/images/cards/let-reality-do-the-teaching.webp',
+    imageAlt: 'Warm illustration of a parent stepping back while a child figures out a problem on their own',
+    imageWidth: 1024,
+    imageHeight: 816,
+    imageAspect: 1.255,
+    topic: 'Discipline',
+    book: 'Children: The Challenge',
+    bookSlug: 'children-the-challenge-dreikurs',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'Punishment teaches kids one thing: avoid getting caught.',
+    tldrPayoff: 'Kids raised on real consequences self-correct when no one\'s watching, take responsibility without being cornered, and actually trust their parents more.',
+    tldrMove: 'The move: ask \'would I handle it this way with someone else\'s kid?\' — if not, you\'re punishing, not teaching.',
+    tldrInside: 'the litmus test, 5 punishment-vs-reality rewrites with scripts, LEARN method (5 steps), tone trap checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
