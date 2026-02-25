@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 20-Minute Setup That Buys You Years of Peace | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      border-radius: 16px;
+      color: white;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 17px;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Blog images */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    /* Sections */
+    h2 {
+      color: #5C8A5A;
+      font-size: 24px;
+      margin: 36px 0 16px;
+      line-height: 1.3;
+    }
+    p { margin-bottom: 16px; font-size: 16px; }
+
+    /* The 3-layer visual */
+    .layers-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 28px 0;
+    }
+    .layer-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .layer-bar:first-child { background: #5C8A5A; border-radius: 12px 12px 0 0; }
+    .layer-bar:nth-child(2) { background: #6B9E69; }
+    .layer-bar:last-child { background: #7AB278; border-radius: 0 0 12px 12px; }
+    .layer-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .layer-text span { display: block; font-weight: 400; font-size: 13px; opacity: 0.9; margin-top: 2px; }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Setup checklist */
+    .checklist {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .checklist h3 {
+      color: #5C8A5A;
+      font-size: 18px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E8A598;
+    }
+    .check-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0ece6;
+    }
+    .check-item:last-child { border-bottom: none; }
+    .check-box {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #E8A598;
+      border-radius: 6px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check-item strong { color: #1A1A2E; }
+    .check-item p { margin-bottom: 0; font-size: 14px; color: #555; }
+
+    /* Time table */
+    .time-table {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid #f0ece6;
+      font-size: 15px;
+    }
+    .time-row:last-child { border-bottom: none; }
+    .time-row:first-child {
+      background: #5C8A5A;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .time-label { font-weight: 600; color: #1A1A2E; }
+    .time-value { color: #5C8A5A; font-weight: 600; }
+
+    /* Before/After */
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .ba-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .ba-card h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+    }
+    .ba-card.before h4 { color: #C62828; border-bottom: 2px solid #C62828; }
+    .ba-card.after h4 { color: #5C8A5A; border-bottom: 2px solid #5C8A5A; }
+    .ba-card li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      list-style: none;
+      padding-left: 0;
+    }
+    .ba-card.before li::before { content: "- "; color: #C62828; font-weight: bold; }
+    .ba-card.after li::before { content: "+ "; color: #5C8A5A; font-weight: bold; }
+    @media (max-width: 600px) {
+      .before-after { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 26px; }
+    }
+
+    /* Tip strip */
+    .tip-strip {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .tip-strip strong { color: #5C8A5A; }
+
+    /* Workaround grid */
+    .workaround-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .workaround-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .workaround-card h4 {
+      color: #E8A598;
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .workaround-card .trick { font-size: 14px; color: #888; margin-bottom: 6px; }
+    .workaround-card .fix { font-size: 14px; color: #5C8A5A; font-weight: 600; }
+    @media (max-width: 600px) {
+      .workaround-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Closing */
+    .closing-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 36px 0 20px;
+      text-align: center;
+    }
+    .closing-box h3 { font-size: 20px; margin-bottom: 10px; }
+    .closing-box p { font-size: 16px; opacity: 0.95; max-width: 600px; margin: 0 auto; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-tag">Screen Safety</div>
+    <h1>The 20-Minute Setup That Buys You Years of Peace</h1>
+    <p>Three layers. One evening. No tech degree required.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">One layer of protection is never enough — kids are resourceful.</p>
+    <ul>
+      <li>Families using layered controls report less daily conflict around devices and fewer surprise encounters with harmful content.</li>
+      <li>The move: run built-in controls and third-party filtering together so each one covers the other's blind spots.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>built-in vs. third-party side-by-side &middot; 3-layer visual breakdown &middot; 9 setup steps across device types &middot; 4 kid workarounds with fixes</div>
+  </div>
+
+  <p>Here's something nobody tells you when you hand a kid their first device: the default settings are designed for adults. Out of the box, that shiny new tablet has zero guardrails. Every app in the store, every corner of the internet, every midnight scrolling session — all wide open.</p>
+
+  <p>And here's the part that actually matters: fixing this takes about twenty minutes per device. Not a weekend project. Not a certification course. Twenty minutes of tapping through settings while your coffee is still warm.</p>
+
+  <img class="blog-img" src="/images/blog/screen-safety-system/three-layers-diagram.webp" alt="Three protective layers: gate apps, filter content, manage the clock">
+
+  <h2>Three Layers, Zero Gaps</h2>
+
+  <p>The system is dead simple. Each layer catches what the others miss, so even if one gets bypassed, the other two still hold. Think seatbelt plus airbag — redundancy is the entire point.</p>
+
+  <div class="layers-visual">
+    <div class="layer-bar">
+      <div class="layer-icon">1</div>
+      <div class="layer-text">Gate the Apps<span>No download without your passcode. Done.</span></div>
+    </div>
+    <div class="layer-bar">
+      <div class="layer-icon">2</div>
+      <div class="layer-text">Filter the Content<span>Block entire categories, not individual URLs. Automated.</span></div>
+    </div>
+    <div class="layer-bar">
+      <div class="layer-icon">3</div>
+      <div class="layer-text">Manage the Clock<span>Scheduled downtime + daily caps. The device enforces bedtime so you don't have to.</span></div>
+    </div>
+  </div>
+
+  <p>That's it. Three settings categories. Every device your child uses gets these three layers, and you've closed about 95% of the risk surface before they even turn the thing on.</p>
+
+  <div class="callout">An unprotected device is an open door to everything on the internet.<br>Your job is to install the locks before someone walks through.</div>
+
+  <h2>The Actual Setup — Device in Hand</h2>
+
+  <p>Grab the device, grab your coffee. Here's your checklist. Do this <em>before</em> handing it over.</p>
+
+  <div class="checklist">
+    <h3>Phone or Tablet</h3>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Set up under YOUR account first</strong>
+        <p>Log in with your Apple ID or Google account. You're the admin. Create a child profile linked to your family group.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Lock down app installs</strong>
+        <p>Require your approval for every download. Set a passcode they don't know. This also blocks the reinstall-to-reset-settings trick.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Set content restrictions</strong>
+        <p>Age-appropriate ratings. Enable built-in messaging safety features (both iOS and Android flag sensitive images now).</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Configure schedules + limits</strong>
+        <p>Downtime for school hours and bedtime. Daily caps on recreational apps. Keep essentials (calls, maps) always available.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Add third-party filtering</strong>
+        <p>Category-based content blocking. Manage from your phone. Duplicate your key rules in both systems for redundancy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="checklist">
+    <h3>Laptop or Desktop</h3>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Your account = admin. Their account = standard.</strong>
+        <p>This alone prevents them from changing system settings or installing software without you.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Enable built-in parental controls</strong>
+        <p>macOS and Windows both have them in system settings. Content restrictions, downtime, app limits — set under the child's account.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Layer on third-party filtering</strong>
+        <p>Especially important on laptops — browser-based access is harder to restrict with built-in tools alone.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Password-protect YOUR computer too</strong>
+        <p>If they can hop on an unrestricted adult device, every control on theirs becomes meaningless.</p>
+      </div>
+    </div>
+  </div>
+
+  <img class="blog-img" src="/images/blog/screen-safety-system/parent-setup-device.webp" alt="Parent setting up device controls with confidence">
+
+  <h2>Built-In vs. Third-Party: Use Both</h2>
+
+  <p>This isn't an either/or question. They cover different ground.</p>
+
+  <div class="before-after">
+    <div class="ba-card before">
+      <h4>Built-In Only</h4>
+      <ul>
+        <li>Free, already on the device</li>
+        <li>Good for app limits and downtime</li>
+        <li>Website filtering is one-site-at-a-time</li>
+        <li>Setup menus can be confusing</li>
+        <li>Limited remote management</li>
+      </ul>
+    </div>
+    <div class="ba-card after">
+      <h4>Built-In + Third-Party</h4>
+      <ul>
+        <li>Category-wide content blocking</li>
+        <li>Manage everything from your phone</li>
+        <li>Harder for kids to work around</li>
+        <li>Redundancy = if one fails, the other holds</li>
+        <li>Database updates automatically</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip-strip">
+    <strong>Why redundancy matters:</strong> If a child figures out how to adjust one layer, the other layer still holds. That's the whole game — making workarounds harder than just following the rules.
+  </div>
+
+  <h2>Reasonable Screen Time Starting Points</h2>
+
+  <p>No magic number exists for every kid. But research consistently points in the same direction: less recreational screen time correlates with better sleep, mood, and focus. Here are starting points to customize.</p>
+
+  <div class="time-table">
+    <div class="time-row">
+      <span>Category</span>
+      <span>Guideline</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Social media (total)</span>
+      <span class="time-value">Under 1 hour combined</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Casual games</span>
+      <span class="time-value">Daily cap; let them choose favorites</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Console / PC gaming</span>
+      <span class="time-value">Less on school days, flex on weekends</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Video streaming</span>
+      <span class="time-value">Set a limit; flex for school projects</span>
+    </div>
+  </div>
+
+  <div class="tip-strip">
+    <strong>Key distinction:</strong> Don't count productive screen time (homework, music practice apps, creative tools) in the same bucket as passive consumption. The risk profile is completely different.
+  </div>
+
+  <h2>They Will Try to Get Around It</h2>
+
+  <p>Don't take it personally. Boundary-testing is developmentally normal. Your job isn't to prevent all attempts — it's to make workarounds harder than just following the rules.</p>
+
+  <div class="workaround-grid">
+    <div class="workaround-card">
+      <h4>The Reinstall Trick</h4>
+      <p class="trick">Delete app, reinstall it — settings wiped clean.</p>
+      <p class="fix">Fix: Lock app installs. Can't reinstall without your passcode.</p>
+    </div>
+    <div class="workaround-card">
+      <h4>Borrowing a Friend's Device</h4>
+      <p class="trick">Your controls don't follow them to someone else's phone.</p>
+      <p class="fix">Fix: Explain the WHY. Kids who get the reasoning circumvent less.</p>
+    </div>
+    <div class="workaround-card">
+      <h4>Changing System Settings</h4>
+      <p class="trick">Adjusting clock, location, or account type to disable limits.</p>
+      <p class="fix">Fix: Passcode on settings + admin-only access + duplicate rules in both systems.</p>
+    </div>
+    <div class="workaround-card">
+      <h4>Sneaking Devices at Night</h4>
+      <p class="trick">Software downtime is only half the solution.</p>
+      <p class="fix">Fix: Combine software downtime with physical device collection at bedtime.</p>
+    </div>
+  </div>
+
+  <img class="blog-img" src="/images/blog/screen-safety-system/evolving-controls.webp" alt="Timeline showing controls loosening as child grows more responsible">
+
+  <h2>The Long Game: Start Tight, Loosen Gradually</h2>
+
+  <p>It's far easier to grant more freedom as your child demonstrates responsibility than to claw back privileges they already had. Begin with strong controls and let good behavior earn expanded access.</p>
+
+  <div class="time-table">
+    <div class="time-row">
+      <span>When to Adjust</span>
+      <span>What Changes</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Consistent self-management</span>
+      <span class="time-value">Extended time limits</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Starting high school</span>
+      <span class="time-value">More app choices, same content filters</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">Handling a new responsibility well</span>
+      <span class="time-value">New category unlocked</span>
+    </div>
+    <div class="time-row">
+      <span class="time-label">"Everyone else gets to"</span>
+      <span class="time-value">Not a milestone. No change.</span>
+    </div>
+  </div>
+
+  <div class="tip-strip">
+    <strong>Keep content filters longer than you think.</strong> Even teenagers benefit from category-level blocking. Time limits can relax. Content filters should stay.
+  </div>
+
+  <h2>Get on the Same Page</h2>
+
+  <p>The parent who cares most about limits often isn't the one most comfortable with the technology. Close the gap:</p>
+
+  <div class="checklist">
+    <h3>Co-Parent Sync</h3>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Set up together.</strong>
+        <p>Walk through the setup side by side. Both parents should understand what's in place.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Designate a maintainer.</strong>
+        <p>One parent owns the day-to-day: checking settings, handling access requests, updating filters.</p>
+      </div>
+    </div>
+    <div class="check-item">
+      <div class="check-box"></div>
+      <div>
+        <strong>Monthly check-in.</strong>
+        <p>Review what's working, what the kid is requesting, and whether adjustments make sense for their age and behavior.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-box">
+    <h3>Twenty Minutes. Three Layers. Years of Peace.</h3>
+    <p>Gate the apps. Filter the content. Manage the clock. You don't need to be a tech expert — you just need one evening with the device before your kid gets their hands on it.</p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting &mdash; kungfu.family</p>
+  </footer>
+
+</body>
+</html>

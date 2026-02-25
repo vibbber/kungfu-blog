@@ -1080,6 +1080,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: replace hollow praise with stretch goals, honest feedback, and tasks that actually matter.',
     tldrInside: 'age-by-age responsibility ladder, praise do-vs-don\'t comparison, 2 word-for-word scripts, 3-step optimism reframe',
   },
+  {
+    slug: 'screen-safety-system',
+    title: 'The 20-Minute Lockdown',
+    subtitle: 'One evening of setup buys years of screen peace',
+    description: 'Default device settings are designed for adults. Three layers of protection — app gating, content filtering, and time management — take 20 minutes to set up and close 95% of the risk surface.',
+    image: '/images/cards/screen-safety-system.webp',
+    imageAlt: 'Warm illustration of a tablet on a table with coffee mug and green checkmark showing a completed device setup',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'One layer of protection is never enough — kids are resourceful.',
+    tldrPayoff: 'Families using layered controls report less daily conflict around devices and fewer surprise encounters with harmful content.',
+    tldrMove: 'The move: run built-in controls and third-party filtering together so each one covers the other\'s blind spots.',
+    tldrInside: 'built-in vs. third-party side-by-side, 3-layer visual breakdown, 9 setup steps across device types, 4 kid workarounds with fixes',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
