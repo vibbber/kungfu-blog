@@ -1120,6 +1120,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: ask \'would I handle it this way with someone else\'s kid?\' — if not, you\'re punishing, not teaching.',
     tldrInside: 'the litmus test, 5 punishment-vs-reality rewrites with scripts, LEARN method (5 steps), tone trap checklist',
   },
+  {
+    slug: 'reactive-mind-trap',
+    title: 'The Hidden Sentence',
+    subtitle: 'The thought that fires before you speak — and how to catch it',
+    description: 'You\'re not reacting to your child — you\'re reacting to a thought about your child. Learn the 60-second SCAN method that catches the triggered thought before it hijacks your parenting.',
+    image: '/images/cards/reactive-mind-trap.webp',
+    imageAlt: 'Translucent speech bubble between parent and child silhouettes, revealing a hidden sentence',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Regulation',
+    book: 'The Parenting Handbook',
+    bookSlug: 'the-parenting-handbook-schamuhn',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'Words like \'always,\' \'never,\' and \'every time\' are the tell that you\'ve left observation.',
+    tldrPayoff: 'Kids raised with accurate thinking instead of reactive thinking develop stronger self-regulation and fewer anxiety patterns.',
+    tldrMove: 'The move: replace the distortion with something accurate -- not positive, just true. The version you\'d tell a friend.',
+    tldrInside: '4-step SCAN breakdown with self-prompts, worked shoe-and-marker morning scenario, 5-step progression from catching thoughts after to catching them live, 3 gut-check questions',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

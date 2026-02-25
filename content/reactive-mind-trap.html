@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="1118">
+  <meta name="description" content="You're not reacting to your child. You're reacting to a thought about your child. Learn the 60-second SCAN method that catches the thought before it hijacks your parenting.">
+  <title>The Sentence Running Your Parenting | Kung Fu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .hero .deck {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .callout .small {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    /* Thought gallery */
+    .thought-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    @media (max-width: 500px) {
+      .thought-gallery { grid-template-columns: 1fr; }
+    }
+    .thought-card {
+      background: #FEF3F0;
+      border-left: 4px solid #E8A598;
+      padding: 14px 16px;
+      border-radius: 0 10px 10px 0;
+    }
+    .thought-card .label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #E8A598;
+      margin-bottom: 4px;
+    }
+    .thought-card .text {
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* SCAN steps */
+    .scan-section { margin: 36px 0; }
+    .scan-section img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 28px;
+    }
+    .scan-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .scan-letter {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .scan-letter.s { background: #5C8A5A; }
+    .scan-letter.c { background: #E8A598; }
+    .scan-letter.a { background: #D4A543; }
+    .scan-letter.n { background: #3D7A8A; }
+    .scan-body { flex: 1; }
+    .scan-body h3 {
+      font-size: 17px;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+    .scan-body p {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .scan-prompt {
+      background: #F3F0EA;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-style: italic;
+      color: #666;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    /* Worked example */
+    .example {
+      background: #fff;
+      border: 1px solid #E8E0D4;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 36px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .example h2 { margin-top: 0; }
+    .example .scenario {
+      font-style: italic;
+      color: #666;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #F0EBE4;
+    }
+    .example-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+      align-items: start;
+    }
+    .example-row:last-child { margin-bottom: 0; }
+    .example-label {
+      font-weight: 700;
+      font-size: 13px;
+      color: #5C8A5A;
+      padding-top: 2px;
+    }
+    .example-label.reactive { color: #C0392B; }
+    .example-content { font-size: 15px; }
+    .example-content.reactive-text {
+      font-style: italic;
+      color: #C0392B;
+    }
+    .example-content.reframed {
+      color: #5C8A5A;
+      font-weight: 500;
+    }
+
+    /* Before/After comparison */
+    .compare-section { margin: 36px 0; }
+    .compare-section img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 16px;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .compare-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .compare-table th.reactive-col {
+      background: #FEF3F0;
+      color: #C0392B;
+    }
+    .compare-table th.clear-col {
+      background: #F0F7F0;
+      color: #5C8A5A;
+    }
+    .compare-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #F0EBE4;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child {
+      background: #FFFAF8;
+      color: #777;
+      font-style: italic;
+    }
+    .compare-table td:last-child {
+      background: #F8FBF8;
+      color: #3A5A3A;
+    }
+
+    /* Gut check */
+    .gut-check {
+      background: #F8F4FF;
+      border: 1px solid #D4C5F9;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin: 36px 0;
+    }
+    .gut-check h2 { color: #6B4C9A; margin-top: 0; }
+    .gut-check ul {
+      list-style: none;
+      padding: 0;
+    }
+    .gut-check li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      border-bottom: 1px solid #E8E0F5;
+      font-size: 15px;
+    }
+    .gut-check li:last-child { border-bottom: none; }
+    .gut-check li::before {
+      content: '?';
+      position: absolute;
+      left: 0;
+      color: #6B4C9A;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* Build over time */
+    .build-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .build-list li {
+      padding: 12px 0 12px 32px;
+      position: relative;
+      border-bottom: 1px solid #F0EBE4;
+      font-size: 15px;
+    }
+    .build-list li:last-child { border-bottom: none; }
+    .build-list li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #E8A598;
+    }
+    .build-list li strong { color: #5C8A5A; }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0DBD4;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <img src="/images/blog/reactive-mind-trap/hero.webp" alt="A parent seeing through the distorted thought between them and their child">
+    <h1>The Sentence Running Your Parenting</h1>
+    <p class="deck">It takes less than a second to form. It feels like absolute truth. And it's almost never accurate.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Words like 'always,' 'never,' and 'every time' are the tell that you've left observation.</p>
+    <ul>
+      <li>Kids raised with accurate thinking instead of reactive thinking develop stronger self-regulation and fewer anxiety patterns.</li>
+      <li>The move: replace the distortion with something accurate -- not positive, just true. The version you'd tell a friend.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4-step SCAN breakdown with self-prompts &middot; worked shoe-and-marker morning scenario &middot; 5-step progression from catching thoughts after to catching them live &middot; 3 gut-check questions</div>
+  </div>
+
+  <p>Picture this: your kid spills juice on the couch for the third time this week. Before the liquid even hits the cushion, a sentence fires in your brain.</p>
+
+  <p><em>"He doesn't care about anything in this house."</em></p>
+
+  <p>That sentence isn't an observation. It's a triggered thought -- automatic, emotionally charged, and wearing a very convincing disguise as a fact. And in the two seconds before you open your mouth, that thought has already decided what kind of parent you're about to be.</p>
+
+  <p>Here's the thing nobody tells you: <strong>you're not reacting to your child. You're reacting to a thought about your child.</strong> And when you learn to catch the thought, something remarkable happens -- you get a choice.</p>
+
+  <div class="callout">
+    You're not reacting to your child.<br>
+    You're reacting to a thought about your child --<br>
+    and that thought is almost never the full picture.
+    <span class="small">Cognitive behavioral research confirms: our reactions are driven by interpretation, not events.</span>
+  </div>
+
+  <h2>The Usual Suspects</h2>
+
+  <p>Triggered thoughts come in flavors. Once you know the menu, you start recognizing what you're being served.</p>
+
+  <div class="thought-gallery">
+    <div class="thought-card">
+      <div class="label">Catastrophe</div>
+      <div class="text">"If I let this slide, they'll walk all over me forever."</div>
+    </div>
+    <div class="thought-card">
+      <div class="label">Identity</div>
+      <div class="text">"I'm completely failing at this. No good parent would feel this way."</div>
+    </div>
+    <div class="thought-card">
+      <div class="label">All-or-Nothing</div>
+      <div class="text">"Every single day is a fight with this kid."</div>
+    </div>
+    <div class="thought-card">
+      <div class="label">Projection</div>
+      <div class="text">"They're doing this on purpose to get under my skin."</div>
+    </div>
+    <div class="thought-card">
+      <div class="label">Shame Spiral</div>
+      <div class="text">"I lost it again -- they're going to remember this forever."</div>
+    </div>
+    <div class="thought-card">
+      <div class="label">Scorecard</div>
+      <div class="text">"I do everything for this family and nobody even notices."</div>
+    </div>
+  </div>
+
+  <p>These all share one thing: they feel urgent, true, and final. They're none of those things. They're reflexes -- old stress patterns firing because your brain detected a threat. The threat isn't real. But the reaction it produces absolutely is.</p>
+
+  <h2>Why This Happens</h2>
+
+  <p>Neuroscience has found that parents who experienced difficult childhoods can have competing neural circuits fire at the same time when their own child is distressed. One system says <em>"move toward your child."</em> The other says <em>"protect yourself."</em> The collision produces a reaction that often surprises you as much as it does your kid.</p>
+
+  <p>When stress activates your brain's threat-detection system, thinking becomes rigid and extreme. Words like "always," "never," and "every time" start showing up in your inner monologue. Those words are the tell. They mean you've crossed from observation into distortion.</p>
+
+  <p>The good news: these patterns can be interrupted. Every single time.</p>
+
+  <div class="scan-section">
+    <h2>The SCAN Method: 60 Seconds, Four Moves</h2>
+    <img src="/images/blog/reactive-mind-trap/scan-method.webp" alt="SCAN method diagram: Spot, Check, Ask, Name - four steps in sequence">
+
+    <div class="scan-step">
+      <div class="scan-letter s">S</div>
+      <div class="scan-body">
+        <h3>Spot the Thought</h3>
+        <p>Not the feeling -- the sentence. "I'm angry" isn't a thought. "They never listen to me" is. Pin the exact words running through your head.</p>
+        <div class="scan-prompt">Ask yourself: what exact sentence just fired in my mind?</div>
+      </div>
+    </div>
+
+    <div class="scan-step">
+      <div class="scan-letter c">C</div>
+      <div class="scan-body">
+        <h3>Check the Evidence</h3>
+        <p>Test it like a claim, not a feeling. Look for absolute words -- "always," "never," "nothing." What would a camera have actually recorded?</p>
+        <div class="scan-prompt">Ask yourself: what actually happened here, stripped of my interpretation?</div>
+      </div>
+    </div>
+
+    <div class="scan-step">
+      <div class="scan-letter a">A</div>
+      <div class="scan-body">
+        <h3>Ask What It Costs</h3>
+        <p>When you act from this thought, what kind of parent does it make you? What do you say, do, or shut down? Now imagine dropping it entirely.</p>
+        <div class="scan-prompt">Ask yourself: if I act on this thought, where does it take me and my kid?</div>
+      </div>
+    </div>
+
+    <div class="scan-step">
+      <div class="scan-letter n">N</div>
+      <div class="scan-body">
+        <h3>Name What's Actually True</h3>
+        <p>Replace the distortion with something accurate. Not positive thinking -- accurate thinking. The version that would feel calmer in your body. The thing you'd tell a friend who described this same situation.</p>
+        <div class="scan-prompt">Ask yourself: what would I say if my best friend told me about this exact moment?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h2>Watch It Work</h2>
+    <p class="scenario">End of a long week. Your seven-year-old has been asked three times to put her shoes on. Instead, she's drawn marker all over her arm and is now crying because she doesn't want to wash it off.</p>
+
+    <div class="example-row">
+      <div class="example-label reactive">Trigger:</div>
+      <div class="example-content reactive-text">"She never does what I ask. I can't even get her out the door."</div>
+    </div>
+    <div class="example-row">
+      <div class="example-label">S - Spot:</div>
+      <div class="example-content">The sentence in my head is "she never does what I ask."</div>
+    </div>
+    <div class="example-row">
+      <div class="example-label">C - Check:</div>
+      <div class="example-content">She got dressed on her own this morning. Brushed her teeth without a reminder yesterday. "Never" isn't accurate -- end-of-week mornings are hard for both of us.</div>
+    </div>
+    <div class="example-row">
+      <div class="example-label">A - Cost:</div>
+      <div class="example-content">Believing she "never" listens makes me stop seeing her efforts. I get sharp. She cries harder. We're both miserable leaving. Without the thought, I see a tired kid absorbed in something.</div>
+    </div>
+    <div class="example-row">
+      <div class="example-label">N - True:</div>
+      <div class="example-content reframed">"She's distracted and we're both running on empty. Rough morning, not a pattern of defiance. She needs help getting back on track, not a lecture."</div>
+    </div>
+  </div>
+
+  <div class="compare-section">
+    <h2>Reactive vs. Clear-Eyed</h2>
+    <img src="/images/blog/reactive-mind-trap/reactive-vs-clear.webp" alt="Split comparison: reactive parenting on the left, clear-eyed parenting on the right">
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th class="reactive-col">Reactive Mode</th>
+          <th class="clear-col">Clear-Eyed Mode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"They never listen."</td>
+          <td>"This specific moment is hard."</td>
+        </tr>
+        <tr>
+          <td>"I'm failing at this."</td>
+          <td>"I'm tired and this is a tough stretch."</td>
+        </tr>
+        <tr>
+          <td>"They're doing this on purpose."</td>
+          <td>"They're dysregulated, not scheming."</td>
+        </tr>
+        <tr>
+          <td>"Nothing I do works."</td>
+          <td>"What I tried yesterday didn't fit today."</td>
+        </tr>
+        <tr>
+          <td>"This will never get better."</td>
+          <td>"This is a phase, and I have tools."</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Notice: the right column isn't optimistic. It's just accurate. That's the shift. You don't need to feel great -- you just need to see clearly.</p>
+  </div>
+
+  <div class="gut-check">
+    <h2>Three-Second Gut Check</h2>
+    <p style="color: #6B4C9A; font-size: 14px; margin-bottom: 16px;">When you feel the heat rising, ask:</p>
+    <ul>
+      <li>Am I reacting to what my child just did, or to a story I'm telling myself about what it means?</li>
+      <li>Would I respond this way if I'd slept well and had a calm day?</li>
+      <li>Is the intensity of my reaction matching the size of this actual moment?</li>
+    </ul>
+  </div>
+
+  <h2>How This Muscle Grows</h2>
+
+  <p>You won't catch every thought in real time on day one. That's fine. The skill builds in layers.</p>
+
+  <ul class="build-list">
+    <li><strong>Start after, not during.</strong> Run the SCAN after things settle. Reviewing past triggers builds the muscle for catching them live.</li>
+    <li><strong>Learn your rotation.</strong> Most of us have two or three signature thoughts that keep cycling. Once you know your greatest hits, they lose their power.</li>
+    <li><strong>Let your body be the alarm.</strong> The thought fires before you notice it, but your body responds instantly -- jaw tightening, chest heat, shallow breathing. Those physical signals are your early warning system.</li>
+    <li><strong>Repair out loud.</strong> When you catch yourself mid-reaction, say so: "I just snapped and that wasn't fair. Let me try again." This teaches your child that thoughts can be examined and course-corrected.</li>
+    <li><strong>Shrink the gap.</strong> The goal isn't perfection. It's reducing the time between reaction and awareness. That gap gets smaller with practice -- and even a small gap changes everything.</li>
+  </ul>
+
+  <footer>
+    <p>Strategy #1118 | Kung Fu Family</p>
+  </footer>
+
+</div>
+</body>
+</html>
