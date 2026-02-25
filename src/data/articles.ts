@@ -1140,6 +1140,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: replace the distortion with something accurate -- not positive, just true. The version you\'d tell a friend.',
     tldrInside: '4-step SCAN breakdown with self-prompts, worked shoe-and-marker morning scenario, 5-step progression from catching thoughts after to catching them live, 3 gut-check questions',
   },
+  {
+    slug: 'stretch-and-steady',
+    title: 'Read the Room, Shift the Gear',
+    subtitle: 'Your kid is already telling you what they need — here\'s how to hear it',
+    description: 'Your kid broadcasts one of two modes all day long — reaching outward or falling inward. One parenting skill reads both signals and builds kids who try hard things and land on their feet.',
+    image: '/images/cards/stretch-and-steady.webp',
+    imageAlt: 'Split scene showing a child adventuring outdoors and a parent holding a child close, representing Stretch and Steady modes',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Regulation',
+    book: 'The Parenting Handbook',
+    bookSlug: 'the-parenting-handbook-schamuhn',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'One parenting skill does double duty: knowing when to back off and when to hold close.',
+    tldrPayoff: 'Kids who get this right try hard things without crumbling, come to you when it matters, and develop the kind of resilience that shows up at school, on the field, and with friends.',
+    tldrMove: 'The move: watch their body — leaning forward means coach from behind, shoulders hunched means be the calm they can\'t produce yet.',
+    tldrInside: '4 Stretch moves (let them lead, coach from behind, be nearby, name what you notice), 4 Steady moves (stay through it, paint the feeling, daily rituals, safe zone), 5 scripts ready to use tonight, Growth ratio by age',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
