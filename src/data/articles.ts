@@ -1040,6 +1040,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: every device leaves the bedroom every night — backed by software downtime so sleepovers and vacations don\'t blow the system.',
     tldrInside: '3 sleep-attack mechanisms, 3 device removal methods, 5 kid objections defeated, model-it-yourself compliance trick',
   },
+  {
+    slug: 'healthy-gaming-setup',
+    title: 'The Gaming Cheat Code',
+    subtitle: 'Kids can\'t self-regulate screens — build the system that does it for them',
+    description: 'Games are engineered to be impossible to put down. Here\'s the one-time home setup — device placement, parental controls, time caps, and a 5-step escalation ladder — that keeps gaming fun without the daily fights.',
+    image: '/images/cards/healthy-gaming-setup.webp',
+    imageAlt: 'Game controller with protective green shield bubble representing parental gaming guardrails',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-02-25',
+    dateModified: '2026-02-25',
+    tldrAnchor: 'Gaming takes over when nothing else competes for attention.',
+    tldrPayoff: 'Kids with the right setup treat gaming like a hobby, not a lifestyle. They still do sports, creative projects, and face-to-face hangouts without being dragged there.',
+    tldrMove: 'The move: cap total gaming across all devices, fill the vacuum with real alternatives, and evolve the rules as they grow.',
+    tldrInside: 'weekday and weekend time caps, new game safety scan, 5-step response ladder for when it spirals, 4 habits to keep the system running long-term',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
