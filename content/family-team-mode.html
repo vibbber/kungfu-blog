@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="448">
+  <title>The Saturday Morning Test: Is Your Weekend Running You?</title>
+  <meta name="description" content="Walk through your typical Saturday hour by hour. Then flip the script: what if your kids were on the crew instead of in the audience?">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #E8A598;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #5C8A5A;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #6B7B7B;
+      font-style: italic;
+    }
+
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .blog-img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: -16px;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section p {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+
+    h3 {
+      color: #5C8A5A;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Timeline table */
+    .timeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .timeline-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #EEE;
+      vertical-align: top;
+    }
+
+    .timeline-table tr:nth-child(even) {
+      background: #F7F3ED;
+    }
+
+    .timeline-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .time-col {
+      font-weight: 600;
+      color: #5C8A5A;
+      white-space: nowrap;
+      width: 80px;
+    }
+
+    .cruise-col {
+      background: #FEF3F0 !important;
+      color: #9B3B2E;
+    }
+
+    .crew-col {
+      background: #EDF7ED !important;
+      color: #3D6B3D;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-left: 4px;
+    }
+
+    .tag-you { background: #E8A598; color: #6B2E24; }
+    .tag-kid { background: #B8D8B8; color: #2E5C2E; }
+    .tag-team { background: #D4C5F0; color: #4A3270; }
+
+    /* Insight callout */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .callout .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+
+    .callout p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Filter card */
+    .filter-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .filter-question {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #5C8A5A;
+      padding: 16px;
+      background: #F0F7ED;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .filter-yes, .filter-no {
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .filter-yes {
+      background: #EDF7ED;
+      border: 2px solid #5C8A5A;
+    }
+
+    .filter-yes h4 {
+      color: #3D6B3D;
+      margin-bottom: 8px;
+    }
+
+    .filter-no {
+      background: #FEF3F0;
+      border: 2px solid #E8A598;
+    }
+
+    .filter-no h4 {
+      color: #9B3B2E;
+      margin-bottom: 8px;
+    }
+
+    .filter-yes li, .filter-no li {
+      margin-bottom: 4px;
+      margin-left: 16px;
+    }
+
+    .filter-footnote {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* Script boxes */
+    .script {
+      background: #F0F7ED;
+      border-left: 4px solid #5C8A5A;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0 20px 0;
+      font-size: 15px;
+      font-style: italic;
+      color: #3D6B3D;
+    }
+
+    /* Step cards */
+    .steps {
+      display: grid;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: #E8A598;
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .step-body h4 {
+      color: #5C8A5A;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .step-body ul {
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    .step-body li {
+      margin-bottom: 4px;
+    }
+
+    /* Warning box */
+    .heads-up {
+      background: #FFF9E6;
+      border: 1px solid #F0C674;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 24px 0;
+    }
+
+    .heads-up h3 {
+      color: #B8860B;
+      margin-bottom: 8px;
+    }
+
+    .heads-up p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .heads-up p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Bottom line */
+    .bottom-line {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .bottom-line .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .bottom-line p {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .filter-grid { grid-template-columns: 1fr; }
+      .timeline-table { font-size: 13px; }
+      .timeline-table th, .timeline-table td { padding: 8px 10px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Saturday Morning Test</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Anthropologists found something about how most of the world raises kids.</p>
+      <ul>
+        <li>Children included in everyday adult life show higher cooperation, emotional stability, and self-direction — across cultures, across decades.</li>
+        <li>The move: stop entertaining your kids and start including them — errands, cooking, yard work, all of it.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>Cruise director vs. crew mode timeline &middot; 4 concrete steps to make the switch &middot; The boredom response (one sentence) &middot; Hidden payoff: how this reclaims your evenings</div>
+    </div>
+    <p class="subtitle">Walk through your typical Saturday. Then ask: who is this weekend actually for?</p>
+  </header>
+
+  <!-- OPENING -->
+  <div class="section">
+    <p>Picture last Saturday. You woke up, got the kids breakfast, and then... what happened?</p>
+    <p>For a lot of families, the answer is something like: drove to soccer, rushed to a birthday party, squeezed in a trip to the trampoline park, grabbed fast food in the car, got home with cranky kids and zero energy. Collapsed on the couch after bedtime. Sunday? Repeat.</p>
+    <p>Here is the uncomfortable question nobody asks: <strong>did you enjoy any of that?</strong></p>
+    <p>Not "was it fine." Not "the kids had fun." Did <em>you</em> — the adult human who also lives in this house — actually want to be doing those things?</p>
+  </div>
+
+  <img src="/images/blog/family-team-mode/saturday-split.webp" alt="Before: exhausted parent as shuttle driver. After: family cooking together as a team." class="blog-img">
+  <p class="blog-img-caption">Same Saturday. Completely different experience.</p>
+
+  <!-- THE AUDIT -->
+  <div class="section">
+    <h2>Run the Audit on Your Own Weekend</h2>
+    <p>Here are two versions of a Saturday. Same family. Same kids. Totally different operating system.</p>
+  </div>
+
+  <table class="timeline-table">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th class="cruise-col">Cruise Director Mode</th>
+        <th class="crew-col">Family Crew Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time-col">8:00 AM</td>
+        <td class="cruise-col">Make breakfast while kids watch screens <span class="tag tag-you">you</span></td>
+        <td class="crew-col">Kids help make pancakes together <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">9:30 AM</td>
+        <td class="cruise-col">Drive to soccer practice, sit on sideline <span class="tag tag-you">you</span></td>
+        <td class="crew-col">Farmer's market, kids carry the bags <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">11:00 AM</td>
+        <td class="cruise-col">Rush to indoor play center <span class="tag tag-kid">kid</span></td>
+        <td class="crew-col">Yard work: raking, planting, hauling <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">12:30 PM</td>
+        <td class="cruise-col">Fast food drive-through <span class="tag tag-you">you</span></td>
+        <td class="crew-col">Make lunch together at home <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">2:00 PM</td>
+        <td class="cruise-col">Birthday party drop-off, kill time nearby <span class="tag tag-you">you</span></td>
+        <td class="crew-col">Read at the park while kids play freely <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">4:00 PM</td>
+        <td class="cruise-col">Meltdown in the car. Everyone fried. <span class="tag tag-kid">kid</span></td>
+        <td class="crew-col">Kids play in their room. You rest. <span class="tag tag-team">team</span></td>
+      </tr>
+      <tr>
+        <td class="time-col">Evening</td>
+        <td class="cruise-col">Scramble to do laundry, dishes, prep after bedtime <span class="tag tag-you">you</span></td>
+        <td class="crew-col">Chores done. Evening is yours. <span class="tag tag-team">team</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 14px; color: #777; text-align: center; margin-top: -4px;">Notice the tags. Cruise Director mode has lots of <span class="tag tag-you">you</span> doing solo work and <span class="tag tag-kid">kid</span> consuming. Crew Mode is nearly all <span class="tag tag-team">team</span>.</p>
+
+  <div class="callout">
+    <div class="label">The Core Switch</div>
+    <p>Your child doesn't need a cruise director.<br>They need a role on the crew.</p>
+  </div>
+
+  <!-- WHY THIS ISN'T LAZY -->
+  <div class="section">
+    <h2>This Isn't Lazy Parenting. It's How Most of the World Raises Kids.</h2>
+    <p>Anthropologists studying families from rural Mexico to the Canadian Arctic found something striking: children in most cultures grow up <strong>inside adult life</strong>, not in a separate child world. They cook, clean, run errands, and socialize alongside adults from the time they can walk.</p>
+    <p>These kids consistently show higher cooperation, self-reliance, and emotional stability. Not because their parents were stricter. Because they were <em>included</em>.</p>
+    <p>Developmental psychologists back this up: children are wired to participate in the community around them. The separate "kid zone" of structured activities works against that wiring -- and then we wonder why they seem restless, entitled, or unable to sit still for ten minutes.</p>
+  </div>
+
+  <img src="/images/blog/family-team-mode/family-crew.webp" alt="Family working together in the kitchen -- kids washing vegetables, setting the table, everyone relaxed." class="blog-img">
+  <p class="blog-img-caption">Nobody is performing. Nobody is being entertained. Everyone belongs.</p>
+
+  <!-- THE FILTER -->
+  <div class="section">
+    <h2>One Question That Changes Your Whole Week</h2>
+    <p>Before you say yes to any activity, run it through this filter:</p>
+  </div>
+
+  <div class="filter-card">
+    <div class="filter-question">Would I do this if my kids weren't here?</div>
+    <div class="filter-grid">
+      <div class="filter-yes">
+        <h4>YES -- do more of this</h4>
+        <ul>
+          <li>Farmer's market</li>
+          <li>Hiking a trail you like</li>
+          <li>Cooking a real meal</li>
+          <li>Visiting friends</li>
+          <li>Working in the yard</li>
+          <li>Hardware store run</li>
+        </ul>
+      </div>
+      <div class="filter-no">
+        <h4>NO -- make this the exception</h4>
+        <ul>
+          <li>Bounce house</li>
+          <li>Indoor play center</li>
+          <li>Kiddie theme park</li>
+          <li>Chuck E. Cheese</li>
+          <li>Anything where you just watch and pay</li>
+        </ul>
+      </div>
+    </div>
+    <p class="filter-footnote">Kid-centered outings aren't bad. They're just treats, not the backbone of the week.</p>
+  </div>
+
+  <img src="/images/blog/family-team-mode/the-filter.webp" alt="Flowchart: Would I do this without kids? YES leads to family activities, NO leads to occasional treats." class="blog-img">
+
+  <!-- HOW TO MAKE THE SWITCH -->
+  <div class="section">
+    <h2>Four Moves to Switch Your Family to Crew Mode</h2>
+  </div>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Bring Them Into Your World</h4>
+        <p>Stop creating a separate child universe. Fold them into whatever you are already doing. They don't need a pre-designed role -- they need proximity and a loose invitation.</p>
+        <ul>
+          <li>Making dinner? Hand them a vegetable peeler.</li>
+          <li>Fixing something in the garage? Give them a rag and a bolt to turn.</li>
+          <li>Walking the dog, hitting the hardware store, dropping off dry cleaning -- bring them. All of it.</li>
+        </ul>
+        <div class="script">"I'm making soup. Want to help me wash these carrots?"</div>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Practice Stepping Back</h4>
+        <p>Spend time near your kids without directing, narrating, or orchestrating. Read a book at the park while they figure out the playground. Work in the garden while they dig in the dirt nearby.</p>
+        <p>Start with short stretches. The goal is proximity without performance. Kids who experience this regularly become dramatically better at self-directed play.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Name Real Roles</h4>
+        <p>Kids respond to titles that carry actual weight.</p>
+        <ul>
+          <li>"You're the breakfast helper today."</li>
+          <li>"You're in charge of carrying bags."</li>
+          <li>"Your job is watering the plants this week."</li>
+        </ul>
+        <p>Make it specific. Make it matter. Not pretend jobs -- real contributions.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Declutter the Toy Situation</h4>
+        <p>Fewer toys, more real objects. Kids surrounded by an avalanche of playthings tend to flit and never settle. Pare down to a handful of open-ended materials and let the real world be the playground.</p>
+        <div class="script">"We have too much stuff. Let's pick five things to give to a family that needs them."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADS UP -->
+  <div class="heads-up">
+    <h3>Expect a Two-Week Adjustment</h3>
+    <p>If your kids are used to being entertained, they will resist the first few times you include them in errands instead of taking them somewhere "fun." This is normal. They're adjusting from audience member to participant.</p>
+    <p>Start with short, low-stakes tasks. Don't force it. Let them orbit you and find their way in. Most children settle into the new pattern within a couple of weeks -- and many start <em>preferring</em> it. Because being useful feels better than being amused.</p>
+    <p style="font-size: 13px; color: #999;"><strong>Pattern to watch for:</strong> After a heavily child-centered outing (theme park, all-day party), your child may be noticeably harder to manage. The more stimulation, the steeper the comedown. If you see this consistently, shift the ratio toward more everyday togetherness.</p>
+  </div>
+
+  <!-- PROTECT YOUR TIME -->
+  <div class="section">
+    <h2>The Hidden Payoff Nobody Talks About</h2>
+    <p>When your household work happens during waking hours <em>with your kids helping</em>, something remarkable happens to your evenings: they open up.</p>
+    <p>No more cramming laundry into the slot after bedtime. No more doing dishes at 10 PM. The chores are done because you did them together at 11 AM on a Saturday -- and your kid sorted the socks.</p>
+    <p>That quiet evening? That's yours. That's the return on flipping the script.</p>
+  </div>
+
+  <!-- THE BOREDOM THING -->
+  <div class="section">
+    <h2>When They Say "I'm Bored"</h2>
+    <p>Boredom is not a problem to solve. It is the doorway to creativity, self-direction, and the ability to sit with yourself.</p>
+    <p>When your child says "I'm bored," there is exactly one response needed:</p>
+    <div class="script">"Hmm. I wonder what you'll do about that."</div>
+    <p>Then go back to what you were doing. They will figure it out. They always do.</p>
+  </div>
+
+  <div class="bottom-line">
+    <div class="label">The Bottom Line</div>
+    <p>The most connected families aren't the ones doing the most activities together.<br><strong>They're the ones living their actual life together.</strong></p>
+  </div>
+
+  <footer>
+    <p>Strategy 448 &middot; Published by kungfu.family</p>
+    <p style="margin-top: 4px;">kungfu.family</p>
+  </footer>
+
+</body>
+</html>

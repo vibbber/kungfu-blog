@@ -1320,6 +1320,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: teach your kid to notice a thought, place it on a leaf, and watch it drift downstream — daily, five minutes, thirty days.',
     tldrInside: 'DRIFT acronym walkthrough, 6 real mental-chatter examples, week-by-week progress markers, making-it-stick table',
   },
+  {
+    slug: 'family-team-mode',
+    title: 'Crew Mode Parenting',
+    subtitle: 'Stop entertaining your kids — start including them',
+    description: 'Walk through your typical Saturday hour by hour. Then flip the script: what if your kids were on the crew instead of in the audience? The one-question filter that changes your whole week.',
+    image: '/images/cards/family-team-mode.webp',
+    imageAlt: 'Overhead view of parent and child hands cooking together at a kitchen counter',
+    imageWidth: 1024,
+    imageHeight: 738,
+    imageAspect: 1.388,
+    topic: 'Family Culture',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'Anthropologists found something about how most of the world raises kids.',
+    tldrPayoff: 'Children included in everyday adult life show higher cooperation, emotional stability, and self-direction — across cultures, across decades.',
+    tldrMove: 'The move: stop entertaining your kids and start including them — errands, cooking, yard work, all of it.',
+    tldrInside: 'Cruise director vs. crew mode timeline, 4 concrete steps to make the switch, The boredom response (one sentence), Hidden payoff: how this reclaims your evenings',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
