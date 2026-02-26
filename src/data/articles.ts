@@ -1240,6 +1240,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop defaulting to your comfortable gear — lean into the one that\'s harder for you.',
     tldrInside: 'Stretch and Steady action breakdowns, 8 body-language signals to watch for, 4 ready-to-use scripts, \'When you\'re not sure\' default rule',
   },
+  {
+    slug: 'calm-down-breaks',
+    title: 'The Relief Test',
+    subtitle: 'When time-outs backfire — the one-second check that fixes them',
+    description: 'If your kid looks happy heading to time-out, you just rewarded the behavior you\'re trying to stop. Here\'s the one-second diagnostic that tells you whether your breaks are working.',
+    image: '/images/cards/calm-down-breaks.webp',
+    imageAlt: 'Split-face illustration of a child showing disappointment on one side and relief on the other, representing the Relief Test diagnostic',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Behavior',
+    book: 'ABA Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'Time-outs have a hidden failure mode most parents never catch.',
+    tldrPayoff: 'Kids who get breaks done right stop needing them within weeks -- they self-regulate, rejoin activities on their own, and handle frustration without blowing up.',
+    tldrMove: 'The move: watch their face the instant you send them -- relief means you just rewarded the behavior, disappointment means the break is landing.',
+    tldrInside: '1-second Relief Test diagnostic, 6-row backfiring vs. working comparison table, 5-step break protocol with scripts, 4-signal weekly tracker',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
