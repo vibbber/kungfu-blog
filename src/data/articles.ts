@@ -1220,6 +1220,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pick the teacher who makes your kid want to come back, not the one with the best credentials.',
     tldrInside: '3 stage cards with parent roles, transition signals for each stage, 5-point tonight checklist, side-by-side comparison table',
   },
+  {
+    slug: 'stretch-and-steady',
+    title: 'Two Gears, Every Day',
+    subtitle: 'Why confident kids need opposite things at different moments — and how to nail the switch',
+    description: 'Your kid needs two gears from you — a push forward and a soft landing. Here\'s how to read their signals and shift between Stretch and Steady without overthinking it.',
+    image: '/images/cards/stretch-and-steady.webp',
+    imageAlt: 'Two interlocking gears in sage green and warm peach representing the stretch and steady parenting modes',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Attachment',
+    book: 'The Parenting Handbook',
+    bookSlug: 'the-parenting-handbook-schamuhn',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'Security isn\'t about being the gentle parent or the tough parent. It\'s about switching.',
+    tldrPayoff: 'Kids raised this way ask for help without shame, persist through frustration, and build friendships that stick — because they learned both brave and vulnerable at home.',
+    tldrMove: 'The shift: stop defaulting to your comfortable gear — lean into the one that\'s harder for you.',
+    tldrInside: 'Stretch and Steady action breakdowns, 8 body-language signals to watch for, 4 ready-to-use scripts, \'When you\'re not sure\' default rule',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
