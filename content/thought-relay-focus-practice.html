@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 5-Minute Reset That Changes How Your Kid Competes</title>
+  <meta name="description" content="Elite athletes swear by it. Sports psychologists prescribe it. And your kid can start tonight — a dead-simple 5-minute focus practice that turns mental clutter into competitive calm.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .blog-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      margin: -24px -20px 36px;
+      overflow: hidden;
+      border-radius: 0 0 16px 16px;
+    }
+    .hero img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,26,46,0.85));
+      padding: 40px 28px 24px;
+    }
+    .hero-overlay h1 {
+      color: #fff;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .hero-overlay .subtitle {
+      color: #E8A598;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Body text */
+    p { margin-bottom: 18px; font-size: 16px; }
+    h2 {
+      font-size: 22px;
+      color: #5C8A5A;
+      margin: 36px 0 14px;
+      line-height: 1.3;
+    }
+    h3 {
+      font-size: 18px;
+      color: #5C8A5A;
+      margin: 28px 0 10px;
+    }
+    .lead {
+      font-size: 18px;
+      color: #3a3a5a;
+      line-height: 1.75;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 22px 26px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Before/After section */
+    .before-after-block {
+      margin: 32px 0;
+    }
+    .before-after-block img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .ba-card {
+      padding: 18px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    .ba-card.before {
+      background: #FEF0EC;
+      border: 2px solid #E8A598;
+    }
+    .ba-card.after {
+      background: #EDF7ED;
+      border: 2px solid #5C8A5A;
+    }
+    .ba-card h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+    }
+    .ba-card.before h4 { color: #c0574a; }
+    .ba-card.after h4 { color: #5C8A5A; }
+    .ba-card ul { padding-left: 18px; }
+    .ba-card li { margin-bottom: 6px; line-height: 1.5; }
+
+    /* Noise ticker */
+    .noise-ticker {
+      background: #FEF0EC;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 24px 0;
+    }
+    .noise-ticker p.label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #c0574a;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .noise-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .noise-item {
+      background: #fff;
+      border: 1px solid #E8A598;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-style: italic;
+      color: #8a3a30;
+    }
+
+    /* DRIFT steps */
+    .drift-section {
+      background: #fff;
+      border: 3px solid #5C8A5A;
+      border-radius: 14px;
+      padding: 28px 24px;
+      margin: 32px 0;
+    }
+    .drift-header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+    .drift-header h2 { margin-top: 0; font-size: 24px; }
+    .drift-header p { color: #666; font-size: 14px; }
+    .drift-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+      align-items: flex-start;
+    }
+    .drift-step:last-child { margin-bottom: 0; }
+    .drift-letter {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #E8A598;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .drift-body h4 {
+      color: #5C8A5A;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .drift-body p { font-size: 15px; margin-bottom: 6px; }
+    .drift-tip {
+      background: #f5faf5;
+      border: 1px solid #c8dfc8;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #3a5a3a;
+      margin-top: 6px;
+    }
+    .drift-tip strong { color: #5C8A5A; }
+
+    /* Stream visual */
+    .stream-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 8px 0 20px;
+    }
+
+    /* Progress timeline */
+    .timeline {
+      margin: 28px 0;
+    }
+    .timeline-row {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .timeline-badge {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      min-width: 86px;
+      text-align: center;
+    }
+    .tl-wk1 { background: #FEF0EC; color: #c0574a; }
+    .tl-wk3 { background: #FFF7E0; color: #a07d20; }
+    .tl-wk7 { background: #EDF7ED; color: #5C8A5A; }
+    .timeline-text { font-size: 15px; line-height: 1.55; }
+
+    /* Quick-start table */
+    .qs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .qs-table th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .qs-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8e0d8;
+    }
+    .qs-table tr:nth-child(even) td {
+      background: #f7f3ee;
+    }
+
+    /* Sticky note */
+    .sticky-note {
+      background: linear-gradient(135deg, #5C8A5A, #4a7848);
+      color: #fff;
+      padding: 26px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .sticky-note .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+    .sticky-note p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    @media (max-width: 560px) {
+      .hero-overlay h1 { font-size: 22px; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .noise-items { flex-direction: column; }
+      .drift-step { flex-direction: column; gap: 8px; }
+      .drift-letter { width: 34px; height: 34px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+<div class="blog-wrapper">
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="/images/blog/thought-relay-focus-practice/hero-young-athlete.webp" alt="Young athlete sitting peacefully at the edge of a field at dawn">
+    <div class="hero-overlay">
+      <h1>The 5-Minute Reset That Changes How Your Kid Competes</h1>
+      <span class="subtitle">A dead-simple daily practice. No gear. No coaching. Just focus.</span>
+    </div>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">There's a trainable skill that separates tight competitors from loose ones.</p>
+    <ul>
+      <li>Kids who build this habit recover from errors mid-game, breathe easy under scrutiny, and react before they think about it.</li>
+      <li>The shift: teach your kid to notice a thought, place it on a leaf, and watch it drift downstream — daily, five minutes, thirty days.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>DRIFT acronym walkthrough &middot; 6 real mental-chatter examples &middot; week-by-week progress markers &middot; making-it-stick table</div>
+  </div>
+
+  <p class="lead">Your kid already has the skills. The footwork, the reflexes, the muscle memory from hundreds of practice hours. The problem isn't ability. The problem is what's happening between their ears during the game.</p>
+
+  <p>Watch them closely next time they compete. Are they <em>playing</em> — or are they <em>thinking</em>? Because those are two very different things. When a kid is stuck in their head, their body can't do what it already knows how to do. They hesitate. They second-guess. They look tight.</p>
+
+  <p>There's a fix. It takes five minutes a day, costs nothing, and produces noticeable results within weeks. Sports psychologists have been prescribing it for decades. The most dominant professional athletes across basketball, tennis, and football have credited it as a core part of their training.</p>
+
+  <p>It's a focus practice called the Thought Relay.</p>
+
+  <!-- What's going on inside their head -->
+  <h2>The Noise Inside Your Athlete's Head</h2>
+
+  <p>During competition, a young athlete's brain is running a parallel broadcast that has nothing to do with the game:</p>
+
+  <div class="noise-ticker">
+    <p class="label">Live mental chatter during a game</p>
+    <div class="noise-items">
+      <span class="noise-item">"I just messed up"</span>
+      <span class="noise-item">"Everyone saw that"</span>
+      <span class="noise-item">"What if I do it again?"</span>
+      <span class="noise-item">"I'm not as good as them"</span>
+      <span class="noise-item">"My parents look disappointed"</span>
+      <span class="noise-item">"I should be doing better"</span>
+    </div>
+  </div>
+
+  <p>That's six separate worry-threads competing for bandwidth while your kid is supposed to be reacting on instinct. It's like trying to drive while reading a textbook. Everything slows down. Nothing flows.</p>
+
+  <div class="callout">Performance anxiety and flow can't occupy the same space.<br>Quiet the noise, and flow arrives on its own.</div>
+
+  <!-- Before/After -->
+  <div class="before-after-block">
+    <img src="/images/blog/thought-relay-focus-practice/before-after.webp" alt="Before and after: athlete stuck in their head versus athlete in the zone">
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <h4>Stuck in their head</h4>
+        <ul>
+          <li>Replaying last mistake</li>
+          <li>Scanning the sideline for reactions</li>
+          <li>Muscles tight, breathing shallow</li>
+          <li>Half a second late on every decision</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <h4>In the zone</h4>
+        <ul>
+          <li>Mistake forgotten in 2 seconds</li>
+          <li>Eyes on the ball, the play, the moment</li>
+          <li>Loose, quick, breathing easy</li>
+          <li>Reacting before they think about it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p>The difference between those two columns isn't talent. It isn't coaching. It's the ability to release a thought instead of getting stuck on it. And that's a trainable skill.</p>
+
+  <!-- The method -->
+  <div class="drift-section">
+    <div class="drift-header">
+      <h2>The DRIFT Method</h2>
+      <p>Detach. Release. Imagine. Float. Trust. Five minutes, every morning.</p>
+    </div>
+
+    <div class="drift-step">
+      <div class="drift-letter">D</div>
+      <div class="drift-body">
+        <h4>Detach from Distractions</h4>
+        <p>Quiet spot. Phone off. Eyes closed. The one moment today where there's literally nothing they need to do.</p>
+        <div class="drift-tip"><strong>Best time:</strong> Morning, right after brushing teeth. The mind is naturally quieter before the day's input piles up. But any consistent time works — consistency matters more than timing.</div>
+      </div>
+    </div>
+
+    <div class="drift-step">
+      <div class="drift-letter">R</div>
+      <div class="drift-body">
+        <h4>Release Each Thought</h4>
+        <p>Picture a gentle stream. When a thought appears — and it will — imagine placing it on a leaf and watching it drift downstream. Don't fight it. Don't chase it. Don't judge it. Just notice, place, release.</p>
+        <div class="drift-tip"><strong>Say this:</strong> "The thoughts aren't bad. They're just visitors. You're letting them pass through instead of inviting them to stay."</div>
+      </div>
+    </div>
+
+    <div class="drift-step">
+      <div class="drift-letter">I</div>
+      <div class="drift-body">
+        <h4>Imagine the Stream</h4>
+        <p>Build the scene: What does the water sound like? Is there sunlight on it? Trees on the banks? The more vivid the image, the easier the mind settles into it. Some kids prefer a sky with passing clouds, or waves on a beach — any flowing image works.</p>
+      </div>
+    </div>
+
+    <div class="drift-step">
+      <div class="drift-letter">F</div>
+      <div class="drift-body">
+        <h4>Float in the Gaps</h4>
+        <p>Between thoughts, there are moments of quiet. That's the good stuff. At first they last a second or two. Over weeks, they stretch. Those gaps are what the zone feels like: total presence, zero noise.</p>
+        <div class="drift-tip"><strong>Tell them:</strong> "The gaps are the goal. And they will get longer."</div>
+      </div>
+    </div>
+
+    <div class="drift-step">
+      <div class="drift-letter">T</div>
+      <div class="drift-body">
+        <h4>Trust the Timer</h4>
+        <p>Set a timer so "how much longer?" doesn't become another thought to release. Five minutes is the minimum — that's how long the brain's relaxation response needs to fully engage. Aim for 30 straight days.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stream image -->
+  <img class="stream-img" src="/images/blog/thought-relay-focus-practice/leaves-on-stream.webp" alt="Leaves floating gently down a sunlit forest stream">
+
+  <p>This is what the practice looks like from the inside: thoughts arriving, being noticed, and floating away. The stream keeps moving. The bank stays still. Your kid learns to be the bank.</p>
+
+  <!-- What progress looks like -->
+  <h2>What Progress Actually Looks Like</h2>
+
+  <p>Parents expect silence from day one. That's not how it works. Here's the real timeline:</p>
+
+  <div class="timeline">
+    <div class="timeline-row">
+      <span class="timeline-badge tl-wk1">Week 1-2</span>
+      <span class="timeline-text">Constant chatter. Leaves everywhere. Feels like it's "not working." This is normal — <em>noticing</em> the thoughts is the skill. If they're noticing, they're doing it right.</span>
+    </div>
+    <div class="timeline-row">
+      <span class="timeline-badge tl-wk3">Week 3-6</span>
+      <span class="timeline-text">Fewer leaves. Longer quiet stretches. The stream calms faster each session. They might start feeling different before games — looser, more present.</span>
+    </div>
+    <div class="timeline-row">
+      <span class="timeline-badge tl-wk7">Week 7+</span>
+      <span class="timeline-text">Long stretches of clear water. Thoughts come and go without sticking. This is advanced focus control — and it translates directly to performance under pressure.</span>
+    </div>
+  </div>
+
+  <!-- Making it stick -->
+  <h2>Making It Stick</h2>
+
+  <table class="qs-table">
+    <tr>
+      <th>Move</th>
+      <th>Why It Works</th>
+    </tr>
+    <tr>
+      <td><strong>Stack it with teeth-brushing</strong></td>
+      <td>Pairing with an existing habit removes the decision of when to do it</td>
+    </tr>
+    <tr>
+      <td><strong>Quick 2-min version before games</strong></td>
+      <td>Same technique, shorter duration — settles pre-game jitters in the car or on the bench</td>
+    </tr>
+    <tr>
+      <td><strong>Don't ask "how was meditation?"</strong></td>
+      <td>Turns it into a test. Just ask: "Did you do your five minutes?" That's all that matters.</td>
+    </tr>
+    <tr>
+      <td><strong>Do it yourself</strong></td>
+      <td>Kids stick with it when they see a parent doing it too. Even sitting quietly together counts.</td>
+    </tr>
+    <tr>
+      <td><strong>Name the transfer</strong></td>
+      <td>When they bounce back from a mistake in a game, connect the dots: "That's your training showing up."</td>
+    </tr>
+  </table>
+
+  <!-- The payoff -->
+  <h3>What This Actually Unlocks</h3>
+
+  <p>Psychologist Mihaly Csikszentmihalyi spent decades studying peak performance — what athletes call "the zone." He found the same markers every time: the task matches their skill, movement happens without thinking, time distorts, the inner critic vanishes, and the activity itself becomes the reward.</p>
+
+  <p>Daily meditation is the most reliable on-ramp to that state. It trains the exact skill flow requires: letting go of conscious interference and trusting trained instincts. Five minutes a day, and your kid starts finding the zone on purpose instead of by accident.</p>
+
+  <div class="sticky-note">
+    <p class="label">The bottom line</p>
+    <p>The goal isn't an empty mind.<br>It's a mind that knows how to let go.</p>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</div>
+</body>
+</html>

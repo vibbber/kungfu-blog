@@ -1300,6 +1300,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: match your approach to their developmental stage — five ages, five different shifts.',
     tldrInside: '5 stage-by-stage breakdowns with trap and move, 5 word-for-word scripts, trap vs. move comparison table, 4 through-line principles',
   },
+  {
+    slug: 'thought-relay-focus-practice',
+    title: 'Find the Zone on Purpose',
+    subtitle: 'Young athletes stuck in their heads — this unlocks flow',
+    description: 'A dead-simple 5-minute daily focus practice that quiets mental chatter so young athletes compete in the zone instead of stuck in their heads.',
+    image: '/images/cards/thought-relay-focus-practice.webp',
+    imageAlt: 'Young athlete silhouette surrounded by concentric circles representing focus and flow state',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Sports',
+    book: 'Mental Toughness for Young Athletes',
+    bookSlug: 'mental-toughness-young-athletes-horne',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'There\'s a trainable skill that separates tight competitors from loose ones.',
+    tldrPayoff: 'Kids who build this habit recover from errors mid-game, breathe easy under scrutiny, and react before they think about it.',
+    tldrMove: 'The shift: teach your kid to notice a thought, place it on a leaf, and watch it drift downstream — daily, five minutes, thirty days.',
+    tldrInside: 'DRIFT acronym walkthrough, 6 real mental-chatter examples, week-by-week progress markers, making-it-stick table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
