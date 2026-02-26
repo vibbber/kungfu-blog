@@ -1280,6 +1280,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: watch their face the instant you send them -- relief means you just rewarded the behavior, disappointment means the break is landing.',
     tldrInside: '1-second Relief Test diagnostic, 6-row backfiring vs. working comparison table, 5-step break protocol with scripts, 4-signal weekly tracker',
   },
+  {
+    slug: 'parenting-by-stage',
+    title: 'The Shifting Trap',
+    subtitle: 'Why your best parenting move has an expiration date — and how to stay one stage ahead',
+    description: 'The biggest parenting mistake shifts every few years. Here\'s what catches good parents off guard at each stage — and the one move that fixes it.',
+    image: '/images/cards/parenting-by-stage.webp',
+    imageAlt: 'Five doors in a hallway of different sizes representing the shifting parenting trap at each developmental stage',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Development',
+    book: 'The Price of Privilege',
+    bookSlug: 'price-of-privilege-levine',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'What works at age 5 can backfire at age 12.',
+    tldrPayoff: 'Kids raised with stage-matched parenting build real self-control, handle peer pressure, and develop identity on their own terms instead of performing someone else\'s version of success.',
+    tldrMove: 'The move: match your approach to their developmental stage — five ages, five different shifts.',
+    tldrInside: '5 stage-by-stage breakdowns with trap and move, 5 word-for-word scripts, trap vs. move comparison table, 4 through-line principles',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
