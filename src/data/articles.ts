@@ -1180,6 +1180,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: separate comprehension from production. A child who follows instructions nonverbally is in a completely different situation than a child who doesn\'t understand.',
     tldrInside: 'comprehension vs. production distinction, 4 temperament markers, family background checklist, 5-step action plan',
   },
+  {
+    slug: 'reading-your-babys-signals',
+    title: 'Baby\'s Secret Language',
+    subtitle: 'They\'re already talking — here\'s how to finally understand',
+    description: 'Your baby communicates constantly through gaze, pauses, and body language. Learn to decode these signals and watch cooperation, calm, and connection follow.',
+    image: '/images/cards/reading-your-babys-signals.webp',
+    imageAlt: 'Baby in profile with signal bubbles showing eyes, hands, and sound icons emanating from their body',
+    imageWidth: 1376,
+    imageHeight: 768,
+    imageAspect: 1.792,
+    topic: 'Attachment',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'There\'s a language your baby already speaks. You just haven\'t learned it yet.',
+    tldrPayoff: 'Parents who pick this up raise kids who self-soothe earlier, cooperate without power struggles, and communicate at a lower volume because they know it works.',
+    tldrMove: 'The shift: slow to their speed, follow their gaze, and leave room for their turn before you take yours.',
+    tldrInside: '5-signal baby decoder table, 6-letter LISTEN phrasebook, 3 everyday scenarios with tuned-in vs. overriding responses, 4 tips to start practicing today',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

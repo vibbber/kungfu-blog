@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Baby Already Speaks a Language. Here's How to Become Fluent. | Kung Fu</title>
+  <meta name="description" content="Your baby is communicating constantly — through gaze, pauses, and body language. Learn to decode these signals and watch cooperation, calm, and connection follow.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 0;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,26,46,0.85));
+      padding: 40px 32px 28px;
+    }
+    .hero-overlay h1 {
+      font-size: 30px;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .hero-overlay .subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    /* Sections */
+    h2 {
+      color: #5C8A5A;
+      font-size: 24px;
+      margin: 40px 0 16px;
+      line-height: 1.3;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    /* Opening pull */
+    .opening {
+      font-size: 18px;
+      color: #333;
+      margin: 32px 0 24px;
+      line-height: 1.8;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .callout p {
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Signal decoder table */
+    .decoder-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0 28px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .decoder-table thead th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .decoder-table tbody td {
+      padding: 14px 18px;
+      font-size: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .decoder-table tbody tr:nth-child(even) { background: #fff; }
+    .decoder-table tbody tr:nth-child(odd) { background: #f9f7f2; }
+    .decoder-table tbody tr:last-child td { border-bottom: none; }
+
+    /* Image section */
+    .blog-image {
+      margin: 32px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .blog-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .blog-image .caption {
+      background: #fff;
+      padding: 12px 18px;
+      font-size: 13px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Scenario cards */
+    .scenario-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .scenario-card h3 {
+      font-size: 16px;
+      color: #E8A598;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .tuned-in {
+      background: #EDF5ED;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 4px solid #5C8A5A;
+    }
+    .tuned-in h4 { color: #5C8A5A; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .overriding {
+      background: #FEF3F0;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 4px solid #E8A598;
+    }
+    .overriding h4 { color: #c0392b; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .tuned-in p, .overriding p { font-size: 14px; margin: 0; line-height: 1.6; }
+
+    /* Step cards */
+    .step-flow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0 28px;
+    }
+    .step-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .step-card.full-width {
+      grid-column: 1 / -1;
+    }
+    .step-letter {
+      display: inline-block;
+      background: #E8A598;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .step-card h4 {
+      color: #5C8A5A;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .step-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* Payoff box */
+    .payoff {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: #fff;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+    .payoff h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+    .payoff p {
+      font-size: 16px;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    .payoff p:last-child { margin-bottom: 0; }
+
+    /* Tip list */
+    .tip-list {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .tip-list li {
+      margin-bottom: 14px;
+      padding-left: 8px;
+      font-size: 15px;
+      line-height: 1.6;
+      list-style: none;
+      position: relative;
+    }
+    .tip-list li::before {
+      content: '';
+      position: absolute;
+      left: -14px;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #E8A598;
+    }
+    .tip-list li:last-child { margin-bottom: 0; }
+    .tip-list li strong { color: #5C8A5A; }
+
+    /* Closing */
+    .closing {
+      text-align: center;
+      padding: 24px 0 8px;
+      margin-top: 32px;
+      border-top: 2px solid #E8A598;
+    }
+    .closing p {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 0 8px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .hero-overlay h1 { font-size: 22px; }
+      .scenario-grid { grid-template-columns: 1fr; }
+      .step-flow { grid-template-columns: 1fr; }
+      .container { padding: 16px; }
+      h2 { font-size: 20px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/reading-your-babys-signals/hero.webp" alt="Parent and baby sharing a moment of eye contact and connection">
+    <div class="hero-overlay">
+      <h1>Your Baby Already Speaks a Language. Here's How to Become Fluent.</h1>
+      <p class="subtitle">The skill that turns everyday moments into something extraordinary</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">There's a language your baby already speaks. You just haven't learned it yet.</p>
+      <ul>
+        <li>Parents who pick this up raise kids who self-soothe earlier, cooperate without power struggles, and communicate at a lower volume because they know it works.</li>
+        <li>The shift: slow to their speed, follow their gaze, and leave room for their turn before you take yours.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5-signal baby decoder table &middot; 6-letter LISTEN phrasebook &middot; 3 everyday scenarios with tuned-in vs. overriding responses &middot; 4 tips to start practicing today</div>
+    </div>
+
+    <p class="opening">Your baby looked away mid-feed and you nudged the bottle back. Your toddler went quiet on the play mat and you rattled a toy to re-engage. Normal moves. Loving moves. But what if those pauses were the most important part of the conversation?</p>
+
+    <p>Researchers filmed thousands of hours of parents with their babies starting in the 1970s. They expected to find that the best parents were the most stimulating, the most educational, the most active. They found the opposite. The parents whose children thrived most weren't doing more. They were <em>noticing</em> more.</p>
+
+    <div class="callout">
+      <p>Your baby is already communicating. Your job isn't to direct the conversation. It's to listen first and respond second.</p>
+    </div>
+
+    <h2>The Secret Dictionary</h2>
+
+    <p>Babies can't talk, but they're far from silent. They broadcast their internal state constantly through body language, gaze, facial expression, and timing. Once you know what to look for, it's like subtitles appearing on a foreign film.</p>
+
+    <div class="blog-image">
+      <img src="/images/blog/reading-your-babys-signals/signals-diagram.webp" alt="Diagram showing baby engagement and disengagement signals">
+      <p class="caption">Engagement vs. disengagement -- the two channels your baby broadcasts on</p>
+    </div>
+
+    <table class="decoder-table">
+      <thead>
+        <tr>
+          <th>Signal</th>
+          <th>"I'm In" (Keep Going)</th>
+          <th>"I Need a Break" (Ease Off)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Eyes</strong></td>
+          <td>Bright, wide, locked on you</td>
+          <td>Looking away, gaze drifting, eyes closing</td>
+        </tr>
+        <tr>
+          <td><strong>Face</strong></td>
+          <td>Animated, smiling, mouth open</td>
+          <td>Going flat, frowning, yawning</td>
+        </tr>
+        <tr>
+          <td><strong>Body</strong></td>
+          <td>Reaching, leaning in, kicking</td>
+          <td>Arching back, going still, turning away</td>
+        </tr>
+        <tr>
+          <td><strong>Hands</strong></td>
+          <td>Open, grasping, waving</td>
+          <td>Clenched fists, pushing away</td>
+        </tr>
+        <tr>
+          <td><strong>Sounds</strong></td>
+          <td>Cooing, babbling, laughing</td>
+          <td>Fussing, sharp cries, silence after noise</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The magic isn't in memorizing this chart. It's in the practice of pausing long enough to notice which channel your baby is broadcasting on right now.</p>
+
+    <h2>What Fluency Actually Looks Like</h2>
+
+    <p>The difference between a tuned-in moment and an overriding one is often just three seconds of pause. Here's what that gap looks like in real life:</p>
+
+    <div class="scenario-card">
+      <h3>Mid-Feed Pause</h3>
+      <div class="scenario-grid">
+        <div class="tuned-in">
+          <h4>Tuned In</h4>
+          <p>Baby pauses, looks around. You wait. Maybe a soft word, a cheek stroke. When they return to eating, you settle back. Their rhythm, not yours.</p>
+        </div>
+        <div class="overriding">
+          <h4>Overriding</h4>
+          <p>Baby pauses -- you immediately adjust the bottle, nudge them back. That pause was self-regulation. You just skipped their turn in the conversation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <h3>Play Mat Discovery</h3>
+      <div class="scenario-grid">
+        <div class="tuned-in">
+          <h4>Tuned In</h4>
+          <p>Baby fixates on a wooden block. You sit nearby, look at it too. "That's a good one." They bang it. You tap the floor. They grin. You just entered their game.</p>
+        </div>
+        <div class="overriding">
+          <h4>Overriding</h4>
+          <p>Baby holds a block. You wave a stuffed bear. "Look! Look at the bear!" They glance, turn back to the block. You try again. You're competing with their interest.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario-card">
+      <h3>Face-to-Face Play</h3>
+      <div class="scenario-grid">
+        <div class="tuned-in">
+          <h4>Tuned In</h4>
+          <p>Baby is animated -- cooing, arms waving. You match their energy. Then they suddenly turn away. You wait. A few seconds later, they look back. You pick up where you left off.</p>
+        </div>
+        <div class="overriding">
+          <h4>Overriding</h4>
+          <p>Baby turns away and you lean in closer. "Hey! Where'd you go?" The harder you chase, the more they pull back. They needed a pause you didn't give.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-image">
+      <img src="/images/blog/reading-your-babys-signals/floor-play.webp" alt="Parent sitting on the floor, calmly watching baby play">
+      <p class="caption">The most powerful position in parenting: present, available, unhurried</p>
+    </div>
+
+    <h2>The LISTEN Phrasebook</h2>
+
+    <p>Fluency takes practice. This framework gives you a way to practice deliberately, one interaction at a time:</p>
+
+    <div class="step-flow">
+      <div class="step-card">
+        <span class="step-letter">L</span>
+        <h4>Look Before You Act</h4>
+        <p>Before you reach for a toy or start singing -- pause. Where are their eyes? What are their hands doing? Ten seconds of watching.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-letter">I</span>
+        <h4>Identify Their Focus</h4>
+        <p>Whatever has their attention -- a shadow, their toes, a spoon -- that's your starting point. Join their world.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-letter">S</span>
+        <h4>Slow to Their Speed</h4>
+        <p>Babies process slower than adults. Match their pace. When they go quiet, you go quiet. When they perk up, you respond.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-letter">T</span>
+        <h4>Take Turns</h4>
+        <p>They make a sound -- you wait for them to finish, then respond. This back-and-forth is their first conversation. Leave room for their turn.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-letter">E</span>
+        <h4>Expand Gently</h4>
+        <p>Once you've joined their focus, build on it. They stare at a cup -- tap it, name it, flip it. Add to their interest, don't replace it.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-letter">N</span>
+        <h4>Notice What Lands</h4>
+        <p>Did that work? Smiling, looking back? Keep going. Turning away, going still? Back off. Their reaction is the answer key.</p>
+      </div>
+    </div>
+
+    <div class="payoff">
+      <h3>The Counterintuitive Truth</h3>
+      <p>Many parents worry that responding to every signal creates a clingy, demanding child. Decades of research found the exact opposite.</p>
+      <p>Babies whose parents tuned into their cues became <strong>more</strong> cooperative over time. They fussed less. They were easier to soothe. They went along with what their parent needed more willingly.</p>
+      <p>It makes sense: a baby who trusts that their signals will be heard doesn't need to scream to get through. They can communicate at a lower volume because they know it works.</p>
+    </div>
+
+    <h2>Getting Started</h2>
+
+    <ul class="tip-list">
+      <li><strong>Pick one interaction a day.</strong> One feeding, one play session, one quiet moment. Practice the LISTEN steps deliberately. The rest of the time, just be you.</li>
+      <li><strong>Watch your own speed.</strong> Most adults default faster than babies need. Rapid-fire talking, bouncing toys, switching activities -- if you catch it, slow down.</li>
+      <li><strong>Missed signals don't matter.</strong> You will misread your baby. Everyone does. What matters is the pattern: are you generally paying attention and adjusting? That's enough.</li>
+      <li><strong>This grows with your child.</strong> With a toddler, it means following their play idea before introducing yours. With a school-age kid, it means listening before solving. The signals change. The principle doesn't.</li>
+    </ul>
+
+    <div class="closing">
+      <p>You are not passive. You are an active listener -- and the best conversations start with paying attention.</p>
+    </div>
+
+    <footer>
+      <p>Kung Fu &mdash; kungfu.family</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
