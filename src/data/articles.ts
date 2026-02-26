@@ -1200,6 +1200,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: slow to their speed, follow their gaze, and leave room for their turn before you take yours.',
     tldrInside: '5-signal baby decoder table, 6-letter LISTEN phrasebook, 3 everyday scenarios with tuned-in vs. overriding responses, 4 tips to start practicing today',
   },
+  {
+    slug: 'the-growth-sequence',
+    title: 'The Growth Sequence',
+    subtitle: 'Three stages your child must pass through — skip one and the whole thing breaks',
+    description: 'The most important teacher your child will ever have isn\'t the expert. It\'s the one who makes them fall in love. Decades of research reveal the three stages every skill must pass through.',
+    image: '/images/cards/the-growth-sequence.webp',
+    imageAlt: 'Three plant pots showing progressive growth stages from seedling to flowering plant',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-02-26',
+    dateModified: '2026-02-26',
+    tldrAnchor: 'The first teacher\'s job isn\'t teaching skill. It\'s building love.',
+    tldrPayoff: 'Kids whose first instructor is warm and encouraging fall in love with the activity and survive the hard years later. Kids who start with a strict teacher quit.',
+    tldrMove: 'The move: pick the teacher who makes your kid want to come back, not the one with the best credentials.',
+    tldrInside: '3 stage cards with parent roles, transition signals for each stage, 5-point tonight checklist, side-by-side comparison table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
