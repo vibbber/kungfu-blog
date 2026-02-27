@@ -1340,6 +1340,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop entertaining your kids and start including them — errands, cooking, yard work, all of it.',
     tldrInside: 'Cruise director vs. crew mode timeline, 4 concrete steps to make the switch, The boredom response (one sentence), Hidden payoff: how this reclaims your evenings',
   },
+  {
+    slug: 'the-talent-support-playbook',
+    title: 'It Wasn\'t the Talented One',
+    subtitle: 'The sibling with less natural ability often became the star — here\'s what the research found',
+    description: 'The less talented sibling often became the star. Research on world-class performers reveals it was never about natural gifts — it was about what parents did to let drive take root.',
+    image: '/images/cards/the-talent-support-playbook.webp',
+    imageAlt: 'Two seedlings side by side — one wilting, one with deep roots growing strong, watercolor illustration',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-02-27',
+    dateModified: '2026-02-27',
+    tldrAnchor: 'Drive created a feedback loop that talent alone never could.',
+    tldrPayoff: 'Kids with drive get better coaching, more family investment, and faster growth — which deepens the drive even further. The \'talented\' sibling who coasted never built that engine.',
+    tldrMove: 'The move: pair an effort culture with daily rhythm and rising challenge — then get out of the way when internal motivation replaces your external push.',
+    tldrInside: 'drive feedback loop, 5 conditions cards, 4 parent roles from cheerleader to quiet investor, transition signals',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
