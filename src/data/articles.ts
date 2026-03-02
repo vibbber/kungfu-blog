@@ -1520,6 +1520,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pick the minimum viable device, set clear expectations before unboxing, and upgrade from calm assessment — never conflict fatigue.',
     tldrInside: '4-tier progression system, 5 MATCH questions, 4 handoff scripts, 4 hidden pitfalls in \'safe\' devices',
   },
+  {
+    slug: 'family-team-mode',
+    title: 'The Usefulness Instinct',
+    subtitle: 'They don\'t need more activities — they need a real role',
+    description: 'Cross-cultural research reveals why entertained kids melt down and useful ones don\'t. The identity shift from audience member to crew member transforms behavior from the inside out.',
+    image: '/images/cards/family-team-mode.webp',
+    imageAlt: 'Illustration of two watering cans side by side — one small child-sized and one adult-sized — symbolizing kids working alongside parents',
+    imageWidth: 1024,
+    imageHeight: 678,
+    imageAspect: 1.51,
+    topic: 'Behavior',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'The exhausting schedule of kid activities isn\'t making your child happier. It\'s making them needier.',
+    tldrPayoff: 'Crew kids handle boredom without panic, carry bags at the store without being asked, and say \'Can I help with dinner?\' like they mean it.',
+    tldrMove: 'The move: aim for a 3:1 ratio -- three real-life-together activities for every one kid-centered outing.',
+    tldrInside: '3:1 ratio guideline, 4-week adjustment arc from resistance to new normal, 3 scripts for titles, boredom, and decluttering, 5-row passes vs. doesn\'t-pass table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
