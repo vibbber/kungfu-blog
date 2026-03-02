@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="23">
+  <title>Five Questions That Turn Breakfast Into a Superpower | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 0 0 24px 24px;
+      display: block;
+    }
+
+    .content {
+      padding: 32px 24px;
+    }
+
+    h1 {
+      color: #5C8A5A;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #6b7c93;
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      color: #1A1A2E;
+      font-size: 1.2rem;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .source-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Question cards */
+    .question-grid {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .q-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid #5C8A5A;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .q-card .script {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .q-card .why {
+      font-size: 0.9rem;
+      color: #6b7c93;
+    }
+
+    /* Inline image */
+    .inline-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    /* Technique table */
+    .technique-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .technique-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .technique-table tbody td {
+      padding: 14px 16px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+    }
+
+    .technique-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .technique-table tbody tr:nth-child(even) td {
+      background: #f8f8f4;
+    }
+
+    /* Avoid / Do comparison */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+
+    .compare-col {
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .compare-col.do-col {
+      background: #e8f5e8;
+      border: 2px solid #5C8A5A;
+    }
+
+    .compare-col.dont-col {
+      background: #fff3e0;
+      border: 2px solid #E8A598;
+    }
+
+    .compare-col h4 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .compare-col.do-col h4 { color: #5C8A5A; }
+    .compare-col.dont-col h4 { color: #c75b3a; }
+
+    .compare-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compare-col ul li {
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .compare-col.do-col ul li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: #5C8A5A;
+      font-weight: bold;
+    }
+
+    .compare-col.dont-col ul li::before {
+      content: "\2717";
+      position: absolute;
+      left: 0;
+      color: #c75b3a;
+      font-weight: bold;
+    }
+
+    /* Monday box */
+    .monday-box {
+      background: linear-gradient(135deg, #e3f0ff, #d6e8ff);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .monday-box h3 {
+      color: #1565c0;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .monday-box .script {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+
+    .monday-box .why {
+      font-size: 0.9rem;
+      color: #456;
+      margin-bottom: 12px;
+    }
+
+    /* Dinner adaptation */
+    .dinner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      .dinner-grid { grid-template-columns: 1fr; }
+    }
+
+    .dinner-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-top: 3px solid #E8A598;
+    }
+
+    .dinner-card .label {
+      font-weight: 700;
+      color: #5C8A5A;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .dinner-card .script {
+      font-style: italic;
+      font-size: 1rem;
+      color: #1A1A2E;
+    }
+
+    /* Pullquote */
+    .pullquote {
+      background: #f8f5f0;
+      border-left: 4px solid #E8A598;
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #5a5a5a;
+      line-height: 1.6;
+    }
+
+    /* Step cards */
+    .step-cards {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0;
+      counter-reset: step-counter;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      padding-left: 60px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      counter-increment: step-counter;
+    }
+
+    .step-card::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      width: 32px;
+      height: 32px;
+      background: #5C8A5A;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .step-card h4 {
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+
+    .step-card p {
+      font-size: 0.95rem;
+      color: #6b7c93;
+      margin-bottom: 0;
+    }
+
+    .footer-note {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 2px solid #E8A598;
+      font-size: 0.85rem;
+      color: #8795a1;
+      font-style: italic;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <img src="/images/blog/morning-conversation-protocol/hero-breakfast-conversation.webp" alt="Parent and child in animated breakfast conversation" class="hero-img">
+
+  <div class="content">
+
+    <span class="source-tag">Maria Montessori</span>
+    <h1>Five Questions That Turn Breakfast Into a Superpower</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">A five-minute breakfast ritual that trains language, manners, and self-awareness.</p>
+      <ul>
+        <li>Kids who teach their family what they learned at school, notice when they've been unkind, and carry safety awareness without being nagged.</li>
+        <li>The shift: stop asking 'How'd you sleep?' and start asking questions that build specific skills — same five, every day.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5 morning questions with skill breakdowns &middot; 4-row technique table &middot; Monday extended conversation prompts &middot; 4-step start-tomorrow plan</div>
+    </div>
+    <p class="subtitle">Maria Montessori's morning conversation protocol builds language, kindness, and self-awareness in under five minutes.</p>
+
+    <p>Here's a Montessori technique that costs nothing, takes five minutes, and works every single morning: ask your kid five specific questions at breakfast.</p>
+
+    <p>Not "How'd you sleep?" Not "What do you want for lunch?" Five targeted questions, each one quietly training a different skill -- spoken language, social awareness, responsibility, learning transfer, and personal safety. Montessori designed this as a daily ritual for her schools in 1912. Over a hundred years later, the protocol still works because it targets the exact skills that compound over time.</p>
+
+    <h2>The Five Morning Questions</h2>
+
+    <p>Each question has a hidden job. Your kid thinks they're just chatting. You know better.</p>
+
+    <div class="question-grid">
+      <div class="q-card">
+        <div class="script">"Did you take care of our space when you came in?"</div>
+        <div class="why">Trains awareness of shared environments -- clean shoes, tidy entry, respect for common areas</div>
+      </div>
+      <div class="q-card">
+        <div class="script">"Did you speak kindly to the people you saw?"</div>
+        <div class="why">Social awareness and manners -- builds the habit of noticing how they treat others</div>
+      </div>
+      <div class="q-card">
+        <div class="script">"Did you help anyone at home?"</div>
+        <div class="why">Contribution to family life -- reinforces that they're a capable, needed member of the household</div>
+      </div>
+      <div class="q-card">
+        <div class="script">"Did you show your family something you learned?"</div>
+        <div class="why">Connects school to home -- cements learning by teaching it to someone else</div>
+      </div>
+      <div class="q-card">
+        <div class="script">"Did you stay safe yesterday?"</div>
+        <div class="why">Safety consciousness -- gentle daily reminder that they're responsible for their own well-being</div>
+      </div>
+    </div>
+
+    <img src="/images/blog/morning-conversation-protocol/five-question-checklist.webp" alt="Five morning conversation topics illustrated as icons" class="inline-img">
+
+    <p>Notice what these questions have in common: they're all yes-or-no on the surface, but they open doors. "Did you help anyone at home?" almost always turns into a story. "Did you speak kindly?" makes a kid replay social interactions in their head. The questions are designed to prompt reflection, not just answers.</p>
+
+    <h2>How to Run It (Without It Feeling Like an Interrogation)</h2>
+
+    <p>The protocol only works if it feels like conversation, not a quiz. Montessori was explicit about this -- the tone matters as much as the questions.</p>
+
+    <table class="technique-table">
+      <thead>
+        <tr>
+          <th>Technique</th>
+          <th>What It Looks Like</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Listen more than you speak</strong></td>
+          <td>They talk 80% of the time. You react, you nod, you follow up. You don't lecture.</td>
+        </tr>
+        <tr>
+          <td><strong>Celebrate with small exclamations</strong></td>
+          <td>"Oh, you helped set the table? That's wonderful." Gentle, specific, warm.</td>
+        </tr>
+        <tr>
+          <td><strong>Same time every day</strong></td>
+          <td>After morning routines are done. The predictability is the point -- it becomes automatic.</td>
+        </tr>
+        <tr>
+          <td><strong>Keep it light</strong></td>
+          <td>Smile. Lean in. This is the fun part of the morning, not a performance review.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pullquote">"The teacher calls attention to good examples with 'little exclamations' -- positive reinforcement through gentle acknowledgment."<br><span style="font-size: 0.85rem; color: #8795a1;">-- Maria Montessori</span></div>
+
+    <h2>What to Avoid</h2>
+
+    <p>Montessori was equally clear about what NOT to bring into morning conversation. The boundaries keep this ritual safe and productive.</p>
+
+    <div class="compare-grid">
+      <div class="compare-col do-col">
+        <h4>Keep It Here</h4>
+        <ul>
+          <li>Pleasant topics that build pride</li>
+          <li>Questions about their actions and choices</li>
+          <li>Follow-ups that let them tell stories</li>
+          <li>Gentle acknowledgment of good behavior</li>
+        </ul>
+      </div>
+      <div class="compare-col dont-col">
+        <h4>Leave This Out</h4>
+        <ul>
+          <li>Family finances or adult conflicts</li>
+          <li>Anything that could embarrass them</li>
+          <li>Questions that invite gossip or criticism</li>
+          <li>Topics that put them in an awkward position about parents</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The goal is a ritual your child looks forward to. The moment it feels like surveillance, the magic dies.</p>
+
+    <h2>The Monday Bonus Round</h2>
+
+    <div class="monday-box">
+      <h3>Mondays Get Extra Time</h3>
+      <p style="margin-bottom: 16px;">After a weekend, there's more to talk about. Montessori extended Monday conversations with open-ended prompts that build narrative skills:</p>
+      <div class="script">"What did you do with your family this weekend?"</div>
+      <div class="why">Practices sequencing, memory, and storytelling</div>
+      <br>
+      <div class="script">"Did you try any new foods?"</div>
+      <div class="why">Opens natural conversation about nutrition and curiosity</div>
+      <br>
+      <p style="font-size: 0.9rem; color: #1565c0; margin-bottom: 0;">If they mention something unhealthy, treat it as a teaching moment -- explain why gently, without shaming. Curiosity, not judgment.</p>
+    </div>
+
+    <h2>The Dinner Table Version</h2>
+
+    <p>Mornings too hectic? Montessori's protocol adapts perfectly to dinner. Same principle -- targeted questions, warm tone, let them do the talking.</p>
+
+    <img src="/images/blog/morning-conversation-protocol/family-dinner-conversation.webp" alt="Family gathered around dinner table in warm conversation" class="inline-img">
+
+    <div class="dinner-grid">
+      <div class="dinner-card">
+        <div class="label">Highs & Lows</div>
+        <div class="script">"What was the best part of your day? What was hard?"</div>
+      </div>
+      <div class="dinner-card">
+        <div class="label">Kindness Check</div>
+        <div class="script">"Did you help anyone today? Did anyone help you?"</div>
+      </div>
+      <div class="dinner-card">
+        <div class="label">Learning Share</div>
+        <div class="script">"What's something new you learned today?"</div>
+      </div>
+      <div class="dinner-card">
+        <div class="label">Tomorrow Preview</div>
+        <div class="script">"What are you looking forward to tomorrow?"</div>
+      </div>
+    </div>
+
+    <h2>Start Tomorrow Morning</h2>
+
+    <p>This isn't a program to enroll in. It's five questions and a warm tone. Here's your launch sequence:</p>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <h4>Pick your time</h4>
+        <p>Breakfast or dinner -- whichever you can protect for five uninterrupted minutes.</p>
+      </div>
+      <div class="step-card">
+        <h4>Memorize (or post) the five questions</h4>
+        <p>Stick them on the fridge until they're automatic. Swap in your own versions once the habit is locked.</p>
+      </div>
+      <div class="step-card">
+        <h4>Listen more than you talk</h4>
+        <p>Your job is to react, not direct. Let their answers lead the conversation.</p>
+      </div>
+      <div class="step-card">
+        <h4>Celebrate the small stuff</h4>
+        <p>A small exclamation -- "Oh, you held the door? That's so kind!" -- goes further than a lecture.</p>
+      </div>
+    </div>
+
+    <p>Five minutes. Five questions. Every morning. The compounding effect on language, self-awareness, and social skills is the kind of thing you notice three months in and wonder how you ever skipped it.</p>
+
+    <p class="footer-note">Published by kungfu.family. Morning conversation protocol developed by Maria Montessori, physician and educator who pioneered observation-based learning for children.</p>
+
+  </div>
+
+</body>
+</html>

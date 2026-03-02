@@ -1480,6 +1480,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: start earlier than feels comfortable, let them struggle, and ask \'How did that feel?\' instead of \'Great job!\'',
     tldrInside: 'Age-by-age skill tables across 3 domains, 3 word-for-word scripts, before/after grid on unsupervised time, \'But is it safe?\' myth-buster with crime stats',
   },
+  {
+    slug: 'morning-conversation-protocol',
+    title: 'The Breakfast Superpower',
+    subtitle: 'A daily five-minute ritual that quietly trains five skills at once',
+    description: 'Five targeted questions at breakfast, each one secretly training a different skill — language, social awareness, responsibility, learning transfer, and safety. Five minutes, every morning, compounding over months.',
+    image: '/images/cards/morning-conversation-protocol.webp',
+    imageAlt: 'A plate radiating skill icons representing the five breakfast conversation questions',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Communication',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'A five-minute breakfast ritual that trains language, manners, and self-awareness.',
+    tldrPayoff: 'Kids who teach their family what they learned at school, notice when they\'ve been unkind, and carry safety awareness without being nagged.',
+    tldrMove: 'The shift: stop asking \'How\'d you sleep?\' and start asking questions that build specific skills — same five, every day.',
+    tldrInside: '5 morning questions with skill breakdowns, 4-row technique table, Monday extended conversation prompts, 4-step start-tomorrow plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
