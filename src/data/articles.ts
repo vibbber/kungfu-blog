@@ -1460,6 +1460,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: use the same four steps -- own, present, expect, normalize -- whether it\'s the first conversation or the fiftieth.',
     tldrInside: 'OPEN method with 4 parent scripts, 5 grief signals and what each one means, 3 mistakes that block healthy grieving, milestone and re-processing guide',
   },
+  {
+    slug: 'confidence-through-capability',
+    title: 'Confidence They Keep',
+    subtitle: 'Why capable kids outgrow anxious ones',
+    description: 'Your kid doesn\'t need more praise. They need to crack an egg, miss a bus, and figure it out. Here\'s the capability ladder that builds real confidence.',
+    image: '/images/cards/confidence-through-capability.webp',
+    imageAlt: 'A cracked egg on a warm kitchen counter, minimal and inviting',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Independence',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'Confidence isn\'t built by gold stars. It\'s built by cracking eggs and missing buses.',
+    tldrPayoff: 'Kids raised on real-world skills handle rejection, navigate airports solo, and manage their own appointments -- without needing you.',
+    tldrMove: 'The move: start earlier than feels comfortable, let them struggle, and ask \'How did that feel?\' instead of \'Great job!\'',
+    tldrInside: 'Age-by-age skill tables across 3 domains, 3 word-for-word scripts, before/after grid on unsupervised time, \'But is it safe?\' myth-buster with crime stats',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
