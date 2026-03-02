@@ -1380,6 +1380,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop reminding your kid to \'speak Mandarin\' and start building relationships that run on it -- a weekly call with abuela, a park playdate with new-arrival families.',
     tldrInside: 'the \'real need\' engine and 3 others, 6 moves to fuel the weaker language, 3 family scenarios with engine fixes, school-shift before/after planning box',
   },
+  {
+    slug: 'school-decoder-immigrant-family-guide',
+    title: 'Secret Weapon at Home',
+    subtitle: 'Why immigrant families already have what most parents wish they could give their kids',
+    description: 'Bilingual kids don\'t have a handicap — they have a cognitive edge. Here\'s how immigrant parents can turn their language, culture, and advocacy into an unstoppable advantage at school.',
+    image: '/images/cards/school-decoder-immigrant-family-guide.webp',
+    imageAlt: 'A kitchen table with two open books and steaming tea, warm illustration',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Bilingual Kids',
+    book: 'Children of Immigration',
+    bookSlug: 'children-of-immigration-suarez-orozco',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'Schools don\'t automatically look out for immigrant kids. Parents have to.',
+    tldrPayoff: 'Kids whose families advocate get course corrections, AP access, and college pathways — while equally capable kids whose families trust the system get stuck repeating material they already mastered.',
+    tldrMove: 'The shift: stop assuming the system is watching out for your child and start treating school like a system you need to navigate.',
+    tldrInside: 'Before/after comparison of advocacy outcomes, The gratitude trap explained, 7 actions to take this semester, 2 ready-to-use scripts',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
