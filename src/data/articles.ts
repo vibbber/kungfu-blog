@@ -1440,6 +1440,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop evaluating platforms by name and start evaluating them by design.',
     tldrInside: '6 design-trap tiles, safe alternatives table, 4-stage rollout plan, 3 readiness questions',
   },
+  {
+    slug: 'supporting-a-child-through-loss',
+    title: 'Grief Strength Signals',
+    subtitle: 'When messy mourning means their emotional system is working',
+    description: 'Your child\'s messy grief is a strength signal. Anger, searching, tears — it all means their emotional system is working exactly right. Here\'s how to support it.',
+    image: '/images/cards/supporting-a-child-through-loss.webp',
+    imageAlt: 'A cracked vase with golden light streaming through the cracks, symbolizing strength through grief',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Development',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'The first grief conversation is not the last one. Kids re-process loss as they grow.',
+    tldrPayoff: 'Kids who get repeated, honest conversations about loss at each developmental stage build emotional vocabularies that carry them through everything else life throws at them.',
+    tldrMove: 'The move: use the same four steps -- own, present, expect, normalize -- whether it\'s the first conversation or the fiftieth.',
+    tldrInside: 'OPEN method with 4 parent scripts, 5 grief signals and what each one means, 3 mistakes that block healthy grieving, milestone and re-processing guide',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
