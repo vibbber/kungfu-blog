@@ -1500,6 +1500,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop asking \'How\'d you sleep?\' and start asking questions that build specific skills — same five, every day.',
     tldrInside: '5 morning questions with skill breakdowns, 4-row technique table, Monday extended conversation prompts, 4-step start-tomorrow plan',
   },
+  {
+    slug: 'starter-phone-decision-guide',
+    title: 'Start Boring, Level Up',
+    subtitle: 'Why the smartest first phone is the dumbest one — and when to upgrade',
+    description: 'A 4-tier phone ladder that turns the first-phone decision into a progression system kids want to climb. Start with a flip phone, earn each upgrade through trust, and skip the battle entirely.',
+    image: '/images/cards/starter-phone-decision-guide.webp',
+    imageAlt: 'Illustration of a flip phone with a growth arc leading to a smartphone, representing the phone ladder progression',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1.0,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'A flip phone at eight looks strange. At thirteen, it looks like genius.',
+    tldrPayoff: 'Kids who start boring and level up learn to self-regulate screens, resist peer pressure on their own terms, and treat freedom as something earned.',
+    tldrMove: 'The move: pick the minimum viable device, set clear expectations before unboxing, and upgrade from calm assessment — never conflict fatigue.',
+    tldrInside: '4-tier progression system, 5 MATCH questions, 4 handoff scripts, 4 hidden pitfalls in \'safe\' devices',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
