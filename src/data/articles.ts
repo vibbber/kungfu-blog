@@ -1420,6 +1420,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair the earn-it deal with identity language, then step back -- no nagging, no hovering, no rescue.',
     tldrInside: '5-level task progression with unlock signals, the earn-it sentence formula, 3 punishment-to-deal rewrites, 4 identity scripts by age',
   },
+  {
+    slug: 'platform-safety-checklist',
+    title: 'Six-Question App Scanner',
+    subtitle: 'New download request — instant safety verdict in 30 seconds',
+    description: 'Six yes-or-no questions that reveal whether any app is safe for your kid. Learn the six design traps once, spot them in every platform — current, future, or not yet invented.',
+    image: '/images/cards/platform-safety-checklist.webp',
+    imageAlt: 'A smartphone surrounded by six radar-style safety indicators scanning for design traps',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Screen Time',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'You don\'t need to research every app. You need six questions.',
+    tldrPayoff: 'Kids raised with these boundaries keep real friendships, put the phone down without a fight, and come to you when something online goes sideways.',
+    tldrMove: 'The shift: stop evaluating platforms by name and start evaluating them by design.',
+    tldrInside: '6 design-trap tiles, safe alternatives table, 4-stage rollout plan, 3 readiness questions',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
