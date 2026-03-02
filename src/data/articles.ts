@@ -1360,6 +1360,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair an effort culture with daily rhythm and rising challenge — then get out of the way when internal motivation replaces your external push.',
     tldrInside: 'drive feedback loop, 5 conditions cards, 4 parent roles from cheerleader to quiet investor, transition signals',
   },
+  {
+    slug: 'bilingual-family-blueprint',
+    title: 'Why Bilingual Kids Stall',
+    subtitle: 'It\'s not the method — it\'s whether four engines are running',
+    description: 'The most popular bilingual advice has a mixed track record. Research shows four forces — real need, live interaction, one-language moments, and ongoing adjustment — matter more than which method you pick.',
+    image: '/images/cards/bilingual-family-blueprint.webp',
+    imageAlt: 'A child talking to grandmother and parent with speech bubbles in two different languages',
+    imageWidth: 1376,
+    imageHeight: 768,
+    imageAspect: 1.792,
+    topic: 'Bilingual Kids',
+    book: 'Bilingual: Life and Reality',
+    bookSlug: 'bilingual-grosjean',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'Your child will speak a language when they genuinely need it to reach someone they love.',
+    tldrPayoff: 'Kids raised with real need -- a grandma who only speaks Spanish, a best friend who hasn\'t learned English yet -- don\'t resist the minority language. They use it because it connects them to people who matter.',
+    tldrMove: 'The shift: stop reminding your kid to \'speak Mandarin\' and start building relationships that run on it -- a weekly call with abuela, a park playdate with new-arrival families.',
+    tldrInside: 'the \'real need\' engine and 3 others, 6 moves to fuel the weaker language, 3 family scenarios with engine fixes, school-shift before/after planning box',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
