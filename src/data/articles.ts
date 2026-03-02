@@ -1400,6 +1400,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: protect the home language at all costs and learn to navigate a system that wasn\'t built to recognize it.',
     tldrInside: '3 bilingual myths debunked, 6-step language protection playbook, 5-signal school decoder, 4 conversation scripts for advocacy',
   },
+  {
+    slug: 'let-them-work-for-it',
+    title: 'Built to Handle Things',
+    subtitle: 'The age-by-age map that turns "do your chores" into "I\'ve got this"',
+    description: 'A 5-level responsibility ladder from toddler tasks to teen independence. Start at age 3, reach adult capability by 13 — with the earn-it formula and identity language that make it stick.',
+    image: '/images/cards/let-them-work-for-it.webp',
+    imageAlt: 'A child climbing a responsibility ladder from simple tasks to full independence',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Responsibility',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'Most parents wait too long to give kids real responsibility. The research says start at age 3.',
+    tldrPayoff: 'Kids who start early claim household jobs as their own, handle multi-day tasks without reminders, and show initiative -- seeing what needs doing and just doing it.',
+    tldrMove: 'The move: pair the earn-it deal with identity language, then step back -- no nagging, no hovering, no rescue.',
+    tldrInside: '5-level task progression with unlock signals, the earn-it sentence formula, 3 punishment-to-deal rewrites, 4 identity scripts by age',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
