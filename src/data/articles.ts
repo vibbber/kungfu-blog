@@ -1540,6 +1540,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: aim for a 3:1 ratio -- three real-life-together activities for every one kid-centered outing.',
     tldrInside: '3:1 ratio guideline, 4-week adjustment arc from resistance to new normal, 3 scripts for titles, boredom, and decluttering, 5-row passes vs. doesn\'t-pass table',
   },
+  {
+    slug: 'calm-first-discipline-toolkit',
+    title: 'Calm-First Discipline',
+    subtitle: 'The playground parent who barely speaks has more tools than you think — here are all 11',
+    description: 'What if the most powerful discipline move is saying almost nothing? 11 tools that replace volume with precision — and why the quietest parent in the room is usually winning.',
+    image: '/images/cards/calm-first-discipline-toolkit.webp',
+    imageAlt: 'A serene parent radiating calm circles that absorb a child\'s tantrum energy',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Discipline',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-03-02',
+    dateModified: '2026-03-02',
+    tldrAnchor: 'The quietest parent at the playground is usually running the most tools.',
+    tldrPayoff: 'Kids trained on these moves ride out tantrums faster, pick up on a raised eyebrow before you say a word, and channel restless energy into real contributions around the house.',
+    tldrMove: 'The move: stop defaulting to talk-repeat-yell and start matching each situation to a specific low-volume tool.',
+    tldrInside: '11 tools with \'use when\' tags for each, scripts like \'Whose shoes are in the hallway?\', quick reference table: situation, tool, words needed, 4-week rollout plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
