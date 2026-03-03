@@ -1600,6 +1600,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace generic affection with targeted connection — find the one style that lights them up and lead with it.',
     tldrInside: '7 either/or questions sorted by age (5-7, 8-11, 12+), 5 behavioral clues to watch for, 5 common complaints decoded, 4-step request tracking method',
   },
+  {
+    slug: 'connection-before-correction',
+    title: 'The Authority Surplus',
+    subtitle: 'Why quiet parents have kids who actually listen',
+    description: 'Your parental authority is a bank account. Every yell is a withdrawal. Here\'s how to build a surplus so massive your kids actually listen when it matters.',
+    image: '/images/cards/connection-before-correction.webp',
+    imageAlt: 'A warm illustration of a bank gauge showing parental authority in the green zone, symbolizing a surplus of trust and connection',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Discipline',
+    book: 'The 5 Love Languages of Children',
+    bookSlug: '5-love-languages-of-children-campbell-chapman',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'Discipline that works doesn\'t start with the consequence. It starts 30 seconds earlier.',
+    tldrPayoff: 'Kids get better at self-regulation, arguments drop dramatically, and the relationship stays intact even through the hardest corrections.',
+    tldrMove: 'The shift: connect first, correct second, reconnect immediately after -- every single time.',
+    tldrInside: '3-step Correction Sandwich, REACH diagnostic flowchart, deposits vs. withdrawals tracker, 4 prevention habits',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
