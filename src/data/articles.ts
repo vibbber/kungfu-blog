@@ -1640,6 +1640,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: give kids a line they can see and a timer they can hear, then walk away.',
     tldrInside: '5-row comparison table: yelling vs. queuing, 5-step setup guide, 3 scripts for launch, conflict, and reinforcement, 3 warning signs to watch for',
   },
+  {
+    slug: 'the-living-room-launchpad',
+    title: 'No Lessons Required',
+    subtitle: 'How kids absorb talent from family life — before anyone calls it training',
+    description: '75% of world-class performers didn\'t start with lessons. They caught their passion from family life. Here\'s the 4-step pattern researchers found — and how to use it tonight.',
+    image: '/images/cards/the-living-room-launchpad.webp',
+    imageAlt: 'Kitchen counter with a sage mixing bowl, a child-sized bowl, and rolled dough — showing how kids absorb skills by participating alongside parents',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'You don\'t need to be skilled at the activity. You need to be genuinely engaged.',
+    tldrPayoff: 'Kids detect fake enthusiasm instantly. But when they see you absorbed in something real — guitar, cooking, shooting hoops — the activity becomes tied to family connection instead of obligation.',
+    tldrMove: 'The move: find something you actually love, do it visibly, and when they wander over, just let them in.',
+    tldrInside: '4-step absorption sequence, 3 gear shifts with age ranges and parent roles, narrowing warning, tonight checklist with 6 action items',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
