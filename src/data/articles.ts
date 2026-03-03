@@ -1660,6 +1660,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: find something you actually love, do it visibly, and when they wander over, just let them in.',
     tldrInside: '4-step absorption sequence, 3 gear shifts with age ranges and parent roles, narrowing warning, tonight checklist with 6 action items',
   },
+  {
+    slug: 'honoring-what-your-child-sees-and-feels',
+    title: 'The Perception Superpower',
+    subtitle: 'Five phrases silently erasing your child\'s self-trust — and five that build it',
+    description: 'Five common phrases that quietly undermine your child\'s ability to trust themselves — and the exact words to say instead that build unshakeable self-trust.',
+    image: '/images/cards/honoring-what-your-child-sees-and-feels.webp',
+    imageAlt: 'A child\'s eye with a living room reflected in the iris, symbolizing perception as a superpower',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotional Intelligence',
+    book: 'A Secure Base',
+    bookSlug: 'a-secure-base-bowlby',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'You\'re not just responding to your child\'s world. You\'re building the lens they see it through.',
+    tldrPayoff: 'Kids whose reality gets honored develop emotional clarity, resist gaslighting, and maintain stable self-worth through adolescence and beyond.',
+    tldrMove: 'The move: trade \'you\'re fine\' and \'stop crying\' for scripts that tell your child their eyes and gut are working correctly.',
+    tldrInside: '5 danger-phrase rewrites, impact table with 5 dismissal patterns, 4-step perception-protection checklist, the age-12 lens-building window',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
