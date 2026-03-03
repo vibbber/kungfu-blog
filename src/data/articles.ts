@@ -1580,6 +1580,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: learn the 4 signs of underground anger, then use the WARM method to pull your child toward verbal expression one step at a time.',
     tldrInside: '4 underground anger warning signs, 8-level anger spectrum, 4 word-for-word WARM scripts, age-by-age guide (under 6 to 17)',
   },
+  {
+    slug: 'reading-your-childs-connection-style',
+    title: 'The Love Language Game',
+    subtitle: 'Ask two questions at dinner — the pattern tells you everything',
+    description: 'A simple "would you rather" game at dinner can reveal your child\'s primary connection style. Here\'s exactly how to play it — with questions for every age.',
+    image: '/images/cards/reading-your-childs-connection-style.webp',
+    imageAlt: 'Two colorful speech bubbles with a heart symbol between them, representing a playful either/or conversation game',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Connection',
+    book: 'The 5 Love Languages of Children',
+    bookSlug: '5-love-languages-of-children-campbell-chapman',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'One dinnertime game can tell you more about your child than months of guessing.',
+    tldrPayoff: 'Kids raised by parents who speak their primary style handle peer rejection, share more easily, and stay emotionally open through the preteen years.',
+    tldrMove: 'The shift: replace generic affection with targeted connection — find the one style that lights them up and lead with it.',
+    tldrInside: '7 either/or questions sorted by age (5-7, 8-11, 12+), 5 behavioral clues to watch for, 5 common complaints decoded, 4-step request tracking method',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
