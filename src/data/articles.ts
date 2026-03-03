@@ -1620,6 +1620,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: connect first, correct second, reconnect immediately after -- every single time.',
     tldrInside: '3-step Correction Sandwich, REACH diagnostic flowchart, deposits vs. withdrawals tracker, 4 prevention habits',
   },
+  {
+    slug: 'structured-turn-system',
+    title: 'Retire from Referee Duty',
+    subtitle: 'Stop refereeing toy fights -- one system makes kids run fairness themselves',
+    description: 'Stop refereeing every toy fight. Set up a visible turn queue and watch your kids run fairness themselves — no nagging, no meltdowns, no screaming.',
+    image: '/images/cards/structured-turn-system.webp',
+    imageAlt: 'A warm illustration of a whiteboard with children\'s names and a sand timer on a kitchen counter',
+    imageWidth: 1200,
+    imageHeight: 896,
+    imageAspect: 1.339,
+    topic: 'Social Skills',
+    book: 'Children of the Kibbutz',
+    bookSlug: 'children-of-the-kibbutz-spiro',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'You can stop refereeing every toy fight today.',
+    tldrPayoff: 'Kids who run their own turn system develop stronger cooperation skills, handle disputes without melting down, and start treating siblings like teammates instead of competitors.',
+    tldrMove: 'The shift: give kids a line they can see and a timer they can hear, then walk away.',
+    tldrInside: '5-row comparison table: yelling vs. queuing, 5-step setup guide, 3 scripts for launch, conflict, and reinforcement, 3 warning signs to watch for',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
