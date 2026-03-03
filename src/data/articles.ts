@@ -1560,6 +1560,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop defaulting to talk-repeat-yell and start matching each situation to a specific low-volume tool.',
     tldrInside: '11 tools with \'use when\' tags for each, scripts like \'Whose shoes are in the hallway?\', quick reference table: situation, tool, words needed, 4-week rollout plan',
   },
+  {
+    slug: 'anger-spectrum-training',
+    title: 'The Quiet Fury',
+    subtitle: 'Why your calmest kid might need anger training most',
+    description: 'The child who never blows up might have the worst anger problem. Learn to spot underground anger and coach kids toward healthy expression using the 8-level Anger Spectrum and WARM method.',
+    image: '/images/cards/anger-spectrum-training.webp',
+    imageAlt: 'A calm school desk scene with crumpled paper and a snapped pencil hinting at hidden frustration beneath composure',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Emotions',
+    book: 'The 5 Love Languages of Children',
+    bookSlug: '5-love-languages-of-children-campbell-chapman',
+    datePublished: '2026-03-03',
+    dateModified: '2026-03-03',
+    tldrAnchor: 'Most parents only worry about loud anger. The quiet kind does more damage.',
+    tldrPayoff: 'Kids trained on the anger spectrum stop faking apathy, stop tanking their own performance, and start telling you what\'s actually wrong.',
+    tldrMove: 'The move: learn the 4 signs of underground anger, then use the WARM method to pull your child toward verbal expression one step at a time.',
+    tldrInside: '4 underground anger warning signs, 8-level anger spectrum, 4 word-for-word WARM scripts, age-by-age guide (under 6 to 17)',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
