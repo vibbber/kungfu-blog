@@ -1740,6 +1740,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: map where you already are, set up a mini station at each spot, and add a seat so you can stay close without hovering.',
     tldrInside: 'typical vs. proximity setup comparison, room-by-room quick wins (4 rooms), puzzle box replacement hack, 5-minute evening reset routine',
   },
+  {
+    slug: 'track-what-matters',
+    title: 'The 30-Second Habit',
+    subtitle: 'One tally mark per day reveals what months of worrying can\'t',
+    description: 'Your brain rounds every bad moment up to "constant." A dead-simple tracking habit reveals what\'s actually happening — and the wins you were completely missing.',
+    image: '/images/cards/track-what-matters.webp',
+    imageAlt: 'Warm illustration of a pencil making a tally mark with a lightbulb moment, representing the simplicity of behavior tracking',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Behavior',
+    book: 'ABA Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'Three weeks of simple tracking gives you more clarity than a year of worrying.',
+    tldrPayoff: 'Kids benefit from parents who can say \'this strategy cut meltdowns by half\' instead of \'I think things are maybe better?\' -- and the data makes those wins visible to the whole family.',
+    tldrMove: 'The move: week one baseline, week two try something new, week three compare the numbers.',
+    tldrInside: 'behavior definition examples, decision flowchart for method selection, 6 tracking tools explained, 3-week baseline-intervene-confirm framework',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
