@@ -1680,6 +1680,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: trade \'you\'re fine\' and \'stop crying\' for scripts that tell your child their eyes and gut are working correctly.',
     tldrInside: '5 danger-phrase rewrites, impact table with 5 dismissal patterns, 4-step perception-protection checklist, the age-12 lens-building window',
   },
+  {
+    slug: 'team-points-system',
+    title: 'The Shared Scoreboard',
+    subtitle: 'Kids who hold each other accountable — without you raising your voice',
+    description: 'A simple team points system that makes kids coach each other instead of fight. Put everyone on the same team, track violations on a shared board, and let peer pressure do what nagging never could.',
+    image: '/images/cards/team-points-system.webp',
+    imageAlt: 'Whiteboard with tally marks, checkmark, and gold stars representing a team points scoreboard',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'ABA in Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'Peer influence is the most underused tool in a parent\'s kit.',
+    tldrPayoff: 'Kids who hold each other accountable at the dinner table, during homework, and through bedtime — without you raising your voice once.',
+    tldrMove: 'The move: short timed rounds with clear rules, calm violation marks, and instant rewards when the team wins.',
+    tldrInside: '4-step setup grid, Running a round walkthrough, Staying-neutral tip, 5 ways to prevent burnout',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
