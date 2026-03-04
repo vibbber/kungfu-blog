@@ -1700,6 +1700,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: short timed rounds with clear rules, calm violation marks, and instant rewards when the team wins.',
     tldrInside: '4-step setup grid, Running a round walkthrough, Staying-neutral tip, 5 ways to prevent burnout',
   },
+  {
+    slug: 'preparing-for-adult-life',
+    title: 'Stop Rescuing, Start Coaching',
+    subtitle: 'The research says your expectations matter more than their grades — here\'s what that looks like daily',
+    description: 'The single strongest predictor of adult success for kids? Your expectations. Here\'s how to coach from behind instead of rescuing from the front.',
+    image: '/images/cards/preparing-for-adult-life.webp',
+    imageAlt: 'Infographic showing crossed-out grades and homework versus highlighted work experience and advocacy icons',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Independence',
+    book: 'Applied Behavior Analysis in Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'The hardest parenting discipline is keeping your mouth shut.',
+    tldrPayoff: 'Kids who practice self-advocacy early become teenagers who run their own IEP meetings, manage money, and handle supervisors — then adults who don\'t need you to function.',
+    tldrMove: 'The shift: stop translating, ordering, and answering for them — stand one step behind and let them do it badly until they do it well.',
+    tldrInside: '4 situation scripts (restaurant, school, conflict, checkout), what-we-obsess-over vs. what-actually-works table, 4-stage age playbook, 4 this-week action cards',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
