@@ -1780,6 +1780,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: name a family queue, make the order visible, set a timer, and let them run it.',
     tldrInside: '5-step setup guide, 5 ready-to-use scripts, Share vs. queue comparison, Age progression from toddler to full autonomy',
   },
+  {
+    slug: 'the-push-through-muscle',
+    title: 'Persistence Reps',
+    subtitle: 'Why the struggle IS the workout — and how to stop cutting it short',
+    description: 'Your child says "I can\'t." What you do in the next 30 seconds determines whether they build persistence or learn to quit. The playbook by age, with exact scripts.',
+    image: '/images/cards/the-push-through-muscle.webp',
+    imageAlt: 'Warm illustration of a dumbbell with piano keys and book-shaped weight plates representing persistence as a trainable muscle',
+    imageWidth: 1376,
+    imageHeight: 768,
+    imageAspect: 1.792,
+    topic: 'Self-Control',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'Two common parent instincts that feel like helping but train quitting.',
+    tldrPayoff: 'Kids who push through boredom and frustration develop real grit -- they surprise themselves, trust their own capability, and stop needing you to step in.',
+    tldrMove: 'The shift: replace rescuing with one question (\'What\'s the first tiny piece you could figure out?\') and then wait.',
+    tldrInside: '2 trap cards with scenarios and flips, 3 age-matched scripts with debriefs, 4 grab-and-go anchor phrases, 4 tips for keeping the muscle strong long-term',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
