@@ -1760,6 +1760,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: week one baseline, week two try something new, week three compare the numbers.',
     tldrInside: 'behavior definition examples, decision flowchart for method selection, 6 tracking tools explained, 3-week baseline-intervene-confirm framework',
   },
+  {
+    slug: 'structured-turn-system',
+    title: 'Tiny Justice Engineers',
+    subtitle: 'Why your 3-year-old runs fairness better than you — and how to let them',
+    description: 'Your 3-year-old can spot a line-cutter before any adult does. Give them a visible turn queue and watch them become tiny justice engineers who run fairness on their own.',
+    image: '/images/cards/structured-turn-system.webp',
+    imageAlt: 'Warm illustration of a balance scale with toy figurines representing kids as tiny justice engineers managing fairness',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Social Skills',
+    book: 'Children of the Kibbutz',
+    bookSlug: 'children-of-the-kibbutz-spiro',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'A three-year-old will police a visible line before any adult notices the violation.',
+    tldrPayoff: 'Kids raised this way manage playground turns solo, welcome newcomers into the queue, invent rules for situations you never thought of, and self-regulate when you\'re not watching.',
+    tldrMove: 'The move: name a family queue, make the order visible, set a timer, and let them run it.',
+    tldrInside: '5-step setup guide, 5 ready-to-use scripts, Share vs. queue comparison, Age progression from toddler to full autonomy',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

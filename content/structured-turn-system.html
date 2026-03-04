@@ -4,279 +4,350 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="strategy-id" content="208">
-  <meta name="description" content="Stop refereeing every toy fight. Set up a visible turn queue and watch your kids run fairness themselves — no nagging, no meltdowns, no 'MINE!' screaming.">
-  <title>Retire from Referee Duty: The Turn System That Runs Itself</title>
+  <meta name="description" content="Your 3-year-old can run fairness better than most adults. Give them a visible turn queue and watch them become tiny justice engineers.">
+  <title>Your Three-Year-Old Is a Better Judge Than You</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #FAF6F0;
       color: #1A1A2E;
       line-height: 1.7;
+      padding: 0;
+    }
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 24px;
     }
-
-    /* --- Hero --- */
-    .hero {
-      margin: 0 -20px 40px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0 0 20px 20px;
-    }
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .hero-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(26,26,46,0.85));
-      padding: 60px 32px 28px;
-    }
-    .hero-overlay h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: #fff;
+    h1 {
+      font-size: 34px;
+      color: #1A1A2E;
       line-height: 1.2;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
-    .hero-overlay .subtitle {
-      color: #E8A598;
-      font-size: 16px;
-      font-weight: 500;
+    h1 span { color: #5C8A5A; }
+    .subtitle {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 36px;
+      font-style: italic;
     }
-
-    /* --- Sections --- */
     h2 {
-      font-family: 'Playfair Display', serif;
       font-size: 24px;
-      color: #5C8A5A;
-      margin: 40px 0 16px;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-top: 44px;
+      margin-bottom: 18px;
     }
     h3 {
       font-size: 18px;
-      color: #5C8A5A;
-      margin: 24px 0 10px;
       font-weight: 600;
+      color: #5C8A5A;
+      margin-top: 28px;
+      margin-bottom: 10px;
     }
     p {
-      margin-bottom: 16px;
-      font-size: 16px;
+      font-size: 17px;
+      color: #2D2D3A;
+      margin-bottom: 18px;
+    }
+    .lead {
+      font-size: 20px;
+      color: #1A1A2E;
+      font-weight: 500;
+      line-height: 1.6;
     }
     strong { color: #1A1A2E; }
 
-    /* --- Callout Box --- */
+    /* Images */
+    .blog-img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 28px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      margin-top: -18px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* Callout */
     .callout {
       background: #5C8A5A;
-      color: #fff;
-      border-radius: 14px;
-      padding: 28px 24px;
-      margin: 32px 0;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin: 36px 0;
       text-align: center;
     }
-    .callout .label {
-      font-size: 12px;
+    .callout .tag {
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       opacity: 0.8;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .callout p {
       font-size: 22px;
       font-weight: 600;
+      color: white;
+      margin: 0;
       line-height: 1.4;
-      margin-bottom: 0;
-      color: #fff;
     }
 
-    /* --- Comparison Table --- */
-    .comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
+    /* Kid-brain vs adult-brain table */
+    .brain-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
       border-radius: 12px;
       overflow: hidden;
-      margin: 24px 0;
-      border: 1px solid #E0D5C0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-    .comparison .col-header {
-      padding: 14px 16px;
-      font-weight: 700;
-      font-size: 14px;
-      text-align: center;
-    }
-    .comparison .col-header.bad { background: #FFF0E8; color: #C0392B; }
-    .comparison .col-header.good { background: #EDF7ED; color: #5C8A5A; }
-    .comparison .cell {
-      padding: 12px 16px;
-      font-size: 14px;
-      border-top: 1px solid #E0D5C0;
-    }
-    .comparison .cell:nth-child(odd) { border-right: 1px solid #E0D5C0; }
-    .comparison .cell.alt { background: #FDFAF5; }
-
-    /* --- In-blog Image --- */
-    .blog-img {
-      margin: 32px -20px;
-      text-align: center;
-    }
-    .blog-img img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border-radius: 12px;
-    }
-    .blog-img .caption {
+    .brain-table thead th {
+      padding: 13px 16px;
       font-size: 13px;
-      color: #7A8B8B;
-      margin-top: 8px;
-      font-style: italic;
-      padding: 0 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .brain-table thead th:first-child {
+      background: #E8A598;
+      color: #6B2A1E;
+    }
+    .brain-table thead th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+    .brain-table td {
+      padding: 12px 16px;
+      font-size: 15px;
+      border-bottom: 1px solid #EDE8E0;
+      vertical-align: top;
+    }
+    .brain-table tr:last-child td { border-bottom: none; }
+    .brain-table tbody tr:nth-child(even) { background: #F7F3ED; }
+
+    /* Wow-stat cards */
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    @media (max-width: 600px) {
+      .stat-row { grid-template-columns: 1fr; }
+    }
+    .stat-card {
+      background: white;
+      border: 1px solid #E0D5C0;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .stat-card .num {
+      font-size: 32px;
+      font-weight: 700;
+      color: #5C8A5A;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .desc {
+      font-size: 13px;
+      color: #777;
+      margin: 0;
     }
 
-    /* --- Step Cards --- */
-    .steps {
+    /* Setup cards */
+    .setup-grid {
       display: grid;
       gap: 14px;
-      margin: 20px 0;
+      margin: 24px 0;
     }
-    .step {
-      background: #fff;
-      border: 1px solid #E0D5C0;
-      border-radius: 12px;
-      padding: 18px 20px;
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 14px;
-      align-items: start;
+    .setup-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #EDE8E0;
     }
-    .step-num {
-      width: 44px;
-      height: 44px;
+    .setup-icon {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
       background: #5C8A5A;
-      color: #fff;
+      color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
       font-size: 18px;
-      flex-shrink: 0;
+      font-weight: 700;
     }
-    .step h4 {
+    .setup-text h4 {
       font-size: 16px;
+      font-weight: 600;
       color: #1A1A2E;
       margin-bottom: 4px;
     }
-    .step p {
-      font-size: 14px;
+    .setup-text p {
+      font-size: 15px;
       color: #555;
-      margin-bottom: 0;
+      margin: 0;
     }
 
-    /* --- Script Box --- */
-    .script-box {
+    /* Script boxes */
+    .script {
       background: #F0F7F0;
       border-left: 4px solid #5C8A5A;
-      border-radius: 0 10px 10px 0;
-      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
       margin: 20px 0;
     }
-    .script-box .label {
-      font-size: 12px;
+    .script .when {
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: #5C8A5A;
       font-weight: 700;
       margin-bottom: 8px;
     }
-    .script-box p {
-      font-size: 15px;
+    .script p {
+      font-size: 16px;
       font-style: italic;
-      margin-bottom: 6px;
-      color: #2C3E50;
+      color: #2D2D3A;
+      margin: 4px 0;
     }
-    .script-box p:last-child { margin-bottom: 0; }
 
-    /* --- Age Table --- */
-    .age-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 14px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #E0D5C0;
+    /* Age progression */
+    .age-track {
+      margin: 24px 0;
     }
-    .age-table th {
+    .age-step {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid #EDE8E0;
+      align-items: flex-start;
+    }
+    .age-step:last-child { border-bottom: none; }
+    .age-badge {
+      flex-shrink: 0;
       background: #5C8A5A;
-      color: #fff;
-      padding: 12px 14px;
-      text-align: left;
-      font-weight: 600;
-    }
-    .age-table td {
-      padding: 12px 14px;
-      border-bottom: 1px solid #E0D5C0;
-      vertical-align: top;
-    }
-    .age-table tr:nth-child(even) { background: #FDFAF5; }
-    .age-table .age-label {
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
       font-weight: 700;
-      color: #5C8A5A;
-      white-space: nowrap;
+      min-width: 72px;
+      text-align: center;
     }
-
-    /* --- Warning Box --- */
-    .warning {
-      background: #FFF0E8;
-      border: 1px solid #E8A598;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 28px 0;
-    }
-    .warning h4 {
-      color: #C0392B;
+    .age-info .headline {
       font-size: 15px;
-      margin-bottom: 10px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 4px;
     }
-    .warning p {
+    .age-info .detail {
       font-size: 14px;
-      margin-bottom: 10px;
+      color: #777;
+      margin: 0;
     }
-    .warning p:last-child { margin-bottom: 0; }
 
-    /* --- Footer --- */
+    /* Scenario cards */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .scenario-grid { grid-template-columns: 1fr; }
+    }
+    .scenario {
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid #EDE8E0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .scenario h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+    .scenario p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* Warning */
+    .heads-up {
+      background: #FFF5F0;
+      border: 1px solid #E8A598;
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin: 32px 0;
+    }
+    .heads-up h3 {
+      color: #C0392B;
+      font-size: 16px;
+      margin: 0 0 12px 0;
+    }
+    .heads-up ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .heads-up li {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .heads-up li:last-child { margin-bottom: 0; }
+
+    /* Closer */
+    .closer {
+      background: #EDF7ED;
+      border: 2px solid #5C8A5A;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 36px 0;
+    }
+    .closer h3 {
+      color: #5C8A5A;
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+    .closer p {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .closer p:last-child { margin-bottom: 0; }
+
     footer {
       text-align: center;
       padding-top: 28px;
-      margin-top: 40px;
-      border-top: 2px solid #E0D5C0;
-      color: #999;
-      font-size: 12px;
+      margin-top: 44px;
+      border-top: 2px solid #EDE8E0;
+      color: #BBB;
+      font-size: 13px;
     }
-    footer p { margin-bottom: 4px; }
-
-    /* --- Responsive --- */
-    @media (max-width: 600px) {
-      .hero-overlay h1 { font-size: 24px; }
-      .hero-overlay .subtitle { font-size: 14px; }
-      h2 { font-size: 20px; }
-      .callout p { font-size: 18px; }
-      .step { grid-template-columns: 36px 1fr; gap: 10px; }
-      .step-num { width: 36px; height: 36px; font-size: 15px; }
-      .comparison { grid-template-columns: 1fr; }
-      .comparison .cell:nth-child(odd) { border-right: none; }
-    }
-
+    footer p { color: #BBB; font-size: 13px; }
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
     .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
     .tldr-box ul { list-style: none; padding: 0; margin: 0; }
@@ -288,236 +359,253 @@
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="/images/blog/structured-turn-system/hero.webp" alt="Parent relaxing while children manage their own turn system with a whiteboard">
-    <div class="hero-overlay">
-      <h1>Retire from Referee Duty</h1>
-      <p class="subtitle">The turn system your kids run without you</p>
+    <h1>Your Three-Year-Old Is a <span>Better Judge</span> Than You</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">A three-year-old will police a visible line before any adult notices the violation.</p>
+      <ul>
+        <li>Kids raised this way manage playground turns solo, welcome newcomers into the queue, invent rules for situations you never thought of, and self-regulate when you're not watching.</li>
+        <li>The move: name a family queue, make the order visible, set a timer, and let them run it.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5-step setup guide &middot; 5 ready-to-use scripts &middot; Share vs. queue comparison &middot; Age progression from toddler to full autonomy</div>
     </div>
-  </div>
 
-  <div class="tldr-box">
-    <p class="tldr-anchor">You can stop refereeing every toy fight today.</p>
-    <ul>
-      <li>Kids who run their own turn system develop stronger cooperation skills, handle disputes without melting down, and start treating siblings like teammates instead of competitors.</li>
-      <li>The shift: give kids a line they can see and a timer they can hear, then walk away.</li>
-    </ul>
-    <hr class="tldr-divider">
-    <div class="tldr-inside"><strong>Inside: </strong>5-row comparison table: yelling vs. queuing &middot; 5-step setup guide &middot; 3 scripts for launch, conflict, and reinforcement &middot; 3 warning signs to watch for</div>
-  </div>
+    <p class="subtitle">Give a kid a system they can see, and they'll run fairness like they were born for it</p>
 
-  <!-- Opening -->
-  <p>Count it up. How many times today have you said some version of "give your sister a turn" or "he had it first" or "you need to share"?</p>
+    <p class="lead">A three-year-old spots a line-cutter at the slide before any adult does. She marches over, plants herself, and announces: "It's not your turn. You go after me." No hesitation. No negotiation. Pure procedural justice.</p>
 
-  <p>Now count how many of those times it actually worked.</p>
+    <p>Adults stand there impressed, maybe a little embarrassed. Because here's the truth nobody talks about: young children are <strong>extraordinarily good</strong> at running fair systems. Better than most boardroom adults, honestly. They just need one thing we almost never give them.</p>
 
-  <p>Here's the thing nobody tells you about the word "share": it's an abstract moral concept. You're asking a three-year-old to voluntarily surrender something they want <em>right now</em> for someone else's benefit. That's executive-function territory most adults struggle with. No wonder it lands like a foreign language.</p>
+    <p>A system they can <strong>see</strong>.</p>
 
-  <p>But what if you could set up a system so clear, so visible, so fair that <strong>your kids enforce it themselves</strong> -- and you get to sit on the couch and watch it happen?</p>
+    <img src="/images/blog/structured-turn-system/kid-managing-board.webp" alt="A young child confidently pointing to a whiteboard showing a turn-taking queue, looking proud and capable" class="blog-img">
+    <p class="img-caption">Give them a visible queue and watch what happens</p>
 
-  <div class="callout">
-    <div class="label">The Shift</div>
-    <p>Stop asking kids to feel generous.<br>Give them a system they can see and run.</p>
-  </div>
+    <h2>The Problem with "Share"</h2>
 
-  <!-- Why "Share" Fails -->
-  <h2>Why "Share!" Keeps Failing</h2>
+    <p>Every parent says it. "Share." Fifty times a day. Nothing happens.</p>
 
-  <p>This isn't a discipline problem. It's a design problem. When you say "share," you're loading a single word with an enormous ask: predict someone else's feelings, override your own desire, and hand over what you have -- all without a guaranteed payoff.</p>
+    <p>Because "share" is an abstract moral concept. You're asking a small human to voluntarily give up something they want right now, for someone else's benefit, based on a principle they haven't fully developed yet. Most adults can barely do that at a buffet.</p>
 
-  <p>A turn system flips every one of those demands on its head.</p>
+    <p>But watch what happens when you replace the moral appeal with a <strong>visible procedure</strong>. A whiteboard. A list of names. A sand timer. Suddenly the same kid who screamed "MINE" five minutes ago is calmly pointing to the board and saying, "You're after Liam."</p>
 
-  <div class="comparison">
-    <div class="col-header bad">Yelling "Share!"</div>
-    <div class="col-header good">Running a Turn Queue</div>
+    <p>It's not magic. It's design.</p>
 
-    <div class="cell">Relies on emotional willingness</div>
-    <div class="cell">Relies on a visible rule</div>
+    <table class="brain-table">
+      <thead>
+        <tr>
+          <th>Telling Them to "Share"</th>
+          <th>Giving Them a Turn Queue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Asks for emotional generosity</td>
+          <td>Gives them a rule they can follow</td>
+        </tr>
+        <tr>
+          <td>Child loses what they have now</td>
+          <td>Child sees their turn is guaranteed</td>
+        </tr>
+        <tr>
+          <td>You referee every single conflict</td>
+          <td>They monitor and enforce it themselves</td>
+        </tr>
+        <tr>
+          <td>Feels like punishment to the giver</td>
+          <td>Feels like fairness to everybody</td>
+        </tr>
+        <tr>
+          <td>"Why do I always have to give in?"</td>
+          <td>"Same rules for all of us"</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="cell alt">Child must give up what they have now</div>
-    <div class="cell alt">Child is guaranteed their turn is coming</div>
+    <div class="callout">
+      <div class="tag">The principle</div>
+      <p>Kids don't need a lecture on generosity.<br>They need a system they can see and run.</p>
+    </div>
 
-    <div class="cell">Requires your intervention every single time</div>
-    <div class="cell">Kids monitor and enforce it themselves</div>
+    <h2>What Kids Actually Do With a Queue</h2>
 
-    <div class="cell alt">Feels like punishment to the giver</div>
-    <div class="cell alt">Feels like fairness to everyone</div>
+    <p>This is the part that blows parents' minds. Give children a visible turn system and step back. Within days:</p>
 
-    <div class="cell">Breeds resentment: "Why do I always give in?"</div>
-    <div class="cell">Builds solidarity: "Same rules for all of us"</div>
-  </div>
-
-  <p>Notice that last row. The turn system doesn't just reduce fights -- it actively builds cooperation. Kids who run a queue together start seeing each other as teammates, not competitors.</p>
-
-  <!-- Before/After Image -->
-  <div class="blog-img">
-    <img src="/images/blog/structured-turn-system/before-after.webp" alt="Before: parent stressed between fighting kids. After: parent relaxed while kids manage their own queue.">
-    <p class="caption">Same family, same toy, completely different dynamic.</p>
-  </div>
-
-  <!-- How to Set It Up -->
-  <h2>Five Minutes to Set Up, Years of Peace</h2>
-
-  <p>This is genuinely simple. You need a surface to write on and a timer. That's it.</p>
-
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div>
-        <h4>Name It</h4>
-        <p>Give the system a family name -- "the queue," "the turn board," "the lineup." The name matters because it becomes a concept your child can invoke. When the screaming starts, they can say <em>"we need the queue"</em> instead of melting down. That's your finish line.</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num">3</div>
+        <p class="desc">Age when kids start policing violations on their own</p>
+      </div>
+      <div class="stat-card">
+        <div class="num">0</div>
+        <p class="desc">Adult interventions needed once the queue is running</p>
+      </div>
+      <div class="stat-card">
+        <div class="num">5+</div>
+        <p class="desc">Age when they start inventing new rules for new situations</p>
       </div>
     </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div>
-        <h4>Make It Visible</h4>
-        <p>Write names on a whiteboard. Clip clothespins to a strip of cardboard. Have them physically line up. The key: kids must be able to <em>see</em> the order. Visibility is what makes the system self-enforcing -- nobody can claim they didn't know whose turn it was.</p>
+
+    <p>They remind each other. They call out line-cutters. They invite new kids to join the queue. They negotiate modifications. They create rules for situations you never thought of. You go from exhausted referee to spectator with coffee.</p>
+
+    <img src="/images/blog/structured-turn-system/before-after.webp" alt="Before and after: stressed parent mediating toy fights versus parent relaxing while kids manage turns independently" class="blog-img">
+    <p class="img-caption">The transformation: from constant refereeing to watching them run it</p>
+
+    <h2>How to Set It Up (Tonight)</h2>
+
+    <p>This takes about ten minutes to introduce. Here's the full setup:</p>
+
+    <div class="setup-grid">
+      <div class="setup-card">
+        <div class="setup-icon">1</div>
+        <div class="setup-text">
+          <h4>Name It</h4>
+          <p>Give the system a family name your kids can invoke: "the queue," "the turn list," "the lineup." The name matters because it becomes a tool your child reaches for. When conflict erupts, they say <em>"we need the queue"</em> instead of screaming. That's the goal.</p>
+        </div>
+      </div>
+      <div class="setup-card">
+        <div class="setup-icon">2</div>
+        <div class="setup-text">
+          <h4>Make It Visible</h4>
+          <p>Names on a whiteboard. Clothespins on a strip of cardboard. A physical line. The order has to be something kids can <strong>see</strong>. Visibility is what makes the system self-enforcing. Nobody can claim they didn't know whose turn it was.</p>
+        </div>
+      </div>
+      <div class="setup-card">
+        <div class="setup-icon">3</div>
+        <div class="setup-text">
+          <h4>Set a Timer</h4>
+          <p>Every turn needs a clear endpoint -- kitchen timer, sand timer, a set number of rounds, or a task ("until you go down the slide three times"). Without a defined end, the first person monopolizes everything and the whole thing falls apart.</p>
+        </div>
+      </div>
+      <div class="setup-card">
+        <div class="setup-icon">4</div>
+        <div class="setup-text">
+          <h4>Everyone Follows It</h4>
+          <p>Including adults. The moment a child sees you wave their sibling to the front, the system is dead. If the rule isn't universal, it's not a rule -- it's a suggestion. Kids see through suggestions instantly.</p>
+        </div>
+      </div>
+      <div class="setup-card">
+        <div class="setup-icon">5</div>
+        <div class="setup-text">
+          <h4>Step Back</h4>
+          <p>Once it's running, your job is done. Children who manage the system themselves develop stronger fairness instincts and social skills than children managed by adults. Let them call out violations, negotiate adjustments, welcome newcomers.</p>
+        </div>
       </div>
     </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div>
-        <h4>Set a Timer</h4>
-        <p>Each turn needs a clear endpoint. A kitchen timer. A sand timer. A count to 30. Without a defined end, the first person in line monopolizes everything and the system dies on day one.</p>
-      </div>
+
+    <h2>The Scripts That Make It Click</h2>
+
+    <p>Theory is nice. These are the exact words that work:</p>
+
+    <div class="script">
+      <div class="when">Launching it for the first time</div>
+      <p>"We have a new system for stuff we all want to use. It's called the Turn List. Your name goes on the board. When the timer goes off, the next person goes. Everyone gets the same time. Sound fair?"</p>
     </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div>
-        <h4>Apply It to Everyone</h4>
-        <p>Everyone follows the queue -- including you. The moment a child sees you wave their sibling to the front, the system is dead. If the rule isn't universal, it's not a rule. Kids see through exceptions instantly.</p>
-      </div>
+
+    <div class="script">
+      <div class="when">When conflict breaks out</div>
+      <p>"Sounds like you both want it. Let's check the Turn List -- who's next?"</p>
     </div>
-    <div class="step">
-      <div class="step-num">5</div>
-      <div>
-        <h4>Step Back</h4>
-        <p>This is the whole point. Once it's running, your job is done. Children who manage the system themselves develop stronger fairness instincts and social skills than children managed by adults. Let them call out violations. Let them negotiate adjustments. Watch.</p>
-      </div>
+
+    <div class="script">
+      <div class="when">When a child is waiting well</div>
+      <p>"You're waiting so well. See your name? You're right after Kai."</p>
     </div>
-  </div>
 
-  <!-- Scripts -->
-  <h2>Exact Words to Use</h2>
+    <div class="script">
+      <div class="when">When they run it without you</div>
+      <p>"You two figured out the turns all by yourselves. That's how teams work."</p>
+    </div>
 
-  <p>The launch moment matters. Here's what to say:</p>
+    <div class="script">
+      <div class="when">When a meltdown happens anyway</div>
+      <p>"Waiting is really hard. Your turn is coming -- look, you're next on the board. Want to watch the sand timer with me?"</p>
+    </div>
 
-  <div class="script-box">
-    <div class="label">When You Set It Up</div>
-    <p>"We're going to try something new. When more than one person wants the same thing, we use the turn board. I'll write your name, you watch the timer, and when it beeps -- next person's turn. Same rules for everyone, including me."</p>
-  </div>
+    <h2>Where to Deploy It</h2>
 
-  <div class="script-box">
-    <div class="label">When a Fight Erupts</div>
-    <p>"Sounds like we need the turn board. Who's first? Let's write it down."</p>
-  </div>
-
-  <div class="script-box">
-    <div class="label">When They Handle It Themselves</div>
-    <p>"You figured out the turns all by yourselves. That's impressive."</p>
-  </div>
-
-  <p>That last script is the most important one. Every time you name their self-governance, you reinforce it.</p>
-
-  <!-- Age Expectations -->
-  <h2>What Your Kid Can Handle (By Age)</h2>
-
-  <table class="age-table">
-    <thead>
-      <tr>
-        <th>Age</th>
-        <th>What They Can Do</th>
-        <th>Your Role</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="age-label">Under 2</td>
-        <td>Understands "your turn" only when the object is physically placed in their hands.</td>
-        <td>Manage every handoff. Narrate: "Now it's your turn." Planting the seed.</td>
-      </tr>
-      <tr>
-        <td class="age-label">2 - 3</td>
-        <td>Can wait 30-60 seconds. Starting to remind others about rules. Still needs backup.</td>
-        <td>Set the order, run the timer: "You're waiting so well. Almost your turn."</td>
-      </tr>
-      <tr>
-        <td class="age-label">3 - 5</td>
-        <td>Can form lines on their own. Will vigorously police violations. Loud protests when rules break = a feature.</td>
-        <td>Set up, step back. Intervene only when someone's being excluded.</td>
-      </tr>
-      <tr>
-        <td class="age-label">5+</td>
-        <td>Negotiates turn order. Sets their own time limits. Creates new rules for new situations. Includes newcomers.</td>
-        <td>Occasional check-in. Mostly hands off. Enjoy the show.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Kids Self-Managing Image -->
-  <div class="blog-img">
-    <img src="/images/blog/structured-turn-system/kids-self-manage.webp" alt="Children independently managing turns at a playground with a sand timer">
-    <p class="caption">Once the system clicks, they don't need you in the loop.</p>
-  </div>
-
-  <!-- Where to Deploy -->
-  <h2>Deploy It Everywhere</h2>
-
-  <p>The turn system isn't just for toys. Once kids learn the concept, it transfers:</p>
-
-  <div class="steps">
-    <div class="step">
-      <div class="step-num" style="background:#E8A598; font-size:14px;">TV</div>
-      <div>
+    <div class="scenario-grid">
+      <div class="scenario">
         <h4>Screen Time</h4>
-        <p>Each kid gets a timed turn with the tablet or remote. Post the rotation on the fridge. They'll hold you to it.</p>
+        <p>Each child gets a defined turn with the tablet. Timer runs. When it beeps, the next child goes. Post the rotation on the fridge so everyone can check.</p>
+      </div>
+      <div class="scenario">
+        <h4>Coveted Toys</h4>
+        <p>New LEGO set, ride-on car, art supplies -- the queue determines who plays first, second, third. No negotiation needed.</p>
+      </div>
+      <div class="scenario">
+        <h4>Family Privileges</h4>
+        <p>Front seat. Movie pick. Who gets to help cook. Rotate on a queue schedule. Your kids will remember and keep you honest.</p>
+      </div>
+      <div class="scenario">
+        <h4>Playground and Playdates</h4>
+        <p>Multiple kids want the same swing? Queue up, count to 30, rotate. Other parents will look at you like you have a superpower.</p>
       </div>
     </div>
-    <div class="step">
-      <div class="step-num" style="background:#E8A598; font-size:14px;">Car</div>
-      <div>
-        <h4>Privileges</h4>
-        <p>Front seat. Movie pick night. Who gets to help cook. Rotate on a schedule. Kids remember -- they'll keep you honest.</p>
+
+    <h2>What to Expect at Each Age</h2>
+
+    <p>Kids grow into the system. Here's what each stage looks like:</p>
+
+    <div class="age-track">
+      <div class="age-step">
+        <div class="age-badge">Under 2</div>
+        <div class="age-info">
+          <p class="headline">They can't wait yet -- but they're absorbing everything</p>
+          <p class="detail">You physically manage every handoff. Name it each time: "Now it's your turn." The concept is sinking in even if they can't act on it.</p>
+        </div>
+      </div>
+      <div class="age-step">
+        <div class="age-badge">2-3 yrs</div>
+        <div class="age-info">
+          <p class="headline">Can wait 30-60 seconds. Starting to remind others about rules.</p>
+          <p class="detail">Set the order, run the timer, narrate: "You're waiting so well." Step in when patience runs out. They still need backup.</p>
+        </div>
+      </div>
+      <div class="age-step">
+        <div class="age-badge">3-5 yrs</div>
+        <div class="age-info">
+          <p class="headline">This is where it gets incredible.</p>
+          <p class="detail">They form their own lines. They vigorously police violations. They protest loudly when rules break -- that's a feature, not a bug. Set it up, then step back. Intervene only when someone's being excluded.</p>
+        </div>
+      </div>
+      <div class="age-step">
+        <div class="age-badge">5+ yrs</div>
+        <div class="age-info">
+          <p class="headline">Full autonomy. They're better at this than most offices.</p>
+          <p class="detail">They negotiate turn order, set their own time limits, create new rules for new situations, and welcome newcomers. Your job: occasional check-in. Mostly just enjoy watching.</p>
+        </div>
       </div>
     </div>
-    <div class="step">
-      <div class="step-num" style="background:#E8A598; font-size:12px;">Park</div>
-      <div>
-        <h4>Playground</h4>
-        <p>Multiple kids want the same swing? Count to 30 and rotate. Other parents will look at you like a wizard.</p>
-      </div>
+
+    <img src="/images/blog/structured-turn-system/kids-self-managing.webp" alt="Children at a playground confidently managing their own turn-taking system with a timer, no adults needed" class="blog-img">
+    <p class="img-caption">By age 5, they'll run the system better than you ever could</p>
+
+    <div class="heads-up">
+      <h3>Three things to keep in mind</h3>
+      <ul>
+        <li><strong>Shared resources only.</strong> The queue is for things everyone has equal claim to -- shared toys, family privileges, playground equipment. Forcing turns on a child's personal things ("let your brother use YOUR bike") feels like a violation, and they're right.</li>
+        <li><strong>Power dynamics don't disappear.</strong> A bigger or older child can still intimidate a younger one into surrendering a turn. In mixed-age groups, stay closer -- not farther away.</li>
+        <li><strong>Big feelings will still happen.</strong> The queue doesn't prevent frustration -- it channels it. A child who melts down while waiting is learning something valuable. They still need your empathy in the moment.</li>
+      </ul>
     </div>
+
+    <div class="closer">
+      <h3>The Real Payoff</h3>
+      <p>Start with something low-stakes during a calm moment. Once the concept clicks, bring it to the high-conflict situations -- tablet time, the new toy, who picks the movie.</p>
+      <p>When you hear the first rumble of "that's MINE," get ahead of it: <em>"Sounds like we need the queue."</em> Early intervention is ten times easier than late intervention.</p>
+      <p>And model it yourself. When you and your partner disagree about what to watch or whose music plays in the car, use the queue. Kids learn systems from watching, not from lectures.</p>
+      <p>As they grow, they'll modify the system -- adding exceptions, negotiating trades, inventing rules for new situations. That's not gaming the system. That's <strong>learning to build systems</strong>. Cooperative negotiation, fairness instincts, conflict resolution -- the skills that transfer to group projects, team sports, roommates, workplaces, everything.</p>
+      <p>Ten minutes to set up. A kid who runs fairness like she was born to.</p>
+    </div>
+
+    <footer>
+      <p>Strategy 208 &middot; Kung Fu Family &middot; kungfu.family</p>
+    </footer>
+
   </div>
-
-  <!-- Caveats -->
-  <div class="warning">
-    <h4>Three Things to Watch</h4>
-    <p><strong>Personal stuff is off-limits.</strong> The queue is for shared resources only. Forcing a turn system on your child's personal bike or blanket feels like a violation to them -- and they're right.</p>
-    <p><strong>Power dynamics persist.</strong> A bigger kid can still intimidate a smaller one into surrendering their turn. In mixed-age groups, stay closer, not farther. The system levels the field, but it doesn't erase size differences.</p>
-    <p><strong>Meltdowns still happen.</strong> Waiting is genuinely hard for young kids. The queue doesn't prevent frustration -- it channels it. A child who cries while waiting is learning something valuable. They still need your empathy in that moment.</p>
-  </div>
-
-  <!-- The Bigger Picture -->
-  <h2>You're Not Just Solving Toy Fights</h2>
-
-  <p>Here's what's actually happening when your kids run a turn queue: they're practicing negotiation, self-regulation, enforcement of social contracts, and inclusion of newcomers. Every playground line, every whiteboard rotation, every "it's your turn next" is a rep in cooperative living.</p>
-
-  <p>Start with something low-stakes during a calm moment. Let the concept become familiar before you deploy it during a meltdown. Model it yourself -- when you and your partner disagree about what to watch, use the queue. Kids learn systems from watching, not from lectures.</p>
-
-  <p>And as they grow, they'll modify the system. They'll add exceptions, negotiate trades, create new rules for situations you never imagined. That's not the system breaking -- that's the whole point. You gave them a framework for cooperative fairness. What they build on top of it is theirs.</p>
-
-  <div class="callout">
-    <div class="label">The Real Win</div>
-    <p>One whiteboard. One timer.<br>A lifetime of knowing how to share a world with other people.</p>
-  </div>
-
-  <footer>
-    <p>Kung Fu Parenting &middot; kungfu.family</p>
-    <p>Strategy #208 &middot; Published by kungfu.family</p>
-  </footer>
-
 </body>
 </html>
