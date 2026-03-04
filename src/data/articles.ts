@@ -1720,6 +1720,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop translating, ordering, and answering for them — stand one step behind and let them do it badly until they do it well.',
     tldrInside: '4 situation scripts (restaurant, school, conflict, checkout), what-we-obsess-over vs. what-actually-works table, 4-stage age playbook, 4 this-week action cards',
   },
+  {
+    slug: 'home-play-design',
+    title: 'The Proximity Setup',
+    subtitle: 'Why your playroom sits empty — and the 3-step layout fix that unlocks independent play',
+    description: 'Your child keeps dragging toys to the kitchen floor. That\'s not mess — that\'s a blueprint. Here\'s how to design your home so kids actually play independently.',
+    image: '/images/cards/home-play-design.webp',
+    imageAlt: 'Warm illustration of a home play setup showing toys placed near where parents spend their day',
+    imageWidth: 907,
+    imageHeight: 1024,
+    imageAspect: 0.886,
+    topic: 'Play',
+    book: 'But I\'m Bored',
+    bookSlug: 'but-im-bored-assa',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'Where you put the toys matters more than which toys you buy.',
+    tldrPayoff: 'Kids who can look up and see you flip into explore mode -- longer play sessions, fewer meltdowns, and real independent stretches while you get things done.',
+    tldrMove: 'The move: map where you already are, set up a mini station at each spot, and add a seat so you can stay close without hovering.',
+    tldrInside: 'typical vs. proximity setup comparison, room-by-room quick wins (4 rooms), puzzle box replacement hack, 5-minute evening reset routine',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
