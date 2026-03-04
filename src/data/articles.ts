@@ -1800,6 +1800,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace rescuing with one question (\'What\'s the first tiny piece you could figure out?\') and then wait.',
     tldrInside: '2 trap cards with scenarios and flips, 3 age-matched scripts with debriefs, 4 grab-and-go anchor phrases, 4 tips for keeping the muscle strong long-term',
   },
+  {
+    slug: 'non-correction-protocol',
+    title: 'Silence After the Mistake',
+    subtitle: 'Montessori\'s counterintuitive discovery — why doing nothing teaches more',
+    description: 'Your instinct to correct feels like love. Montessori discovered it\'s actually interference. The 5-step silence protocol that keeps your child\'s confidence and learning intact.',
+    image: '/images/cards/non-correction-protocol.webp',
+    imageAlt: 'A single candle with a still flame representing the calm power of silence after a child\'s mistake',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Learning',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-04',
+    dateModified: '2026-03-04',
+    tldrAnchor: 'The instinct to correct your child feels like love. It\'s actually interference.',
+    tldrPayoff: 'Kids whose parents master this keep their confidence intact through mistakes, stay in learning mode longer, and absorb lessons on their own timeline.',
+    tldrMove: 'The move: when they get it wrong, go quiet, smile warmly, and end the session — no commentary, no do-overs.',
+    tldrInside: '5-step non-correction protocol, side-by-side: correction vs. silence outcomes, scenario table across 5 common situations',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
