@@ -1960,6 +1960,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: match the symptom to its cause — extinction burst means hold steady, backfire means check what happens right after the behavior.',
     tldrInside: '6 specific symptoms matched to causes and fixes, 3 named implementation bugs, 5-question debug sequence, payoff competition table',
   },
+  {
+    slug: 'teaching-kids-how-their-brain-works',
+    title: 'Three-Zone Brain Map',
+    subtitle: 'One casual chat gives your kid a framework for every meltdown that follows',
+    description: 'Teach your child three brain zones in one relaxed conversation. Next time the alarm goes off, they\'ll know exactly what\'s happening — and how to reset it.',
+    image: '/images/cards/teaching-kids-how-their-brain-works.webp',
+    imageAlt: 'Kid-friendly brain outline with three color-coded zones: control center, alarm system, and thinking brain',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Emotional Intelligence',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Slow breathing is the fastest way to bring a kid\'s thinking brain back online.',
+    tldrPayoff: 'Kids who practice the reset handle rejection, recover from friend drama, and make better choices mid-frustration without waiting for a parent to fix it.',
+    tldrMove: 'The shift: stop telling kids to calm down and start teaching them why breathing actually works on their brain.',
+    tldrInside: '3 kid-friendly brain zone cards, word-for-word reset script, practice-when-calm tip, 4 moves that lock it in long-term',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
