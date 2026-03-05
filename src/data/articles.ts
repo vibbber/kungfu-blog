@@ -1980,6 +1980,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop telling kids to calm down and start teaching them why breathing actually works on their brain.',
     tldrInside: '3 kid-friendly brain zone cards, word-for-word reset script, practice-when-calm tip, 4 moves that lock it in long-term',
   },
+  {
+    slug: 'the-flavor-ladder',
+    title: 'The Dip Strategy',
+    subtitle: 'Cautious eaters expand their diets when every new bite comes wrapped in something they already trust.',
+    description: 'Your child\'s favorite sauce is a skeleton key to dozens of new foods. The dip strategy turns picky eaters into adventurous ones — no pressure, no tricks.',
+    image: '/images/cards/the-flavor-ladder.webp',
+    imageAlt: 'Flat-lay overhead dipping station with colorful bowls of sauces and vegetables on a wooden board',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'feeding',
+    book: 'Helping Your Child with Extreme Picky Eating',
+    bookSlug: 'helping-child-extreme-picky-eating-rowell',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Picky eaters don\'t reject foods -- they reject the gap between known and unknown.',
+    tldrPayoff: 'Kids raised with dipping stations eat roasted vegetables within months. They reach for new foods voluntarily because every first bite comes wrapped in something they already trust.',
+    tldrMove: 'The move: close the gap with a familiar sauce. One dip turns a scary vegetable into a vehicle for something they already love.',
+    tldrInside: 'sauce-to-food expansion map for 6 common dips, 3-step setup with zero pressure, seasoning chain technique, 4 mistakes that break trust',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
