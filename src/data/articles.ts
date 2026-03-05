@@ -1920,6 +1920,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: treat tech conversations like a playbook — know every argument they\'ll make and have your one calm answer ready.',
     tldrInside: 'HEAR method for mid-argument composure, 8 scripted responses across smartphone and social media debates, comparison table for when they challenge the rules themselves, 5 long-term plays to shift the dynamic before the fight',
   },
+  {
+    slug: 'playful-discipline',
+    title: 'Stories Over Lectures',
+    subtitle: 'How imagination changes behavior when logic can\'t',
+    description: 'The discipline technique that replaces yelling with imagination. Give a shoe a voice, invent a silly creature, and watch your child actually cooperate.',
+    image: '/images/cards/playful-discipline.webp',
+    imageAlt: 'Illustration of an open storybook with whimsical characters climbing out of its pages',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Discipline',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Children under seven don\'t process rules through logic — they process them through play.',
+    tldrPayoff: 'Kids who learn behavior through stories and pretend actually retain the lesson. They share without prompting, brush teeth without a fight, and self-correct during real conflicts because they already rehearsed the right move.',
+    tldrMove: 'The shift: stop explaining why and start wrapping the lesson in a character, a silly voice, or a make-believe scenario.',
+    tldrInside: '2 family legend scripts, 2 science adventure scripts, object voice comparison table, replay technique for teens',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
