@@ -1900,6 +1900,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair secure storage at home with one 10-second question before every playdate.',
     tldrInside: 'SAFE protocol (Secure, Ask, Forget training, Expect curiosity), playdate conversation script, 5-row parent belief vs. research table, 4-item long-term checklist',
   },
+  {
+    slug: 'boundary-toolkit-tech-conversations',
+    title: 'The Tech Argument Playbook',
+    subtitle: 'Every pushback they\'ll throw at you — and exactly what to say back',
+    description: 'Your kid has been workshopping their tech arguments with friends. Here are the calm, pre-scripted responses for every smartphone and social media pushback they\'ll throw at you.',
+    image: '/images/cards/boundary-toolkit-tech-conversations.webp',
+    imageAlt: 'Illustration of a clipboard with paired speech bubbles showing parent-child tech conversation scripts',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Technology',
+    book: '10 Rules for Raising Kids in a High-Tech World',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Every "free" app is paid for with your kid\'s attention — their most irreplaceable resource.',
+    tldrPayoff: 'Kids whose parents weathered the pushback end up with stronger focus, deeper friendships, and the kind of self-regulation that carries into adulthood.',
+    tldrMove: 'The move: treat tech conversations like a playbook — know every argument they\'ll make and have your one calm answer ready.',
+    tldrInside: 'HEAR method for mid-argument composure, 8 scripted responses across smartphone and social media debates, comparison table for when they challenge the rules themselves, 5 long-term plays to shift the dynamic before the fight',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
