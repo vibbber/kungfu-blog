@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The one question that protects your child more than any safety training ever could. Why gun education fails kids — and the 10-second conversation that actually works.">
+  <title>The One Question That Actually Keeps Kids Safe Around Guns</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #E8A598;
+    }
+    h1 {
+      font-size: 28px;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: #6B7B7B;
+      font-style: italic;
+    }
+
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin: 36px 0 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+
+    /* Opener callout */
+    .opener-callout {
+      background: linear-gradient(135deg, #5C8A5A, #4A7A48);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .opener-callout .big-stat {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .opener-callout .stat-desc {
+      font-size: 16px;
+      opacity: 0.92;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-size: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .compare-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare-table tbody td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #EDE8E0;
+      vertical-align: top;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #F5F0E8;
+    }
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .col-belief { color: #C0392B; font-weight: 600; }
+    .col-reality { color: #5C8A5A; font-weight: 600; }
+
+    /* Finding cards */
+    .finding-grid {
+      display: grid;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .finding-card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .finding-card h3 {
+      font-size: 17px;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+    .finding-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    /* Action protocol */
+    .protocol-card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 24px 0;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+    .protocol-card h2 {
+      margin-top: 0;
+    }
+    .step-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    .step-row:last-child { margin-bottom: 0; }
+    .step-letter {
+      background: #E8A598;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .step-body { flex: 1; }
+    .step-body h4 {
+      color: #5C8A5A;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+    .step-body p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    /* Script box */
+    .script-box {
+      background: linear-gradient(135deg, #E8A598 0%, #D4816B 100%);
+      color: white;
+      padding: 24px 28px;
+      border-radius: 14px;
+      margin: 28px 0;
+    }
+    .script-box h3 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      opacity: 0.9;
+    }
+    .script-box blockquote {
+      font-size: 17px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      padding-left: 16px;
+      border-left: 3px solid rgba(255,255,255,0.4);
+    }
+    .script-box .script-note {
+      font-size: 14px;
+      opacity: 0.88;
+    }
+
+    /* Storage stat bar */
+    .storage-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .storage-stat {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .storage-stat .num {
+      font-size: 32px;
+      font-weight: 800;
+      color: #5C8A5A;
+      line-height: 1;
+    }
+    .storage-stat .label {
+      font-size: 12px;
+      color: #777;
+      margin-top: 6px;
+      line-height: 1.3;
+    }
+
+    /* Checklist */
+    .checklist {
+      background: #EDF7ED;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .checklist h3 {
+      color: #5C8A5A;
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .check-item:last-child { margin-bottom: 0; }
+    .check-icon {
+      color: #5C8A5A;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    footer {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .storage-stats { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+      .opener-callout .big-stat { font-size: 40px; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The One Question That Actually Keeps Kids Safe Around Guns</h1>
+    <p class="subtitle">Training doesn't work. But this 10-second conversation does.</p>
+  </header>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The only proven protection against child firearm injury is a locked safe.</p>
+    <ul>
+      <li>Kids raised by parents who ask the uncomfortable question and secure what's in their own home are shielded by the single intervention decades of research actually support.</li>
+      <li>The move: pair secure storage at home with one 10-second question before every playdate.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>SAFE protocol (Secure, Ask, Forget training, Expect curiosity) &middot; playdate conversation script &middot; 5-row parent belief vs. research table &middot; 4-item long-term checklist</div>
+  </div>
+
+  <p>Here is a sentence that should bother every parent: kids who receive the most gun safety training are <em>more likely</em> to handle a firearm when they find one.</p>
+
+  <p>Not less likely. More.</p>
+
+  <p>That single finding upends everything most of us assume about keeping kids safe around guns. And it points straight to the one move that actually works -- a move most parents never make.</p>
+
+  <img src="/images/blog/gun-safety-illusion/knowledge-vs-behavior.webp" alt="Split illustration showing the gap between what children know about gun safety and how they actually behave" class="hero-img">
+
+  <div class="opener-callout">
+    <div class="big-stat">84%</div>
+    <div class="stat-desc">reduction in child firearm injuries with one storage method -- <br>no training required</div>
+  </div>
+
+  <h2>What the Research Actually Found</h2>
+
+  <p>Researchers set up a simple experiment. They put a real (disabled) handgun in a room where school-age boys were playing. Most found it. Half picked it up. One in four pulled the trigger hard enough to fire it.</p>
+
+  <p>The part that matters: nearly all of those boys had already been through gun safety instruction.</p>
+
+  <p>It gets worse. Another team designed the most intensive program they could -- a full week of safety education covering handling, conflict resolution, decision-making, and peer pressure. Then they compared those kids to a group that received zero training.</p>
+
+  <p>The trained group handled firearms <em>more often</em>.</p>
+
+  <p>Every evaluation of structured gun safety curricula finds the same thing: kids learn the rules. They can recite them. They just don't follow them.</p>
+
+  <h2>The Confidence Gap</h2>
+
+  <p>What makes this dangerous isn't the research alone -- it's the gap between what parents believe and what's true.</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>What Parents Believe</th>
+        <th>What Research Shows</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col-belief">"My child would walk away from a found gun"</td>
+        <td class="col-reality">Most children don't -- even those who promise they would</td>
+      </tr>
+      <tr>
+        <td class="col-belief">"My child knows real vs. toy"</td>
+        <td class="col-reality">Kids mistake real firearms for toys more often than the reverse</td>
+      </tr>
+      <tr>
+        <td class="col-belief">"My child doesn't know where we keep it"</td>
+        <td class="col-reality">Children almost always know, even when parents assume they don't</td>
+      </tr>
+      <tr>
+        <td class="col-belief">"My child has never handled our gun"</td>
+        <td class="col-reality">1 in 5 parents are contradicted when the child is asked separately</td>
+      </tr>
+      <tr>
+        <td class="col-belief">"Familiarity makes them more cautious"</td>
+        <td class="col-reality">The opposite -- familiarity breeds handling, not caution</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>These gaps persist whether or not parents keep their firearms locked or regularly talk about safety. The training creates confidence in the adults, not compliance in the kids.</p>
+
+  <h2>The Only Thing Proven to Work</h2>
+
+  <img src="/images/blog/gun-safety-illusion/secure-storage.webp" alt="Infographic showing secure firearm storage with locked safe and separate ammunition" class="hero-img">
+
+  <p>Decades of research point to one answer: secure storage.</p>
+
+  <div class="storage-stats">
+    <div class="storage-stat">
+      <div class="num">~70%</div>
+      <div class="label">risk reduction<br>unloaded alone</div>
+    </div>
+    <div class="storage-stat">
+      <div class="num">~73%</div>
+      <div class="label">risk reduction<br>locked alone</div>
+    </div>
+    <div class="storage-stat">
+      <div class="num">84%</div>
+      <div class="label">risk reduction<br>both together</div>
+    </div>
+  </div>
+
+  <p>Firearms unloaded and locked, ammunition in a separate location. That combination cuts child firearm injuries by 84%. No training program has ever come close to that number.</p>
+
+  <h2>Your Move: The SAFE Protocol</h2>
+
+  <div class="protocol-card">
+    <div class="step-row">
+      <div class="step-letter">S</div>
+      <div class="step-body">
+        <h4>Secure Your Own</h4>
+        <p>Store firearms unloaded and locked, ammunition in a separate spot. Cable locks and lockboxes are inexpensive. Don't rely on hiding spots -- kids find everything.</p>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <div class="step-letter">A</div>
+      <div class="step-body">
+        <h4>Ask Before Playdates</h4>
+        <p>One question. Ten seconds. More protective than any training program ever built. (Script below.)</p>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <div class="step-letter">F</div>
+      <div class="step-body">
+        <h4>Forget Training as Protection</h4>
+        <p>Gun safety education has value as general knowledge. But never treat it as a substitute for physical prevention. No program has changed how children actually behave around firearms.</p>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <div class="step-letter">E</div>
+      <div class="step-body">
+        <h4>Expect Curiosity</h4>
+        <p>Kids are fascinated by guns. That's developmentally normal. Your job isn't to kill the curiosity -- it's to make sure they can't access a loaded weapon when curiosity wins.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The Playdate Question</h2>
+
+  <img src="/images/blog/gun-safety-illusion/playdate-conversation.webp" alt="Two parents chatting warmly at a front door during playdate drop-off" class="hero-img">
+
+  <p>This is the single most uncomfortable -- and most effective -- conversation in child safety. Here is exactly what to say:</p>
+
+  <div class="script-box">
+    <h3>Copy This Script</h3>
+    <blockquote>
+      "Hey, I always ask this before the kids head over -- do you guys have any guns in the house? And are they stored locked and unloaded? I ask everyone, it's just one of those parenting things."
+    </blockquote>
+    <p class="script-note">Making it routine ("I ask everyone") removes the implication you're singling anyone out. Most parents respect the question. The ones who don't are exactly the ones you needed to ask.</p>
+  </div>
+
+  <p>You already ask about allergies. You check for pool fences. This is the same thing -- except it covers the risk that statistically matters most.</p>
+
+  <p>One in three homes with children contain firearms. Many are not stored safely. The question isn't whether your child will visit a home with a gun. It's whether you'll know about it when they do.</p>
+
+  <h2>Keep Going as They Grow</h2>
+
+  <div class="checklist">
+    <h3>Long-Term Safety Checklist</h3>
+    <div class="check-item">
+      <span class="check-icon">+</span>
+      <span><strong>Upgrade security with age.</strong> A lock that stumps a 5-year-old won't stop a 12-year-old. Reassess as they grow.</span>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">+</span>
+      <span><strong>Normalize the question.</strong> The more parents ask, the less strange it feels. You're building a community norm, not just protecting one kid.</span>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">+</span>
+      <span><strong>Keep talking -- but don't depend on talking.</strong> Age-appropriate conversations about firearms are healthy. Just don't let them make you feel like the safety box is checked.</span>
+    </div>
+    <div class="check-item">
+      <span class="check-icon">+</span>
+      <span><strong>Check extended family homes.</strong> Grandparents, aunts, uncles -- firearms stored casually in homes your child visits regularly are a real risk. Have the conversation with them too.</span>
+    </div>
+  </div>
+
+  <p>This isn't about politics. It's about one question, one storage method, and the 84% reduction that no amount of training can match.</p>
+
+  <p>Ask the question. Lock the safe. That's the whole playbook.</p>
+
+  <footer>
+    <p>Kung Fu Parenting -- kungfu.family</p>
+  </footer>
+
+</body>
+</html>

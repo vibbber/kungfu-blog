@@ -1880,6 +1880,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: put lessons in the morning after a light breakfast, the big meal at midday, and get homework out of the evening entirely.',
     tldrInside: '4-block daily schedule, blood-flow visual, subject-switch trick, 7-step morning quick-start checklist',
   },
+  {
+    slug: 'gun-safety-illusion',
+    title: 'The Training Trap',
+    subtitle: 'Why gun education backfires — and the 10-second question that actually protects kids',
+    description: 'Kids who receive the most gun safety training are more likely to handle a firearm when they find one. The one question that protects your child more than any safety course ever could.',
+    image: '/images/cards/gun-safety-illusion.webp',
+    imageAlt: 'Illustration of a crumpled safety certificate next to a locked gun safe, representing the gap between training and real protection',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Safety',
+    book: 'The Informed Parent',
+    bookSlug: 'the-informed-parent-haelle',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'The only proven protection against child firearm injury is a locked safe.',
+    tldrPayoff: 'Kids raised by parents who ask the uncomfortable question and secure what\'s in their own home are shielded by the single intervention decades of research actually support.',
+    tldrMove: 'The move: pair secure storage at home with one 10-second question before every playdate.',
+    tldrInside: 'SAFE protocol (Secure, Ask, Forget training, Expect curiosity), playdate conversation script, 5-row parent belief vs. research table, 4-item long-term checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
