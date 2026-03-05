@@ -1840,6 +1840,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stare, close eyes, find the blurry spots, look again — repeat until the mental image is perfect.',
     tldrInside: '5-step picture-painting method, exact script for the park, 5 common mistakes to avoid, the blur-check technique',
   },
+  {
+    slug: 'sensory-isolation-technique',
+    title: 'The Blindfold Advantage',
+    subtitle: 'Why removing one sense supercharges the rest — and kids love it',
+    description: 'Close their eyes and their brain floods touch, hearing, smell, and taste with extra processing power. Six kitchen-ready sensory games with parent scripts that kids ask to play again.',
+    image: '/images/cards/sensory-isolation-technique.webp',
+    imageAlt: 'Flat-lay photo of a soft blindfold surrounded by sensory items like sandpaper, silk fabric, and cinnamon sticks',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Sensory Development',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Your child\'s brain splits attention five ways. These exercises fix that.',
+    tldrPayoff: 'Kids who play these games become exceedingly keen discriminators -- they notice texture differences adults walk past, hear sounds others miss, and identify foods without looking.',
+    tldrMove: 'The move: shut down vision, and all that processing power floods into touch, hearing, smell, and taste.',
+    tldrInside: 'Touch Discovery with 4-step protocol, Temperature Challenge with sorting task, 6 at-home sensory games by age, Montessori\'s original results',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
