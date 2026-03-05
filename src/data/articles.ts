@@ -1820,6 +1820,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: when they get it wrong, go quiet, smile warmly, and end the session — no commentary, no do-overs.',
     tldrInside: '5-step non-correction protocol, side-by-side: correction vs. silence outcomes, scenario table across 5 common situations',
   },
+  {
+    slug: 'picture-painting-technique',
+    title: 'Photographic Memory Game',
+    subtitle: 'Most adults can\'t picture childhood — your kid will remember every detail',
+    description: 'A 120-year-old technique turns any walk into visual memory training. The 2-minute game that gives kids photographic recall — with the exact script and blur-check method.',
+    image: '/images/cards/picture-painting-technique.webp',
+    imageAlt: 'Child silhouette with a vivid landscape visible inside their head, representing photographic visual memory',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Learning',
+    book: 'Home Education',
+    bookSlug: 'charlotte-mason-home-education-1906',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'A 120-year-old technique turns any walk into visual memory training.',
+    tldrPayoff: 'Kids who do this recall scenes in photographic detail, build sustained attention naturally, and carry a mental gallery that refreshes them as adults.',
+    tldrMove: 'The move: stare, close eyes, find the blurry spots, look again — repeat until the mental image is perfect.',
+    tldrInside: '5-step picture-painting method, exact script for the park, 5 common mistakes to avoid, the blur-check technique',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
