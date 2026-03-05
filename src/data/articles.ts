@@ -2000,6 +2000,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: close the gap with a familiar sauce. One dip turns a scary vegetable into a vehicle for something they already love.',
     tldrInside: 'sauce-to-food expansion map for 6 common dips, 3-step setup with zero pressure, seasoning chain technique, 4 mistakes that break trust',
   },
+  {
+    slug: 'how-girls-learn-to-connect',
+    title: 'Four Zones of Friendship',
+    subtitle: 'Girls ages 5-10 — coaching the skills that carry her for life',
+    description: 'Your daughter doesn\'t need you to fix her friendships. She needs a radar — two dead-simple tests and a four-zone coaching framework that teach girls to read social situations on their own.',
+    image: '/images/cards/how-girls-learn-to-connect.webp',
+    imageAlt: 'Four friendship zone icons in a 2x2 grid showing opening up, giving ground, feeling with, and knowing who is safe',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'social skills',
+    book: 'Raising Girls in the 21st Century',
+    bookSlug: 'raising-girls-21st-century-biddulph',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Most friendship problems ages 5-10 land in just two areas.',
+    tldrPayoff: 'Kids who practise opening up and giving ground at home arrive at school already comfortable sharing space, taking turns, and recovering from small conflicts.',
+    tldrMove: 'The shift: practise the hard parts at home with low stakes -- board games, silly play, negotiating what to watch -- so she\'s ready when it counts.',
+    tldrInside: '4 friendship zones with parent coaching moves, comparison table of red flags vs. healthy signs, try-tonight dinner question, long-term fixer pattern warning',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
