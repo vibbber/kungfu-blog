@@ -1860,6 +1860,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: shut down vision, and all that processing power floods into touch, hearing, smell, and taste.',
     tldrInside: 'Touch Discovery with 4-step protocol, Temperature Challenge with sorting task, 6 at-home sensory games by age, Montessori\'s original results',
   },
+  {
+    slug: 'brain-healthy-schedule',
+    title: 'Feed the Brain First',
+    subtitle: 'A daily schedule built around when your child\'s brain actually works',
+    description: 'The brain, stomach, and muscles all compete for the same blood supply. Schedule learning for the morning after a light breakfast, the big meal at midday, and get homework out of the evening entirely.',
+    image: '/images/cards/brain-healthy-schedule.webp',
+    imageAlt: 'Illustration of a spotlight on a brain on a dinner plate with cutlery, representing feeding the brain first',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Daily Routine',
+    book: 'Home Education',
+    bookSlug: 'charlotte-mason-home-education-1906',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'The brain, stomach, and muscles all compete for the same blood supply.',
+    tldrPayoff: 'Kids who learn on a brain-friendly schedule focus faster, retain more, and sleep through the night without the bedtime battle.',
+    tldrMove: 'The move: put lessons in the morning after a light breakfast, the big meal at midday, and get homework out of the evening entirely.',
+    tldrInside: '4-block daily schedule, blood-flow visual, subject-switch trick, 7-step morning quick-start checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

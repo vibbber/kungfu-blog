@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="4">
+  <title>Your Kid Isn't Lazy After Lunch. Their Brain Is Starving.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .hero-source {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 1.5rem;
+    }
+
+    /* Section headings */
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin: 2.5rem 0 1rem;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    /* Body text */
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    /* Images */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .img-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: -1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Quote callout */
+    .callout-quote {
+      background: #fff;
+      border-left: 4px solid #E8A598;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .callout-quote p {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    .callout-quote .attribution {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    /* The blood competition visual */
+    .blood-battle {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .blood-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 2px solid transparent;
+    }
+
+    .blood-card.active {
+      border-color: #5C8A5A;
+      background: #f0f7f0;
+    }
+
+    .blood-card.starved {
+      border-color: #E8A598;
+      opacity: 0.6;
+    }
+
+    .blood-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blood-card h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      color: #1A1A2E;
+    }
+
+    .blood-card .status {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .blood-card.active .status { color: #5C8A5A; }
+    .blood-card.starved .status { color: #cc6655; }
+
+    .scenario-label {
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Schedule table */
+    .schedule-block {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      min-height: 80px;
+      border-bottom: 1px solid #f0ede8;
+    }
+
+    .schedule-row:last-child { border-bottom: none; }
+
+    .schedule-time {
+      background: #5C8A5A;
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0.2rem;
+    }
+
+    .schedule-time .time-icon {
+      font-size: 1.3rem;
+    }
+
+    .schedule-activity {
+      padding: 1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .schedule-activity strong {
+      color: #5C8A5A;
+      font-size: 0.95rem;
+    }
+
+    .schedule-activity .why {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.2rem;
+    }
+
+    /* Comparison cards */
+    .vs-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .vs-card {
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .vs-card.wrong {
+      background: #fff0ed;
+      border: 1px solid #E8A598;
+    }
+
+    .vs-card.right {
+      background: #eef6ee;
+      border: 1px solid #5C8A5A;
+    }
+
+    .vs-header {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .vs-card.wrong .vs-header { color: #cc5544; }
+    .vs-card.right .vs-header { color: #5C8A5A; }
+
+    .vs-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .vs-card li {
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .vs-card.wrong li::before {
+      content: "\2717";
+      position: absolute;
+      left: 0;
+      color: #cc5544;
+      font-weight: bold;
+    }
+
+    .vs-card.right li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: #5C8A5A;
+      font-weight: bold;
+    }
+
+    /* Subject switching cards */
+    .switch-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+
+    .switch-subject {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .switch-subject .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #999;
+      margin-bottom: 0.3rem;
+    }
+
+    .switch-subject .subj {
+      font-weight: 600;
+      color: #5C8A5A;
+      font-size: 1rem;
+    }
+
+    .switch-arrow {
+      font-size: 1.5rem;
+      color: #E8A598;
+    }
+
+    /* Tip box */
+    .tip-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4a7548 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    .tip-box h3 {
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .tip-box p {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    /* Quick-start checklist */
+    .checklist-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.8rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 4px solid #5C8A5A;
+    }
+
+    .checklist-box h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #f5f2ed;
+    }
+
+    .check-item:last-child { border-bottom: none; }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #5C8A5A;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check-text {
+      font-size: 0.95rem;
+    }
+
+    .check-text strong { color: #5C8A5A; }
+
+    /* Closing */
+    .closing {
+      text-align: center;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid #e8e4de;
+      margin-top: 3rem;
+    }
+
+    .closing p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .blog-container { padding: 1.2rem 1rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
+      .blood-battle { grid-template-columns: 1fr; gap: 0.6rem; }
+      .vs-container { grid-template-columns: 1fr; }
+      .schedule-row { grid-template-columns: 100px 1fr; }
+      .switch-grid { grid-template-columns: 1fr; }
+      .switch-arrow { transform: rotate(90deg); text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-tag">Daily Routine</div>
+      <h1>Your Kid Isn't Lazy After Lunch. Their Brain Is Starving.</h1>
+      <p class="hero-sub">Charlotte Mason figured out 120 years ago why homework after dinner is a disaster -- and what to do instead.</p>
+      <div class="tldr-box">
+        <p class="tldr-anchor">The brain, stomach, and muscles all compete for the same blood supply.</p>
+        <ul>
+          <li>Kids who learn on a brain-friendly schedule focus faster, retain more, and sleep through the night without the bedtime battle.</li>
+          <li>The move: put lessons in the morning after a light breakfast, the big meal at midday, and get homework out of the evening entirely.</li>
+        </ul>
+        <hr class="tldr-divider">
+        <div class="tldr-inside"><strong>Inside: </strong>4-block daily schedule &middot; blood-flow visual &middot; subject-switch trick &middot; 7-step morning quick-start checklist</div>
+      </div>
+      <p class="hero-source">Published by kungfu.family</p>
+    </div>
+
+    <img src="/images/blog/brain-healthy-schedule/blood-flow.webp" alt="Illustration of blood flow competition between brain, stomach, and muscles" class="blog-img">
+    <p class="img-caption">The brain, stomach, and muscles all compete for the same blood supply.</p>
+
+    <!-- The hook -->
+    <p>Here is a fact that will change how you plan your kid's day: the brain, the stomach, and the muscles are all fighting over the same tank of blood.</p>
+
+    <p>When your child eats a big meal, blood rushes to the gut to handle digestion. When they run around outside, blood goes to the muscles. And when they sit down to learn something -- math, reading, piano -- the brain needs that blood flowing upstairs.</p>
+
+    <p>The problem? There's only so much to go around.</p>
+
+    <div class="callout-quote">
+      <p>"Set him to his books after a heavy meal, and the case is as bad; the blood which should have been assisting in the digestion of the meal goes to the labouring brain."</p>
+      <span class="attribution">Charlotte Mason, educator and teaching reformer</span>
+    </div>
+
+    <p>This is why your child seems suddenly "dumb" after lunch. It's not laziness. It's physiology. And once you understand it, you can arrange their day so the brain always gets what it needs.</p>
+
+    <!-- Blood battle visual -->
+    <h2>The Blood Battle in Action</h2>
+
+    <p>Think of your child's blood supply as a spotlight. It can only fully illuminate one system at a time.</p>
+
+    <div class="scenario-label">Right after a big meal:</div>
+    <div class="blood-battle">
+      <div class="blood-card starved">
+        <div class="blood-icon">&#129504;</div>
+        <h4>Brain</h4>
+        <div class="status">Starved</div>
+      </div>
+      <div class="blood-card active">
+        <div class="blood-icon">&#127858;</div>
+        <h4>Digestion</h4>
+        <div class="status">Full power</div>
+      </div>
+      <div class="blood-card starved">
+        <div class="blood-icon">&#128170;</div>
+        <h4>Muscles</h4>
+        <div class="status">Starved</div>
+      </div>
+    </div>
+
+    <div class="scenario-label">Morning after a light breakfast:</div>
+    <div class="blood-battle">
+      <div class="blood-card active">
+        <div class="blood-icon">&#129504;</div>
+        <h4>Brain</h4>
+        <div class="status">Full power</div>
+      </div>
+      <div class="blood-card" style="opacity: 0.7">
+        <div class="blood-icon">&#127858;</div>
+        <h4>Digestion</h4>
+        <div class="status" style="color: #999">Light load</div>
+      </div>
+      <div class="blood-card" style="opacity: 0.7">
+        <div class="blood-icon">&#128170;</div>
+        <h4>Muscles</h4>
+        <div class="status" style="color: #999">Resting</div>
+      </div>
+    </div>
+
+    <p>This is the whole game. You are just making sure the spotlight is on the brain when learning happens, and off it when eating or playing happens.</p>
+
+    <!-- The schedule -->
+    <h2>The Schedule That Makes It Work</h2>
+
+    <img src="/images/blog/brain-healthy-schedule/daily-flow.webp" alt="Visual timeline of an ideal child's daily schedule" class="blog-img">
+    <p class="img-caption">Four blocks. Each one respects the blood supply.</p>
+
+    <div class="schedule-block">
+      <div class="schedule-row">
+        <div class="schedule-time">
+          <span class="time-icon">&#9728;&#65039;</span>
+          Morning
+        </div>
+        <div class="schedule-activity">
+          <strong>Light breakfast, then lessons</strong>
+          <span class="why">Brain gets full blood supply. Digestion barely engaged. Peak learning window.</span>
+        </div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">
+          <span class="time-icon">&#9737;&#65039;</span>
+          Midday
+        </div>
+        <div class="schedule-activity">
+          <strong>Big meal, then rest for 2-3 hours</strong>
+          <span class="why">Blood goes to digestion. No lessons, no heavy exercise. Let it work.</span>
+        </div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">
+          <span class="time-icon">&#127795;</span>
+          Afternoon
+        </div>
+        <div class="schedule-activity">
+          <strong>Outdoor time + hands-on activities</strong>
+          <span class="why">Blood to muscles. Drawing, building, nature walks -- not abstract thinking.</span>
+        </div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">
+          <span class="time-icon">&#127769;</span>
+          Evening
+        </div>
+        <div class="schedule-activity">
+          <strong>Light supper, family time, NO homework</strong>
+          <span class="why">Brain needs to wind down. Mental work here causes restless sleep.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- The evening trap -->
+    <h2>The Evening Homework Trap</h2>
+
+    <p>This one is worth calling out because it's the mistake most families make.</p>
+
+    <div class="callout-quote">
+      <p>"The brain, once excited, is inclined to carry on its labours beyond bed-time, and dreams, wakefulness, and uneasy sleep attend the poor child."</p>
+      <span class="attribution">Charlotte Mason</span>
+    </div>
+
+    <p>When your child does homework right before bed, the brain revs up -- and then can't stop. You get the tossing, the "I can't sleep," the groggy mornings. And that groggy morning means a worse learning window the next day.</p>
+
+    <p>If older kids absolutely must do evening work, the rule is simple: stop at least 1-2 hours before bedtime and fill that gap with family time, play, or something calm.</p>
+
+    <!-- Subject switching -->
+    <h2>The Subject-Switch Trick</h2>
+
+    <img src="/images/blog/brain-healthy-schedule/morning-learner.webp" alt="Child engaged in morning learning" class="blog-img">
+    <p class="img-caption">Fresh wits in the morning -- and fresh again after switching subjects.</p>
+
+    <p>Here is a bonus trick from the same playbook. Different subjects use different areas of the brain. When your child hits a wall on math, they haven't run out of brain power -- they've run out of <em>math</em> brain power.</p>
+
+    <div class="switch-grid">
+      <div class="switch-subject">
+        <div class="label">Hitting a wall</div>
+        <div class="subj">Math</div>
+      </div>
+      <div class="switch-arrow">&#10132;</div>
+      <div class="switch-subject">
+        <div class="label">Fresh wits</div>
+        <div class="subj">History</div>
+      </div>
+    </div>
+
+    <div class="switch-grid">
+      <div class="switch-subject">
+        <div class="label">Getting restless</div>
+        <div class="subj">Reading</div>
+      </div>
+      <div class="switch-arrow">&#10132;</div>
+      <div class="switch-subject">
+        <div class="label">Engaged again</div>
+        <div class="subj">Drawing</div>
+      </div>
+    </div>
+
+    <p>Mason's word for this: when a child gets "unaccountably stupid" on a subject, take the book away and switch. A different brain area lights up. The child suddenly looks smart again. Because they are.</p>
+
+    <div class="tip-box">
+      <h3>The timetable rule</h3>
+      <p>Alternate the type of mental demand in your morning lesson block. Abstract (math) followed by narrative (history) followed by creative (art). Each switch gives the previous brain area time to recover while a fresh one takes over.</p>
+    </div>
+
+    <!-- What not to do / what to do -->
+    <h2>Common Mistakes vs. What Works</h2>
+
+    <div class="vs-container">
+      <div class="vs-card wrong">
+        <div class="vs-header">What drains them</div>
+        <ul>
+          <li>Lessons right after a big meal</li>
+          <li>Homework before bed</li>
+          <li>Same subject for an hour straight</li>
+          <li>Skipping outdoor time</li>
+          <li>Stuffy, closed-window rooms</li>
+        </ul>
+      </div>
+      <div class="vs-card right">
+        <div class="vs-header">What powers them</div>
+        <ul>
+          <li>Lessons after a light breakfast</li>
+          <li>Evening is for family, not books</li>
+          <li>Rotate subjects every 20-30 min</li>
+          <li>Daily outdoor time, rain or shine</li>
+          <li>Windows cracked, rooms full of light</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Quick start -->
+    <h2>Try This Tomorrow</h2>
+
+    <div class="checklist-box">
+      <h3>Morning schedule quick-start</h3>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Light breakfast</strong> -- eggs, fruit, toast. Save the big meal for lunch.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Lessons first thing</strong> -- brain is fresh, stomach is light. This is your golden window.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Switch subjects every 20-30 minutes</strong> -- math, then story, then drawing. Different brain areas, no burnout.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Big meal at midday, then 2-3 hours off</strong> -- no lessons, no intense play. Let digestion do its job.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Afternoon = outside + hands-on</strong> -- nature walks, building, drawing. Active body, resting brain.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>No homework after dinner</strong> -- family time, play, wind-down. Brain off, sleep on.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon"></div>
+        <div class="check-text"><strong>Crack a window</strong> -- even 1 inch. Fresh air isn't a nice-to-have; it's brain fuel.</div>
+      </div>
+    </div>
+
+    <p>You don't need a radical overhaul. Just move the heavy learning to the morning, the heavy eating to midday, and get the homework out of the evening. One scheduling change and you'll see the difference in the first week.</p>
+
+    <!-- Closing -->
+    <div class="closing">
+      <p>kungfu.family</p>
+    </div>
+
+  </div>
+</body>
+</html>
