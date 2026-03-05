@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Strategy Isn't Broken — You've Got a Bug</title>
+  <meta name="description" content="Most parents abandon behavior strategies that were actually working. Here's the 5-question debug sequence that finds the real problem in under 10 minutes.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #5C8A5A;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #E8A598;
+    }
+
+    h3 {
+      color: #1A1A2E;
+      font-size: 1.15rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    /* The big three grid */
+    .bug-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .bug-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .bug-card .bug-number {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+
+    .bug-card h3 {
+      display: inline;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .bug-card p {
+      margin: 0.75rem 0 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .bug-card .reality-check {
+      background: #FAF6F0;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-left: 3px solid #E8A598;
+    }
+
+    .bug-card .reality-check strong {
+      color: #E8A598;
+    }
+
+    /* Inline image */
+    .inline-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+
+    /* Debug sequence */
+    .debug-sequence {
+      counter-reset: debug-step;
+      margin: 1.5rem 0;
+    }
+
+    .debug-step {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .debug-step::before {
+      counter-increment: debug-step;
+      content: counter(debug-step);
+      position: absolute;
+      left: 1.1rem;
+      top: 1.25rem;
+      background: #5C8A5A;
+      color: white;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 26px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .debug-step strong {
+      color: #1A1A2E;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .debug-step .action {
+      font-size: 0.9rem;
+      color: #5C8A5A;
+      font-weight: 600;
+      margin-top: 0.4rem;
+    }
+
+    /* Payoff comparison table */
+    .payoff-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .payoff-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .payoff-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #f0ebe3;
+    }
+
+    .payoff-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .payoff-table .bad { color: #c0392b; font-weight: 600; }
+    .payoff-table .good { color: #5C8A5A; font-weight: 600; }
+
+    /* Symptom decoder */
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .symptom-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .symptom-card .symptom {
+      font-weight: 700;
+      color: #E8A598;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .symptom-card .diagnosis {
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .symptom-card .fix {
+      font-size: 0.85rem;
+      color: #5C8A5A;
+      font-weight: 600;
+      margin-top: 0.4rem;
+    }
+
+    /* Callout box */
+    .callout {
+      background: white;
+      border: 2px solid #5C8A5A;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .callout p {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Pre-quit checklist */
+    .checklist {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .checklist h3 {
+      color: #5C8A5A;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding: 0.4rem 0 0.4rem 2rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .checklist li::before {
+      content: "\u2610";
+      position: absolute;
+      left: 0.25rem;
+      font-size: 1.2rem;
+      color: #5C8A5A;
+    }
+
+    /* Footer */
+    .source-line {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0d8cc;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.25rem 1rem; }
+      h1 { font-size: 1.7rem; }
+      .symptom-grid { grid-template-columns: 1fr; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>Your Strategy Isn't Broken. You've Got a Bug.</h1>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Behavior got worse after you started? That might be a good sign.</p>
+    <ul>
+      <li>Kids whose parents hold through the extinction burst come out the other side with the replacement locked in — problem behavior drops because it stopped paying off.</li>
+      <li>The move: match the symptom to its cause — extinction burst means hold steady, backfire means check what happens right after the behavior.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>6 specific symptoms matched to causes and fixes &middot; 3 named implementation bugs &middot; 5-question debug sequence &middot; payoff competition table</div>
+  </div>
+
+  <p class="subtitle">The 5-question debug sequence that saves good strategies from the trash</p>
+
+  <img src="/images/blog/when-strategies-arent-working/hero.webp" alt="Parent examining puzzle pieces representing behavior strategy components" class="hero-img">
+
+  <p>You set up the reward chart. You were consistent for two weeks. Nothing changed. So you tossed it and tried something else.</p>
+
+  <p>Sound familiar? Here's the thing most parenting advice won't tell you: <strong>the strategy was probably fine.</strong> You had a bug in the implementation.</p>
+
+  <p>Behavior research keeps showing the same pattern. When interventions "fail," the core approach almost never needs replacing. What needs fixing is one of three specific, findable problems in how it was executed. Find the bug, patch it, and the strategy that "didn't work" suddenly works.</p>
+
+  <div class="callout">
+    <p>Check your execution before blaming the strategy.<br>Check your understanding before blaming your child.</p>
+  </div>
+
+  <h2>The Three Bugs That Kill Most Strategies</h2>
+
+  <p>After all the research, all the case studies, all the data -- it comes down to these three. Every time.</p>
+
+  <div class="bug-grid">
+    <div class="bug-card">
+      <span class="bug-number">1</span>
+      <h3>The Consistency Bug</h3>
+      <p>You think you're following through. You're not -- at least not as much as you think. Week 1 is perfect. Week 2 slips. By week 3, you're running at maybe 50%. By week 4, you've decided it "doesn't work."</p>
+      <div class="reality-check">
+        <strong>Reality check:</strong> Track yourself for one week. Count every time the behavior happened vs. every time you responded the way you planned. Below 80%? You haven't tested the strategy yet.
+      </div>
+    </div>
+
+    <div class="bug-card">
+      <span class="bug-number">2</span>
+      <h3>The Mismatch Bug</h3>
+      <p>Your strategy doesn't match what the behavior is actually <em>for</em>. Your kid throws tantrums to escape homework, so you set up rewards for staying calm. But they don't want rewards. They want to avoid the work. Strategy and need are talking past each other.</p>
+      <div class="reality-check">
+        <strong>Reality check:</strong> Ask: "What does my child GET from this behavior?" Escape? Attention? Access to something? Sensory input? If your strategy doesn't address that specific need, it won't matter how well you execute it.
+      </div>
+    </div>
+
+    <div class="bug-card">
+      <span class="bug-number">3</span>
+      <h3>The Missing Skill Bug</h3>
+      <p>"Use your words instead of hitting." Great -- but which words, exactly? Did you practice them? Is saying words as fast and effective as hitting? If the alternative exists only in your head and not in their actual skillset, it's not a real alternative.</p>
+      <div class="reality-check">
+        <strong>Reality check:</strong> Ask your child to demonstrate the replacement behavior during a calm moment. If they can't do it on cue, they don't have the skill yet.
+      </div>
+    </div>
+  </div>
+
+  <h2>The 5-Question Debug Sequence</h2>
+
+  <p>When something isn't working, run through these in order. Don't skip ahead -- each one depends on the last.</p>
+
+  <img src="/images/blog/when-strategies-arent-working/flowchart.webp" alt="Five-step troubleshooting flowchart for behavior strategies" class="inline-img">
+
+  <div class="debug-sequence">
+    <div class="debug-step">
+      <strong>Am I actually doing this consistently?</strong>
+      Not "mostly." Not "usually." What's the real number?
+      <div class="action">Below 80% &rarr; Fix consistency first. Simplify. Add reminders. Remove barriers.</div>
+    </div>
+
+    <div class="debug-step">
+      <strong>Does this match why the behavior happens?</strong>
+      Figure out the function. Then check: does my strategy address it?
+      <div class="action">Mismatch found &rarr; Redesign the strategy around the actual function.</div>
+    </div>
+
+    <div class="debug-step">
+      <strong>Have I actually taught the replacement?</strong>
+      Not mentioned it. Not suggested it. Taught it, practiced it, drilled it.
+      <div class="action">Can't demo it on cue &rarr; Teach it explicitly. Practice until automatic.</div>
+    </div>
+
+    <div class="debug-step">
+      <strong>Am I accidentally reinforcing the problem?</strong>
+      Lecturing during a tantrum is attention. Letting them escape when they escalate is reinforcement. Giving in after enough whining teaches persistence.
+      <div class="action">Reinforcement leak found &rarr; Seal it. Zero payoff for the problem behavior.</div>
+    </div>
+
+    <div class="debug-step">
+      <strong>Is the replacement "worth it" to them?</strong>
+      If yelling gets a response in 3 seconds but "excuse me" sometimes gets ignored, they'll keep yelling. The alternative has to pay off better.
+      <div class="action">Alternative losing the competition &rarr; Make it faster, easier, more reliable.</div>
+    </div>
+  </div>
+
+  <h2>The Payoff Competition</h2>
+
+  <p>This is the one most parents miss. Your kid is running a cost-benefit analysis -- unconsciously, instantly, every time. The behavior that works best, wins.</p>
+
+  <img src="/images/blog/when-strategies-arent-working/two-paths.webp" alt="Two paths comparing ineffective vs effective behavior responses" class="inline-img">
+
+  <table class="payoff-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Problem Behavior</th>
+        <th>Replacement Behavior</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Speed</strong></td>
+        <td class="bad">Yelling &rarr; response in 3 sec</td>
+        <td class="good">"Excuse me" &rarr; response in 1 sec</td>
+      </tr>
+      <tr>
+        <td><strong>Reliability</strong></td>
+        <td class="bad">Works 9 out of 10 times</td>
+        <td class="good">Works 10 out of 10 times</td>
+      </tr>
+      <tr>
+        <td><strong>Effort</strong></td>
+        <td class="bad">Easy (already automatic)</td>
+        <td class="good">Easy (practiced until automatic)</td>
+      </tr>
+      <tr>
+        <td><strong>Result</strong></td>
+        <td class="bad">Gets attention + lecture</td>
+        <td class="good">Gets attention + warmth</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The fix: respond to "excuse me" <em>immediately, every single time</em>. Make yelling get nothing. Rig the competition so the good behavior wins by a landslide.</p>
+
+  <h2>Quick Symptom Decoder</h2>
+
+  <p>Match what you're seeing to its most likely cause.</p>
+
+  <div class="symptom-grid">
+    <div class="symptom-card">
+      <div class="symptom">Got better, then came back</div>
+      <div class="diagnosis">You faded reinforcement too fast, or your consistency dropped.</div>
+      <div class="fix">Go back to frequent reinforcement. Rebuild, then fade slower.</div>
+    </div>
+
+    <div class="symptom-card">
+      <div class="symptom">Never improved at all</div>
+      <div class="diagnosis">Wrong strategy for the function, or low consistency from day one.</div>
+      <div class="fix">Re-assess what the behavior is actually for. Check your data.</div>
+    </div>
+
+    <div class="symptom-card">
+      <div class="symptom">Works at home, not at school</div>
+      <div class="diagnosis">Different adults are responding differently.</div>
+      <div class="fix">Get everyone on the same page. Same responses, same expectations.</div>
+    </div>
+
+    <div class="symptom-card">
+      <div class="symptom">Using replacement, but inconsistently</div>
+      <div class="diagnosis">The replacement doesn't always pay off, so they hedge their bets.</div>
+      <div class="fix">Respond to the replacement every single time for two weeks straight.</div>
+    </div>
+
+    <div class="symptom-card">
+      <div class="symptom">New problem behavior appeared</div>
+      <div class="diagnosis">Same need, different route. You blocked one path but didn't build a better one.</div>
+      <div class="fix">Teach a replacement that serves the same function as both problem behaviors.</div>
+    </div>
+
+    <div class="symptom-card">
+      <div class="symptom">Behavior got worse</div>
+      <div class="diagnosis">Either an extinction burst (normal, temporary) or you're accidentally making the problem behavior more effective.</div>
+      <div class="fix">If extinction burst: stay the course. If backfiring: check what happens right after the behavior.</div>
+    </div>
+  </div>
+
+  <h2>Before You Scrap a Strategy</h2>
+
+  <div class="checklist">
+    <h3>The Pre-Quit Checklist</h3>
+    <ul>
+      <li>Implemented consistently (80%+) for at least 2 full weeks</li>
+      <li>Verified it matches what the behavior is actually for</li>
+      <li>Explicitly taught the replacement behavior</li>
+      <li>Made the replacement more effective than the problem behavior</li>
+      <li>Stopped accidentally reinforcing the problem behavior</li>
+      <li>All adults responding the same way</li>
+    </ul>
+    <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">Can't check all six? You haven't truly tested the strategy yet.</p>
+  </div>
+
+  <p>And if you <em>can</em> check all six and it's still stuck? Go back to observation. Spend a week just watching. Look for hidden functions, skill gaps you missed, or environmental factors (too loud, too chaotic, too demanding). Keep the goal. Change the method.</p>
+
+  <p>Most strategies don't need replacing. They need debugging.</p>
+
+  <div class="source-line">
+    Strategy 111 &middot; Informed by research on intervention fidelity, functional behavior assessment, and generalization programming.
+  </div>
+
+</body>
+</html>

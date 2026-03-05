@@ -1940,6 +1940,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop explaining why and start wrapping the lesson in a character, a silly voice, or a make-believe scenario.',
     tldrInside: '2 family legend scripts, 2 science adventure scripts, object voice comparison table, replay technique for teens',
   },
+  {
+    slug: 'when-strategies-arent-working',
+    title: 'The Strategy Debug Kit',
+    subtitle: 'It\'s not broken — it\'s got a bug in the execution',
+    description: 'Most parents abandon behavior strategies that were actually working. Here\'s the 5-question debug sequence that finds the real problem in under 10 minutes.',
+    image: '/images/cards/when-strategies-arent-working.webp',
+    imageAlt: 'Warm illustration of a parent examining puzzle pieces representing behavior strategy components with a magnifying glass',
+    imageWidth: 1024,
+    imageHeight: 678,
+    imageAspect: 1.510,
+    topic: 'Behavior',
+    book: 'ABA Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-05',
+    dateModified: '2026-03-05',
+    tldrAnchor: 'Behavior got worse after you started? That might be a good sign.',
+    tldrPayoff: 'Kids whose parents hold through the extinction burst come out the other side with the replacement locked in — problem behavior drops because it stopped paying off.',
+    tldrMove: 'The move: match the symptom to its cause — extinction burst means hold steady, backfire means check what happens right after the behavior.',
+    tldrInside: '6 specific symptoms matched to causes and fixes, 3 named implementation bugs, 5-question debug sequence, payoff competition table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
