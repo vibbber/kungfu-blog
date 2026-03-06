@@ -2080,6 +2080,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace evaluative praise with belonging — treat contribution as expected, not exceptional.',
     tldrInside: '11 word-for-word scripts across 9 strategies, 4-step habit-breaking plan, before/after grid for 4 common moments, 5 praise-backfire warning signs',
   },
+  {
+    slug: 'bedtime-without-battles',
+    title: 'Sleep Without Struggle',
+    subtitle: 'The counterintuitive trick that ends bedtime fights for good',
+    description: 'The harder you try at bedtime, the worse it gets. One lazy move — going to bed yourself — teaches kids to recognize their own tiredness and self-settle within weeks.',
+    image: '/images/cards/bedtime-without-battles.webp',
+    imageAlt: 'Cozy nightstand scene with a warm lamp, book, tea and slippers suggesting peaceful bedtime',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'routines',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    tldrAnchor: 'Bedtime battles are a training loop — and your child is winning.',
+    tldrPayoff: 'Kids who self-regulate at bedtime handle transitions better, sleep more independently, and don\'t need nightly negotiations to wind down.',
+    tldrMove: 'The shift: stop controlling bedtime and start demonstrating it — dim the lights, announce your tiredness, and actually go to bed.',
+    tldrInside: 'battle loop vs. modeling path diagram, 3 nightly moves with scripts, 5 phrase replacements, honest 3-week timeline',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
