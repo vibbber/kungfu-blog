@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The EASE method turns screen-time meltdowns into smooth transitions. Learn the co-pilot approach to tech that makes your kid screen-smart, not screen-dependent.">
+  <title>The 4-Step Trick That Makes Powering Down Painless</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #5C8A5A;
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin: 32px 0 12px;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 16px;
+      color: #2D2D3A;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* EASE Steps */
+    .ease-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+
+    .ease-step {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border-top: 4px solid #E8A598;
+    }
+
+    .ease-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #E8A598;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .ease-step h4 {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+
+    .ease-step p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #4A4A5A;
+    }
+
+    .ease-step .script {
+      background: #FAF6F0;
+      border-left: 3px solid #E8A598;
+      padding: 10px 14px;
+      margin-top: 10px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 14px;
+      color: #5A5A6A;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0 32px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .compare-table thead th {
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .compare-table thead th:first-child {
+      background: #5C8A5A;
+      color: white;
+    }
+
+    .compare-table thead th:last-child {
+      background: #D97B6A;
+      color: white;
+    }
+
+    .compare-table td {
+      padding: 12px 20px;
+      font-size: 15px;
+      background: white;
+      border-bottom: 1px solid #F0EBE4;
+    }
+
+    .compare-table td:first-child {
+      border-right: 2px solid #F0EBE4;
+    }
+
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Three approach cards */
+    .approach-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+
+    .approach-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .approach-card.winner {
+      border: 2px solid #5C8A5A;
+      background: #F5FAF5;
+    }
+
+    .approach-card .label {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .approach-card.winner .label {
+      background: #5C8A5A;
+      color: white;
+    }
+
+    .approach-card.caution .label {
+      background: #F0C674;
+      color: #7A6520;
+    }
+
+    .approach-card.danger .label {
+      background: #E8A598;
+      color: #8B3A2E;
+    }
+
+    .approach-card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1A1A2E;
+    }
+
+    .approach-card p {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 0;
+    }
+
+    /* Pulse check */
+    .pulse-check {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 24px 0 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .pulse-check h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .pulse-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #F0EBE4;
+      font-size: 15px;
+    }
+
+    .pulse-item:last-child {
+      border-bottom: none;
+    }
+
+    .pulse-check-box {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #5C8A5A;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Callout */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .callout p {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* Co-pilot checklist */
+    .copilot-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 32px;
+    }
+
+    .copilot-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 16px;
+      border-bottom: 1px solid #F0EBE4;
+    }
+
+    .copilot-list li:last-child {
+      border-bottom: none;
+    }
+
+    .copilot-list li::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #5C8A5A;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    /* Long game */
+    .long-game {
+      background: linear-gradient(135deg, #5C8A5A, #4A7A4A);
+      color: white;
+      padding: 32px;
+      border-radius: 14px;
+      margin: 32px 0;
+    }
+
+    .long-game h3 {
+      color: white;
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .long-game-item {
+      margin-bottom: 16px;
+    }
+
+    .long-game-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .long-game-item strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+
+    .long-game-item span {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #E0DBD3;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 24px 16px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .ease-grid { grid-template-columns: 1fr; }
+      .approach-row { grid-template-columns: 1fr; }
+    }
+  .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+   .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+   .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+   .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+   .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+   .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+   .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+   .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>The 4-Step Trick That Makes Powering Down Painless</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Not all screen time is the same. What they do on it matters more than how long.</p>
+    <ul>
+      <li>Kids raised with the co-pilot approach come to you when something goes wrong online, regulate their own screen habits, and stay engaged offline.</li>
+      <li>The move: stop counting minutes — start sorting screen time into creative (building, coding, making) vs consumptive (scrolling, autoplay, watching).</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>5-row creative vs consumptive comparison &middot; 3 parenting approaches to tech &middot; EASE transition method &middot; weekly pulse check</div>
+  </div>
+  <p class="hero-subtitle">Your kid puts the iPad down. No tears. No negotiations. Here's how.</p>
+
+  <img src="/images/blog/raising-a-screen-smart-kid/co-pilot-hero.webp" alt="Parent and child looking at a tablet together on a couch" class="hero-img" loading="eager">
+
+  <p>Picture this: your six-year-old is deep in a game. You say "five more minutes." Five minutes pass. You say "time's up." And then... nothing happens. No screaming. No bargaining. They put it down and ask what's for dinner.</p>
+
+  <p>Fantasy? Not if you set up the transition right. The meltdown doesn't come from the screen going off. It comes from the gap between "screen off" and "nothing to do." Close that gap, and the fight disappears.</p>
+
+  <h2>The EASE Method</h2>
+
+  <p>Four steps. Takes about two minutes. Works on tablets, phones, TV, gaming consoles -- anything with a glowing rectangle.</p>
+
+  <img src="/images/blog/raising-a-screen-smart-kid/ease-method.webp" alt="Visual diagram of the four EASE steps for screen time transitions" class="blog-img" loading="lazy">
+
+  <div class="ease-grid">
+    <div class="ease-step">
+      <div class="ease-letter">E</div>
+      <h4>Expect It</h4>
+      <p>Before they pick up the device, agree on the plan. No surprises means less resistance.</p>
+      <div class="script">"You've got 30 minutes, then we're making dinner together."</div>
+    </div>
+    <div class="ease-step">
+      <div class="ease-letter">A</div>
+      <h4>Approach Warmly</h4>
+      <p>When time is winding down, move close. Sit near them. Your calm presence signals the transition without triggering fight-or-flight.</p>
+      <div class="script">No words needed. Just be near.</div>
+    </div>
+    <div class="ease-step">
+      <div class="ease-letter">S</div>
+      <h4>Show Interest</h4>
+      <p>Genuine curiosity about their screen world pulls their attention from the device back to you.</p>
+      <div class="script">"What are you building?" or "Who's winning?"</div>
+    </div>
+    <div class="ease-step">
+      <div class="ease-letter">E</div>
+      <h4>Ease the Landing</h4>
+      <p>Have the next thing ready. A snack, a game, going outside. The meltdown lives in the gap between "screens off" and "nothing."</p>
+      <div class="script">"Screens down -- want to help me make tacos?"</div>
+    </div>
+  </div>
+
+  <p>That's it. Expect, Approach, Show interest, Ease the landing. The magic is in step four: you're not taking something away, you're handing them something better.</p>
+
+  <h2>But What Counts as "Too Much" Screen Time?</h2>
+
+  <p>Wrong question. Better question: <strong>what is your kid doing on that screen?</strong></p>
+
+  <img src="/images/blog/raising-a-screen-smart-kid/creative-vs-consumptive.webp" alt="Comparison of creative vs consumptive screen time" class="blog-img" loading="lazy">
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Creative Screen Time</th>
+        <th>Consumptive Screen Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Coding an app or game</td>
+        <td>Scrolling TikTok on autoplay</td>
+      </tr>
+      <tr>
+        <td>Drawing in Procreate</td>
+        <td>Watching unboxing videos</td>
+      </tr>
+      <tr>
+        <td>Following a tutorial to build something</td>
+        <td>Clicking through random YouTube recommendations</td>
+      </tr>
+      <tr>
+        <td>Playing a strategy game with friends</td>
+        <td>Watching someone else play a game</td>
+      </tr>
+      <tr>
+        <td>Researching a topic they're curious about</td>
+        <td>Passively absorbing whatever the algorithm serves</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Creative screen time strengthens working memory and problem-solving. Consumptive screen time lights up the same reward circuits as other compulsive behaviors. Same device. Completely different brain activity.</p>
+
+  <h2>Three Ways Parents Handle Tech</h2>
+
+  <div class="approach-row">
+    <div class="approach-card winner">
+      <span class="label">Best outcomes</span>
+      <h4>Co-Pilot</h4>
+      <p>You're alongside them. Playing their games, watching their shows, having real conversations about what they see online.</p>
+    </div>
+    <div class="approach-card caution">
+      <span class="label">Risky</span>
+      <h4>Open Road</h4>
+      <p>Few boundaries. The child navigates alone. You're not engaged with their digital world.</p>
+    </div>
+    <div class="approach-card danger">
+      <span class="label">Backfires</span>
+      <h4>Roadblock</h4>
+      <p>Heavy restrictions without discussion. Control replaces connection. Rules exist but the "why" is never explored.</p>
+    </div>
+  </div>
+
+  <p>Kids whose parents co-pilot show better outcomes across the board. Not because the rules are perfect, but because the relationship stays strong -- and kids actually come to you when something goes wrong online.</p>
+
+  <h3>What Co-Piloting Looks Like Day to Day</h3>
+
+  <ul class="copilot-list">
+    <li>Sit down and play their game with them. Ask genuine questions about what's happening.</li>
+    <li>Set family-wide screen boundaries -- not rules that only apply to kids. Devices in a drawer after 8pm. No phones at the table. Everyone.</li>
+    <li>Talk openly about what they see online. The weird stuff. The confusing stuff. Make yourself the first person they think to tell.</li>
+    <li>Involve your kid in setting the rules. People follow boundaries they helped create.</li>
+    <li>For teens: discuss how social media is designed to keep you scrolling. No moralizing. Just facts.</li>
+    <li>Model what you're asking. If your phone is always in your hand, that's the loudest message.</li>
+  </ul>
+
+  <div class="callout">
+    <p>It was never about screens. It's about raising a kid who can manage their own attention, make good choices, and talk to you when things get hard.</p>
+  </div>
+
+  <h2>The Weekly Pulse Check</h2>
+
+  <p>Stop counting daily minutes. Instead, ask yourself these five questions once a week. If most answers are yes, you're doing fine -- regardless of what the screen time counter says.</p>
+
+  <div class="pulse-check">
+    <h3>This Week, Is My Kid...</h3>
+    <div class="pulse-item"><div class="pulse-check-box"></div> Sleeping enough and eating well?</div>
+    <div class="pulse-item"><div class="pulse-check-box"></div> Excited about something offline?</div>
+    <div class="pulse-item"><div class="pulse-check-box"></div> Seeing friends face to face, not just online?</div>
+    <div class="pulse-item"><div class="pulse-check-box"></div> Talking to us naturally -- at meals, in the car, before bed?</div>
+    <div class="pulse-item"><div class="pulse-check-box"></div> Generally happy and emotionally steady?</div>
+  </div>
+
+  <p>Five yeses and a pile of screen time? Relax. Three nos and barely any screen time? The problem isn't the iPad.</p>
+
+  <div class="long-game">
+    <h3>Playing the Long Game</h3>
+    <div class="long-game-item">
+      <strong>Start early, stay consistent.</strong>
+      <span>Building screen habits at 4 is ten times easier than overhauling them at 14.</span>
+    </div>
+    <div class="long-game-item">
+      <strong>Renegotiate as they grow.</strong>
+      <span>What works for a 7-year-old won't fit a 12-year-old. Revisit the rules together.</span>
+    </div>
+    <div class="long-game-item">
+      <strong>Repair when you slip.</strong>
+      <span>Screamed about the iPad? Own it. "I handled that badly. Let's talk about what happened."</span>
+    </div>
+    <div class="long-game-item">
+      <strong>Know your triggers.</strong>
+      <span>You're most likely to snap about screen time when you're tired, stressed, or using your own phone to check out.</span>
+    </div>
+    <div class="long-game-item">
+      <strong>Make offline life irresistible.</strong>
+      <span>Kids don't crave screens when the real world is full of connection, play, and adventure.</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>kungfu.family</p>
+  </footer>
+
+</body>
+</html>

@@ -2100,6 +2100,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop controlling bedtime and start demonstrating it — dim the lights, announce your tiredness, and actually go to bed.',
     tldrInside: 'battle loop vs. modeling path diagram, 3 nightly moves with scripts, 5 phrase replacements, honest 3-week timeline',
   },
+  {
+    slug: 'raising-a-screen-smart-kid',
+    title: 'Screen-Smart Transitions',
+    subtitle: 'Close the gap between screens off and nothing to do and the fight disappears',
+    description: 'The EASE method turns screen-time meltdowns into smooth transitions. Four steps, two minutes — learn the co-pilot approach that makes kids screen-smart, not screen-dependent.',
+    image: '/images/cards/raising-a-screen-smart-kid.webp',
+    imageAlt: 'Split clock face with screen icons on one side and outdoor play items on the other, symbolizing balanced screen transitions',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'screen-time',
+    book: 'The Parenting Handbook',
+    bookSlug: 'the-parenting-handbook-schamuhn',
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    tldrAnchor: 'Not all screen time is the same. What they do on it matters more than how long.',
+    tldrPayoff: 'Kids raised with the co-pilot approach come to you when something goes wrong online, regulate their own screen habits, and stay engaged offline.',
+    tldrMove: 'The move: stop counting minutes — start sorting screen time into creative (building, coding, making) vs consumptive (scrolling, autoplay, watching).',
+    tldrInside: '5-row creative vs consumptive comparison, 3 parenting approaches to tech, EASE transition method, weekly pulse check',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
