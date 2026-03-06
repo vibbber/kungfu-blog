@@ -2060,6 +2060,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: measure in years, not days — and protect your own capacity so you can sustain decades of deliberate teaching.',
     tldrInside: '3-level zoom table on progress, REACH method with 5 concrete moves, 4-stage timeline from early years to young adult, 4-habit sustainability table',
   },
+  {
+    slug: 'beyond-good-job',
+    title: 'The Silent Acknowledgment',
+    subtitle: 'When saying nothing is the strongest thing a parent can say',
+    description: 'Your kid folds the napkins. They\'re lumpy and uneven. Every instinct says "good job!" — but silence builds more motivation than a thousand praise words ever could.',
+    image: '/images/cards/beyond-good-job.webp',
+    imageAlt: 'Overhead view of a dinner table with one charmingly lumpy child-folded napkin among neat place settings',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'motivation',
+    book: 'Hunt, Gather, Parent',
+    bookSlug: 'hunt-gather-parent-doucleff',
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    tldrAnchor: 'The strongest acknowledgment for a child\'s effort is silence.',
+    tldrPayoff: 'Kids who aren\'t scored on every small act cooperate more naturally, compete less with siblings, and pitch in without being asked.',
+    tldrMove: 'The shift: replace evaluative praise with belonging — treat contribution as expected, not exceptional.',
+    tldrInside: '11 word-for-word scripts across 9 strategies, 4-step habit-breaking plan, before/after grid for 4 common moments, 5 praise-backfire warning signs',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
