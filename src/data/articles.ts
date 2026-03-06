@@ -2020,6 +2020,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: practise the hard parts at home with low stakes -- board games, silly play, negotiating what to watch -- so she\'s ready when it counts.',
     tldrInside: '4 friendship zones with parent coaching moves, comparison table of red flags vs. healthy signs, try-tonight dinner question, long-term fixer pattern warning',
   },
+  {
+    slug: 'first-offense-correction',
+    title: 'Before It Becomes a Habit',
+    subtitle: 'The tiny window when correction costs nothing',
+    description: 'The first time a child misbehaves, one calm look is enough. Wait until it becomes a pattern, and you\'re looking at months of effort. Here\'s how to catch the window.',
+    image: '/images/cards/first-offense-correction.webp',
+    imageAlt: 'An open window with a small seedling on the sill, representing the brief window when correction is effortless',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'discipline',
+    book: 'Charlotte Mason Home Education',
+    bookSlug: 'charlotte-mason-home-education-1906',
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    tldrAnchor: 'The difference between easy kids and hard kids often comes down to when parents first acted.',
+    tldrPayoff: 'Kids corrected at the first offense stay easy to guide through childhood — they trust parental authority, respond to a look instead of a showdown, and keep their natural sense of right and wrong intact.',
+    tldrMove: 'The shift: treat the first misbehavior as the moment that matters most — not the tenth.',
+    tldrInside: '5-factor comparison table, 4 traps: \'Just This Once,\' \'It\'s Not That Bad,\' and more, 3-step See-Show-Stop sequence, 3 real-scenario scripts',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
