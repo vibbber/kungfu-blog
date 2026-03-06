@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dinner Table Game That Reveals How Your Kid Feels Loved | Kung Fu</title>
+  <meta name="description" content="A simple 'would you rather' game at dinner can reveal your child's primary connection style. Here's exactly how to play it — with questions for every age.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    /* Hero */
+    .hero {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      display: block;
+    }
+
+    .content {
+      padding: 0 24px 60px;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 18px;
+      color: #1A1A2E;
+      margin: 24px 0 10px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+    .subtitle {
+      font-size: 19px;
+      color: #666;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    /* Inline image */
+    .inline-img {
+      width: 100%;
+      margin: 32px 0;
+      border-radius: 12px;
+    }
+
+    /* The game table */
+    .game-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin: 20px 0 28px;
+      font-size: 15px;
+    }
+    .game-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .game-table td {
+      background: white;
+      padding: 14px 16px;
+      border-bottom: 1px solid #EEE;
+      vertical-align: top;
+    }
+    .game-table tr:last-child td {
+      border-bottom: none;
+    }
+    .game-table .age-cell {
+      font-weight: 700;
+      color: #5C8A5A;
+      white-space: nowrap;
+      width: 60px;
+    }
+
+    /* Style tags */
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .tag-closeness { background: #E74C3C; }
+    .tag-encouragement { background: #3498DB; }
+    .tag-togetherness { background: #F39C12; }
+    .tag-surprises { background: #9B59B6; }
+    .tag-help { background: #1ABC9C; }
+
+    /* Clue cards */
+    .clue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+    @media (max-width: 600px) {
+      .clue-grid { grid-template-columns: 1fr; }
+    }
+    .clue-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .clue-card h4 {
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .clue-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Complaint decoder */
+    .decoder {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin: 20px 0 28px;
+    }
+    .decoder-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .decoder-row:last-child {
+      border-bottom: none;
+    }
+    .decoder-complaint {
+      flex: 1;
+      font-style: italic;
+      color: #555;
+      font-size: 15px;
+    }
+    .decoder-meaning {
+      flex: 0 0 auto;
+    }
+
+    /* Script box */
+    .script {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0 24px;
+      font-style: italic;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Callout */
+    .callout {
+      background: #FFF9E6;
+      border: 1px solid #F0C674;
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin: 24px 0;
+    }
+    .callout strong {
+      color: #B8860B;
+    }
+
+    /* Deep dive steps */
+    .step-list {
+      margin: 20px 0;
+    }
+    .step-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #E8A598;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .step-text {
+      flex: 1;
+      font-size: 16px;
+    }
+    .step-text strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* The five overview */
+    .five-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 24px;
+      justify-content: center;
+    }
+    .five-item {
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* Bottom box */
+    .bottom-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 40px 0 0;
+      text-align: center;
+    }
+    .bottom-box p {
+      font-size: 18px;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      padding: 20px 24px;
+      border-top: 1px solid #E0E0E0;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/reading-your-childs-connection-style/hero-game.webp" alt="Parent and child laughing together at the dinner table during a playful conversation game">
+  </div>
+
+  <div class="content">
+
+    <h1>The Dinner Table Game That Reveals How Your Kid Feels Loved</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">One dinnertime game can tell you more about your child than months of guessing.</p>
+      <ul>
+        <li>Kids raised by parents who speak their primary style handle peer rejection, share more easily, and stay emotionally open through the preteen years.</li>
+        <li>The shift: replace generic affection with targeted connection — find the one style that lights them up and lead with it.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>7 either/or questions sorted by age (5-7, 8-11, 12+) &middot; 5 behavioral clues to watch for &middot; 5 common complaints decoded &middot; 4-step request tracking method</div>
+    </div>
+    <p class="subtitle">Tonight at dinner, try this: give your child two choices. Not "chicken or pasta." Something like "Would you rather we bake cookies together right now, or I hide a surprise treat in your lunchbox tomorrow?" Their answer tells you more than you'd think.</p>
+
+    <p>Kids feel love in different ways. One child absolutely melts when you say "I noticed how hard you worked on that" while their sibling barely registers the compliment — but turns into a different person when you sit down and play Legos for twenty minutes. Same family, same parents, completely different wiring.</p>
+
+    <p>There are five connection styles. Every child responds to all of them, but most have one or two that hit way deeper than the rest.</p>
+
+    <img class="inline-img" src="/images/blog/reading-your-childs-connection-style/five-styles.webp" alt="Diagram showing five connection styles: closeness, encouragement, togetherness, surprises, and helpful actions">
+
+    <div class="five-bar">
+      <span class="five-item" style="background:#E74C3C;">Closeness</span>
+      <span class="five-item" style="background:#3498DB;">Encouragement</span>
+      <span class="five-item" style="background:#F39C12;">Togetherness</span>
+      <span class="five-item" style="background:#9B59B6;">Surprises</span>
+      <span class="five-item" style="background:#1ABC9C;">Helpful Actions</span>
+    </div>
+
+    <p>The question is: which one is your kid's? Here are four ways to figure it out. The first one you can start tonight.</p>
+
+    <!-- METHOD 1: THE GAME -->
+    <h2>1. Play "Would You Rather" (ages 5+)</h2>
+
+    <p>Toss casual either/or questions where each option represents a different style. Don't explain what you're doing. Just play. Over 15-20 choices spread across a few weeks, the pattern becomes obvious.</p>
+
+    <table class="game-table">
+      <tr><th>Age</th><th>Option A</th><th>Option B</th></tr>
+      <tr>
+        <td class="age-cell">5-7</td>
+        <td>We bake cookies together right now <span class="tag tag-togetherness">Togetherness</span></td>
+        <td>I pack a surprise treat in your lunchbox tomorrow <span class="tag tag-surprises">Surprises</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">5-7</td>
+        <td>Big hug and a tickle fight <span class="tag tag-closeness">Closeness</span></td>
+        <td>I write you a note about my favorite thing you did today <span class="tag tag-encouragement">Encouragement</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">5-7</td>
+        <td>I set up your art supplies all ready for you <span class="tag tag-help">Helpful Actions</span></td>
+        <td>We do the art project together, side by side <span class="tag tag-togetherness">Togetherness</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">8-11</td>
+        <td>I take you to pick out something special this weekend <span class="tag tag-surprises">Surprises</span></td>
+        <td>We spend the whole afternoon at the park, just us two <span class="tag tag-togetherness">Togetherness</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">8-11</td>
+        <td>I organize your room exactly how you like it <span class="tag tag-help">Helpful Actions</span></td>
+        <td>I tell you three specific things I noticed you're getting better at <span class="tag tag-encouragement">Encouragement</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">12+</td>
+        <td>We cook dinner together and you pick the music <span class="tag tag-togetherness">Togetherness</span></td>
+        <td>I handle the dishes tonight so you can relax <span class="tag tag-help">Helpful Actions</span></td>
+      </tr>
+      <tr>
+        <td class="age-cell">12+</td>
+        <td>I text you something encouraging before your game <span class="tag tag-encouragement">Encouragement</span></td>
+        <td>Fist bump, arm around the shoulder, "I've got your back" <span class="tag tag-closeness">Closeness</span></td>
+      </tr>
+    </table>
+
+    <div class="callout">
+      <strong>Volume matters.</strong> Any single answer just tells you what sounded fun in that second. You need 15-20 choices across multiple days before the real pattern shows.
+    </div>
+
+    <p>If your kid catches on and asks what you're up to:</p>
+    <div class="script">"I've been thinking about what makes our family time better. I figured I'd just ask what you like most."</div>
+
+    <!-- METHOD 2: WATCH -->
+    <h2>2. Watch What They Do (Without Prompting)</h2>
+
+    <img class="inline-img" src="/images/blog/reading-your-childs-connection-style/observe-clues.webp" alt="Parent quietly observing their child playing, with a gentle detective-like attentiveness">
+
+    <p>Children naturally express love the way they want to receive it. Watch how your child shows affection when nobody has prompted them — to you, friends, teachers, grandparents. The clues are already there.</p>
+
+    <div class="clue-grid">
+      <div class="clue-card">
+        <h4><span class="tag tag-closeness">Closeness</span></h4>
+        <p>Always climbing into your lap, holding your hand at the store, wanting piggyback rides long after they're "too old"</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-encouragement">Encouragement</span></h4>
+        <p>Tells the neighbor "my mom makes the best pancakes," writes unsolicited "you're the best" notes</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-togetherness">Togetherness</span></h4>
+        <p>Follows you room to room, wants to tag along to the grocery store, says "stay with me" at bedtime</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-surprises">Surprises</span></h4>
+        <p>Makes you "gifts" from craft supplies, picks flowers on walks, wraps up their own toys to give you</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-help">Helpful Actions</span></h4>
+        <p>Tries to carry bags for you, sets the table without being asked, volunteers to help a younger sibling</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Key rule:</strong> Only count unprompted behavior. If you suggested "why don't you make Grandma a card?" — that doesn't count.
+    </div>
+
+    <!-- METHOD 3: COMPLAINTS -->
+    <h2>3. Listen to the Complaints</h2>
+
+    <p>This one is almost too easy. Complaints are requests turned inside out. The thing they gripe about most reveals what matters most to them.</p>
+
+    <div class="decoder">
+      <div class="decoder-row">
+        <div class="decoder-complaint">"You're always on your phone"</div>
+        <div class="decoder-meaning"><span class="tag tag-togetherness">Togetherness</span></div>
+      </div>
+      <div class="decoder-row">
+        <div class="decoder-complaint">"You only notice when I mess up"</div>
+        <div class="decoder-meaning"><span class="tag tag-encouragement">Encouragement</span></div>
+      </div>
+      <div class="decoder-row">
+        <div class="decoder-complaint">"Nobody ever helps me"</div>
+        <div class="decoder-meaning"><span class="tag tag-help">Helpful Actions</span></div>
+      </div>
+      <div class="decoder-row">
+        <div class="decoder-complaint">"You never cuddle me anymore"</div>
+        <div class="decoder-meaning"><span class="tag tag-closeness">Closeness</span></div>
+      </div>
+      <div class="decoder-row">
+        <div class="decoder-complaint">"You forgot to bring me something"</div>
+        <div class="decoder-meaning"><span class="tag tag-surprises">Surprises</span></div>
+      </div>
+    </div>
+
+    <p>Filter out one-offs. A single grumpy comment after a rough day isn't data. You're looking for the same theme surfacing again and again over weeks.</p>
+
+    <!-- METHOD 4: REQUESTS -->
+    <h2>4. Track Their Requests</h2>
+
+    <p>Over 2-3 weeks, listen for the emotional requests hiding inside everyday asks. Not "can I have a cookie" — the other kind.</p>
+
+    <div class="clue-grid">
+      <div class="clue-card">
+        <h4><span class="tag tag-togetherness">Togetherness</span></h4>
+        <p>"Watch me do this!" / "Can we go somewhere together?" / "Come see what I made!"</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-encouragement">Encouragement</span></h4>
+        <p>"Was that good?" / "Do you like it?" / "Am I doing it right?"</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-help">Helpful Actions</span></h4>
+        <p>"Can you help me build this?" / "Will you make my lunch the special way?"</p>
+      </div>
+      <div class="clue-card">
+        <h4><span class="tag tag-closeness">Closeness</span></h4>
+        <p>"Carry me" / "Scratch my back" / keeps finding reasons to be physically near you</p>
+      </div>
+    </div>
+
+    <p>If more than half the emotional requests point to one style, that's your signal.</p>
+
+    <!-- DEEP DIVE -->
+    <h2>Still Not Sure? The 10-Day Deep Dive</h2>
+
+    <p>If none of the above produces a clear winner, try concentrated immersion in one style at a time.</p>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Go heavy on one style for 5 days.</strong> Example: Togetherness — 20-30 minutes of fully focused, phone-away time every single day.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Watch for the response.</strong> More smiles? Calmer evenings? Spontaneous affection? Or do they appreciate it but not light up?</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Ease back for 3-4 days.</strong> Return to normal. Does your child ask for what you just pulled back? That's a strong signal.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Move to the next style and repeat.</strong> Cycle through all five. The whole process takes about 6-8 weeks.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>Compare your notes.</strong> Which style got the biggest response? Which pullback triggered the most complaints? That's your answer.</div>
+      </div>
+    </div>
+
+    <!-- IMPORTANT NOTES -->
+    <h2>Three Things to Keep in Mind</h2>
+
+    <h3>Preferences shift.</h3>
+    <p>What works at 6 might not fit at 12. Re-run this detective work informally once a year, especially around big transitions — new school, new sibling, puberty.</p>
+
+    <h3>Under 5? Hold off.</h3>
+    <p>Most children don't show a clear preference until around age 5-6. Before that, pour all five styles on generously and don't try to pin down a primary one.</p>
+
+    <h3>The primary style leads. It doesn't replace the others.</h3>
+    <p>Finding your child's top style means you lead with that one. You never drop the other four. Think of it like a volume knob, not a switch.</p>
+
+    <div class="bottom-box">
+      <p>Speak all five styles. Lead with the one that lights them up.<br><strong>The goal isn't a label — it's paying closer attention.</strong></p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Original guide by Kung Fu. Informed by developmental research on emotional connection styles in children.</p>
+  </footer>
+
+</body>
+</html>

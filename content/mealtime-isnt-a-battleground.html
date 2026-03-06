@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Put dessert on the plate next to the broccoli. Sounds wrong? It's the move that ends mealtime wars for good. The lane-based system that makes dinner easy.">
+  <title>Put the Ice Cream Next to the Broccoli | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0; color: #1A1A2E; line-height: 1.7;
+      padding: 0; margin: 0 auto; max-width: 800px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white; padding: 48px 32px 40px; text-align: center;
+    }
+    .hero-badge {
+      display: inline-block; background: rgba(255,255,255,0.2);
+      padding: 5px 14px; border-radius: 20px; font-size: 11px;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+    }
+    .hero h1 { font-size: 30px; line-height: 1.25; margin-bottom: 12px; font-weight: 800; }
+    .hero p { font-size: 16px; opacity: 0.9; max-width: 560px; margin: 0 auto; }
+
+    /* Content wrapper */
+    .content { padding: 0 28px 48px; }
+    @media (max-width: 600px) { .content { padding: 0 16px 36px; } .hero { padding: 36px 20px 32px; } .hero h1 { font-size: 24px; } }
+
+    /* Blog images */
+    .blog-img {
+      width: 100%; border-radius: 12px; margin: 28px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .img-caption {
+      text-align: center; font-size: 12px; color: #7A8B8B;
+      margin-top: -20px; margin-bottom: 24px; font-style: italic;
+    }
+
+    /* Paragraphs */
+    .content p { font-size: 16px; margin-bottom: 18px; }
+
+    /* Section headers */
+    h2 {
+      font-size: 22px; color: #5C8A5A; margin: 36px 0 16px;
+      padding-bottom: 6px; border-bottom: 2px solid #E8A598;
+    }
+
+    /* Lane cards */
+    .lane-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 28px; }
+    .lane-card {
+      border-radius: 12px; padding: 22px 18px;
+    }
+    .lane-card.parent-lane { background: #5C8A5A; color: white; }
+    .lane-card.kid-lane { background: #E8A598; color: white; }
+    .lane-card h3 { font-size: 15px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .lane-card ul { list-style: none; padding: 0; }
+    .lane-card li { font-size: 14px; padding: 4px 0; padding-left: 18px; position: relative; }
+    .lane-card li::before { content: ''; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+    @media (max-width: 600px) { .lane-grid { grid-template-columns: 1fr; } }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A; color: white; padding: 24px;
+      border-radius: 12px; margin: 28px 0; text-align: center;
+    }
+    .callout p { font-size: 19px; font-weight: 600; margin: 0; line-height: 1.4; }
+    .callout .small { font-size: 14px; font-weight: 400; opacity: 0.85; margin-top: 8px; }
+
+    /* Script cards */
+    .script-card {
+      background: white; border-radius: 12px; margin: 20px 0; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .script-header {
+      background: #E8A598; color: white; padding: 12px 20px;
+      font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .script-body { padding: 20px; }
+    .script-body .context { font-size: 13px; color: #7A8B8B; margin-bottom: 12px; }
+    .speech {
+      background: #EDF7ED; border-left: 4px solid #5C8A5A;
+      padding: 14px 18px; border-radius: 0 8px 8px 0;
+      font-size: 15px; font-style: italic; margin: 12px 0;
+    }
+    .speech-label {
+      font-style: normal; font-weight: 700; color: #5C8A5A;
+      font-size: 11px; text-transform: uppercase; display: block; margin-bottom: 4px;
+    }
+    .inner-thought {
+      background: #FFF9E6; border-left: 4px solid #F0C674;
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 14px; font-style: italic; margin: 12px 0;
+    }
+    .inner-label {
+      font-style: normal; font-weight: 700; color: #B8860B;
+      font-size: 11px; text-transform: uppercase; display: block; margin-bottom: 4px;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px;
+      border-radius: 12px; overflow: hidden;
+    }
+    .compare-table th {
+      padding: 12px 16px; text-align: left; font-size: 12px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .compare-table th:first-child { background: #fef3f0; color: #c0392b; }
+    .compare-table th:last-child { background: #edf7ed; color: #5C8A5A; }
+    .compare-table td { padding: 12px 16px; border-bottom: 1px solid #eee; vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child { background: #fef9f7; }
+    .compare-table td:last-child { background: #f7fdf7; }
+
+    /* Cycle diagram */
+    .cycle-strip {
+      display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+      justify-content: center; margin: 16px 0; padding: 16px;
+      background: #fef3f0; border-radius: 12px;
+    }
+    .cycle-step {
+      background: white; border: 2px solid #E8A598; padding: 8px 12px;
+      border-radius: 8px; font-size: 13px; text-align: center; flex: 1; min-width: 80px;
+    }
+    .cycle-arrow { color: #c0392b; font-size: 18px; font-weight: bold; }
+    @media (max-width: 600px) { .cycle-strip { flex-direction: column; } .cycle-arrow { transform: rotate(90deg); } }
+
+    /* Checklist */
+    .check-list { list-style: none; padding: 0; margin: 16px 0; }
+    .check-list li {
+      padding: 10px 0 10px 28px; position: relative; font-size: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li::before {
+      content: '\2713'; position: absolute; left: 0; top: 10px;
+      color: #5C8A5A; font-weight: bold; font-size: 16px;
+    }
+
+    /* Closing box */
+    .closing-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white; padding: 28px; border-radius: 12px;
+      margin: 36px 0 0; text-align: center;
+    }
+    .closing-box p { font-size: 18px; font-weight: 600; margin: 0; line-height: 1.5; }
+    .closing-box .small { font-size: 13px; font-weight: 400; opacity: 0.8; margin-top: 10px; }
+
+    footer {
+      margin-top: 40px; padding: 20px 28px; border-top: 1px solid #ddd;
+      font-size: 12px; color: #999; text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-badge">Mealtime Strategy</span>
+  <h1>Put the Ice Cream Next to the Broccoli</h1>
+  <p>The one dinner move that sounds completely wrong -- until you watch your kid stop fighting and start eating.</p>
+</div>
+
+<div class="content">
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Dessert as a reward turns dinner into a hostage negotiation.</p>
+    <ul>
+      <li>Kids raised with dessert alongside stop obsessing over sweets, eat a wider range of foods, and come to dinner without dread.</li>
+      <li>The move: put the ice cream on the plate next to the broccoli -- no earning, no sequencing, no lever.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>parent lane vs. kid lane breakdown &middot; 4 real-scenario scripts &middot; snack routine reset script &middot; 5-row old pattern vs. new pattern table</div>
+  </div>
+
+  <img src="/images/blog/mealtime-isnt-a-battleground/dessert-alongside.webp" alt="A child's plate with pasta, broccoli, chicken, and a small scoop of ice cream all served together" class="blog-img">
+  <p class="img-caption">Dessert isn't a reward. It's just another food on the plate.</p>
+
+  <p>Tonight, try this: put a small scoop of ice cream directly on your kid's dinner plate. Right there, next to the broccoli and the chicken. Don't announce it. Don't make a speech. Just set it down like it's pasta.</p>
+
+  <p>Your kid will be confused. Maybe delighted. Possibly suspicious. They might eat the ice cream first. That's fine.</p>
+
+  <p>Here's what happens over the next few weeks: dessert stops being the golden trophy at the finish line. It becomes just... food. When ice cream isn't elevated above everything else on the plate, kids lose the obsession with it. They eat the ice cream, then they eat the chicken. Or they eat three bites of ice cream and move to the broccoli because the broccoli is right there and they're curious.</p>
+
+  <p>This one move -- dessert alongside, not after -- is the gateway to a system that makes mealtime battles disappear entirely.</p>
+
+  <h2>The System Behind the Move</h2>
+
+  <p>That ice cream trick isn't random. It's built on a principle dietitian Ellyn Satter spent decades developing in her clinical work with families. The idea is dead simple:</p>
+
+  <div class="callout">
+    <p>You control the menu. They control the fork.</p>
+    <p class="small">When everybody stays in their lane, the fight disappears.</p>
+  </div>
+
+  <img src="/images/blog/mealtime-isnt-a-battleground/lane-split.webp" alt="Overhead view of a dinner table showing parent preparing food on one side and a child freely eating on the other" class="blog-img">
+
+  <div class="lane-grid">
+    <div class="lane-card parent-lane">
+      <h3>Your Lane</h3>
+      <ul>
+        <li><strong>What</strong> goes on the table</li>
+        <li><strong>When</strong> meals happen</li>
+        <li><strong>Where</strong> eating takes place</li>
+      </ul>
+    </div>
+    <div class="lane-card kid-lane">
+      <h3>Their Lane</h3>
+      <ul>
+        <li><strong>Whether</strong> they eat</li>
+        <li><strong>How much</strong> goes in</li>
+        <li><strong>Which items</strong> they touch</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>That's it. Three decisions are yours. Three are theirs. When you stop reaching across that line, the power struggle loses its fuel.</p>
+
+  <h2>Why Pushing Backfires</h2>
+
+  <p>Every mealtime battle follows the same script:</p>
+
+  <div class="cycle-strip">
+    <div class="cycle-step">Kid rejects food</div>
+    <span class="cycle-arrow">&rarr;</span>
+    <div class="cycle-step">You feel anxious</div>
+    <span class="cycle-arrow">&rarr;</span>
+    <div class="cycle-step">You push harder</div>
+    <span class="cycle-arrow">&rarr;</span>
+    <div class="cycle-step">Kid digs in</div>
+    <span class="cycle-arrow">&rarr;</span>
+    <div class="cycle-step">Full battle</div>
+  </div>
+
+  <p>It's not that your kid is being stubborn. It's that their mouth is the one thing they genuinely, completely control. Push on that, and they'll defend it with everything they've got. Not out of defiance -- out of instinct.</p>
+
+  <p>Feeding research consistently shows that pressuring kids to eat reduces intake and increases food avoidance. The harder you push, the less they eat. Every time.</p>
+
+  <h2>What to Say Instead</h2>
+
+  <p>Knowing the system is one thing. Knowing what to actually say at 6pm with a screaming kid is another. Here are the exact scripts.</p>
+
+  <div class="script-card">
+    <div class="script-header">Setting It Up (Pick a Calm Moment)</div>
+    <div class="script-body">
+      <p class="context">Weekend morning, car ride, anywhere that isn't the dinner table. Say it once, as a fact -- not a pitch.</p>
+      <div class="speech">
+        <span class="speech-label">Say this:</span>
+        I've been thinking about how we do food. Here's the new deal: my job is picking what we eat, when we eat, and where. Your job is deciding if you eat and how much. I'll always put something familiar on the table. But I won't ask you to take bites or finish anything. And you won't ask me to cook something different. We each handle our part.
+      </div>
+      <p class="context" style="margin-top: 12px;">They don't need to agree. You're informing them, not negotiating. If they push back: <em>"You don't have to love the idea right now. Let's just try it."</em></p>
+    </div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-header">When They Won't Touch Anything</div>
+    <div class="script-body">
+      <p class="context">Arms crossed. "I don't like any of this." Rice, chicken, carrots -- all rejected on sight.</p>
+      <div class="inner-thought">
+        <span class="inner-label">Remind yourself:</span>
+        I put food on the table. I included something familiar. My job is done. What she does next is hers.
+      </div>
+      <div class="speech">
+        <span class="speech-label">Say out loud:</span>
+        I hear you. Nothing's calling your name tonight. That happens. Everything on the plate is available whenever you're ready. And if you decide not to eat, that's okay -- breakfast will be here in the morning.
+      </div>
+      <p class="context" style="margin-top: 10px;">The moment you say "just try one piece" -- you've crossed the line. Stay warm, stay casual, move on with conversation.</p>
+    </div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-header">When They're Melting Down for Pizza</div>
+    <div class="script-body">
+      <p class="context">You made soup. They want pizza. Tears, accusations, full performance.</p>
+      <div class="inner-thought">
+        <span class="inner-label">Ground yourself:</span>
+        This tantrum isn't evidence I made a bad call. It's evidence he wants something different. Those are not the same thing.
+      </div>
+      <div class="speech">
+        <span class="speech-label">Then, calmly:</span>
+        You really wanted pizza tonight. I get it -- pizza's great. Tonight's dinner is soup. You can eat what's here or wait until tomorrow. Either way, I'm not upset with you for being disappointed.
+      </div>
+      <p class="context" style="margin-top: 10px;">Don't defend your choice. Don't explain why soup is nutritious. Name what they feel, state what is, let the storm pass. Your steadiness is the lesson.</p>
+    </div>
+  </div>
+
+  <h2>The Before/After</h2>
+
+  <table class="compare-table">
+    <tr>
+      <th>Old Pattern (Crossing Lanes)</th>
+      <th>New Pattern (Staying in Yours)</th>
+    </tr>
+    <tr>
+      <td>"Just three more bites."</td>
+      <td>"Everything's here whenever you're ready."</td>
+    </tr>
+    <tr>
+      <td>"No dessert until you finish."</td>
+      <td>Dessert served alongside. No lever.</td>
+    </tr>
+    <tr>
+      <td>"You can't be full yet!"</td>
+      <td>They say they're done. You say okay.</td>
+    </tr>
+    <tr>
+      <td>Making a separate "kid meal"</td>
+      <td>One meal, with one familiar item included.</td>
+    </tr>
+    <tr>
+      <td>Tracking every bite with anxiety</td>
+      <td>Evaluating your own job: Did I offer variety? Stay calm?</td>
+    </tr>
+  </table>
+
+  <h2>The Snack Trap</h2>
+
+  <p>Kids grazing on crackers all afternoon, then arriving at dinner full -- that's a pattern you can fix immediately. Snack timing is 100% your lane.</p>
+
+  <div class="script-card">
+    <div class="script-header">Resetting the Snack Routine</div>
+    <div class="script-body">
+      <div class="speech">
+        <span class="speech-label">Announce it plainly:</span>
+        We're switching up snacks. After school, I'll have two options ready. After that, the kitchen closes until dinner. It might feel different at first, and that's okay.
+      </div>
+      <div class="inner-thought" style="margin-top: 10px;">
+        <span class="inner-label">When they protest:</span>
+        I know this isn't what you're used to. You're allowed to be frustrated. Today's options are apples and cheese -- grab some whenever, or skip it and wait for dinner. Up to you.
+      </div>
+    </div>
+  </div>
+
+  <img src="/images/blog/mealtime-isnt-a-battleground/relaxed-dinner.webp" alt="A parent and child at a dinner table, relaxed and talking, the child eating freely" class="blog-img">
+  <p class="img-caption">The goal: dinner as connection time, not combat.</p>
+
+  <h2>Making It Stick</h2>
+
+  <ul class="check-list">
+    <li><strong>Catch the lane-crossing.</strong> Anytime you hear "just one more bite" come out of your mouth, that's a signal. Gently steer back.</li>
+    <li><strong>Debrief yourself, not them.</strong> After meals: Did I offer variety? Did I stay calm? That's your report card. Let their eating data go.</li>
+    <li><strong>Expect 2-4 weeks of testing.</strong> Kids who've been pushed will test the new system. Some eat less initially. This is recalibration, not failure.</li>
+    <li><strong>Know your triggers.</strong> Most lane-crossing happens when you're worried about nutrition, feeling judged by a partner or grandparent, or exhausted. Those moments pull the old pattern hardest.</li>
+  </ul>
+
+  <div class="closing-box">
+    <p>You set the table. They set the pace.<br>No one's fighting because no one needs to win.</p>
+    <p class="small">Try the ice cream on the plate tonight. See what happens.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Published by kungfu.family</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What If Bedtime Was Solved by Friday?</title>
+  <meta name="description" content="The check-in method that teaches babies to fall asleep on their own — most families see real results within a week.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #5C8A5A;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #5C8A5A;
+      margin: 36px 0 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0 28px;
+    }
+
+    .opener {
+      font-size: 18px;
+      color: #3a3a4a;
+      line-height: 1.8;
+    }
+
+    /* The core idea callout */
+    .core-idea {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .core-idea p {
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Step cards */
+    .steps {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: #E8A598;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .step-body h3 {
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    .script {
+      background: #F5F0EB;
+      border-left: 3px solid #E8A598;
+      padding: 10px 14px;
+      margin-top: 8px;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Timeline table */
+    .timeline-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .timeline-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-table td {
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #444;
+      border-bottom: 1px solid #eee;
+      background: white;
+    }
+
+    .timeline-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .timeline-table td:first-child {
+      font-weight: 700;
+      color: #5C8A5A;
+      white-space: nowrap;
+      width: 110px;
+    }
+
+    .mid-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+
+    /* Signals grid */
+    .signals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 600px) {
+      .signals { grid-template-columns: 1fr; }
+    }
+
+    .signal-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .signal-card.green {
+      border-top: 4px solid #5C8A5A;
+    }
+
+    .signal-card.amber {
+      border-top: 4px solid #E8A598;
+    }
+
+    .signal-card h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .signal-card.green h3 { color: #5C8A5A; }
+    .signal-card.amber h3 { color: #c0705e; }
+
+    .signal-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .signal-card ul li {
+      font-size: 14px;
+      color: #555;
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .signal-card.green ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5C8A5A;
+    }
+
+    .signal-card.amber ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #E8A598;
+    }
+
+    /* Mistakes section */
+    .mistakes {
+      background: #FEF3F0;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .mistakes h2 {
+      color: #c0705e;
+      margin-top: 0;
+    }
+
+    .mistake {
+      margin-bottom: 16px;
+    }
+
+    .mistake:last-child {
+      margin-bottom: 0;
+    }
+
+    .mistake h3 {
+      font-size: 15px;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+
+    .mistake p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* Bottom line */
+    .bottom-line {
+      background: linear-gradient(135deg, #5C8A5A, #4A7A4A);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 32px 0;
+    }
+
+    .bottom-line p {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .age-tag {
+      display: inline-block;
+      background: #E8F5E9;
+      color: #2E7D32;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <span class="badge">Sleep Strategy</span>
+  <h1>What If Bedtime Was Solved by Friday?</h1>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Most families see bedtime transform within five nights.</p>
+    <ul>
+      <li>Kids go from screaming for 45 minutes to fussing for 3 and falling asleep alone. Parents get their evenings back.</li>
+      <li>The shift: stop solving the problem for them -- say goodnight while they're still awake and let them find their own way down.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4-step check-in sequence &middot; night-by-night timeline from hard to easy &middot; 1 word-for-word bedtime script &middot; 3 mistakes that reset progress</div>
+  </div>
+
+  <p style="color:#7A8B8B; font-style:italic; margin-bottom:4px;">The check-in method that teaches babies to fall asleep on their own.</p>
+  <span class="age-tag">4+ months</span>
+
+  <img class="hero-img" src="/images/blog/bedtime-check-ins/hero-nursery.webp" alt="A cozy nursery at dusk with a baby settling peacefully in a crib, warm nightlight glow, parent silhouette in the doorway">
+
+  <p class="opener">Monday night, you're rocking your baby for forty-five minutes. Thursday night, you lay them down, say goodnight, and walk out. They fuss for three minutes and fall asleep.</p>
+
+  <p class="opener">That's not a fantasy. That's what this actually looks like for most families who try it.</p>
+
+  <p>Around four months, something changes. Babies develop the ability to calm themselves -- thumb-sucking, shifting position, quiet self-talk. The hardware is there. But if nobody gives them the chance to use it, it stays dormant. Every time you rock them to sleep, you're solving a problem they're ready to solve themselves.</p>
+
+  <div class="core-idea">
+    <p>You're not ignoring your baby. You're giving them room to discover they can calm themselves -- while showing them you're still there.</p>
+  </div>
+
+  <h2>The Four-Step Method</h2>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Wind down together</h3>
+        <p>Same routine every night. Bath, quiet time, a song -- whatever your family does. Repetition is the signal. Your baby starts recognizing: sleep is coming.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Say goodnight while they're still awake</h3>
+        <p>This is the key move. Place them in bed sleepy but conscious. Say goodnight. Step out. They fall asleep through their own settling, not through yours.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>If they cry, pop back in for 30 seconds</h3>
+        <p>Quick visit. Voice only. No picking up, no rocking, no feeding.</p>
+        <div class="script">"You're okay, I'm right here, time to sleep."</div>
+        <p style="margin-top:8px;">The visit says <strong>"I'm here"</strong> without taking over the settling process. Then you step out again.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3>Repeat until they're asleep</h3>
+        <p>Return at regular intervals if the crying continues. Stay calm, stay brief. Each check-in is a reassurance, not a rescue mission.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The Week-Long Arc</h2>
+
+  <p>Here's what makes this worth committing to: the change happens fast.</p>
+
+  <table class="timeline-table">
+    <thead>
+      <tr>
+        <th>When</th>
+        <th>What Happens</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Night 1</td>
+        <td>The hardest one. There will be crying and it will feel long. Your baby is used to the old way and doesn't understand the change yet. This is normal.</td>
+      </tr>
+      <tr>
+        <td>Night 2-3</td>
+        <td>Crying gets noticeably shorter. Your baby is starting to figure out their own settling moves -- a thumb, a favorite position, quiet sounds.</td>
+      </tr>
+      <tr>
+        <td>Night 4-5</td>
+        <td>The protest shifts from angry to fussy to just a little complaining. Some babies skip the fussing entirely and go straight to sleep.</td>
+      </tr>
+      <tr>
+        <td>End of week</td>
+        <td>Most babies are settling quickly on their own. You say goodnight, you walk out, and it just... works.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <img class="mid-img" src="/images/blog/bedtime-check-ins/progress-timeline.webp" alt="Visual showing decreasing crying duration from night 1 through night 5">
+
+  <h2>How to Read the Signals</h2>
+
+  <div class="signals">
+    <div class="signal-card green">
+      <h3>Working</h3>
+      <ul>
+        <li>Crying gets shorter each night</li>
+        <li>Self-soothing behaviors appear: thumb-sucking, head-turning, quiet babbling</li>
+        <li>Baby falls asleep between check-ins, not during one</li>
+        <li>Protest shifts from angry to just fussy</li>
+      </ul>
+    </div>
+    <div class="signal-card amber">
+      <h3>Pause and Reassess</h3>
+      <ul>
+        <li>Baby is under 4 months -- not ready yet</li>
+        <li>Crying escalates over several nights instead of decreasing</li>
+        <li>Signs of illness, teething pain, or genuine distress</li>
+        <li>Your gut says something else is going on -- trust it</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mistakes">
+    <h2>Three Mistakes That Undo Everything</h2>
+
+    <div class="mistake">
+      <h3>The halfway pickup</h3>
+      <p>If you sometimes pick them up and sometimes don't, you teach your baby that enough crying eventually works. That makes crying louder and longer, not shorter. Commit to the plan or wait until you can.</p>
+    </div>
+
+    <div class="mistake">
+      <h3>The long visit</h3>
+      <p>A check-in that turns into five minutes of rocking and shushing defeats the purpose. You've just moved the soothing ritual to a different time slot. Keep it quick: voice only, 30 seconds, out.</p>
+    </div>
+
+    <div class="mistake">
+      <h3>Starting too early</h3>
+      <p>Before 4 months, babies genuinely need your help to settle. Their self-calming systems aren't developed yet. This approach is for when the capacity is there but the practice isn't.</p>
+    </div>
+  </div>
+
+  <h2>The Bike Analogy</h2>
+
+  <p>Think of it like teaching your kid to ride a bike. You can hold the seat forever, but at some point you have to let go for them to find their balance.</p>
+
+  <p>The check-ins are you jogging alongside -- close enough to be seen, far enough to let them try.</p>
+
+  <img class="mid-img" src="/images/blog/bedtime-check-ins/letting-go.webp" alt="Watercolor illustration of a parent jogging alongside a child learning to ride a bicycle in golden afternoon light">
+
+  <div class="bottom-line">
+    <p>Falling asleep on your own is a skill. Like all skills, it takes practice.<br>Your job isn't to do it for them -- it's to be close enough that they feel safe trying.</p>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>

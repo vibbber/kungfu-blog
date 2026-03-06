@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Six questions that instantly reveal whether any app is safe for your kid. Learn the design traps once, spot them everywhere.">
+  <title>The 30-Second Platform Test | Kung Fu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* --- Typography --- */
+    h1 { font-size: 34px; color: #1A1A2E; line-height: 1.2; margin-bottom: 12px; }
+    h2 { font-size: 24px; color: #5C8A5A; margin: 40px 0 16px; line-height: 1.3; }
+    h3 { font-size: 18px; margin-bottom: 8px; }
+    p { margin-bottom: 16px; font-size: 16px; }
+
+    /* --- Hero --- */
+    .hero {
+      margin-bottom: 40px;
+    }
+    .hero .kicker {
+      display: inline-block;
+      background: #E8A598;
+      color: #1A1A2E;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .hero .subtitle {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
+    }
+
+    /* --- Blog images --- */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* --- Trap cards (the core visual) --- */
+    .trap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .trap-grid { grid-template-columns: 1fr; }
+    }
+    .trap-tile {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      border-left: 4px solid #E8A598;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .trap-tile .trap-name {
+      font-weight: 700;
+      color: #C0392B;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .trap-tile .trap-question {
+      font-size: 15px;
+      color: #1A1A2E;
+      font-style: italic;
+    }
+
+    /* --- Score bar --- */
+    .score-bar {
+      display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .score-bar .zone {
+      padding: 14px 8px;
+      flex: 1;
+      color: #fff;
+    }
+    .score-bar .green { background: #5C8A5A; }
+    .score-bar .yellow { background: #D4A843; }
+    .score-bar .red { background: #C0392B; }
+
+    /* --- Readiness check --- */
+    .readiness-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .readiness-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .readiness-num {
+      background: #5C8A5A;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .readiness-text strong {
+      display: block;
+      color: #5C8A5A;
+      margin-bottom: 4px;
+    }
+    .readiness-text {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* --- Alternatives table --- */
+    .alt-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      font-size: 15px;
+    }
+    .alt-table th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .alt-table td {
+      background: #fff;
+      padding: 14px 16px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .alt-table tr:last-child td { border-bottom: none; }
+    .alt-table .check { color: #5C8A5A; font-weight: 700; }
+    .alt-table .warn { color: #D4A843; font-weight: 700; }
+
+    /* --- Script cards --- */
+    .script-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .script-card .kid-says {
+      background: #FEF0EC;
+      border-left: 3px solid #E8A598;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-weight: 600;
+      color: #C0392B;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .script-card .you-say {
+      background: #EDF7ED;
+      border-left: 3px solid #5C8A5A;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #2C5E2A;
+      font-size: 15px;
+    }
+    .script-card .why {
+      font-size: 14px;
+      color: #666;
+      margin-top: 10px;
+      padding-left: 14px;
+    }
+
+    /* --- Callout boxes --- */
+    .callout {
+      background: linear-gradient(135deg, #5C8A5A, #4A7A4A);
+      color: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout h3 { color: #fff; opacity: 0.85; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .callout p { font-size: 19px; font-weight: 600; margin-bottom: 0; }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <span class="kicker">Decision Framework</span>
+    <h1>The 30-Second Platform Test</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">You don't need to research every app. You need six questions.</p>
+      <ul>
+        <li>Kids raised with these boundaries keep real friendships, put the phone down without a fight, and come to you when something online goes sideways.</li>
+        <li>The shift: stop evaluating platforms by name and start evaluating them by design.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>6 design-trap tiles &middot; safe alternatives table &middot; 4-stage rollout plan &middot; 3 readiness questions</div>
+    </div>
+    <p class="subtitle">Your kid just asked to download a new app. Six questions tell you everything you need to know.</p>
+  </div>
+
+  <p>Your child is going to ask. Maybe they already have. "Can I get this app? Everyone's on it."</p>
+
+  <p>You could spend an hour reading reviews, scanning privacy policies, checking age ratings. Or you could learn six questions that work on <em>every</em> platform, <em>every</em> time, in about 30 seconds.</p>
+
+  <p>The trick? You don't evaluate platforms by name. You evaluate them by <strong>design</strong>. The same handful of manipulative patterns show up everywhere. Learn them once, and you have x-ray vision for any app your kid brings home.</p>
+
+  <img src="/images/blog/platform-safety-checklist/trap-radar.webp" alt="Six design trap indicators surrounding a smartphone — the patterns to scan for in any platform" class="blog-img">
+
+  <h2>The Six Questions</h2>
+
+  <p>Every social platform is some combination of these six design traps. The more a platform uses, the less safe it is for a developing brain. Run any app through the list:</p>
+
+  <div class="trap-grid">
+    <div class="trap-tile">
+      <div class="trap-name">1. The Algorithm</div>
+      <div class="trap-question">Does the platform choose what my child sees, or do they?</div>
+    </div>
+    <div class="trap-tile">
+      <div class="trap-name">2. The Scoreboard</div>
+      <div class="trap-question">Are there visible likes, follower counts, or view numbers?</div>
+    </div>
+    <div class="trap-tile">
+      <div class="trap-name">3. The Endless Feed</div>
+      <div class="trap-question">Is there a natural stopping point, or does content just keep coming?</div>
+    </div>
+    <div class="trap-tile">
+      <div class="trap-name">4. The Stranger Door</div>
+      <div class="trap-question">Can someone I don't know reach my child?</div>
+    </div>
+    <div class="trap-tile">
+      <div class="trap-name">5. The Vanishing Act</div>
+      <div class="trap-question">Can messages or content disappear before anyone sees them?</div>
+    </div>
+    <div class="trap-tile">
+      <div class="trap-name">6. The Compulsion Loop</div>
+      <div class="trap-question">Does the platform punish my child for not using it?</div>
+    </div>
+  </div>
+
+  <p>That's it. Six yes-or-no questions. Count the yeses.</p>
+
+  <div class="score-bar">
+    <div class="zone green">0 &ndash; 1 traps<br>Likely fine</div>
+    <div class="zone yellow">2 &ndash; 3 traps<br>Proceed with caution</div>
+    <div class="zone red">4+ traps<br>Not built for kids</div>
+  </div>
+
+  <p>Most platforms parents worry about? They light up four, five, even all six. That's not a coincidence. The features that make a platform addictive for adults are the same ones that cause the most documented harm in young people. Algorithmic feeds, social comparison mechanics, infinite scroll — these are the patterns research keeps flagging for anxiety, sleep disruption, and negative self-image in teens.</p>
+
+  <h2>What Actually Passes the Test</h2>
+
+  <p>Kids need social connection. That's real and valid. The question is whether they need <em>these specific platforms</em> for it. Turns out, the tools that score lowest on design traps do the best job at what your child actually wants: talking to their friends.</p>
+
+  <img src="/images/blog/platform-safety-checklist/safe-vs-unsafe.webp" alt="Side-by-side comparison: a trap-heavy platform screen versus a clean, connection-focused alternative" class="blog-img">
+
+  <table class="alt-table">
+    <tr>
+      <th>Tool</th>
+      <th>What It Does</th>
+      <th>Traps?</th>
+    </tr>
+    <tr>
+      <td><strong>Group texts</strong></td>
+      <td>Direct connection with people who already have each other's numbers. The conversation is the point, not the performance.</td>
+      <td><span class="check">0</span></td>
+    </tr>
+    <tr>
+      <td><strong>Video calls</strong></td>
+      <td>Face-to-face, interactive, ends naturally. Great for maintaining long-distance friendships.</td>
+      <td><span class="check">0</span></td>
+    </tr>
+    <tr>
+      <td><strong>Longer videos (laptop, autoplay off)</strong></td>
+      <td>Tutorials, how-tos, documentaries. Watching on a laptop with autoplay off requires a conscious choice to continue.</td>
+      <td><span class="warn">1</span></td>
+    </tr>
+  </table>
+
+  <p>Notice the pattern: the safest tools are the ones that connect your child to people they already know, end naturally, and don't attach numbers to anything.</p>
+
+  <h2>Before Any Platform: Three Readiness Checks</h2>
+
+  <p>Even a low-trap platform isn't right if your child isn't ready. Three questions settle it:</p>
+
+  <ul class="readiness-list">
+    <li>
+      <span class="readiness-num">1</span>
+      <div class="readiness-text">
+        <strong>Can they walk away?</strong>
+        When you say "time's up," does the device go down without a fight? If screen time already triggers daily battles, adding a platform engineered for engagement makes things worse, not better.
+      </div>
+    </li>
+    <li>
+      <span class="readiness-num">2</span>
+      <div class="readiness-text">
+        <strong>Do they have a life offline?</strong>
+        A child with friends, activities, and interests they care about has an anchor. A child who's already lonely is far more vulnerable to the comparison trap — measuring their real life against everyone's curated highlight reel.
+      </div>
+    </li>
+    <li>
+      <span class="readiness-num">3</span>
+      <div class="readiness-text">
+        <strong>Will they come to you?</strong>
+        If something uncomfortable happens online — a mean message, a disturbing image, a stranger asking questions — will your child tell you? If "probably not," the platform becomes unsupervised space where problems compound quietly.
+      </div>
+    </li>
+  </ul>
+
+  <p>Three nos? Not ready yet, regardless of age. Three yeses? You have a foundation to build on.</p>
+
+  <div class="callout">
+    <h3>The Key Shift</h3>
+    <p>This isn't "no screens forever." It's a graduated rollout based on demonstrated readiness.</p>
+  </div>
+
+  <h2>The Conversations You'll Have</h2>
+
+  <p>Your kid has arguments. They're good ones. Having your response ready means you don't cave in the moment.</p>
+
+  <img src="/images/blog/platform-safety-checklist/parent-child-talk.webp" alt="Parent and child having a calm, engaged conversation about technology" class="blog-img">
+
+  <div class="script-card">
+    <div class="kid-says">"Everyone is on it."</div>
+    <div class="you-say">"I know it feels like you're the only one. You're not — lots of families are figuring this out. But even if you were, your mental health isn't something I'm willing to gamble on because of peer pressure."</div>
+    <div class="why">Acknowledge the feeling first. Then hold the line. Many families are quietly drawing the same boundaries.</div>
+  </div>
+
+  <div class="script-card">
+    <div class="kid-says">"I'll be responsible."</div>
+    <div class="you-say">"I believe you'd try. But these apps are built to make it hard — even for me. This isn't about trusting you. It's about not handing you something designed to be impossible to use in moderation."</div>
+    <div class="why">Reframe from trust to design. Teams of engineers built these platforms to override self-control. That's not a fair test for anyone.</div>
+  </div>
+
+  <div class="script-card">
+    <div class="kid-says">"I'll miss out on things."</div>
+    <div class="you-say">"You might miss some posts. But you won't miss real friendships — those happen in person and over text. And you'll have something most of your friends don't: a full night's sleep and a brain that isn't wired to need likes."</div>
+    <div class="why">FOMO cuts both ways. Kids on social media report feeling worse about their lives, not better.</div>
+  </div>
+
+  <div class="script-card">
+    <div class="kid-says">"You're on social media."</div>
+    <div class="you-say">"You're right, and honestly, I don't love how much time I spend on it either. The difference is my brain is done developing — yours is still building the wiring for focus, mood, and self-control."</div>
+    <div class="why">Take the point seriously. Acknowledge your own struggles. Then explain the developmental difference.</div>
+  </div>
+
+  <h2>The Rollout</h2>
+
+  <p>This isn't a one-time decision. It's a progression:</p>
+
+  <table class="alt-table">
+    <tr>
+      <th>Stage</th>
+      <th>What to Do</th>
+    </tr>
+    <tr>
+      <td><strong>Start safe</strong></td>
+      <td>Group texts and video calls first. Let them prove they can manage these before anything with a feed.</td>
+    </tr>
+    <tr>
+      <td><strong>One at a time</strong></td>
+      <td>When you add a new platform, introduce it alone. See how your child handles it before stacking more.</td>
+    </tr>
+    <tr>
+      <td><strong>Check the signal</strong></td>
+      <td>Ask regularly: "How does this platform make you feel after using it?" Their honest answer tells you more than any parental control app.</td>
+    </tr>
+    <tr>
+      <td><strong>Watch for the shift</strong></td>
+      <td>Compulsive checking. Getting upset after scrolling. Losing interest in offline things. These are signals to pull back — not power through.</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <h3>The Bottom Line</h3>
+    <p>You don't need to memorize which platforms are safe. You need six questions and the willingness to act on the answers.</p>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>

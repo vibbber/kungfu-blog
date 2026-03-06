@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your chest tightens, your hand reaches for the phone — but the bravest parenting move is the one where you do nothing. Here's the 3-step SIT method that builds real resilience.">
+  <title>The Hardest Parenting Move Is Doing Nothing</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .blog-container { padding: 32px 24px 48px; }
+
+    /* --- Hero --- */
+    .hero {
+      text-align: center;
+      padding: 48px 24px 40px;
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A48 100%);
+      color: white;
+      border-radius: 0 0 24px 24px;
+      margin-bottom: 36px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 17px;
+      opacity: 0.9;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* --- Prose --- */
+    .prose { margin-bottom: 32px; }
+    .prose p {
+      font-size: 16px;
+      margin-bottom: 18px;
+      color: #2D2D3A;
+    }
+    .prose h2 {
+      color: #5C8A5A;
+      font-size: 24px;
+      margin: 40px 0 16px;
+      line-height: 1.3;
+    }
+    .lead {
+      font-size: 19px !important;
+      color: #1A1A2E !important;
+      line-height: 1.65;
+    }
+
+    /* --- Highlight Box --- */
+    .highlight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .highlight-box p {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* --- Image --- */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #7A8B8B;
+      margin-top: -20px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* --- Comparison Table --- */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin: 24px 0 32px;
+    }
+    .compare-table th {
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .compare-table th:first-child {
+      background: #E8A598;
+      color: white;
+    }
+    .compare-table th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+    .compare-table td {
+      padding: 14px 18px;
+      font-size: 15px;
+      border-bottom: 1px solid #EEE;
+      vertical-align: top;
+      background: white;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    /* --- SIT Steps --- */
+    .sit-section {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .sit-section h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+    .sit-section .section-sub {
+      font-size: 14px;
+      color: #7A8B8B;
+      margin-bottom: 24px;
+    }
+    .sit-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .sit-step:last-of-type { margin-bottom: 0; }
+    .sit-letter {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+      flex-shrink: 0;
+      color: white;
+      background: #E8A598;
+    }
+    .sit-body { flex: 1; }
+    .sit-body h3 {
+      color: #1A1A2E;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .sit-body p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .script {
+      background: #F0F7F0;
+      border-left: 3px solid #5C8A5A;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 15px;
+      color: #3A5A3A;
+      margin-top: 8px;
+    }
+
+    /* --- Age Cards --- */
+    .age-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .age-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-top: 4px solid #5C8A5A;
+    }
+    .age-badge {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .age-card h3 {
+      color: #1A1A2E;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .age-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .age-card .script {
+      font-size: 14px;
+    }
+
+    /* --- Do / Don't Grid --- */
+    .do-dont-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .do-card, .dont-card {
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .do-card {
+      background: #F0F7F0;
+      border: 1px solid #C5DFC3;
+    }
+    .dont-card {
+      background: #FEF3F0;
+      border: 1px solid #F0CCC4;
+    }
+    .do-card h3 {
+      color: #5C8A5A;
+      font-size: 15px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .dont-card h3 {
+      color: #C0392B;
+      font-size: 15px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .do-card ul, .dont-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .do-card li, .dont-card li {
+      font-size: 14px;
+      padding: 5px 0;
+      color: #444;
+    }
+    .do-card li::before { content: '\2713  '; color: #5C8A5A; font-weight: bold; }
+    .dont-card li::before { content: '\2717  '; color: #C0392B; font-weight: bold; }
+
+    /* --- Comeback Section --- */
+    .comeback-section {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .comeback-section h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    .comeback-item {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .comeback-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .comeback-item h4 {
+      color: #5C8A5A;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .comeback-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* --- Footer --- */
+    .blog-footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .do-dont-grid { grid-template-columns: 1fr; }
+      .blog-container { padding: 24px 16px 40px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <span class="hero-tag">Resilience</span>
+    <h1>The Hardest Parenting Move<br>Is Doing Nothing</h1>
+    <p>Your child is hurting. Your chest tightens. Your hand moves toward the phone. Here's why the brave move is to sit.</p>
+  </div>
+
+  <div class="blog-container">
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Resilience isn't born. It's built — in the gap between pain and recovery.</p>
+      <ul>
+        <li>Kids raised with this approach handle disappointment without falling apart, trust their own problem-solving, and enter adulthood knowing that hard things pass.</li>
+        <li>The move: name what they feel, sit in it without silver-lining, then turn the experience into signal once the wave passes.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 SIT steps with word-for-word scripts &middot; fixer vs. coach side-by-side &middot; 3 age-matched conversation cards &middot; 4 long-term habits to lock it in</div>
+    </div>
+
+    <div class="prose">
+      <p class="lead">Your kid comes home in tears. Didn't get picked. Got left out. Failed the thing they practiced for weeks. And your body reacts before your brain does: chest tightens, jaw clenches, hands itch to grab the phone and call someone. Fix it. Make it stop.</p>
+
+      <p>That reflex? It feels like love. It looks like love. But every time you act on it, you send a quiet, devastating message: <em>You can't handle this.</em></p>
+
+      <p>Now flip it. Imagine sitting down next to your crying child, saying nothing heroic, fixing nothing, just... being there. That sends the opposite message: <em>This is hard, and you're capable.</em></p>
+
+      <p>The difference between those two messages, repeated a few thousand times across childhood, is the difference between a young adult who crumbles at the first sign of difficulty and one who knows from experience that hard things pass.</p>
+    </div>
+
+    <img src="/images/blog/the-resilience-switch/parent-presence.webp" alt="Parent sitting calmly beside an upset child, offering presence instead of solutions" class="blog-img">
+    <p class="img-caption">The hardest seat in the house: right next to your child's pain, doing nothing about it.</p>
+
+    <div class="highlight-box">
+      <p>Your child doesn't need a pain-free life.<br>They need a parent who teaches them that pain is survivable.</p>
+    </div>
+
+    <div class="prose">
+      <h2>Fixer vs. Coach</h2>
+      <p>Most parents default to fixer mode. It stops the crying faster. It feels productive. But there's a cost.</p>
+    </div>
+
+    <table class="compare-table">
+      <tr>
+        <th>Fixer Mode</th>
+        <th>Coach Mode</th>
+      </tr>
+      <tr>
+        <td>Emails the teacher about the unfair grade</td>
+        <td>Asks "What do you think happened?"</td>
+      </tr>
+      <tr>
+        <td>Calls the other parent when feelings get hurt</td>
+        <td>Helps your child practice what to say</td>
+      </tr>
+      <tr>
+        <td>Clears obstacles before they reach them</td>
+        <td>Lets them bump into it: "What did you notice?"</td>
+      </tr>
+      <tr>
+        <td>Says "Don't worry, I'll handle it"</td>
+        <td>Says "This is tough. What's your first move?"</td>
+      </tr>
+      <tr>
+        <td>Child learns to wait for rescue</td>
+        <td>Child learns to trust themselves</td>
+      </tr>
+    </table>
+
+    <div class="prose">
+      <p>Notice the pattern. Fixer mode is faster. Coach mode is harder. But coach mode is the only one that builds anything lasting.</p>
+    </div>
+
+    <div class="sit-section">
+      <h2>The SIT Method</h2>
+      <p class="section-sub">Three steps. The hardest part is the second one.</p>
+
+      <img src="/images/blog/the-resilience-switch/sit-method.webp" alt="SIT method diagram: See it and say it, Inhabit the moment, Turn it into signal" class="blog-img" style="margin-top: 0;">
+
+      <div class="sit-step">
+        <div class="sit-letter">S</div>
+        <div class="sit-body">
+          <h3>See it and say it</h3>
+          <p>Name the emotion you're seeing. Don't analyze. Don't minimize. Don't try to talk them out of it. Just reflect what's in front of you.</p>
+          <div class="script">"You're really disappointed about not getting picked. I can see that."</div>
+        </div>
+      </div>
+
+      <div class="sit-step">
+        <div class="sit-letter">I</div>
+        <div class="sit-body">
+          <h3>Inhabit the moment</h3>
+          <p>Stay present without solving. No silver linings. No "at least" statements. No pivoting to solutions. This is where resilience is actually built — in the gap between pain and recovery, with someone safe beside them.</p>
+          <div class="script">"I'm right here. You don't have to feel better yet."</div>
+        </div>
+      </div>
+
+      <div class="sit-step">
+        <div class="sit-letter">T</div>
+        <div class="sit-body">
+          <h3>Turn it into signal</h3>
+          <p>Once the wave has passed — hours later, maybe the next day — help them read the experience like data. What did the pain tell them? What would they do differently?</p>
+          <div class="script">"Now that you've had some space — if you could go back, is there anything you'd want to try differently?"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>What This Looks Like at Every Age</h2>
+      <p>The principle is the same. The words change.</p>
+    </div>
+
+    <img src="/images/blog/the-resilience-switch/resilience-growth.webp" alt="Children at three different ages showing growing resilience: toddler with blocks, school-age with soccer ball, teenager with journal" class="blog-img">
+    <p class="img-caption">Same muscle, different weights. Resilience scales with them.</p>
+
+    <div class="age-grid">
+      <div class="age-card">
+        <span class="age-badge">Ages 2-5</span>
+        <h3>Be Their Translator</h3>
+        <p>They feel enormous things but don't have words for them yet. You supply the vocabulary: name the face, name the fists, name the feeling. Do this enough and they start naming their own emotions — the first step of self-regulation.</p>
+        <div class="script">"Your face is scrunched up and your fists are tight — I think you're really frustrated."</div>
+      </div>
+
+      <div class="age-card">
+        <span class="age-badge">Ages 6-11</span>
+        <h3>Connect Thoughts to Feelings</h3>
+        <p>School-age kids can begin to see the link between what they tell themselves and how they feel. Help them spot the internal narrative and test whether a different story changes the feeling.</p>
+        <div class="script">"When you say 'everyone's better than me at soccer,' how does that feel? What if you said 'I'm still learning and I got better this season'?"</div>
+      </div>
+
+      <div class="age-card">
+        <span class="age-badge">Ages 12+</span>
+        <h3>Help Them Build Their Own Toolkit</h3>
+        <p>Teenagers need to own their coping strategies, not borrow yours. Help them inventory what actually works — running, drawing, calling a specific friend — and what doesn't — doomscrolling, snapping at siblings, shutting everyone out. Your role shifts from coach to consultant: available when asked.</p>
+        <div class="script">"When things get hard, what actually helps you? Let's figure out your go-to moves."</div>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>Quick Check: Building or Undermining?</h2>
+    </div>
+
+    <div class="do-dont-grid">
+      <div class="do-card">
+        <h3>Builds It</h3>
+        <ul>
+          <li>Naming emotions without rushing to fix</li>
+          <li>Letting natural consequences play out</li>
+          <li>Sharing your own struggles and recoveries</li>
+          <li>Asking questions instead of giving answers</li>
+          <li>Being calm during their hardest moments</li>
+        </ul>
+      </div>
+      <div class="dont-card">
+        <h3>Erodes It</h3>
+        <ul>
+          <li>Solving problems before they've tried</li>
+          <li>Dismissing pain: "It's not a big deal"</li>
+          <li>Jumping to "Look on the bright side"</li>
+          <li>Calling reinforcements at every conflict</li>
+          <li>Teaching that discomfort is something to escape</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comeback-section">
+      <h2>Making This Stick</h2>
+
+      <div class="comeback-item">
+        <h4>Catch the fix-it reflex in your body</h4>
+        <p>It usually shows up as chest tightness or an impulse to grab your phone. That's your cue to pause. Ask yourself: <em>"Is my child in danger, or in discomfort?"</em> Danger requires action. Discomfort requires presence.</p>
+      </div>
+
+      <div class="comeback-item">
+        <h4>Narrate your own struggles out loud</h4>
+        <p>"I didn't get the project I wanted at work. I'm disappointed, but I'm going to talk to my manager about what I can do differently next quarter." When kids hear you process difficulty without catastrophizing, they absorb that this is what capable people do.</p>
+      </div>
+
+      <div class="comeback-item">
+        <h4>Celebrate the comeback, not the comfort</h4>
+        <p>"Remember last month when you were devastated about not making the relay team? You stuck with practice anyway, and look where you are now." Kids who hear their own comeback stories retold start to believe: <em>"I've done hard things before. I can do hard things again."</em></p>
+      </div>
+
+      <div class="comeback-item">
+        <h4>Process struggle when things are calm</h4>
+        <p>The middle of a meltdown is no time for a lesson. But Tuesday night dinner? Perfect: "What was the hardest thing about your week? How did you get through it?" When processing struggle becomes routine, it stops feeling like a crisis every time.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="background: linear-gradient(135deg, #5C8A5A 0%, #4A7A48 100%);">
+      <p>Comfort is presence. Rescue is removal.<br>One builds strength. The other builds dependence.<br>Your child needs you beside the struggle, not between them and it.</p>
+    </div>
+
+    <div class="blog-footer">
+      <p>Kung Fu Parenting &mdash; kungfu.family</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

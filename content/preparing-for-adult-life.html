@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Speaking For Your Kid (The Hardest Parenting Skill That Pays Off Most)</title>
+  <meta name="description" content="The single strongest predictor of adult success for kids? Your expectations. Here's how to coach from behind instead of rescuing from the front.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #5C8A5A;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+    }
+    .blog-image {
+      width: 100%;
+      border-radius: 12px;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Stat callout */
+    .stat-callout {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .stat-callout .big-number {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #E8A598;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .stat-callout .stat-text {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Script cards */
+    .script-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C8A5A;
+    }
+    .script-card .situation {
+      font-weight: 700;
+      color: #5C8A5A;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .script-card .old-way, .script-card .new-way {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    .script-card .old-way {
+      background: #FFF0ED;
+      color: #c0392b;
+    }
+    .script-card .old-way::before {
+      content: "Instead of: ";
+      font-weight: 700;
+    }
+    .script-card .new-way {
+      background: #E8F5E9;
+      color: #2e7d32;
+    }
+    .script-card .new-way::before {
+      content: "Try: ";
+      font-weight: 700;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #E8A598, #5C8A5A);
+      border-radius: 3px;
+    }
+    .timeline-item {
+      position: relative;
+      padding: 1rem 0 1.5rem 1.5rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.65rem;
+      top: 1.35rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #5C8A5A;
+      border: 3px solid #FAF6F0;
+    }
+    .timeline-item .age {
+      font-weight: 800;
+      color: #E8A598;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .timeline-item .action {
+      color: #1A1A2E;
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .compare-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .compare-table td {
+      padding: 0.85rem 1rem;
+      background: white;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f0ebe3;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: #5C8A5A;
+    }
+
+    /* Key insight box */
+    .insight-box {
+      background: #5C8A5A;
+      color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+    .insight-box strong {
+      color: #E8A598;
+    }
+
+    .source-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .stat-callout { flex-direction: column; gap: 1rem; text-align: center; }
+      .stat-callout .big-number { font-size: 3rem; }
+      body { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Stop Speaking For Your Kid</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">The hardest parenting discipline is keeping your mouth shut.</p>
+    <ul>
+      <li>Kids who practice self-advocacy early become teenagers who run their own IEP meetings, manage money, and handle supervisors — then adults who don't need you to function.</li>
+      <li>The shift: stop translating, ordering, and answering for them — stand one step behind and let them do it badly until they do it well.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4 situation scripts (restaurant, school, conflict, checkout) &middot; what-we-obsess-over vs. what-actually-works table &middot; 4-stage age playbook &middot; 4 this-week action cards</div>
+  </div>
+  <p class="subtitle">The hardest parenting discipline that pays off most</p>
+
+  <img class="blog-image" src="/images/blog/preparing-for-adult-life/hero-coaching-from-behind.webp" alt="Parent standing a step behind their child who is confidently speaking to an adult at a counter">
+
+  <p>Your kid is at the doctor. The doctor asks what's wrong. You open your mouth — and catch yourself.</p>
+
+  <p>You turn to your kid instead: <em>"You tell the doctor what's been bothering you."</em></p>
+
+  <p>It takes longer. It's less precise. Your kid fumbles a bit. And it's one of the most important things you'll ever do as a parent.</p>
+
+  <h2>The Number That Should Change Everything</h2>
+
+  <div class="stat-callout">
+    <div class="big-number">#1</div>
+    <div class="stat-text">
+      <strong>Parent expectations</strong> are the single strongest predictor of adult outcomes for kids with challenges. Not grades. Not therapy hours. Not the school they attended. <em>What you believe they can do.</em>
+    </div>
+  </div>
+
+  <p>Research from the National Technical Assistance Center on Transition tracked thousands of students through adulthood. The factor that showed up again and again as the strongest signal of future success? Family expectations and involvement.</p>
+
+  <p>Kids rise or fall to the bar you set. So the question becomes: what does that bar look like in daily life?</p>
+
+  <h2>Coach From Behind, Not In Front</h2>
+
+  <p>There's a phrase buried in the research that deserves to be printed on every parent's bathroom mirror: <strong>coach from behind, not in front.</strong></p>
+
+  <p>It means: stop running interference. Stop translating. Stop ordering their food, answering their questions, managing their schedule. Instead, stand one step behind them and let them do it — awkwardly, slowly, imperfectly.</p>
+
+  <img class="blog-image" src="/images/blog/preparing-for-adult-life/skills-that-matter.webp" alt="Five interconnected pillars of adult success: work experience, self-determination, daily living, social skills, and family involvement">
+
+  <p>Here's what that looks like in practice:</p>
+
+  <div class="script-card">
+    <div class="situation">At the restaurant</div>
+    <div class="old-way">"She'll have the chicken fingers and a lemonade."</div>
+    <div class="new-way">"Go ahead, tell them what you'd like."</div>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">At the school meeting</div>
+    <div class="old-way">"He needs extra time on tests and preferential seating."</div>
+    <div class="new-way">"What do you think would help you do your best work?"</div>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">During a conflict with a friend</div>
+    <div class="old-way">"I'll talk to the other parent about this."</div>
+    <div class="new-way">"How could you ask for what you need?"</div>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">At the store checkout</div>
+    <div class="old-way">You hand over the money and handle the transaction.</div>
+    <div class="new-way">"Here's a twenty. You pay and count your change."</div>
+  </div>
+
+  <p>Every one of these moments is a rep. And like any training, the reps compound.</p>
+
+  <h2>Why Work Experience Beats Perfect Grades</h2>
+
+  <p>Here's a finding that surprises a lot of families:</p>
+
+  <div class="insight-box">
+    A student who's worked part-time for two years has <strong>better employment outcomes</strong> than one with perfect grades and no work history. Nothing predicts employment success like actual employment.
+  </div>
+
+  <p>This doesn't mean academics don't matter. It means that if you have to choose between another tutoring session and your teenager stocking shelves at the local store three afternoons a week — the shelves win.</p>
+
+  <img class="blog-image" src="/images/blog/preparing-for-adult-life/before-after-coaching.webp" alt="Infographic comparing what we focus on (grades, test scores, homework) versus what actually predicts success (work experience, self-advocacy, daily living skills, social skills)">
+
+  <table class="compare-table">
+    <tr>
+      <th>What We Obsess Over</th>
+      <th>What Actually Predicts Success</th>
+    </tr>
+    <tr>
+      <td>Test scores</td>
+      <td>Paid work experience</td>
+    </tr>
+    <tr>
+      <td>Homework completion</td>
+      <td>Self-advocacy skills</td>
+    </tr>
+    <tr>
+      <td>Therapy hours logged</td>
+      <td>Real-world practice in context</td>
+    </tr>
+    <tr>
+      <td>Perfect attendance</td>
+      <td>Daily living skills (money, transit, cooking)</td>
+    </tr>
+    <tr>
+      <td>The "right" school</td>
+      <td>Parent expectations and involvement</td>
+    </tr>
+  </table>
+
+  <p>The jobs don't have to be glamorous. Bussing tables, helping in an office, walking dogs for a neighbor. What matters is the meta-skills: showing up on time, following directions, handling feedback, interacting with a supervisor. Those are universal.</p>
+
+  <h2>The Playbook By Age</h2>
+
+  <p>This isn't something you start at 16. The best results come from a long runway.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="age">Elementary</div>
+      <div class="action">Practice making choices, stating preferences, doing tasks independently — even when it takes longer. Let them order their own food. Let them pick their clothes. Let them struggle with the zipper.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="age">Middle School</div>
+      <div class="action">Self-advocacy reps begin. They attend their own IEP meetings. They take on real household responsibilities — not fake chores, but things the family actually depends on. They start managing small amounts of money.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="age">High School</div>
+      <div class="action">Paid work. Community navigation. Money management. Goal-setting for life after graduation. This is where it all comes together — or doesn't.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="age">Transition (18-21)</div>
+      <div class="action">Maximize work experience. Solidify independent living. Connect to adult services. The training wheels come off — they become the primary decision-maker in their own life.</div>
+    </div>
+  </div>
+
+  <h2>Four Moves to Start This Week</h2>
+
+  <div class="script-card">
+    <div class="situation">1. Give them a real responsibility</div>
+    <p style="margin: 0.5rem 0; font-size: 0.95rem;">Not a "chore" — a responsibility the household depends on. Planning a meal. Managing the family calendar for one week. Researching the best route for a road trip. Something with stakes.</p>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">2. Bite your tongue at the next appointment</div>
+    <p style="margin: 0.5rem 0; font-size: 0.95rem;">Doctor, dentist, teacher conference — whatever comes up next. Let them do the talking. Prep them beforehand if you need to. But when you're in the room, zip it.</p>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">3. Hand them cash</div>
+    <p style="margin: 0.5rem 0; font-size: 0.95rem;">At the grocery store, at the fast food drive-through, at the school book fair. Let them handle the transaction. Count the change. Make the decision about what they can afford.</p>
+  </div>
+
+  <div class="script-card">
+    <div class="situation">4. Ask instead of tell</div>
+    <p style="margin: 0.5rem 0; font-size: 0.95rem;">When a problem comes up — instead of solving it, ask: "What do you think you should do?" Then wait. The silence is where the growth happens.</p>
+  </div>
+
+  <img class="blog-image" src="/images/blog/preparing-for-adult-life/four-moves-visual.webp" alt="Four illustrated action cards showing the weekly moves: give real responsibility, bite your tongue, hand them cash, ask instead of tell">
+
+  <p>None of this is easy. Watching your kid struggle when you could jump in and fix it — that's the real kung fu. The discipline of restraint. The faith that letting them fumble now builds the muscle they'll need later.</p>
+
+  <p>Because the goal was never to do it for them. The goal was always to make yourself unnecessary.</p>
+
+  <div class="source-footer">
+    Published by kungfu.family. Grounded in evidence-based predictors of post-school success.
+  </div>
+
+</body>
+</html>

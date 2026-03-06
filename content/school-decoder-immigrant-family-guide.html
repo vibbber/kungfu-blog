@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Kid Already Has What Money Can't Buy — Now Decode the System</title>
+  <meta name="description" content="Your child's home language is a cognitive superpower. Here's how immigrant families can decode the school system and turn hidden advantages into real results.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* --- Header --- */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+    }
+    h1 {
+      font-size: 30px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: #6B7B7B;
+      font-weight: 400;
+    }
+
+    /* --- Hero image --- */
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 36px;
+    }
+
+    /* --- Section headings --- */
+    h2 {
+      color: #5C8A5A;
+      font-size: 22px;
+      margin: 36px 0 16px 0;
+      font-weight: 700;
+    }
+
+    /* --- Body text --- */
+    p { margin-bottom: 16px; font-size: 16px; }
+    strong { color: #1A1A2E; }
+
+    /* --- Myth vs Reality cards --- */
+    .myth-reality {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 20px 0 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .myth-side {
+      background: #FEF0EC;
+      padding: 20px;
+    }
+    .myth-side .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #C0392B;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .myth-side p { font-size: 15px; color: #8B3A2A; margin: 0; font-weight: 600; }
+    .reality-side {
+      background: #EAF4E9;
+      padding: 20px;
+    }
+    .reality-side .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5C8A5A;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .reality-side p { font-size: 15px; color: #3A5A38; margin: 0; }
+
+    /* --- Pull quote / key insight --- */
+    .pull-quote {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 24px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    /* --- Signal cards --- */
+    .signal-grid {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0 28px 0;
+    }
+    .signal-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .signal-num {
+      width: 44px;
+      height: 44px;
+      background: #5C8A5A;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .signal-card h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: #1A1A2E;
+    }
+    .signal-card p { font-size: 14px; color: #555; margin: 0; }
+    .good { color: #5C8A5A; font-weight: 600; }
+    .bad { color: #C0392B; font-weight: 600; }
+
+    /* --- Before / After comparison --- */
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 20px 0 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .before-col {
+      background: #F5F0F0;
+      padding: 20px;
+    }
+    .before-col .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #888;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .after-col {
+      background: #EAF4E9;
+      padding: 20px;
+    }
+    .after-col .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5C8A5A;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .before-col li, .after-col li {
+      font-size: 14px;
+      margin-bottom: 8px;
+      list-style: none;
+      padding-left: 0;
+    }
+    .before-col li::before { content: "- "; color: #999; }
+    .after-col li::before { content: "+ "; color: #5C8A5A; font-weight: 700; }
+
+    /* --- Script cards --- */
+    .script-card {
+      background: white;
+      border-left: 4px solid #E8A598;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin: 14px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .script-card .context {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #E8A598;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .script-card .words {
+      font-size: 16px;
+      font-style: italic;
+      color: #333;
+    }
+
+    /* --- Inline image --- */
+    .inline-img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 28px 0;
+    }
+
+    /* --- Checklist --- */
+    .action-list {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin: 20px 0 28px 0;
+    }
+    .action-list h3 {
+      color: #5C8A5A;
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+    .action-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    .action-check {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #5C8A5A;
+      border-radius: 5px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* --- Closing box --- */
+    .closing-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7848 100%);
+      color: white;
+      padding: 28px 24px;
+      border-radius: 14px;
+      margin: 36px 0 20px 0;
+      text-align: center;
+    }
+    .closing-box p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    /* --- Mobile --- */
+    @media (max-width: 600px) {
+      h1 { font-size: 24px; }
+      .myth-reality, .before-after { grid-template-columns: 1fr; }
+      .signal-card { grid-template-columns: 40px 1fr; }
+      .signal-num { width: 36px; height: 36px; font-size: 15px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Kid Already Has What Money Can't Buy</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Bilingual kids have a measurable cognitive advantage. Most schools ignore it.</p>
+      <ul>
+        <li>Kids who maintain their first language while adding English show stronger problem-solving, faster language acquisition, and cognitive flexibility that monolingual peers don't develop.</li>
+        <li>The move: protect the home language at all costs and learn to navigate a system that wasn't built to recognize it.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 bilingual myths debunked &middot; 6-step language protection playbook &middot; 5-signal school decoder &middot; 4 conversation scripts for advocacy</div>
+    </div>
+    <p class="subtitle">How immigrant families can decode the school system and turn hidden advantages into real results</p>
+  </header>
+
+  <img class="hero-img" src="/images/blog/school-decoder-immigrant-family-guide/hero-bilingual-advantage.webp" alt="A child confidently navigating between two worlds, languages visible as colorful pathways">
+
+  <p>Most parents spend years and thousands of dollars trying to give their kids a cognitive edge. Tutoring, brain-training apps, enrichment programs, the whole circuit.</p>
+
+  <p>Your kid already has one. It's the language you speak at home.</p>
+
+  <p>Bilingual children consistently show advantages in cognitive flexibility and problem-solving compared with monolingual peers. Strong skills in a first language actually help children learn a second language faster and more deeply. Your home language isn't a handicap to overcome -- it's a foundation to build on.</p>
+
+  <p>But here's the problem: the school system doesn't always see it that way.</p>
+
+  <h2>Three Myths That Need to Die</h2>
+
+  <div class="myth-reality">
+    <div class="myth-side">
+      <div class="label">Myth</div>
+      <p>"Switch to English at home so they learn faster."</p>
+    </div>
+    <div class="reality-side">
+      <div class="label">Reality</div>
+      <p>Kids who maintain their first language learn English faster and deeper. Your language builds the cognitive foundation English runs on.</p>
+    </div>
+  </div>
+
+  <div class="myth-reality">
+    <div class="myth-side">
+      <div class="label">Myth</div>
+      <p>"Young kids just soak up language effortlessly."</p>
+    </div>
+    <div class="reality-side">
+      <div class="label">Reality</div>
+      <p>Older children and teens actually acquire new languages faster in academic settings. All kids need support and time -- it doesn't just happen.</p>
+    </div>
+  </div>
+
+  <div class="myth-reality">
+    <div class="myth-side">
+      <div class="label">Myth</div>
+      <p>"Being bilingual confuses children."</p>
+    </div>
+    <div class="reality-side">
+      <div class="label">Reality</div>
+      <p>Bilingual children show advantages in cognitive flexibility and problem-solving. Two languages are complementary, not competing.</p>
+    </div>
+  </div>
+
+  <p>So the research is clear: keep speaking your language. Now the question is -- how do you make sure the school system works <em>with</em> that advantage instead of against it?</p>
+
+  <h2>The Gratitude Trap</h2>
+
+  <p>Many immigrant families are so thankful for free public schooling that they assume the system is looking out for their child. Reasonable assumption. Risky one.</p>
+
+  <p>Not all schools deliver the same education. Not all class tracks lead to college. And not every counselor will push your child toward their full potential. Some may steer capable students into lower tracks simply because of language barriers.</p>
+
+  <p>Gratitude is good. Blind trust is dangerous.</p>
+
+  <div class="pull-quote">
+    The school your child attends is not a neutral factor. It's the single biggest variable you can influence.
+  </div>
+
+  <h2>Five Signals That Reveal a School's True Colors</h2>
+
+  <p>Walk the building. Talk to people. These five areas tell you what kind of school your child is actually in.</p>
+
+  <img class="inline-img" src="/images/blog/school-decoder-immigrant-family-guide/five-signals-school.webp" alt="Visual guide showing five school evaluation signals: leadership, teachers, visual cues, resources, counselors">
+
+  <div class="signal-grid">
+    <div class="signal-card">
+      <div class="signal-num">1</div>
+      <div>
+        <h3>Leadership Tone</h3>
+        <p><span class="good">Strong:</span> Principal talks about every student succeeding regardless of background. Low staff turnover.<br>
+        <span class="bad">Weak:</span> Administration absent or overwhelmed. Teachers rotating every year.</p>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-num">2</div>
+      <div>
+        <h3>Teacher Attitudes</h3>
+        <p><span class="good">Strong:</span> Teachers are curious about your child's background and see their home language as an asset.<br>
+        <span class="bad">Weak:</span> Teachers view immigrant students as a burden or assume ability based on accent.</p>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-num">3</div>
+      <div>
+        <h3>Visual Cues</h3>
+        <p><span class="good">Strong:</span> Signs in multiple languages, diverse student work on display, culturally varied reading materials.<br>
+        <span class="bad">Weak:</span> Everything monolingual. No acknowledgment of the actual student body.</p>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-num">4</div>
+      <div>
+        <h3>Resources & Rigor</h3>
+        <p><span class="good">Strong:</span> Current technology, updated materials, AP or honors tracks available.<br>
+        <span class="bad">Weak:</span> Outdated textbooks, broken equipment, no advanced courses.</p>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="signal-num">5</div>
+      <div>
+        <h3>Counselor Quality</h3>
+        <p><span class="good">Strong:</span> Counselors know students by name, actively guide them toward college-prep courses.<br>
+        <span class="bad">Weak:</span> Counselors stretched thin or confusing limited English with limited ability.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>What to Say When It Matters</h2>
+
+  <p>Advocacy doesn't need to be confrontational. It just needs to be specific. Here are the exact conversations that change trajectories.</p>
+
+  <div class="script-card">
+    <div class="context">At Course Placement</div>
+    <div class="words">"What courses does my child need for college eligibility? Can my child be moved to a higher track?"</div>
+  </div>
+
+  <div class="script-card">
+    <div class="context">When They're Being Underestimated</div>
+    <div class="words">"My child already covered this material in our home country. What options are there for more advanced work?"</div>
+  </div>
+
+  <div class="script-card">
+    <div class="context">At Parent-Teacher Conference</div>
+    <div class="words">"Is my child on track for AP or honors courses next year? What would they need to get there?"</div>
+  </div>
+
+  <div class="script-card">
+    <div class="context">At Home, Building Self-Advocacy</div>
+    <div class="words">"What would you say if a teacher put you in the wrong class? Let's practice."</div>
+  </div>
+
+  <h2>The Unwritten Rules Nobody Tells You</h2>
+
+  <p>Experienced families know these. New families shouldn't have to learn them the hard way.</p>
+
+  <div class="before-after">
+    <div class="before-col">
+      <div class="label">What you might assume</div>
+      <ul>
+        <li>All classes lead to the same destination</li>
+        <li>ESL classes count toward graduation</li>
+        <li>Counselors will advocate for my child</li>
+        <li>Fluent conversation = academic readiness</li>
+        <li>College is unaffordable for us</li>
+      </ul>
+    </div>
+    <div class="after-col">
+      <div class="label">What's actually true</div>
+      <ul>
+        <li>Some tracks lead to college; others don't</li>
+        <li>ESL may not count -- ask specifically</li>
+        <li>Advocacy is your job. No one else will do it.</li>
+        <li>Full academic fluency takes 5-7 years. This is normal.</li>
+        <li>Financial aid and scholarships exist -- but have deadlines</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Protect the Superpower</h2>
+
+  <img class="inline-img" src="/images/blog/school-decoder-immigrant-family-guide/protect-home-language.webp" alt="A family at dinner having an animated conversation, warmth and connection visible, words flowing between two languages">
+
+  <p>Your home language is the foundation everything else builds on. Here's how to keep it strong while your child adds English on top.</p>
+
+  <div class="action-list">
+    <h3>Language Protection Playbook</h3>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Keep speaking your language at home.</strong> Meals, stories, arguments, jokes -- these are where language lives and grows.</div>
+    </div>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Watch for early signs of language loss.</strong> If your child starts resisting or forgetting, increase exposure rather than giving up.</div>
+    </div>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Name the advantage out loud.</strong> Tell your child: "Being bilingual is a skill that will serve you your entire life -- in college applications, careers, and relationships."</div>
+    </div>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Find a parent ally.</strong> Another family who's been in the system longer can explain how things really work. One informed friend beats a stack of pamphlets.</div>
+    </div>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Start a paper trail.</strong> Keep notes from meetings, save emails, document requests. Records give you leverage if you ever need to escalate.</div>
+    </div>
+    <div class="action-item">
+      <div class="action-check"></div>
+      <div><strong>Don't wait for problems.</strong> Check in with teachers regularly, even when things seem fine. Visible families get more attention and better information.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    One invested adult -- a teacher, counselor, or coach who personally champions your child -- can completely change their trajectory. Make sure you're that adult. Then find another one inside the school.
+  </div>
+
+  <div class="closing-box">
+    <p>Your child arrived with a deep belief in the power of education and a cognitive advantage most families would pay anything for. Learn the rules. Question the placement. Show up. The system wasn't built for your family -- but your family can absolutely master it.</p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting &middot; kungfu.family</p>
+  </footer>
+
+</body>
+</html>

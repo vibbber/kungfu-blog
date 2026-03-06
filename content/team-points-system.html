@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Trick That Turns Siblings Into Teammates</title>
+  <meta name="description" content="A simple team points system that makes kids coach each other instead of fight. Works for siblings, classrooms, and anywhere kids need to cooperate.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      margin-bottom: 0.4rem;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #5C8A5A;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+    }
+    h3 {
+      color: #1A1A2E;
+      font-size: 1.15rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .lead {
+      font-size: 1.15rem;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Hero image */
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Inline images */
+    .blog-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: -0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Before/After comparison */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .comparison-side {
+      padding: 1.5rem;
+    }
+    .comparison-before {
+      background: #fce4e4;
+    }
+    .comparison-after {
+      background: #e0f0e0;
+    }
+    .comparison-side h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .comparison-before h4 { color: #c0392b; }
+    .comparison-after h4 { color: #27ae60; }
+    .comparison-side p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* Script cards */
+    .script-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+      border-left: 4px solid #5C8A5A;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .script-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5C8A5A;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    .script-text {
+      font-size: 1.05rem;
+      color: #1A1A2E;
+      font-style: italic;
+    }
+
+    /* Setup steps */
+    .setup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .setup-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .setup-card .step-num {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: #5C8A5A;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .setup-card h4 {
+      color: #1A1A2E;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .setup-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* Reward ideas table */
+    .reward-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .reward-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .reward-table td {
+      padding: 0.65rem 1rem;
+      background: white;
+      border-bottom: 1px solid #f0ece6;
+      font-size: 0.9rem;
+    }
+    .reward-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Tip callout */
+    .tip-callout {
+      background: #FFF8EE;
+      border: 2px solid #E8A598;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tip-callout strong {
+      color: #E8A598;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .tip-callout p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Flow steps */
+    .flow {
+      margin: 1.5rem 0;
+    }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.25rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .flow-step .icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .flow-step strong {
+      color: #5C8A5A;
+    }
+    .flow-step p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Source footer */
+    .source-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      body { padding: 1.25rem 1rem; }
+      h1 { font-size: 1.7rem; }
+      .setup-grid { grid-template-columns: 1fr; }
+      .comparison { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Trick That Turns Siblings Into Teammates</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Peer influence is the most underused tool in a parent's kit.</p>
+    <ul>
+      <li>Kids who hold each other accountable at the dinner table, during homework, and through bedtime — without you raising your voice once.</li>
+      <li>The move: short timed rounds with clear rules, calm violation marks, and instant rewards when the team wins.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4-step setup grid &middot; Running a round walkthrough &middot; Staying-neutral tip &middot; 5 ways to prevent burnout</div>
+  </div>
+  <p class="subtitle">When kids share the same scoreboard, something unexpected happens.</p>
+
+  <img src="/images/blog/team-points-system/teammates-coaching.webp" alt="Children huddled together as a team, coaching each other" class="hero-img">
+
+  <p class="lead">Picture this: your seven-year-old whispers to your five-year-old, "Hey, don't leave your plate on the table -- we'll lose a point!" And the five-year-old actually listens. Not because you said it. Because his teammate did.</p>
+
+  <p>That is the magic of a team points system. You stop being the enforcer. The kids become each other's coaches.</p>
+
+  <p>The concept is dead simple. Put kids on the same team, set a few rules, track violations on a shared scoreboard, and let them earn rewards together. The peer dynamic does the heavy lifting.</p>
+
+  <h2>Why This Works (When Nagging Doesn't)</h2>
+
+  <p>Decades of behavioral research point to the same conclusion: group-based reward systems often outperform individual consequences. The reason is peer influence. When your teammates are counting on you, you are more motivated to follow through.</p>
+
+  <p>This is especially powerful for kids who struggle with self-regulation. Individual punishment makes them feel singled out. A team system spreads the responsibility and makes the whole thing feel less personal -- more like a game, less like a lecture.</p>
+
+  <img src="/images/blog/team-points-system/rivals-to-allies.webp" alt="Before and after: rivals become allies" class="blog-img">
+  <p class="img-caption">The shift: from pointing fingers to pulling together.</p>
+
+  <div class="comparison">
+    <div class="comparison-side comparison-before">
+      <h4>Without Team Points</h4>
+      <p>"Mom! He's not cleaning up!"</p>
+      <p>"She hit me first!"</p>
+      <p>"It's not FAIR, I always have to do everything."</p>
+      <p>You: referee, judge, and constant bad cop.</p>
+    </div>
+    <div class="comparison-side comparison-after">
+      <h4>With Team Points</h4>
+      <p>"Come on, let's clean up fast so we win."</p>
+      <p>"Shh, quiet voices or we get a point."</p>
+      <p>"We only need to stay under 4 -- we got this!"</p>
+      <p>You: scorekeeper. That's it.</p>
+    </div>
+  </div>
+
+  <h2>Setup in 10 Minutes</h2>
+
+  <div class="setup-grid">
+    <div class="setup-card">
+      <div class="step-num">1</div>
+      <h4>Pick 3 Rules</h4>
+      <p>Keep them positive. "Respectful voices" beats "no yelling." Kids follow what TO do more easily than what NOT to do.</p>
+    </div>
+    <div class="setup-card">
+      <div class="step-num">2</div>
+      <h4>Form Teams</h4>
+      <p>At home: all siblings on one team vs. the threshold. At school: mix personalities across 2-3 teams. Balance the challenges.</p>
+    </div>
+    <div class="setup-card">
+      <div class="step-num">3</div>
+      <h4>Set a Threshold</h4>
+      <p>How many violation points before they lose? Start generous (5 points). Tighten as they improve. Aim for 80% win rate.</p>
+    </div>
+    <div class="setup-card">
+      <div class="step-num">4</div>
+      <h4>Build a Reward Menu</h4>
+      <p>Let THEM suggest prizes. Extra screen time, pick the music, choose dinner. Rotate weekly so it stays fresh.</p>
+    </div>
+  </div>
+
+  <div class="tip-callout">
+    <strong>Let them make the rules.</strong>
+    <p>Ask: "What kind of house do YOU want? What makes it hard to focus?" When kids create the rules, they are invested in following them. It shifts from "Mom's rules" to "our rules."</p>
+  </div>
+
+  <h2>Running a Round</h2>
+
+  <p>Keep rounds short. 15-20 minutes at first -- during homework time, cleanup, or morning routine. Here is exactly how it flows:</p>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="icon">1.</div>
+      <div>
+        <p><strong>Quick reminder.</strong> "Okay, Team Points for homework time. What are our rules?" Let them say the rules back to you.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">2.</div>
+      <div>
+        <p><strong>Start the clock.</strong> Use a timer or a bell. Make it obvious when the game is on.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">3.</div>
+      <div>
+        <p><strong>Mark violations calmly.</strong> No drama, no lecture. Just: "That's one point for talking during quiet time." Then immediately praise someone doing it right.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">4.</div>
+      <div>
+        <p><strong>Wrap up and reward.</strong> Ring the bell. Count the points. If they stayed under threshold, rewards happen immediately. No delays.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>What to Actually Say</h3>
+
+  <div class="script-card">
+    <div class="script-label">When someone breaks a rule</div>
+    <div class="script-text">"That's one point for shouting. Blue team is showing great quiet voices right now."</div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-label">When you see good behavior</div>
+    <div class="script-text">"I see everyone focused and working -- that is exactly what earns a win."</div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-label">At the end of a round</div>
+    <div class="script-text">"Team Points done! Three points total -- you stayed under four. That's a win! Pick your reward."</div>
+  </div>
+
+  <h2>Bring It Home</h2>
+
+  <p>This is not just a classroom trick. With siblings, it is even more powerful because the stakes are personal. Here is what it looks like at home:</p>
+
+  <img src="/images/blog/team-points-system/home-scoreboard.webp" alt="Family looking at team scoreboard on the fridge" class="blog-img">
+  <p class="img-caption">A fridge scoreboard turns routine battles into a team sport.</p>
+
+  <table class="reward-table">
+    <thead>
+      <tr>
+        <th>When</th>
+        <th>Round Length</th>
+        <th>Rules Focus</th>
+        <th>Reward Ideas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Morning routine</td>
+        <td>20 min</td>
+        <td>Ready on time, respectful voices</td>
+        <td>Pick the car music</td>
+      </tr>
+      <tr>
+        <td>Homework time</td>
+        <td>15 min</td>
+        <td>Stay focused, ask for help nicely</td>
+        <td>Extra screen time</td>
+      </tr>
+      <tr>
+        <td>Dinner prep + cleanup</td>
+        <td>20 min</td>
+        <td>Helping hands, kind words</td>
+        <td>Choose tomorrow's dessert</td>
+      </tr>
+      <tr>
+        <td>Bedtime routine</td>
+        <td>15 min</td>
+        <td>Follow the sequence, no stalling</td>
+        <td>Extra story, first shower pick</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Keep It Fresh</h2>
+
+  <p>The system works best when it stays novel. Here is how to prevent it from going stale:</p>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="icon">&rarr;</div>
+      <div>
+        <p><strong>Rotate rules.</strong> As one behavior improves, swap it for a new target. This keeps the challenge alive.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">&rarr;</div>
+      <div>
+        <p><strong>Let winners design rewards.</strong> "You won three times this week -- what should next week's prize be?" Ownership keeps motivation high.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">&rarr;</div>
+      <div>
+        <p><strong>Celebrate trajectories.</strong> "Last week you hit 8 points every round. This week you averaged 4. That is huge." Progress matters more than perfection.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">&rarr;</div>
+      <div>
+        <p><strong>Take breaks.</strong> If interest fades, pause for a week. Bring it back with new rules or rewards. Novelty is the fuel.</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="icon">&rarr;</div>
+      <div>
+        <p><strong>Know when to phase out.</strong> Once behavior sticks, retire the points. The goal is to build habits, not run a permanent game show.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-callout">
+    <strong>The hardest part is staying neutral.</strong>
+    <p>No eye rolls. No sighs. No "Again, Marcus?" Just state the fact and move on. The system only works when violations feel like data, not judgment.</p>
+  </div>
+
+  <div class="source-footer">
+    <strong>Kung Fu Family</strong> &middot; Informed by developmental research on group contingency interventions and peer-mediated behavior support.
+  </div>
+
+</body>
+</html>

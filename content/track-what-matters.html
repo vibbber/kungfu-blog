@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Gut Is Lying About Your Kid's Behavior (Here's the Fix)</title>
+  <meta name="description" content="Think your child's tantrums are constant? Your brain is tricking you. A dead-simple tracking habit reveals what's actually happening — and what's already working.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #E8A598;
+    }
+    p { margin-bottom: 1rem; }
+    img.blog-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Hook box */
+    .hook-box {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 5px solid #E8A598;
+    }
+    .hook-box p {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .hook-box p:last-child { margin-bottom: 0; }
+
+    /* Step cards */
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #5C8A5A;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .step-content h3 {
+      font-size: 1.05rem;
+      color: #1A1A2E;
+      margin-bottom: 0.3rem;
+    }
+    .step-content p {
+      font-size: 0.92rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* Before/After */
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .comp-before, .comp-after {
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+    }
+    .comp-before {
+      background: #fce8e8;
+      border-top: 3px solid #d47070;
+    }
+    .comp-after {
+      background: #e8f0e8;
+      border-top: 3px solid #5C8A5A;
+    }
+    .comp-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .comp-before .comp-label { color: #d47070; }
+    .comp-after .comp-label { color: #5C8A5A; }
+
+    /* Decision flowchart */
+    .flow {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .flow-step {
+      padding: 1rem;
+      margin: 0.75rem 0;
+      background: #FFF8F0;
+      border-radius: 8px;
+      border-left: 4px solid #E8A598;
+    }
+    .flow-q {
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 0.5rem;
+    }
+    .flow-a {
+      font-size: 0.9rem;
+      color: #555;
+      margin-left: 0.75rem;
+      margin-bottom: 0.3rem;
+    }
+    .method-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Method grid */
+    .methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .method {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-top: 4px solid #5C8A5A;
+    }
+    .method h3 {
+      font-size: 1rem;
+      color: #5C8A5A;
+      margin-bottom: 0.4rem;
+    }
+    .method .when {
+      font-size: 0.85rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    .method .how {
+      font-size: 0.88rem;
+      background: #FAF6F0;
+      padding: 0.6rem;
+      border-radius: 6px;
+      color: #555;
+    }
+
+    /* Tip callout */
+    .tip {
+      background: #FFF8E6;
+      border-left: 4px solid #E8A598;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.92rem;
+    }
+    .tip strong { color: #E8A598; }
+
+    /* Tracking table */
+    .tracker {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .tracker-header {
+      background: #5C8A5A;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .tracker table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .tracker th, .tracker td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    .tracker th {
+      background: #f5f5f2;
+      font-weight: 600;
+      color: #555;
+    }
+    .tracker .note {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.83rem;
+      color: #888;
+    }
+
+    /* Pattern checklist */
+    .patterns {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .patterns h3 {
+      color: #5C8A5A;
+      margin-bottom: 0.75rem;
+    }
+    .pattern-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.92rem;
+    }
+    .pattern-item:last-child { border-bottom: none; }
+    .pattern-icon {
+      font-weight: 700;
+      color: #5C8A5A;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* CTA box */
+    .cta {
+      background: linear-gradient(135deg, #5C8A5A, #4a7a48);
+      color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta h2 {
+      color: white;
+      border: none;
+      margin: 0 0 0.75rem;
+      font-size: 1.4rem;
+    }
+    .cta p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #e0e0e0;
+      font-size: 0.82rem;
+      color: #999;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    @media (max-width: 600px) {
+      body { padding: 1.25rem 1rem; }
+      h1 { font-size: 1.7rem; }
+      .comparison { grid-template-columns: 1fr; }
+      .methods { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Gut Is Lying About Your Kid's Behavior</h1>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Three weeks of simple tracking gives you more clarity than a year of worrying.</p>
+    <ul>
+      <li>Kids benefit from parents who can say 'this strategy cut meltdowns by half' instead of 'I think things are maybe better?' -- and the data makes those wins visible to the whole family.</li>
+      <li>The move: week one baseline, week two try something new, week three compare the numbers.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>behavior definition examples &middot; decision flowchart for method selection &middot; 6 tracking tools explained &middot; 3-week baseline-intervene-confirm framework</div>
+  </div>
+
+  <p class="subtitle">Three tantrums on Monday. One on Tuesday. But it all feels like "constant meltdowns." A 30-second daily habit fixes this -- and you'll start seeing wins you were completely missing.</p>
+
+  <img class="blog-img" src="/images/blog/track-what-matters/flowchart.webp" alt="Parent confidently checking behavior progress on phone while child plays happily in background">
+
+  <p>Here's something wild: researchers have spent decades studying how parents perceive their kids' behavior, and the finding is consistent. We are <em>terrible</em> at it.</p>
+
+  <p>Not terrible parents. Terrible estimators. What feels like "he does this all the time" might be three times a day one week and once a day the next. Without data, your brain rounds everything up to "constant." And that distortion makes it impossible to see what's actually improving.</p>
+
+  <div class="hook-box">
+    <p><strong>The fix isn't complicated.</strong> You don't need an app, a therapist, or a PhD. You need to write down what you see, when you see it, for about a week.</p>
+    <p>That's it. The pattern shows itself. And suddenly you're making moves based on <em>evidence</em>, not emotion.</p>
+  </div>
+
+  <h2>Step One: Get Specific (This Changes Everything)</h2>
+
+  <p>The number one mistake? Tracking something vague. "Being difficult" isn't trackable. "Slams book shut during reading time" is. The sharper your definition, the clearer your data.</p>
+
+  <img class="blog-img" src="/images/blog/track-what-matters/before-after.webp" alt="Before and after diagram: vague 'He is always acting out' transforms into specific measurable behaviors through Make It Measurable process">
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Name what you can see or hear</h3>
+        <p>No mind-reading. Only what a camera would catch. "Frustrated" is invisible. "Crumples paper and pushes it off the table" is footage.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Draw the line so two people agree</h3>
+        <p>If you and your partner would count differently, it's too fuzzy. "Speaking loudly" = gray area. "Voice audible from the next room" = clear.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Say when context matters</h3>
+        <p>Running and yelling at the park? Totally fine. During bedtime routine? That's the behavior you're tracking. Context is part of the definition.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Here's what this looks like in practice:</p>
+
+  <div class="comparison">
+    <div class="comp-before">
+      <div class="comp-label">Vague</div>
+      "Getting frustrated with homework"
+    </div>
+    <div class="comp-after">
+      <div class="comp-label">Trackable</div>
+      "Crumples paper, slams pencil, or pushes materials away during homework time"
+    </div>
+  </div>
+  <div class="comparison">
+    <div class="comp-before">
+      <div class="comp-label">Vague</div>
+      "Yelling at home"
+    </div>
+    <div class="comp-after">
+      <div class="comp-label">Trackable</div>
+      "Voice loud enough to hear from next room -- during meals, homework, or bedtime (not outdoor play)"
+    </div>
+  </div>
+
+  <h2>Pick the Right Tool for the Job</h2>
+
+  <p>Different behaviors call for different tracking methods. You wouldn't time a tantrum the same way you'd count toys left on the floor. Here's how to pick:</p>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-q">Does the behavior leave evidence you can count later?</div>
+      <div class="flow-a"><strong>Yes:</strong> <span class="method-tag">Evidence Counting</span> -- toys on floor, incomplete problems, bite marks on pencils</div>
+      <div class="flow-a"><strong>No:</strong> Keep going...</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-q">Can you tell when it starts and stops?</div>
+      <div class="flow-a"><strong>No:</strong> <span class="method-tag">Snapshot Method</span> -- check every 5 minutes: is it happening right now?</div>
+      <div class="flow-a"><strong>Yes:</strong> Keep going...</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-q">What matters most about this behavior?</div>
+      <div class="flow-a"><strong>How many times:</strong> <span class="method-tag">Tally Tracking</span></div>
+      <div class="flow-a"><strong>How long it lasts:</strong> <span class="method-tag">Timer Tracking</span></div>
+      <div class="flow-a"><strong>How long before they start:</strong> <span class="method-tag">Delay Tracking</span></div>
+    </div>
+  </div>
+
+  <h2>Six Methods, One Cheat Sheet</h2>
+
+  <div class="methods">
+    <div class="method">
+      <h3>Evidence Counting</h3>
+      <div class="when">When: behavior leaves traces</div>
+      <div class="how">Walk through at end of day. Count what you find. Snap a photo for the record.</div>
+    </div>
+    <div class="method">
+      <h3>Tally Tracking</h3>
+      <div class="when">When: frequency matters</div>
+      <div class="how">One mark each time it happens. Total it up at day's end. Phone notes work great.</div>
+    </div>
+    <div class="method">
+      <h3>Timer Tracking</h3>
+      <div class="when">When: duration matters</div>
+      <div class="how">Start a stopwatch when it begins, stop when it ends. Write down the total.</div>
+    </div>
+    <div class="method">
+      <h3>Delay Tracking</h3>
+      <div class="when">When: the lag between ask and action is the issue</div>
+      <div class="how">Clock starts when you give the instruction. Stops when they start complying.</div>
+    </div>
+    <div class="method">
+      <h3>Snapshot Method</h3>
+      <div class="when">When: behavior is continuous or fuzzy</div>
+      <div class="how">Set a timer for every 5 minutes. When it beeps: is the behavior happening right now? Yes or no.</div>
+    </div>
+    <div class="method">
+      <h3>Window Tracking</h3>
+      <div class="when">When: reducing a behavior over time</div>
+      <div class="how">Divide your observation into 5-minute chunks. If the behavior happens at all during a chunk, mark it.</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>Stealth mode:</strong> Kids behave differently when they know they're being watched. Use your phone notes, a smartwatch, or a mental tally you jot down later. The more invisible your tracking, the more honest the data.
+  </div>
+
+  <h2>Your First Week: The Dead-Simple Tracker</h2>
+
+  <img class="blog-img" src="/images/blog/track-what-matters/parent-tracking.webp" alt="Parent with notebook showing weekly progress chart with tally marks and decreasing bar graph from Monday to Friday">
+
+  <p>Pick one behavior. Just one. Use this format for your first week:</p>
+
+  <div class="tracker">
+    <div class="tracker-header">Weekly Tally Tracker</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Morning</th>
+          <th>Afternoon</th>
+          <th>Evening</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mon</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Tue</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Wed</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Thu</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Fri</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Sat</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Sun</td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div class="note">Look for patterns: Does it spike on certain days? Certain times? After specific activities?</div>
+  </div>
+
+  <h2>Reading Your Data (the Fun Part)</h2>
+
+  <p>After seven days, you've got something most parents never have: actual evidence. Now scan for patterns:</p>
+
+  <div class="patterns">
+    <h3>Five Questions That Reveal the Pattern</h3>
+    <div class="pattern-item">
+      <span class="pattern-icon">?</span>
+      <span><strong>Day of week:</strong> Worse on Mondays? Better by Friday? That's a recovery-from-weekend pattern.</span>
+    </div>
+    <div class="pattern-item">
+      <span class="pattern-icon">?</span>
+      <span><strong>Time of day:</strong> Morning vs. after school vs. bedtime? Fatigue and hunger are invisible triggers.</span>
+    </div>
+    <div class="pattern-item">
+      <span class="pattern-icon">?</span>
+      <span><strong>Activity link:</strong> Does it cluster around homework? Transitions? Chores? That narrows your target.</span>
+    </div>
+    <div class="pattern-item">
+      <span class="pattern-icon">?</span>
+      <span><strong>Your baseline number:</strong> This is your "before" snapshot. Try a new approach next week and compare.</span>
+    </div>
+    <div class="pattern-item">
+      <span class="pattern-icon">?</span>
+      <span><strong>Reality check:</strong> Ask the teacher: "Is this typical for this age?" You might discover your kid is perfectly normal.</span>
+    </div>
+  </div>
+
+  <h2>The Three-Week Power Move</h2>
+
+  <p>You don't need to track forever. Here's the play:</p>
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-num" style="background: #E8A598;">1</div>
+      <div class="step-content">
+        <h3>Week 1: Baseline</h3>
+        <p>Track without changing anything. Just observe. This is your "before" data.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="background: #E8A598;">2</div>
+      <div class="step-content">
+        <h3>Week 2: Intervene</h3>
+        <p>Try your new strategy. Keep tracking. Same method, same definitions.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num" style="background: #E8A598;">3</div>
+      <div class="step-content">
+        <h3>Week 3: Confirm</h3>
+        <p>Did the numbers move? If yes, you found something that works. If no, try a different approach. Either way, you know.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>And when Thursday shows 3 incidents instead of the usual 7? That's not a fluke. That's evidence. Point it out to your kid: <em>"We're getting better at this."</em> They feel it too.</p>
+
+  <div class="cta">
+    <h2>Start Tonight</h2>
+    <p>Pick one behavior. Define it in one sentence. Track it for seven days.<br>You'll know more about what's actually happening than most parents ever will.</p>
+  </div>
+
+  <div class="footer">
+    <p><strong>Kung Fu.</strong> Informed by developmental research on behavior measurement and observational methods.</p>
+  </div>
+
+</body>
+</html>

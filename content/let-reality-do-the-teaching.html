@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="One question separates parents who punish from parents who teach. Here's the question — and what to do once you know the answer.">
+  <title>The One Question That Changes How You Discipline | Kung Fu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      display: block;
+    }
+    .content {
+      padding: 32px 24px 48px;
+    }
+    h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin: 24px 0 8px;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: #6B7280;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 36px 0 16px;
+      font-weight: 700;
+    }
+    .litmus-card {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .litmus-card .label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.85;
+      margin-bottom: 12px;
+    }
+    .litmus-card .question {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .litmus-card .follow-up {
+      font-size: 15px;
+      margin-top: 12px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      display: block;
+    }
+    /* Comparison Table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      margin: 24px 0;
+    }
+    .compare-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .compare-table th:first-child { background: #F3E8E5; color: #8B4A3B; }
+    .compare-table th:last-child { background: #E8F0E8; color: #5C8A5A; }
+    .compare-table td {
+      background: white;
+      padding: 14px 16px;
+      border-bottom: 1px solid #F0EDE8;
+      font-size: 15px;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .situation-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 16px 16px 4px;
+      background: #FAF6F0;
+      border-bottom: none !important;
+    }
+    .compare-table tr td.situation-label { border-bottom: none; }
+    .script {
+      background: #F0F7F0;
+      border-left: 3px solid #5C8A5A;
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 8px;
+      font-style: italic;
+      font-size: 14px;
+      color: #3D6B3D;
+    }
+    /* LEARN Steps */
+    .learn-grid {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .learn-step {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .learn-letter {
+      background: #E8A598;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .learn-body h3 {
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+    .learn-body p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #4B5563;
+    }
+    /* Tone Trap */
+    .tone-card {
+      background: #FEF3F0;
+      border-left: 4px solid #E8A598;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 28px 0;
+    }
+    .tone-card h3 {
+      color: #8B4A3B;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+    .tone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .tone-item {
+      font-size: 14px;
+      padding: 8px 0;
+    }
+    .tone-item .wrong { color: #B44A3B; font-weight: 600; }
+    .tone-item .right { color: #5C8A5A; font-weight: 600; }
+    /* Checklist */
+    .check-list {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin: 24px 0;
+    }
+    .check-list h3 {
+      color: #5C8A5A;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #F0EDE8;
+      font-size: 15px;
+    }
+    .check-item:last-child { border-bottom: none; }
+    .check-box {
+      width: 22px;
+      height: 22px;
+      border: 2px solid #5C8A5A;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    /* Closing */
+    .closing-card {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 36px 0;
+      text-align: center;
+    }
+    .closing-card p {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+    footer {
+      padding: 20px 24px;
+      border-top: 1px solid #E5E1DB;
+      font-size: 12px;
+      color: #9CA3AF;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .content { padding: 24px 18px 40px; }
+      .litmus-card .question { font-size: 19px; }
+      .tone-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <img class="hero-img" src="/images/blog/let-reality-do-the-teaching/hero-stepping-back.webp" alt="A parent calmly watching their child figure out a problem on their own">
+
+  <div class="content">
+    <h1>The One Question That Changes How You Discipline</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Punishment teaches kids one thing: avoid getting caught.</p>
+      <ul>
+        <li>Kids raised on real consequences self-correct when no one's watching, take responsibility without being cornered, and actually trust their parents more.</li>
+        <li>The move: ask 'would I handle it this way with someone else's kid?' — if not, you're punishing, not teaching.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>the litmus test &middot; 5 punishment-vs-reality rewrites with scripts &middot; LEARN method (5 steps) &middot; tone trap checklist</div>
+    </div>
+    <p class="subtitle">Most discipline fails because it teaches kids about your anger, not about their choices. There's a simple test to tell the difference.</p>
+
+    <p>Here's a scenario. Your kid leaves their bike in the driveway. Again. You've told them four times this week. You're annoyed. So you take away screen time for the rest of the day.</p>
+
+    <p>That felt decisive. Parental. Like you handled it.</p>
+
+    <p>But ask yourself one question:</p>
+
+    <div class="litmus-card">
+      <div class="label">The Litmus Test</div>
+      <div class="question">"Would I handle it this way if it were someone else's kid?"</div>
+      <div class="follow-up">If the answer is no, you're punishing -- not teaching.</div>
+    </div>
+
+    <p>You wouldn't take a neighbor's kid's screen time for leaving a bike out. You'd probably just say, "Hey, your bike's in the driveway -- might want to move it before it gets run over." And guess what? That approach actually works better.</p>
+
+    <p>The bike in the driveway has nothing to do with screen time. Taking away screens is about making the kid feel your displeasure. It teaches one thing: <em>avoid getting caught.</em></p>
+
+    <h2>Two Paths From Every Situation</h2>
+
+    <img class="inline-img" src="/images/blog/let-reality-do-the-teaching/two-paths-diagram.webp" alt="Diagram showing punishment leads to broken connection, while natural consequences maintain a strong parent-child connection">
+
+    <p>Every time your kid does something that needs correcting, you're at a fork. One path hands the lesson to reality. The other puts you in the middle as the enforcer.</p>
+
+    <table class="compare-table">
+      <tr>
+        <th>Punishment reflex</th>
+        <th>Reality teaches</th>
+      </tr>
+      <tr>
+        <td colspan="2" class="situation-label">Bike left in the driveway</td>
+      </tr>
+      <tr>
+        <td>Take away screen time. Lecture.</td>
+        <td>Bike stays out. If it rains, it rusts. If you need to park, bike goes in the garage for the day.
+          <div class="script">"Driveway's for cars -- bike goes in the garage until tomorrow."</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="situation-label">Kid skips breakfast</td>
+      </tr>
+      <tr>
+        <td>Beg, hover, threaten no snacks later.</td>
+        <td>They're hungry at school. Sympathize, don't rescue.
+          <div class="script">"Sounds like a rough morning. Lunch is at noon."</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="situation-label">Jacket left at school</td>
+      </tr>
+      <tr>
+        <td>Lecture. Buy a replacement. Lecture again.</td>
+        <td>They wear a hoodie until they bring it home.
+          <div class="script">"Bet you'll grab it tomorrow. It's chilly out there."</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="situation-label">Kid won't do homework</td>
+      </tr>
+      <tr>
+        <td>Stand over them. Threaten no TV. Nightly battle.</td>
+        <td>The teacher's response is the consequence. School problems belong to school.
+          <div class="script">"I'm here if you want help. It's your call."</div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="situation-label">Breaks a sibling's toy</td>
+      </tr>
+      <tr>
+        <td>Grounded for a week. No connection to what happened.</td>
+        <td>They make it right -- with their own money or by giving one of theirs.
+          <div class="script">"How are you going to fix this? You could replace it or give them one of yours."</div>
+        </td>
+      </tr>
+    </table>
+
+    <p>Notice the pattern: the right column isn't permissive. It's not letting kids off the hook. The consequence is just <em>connected</em> to what actually happened. The lesson lives in the situation, not in your anger.</p>
+
+    <h2>Why This Works Better Than Punishment</h2>
+
+    <p>When a kid touches a hot mug and it burns, they don't need you to yell about it. The heat was the teacher. They learned. Instantly. No resentment.</p>
+
+    <p>That's the principle behind natural consequences -- life delivers the feedback so you don't have to. And when the natural consequence isn't safe or practical, you create a <em>logical</em> one: something directly tied to what they did, delivered without anger.</p>
+
+    <img class="inline-img" src="/images/blog/let-reality-do-the-teaching/aha-moment.webp" alt="A child having a moment of realization while standing in the rain without a jacket">
+
+    <p>The key word is <strong>directly tied</strong>. "No dessert because you didn't eat dinner" makes sense -- food connects to food. "No dessert because you didn't clean your room" is just you flexing authority.</p>
+
+    <h2>The LEARN Method: Five Steps in the Moment</h2>
+
+    <div class="learn-grid">
+      <div class="learn-step">
+        <div class="learn-letter">L</div>
+        <div class="learn-body">
+          <h3>Let go of the urge to control</h3>
+          <p>Pause. Ask: "What happens if I do nothing?" If the answer is safe but uncomfortable for them (hunger, boredom, a missed opportunity) -- that might be the whole lesson.</p>
+        </div>
+      </div>
+      <div class="learn-step">
+        <div class="learn-letter">E</div>
+        <div class="learn-body">
+          <h3>Establish the connection</h3>
+          <p>If you need to step in, find the link between behavior and outcome. The consequence should make a kid think "that makes sense," not "that's not fair."</p>
+        </div>
+      </div>
+      <div class="learn-step">
+        <div class="learn-letter">A</div>
+        <div class="learn-body">
+          <h3>Announce once, then act</h3>
+          <p>State what will happen. Calmly. One time. Then do it. Repeating yourself five times teaches your kid that you don't mean it until you're yelling.</p>
+        </div>
+      </div>
+      <div class="learn-step">
+        <div class="learn-letter">R</div>
+        <div class="learn-body">
+          <h3>Resist the rescue</h3>
+          <p>This is the hardest part. When they're upset, show warmth -- "I can see this is tough" -- but don't undo the outcome. Bailing them out teaches that consequences don't stick.</p>
+        </div>
+      </div>
+      <div class="learn-step">
+        <div class="learn-letter">N</div>
+        <div class="learn-body">
+          <h3>Next chance is always available</h3>
+          <p>"You can try again tomorrow." That one sentence communicates faith in their ability. Consequences without a path forward feel like dead ends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tone-card">
+      <h3>Watch the Tone Trap</h3>
+      <p style="font-size:15px; margin-bottom:14px;">You can say all the right words and still be punishing. If your voice carries "I told you so" energy, your kid hears punishment regardless.</p>
+      <div class="tone-grid">
+        <div class="tone-item"><span class="wrong">Wrong tone:</span> Smug, cold, vindicated</div>
+        <div class="tone-item"><span class="right">Right tone:</span> Warm, matter-of-fact, sympathetic</div>
+        <div class="tone-item"><span class="wrong">Wrong words:</span> "Maybe now you'll learn"</div>
+        <div class="tone-item"><span class="right">Right words:</span> "I'm sorry that happened"</div>
+        <div class="tone-item"><span class="wrong">Wrong motive:</span> Winning a power struggle</div>
+        <div class="tone-item"><span class="right">Right motive:</span> Helping them think ahead next time</div>
+      </div>
+    </div>
+
+    <h2>Quick Self-Check</h2>
+
+    <div class="check-list">
+      <h3>Before You Act, Run Through This</h3>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div>Is there a direct connection between what they did and what happens next?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div>Am I delivering this without anger, sarcasm, or superiority?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div>Would I handle it this way if it were someone else's kid?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div>Does my child have a genuine choice -- or am I disguising a demand?</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <div>Is there a clear path to try again and do better?</div>
+      </div>
+    </div>
+
+    <p>The adjustment period is real. Kids used to punishment will test hard. They'll push every boundary to see if you really mean it. Stay the course. That testing phase? It's proof the shift is working.</p>
+
+    <div class="closing-card">
+      <p>Your job isn't to make your child suffer for their mistakes.<br>It's to step back far enough that they learn from them --<br>and close enough that they know you're still there.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Kung Fu -- kungfu.family</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The biggest parenting mistake shifts every few years. Here's what catches good parents off guard at each stage — and the one move that fixes it.">
+  <title>The Parenting Trap That Changes Every Few Years</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,400&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .hero .deck {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Body text */
+    .body-text {
+      font-size: 17px;
+      margin-bottom: 24px;
+      color: #2A2A3E;
+    }
+    .body-text strong {
+      color: #1A1A2E;
+    }
+
+    /* Section headers */
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #E8A598;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #1A1A2E;
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    /* Stage cards */
+    .stage-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border-left: 5px solid #5C8A5A;
+    }
+    .stage-card .age-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .stage-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 21px;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+    }
+    .stage-card .stage-sub {
+      font-size: 14px;
+      color: #7A8B8B;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    /* Trap vs Move table */
+    .trap-move {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 520px) {
+      .trap-move {
+        grid-template-columns: 1fr;
+      }
+    }
+    .trap-col, .move-col {
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .trap-col {
+      background: #FEF3F0;
+      border: 1px solid #E8A598;
+    }
+    .trap-col .col-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #C0392B;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .move-col {
+      background: #EDF7ED;
+      border: 1px solid #5C8A5A;
+    }
+    .move-col .col-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5C8A5A;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    /* Script boxes */
+    .script {
+      background: #F7F3ED;
+      border-left: 3px solid #5C8A5A;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: #3A3A4E;
+      margin: 12px 0;
+    }
+
+    /* Quick-scan list */
+    .quick-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+    .quick-list li {
+      padding: 8px 0 8px 24px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid #F0EDE8;
+    }
+    .quick-list li:last-child {
+      border-bottom: none;
+    }
+    .quick-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 10px;
+      height: 10px;
+      background: #5C8A5A;
+      border-radius: 50%;
+    }
+
+    /* Mid-blog image */
+    .mid-image {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .mid-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .mid-image .caption {
+      font-size: 13px;
+      color: #7A8B8B;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* Comparison table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-size: 14px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #EDE9E3;
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td {
+      background: #F7F3ED;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Callout box */
+    .callout {
+      background: linear-gradient(135deg, #5C8A5A, #4A7848);
+      color: #fff;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .callout .callout-small {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      opacity: 0.85;
+      margin-top: 12px;
+      font-weight: 400;
+    }
+
+    /* Through-line section */
+    .through-line {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .through-line h2 {
+      margin-bottom: 20px;
+    }
+    .principle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 520px) {
+      .principle-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .principle-card {
+      background: #FAF6F0;
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .principle-card h4 {
+      color: #5C8A5A;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .principle-card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #3A3A4E;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0DCD6;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <img src="/images/blog/parenting-by-stage/hero.webp" alt="A parent and child walking through changing landscapes, the child growing taller as the parent's role shifts from leading to walking alongside">
+      <h1>The Parenting Trap That Changes Every Few Years</h1>
+      <div class="tldr-box">
+        <p class="tldr-anchor">What works at age 5 can backfire at age 12.</p>
+        <ul>
+          <li>Kids raised with stage-matched parenting build real self-control, handle peer pressure, and develop identity on their own terms instead of performing someone else's version of success.</li>
+          <li>The move: match your approach to their developmental stage — five ages, five different shifts.</li>
+        </ul>
+        <hr class="tldr-divider">
+        <div class="tldr-inside"><strong>Inside: </strong>5 stage-by-stage breakdowns with trap and move &middot; 5 word-for-word scripts &middot; trap vs. move comparison table &middot; 4 through-line principles</div>
+      </div>
+      <p class="deck">What worked last year might be the exact thing holding your kid back today.</p>
+    </div>
+
+    <!-- Opening -->
+    <p class="body-text">
+      Here's a strange fact about parenting: the thing you're doing right at age 5 can become the thing you're doing wrong at age 12. Not because you got lazy. Because your kid's brain rewired itself while you were still running the old playbook.
+    </p>
+    <p class="body-text">
+      Developmental research is pretty clear on this. Children don't just get bigger -- they fundamentally change how they think, feel, and relate to you at predictable intervals. And at each stage, there's a specific trap that catches well-meaning parents. The trap isn't neglect or abuse. It's <strong>doing too much of the right thing at the wrong time</strong>.
+    </p>
+    <p class="body-text">
+      Five stages. Five traps. Here's what catches people off guard at each one -- and the move that actually works.
+    </p>
+
+    <!-- Stage 1: Ages 2-4 -->
+    <div class="stage-card">
+      <span class="age-tag">Ages 2-4</span>
+      <h3>The Boundary Builders</h3>
+      <p class="stage-sub">They can't hold two feelings at once. They're either happy or the world is ending.</p>
+
+      <div class="trap-move">
+        <div class="trap-col">
+          <div class="col-label">The Trap</div>
+          Treating a toddler who hits like they need emotional therapy instead of a boundary. Over-explaining feelings to a brain that can't process the explanation yet.
+        </div>
+        <div class="move-col">
+          <div class="col-label">The Move</div>
+          Short. Clear. Done. They desperately want your approval -- use that. When they share or wait their turn, let your face light up.
+        </div>
+      </div>
+
+      <div class="script">"We don't hit. That hurts." Then follow with a consequence. Save the long explanations for later years.</div>
+
+      <ul class="quick-list">
+        <li>Protect free play -- a cardboard box beats an expensive "brain-building" toy</li>
+        <li>Show, don't tell -- they copy how you treat the barista, not what you lecture about</li>
+        <li>Firm limits ARE how they learn self-control; going soft on hitting teaches nothing</li>
+      </ul>
+    </div>
+
+    <!-- Stage 2: Ages 5-7 -->
+    <div class="stage-card">
+      <span class="age-tag">Ages 5-7</span>
+      <h3>The Wide-Eyed Years</h3>
+      <p class="stage-sub">They think in absolutes. One bad day means "I'm terrible at everything."</p>
+
+      <div class="trap-move">
+        <div class="trap-col">
+          <div class="col-label">The Trap</div>
+          Treating first grade like it matters for college admissions. Tracking metrics and performance for a 6-year-old who just wants to show you a drawing.
+        </div>
+        <div class="move-col">
+          <div class="col-label">The Move</div>
+          Chase their curiosity, not yours. If they're obsessed with bugs or forts or making up songs, go with it -- even if it's not what you imagined.
+        </div>
+      </div>
+
+      <div class="script">"Today was rough with the spelling test. But remember how proud you were when you figured out that science project last week?"</div>
+
+      <ul class="quick-list">
+        <li>Correct what they did, not who they are</li>
+        <li>Let development be uneven -- some read early, some don't</li>
+        <li>Skip prizes for learning -- external rewards kill genuine interest</li>
+      </ul>
+    </div>
+
+    <!-- Traps image -->
+    <div class="mid-image">
+      <img src="/images/blog/parenting-by-stage/traps.webp" alt="Five doors representing the five developmental stages, each with a different icon representing the trap parents face">
+      <p class="caption">Five stages, five different traps. Same good intentions, different landmines.</p>
+    </div>
+
+    <!-- Stage 3: Ages 8-11 -->
+    <div class="stage-card">
+      <span class="age-tag">Ages 8-11</span>
+      <h3>The Reality Check</h3>
+      <p class="stage-sub">They can finally hold two truths at once: "I'm good at art but struggle with reading."</p>
+
+      <div class="trap-move">
+        <div class="trap-col">
+          <div class="col-label">The Trap</div>
+          Grades, select teams, and competitive rankings enter the picture -- and parental intensity explodes. The more you make these the center of your relationship, the more you crowd out what actually builds a strong sense of self.
+        </div>
+        <div class="move-col">
+          <div class="col-label">The Move</div>
+          Give them real responsibilities. Dishes, laundry, helping with younger siblings. Being useful builds identity in ways grades never can.
+        </div>
+      </div>
+
+      <div class="script">"I noticed you helped your friend when she was struggling with that project. That matters more than the grade."</div>
+
+      <ul class="quick-list">
+        <li>Character first, effort second, results third</li>
+        <li>Show your own imperfections -- let them see that adults have weaknesses too</li>
+        <li>Never cancel chores to make room for more studying -- sends exactly the wrong message</li>
+      </ul>
+    </div>
+
+    <!-- The shift callout -->
+    <div class="callout">
+      <p>The biggest parenting mistakes don't come from not caring enough.<br>They come from <strong>managing your own anxiety through your child</strong>.</p>
+      <p class="callout-small">If you're obsessing over grades, rankings, or social status -- ask whose need you're actually serving.</p>
+    </div>
+
+    <!-- Stage 4: Ages 12-14 -->
+    <div class="stage-card">
+      <span class="age-tag">Ages 12-14</span>
+      <h3>The Great Push-Away</h3>
+      <p class="stage-sub">They'll challenge your views, reject your taste, and criticize your choices. That's their job.</p>
+
+      <div class="trap-move">
+        <div class="trap-col">
+          <div class="col-label">The Trap</div>
+          When kids perform the "perfect child" role -- straight A's, packed schedule, upbeat social media -- while feeling hollow inside. They've learned to perform success rather than develop an identity.
+        </div>
+        <div class="move-col">
+          <div class="col-label">The Move</div>
+          Survive their criticism without falling apart. When you don't crumble, you teach them something powerful: nobody has to be perfect to be worthy.
+        </div>
+      </div>
+
+      <div class="script">When they challenge your politics at dinner or question rules you've always had -- that's healthy. They're building a value system. Listen.</div>
+
+      <ul class="quick-list">
+        <li>Stay close even when they push -- too much freedom at this age is dangerous</li>
+        <li>Stop calling coaches and teachers on their behalf -- let them handle it</li>
+        <li>Their rejection of you is developmental, not a verdict on your parenting</li>
+      </ul>
+    </div>
+
+    <!-- Stage 5: Ages 15-17 -->
+    <div class="stage-card">
+      <span class="age-tag">Ages 15-17</span>
+      <h3>Becoming Themselves</h3>
+      <p class="stage-sub">They're confident one day, lost the next. That's not inconsistency -- it's integration.</p>
+
+      <div class="trap-move">
+        <div class="trap-col">
+          <div class="col-label">The Trap</div>
+          Stepping in with resources and connections every time they face a consequence. When you remove the natural cost of bad decisions, you remove the exact thing that teaches judgment.
+        </div>
+        <div class="move-col">
+          <div class="col-label">The Move</div>
+          Talk to them like capable people who are still learning. Hold the line on consequences. Let reality be the teacher.
+        </div>
+      </div>
+
+      <div class="script">"That didn't go the way you wanted. What would you do differently if you could rewind?"</div>
+
+      <ul class="quick-list">
+        <li>Let them experiment with identity -- changing hobbies, style, and opinions is how they figure out what's real</li>
+        <li>College applications, job interviews, school projects need to be genuinely theirs</li>
+        <li>Don't dismiss substance use as "just what teenagers do" -- early use is a real risk factor</li>
+      </ul>
+    </div>
+
+    <!-- Quick reference table -->
+    <p class="section-label">At a Glance</p>
+    <h2>The Trap vs. The Move at Every Age</h2>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Age</th>
+          <th>The Trap</th>
+          <th>The Move</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>2-4</strong></td>
+          <td>Over-analyzing a toddler who hits</td>
+          <td>Short boundary, then move on</td>
+        </tr>
+        <tr>
+          <td><strong>5-7</strong></td>
+          <td>Performance-tracking a 6-year-old</td>
+          <td>Follow their curiosity</td>
+        </tr>
+        <tr>
+          <td><strong>8-11</strong></td>
+          <td>Making grades the center of everything</td>
+          <td>Give real responsibilities</td>
+        </tr>
+        <tr>
+          <td><strong>12-14</strong></td>
+          <td>Rewarding performed perfection</td>
+          <td>Survive their criticism calmly</td>
+        </tr>
+        <tr>
+          <td><strong>15-17</strong></td>
+          <td>Rescuing them from consequences</td>
+          <td>Let reality be the teacher</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Through-line -->
+    <div class="through-line">
+      <img src="/images/blog/parenting-by-stage/through-line.webp" alt="A parent sitting calmly on a bench watching a child climb a tree independently" style="width:100%; border-radius:12px; margin-bottom:24px;">
+      <h2>The Thread That Runs Through Every Stage</h2>
+      <div class="principle-grid">
+        <div class="principle-card">
+          <h4>Adjust, Don't Abandon</h4>
+          <p>Your involvement should change shape, not disappear. A 4-year-old needs you to set the boundary. A 14-year-old needs you to hold it while they push.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Connection Before Correction</h4>
+          <p>Discipline works better when the relationship is strong. Invest during calm times so you have something to draw on during hard ones.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Check Your Anxiety</h4>
+          <p>At every age, the biggest mistakes come from parents managing their own worry through their child. Whose need are you serving?</p>
+        </div>
+        <div class="principle-card">
+          <h4>Let Them Struggle</h4>
+          <p>The instinct to remove obstacles is strong and often loving. But struggle is where growth happens. Be nearby -- don't clear the path.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div class="callout">
+      <p>Good parenting isn't one thing. It's a moving target.</p>
+      <p class="callout-small">The parent who adapts to where their child actually is -- not where they wish they were -- gives them the best shot at becoming themselves.</p>
+    </div>
+
+    <footer>
+      <p>Kung Fu Family &middot; Strategy #785 &middot; Published by kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

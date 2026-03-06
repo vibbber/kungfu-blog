@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your kid needs two gears from you — a push forward and a soft landing. Here's how to shift between them without overthinking it.">
+  <title>The Two Gears Every Parent Needs | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .hero .tagline {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+    }
+
+    /* --- Body text --- */
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #5C8A5A;
+      margin: 44px 0 16px 0;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #1A1A2E;
+      margin: 32px 0 12px 0;
+      font-weight: 600;
+    }
+
+    /* --- Section images --- */
+    .section-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* --- The Two Gears Table --- */
+    .gears-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .gears-table thead th {
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: left;
+      color: white;
+    }
+
+    .gears-table thead th:first-child {
+      background: #5C8A5A;
+    }
+
+    .gears-table thead th:last-child {
+      background: #E8A598;
+    }
+
+    .gears-table tbody td {
+      padding: 14px 20px;
+      font-size: 15px;
+      vertical-align: top;
+      border-bottom: 1px solid #EDE8E0;
+      background: white;
+    }
+
+    .gears-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .gears-table tbody td:first-child {
+      border-right: 2px solid #FAF6F0;
+    }
+
+    /* --- Signal Cards --- */
+    .signal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .signal-card {
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 15px;
+    }
+
+    .signal-card.stretch {
+      background: #EDF5ED;
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .signal-card.steady {
+      background: #FDF0ED;
+      border-left: 4px solid #E8A598;
+    }
+
+    .signal-card h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .signal-card.stretch h4 { color: #5C8A5A; }
+    .signal-card.steady h4 { color: #D4796A; }
+
+    .signal-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .signal-card li {
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .signal-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .signal-card.stretch li::before { background: #5C8A5A; }
+    .signal-card.steady li::before { background: #E8A598; }
+
+    /* --- Script Boxes --- */
+    .script-box {
+      background: #EDF5ED;
+      border: 1px solid #5C8A5A;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0 24px 0;
+      font-style: italic;
+      font-size: 16px;
+      position: relative;
+      color: #2D4A2D;
+    }
+
+    .script-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5C8A5A;
+      font-weight: 700;
+      font-style: normal;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* --- Step Cards --- */
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .step-card {
+      display: flex;
+      gap: 16px;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: #5C8A5A;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: #1A1A2E;
+    }
+
+    .step-content p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    /* --- Golden Rule Box --- */
+    .golden-rule {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      text-align: center;
+      margin: 36px 0;
+    }
+
+    .golden-rule .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .golden-rule p {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
+    /* --- Accent Box --- */
+    .accent-box {
+      background: #FDF0ED;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .accent-box h3 {
+      color: #D4796A;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .accent-box p {
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .accent-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* --- Comparison Row --- */
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      margin: 20px 0;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .compare-side {
+      font-size: 15px;
+    }
+
+    .compare-side.before {
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .compare-side.after {
+      color: #5C8A5A;
+      font-weight: 600;
+    }
+
+    .compare-arrow {
+      font-size: 24px;
+      color: #E8A598;
+    }
+
+    /* --- Footer --- */
+    .blog-footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #DDD;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+
+    /* --- Mobile --- */
+    @media (max-width: 600px) {
+      .blog-container { padding: 24px 16px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 22px; }
+      .signal-grid { grid-template-columns: 1fr; }
+      .compare-row { grid-template-columns: 1fr; text-align: center; }
+      .compare-arrow { transform: rotate(90deg); }
+      .gears-table { font-size: 14px; }
+      .gears-table thead th, .gears-table tbody td { padding: 12px 14px; }
+    }
+    /* --- TLDR Box --- */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <div class="hero">
+      <img src="/images/blog/stretch-and-steady/stretch-hero.webp" alt="Parent watching child climb confidently at a playground, standing nearby with a relaxed smile">
+      <h1>The Two Gears Every Parent Needs</h1>
+      <p class="tagline">One pushes them forward. The other catches them when they fall.</p>
+    </div>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Security isn't about being the gentle parent or the tough parent. It's about switching.</p>
+      <ul>
+        <li>Kids raised this way ask for help without shame, persist through frustration, and build friendships that stick — because they learned both brave and vulnerable at home.</li>
+        <li>The shift: stop defaulting to your comfortable gear — lean into the one that's harder for you.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>Stretch and Steady action breakdowns &middot; 8 body-language signals to watch for &middot; 4 ready-to-use scripts &middot; 'When you're not sure' default rule</div>
+    </div>
+
+    <p>Here's something nobody tells you about raising a confident kid: it doesn't come from a single parenting style. It comes from switching between two.</p>
+
+    <p>Think of it like driving. You wouldn't stay in first gear on the highway. You wouldn't downshift to fifth on a steep hill. Great parents shift gears constantly, all day long, based on what their kid is telling them right now.</p>
+
+    <p>The two gears: <strong>Stretch</strong> (push them into the world) and <strong>Steady</strong> (be the place they come back to). Every kid needs both. Every single day.</p>
+
+    <div class="golden-rule">
+      <div class="label">The whole strategy in one line</div>
+      <p>When they're calm and curious, stretch them forward.<br>When they're overwhelmed, be their steady ground.</p>
+    </div>
+
+    <h2>What Each Gear Looks Like</h2>
+
+    <table class="gears-table">
+      <thead>
+        <tr>
+          <th>Stretch Mode</th>
+          <th>Steady Mode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Let them lead — unstructured time where they pick the game</td>
+          <td>Stay through the meltdown — don't teach, just be there</td>
+        </tr>
+        <tr>
+          <td>Coach from behind — show one piece of the puzzle, then back off</td>
+          <td>Build daily rituals — 15 minutes of phone-away, kid-chosen time</td>
+        </tr>
+        <tr>
+          <td>Be nearby, not on top of them — proximity without hovering</td>
+          <td>Make home a no-harm zone — safe from hurt, words included</td>
+        </tr>
+        <tr>
+          <td>Name what you notice — specific observations, not generic praise</td>
+          <td>Regulate yourself first — step away for two minutes, then come back</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Reading the Signals</h2>
+
+    <p>Your kid is already broadcasting which gear they need. You just have to tune in.</p>
+
+    <div class="signal-grid">
+      <div class="signal-card stretch">
+        <h4>Ready to stretch</h4>
+        <ul>
+          <li>Calm, curious, asking questions</li>
+          <li>Reaching outward, wanting to try alone</li>
+          <li>Looking at you for a nod before jumping in</li>
+          <li>Energy is forward-facing</li>
+        </ul>
+      </div>
+      <div class="signal-card steady">
+        <h4>Needs steadying</h4>
+        <ul>
+          <li>Clingy, tearful, or withdrawn</li>
+          <li>Aggressive or shutting down</li>
+          <li>Body tense, overwhelmed</li>
+          <li>Energy is pulling inward</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accent-box">
+      <h3>When You're Not Sure</h3>
+      <p>Start with steady. Always. A child who feels safe will naturally reach outward again on their own. You can't push someone into confidence — but you can build the ground they launch from.</p>
+    </div>
+
+    <h2>Stretch Mode in Action</h2>
+
+    <img class="section-img" src="/images/blog/stretch-and-steady/nearby-not-hovering.webp" alt="Child painting at a kitchen table while a parent works nearby, glancing over with a smile">
+
+    <p>Stretch doesn't mean pushing. It means creating space for them to surprise themselves. The magic is in what you <em>don't</em> do — you don't take over the puzzle, you don't correct the crayon grip, you don't narrate their play.</p>
+
+    <h3>The "Coach from Behind" Move</h3>
+
+    <p>When they hit a wall, the instinct is to swoop in and fix it. Instead:</p>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Let them wrestle with it</h4>
+          <p>Sit on your hands for a beat longer than feels comfortable</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Step alongside, not in front</h4>
+          <p>Show one small piece of the puzzle — then pull back</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Describe what they did</h4>
+          <p>Specific observations land; "good job" floats away</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="script-box">
+      <span class="script-label">Say this</span>
+      "That part's tricky, huh? Watch this one piece — now you try the rest."
+    </div>
+
+    <p>And when they get it:</p>
+
+    <div class="script-box">
+      <span class="script-label">Say this</span>
+      "You kept going even when it wasn't working. That took real patience."
+    </div>
+
+    <p>Notice the difference? You're not praising the result. You're naming the effort, the persistence, the quality of attention. That's what builds a kid who tries hard things willingly.</p>
+
+    <h3>Replace "Good Job" with What You Actually See</h3>
+
+    <div class="compare-row">
+      <div class="compare-side before">"Good job on that drawing!"</div>
+      <div class="compare-arrow">&rarr;</div>
+      <div class="compare-side after">"You used six different colors in the sky. I wouldn't have thought of that."</div>
+    </div>
+
+    <div class="compare-row">
+      <div class="compare-side before">"Great work at practice!"</div>
+      <div class="compare-arrow">&rarr;</div>
+      <div class="compare-side after">"I saw you go back to that drill three times until you got it."</div>
+    </div>
+
+    <div class="compare-row">
+      <div class="compare-side before">"You're so smart!"</div>
+      <div class="compare-arrow">&rarr;</div>
+      <div class="compare-side after">"You figured out that puzzle by testing every piece on the left side first. That was strategic."</div>
+    </div>
+
+    <h2>Steady Mode in Action</h2>
+
+    <img class="section-img" src="/images/blog/stretch-and-steady/steady-comfort.webp" alt="Parent sitting on the floor holding a child close, warm light through a window">
+
+    <p>Steady mode is not about fixing. It's not about teaching a lesson. It's about being the warm, calm thing in the room when their world gets too loud.</p>
+
+    <h3>When They're Falling Apart</h3>
+
+    <p>Your presence <em>is</em> the intervention. Get close. Lower your voice. Let them know you're not going anywhere. The lesson comes later — once their body has settled and their brain is back online.</p>
+
+    <div class="script-box">
+      <span class="script-label">Say this</span>
+      "It looks like something in your chest is really tight right now, like everything got too much all at once."
+    </div>
+
+    <p>For kids who struggle to name their feelings, paint the picture instead of slapping a label on it. "You look angry" is less helpful than describing what you actually see happening in their body.</p>
+
+    <h3>When You're About to Lose It</h3>
+
+    <p>You can't be someone else's calm place if you're flooded yourself. It's okay — and actually powerful — to name it and step away.</p>
+
+    <div class="script-box">
+      <span class="script-label">Say this</span>
+      "I'm feeling overwhelmed right now. I'm going to step into the other room for two minutes and then I'll be right back."
+    </div>
+
+    <p>Then come back. The coming back is the part that matters. You're modeling exactly the skill you want them to learn: noticing your limits, taking a pause, and returning to the relationship.</p>
+
+    <h2>The Long Game</h2>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num" style="background: #E8A598;">1</div>
+        <div class="step-content">
+          <h4>Notice which gear is hard for you</h4>
+          <p>Worriers find stretch scary. Independence-lovers find steady feels like coddling. Your biggest growth is in your uncomfortable gear.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="background: #E8A598;">2</div>
+        <div class="step-content">
+          <h4>Adjust the ratio as they grow</h4>
+          <p>Three-year-olds need tons of steady, careful stretching. Ten-year-olds need bigger stretches and trust that steady is there. More rope, same anchor.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="background: #E8A598;">3</div>
+        <div class="step-content">
+          <h4>Let them see you shift gears</h4>
+          <p>Be excited about your own challenges. Ask for help when you need it. You're the living proof that a person can be brave and vulnerable — that's what security looks like.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <div class="label">Remember</div>
+      <p>Security isn't being the perfect parent.<br>It's showing up in both gears — stretching them forward when they're ready, steadying them close when they're not.</p>
+    </div>
+
+    <div class="blog-footer">
+      <p>Kung Fu Parenting &middot; kungfu.family</p>
+    </div>
+
+  </div>
+</body>
+</html>

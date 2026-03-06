@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Your Kid a Soda Can? How to Build an Unshakeable Teen</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    /* Header */
+    .blog-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-size: 34px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .blog-header .subtitle {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+    }
+
+    /* Body text */
+    .blog-container p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .blog-container strong { color: #1A1A2E; }
+
+    /* Section headers */
+    .blog-container h2 {
+      font-size: 26px;
+      color: #5C8A5A;
+      margin: 44px 0 16px;
+      font-weight: 700;
+    }
+    .blog-container h3 {
+      font-size: 20px;
+      color: #1A1A2E;
+      margin: 28px 0 12px;
+      font-weight: 600;
+    }
+
+    /* Images */
+    .blog-image {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .image-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: -20px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .highlight-box p {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+    .highlight-box p:not(:last-child) { margin-bottom: 8px; }
+    .highlight-box strong { color: #fff; }
+
+    /* Pause card */
+    .pause-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: #EEF5ED;
+      border-left: 5px solid #5C8A5A;
+      border-radius: 0 12px 12px 0;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .pause-icon {
+      width: 56px;
+      height: 56px;
+      background: #5C8A5A;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .pause-content h4 {
+      font-size: 18px;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+    }
+    .pause-content p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* Tools grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .tool-card {
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid;
+    }
+    .tool-card h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+    .tool-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .tool-card .script {
+      font-size: 13px;
+      color: #666;
+      font-style: italic;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding-top: 8px;
+      margin-bottom: 0;
+    }
+    .tool-card.awareness {
+      border-color: #4A90D9;
+      background: #F0F6FC;
+    }
+    .tool-card.awareness h4 { color: #4A90D9; }
+    .tool-card.conscience {
+      border-color: #5C8A5A;
+      background: #F0F7F0;
+    }
+    .tool-card.conscience h4 { color: #5C8A5A; }
+    .tool-card.imagination {
+      border-color: #9B59B6;
+      background: #F5F0F9;
+    }
+    .tool-card.imagination h4 { color: #9B59B6; }
+    .tool-card.willpower {
+      border-color: #E8A598;
+      background: #FDF4F1;
+    }
+    .tool-card.willpower h4 { color: #D4776A; }
+
+    /* Language swap table */
+    .swap-table-wrap {
+      margin: 24px 0 32px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .swap-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .swap-table thead th {
+      padding: 14px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    .swap-table thead th:first-child {
+      background: #FEF0ED;
+      color: #C0392B;
+      width: 50%;
+    }
+    .swap-table thead th:last-child {
+      background: #EDF7ED;
+      color: #2E7D32;
+    }
+    .swap-table td {
+      padding: 12px 16px;
+      font-size: 15px;
+      border-bottom: 1px solid #f0f0f0;
+      background: white;
+    }
+    .swap-table td:first-child {
+      color: #C0392B;
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+    .swap-table td:last-child {
+      color: #2E7D32;
+      font-weight: 600;
+    }
+    .swap-table tr:last-child td { border-bottom: none; }
+
+    /* Scenario cards */
+    .scenario-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C8A5A;
+    }
+    .scenario-card h4 {
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+    .scenario-responses {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .response-reactive {
+      background: #FEF0ED;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .response-reactive .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #C0392B;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .response-reactive p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 0;
+    }
+    .response-proactive {
+      background: #EDF7ED;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .response-proactive .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2E7D32;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .response-proactive p {
+      font-size: 13px;
+      color: #444;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    /* Dinner table prompt */
+    .try-tonight {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A48 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin: 36px 0;
+    }
+    .try-tonight h3 {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .try-tonight ol {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    .try-tonight li {
+      color: rgba(255,255,255,0.95);
+      font-size: 15px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .try-tonight li:last-child { margin-bottom: 0; }
+
+    /* Footer */
+    .blog-footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+    .blog-footer p {
+      font-size: 13px;
+      color: #999;
+    }
+    .blog-footer .source {
+      font-style: italic;
+    }
+
+    /* Circle of control grid (from option 1) */
+    .control-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+      text-align: left;
+    }
+    .control-card {
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .control-card.yes {
+      background: #D5EDCF;
+      border: 1px solid #B8DEB0;
+    }
+    .control-card.yes strong { color: #3A6B35; }
+    .control-card.no {
+      background: #FEF0ED;
+      border: 1px solid #F0C8BE;
+    }
+    .control-card.no strong { color: #8B3A30; }
+
+    /* Scenario cards (from option 1) */
+    .scenario {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .scenario h4 {
+      font-size: 15px;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+    }
+    .scenario-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .scenario-side {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .scenario-side.reactive {
+      background: #FEF0ED;
+      color: #8B3A30;
+    }
+    .scenario-side.proactive {
+      background: #D5EDCF;
+      color: #2D5A28;
+    }
+    .scenario-side strong {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .blog-header h1 { font-size: 26px; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .scenario-responses { grid-template-columns: 1fr; }
+      .control-grid { grid-template-columns: 1fr; }
+      .scenario-row { flex-direction: column; }
+      .blog-container { padding: 20px 16px 40px; }
+      .highlight-box { padding: 24px 20px; }
+      .highlight-box p { font-size: 17px; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+<div class="blog-container">
+
+  <div class="blog-header">
+    <h1>Is Your Kid a Soda Can?</h1>
+    <p class="subtitle">How to build a teen who stays cool when life shakes them up</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Reactive teens let the world push their buttons. Proactive teens pick their own response.</p>
+    <ul>
+      <li>Kids raised with this toolkit handle friend drama without imploding, take ownership of bad grades instead of blaming teachers, and stay calm when things feel unfair. They keep their power instead of giving it away.</li>
+      <li>The shift: swap reactive language for proactive language -- 'I have to' becomes 'I choose to' -- and practice with low-stakes scenarios until it becomes automatic.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>soda can vs water bottle test &middot; 7 language swaps &middot; 4 human tools grid &middot; 3 reactive-vs-proactive scenarios</div>
+  </div>
+
+  <p>Grab a can of soda. Shake it. Open it.</p>
+
+  <p>You know exactly what happens. Explosive. Messy. Totally predictable.</p>
+
+  <p>Now grab a water bottle. Shake it just as hard. Open it.</p>
+
+  <p>Nothing. Completely unrattled.</p>
+
+  <img src="/images/blog/proactive-response-toolkit/soda-vs-water.webp" alt="Soda can exploding vs water bottle staying calm when shaken" class="blog-image">
+  <p class="image-caption">Same shake. Completely different outcome.</p>
+
+  <p>Sean Covey, a leadership educator who works with teens, uses a dead-simple metaphor for how teenagers move through the world. <strong>Reactive kids are soda cans</strong> -- someone bumps into them and they explode. A friend says something rude, they fire back. A teacher marks them down, they shut down. Every external event triggers an automatic, unfiltered reaction.</p>
+
+  <p><strong>Proactive kids are water bottles.</strong> Same situations. Same shaking. But the response is chosen, not triggered. And that changes everything -- grades, friendships, confidence, the whole trajectory.</p>
+
+  <p>The good news: this is teachable. And it starts with one move.</p>
+
+  <h2>The Pause Button</h2>
+
+  <p>Between every trigger and every response, there's a gap. Most teens blow right past it. The entire toolkit starts with making that gap visible.</p>
+
+  <div class="pause-card">
+    <div class="pause-icon">| |</div>
+    <div class="pause-content">
+      <h4>Push Pause</h4>
+      <p>Stop. Breathe. Don't speak yet. The goal isn't calm -- it's <strong>choice</strong>. Even 5 seconds of pause interrupts autopilot and opens up options that didn't exist a moment ago.</p>
+    </div>
+  </div>
+
+  <p>That's it. Not meditation. Not counting to ten. Just a beat of silence before the mouth moves. Five seconds changes the outcome of the next five minutes.</p>
+
+  <p>Once the pause exists, your teen has access to something powerful.</p>
+
+  <h2>The Four Tools No Animal Has</h2>
+
+  <p>Your dog reacts to every doorbell. Every squirrel. Every dropped crumb. Dogs don't have a choice -- stimulus in, reaction out. Humans have four tools that create a different path.</p>
+
+  <img src="/images/blog/proactive-response-toolkit/four-tools.webp" alt="Four human tools: Self-Awareness, Conscience, Imagination, Willpower" class="blog-image">
+
+  <div class="tools-grid">
+    <div class="tool-card awareness">
+      <h4>Self-Awareness</h4>
+      <p>Stand apart from yourself and watch your own thoughts.</p>
+      <p class="script">"I notice I'm angry because of the breakup, and I'm taking it out on Mom."</p>
+    </div>
+    <div class="tool-card conscience">
+      <h4>Conscience</h4>
+      <p>The inner voice that flags right from wrong.</p>
+      <p class="script">"She's new and needs friends. Being rude isn't the move."</p>
+    </div>
+    <div class="tool-card imagination">
+      <h4>Imagination</h4>
+      <p>See outcomes before they happen.</p>
+      <p class="script">"What if I respond calmly? What happens if I go first and apologize?"</p>
+    </div>
+    <div class="tool-card willpower">
+      <h4>Willpower</h4>
+      <p>Choose an action even when emotions push the other way.</p>
+      <p class="script">"I want to yell back, but I'm choosing to stay calm."</p>
+    </div>
+  </div>
+
+  <p>Each tool is a question your teen can ask in that 5-second pause. <strong>Self-awareness:</strong> "What am I actually feeling?" <strong>Conscience:</strong> "What's the right thing here?" <strong>Imagination:</strong> "What would happen if I...?" <strong>Willpower:</strong> "Am I choosing this, or is it choosing me?"</p>
+
+  <p>One tool is sometimes enough. All four together are unstoppable.</p>
+
+  <h2>The Language Swap</h2>
+
+  <p>Here's how you spot a soda can in the wild. Listen to the words.</p>
+
+  <p>Reactive language gives power away. Proactive language keeps it. The difference is surprisingly small -- and surprisingly loud once you hear it.</p>
+
+  <div class="swap-table-wrap">
+    <table class="swap-table">
+      <thead>
+        <tr>
+          <th>Soda Can Talk</th>
+          <th>Water Bottle Talk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"That's just the way I am"</td>
+          <td>"I can do better than that"</td>
+        </tr>
+        <tr>
+          <td>"There's nothing I can do"</td>
+          <td>"Let's look at all our options"</td>
+        </tr>
+        <tr>
+          <td>"I have to"</td>
+          <td>"I choose to"</td>
+        </tr>
+        <tr>
+          <td>"I can't"</td>
+          <td>"There's gotta be a way"</td>
+        </tr>
+        <tr>
+          <td>"You ruined my day"</td>
+          <td>"I'm not letting that rub off on me"</td>
+        </tr>
+        <tr>
+          <td>"I'll try"</td>
+          <td>"I'll do it"</td>
+        </tr>
+        <tr>
+          <td>"If only..."</td>
+          <td>"I will..."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The shift isn't just semantic. <strong>"I have to go to practice" and "I choose to go to practice"</strong> feel completely different in the body. One is a cage. The other is power. Same activity, different operating system.</p>
+
+  <p>Start catching these in your own language first. Your teen will notice before you even bring it up.</p>
+
+  <h2>Where the Power Actually Lives</h2>
+
+  <p>Here's the concept that makes all of this click. Everything in your teen's life falls into one of two zones:</p>
+
+  <img src="/images/blog/proactive-response-toolkit/circle-of-control.webp" alt="Concentric circles diagram showing the inner Circle of Control in green and the outer No Control zone in coral" class="blog-image">
+
+  <div class="control-grid">
+    <div class="control-card yes">
+      <strong>Can control:</strong>
+      Your attitude. Your effort. How you respond. Who you spend time with. How hard you study. Whether you apologize.
+    </div>
+    <div class="control-card no">
+      <strong>Can't control:</strong>
+      The weather. Other people's actions. Your parents' rules. The past. What others think of you.
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p><strong>The move:</strong> Proactive people pour all their energy into the green circle. Reactive people drain their energy raging at the coral one.</p>
+  </div>
+
+  <p>When your teen says "It's not fair that she got picked and I didn't" -- that's coral-circle thinking. Redirect: "What's in your green circle right now?" Suddenly they're talking about practice schedules and asking the coach for feedback instead of stewing about the injustice.</p>
+
+  <h2>Try It Tonight</h2>
+
+  <p>Run these scenarios at dinner. Ask your teen: what would the soda can do? What would the water bottle do?</p>
+
+  <div class="scenario">
+    <h4>Your best friend bad-mouths you behind your back</h4>
+    <div class="scenario-row">
+      <div class="scenario-side reactive">
+        <strong>Soda can</strong>
+        Spread rumors back. Give the silent treatment for weeks. Tell her off in front of everyone.
+      </div>
+      <div class="scenario-side proactive">
+        <strong>Water bottle</strong>
+        Talk to her directly and share how you feel. Or forgive her, knowing everyone has bad days.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <h4>Someone at work gets the shift you wanted</h4>
+    <div class="scenario-row">
+      <div class="scenario-side reactive">
+        <strong>Soda can</strong>
+        Complain to everyone. Slack off. Assume the boss is out to get you.
+      </div>
+      <div class="scenario-side proactive">
+        <strong>Water bottle</strong>
+        Ask your supervisor what you can improve. Keep working hard. If it's a dead end, start looking.
+      </div>
+    </div>
+  </div>
+
+  <div class="scenario">
+    <h4>Someone cuts you off in traffic</h4>
+    <div class="scenario-row">
+      <div class="scenario-side reactive">
+        <strong>Soda can</strong>
+        Road rage. Yell. Let it ruin the next hour.
+      </div>
+      <div class="scenario-side proactive">
+        <strong>Water bottle</strong>
+        Let it go. Laugh about it. Move on in three seconds.
+      </div>
+    </div>
+  </div>
+
+  <p>The scenarios are low-stakes on purpose. Once the soda-can/water-bottle language becomes natural at dinner, it shows up automatically when the real stuff hits -- the breakup, the rejection letter, the friendship betrayal.</p>
+
+  <p>Seven phrases. One pause button. Four tools. That's the whole toolkit. And the beautiful thing is, it works on adults too -- so you might catch yourself swapping a few phrases along the way.</p>
+
+  <div class="blog-footer">
+    <p class="source">Published by kungfu.family</p>
+    <p>Kung Fu Parenting | kungfu.family</p>
+  </div>
+
+</div>
+
+</body>
+</html>

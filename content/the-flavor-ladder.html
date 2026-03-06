@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Sauce Unlocks Twenty Foods: The Dip Strategy for Picky Eaters</title>
+  <meta name="description" content="Your kid already has a favorite sauce. That sauce is the skeleton key to dozens of new foods. Here's exactly how the dip strategy works.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #7A8B8B;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+    }
+
+    h3 {
+      font-size: 19px;
+      color: #1A1A2E;
+      margin: 24px 0 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+
+    .blog-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    /* Opener callout */
+    .opener-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 14px;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .opener-box p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Dip menu table */
+    .dip-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .dip-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .dip-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E8E2D8;
+    }
+    .dip-table tr:nth-child(even) td { background: #F5F0E8; }
+    .dip-table tr:nth-child(odd) td { background: white; }
+    .dip-table tr:last-child td { border-bottom: none; }
+
+    /* Step cards */
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .step-card .step-num {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .step-card h4 {
+      display: inline;
+      font-size: 17px;
+      color: #5C8A5A;
+    }
+    .step-card p {
+      margin: 10px 0 0;
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* Script quote */
+    .script {
+      background: #EDF7ED;
+      border: 1px solid #C5DFC5;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-style: italic;
+      font-size: 15px;
+      color: #3A5A3A;
+    }
+
+    /* Before / After */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media (max-width: 520px) {
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+    .compare-card {
+      border-radius: 10px;
+      padding: 18px 20px;
+      font-size: 15px;
+    }
+    .compare-card.before {
+      background: #FFF0EE;
+      border: 1px solid #E8A598;
+    }
+    .compare-card.after {
+      background: #EDF7ED;
+      border: 1px solid #5C8A5A;
+    }
+    .compare-card strong {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .compare-card.before strong { color: #C0675A; }
+    .compare-card.after strong { color: #5C8A5A; }
+
+    /* Chain visual */
+    .chain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .chain-item {
+      background: white;
+      border: 2px solid #5C8A5A;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #5C8A5A;
+    }
+    .chain-arrow {
+      font-size: 20px;
+      color: #E8A598;
+    }
+
+    /* Tip list */
+    .tip-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .tip-list li {
+      padding: 12px 16px;
+      border-left: 3px solid #E8A598;
+      margin-bottom: 10px;
+      background: #FFFAF8;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    /* Bottom line */
+    .bottom-line {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 36px 0;
+      text-align: center;
+    }
+    .bottom-line p {
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+   .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+   .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+   .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+   .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+   .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+   .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+   .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+   .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>One Sauce Unlocks Twenty Foods</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Picky eaters don't reject foods -- they reject the gap between known and unknown.</p>
+    <ul>
+      <li>Kids raised with dipping stations eat roasted vegetables within months. They reach for new foods voluntarily because every first bite comes wrapped in something they already trust.</li>
+      <li>The move: close the gap with a familiar sauce. One dip turns a scary vegetable into a vehicle for something they already love.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>sauce-to-food expansion map for 6 common dips &middot; 3-step setup with zero pressure &middot; seasoning chain technique &middot; 4 mistakes that break trust</div>
+  </div>
+  <p class="subtitle">The dip strategy that quietly turns cautious eaters into adventurous ones</p>
+
+  <img src="/images/blog/the-flavor-ladder/dipping-station.webp" alt="Colorful dipping station with bowls of ranch, hummus, peanut butter, and salsa alongside vegetables" class="hero-img">
+
+  <p>Your child already has a favorite sauce. Ranch. Hummus. Ketchup. Peanut butter. Whatever it is, they'd put it on everything if you let them.</p>
+
+  <p>Here's what most parents miss: that sauce isn't just a condiment. It's a skeleton key.</p>
+
+  <p>A single familiar dip can introduce your child to dozens of foods they've never touched -- because the sauce does the heavy lifting. It wraps every new bite in something they already trust. The unfamiliar food stops being the main event and becomes the vehicle for something they already love.</p>
+
+  <div class="opener-box">
+    <p>Children don't reject foods because they're picky. They reject foods because the gap between "known" and "unknown" feels too wide. A favorite sauce closes that gap instantly.</p>
+  </div>
+
+  <h2>Why Dipping Works When Everything Else Fails</h2>
+
+  <p>Think about it from their perspective. A plain steamed carrot on a plate is a solo act -- unfamiliar flavor, unfamiliar texture, nothing to anchor it. But that same carrot next to a bowl of ranch? Now it's a dipping tool. The child controls how much sauce goes on. They control the ratio of new-to-safe. They control the pace.</p>
+
+  <p>That sense of control is everything.</p>
+
+  <div class="compare-grid">
+    <div class="compare-card before">
+      <strong>Without a dip</strong>
+      "Try this cucumber."<br>
+      Child sees: unknown food, no escape route, pressure.
+    </div>
+    <div class="compare-card after">
+      <strong>With a dip</strong>
+      Cucumber slices appear next to the hummus bowl.<br>
+      Child sees: a dipping opportunity, familiar flavor guaranteed.
+    </div>
+  </div>
+
+  <p>Sauces also solve a practical problem adults forget about: dry and tough textures are physically harder for small mouths to manage. A dip adds moisture. It smooths out rough edges. It literally makes food easier to eat.</p>
+
+  <h2>The Dipping Station Playbook</h2>
+
+  <p>This isn't complicated. At meals, put two or three dips on the table alongside whatever you're serving. That's it. No announcements, no "try dipping your broccoli in this." Just make it available and let curiosity do the work.</p>
+
+  <div class="step-card">
+    <span class="step-num">1</span>
+    <h4>Pick sauces they already love</h4>
+    <p>Start with what's proven. If ranch is their thing, ranch goes on the table. If they live for ketchup, ketchup it is. The dip has to be a sure thing.</p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">2</span>
+    <h4>Serve new foods as dipping vehicles</h4>
+    <p>Put out carrot sticks, cucumber rounds, bell pepper strips, snap peas -- whatever you want them to try. Place it near the dip, not on their plate. Let them reach for it themselves.</p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">3</span>
+    <h4>Say nothing about it</h4>
+    <p>This is the hardest part. Don't narrate. Don't encourage. Don't point. Just eat your own food. If they dip a carrot in ranch and eat it, act like it's the most normal thing in the world -- because it is.</p>
+  </div>
+
+  <img src="/images/blog/the-flavor-ladder/flavor-ladder.webp" alt="Infographic showing the flavor ladder concept: progressing from familiar foods to new ones via shared properties" class="blog-img">
+
+  <h2>The Sauce-to-Food Expansion Map</h2>
+
+  <p>Once your child is dipping happily, you can start branching out. Each sauce opens a different set of doors.</p>
+
+  <table class="dip-table">
+    <tr>
+      <th>If they love...</th>
+      <th>They might try...</th>
+    </tr>
+    <tr>
+      <td><strong>Ranch</strong></td>
+      <td>Carrots, cucumbers, bell peppers, cherry tomatoes, roasted broccoli, pizza crust edges</td>
+    </tr>
+    <tr>
+      <td><strong>Hummus</strong></td>
+      <td>Pita chips, cucumber, snap peas, roasted sweet potato wedges, warm flatbread</td>
+    </tr>
+    <tr>
+      <td><strong>Peanut butter</strong></td>
+      <td>Apple slices, celery, banana, whole grain crackers, rice cakes</td>
+    </tr>
+    <tr>
+      <td><strong>Ketchup</strong></td>
+      <td>Roasted potatoes, turkey meatballs, scrambled eggs, fish sticks, veggie burgers</td>
+    </tr>
+    <tr>
+      <td><strong>Melted cheese</strong></td>
+      <td>Broccoli, cauliflower, pasta, black beans, tortilla chips, soft pretzels</td>
+    </tr>
+    <tr>
+      <td><strong>Teriyaki</strong></td>
+      <td>Rice, edamame, grilled chicken, stir-fried noodles, tofu cubes</td>
+    </tr>
+  </table>
+
+  <p>See the pattern? Each sauce is a bridge to a whole category of foods. A child who dips six different vegetables in ranch over the course of a month has just expanded their diet by six foods -- and it felt like a game, not a lesson.</p>
+
+  <h2>The Seasoning Trick</h2>
+
+  <p>Dipping is one version of a bigger idea: take a flavor your child trusts and put it on something new.</p>
+
+  <p>If your child loves garlic butter on bread, try garlic butter on green beans. Same flavor. Different vehicle. The green beans stop being "a vegetable I've never tried" and become "another thing that tastes like garlic butter."</p>
+
+  <div class="chain">
+    <span class="chain-item">Garlic bread</span>
+    <span class="chain-arrow">&rarr;</span>
+    <span class="chain-item">Garlic butter pasta</span>
+    <span class="chain-arrow">&rarr;</span>
+    <span class="chain-item">Garlic butter green beans</span>
+    <span class="chain-arrow">&rarr;</span>
+    <span class="chain-item">Garlic roasted potatoes</span>
+  </div>
+
+  <p>One flavor. Four foods. Each step feels tiny because the garlic butter is always there, holding the child's hand.</p>
+
+  <img src="/images/blog/the-flavor-ladder/curious-child.webp" alt="A child holding up a snap pea, looking at it with curiosity and delight" class="blog-img">
+
+  <h2>What Not to Do</h2>
+
+  <ul class="tip-list">
+    <li><strong>Don't hide foods in the sauce.</strong> Sneaking pureed spinach into ranch breaks trust. Transparency is the whole point -- they need to see the new food and choose to dip it.</li>
+    <li><strong>Don't limit how much sauce they use.</strong> Yes, the carrot-to-ranch ratio might be absurd at first. That's fine. They're touching a carrot to their mouth. That's the win.</li>
+    <li><strong>Don't turn it into a challenge.</strong> "Can you try dipping your broccoli?" is pressure wearing a costume. Put the broccoli near the dip and walk away.</li>
+    <li><strong>Don't take away the safety sauce too soon.</strong> Some parents worry their child will "only eat things with ranch forever." They won't. As familiarity with the new food grows, the sauce naturally becomes optional.</li>
+  </ul>
+
+  <h2>The Long View</h2>
+
+  <p>A child who dips everything in ranch today is a child who eats roasted vegetables next year. The sauce is training wheels, not a crutch. Every dipped bite builds familiarity with the flavor and texture of that food. Eventually, the sauce becomes a choice rather than a requirement.</p>
+
+  <p>Pediatric feeding research backs this up: flavor preferences are learned, not fixed. Repeated, low-pressure exposure is what builds acceptance. And a favorite dip is the lowest pressure there is -- the child doesn't even realize they're being "exposed" to anything. They're just dipping.</p>
+
+  <div class="bottom-line">
+    <p>Your child's favorite sauce isn't a problem to manage.<br>It's the most powerful tool in your kitchen.<br><strong>Put it on the table tonight and see what happens.</strong></p>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>

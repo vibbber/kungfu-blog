@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your child's messy grief is a strength signal. Anger, searching, tears — it all means their emotional system is working exactly right. Here's how to support it.">
+  <title>Your Child's Grief Is Not a Problem to Fix | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 3px solid #E8A598;
+    }
+    header h1 {
+      font-size: 30px;
+      color: #5C8A5A;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    header .subtitle {
+      font-size: 17px;
+      color: #6B7B7B;
+      font-style: italic;
+    }
+    p.body-text {
+      font-size: 16px;
+      margin-bottom: 18px;
+      color: #333;
+    }
+    h2 {
+      color: #5C8A5A;
+      font-size: 23px;
+      margin: 36px 0 16px;
+    }
+
+    /* Callout box - green */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 28px 0;
+      text-align: center;
+    }
+    .callout .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+    .callout p {
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* Strength signal table */
+    .signal-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0 28px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .signal-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 18px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    .signal-table tbody td {
+      padding: 14px 18px;
+      font-size: 15px;
+      border-bottom: 1px solid #EDE8E0;
+      vertical-align: top;
+    }
+    .signal-table tbody tr:last-child td { border-bottom: none; }
+    .signal-table tbody tr:nth-child(even) { background: #F5F0E8; }
+    .signal-table tbody tr:nth-child(odd) { background: white; }
+    .signal-table .behavior { font-weight: 600; color: #5C8A5A; }
+
+    /* OPEN method cards */
+    .open-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0 28px;
+    }
+    @media (max-width: 600px) { .open-grid { grid-template-columns: 1fr; } }
+    .open-card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      border-top: 4px solid #E8A598;
+    }
+    .open-card .letter {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 34px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .open-card h3 {
+      font-size: 16px;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+    }
+    .open-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .script {
+      background: #EDF7ED;
+      border: 1px solid #C5DFC5;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 14px;
+      color: #3A5A3A;
+      margin-top: 8px;
+    }
+
+    /* Mistake vs. Move comparison */
+    .compare-row {
+      display: flex;
+      gap: 16px;
+      margin: 12px 0;
+    }
+    @media (max-width: 600px) { .compare-row { flex-direction: column; } }
+    .compare-box {
+      flex: 1;
+      padding: 18px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    .compare-box.dont {
+      background: #FEF3F0;
+      border: 1px solid #E8A598;
+    }
+    .compare-box.do {
+      background: #EDF7ED;
+      border: 1px solid #5C8A5A;
+    }
+    .compare-box .tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .compare-box.dont .tag { color: #C0392B; }
+    .compare-box.do .tag { color: #2E7D32; }
+    .compare-box strong { display: block; margin-bottom: 4px; }
+    .compare-box p { font-size: 14px; color: #555; }
+
+    /* Long-term checklist */
+    .checklist {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .checklist-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .checklist-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #E8F5E9;
+      color: #5C8A5A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .checklist-item h4 { color: #5C8A5A; font-size: 15px; margin-bottom: 4px; }
+    .checklist-item p { font-size: 14px; color: #555; }
+
+    /* Bottom callout */
+    .bottom-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .bottom-box h3 { font-size: 17px; margin-bottom: 10px; opacity: 0.9; }
+    .bottom-box p { font-size: 18px; font-weight: 500; line-height: 1.5; }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Child's Grief Is Not a Problem to Fix</h1>
+    <p class="subtitle">The anger, the tears, the searching -- it all means their emotional system is working exactly right</p>
+  </header>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The first grief conversation is not the last one. Kids re-process loss as they grow.</p>
+    <ul>
+      <li>Kids who get repeated, honest conversations about loss at each developmental stage build emotional vocabularies that carry them through everything else life throws at them.</li>
+      <li>The move: use the same four steps -- own, present, expect, normalize -- whether it's the first conversation or the fiftieth.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>OPEN method with 4 parent scripts &middot; 5 grief signals and what each one means &middot; 3 mistakes that block healthy grieving &middot; milestone and re-processing guide</div>
+  </div>
+
+  <img src="/images/blog/supporting-a-child-through-loss/hero-presence.webp" alt="Parent sitting calmly with an upset child on a bedroom floor, being present without trying to fix anything">
+
+  <p class="body-text">Your six-year-old screams "I hate you!" three weeks after Grandma's funeral. Your eight-year-old checks the front door every evening, even though nobody's coming. Your four-year-old laughs during a conversation about death, then melts down at bedtime.</p>
+
+  <p class="body-text">None of this is broken. All of it is working.</p>
+
+  <p class="body-text">Developmental research across attachment science and child bereavement consistently shows the same thing: children grieve with their entire system. Anger, searching, confusion, sudden joy -- these are not signs of a child who is struggling. They are signs of a child who loved someone and is doing the hard, necessary work of figuring out what the world looks like without them.</p>
+
+  <div class="callout">
+    <div class="label">The Core Insight</div>
+    <p>When grief goes sideways in children, it is almost always because adults -- with the best intentions -- blocked the process.</p>
+  </div>
+
+  <h2>What Grief Actually Looks Like in Kids</h2>
+
+  <p class="body-text">Most parents expect sadness. What they get is a storm of behaviors that look like anything <em>except</em> textbook mourning. Here's the reframe:</p>
+
+  <table class="signal-table">
+    <thead>
+      <tr>
+        <th>What You See</th>
+        <th>What It Means</th>
+        <th>What to Do</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="behavior">Crying and calling out</td>
+        <td>Their attachment system is doing exactly what it's designed to do -- reaching for someone who isn't there.</td>
+        <td>Stay close. Don't hush or redirect.</td>
+      </tr>
+      <tr>
+        <td class="behavior">Searching for the person</td>
+        <td>The mind slowly catching up with a reality the heart doesn't want to accept. Not denial -- processing.</td>
+        <td>Answer honestly every time they ask.</td>
+      </tr>
+      <tr>
+        <td class="behavior">Anger and irritability</td>
+        <td>A child who says "I'm mad at Daddy for leaving" is processing, not misbehaving.</td>
+        <td>Name it: "You're really angry. That makes sense."</td>
+      </tr>
+      <tr>
+        <td class="behavior">Withdrawal and quiet</td>
+        <td>Deep sadness and longing. May show up as lost appetite, wanting to look at photos, pulling away.</td>
+        <td>Don't rush it or try to cheer them out of it.</td>
+      </tr>
+      <tr>
+        <td class="behavior">Returning to normal play</td>
+        <td>The loss is finding a place inside them rather than overwhelming everything. This is not forgetting.</td>
+        <td>Let it happen. Joy and grief can coexist.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">Every one of these behaviors is a <em>strength signal</em>. A child moving through them is a child whose emotional system is intact and doing its job. The only thing that can derail it? An adult who shuts it down.</p>
+
+  <h2>The OPEN Method: Four Moves for Every Wave</h2>
+
+  <p class="body-text">Grief doesn't follow a schedule. Your child may seem fine for weeks, then fall apart at bedtime or on a birthday. Each wave needs the same four moves -- and they work whether it's the first conversation or the fiftieth.</p>
+
+  <img src="/images/blog/supporting-a-child-through-loss/open-method.webp" alt="Four icons representing the OPEN method: honest speech, being present, waves of grief, and an open door for all feelings">
+
+  <div class="open-grid">
+    <div class="open-card">
+      <div class="letter">O</div>
+      <h3>Own the Truth</h3>
+      <p>Use plain, honest language. Euphemisms like "passed away" or "went to sleep" confuse young children and can create new fears -- of sleep, of travel, of hospitals.</p>
+      <div class="script">"Grandma died. That means her body stopped working and she won't be coming back. I want to tell you the truth because you deserve to know."</div>
+    </div>
+    <div class="open-card">
+      <div class="letter">P</div>
+      <h3>Be Present with Feelings</h3>
+      <p>Don't rush to comfort or explain. Sit with them. Let silence happen. If they cry, stay close. If they're angry, name it without correcting it.</p>
+      <div class="script">"You're really missing him. That makes complete sense. I'm right here with you."</div>
+    </div>
+    <div class="open-card">
+      <div class="letter">E</div>
+      <h3>Expect Waves</h3>
+      <p>A child may seem fine for weeks, then fall apart on a birthday or at bedtime. Each wave is part of the process, not a setback. Meet it the same way every time.</p>
+      <div class="script">"It sounds like you're thinking about Mom again. That happens, and it's okay. Want to tell me what you're remembering?"</div>
+    </div>
+    <div class="open-card">
+      <div class="letter">N</div>
+      <h3>Normalize All of It</h3>
+      <p>Children watch adults for cues about what's acceptable. If you treat their anger, confusion, or even laughter as normal, they learn that loss is survivable.</p>
+      <div class="script">"Some people feel angry when someone dies. Some people feel sad. Some people feel nothing at first. All of that is normal."</div>
+    </div>
+  </div>
+
+  <h2>Three Things That Block Grief (and What to Do Instead)</h2>
+
+  <p class="body-text">These come from good instincts -- wanting to protect your child from pain. But they backfire. Unprocessed grief doesn't disappear. It surfaces later as anxiety, aggression, or emotional numbness.</p>
+
+  <div class="compare-row">
+    <div class="compare-box dont">
+      <div class="tag">Blocks grief</div>
+      <strong>"Grandpa went to a better place."</strong>
+      <p>Children take this literally. They may wonder why no one is looking for Grandpa, or fear getting "lost" themselves.</p>
+    </div>
+    <div class="compare-box do">
+      <div class="tag">Opens grief</div>
+      <strong>"Grandpa died. His body stopped working."</strong>
+      <p>Clear. Kind. It gives a child something solid to stand on instead of confusing metaphors.</p>
+    </div>
+  </div>
+
+  <div class="compare-row">
+    <div class="compare-box dont">
+      <div class="tag">Blocks grief</div>
+      <strong>"Don't cry. Be strong for Mommy."</strong>
+      <p>Teaches children to bury grief. It doesn't go away -- it just goes underground and surfaces later.</p>
+    </div>
+    <div class="compare-box do">
+      <div class="tag">Opens grief</div>
+      <strong>"I'm sad too. It's okay to cry."</strong>
+      <p>Showing your own age-appropriate sadness teaches children that feelings are safe to have and share.</p>
+    </div>
+  </div>
+
+  <div class="compare-row">
+    <div class="compare-box dont">
+      <div class="tag">Blocks grief</div>
+      <strong>Withdrawing into your own grief.</strong>
+      <p>A child who's lost one important person and senses the other pulling away faces a double loss.</p>
+    </div>
+    <div class="compare-box do">
+      <div class="tag">Opens grief</div>
+      <strong>Grieving together, out loud.</strong>
+      <p>Share your grief at an age-appropriate level. It tells your child: we can carry this together.</p>
+    </div>
+  </div>
+
+  <h2>Keeping the Door Open -- Long After the Funeral</h2>
+
+  <p class="body-text">The first conversation is not the last one. A five-year-old processes death differently than a ten-year-old. The same loss may need re-explaining as they mature -- that's not reopening a wound, it's helping them understand at a new level.</p>
+
+  <img src="/images/blog/supporting-a-child-through-loss/remembering-together.webp" alt="Parent and child sitting on a couch together, looking through a photo album with warm afternoon light">
+
+  <div class="checklist">
+    <div class="checklist-item">
+      <div class="checklist-icon">1</div>
+      <div>
+        <h4>Revisit the Conversation</h4>
+        <p>Don't treat the first talk as the last. Check in regularly: <em>"I was thinking about Grandma today. Do you ever think about her?"</em></p>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-icon">2</div>
+      <div>
+        <h4>Mark Milestones</h4>
+        <p>Birthdays, holidays, and anniversaries can trigger waves. Name them: <em>"This would have been Dad's birthday. Want to do something to remember him?"</em></p>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-icon">3</div>
+      <div>
+        <h4>Watch for Stuck Grief</h4>
+        <p>Persistent withdrawal, sleep problems, school avoidance, or regressive behavior lasting many months? Consider professional support. Stuck grief is treatable.</p>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-icon">4</div>
+      <div>
+        <h4>Let Understanding Deepen</h4>
+        <p>As kids grow, they re-process the same loss with deeper understanding. Welcome the questions when they come back around.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <h3>The Bottom Line</h3>
+    <p>Your child's messy, loud, confusing grief means they loved hard and their emotional system is doing its job.<br><br><strong>Don't fix it. Don't rush it. Just be there -- honest, present, steady -- and let them feel all of it.</strong></p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting -- kungfu.family</p>
+    <p>Informed by developmental research on childhood bereavement and attachment science.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The child who never gets angry might need anger training most. Learn to spot underground anger and coach kids toward healthy expression using the Anger Spectrum.">
+  <title>The Quiet Kid Who's Actually Furious | Kung Fu Parenting</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.75;
+      padding: 0;
+      margin: 0;
+    }
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+    img.hero-img {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto 32px;
+      border-radius: 12px;
+    }
+    img.inline-img {
+      width: 100%;
+      max-width: 720px;
+      display: block;
+      margin: 28px auto;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 34px;
+      color: #1A1A2E;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #5C8A5A;
+      font-weight: 500;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 19px;
+      color: #1A1A2E;
+      margin: 28px 0 12px;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 16px;
+      font-size: 16.5px;
+    }
+    .opener {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #1A1A2E;
+      margin-bottom: 24px;
+    }
+    .opener strong {
+      color: #5C8A5A;
+    }
+
+    /* Callout boxes */
+    .insight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .insight-box .small {
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.85;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .warning-card {
+      background: #FEF3F0;
+      border-left: 5px solid #E8A598;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 28px 0;
+    }
+    .warning-card h3 {
+      color: #C0392B;
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    .warning-card ul {
+      margin: 8px 0 0 20px;
+    }
+    .warning-card li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    /* Spectrum visual */
+    .spectrum-container {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 32px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .spectrum-container h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .spectrum-note {
+      text-align: center;
+      color: #7A8B8B;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .level {
+      display: flex;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+      align-items: flex-start;
+    }
+    .level-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .level-text h4 { font-size: 15px; margin-bottom: 2px; }
+    .level-text p { font-size: 13.5px; color: #555; margin-bottom: 0; }
+    .green-level { background: #f0faf0; }
+    .green-level .level-num { background: #5C8A5A; }
+    .green-level h4 { color: #5C8A5A; }
+    .yellow-level { background: #FFF9E6; }
+    .yellow-level .level-num { background: #E8A598; }
+    .yellow-level h4 { color: #B8860B; }
+    .red-level { background: #FEF3F0; }
+    .red-level .level-num { background: #C0392B; }
+    .red-level h4 { color: #C0392B; }
+    .arrow { text-align: center; color: #5C8A5A; font-weight: bold; font-size: 16px; margin: 2px 0; }
+
+    /* WARM method */
+    .warm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .warm-grid { grid-template-columns: 1fr; }
+    }
+    .warm-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-top: 4px solid #5C8A5A;
+    }
+    .warm-card .letter {
+      font-size: 28px;
+      font-weight: 800;
+      color: #5C8A5A;
+      margin-bottom: 4px;
+    }
+    .warm-card h4 {
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+    .warm-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .script {
+      background: #f0faf0;
+      border: 1px solid #c5e0c5;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 14px;
+      color: #2C3E50;
+      line-height: 1.5;
+    }
+
+    /* Before/After table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin: 24px 0;
+    }
+    .compare-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .compare-table th:first-child {
+      background: #C0392B;
+      color: white;
+    }
+    .compare-table th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+    .compare-table td {
+      padding: 14px 16px;
+      font-size: 15px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* Age table */
+    .age-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin: 24px 0;
+    }
+    .age-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 14px;
+      text-align: left;
+      font-size: 14px;
+    }
+    .age-table td {
+      background: white;
+      padding: 14px;
+      border-bottom: 1px solid #eee;
+      font-size: 14.5px;
+      vertical-align: top;
+    }
+    .age-table tr:last-child td { border-bottom: none; }
+
+    /* Checklist */
+    .checklist {
+      background: #f0faf0;
+      border: 1px solid #c5e0c5;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .checklist h3 {
+      color: #5C8A5A;
+      margin: 0 0 14px;
+    }
+    .checklist ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .checklist li {
+      padding: 8px 0;
+      font-size: 15px;
+      border-bottom: 1px solid #d5ebd5;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: "\2713";
+      color: #5C8A5A;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .closing-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 36px 0 0;
+      text-align: center;
+    }
+    .closing-box p {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .closing-box .small {
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #999;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <img class="hero-img" src="/images/blog/anger-spectrum-training/iceberg-anger.webp" alt="Iceberg showing visible anger above water and hidden underground anger below">
+
+    <h1>The Quiet Kid Who's Actually Furious</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Most parents only worry about loud anger. The quiet kind does more damage.</p>
+      <ul>
+        <li>Kids trained on the anger spectrum stop faking apathy, stop tanking their own performance, and start telling you what's actually wrong.</li>
+        <li>The move: learn the 4 signs of underground anger, then use the WARM method to pull your child toward verbal expression one step at a time.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>4 underground anger warning signs &middot; 8-level anger spectrum &middot; 4 word-for-word WARM scripts &middot; age-by-age guide (under 6 to 17)</div>
+    </div>
+    <p class="subtitle">Why the child who "never gets angry" might be the one who needs anger training most.</p>
+
+    <p class="opener">
+      Picture this: your kid bombs another test. Smart kid. Capable kid. You've tried tutoring, rewards, consequences. Each fix works for about a week, then fades. You assume it's motivation, or focus, or maybe they just don't care enough.
+    </p>
+    <p class="opener">
+      <strong>What if it's anger?</strong>
+    </p>
+    <p>
+      Not the screaming, door-slamming kind. The invisible kind. The kind that looks like laziness, forgetfulness, or apathy -- but is actually rage that went so far underground your child might not even recognize it themselves.
+    </p>
+    <p>
+      This is what researchers call the anger spectrum. And the bottom of it -- the place where anger becomes completely silent -- is the hardest level to spot and the hardest to fix.
+    </p>
+
+    <div class="insight-box">
+      Anger always finds an exit. Through words or through behavior.
+      <span class="small">Block the words and the behavior gets worse.</span>
+    </div>
+
+    <h2>The Anger Spectrum: 8 Levels Every Parent Should Know</h2>
+    <p>Kids express anger along a predictable continuum. Most parents only worry about the loud, visible levels. But the real danger zone? It's at the bottom.</p>
+
+    <div class="spectrum-container">
+      <h2>From Healthy to Hidden</h2>
+      <p class="spectrum-note">The goal: move your child UP, one level at a time, before adulthood.</p>
+
+      <div class="level green-level">
+        <div class="level-num">1</div>
+        <div class="level-text">
+          <h4>Calm problem-solving</h4>
+          <p>Names the problem, stays composed, works toward a fix. The adult goal.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level green-level">
+        <div class="level-num">2</div>
+        <div class="level-text">
+          <h4>Calm but disengaged</h4>
+          <p>Composed and respectful, but doesn't try to fix things. Still healthy -- they're managing themselves.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level yellow-level">
+        <div class="level-num">3</div>
+        <div class="level-text">
+          <h4>Loud but on-topic</h4>
+          <p>Emotional, maybe yelling, but focused on the actual issue. "This homework is SO stupid!"</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level yellow-level">
+        <div class="level-num">4</div>
+        <div class="level-text">
+          <h4>Loud and scattered</h4>
+          <p>Anger spills into unrelated complaints. Mad about a game, starts griping about dinner.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level red-level">
+        <div class="level-num">5</div>
+        <div class="level-text">
+          <h4>Personal attacks</h4>
+          <p>"You're the worst parent ever!" Anger targets people instead of problems.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level red-level">
+        <div class="level-num">6</div>
+        <div class="level-text">
+          <h4>Destructive outbursts</h4>
+          <p>Slamming doors, throwing objects. Anger jumps from words to actions.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level red-level">
+        <div class="level-num">7</div>
+        <div class="level-text">
+          <h4>Physical aggression</h4>
+          <p>Hitting, kicking, biting -- directed at people or themselves.</p>
+        </div>
+      </div>
+      <div class="arrow">&uarr;</div>
+      <div class="level red-level" style="border: 2px solid #C0392B;">
+        <div class="level-num">8</div>
+        <div class="level-text">
+          <h4>Underground anger</h4>
+          <p>Invisible. Shows up as chronic forgetting, underperformance, subtle sabotage. The child may not even know they're angry.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Spotting Underground Anger</h2>
+    <p>This is the pattern that fools parents into thinking anger isn't the issue:</p>
+
+    <div class="warning-card">
+      <h3>Red Flags That Anger Has Gone Underground</h3>
+      <ul>
+        <li><strong>Capable but underperforming.</strong> A smart kid who consistently bombs tests or "forgets" assignments. You know they can do better.</li>
+        <li><strong>Fixes don't stick.</strong> Tutoring helps for a week, then stops. New rewards motivate briefly, then fade. Each solution works just long enough to give you hope.</li>
+        <li><strong>They lose more than you do.</strong> The child hurts themselves most -- even though the underlying drive is frustration with someone else.</li>
+        <li><strong>Common in early teens.</strong> Some underground behavior between 13-15 is normal boundary-testing. It becomes a problem when it causes failing grades, damaged friendships, or risky choices.</li>
+      </ul>
+    </div>
+
+    <p>
+      Here's the counterintuitive part: a kid who's screaming at you is actually in a <em>better</em> position than a kid whose anger has gone underground. Because when anger is verbal, you can see exactly where they are on the spectrum. You can coach them. When it's invisible, there's nothing to work with.
+    </p>
+
+    <h2>Why Shutting Down Angry Words Backfires</h2>
+
+    <p>When your kid says something heated, every instinct says <em>stop that right now</em>. But here's the logic:</p>
+
+    <table class="compare-table">
+      <tr>
+        <th>If You Shut Down the Words</th>
+        <th>If You Let Them Talk</th>
+      </tr>
+      <tr>
+        <td>The anger doesn't vanish -- it goes invisible</td>
+        <td>You can see exactly where they are on the spectrum</td>
+      </tr>
+      <tr>
+        <td>Shows up as passive-aggressive behavior, underperformance</td>
+        <td>You have something concrete to coach</td>
+      </tr>
+      <tr>
+        <td>Gets harder to address over time</td>
+        <td>Each conversation is a chance to move them one level up</td>
+      </tr>
+      <tr>
+        <td>Child may not even realize they're angry</td>
+        <td>Child develops vocabulary for their emotions</td>
+      </tr>
+    </table>
+
+    <p><strong>The exception:</strong> if angry language becomes a habitual tool to control or hurt others -- not tied to a specific frustration -- that's a behavior issue. Address it directly, with warmth but firmness.</p>
+
+    <img class="inline-img" src="/images/blog/anger-spectrum-training/warm-steps.webp" alt="Four stepping stones labeled W, A, R, M in a peaceful garden path">
+
+    <h2>After an Outburst: The WARM Method</h2>
+    <p>Wait until the storm passes. Once your child is calm and receptive, walk through these four steps.</p>
+
+    <div class="warm-grid">
+      <div class="warm-card">
+        <div class="letter">W</div>
+        <h4>Welcome their feelings</h4>
+        <p>Make it clear that being angry is okay. What matters is how they show it.</p>
+        <div class="script">"It's totally fine to feel angry. Everyone does. I'd always rather you tell me you're upset than hold it inside."</div>
+      </div>
+      <div class="warm-card">
+        <div class="letter">A</div>
+        <h4>Acknowledge what went right</h4>
+        <p>Even in a rough outburst, name what they did well. It gives them a floor to stand on.</p>
+        <div class="script">"You came and told me what was bothering you -- that took guts. And you didn't hit your sister. Those are real wins."</div>
+      </div>
+      <div class="warm-card">
+        <div class="letter">R</div>
+        <h4>Request one upgrade</h4>
+        <p>Just one specific improvement. Phrased as what TO do, not what NOT to do. One level up.</p>
+        <div class="script">"Next time you're that frustrated, could you try telling me the problem without the name-calling? Something like 'I'm really mad because...'"</div>
+      </div>
+      <div class="warm-card">
+        <div class="letter">M</div>
+        <h4>Model it yourself</h4>
+        <p>When you're frustrated, let them see you handling it well -- out loud, on purpose.</p>
+        <div class="script">"I'm feeling really annoyed right now. I need a minute to cool down, and then let's figure this out together."</div>
+      </div>
+    </div>
+
+    <img class="inline-img" src="/images/blog/anger-spectrum-training/parent-child-talk.webp" alt="Parent and child having a calm conversation on a couch">
+
+    <h2>What's Normal at Each Age</h2>
+    <p>Anger skills develop on a timeline. Knowing what to expect keeps you from overreacting -- or under-reacting.</p>
+
+    <table class="age-table">
+      <tr><th>Age</th><th>What to Expect</th><th>Your Focus</th></tr>
+      <tr>
+        <td><strong>Under 6</strong></td>
+        <td>Basic anger -- words or actions. Little self-regulation yet.</td>
+        <td>Keep the connection strong. Let angry words come out. Redirect destructive actions calmly.</td>
+      </tr>
+      <tr>
+        <td><strong>6 - 12</strong></td>
+        <td>Growing ability to manage anger, but most expressions still immature.</td>
+        <td>Use WARM after outbursts. Model healthy anger. Celebrate each step up the spectrum.</td>
+      </tr>
+      <tr>
+        <td><strong>13 - 15</strong></td>
+        <td>Some underground behavior is normal -- eye-rolling, foot-dragging, selective memory.</td>
+        <td>Distinguish harmless boundary-testing from genuinely harmful patterns. Stay steady.</td>
+      </tr>
+      <tr>
+        <td><strong>16 - 17</strong></td>
+        <td>Should be moving past underground patterns toward open expression.</td>
+        <td>Aim for mature anger skills by 17. If still stuck in destructive or underground patterns, consider professional support.</td>
+      </tr>
+    </table>
+
+    <h2>The Long Game</h2>
+
+    <div class="checklist">
+      <h3>Daily Practices That Build Anger Skills Over Time</h3>
+      <ul>
+        <li><strong>Catch it early.</strong> Learn your child's pre-anger signals -- jaw clench, sudden silence, tone shift. Intervene before the explosion.</li>
+        <li><strong>Build connection in calm times.</strong> Even 10 minutes of daily one-on-one time builds the reservoir that prevents meltdowns.</li>
+        <li><strong>Model repair.</strong> When you lose your temper, circle back: "I got too loud earlier. I'm sorry. Here's what I wish I'd done instead."</li>
+        <li><strong>Know your triggers.</strong> Tired, hungry, stressed? You're more likely to shut down anger instead of coaching through it.</li>
+        <li><strong>Track progress over months, not days.</strong> A child who was throwing things six months ago and is now yelling but keeping hands down? That's real growth. Name it.</li>
+      </ul>
+    </div>
+
+    <div class="closing-box">
+      <p>One level at a time. That's all you're asking for.</p>
+      <span class="small">Your coaching + your example = their self-regulation.</span>
+    </div>
+
+    <footer>
+      <p>Kung Fu Parenting &middot; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>
