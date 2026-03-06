@@ -2040,6 +2040,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: treat the first misbehavior as the moment that matters most — not the tenth.',
     tldrInside: '5-factor comparison table, 4 traps: \'Just This Once,\' \'It\'s Not That Bad,\' and more, 3-step See-Show-Stop sequence, 3 real-scenario scripts',
   },
+  {
+    slug: 'long-game-roadmap',
+    title: 'The Shoelace Effect',
+    subtitle: 'Why the slowest teaching moments create the strongest adults',
+    description: 'Twenty minutes on a shoelace looks like nothing. But every skill you deliberately teach compounds into a life that works. The long game of building independence — stage by stage.',
+    image: '/images/cards/long-game-roadmap.webp',
+    imageAlt: 'A child\'s sneaker transforming into an adult work boot, symbolizing how small teaching moments build lasting independence',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'independence',
+    book: 'The Elephant in the Playroom',
+    bookSlug: 'elephant-in-the-playroom-brodey',
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    tldrAnchor: 'Month to month it looks like nothing. Decade to decade the transformation is staggering.',
+    tldrPayoff: 'Kids raised on deliberate skill handoffs navigate grocery stores alone, attend their own IEP meetings, and build adult lives no early assessment predicted — because someone refused to stop teaching.',
+    tldrMove: 'The shift: measure in years, not days — and protect your own capacity so you can sustain decades of deliberate teaching.',
+    tldrInside: '3-level zoom table on progress, REACH method with 5 concrete moves, 4-stage timeline from early years to young adult, 4-habit sustainability table',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
