@@ -2120,6 +2120,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop counting minutes — start sorting screen time into creative (building, coding, making) vs consumptive (scrolling, autoplay, watching).',
     tldrInside: '5-row creative vs consumptive comparison, 3 parenting approaches to tech, EASE transition method, weekly pulse check',
   },
+  {
+    slug: 'the-refill-system',
+    title: 'Refill Before You Run Dry',
+    subtitle: 'Parenthood quietly drains your social life — this system puts it back on autopilot',
+    description: 'Your parenting runs on a tank most people never check. The 3-layer Refill System keeps your adult relationships alive automatically so you show up as the parent your kids deserve.',
+    image: '/images/cards/the-refill-system.webp',
+    imageAlt: 'A watering can pouring colorful dots into a potted plant, symbolizing small consistent inputs that keep relationships alive',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'relationships',
+    book: 'Time to Parent',
+    bookSlug: 'time-to-parent-morgenstern',
+    datePublished: '2026-03-07',
+    dateModified: '2026-03-07',
+    tldrAnchor: 'Parenthood quietly kills your social life unless you build a system.',
+    tldrPayoff: 'Parents who maintain real friendships and a strong partnership bring more creative energy and emotional steadiness to their kids — every day, not just on good days.',
+    tldrMove: 'The move: stop planning hangouts from scratch — anchor recurring rituals to fixed days so the decision is already made.',
+    tldrInside: 'weekly anchored ritual examples, the first-minute rule for reconnecting, 5 partner moves that cost almost no time, before/after grid for social time quality',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
