@@ -2220,6 +2220,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: hire for warmth and kid-friendliness first — technical skill can wait until Phase 2.',
     tldrInside: 'Phase 1 hire/ignore checklist, 3-phase teacher progression, transition signals for when to switch, 3-question phase diagnostic',
   },
+  {
+    slug: 'home-play-design',
+    title: 'Home Play Design',
+    subtitle: 'The 3-step layout that turns every room into independent play',
+    description: 'Your kid drags toys to the kitchen because they need to see you, not the playroom. Here\'s how to redesign your home around that instinct and unlock hours of independent play.',
+    image: '/images/cards/home-play-design.webp',
+    imageAlt: 'Still life of a crayon tray, toy basket, and open shelf on a wooden surface — simple play materials ready for independent use',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Play & Creativity',
+    book: 'But I\'m Bored',
+    bookSlug: 'but-im-bored-assa',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'That Lego trail from the playroom to the kitchen is a map, not a mess.',
+    tldrPayoff: 'Kids with play materials nearby engage deeper, build longer, and actually use what they have — instead of wandering room to room looking for you.',
+    tldrMove: 'The shift: stop organizing toys by category in one room — distribute them by proximity to where you actually are.',
+    tldrInside: 'Room-by-room setup guide, 6-row comparison table, 3-step portable play kit, Board game storage rule',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

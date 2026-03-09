@@ -4,141 +4,283 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="strategy-id" content="169">
-  <meta name="description" content="Your child keeps dragging toys to the kitchen floor. That's not mess — that's a blueprint. Here's how to design your home so kids actually play.">
-  <title>Your Kid Already Designed Their Play Space (You Just Keep Fighting It) | Kung Fu</title>
+  <title>Your Kid Is Already Telling You Where to Put the Toys | Kung Fu Parenting</title>
+  <meta name="description" content="Stop fighting the playroom. Your child drags toys to you for a reason — here's how to redesign your home around that instinct and unlock hours of independent play.">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #FAF6F0; color: #1A1A2E; line-height: 1.7;
-      padding: 0; margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
     }
-    .container { max-width: 800px; margin: 0 auto; padding: 24px 20px 60px; }
 
-    /* Hero */
-    .hero {
-      text-align: center; padding: 48px 24px 36px;
-      border-bottom: 3px solid #E8A598;
+    h1, h2, h3 { font-family: 'Lora', serif; }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.2;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6B6B6B;
       margin-bottom: 36px;
-    }
-    .hero h1 {
-      font-size: 30px; color: #1A1A2E; line-height: 1.25;
-      margin-bottom: 12px; font-weight: 700;
-    }
-    .hero .subtitle {
-      font-size: 17px; color: #5C8A5A; font-weight: 500;
-      max-width: 560px; margin: 0 auto;
+      line-height: 1.5;
     }
 
-    /* Prose */
-    p { margin-bottom: 18px; font-size: 16px; }
     h2 {
-      color: #5C8A5A; font-size: 22px; margin: 40px 0 16px;
-      font-weight: 700; line-height: 1.3;
-    }
-    h3 { color: #5C8A5A; font-size: 18px; margin-bottom: 10px; font-weight: 600; }
-
-    /* Images */
-    .blog-img {
-      width: 100%; border-radius: 12px; margin: 24px 0;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-    .img-caption {
-      text-align: center; font-size: 13px; color: #7A8B8B;
-      margin: -16px 0 28px; font-style: italic;
+      font-size: 26px;
+      color: #5C8A5A;
+      margin: 48px 0 18px;
     }
 
-    /* Callout */
-    .callout {
-      background: #5C8A5A; color: white; padding: 24px 28px;
-      border-radius: 12px; margin: 32px 0; text-align: center;
+    h3 {
+      font-size: 20px;
+      color: #1A1A2E;
+      margin-bottom: 12px;
     }
-    .callout p { color: white; font-size: 18px; font-weight: 600; margin: 0; line-height: 1.5; }
 
-    /* Comparison table */
-    .compare-table {
-      width: 100%; border-collapse: collapse; margin: 24px 0;
-      border-radius: 12px; overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
     }
-    .compare-table th {
-      padding: 14px 18px; font-size: 14px; text-transform: uppercase;
-      letter-spacing: 0.5px; font-weight: 700;
-    }
-    .compare-table th:first-child { background: #e8e0d8; color: #888; text-align: left; }
-    .compare-table th:nth-child(2) { background: #f0d6d0; color: #C0392B; text-align: center; }
-    .compare-table th:nth-child(3) { background: #d4e8d2; color: #5C8A5A; text-align: center; }
-    .compare-table td {
-      padding: 12px 18px; font-size: 14px; border-bottom: 1px solid #f0ebe5;
-      background: white;
-    }
-    .compare-table td:nth-child(2),
-    .compare-table td:nth-child(3) { text-align: center; }
-    .compare-table tr:last-child td { border-bottom: none; }
 
-    /* Step cards */
-    .step-card {
-      background: white; border-radius: 12px; padding: 24px;
-      margin-bottom: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      border-left: 4px solid #5C8A5A;
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 24px 0 36px;
     }
-    .step-card .step-num {
-      display: inline-block; background: #5C8A5A; color: white;
-      width: 28px; height: 28px; border-radius: 50%;
-      text-align: center; line-height: 28px; font-size: 14px;
-      font-weight: 700; margin-right: 10px;
-    }
-    .step-card h3 { display: inline; color: #1A1A2E; font-size: 16px; }
-    .step-card p { margin: 10px 0 0; font-size: 14px; color: #444; }
 
-    /* Room grid */
-    .room-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
       margin: 24px 0;
     }
-    @media (max-width: 600px) { .room-grid { grid-template-columns: 1fr; } }
-    .room-card {
-      background: white; border-radius: 12px; padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .room-card h3 { font-size: 15px; color: #5C8A5A; margin-bottom: 8px; }
-    .room-card ul { padding-left: 18px; margin: 0; }
-    .room-card li { font-size: 13px; margin-bottom: 6px; color: #444; }
 
-    /* Tip box */
-    .tip {
-      background: #FFF9E6; border: 1px solid #F0C674; padding: 16px 20px;
-      border-radius: 10px; margin: 20px 0; font-size: 14px;
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+      text-align: center;
     }
-    .tip strong { color: #B8860B; }
 
-    /* Do/don't grid */
-    .do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
-    @media (max-width: 600px) { .do-dont { grid-template-columns: 1fr; } }
-    .do-col, .dont-col {
-      background: white; border-radius: 12px; padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    .callout p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+      color: white;
     }
-    .do-col { border-top: 4px solid #5C8A5A; }
-    .dont-col { border-top: 4px solid #C0392B; }
-    .do-col h3 { color: #5C8A5A; }
-    .dont-col h3 { color: #C0392B; }
-    .do-col li, .dont-col li { font-size: 14px; margin-bottom: 8px; }
 
-    /* Closing */
+    .anchor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      .anchor-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+
+    .anchor-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .anchor-card .room-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .anchor-card h4 {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+
+    .anchor-card ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .anchor-card li {
+      padding: 4px 0;
+      border-bottom: 1px solid #F0EDE8;
+    }
+
+    .anchor-card li:last-child { border-bottom: none; }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .compare-table th {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      padding: 14px 18px;
+      text-align: left;
+    }
+
+    .compare-table th:first-child {
+      background: #E8A598;
+      color: #1A1A2E;
+    }
+
+    .compare-table th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+
+    .compare-table td {
+      padding: 12px 18px;
+      font-size: 14px;
+      background: white;
+      border-bottom: 1px solid #F0EDE8;
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: #5C8A5A;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .step-body h4 {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: #1A1A2E;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #444;
+    }
+
+    .tip-strip {
+      background: #FFF9E6;
+      border-left: 4px solid #E8A598;
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    .tip-strip strong { color: #B8860B; }
+
+    .rotate-box {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .rotate-box h3 { color: #5C8A5A; margin-bottom: 14px; }
+
+    .rotate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 600px) { .rotate-grid { grid-template-columns: 1fr; } }
+
+    .rotate-item {
+      padding: 12px 16px;
+      background: #FAF6F0;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .rotate-item strong {
+      display: block;
+      font-size: 13px;
+      color: #5C8A5A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
     .closing {
       background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
-      color: white; padding: 28px; border-radius: 12px;
-      margin: 36px 0; text-align: center;
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 40px 0;
+      text-align: center;
     }
-    .closing p { color: white; font-size: 17px; font-weight: 500; margin: 0; }
+
+    .closing p {
+      font-family: 'Lora', serif;
+      font-size: 19px;
+      line-height: 1.6;
+      margin: 0;
+      color: white;
+    }
 
     footer {
-      margin-top: 48px; padding-top: 20px;
-      border-top: 1px solid #e0d8d0; font-size: 12px;
-      color: #999; text-align: center;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0DDD8;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
     }
-
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
     .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
     .tldr-box ul { list-style: none; padding: 0; margin: 0; }
@@ -147,220 +289,183 @@
     .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
     .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
     .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
-
-    @media print {
-      body { padding: 12px; }
-      .step-card, .room-card, .do-col, .dont-col { box-shadow: none; border: 1px solid #ccc; }
-    }
   </style>
 </head>
 <body>
-  <div class="container">
 
-    <div class="hero">
-      <h1>Your Kid Already Designed Their Play Space.<br>You Just Keep Fighting It.</h1>
-      <p class="subtitle">Why toys on the kitchen floor is actually a genius move -- and how to work with it.</p>
-    </div>
+  <h1>Your Kid Is Already Telling You Where to Put the Toys</h1>
+  <p class="subtitle">That trail of Legos from the playroom to the kitchen? Not chaos. A map.</p>
 
-    <div class="tldr-box">
-      <p class="tldr-anchor">Where you put the toys matters more than which toys you buy.</p>
-      <ul>
-        <li>Kids who can look up and see you flip into explore mode -- longer play sessions, fewer meltdowns, and real independent stretches while you get things done.</li>
-        <li>The move: map where you already are, set up a mini station at each spot, and add a seat so you can stay close without hovering.</li>
-      </ul>
-      <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>typical vs. proximity setup comparison &middot; room-by-room quick wins (4 rooms) &middot; puzzle box replacement hack &middot; 5-minute evening reset routine</div>
-    </div>
-
-    <p>You're making dinner. Your three-year-old has dragged a pile of dinosaurs, three crayons, and half a puzzle to the kitchen floor. Again. The playroom -- the one you organized last weekend -- sits empty two rooms away.</p>
-
-    <p>This is not a discipline problem. This is not your child being difficult. This is your child solving an engineering problem you haven't solved yet: <strong>how to play and stay near you at the same time.</strong></p>
-
-    <img src="/images/blog/home-play-design/kitchen-play.webp" alt="A child playing with toys on the kitchen floor while a parent cooks nearby" class="blog-img">
-    <p class="img-caption">The kitchen floor: officially the most popular playroom in every house.</p>
-
-    <p>Young children need to feel close to their caregiver to settle into play. That's not clinginess. That's developmental wiring. A child who can look up and see you is a child whose nervous system says "safe -- go explore." A child in a basement playroom, no matter how perfectly organized, has to choose between <em>you</em> and <em>their toys</em>.</p>
-
-    <p>They'll pick you every time.</p>
-
-    <div class="callout">
-      <p>The single biggest unlock for independent play:<br>bring the toys to where you already are.</p>
-    </div>
-
-    <h2>The Proximity Problem (And Why Your Playroom Sits Empty)</h2>
-
-    <p>Here's what typically happens. You set up a beautiful play space in a spare bedroom or basement. You organize it. You photograph it. Your kid uses it for eleven minutes, then appears at your side asking for a snack.</p>
-
-    <p>The issue isn't the toys. The issue is the distance.</p>
-
-    <img src="/images/blog/home-play-design/proximity-diagram.webp" alt="A diagram showing the gap between where toys are stored and where parents spend their time" class="blog-img">
-    <p class="img-caption">The gap between where you put the toys and where you spend your day is the gap your child keeps closing.</p>
-
-    <table class="compare-table">
-      <tr>
-        <th></th>
-        <th>Typical Setup</th>
-        <th>Proximity Setup</th>
-      </tr>
-      <tr>
-        <td>Toys live in...</td>
-        <td>Dedicated playroom</td>
-        <td>Near your anchor spots</td>
-      </tr>
-      <tr>
-        <td>Child can see you</td>
-        <td>No</td>
-        <td>Yes, always</td>
-      </tr>
-      <tr>
-        <td>Play duration</td>
-        <td>5-15 minutes</td>
-        <td>30-60+ minutes</td>
-      </tr>
-      <tr>
-        <td>Child interruptions</td>
-        <td>Constant</td>
-        <td>Occasional, brief</td>
-      </tr>
-      <tr>
-        <td>Looks like Pinterest</td>
-        <td>Absolutely</td>
-        <td>Probably not</td>
-      </tr>
-      <tr>
-        <td>Actually gets used</td>
-        <td>Rarely</td>
-        <td>Daily</td>
-      </tr>
-    </table>
-
-    <h2>The 3-Step Fix</h2>
-
-    <div class="step-card">
-      <span class="step-num">1</span>
-      <h3>Find Your Anchor Spots</h3>
-      <p>Think through a normal day. Where are you for the longest stretches? Cooking in the kitchen? Working at the dining table? Folding laundry? Feeding the baby in the nursery? Write down the top three places you park yourself. <strong>These are where play materials should live.</strong></p>
-    </div>
-
-    <div class="step-card">
-      <span class="step-num">2</span>
-      <h3>Set Up a Mini Station at Each Spot</h3>
-      <p>Not a whole playroom -- just a basket, a low shelf, or a cleared corner. Stock it with 6-10 items your child is currently into. Make sure everything is visible, reachable, and doesn't need your hands to open. Add a small work surface if possible (a coffee table, a cleared counter section, a lap desk).</p>
-    </div>
-
-    <div class="step-card">
-      <span class="step-num">3</span>
-      <h3>Add a Seat for Yourself</h3>
-      <p>Put a comfortable adult chair or cushion in the play zone. Your presence is the activating ingredient. Not hovering. Not directing. Just <em>being there</em> while you do your own thing. That proximity is what flips the "safe to explore" switch.</p>
-    </div>
-
-    <img src="/images/blog/home-play-design/curated-shelf.webp" alt="A small, curated play shelf with neatly arranged toys next to a comfortable armchair" class="blog-img">
-    <p class="img-caption">A curated shelf with a few well-chosen items beats a room stuffed with everything they own.</p>
-
-    <h2>Room-by-Room Quick Wins</h2>
-
-    <div class="room-grid">
-      <div class="room-card">
-        <h3>Kitchen</h3>
-        <ul>
-          <li>Small table or cleared counter section with favorite figures</li>
-          <li>Magnetic pieces on the fridge</li>
-          <li>Crayons and paper in a reachable drawer</li>
-        </ul>
-      </div>
-      <div class="room-card">
-        <h3>Living Room</h3>
-        <ul>
-          <li>A basket or low shelf with current-interest items</li>
-          <li>Open floor for building and sprawling</li>
-          <li>Your core play materials relocated here if the playroom is far</li>
-        </ul>
-      </div>
-      <div class="room-card">
-        <h3>Laundry / Utility</h3>
-        <ul>
-          <li>A few rotating toys on a bottom shelf</li>
-          <li>Old magazines + child-safe scissors</li>
-          <li>A basket of washcloths to fold or socks to pair</li>
-        </ul>
-      </div>
-      <div class="room-card">
-        <h3>Playroom (If You Have One)</h3>
-        <ul>
-          <li>Declutter ruthlessly -- less stuff = more play</li>
-          <li>Everything visible, everything reachable</li>
-          <li>An adult seat so you can anchor nearby</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>The Setup That Works vs. The Setup That Doesn't</h2>
-
-    <div class="do-dont">
-      <div class="do-col">
-        <h3>This Works</h3>
-        <ul>
-          <li>Open, low storage at child height</li>
-          <li>Items displayed individually, not piled</li>
-          <li>Clear, lidless containers (see what's inside)</li>
-          <li>Materials matched to current obsessions</li>
-          <li>Curated and tidy -- edited, not stuffed</li>
-          <li>Work surface reachable from all sides</li>
-        </ul>
-      </div>
-      <div class="dont-col">
-        <h3>This Doesn't</h3>
-        <ul>
-          <li>Tall furniture with deep bins kids can't see into</li>
-          <li>Games stacked on games in towers</li>
-          <li>Closed cabinets that bury toys out of sight</li>
-          <li>Pinterest-perfect rooms nobody uses</li>
-          <li>Storage that requires adult hands to operate</li>
-          <li>Too much stuff -- abundance kills engagement</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tip">
-      <strong>Portable Play Station:</strong> Need to move to the kitchen, the nursery, or the bathroom? Grab one tray or bin of materials and bring it with you. Think travel kit -- your child's activity follows wherever your task takes you.
-    </div>
-
-    <div class="tip">
-      <strong>Ditch the Puzzle Boxes:</strong> Slide each puzzle into a zip bag with a photo of the completed image (snap one with your phone). They stack flat, kids see what's inside, and you never deal with a collapsing tower of cardboard again.
-    </div>
-
-    <h2>Follow the Mess</h2>
-
-    <p>This is the move most parents miss. If your child keeps dragging the same toys to the same spot, <strong>they're telling you where the play space should be.</strong> Stop fighting it. Move the storage there. Your child just did the design work for you.</p>
-
-    <p>Other things that keep it working:</p>
-
-    <div class="step-card">
-      <span class="step-num">R</span>
-      <h3>Rotate, Don't Accumulate</h3>
-      <p>Swap a few items every couple of weeks. A toy that's been in a closet for three weeks is more exciting than a brand-new purchase. Fresh-to-them beats new-from-the-store.</p>
-    </div>
-
-    <div class="step-card">
-      <span class="step-num">5</span>
-      <h3>Five-Minute Evening Reset</h3>
-      <p>Return items to their spots each night. Takes minutes when there aren't too many things. Gives your child a visual fresh start every morning.</p>
-    </div>
-
-    <div class="step-card">
-      <span class="step-num">G</span>
-      <h3>Grow the Space With Them</h3>
-      <p>A two-year-old needs sensory materials and stacking toys. A five-year-old needs building kits, art supplies, and pretend-play props. Recalibrate as they evolve.</p>
-    </div>
-
-    <div class="closing">
-      <p>A home where kids play has marker on the table and blocks on the floor. That's not mess. That's a child doing exactly what they're supposed to be doing -- and a parent who made it easy for them.</p>
-    </div>
-
-    <footer>
-      <p>Kung Fu Parenting &middot; Strategy #169 &middot; Designing Your Home for Play</p>
-    </footer>
-
+  <div class="tldr-box">
+    <p class="tldr-anchor">That Lego trail from the playroom to the kitchen is a map, not a mess.</p>
+    <ul>
+      <li>Kids with play materials nearby engage deeper, build longer, and actually use what they have — instead of wandering room to room looking for you.</li>
+      <li>The shift: stop organizing toys by category in one room — distribute them by proximity to where you actually are.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>Room-by-room setup guide &middot; 6-row comparison table &middot; 3-step portable play kit &middot; Board game storage rule</div>
   </div>
+
+  <img class="hero-img" src="/images/blog/home-play-design/before-after.webp" alt="Before and after: toys isolated in a distant playroom vs. small play stations near where parents actually spend time">
+
+  <p>You set up the playroom perfectly. Bins labeled. Shelves organized. Art supplies in cute containers. And your kid? Grabs one truck, carries it to the kitchen floor, and parks it next to your feet while you chop onions.</p>
+
+  <p>You carry the truck back. They follow it. You redirect them to the playroom. They wander back with a crayon.</p>
+
+  <p>This is not a discipline problem. This is your child being extremely smart about something developmental researchers have known for decades: <strong>kids can't settle into play unless they can see you.</strong></p>
+
+  <div class="callout">
+    <p>Young children choose proximity to you over access to their toys. Every single time. Stop fighting it. Design around it.</p>
+  </div>
+
+  <h2>The "Follow the Drag" Rule</h2>
+
+  <p>Here's the fastest diagnostic for where play stations should go in your house: look at where your kid keeps dragging things. That's the answer. They've already done the environmental design work for you.</p>
+
+  <p>The research backs them up. Environmental psychology and Reggio Emilia educators treat the physical space as an active participant in learning — not just a backdrop. And Montessori practitioners have confirmed it for over a century: when materials are <strong>visible, reachable, and limited in quantity</strong>, children engage deeper and longer.</p>
+
+  <p>Translation: where you put the toys matters more than which toys you buy.</p>
+
+  <h2>Step 1: Find Your Anchor Spots</h2>
+
+  <p>Walk through a typical day. Where are you for the longest stretches? Cooking, working from home, folding laundry, feeding the baby? Those spots — not the Pinterest playroom — are where play materials belong.</p>
+
+  <div class="anchor-grid">
+    <div class="anchor-card">
+      <div class="room-icon">&#127859;</div>
+      <h4>Kitchen</h4>
+      <ul>
+        <li>Small table or cleared counter section</li>
+        <li>Magnetic tiles on the fridge</li>
+        <li>Crayons + paper in a reachable drawer</li>
+      </ul>
+    </div>
+    <div class="anchor-card">
+      <div class="room-icon">&#128218;</div>
+      <h4>Living Room</h4>
+      <ul>
+        <li>Low basket with current-interest toys</li>
+        <li>Open floor space for building</li>
+        <li>Core materials relocated from playroom</li>
+      </ul>
+    </div>
+    <div class="anchor-card">
+      <div class="room-icon">&#129526;</div>
+      <h4>Laundry Area</h4>
+      <ul>
+        <li>Bottom shelf with rotating toys</li>
+        <li>Old magazines + kid scissors</li>
+        <li>Washcloth basket for folding practice</li>
+      </ul>
+    </div>
+  </div>
+
+  <img class="inline-img" src="/images/blog/home-play-design/kitchen-play.webp" alt="A parent cooking while a child plays happily at a small nearby table">
+
+  <h2>Step 2: Set Up for Independence</h2>
+
+  <p>The goal is zero adult assistance required. Your child sees something interesting, grabs it, uses it, puts it back. No lid to pry off. No shelf too high to reach. No asking for help.</p>
+
+  <table class="compare-table">
+    <tr>
+      <th>Kills independence</th>
+      <th>Builds independence</th>
+    </tr>
+    <tr>
+      <td>Tall shelves with deep fabric bins</td>
+      <td>Low, open shelving at child height</td>
+    </tr>
+    <tr>
+      <td>Toys stacked in piles</td>
+      <td>Items displayed individually with space between</td>
+    </tr>
+    <tr>
+      <td>Closed cabinets hiding everything</td>
+      <td>Clear, lidless containers — see what's inside</td>
+    </tr>
+    <tr>
+      <td>30+ options crammed together</td>
+      <td>8-12 curated items matching current interests</td>
+    </tr>
+    <tr>
+      <td>Table pushed against a wall</td>
+      <td>Table reachable from all sides</td>
+    </tr>
+    <tr>
+      <td>No adult seating nearby</td>
+      <td>Comfortable chair so you can be present without hovering</td>
+    </tr>
+  </table>
+
+  <img class="inline-img" src="/images/blog/home-play-design/shelf-setup.webp" alt="A well-organized low shelf showing toys displayed individually — visible, reachable, and limited">
+
+  <div class="tip-strip">
+    <strong>Puzzle hack:</strong> Ditch the bulky boxes. Slide each puzzle into a zip bag with a phone photo of the completed image tucked inside. They stack flat, kids see what's inside, and you never deal with a tower of collapsing boxes again.
+  </div>
+
+  <div class="tip-strip">
+    <strong>Board games are different.</strong> They need another person — that's family time, not independent play. Store them separately (hall closet, living room shelf) and stock the play area with open-ended materials kids can use solo.
+  </div>
+
+  <h2>Step 3: The Portable Play Kit</h2>
+
+  <p>You won't stay in one spot all day. When you move to the kitchen, bathroom, or nursery — bring one tray or bin of materials with you. Think of it as a travel kit. Your child's activity follows wherever your task goes.</p>
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Pick a tray or small bin</h4>
+        <p>Something with handles that a child can carry too. A baking sheet works great.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Load it with 3-4 items</h4>
+        <p>Crayons + paper. A few figurines. Play-doh + one tool. Don't overdo it.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Set it down where you land</h4>
+        <p>Kitchen floor, bathroom doorway, next to the changing table. Your child follows you; the tray follows you. Done.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Keep It Working</h2>
+
+  <div class="rotate-box">
+    <h3>The maintenance is minimal</h3>
+    <div class="rotate-grid">
+      <div class="rotate-item">
+        <strong>Rotate, don't accumulate</strong>
+        Every few weeks, swap items out and in. Toys-they-forgot-about beat new purchases.
+      </div>
+      <div class="rotate-item">
+        <strong>Follow the mess</strong>
+        If they keep dragging the same toys to the same spot, move the storage there. They're telling you.
+      </div>
+      <div class="rotate-item">
+        <strong>Five-minute evening reset</strong>
+        Return items to their spots. Takes minutes when there aren't too many. Gives your kid a fresh start tomorrow.
+      </div>
+      <div class="rotate-item">
+        <strong>Recalibrate as they grow</strong>
+        A 2-year-old needs sensory + stacking. A 5-year-old needs building kits, art supplies, pretend-play props. The space evolves.
+      </div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <p>A home where kids play has marker on the table and blocks on the floor. That's not mess — that's a child doing exactly what they're supposed to be doing. A mind at work.</p>
+  </div>
+
+  <footer>
+    <p>Strategy 169 &middot; Kung Fu Parenting &middot; kungfu.family</p>
+  </footer>
+
 </body>
 </html>
