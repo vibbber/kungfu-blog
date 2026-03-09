@@ -2140,6 +2140,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: run a three-layer system — daily micro-moments, weekly anchored rituals, seasonal big resets — so your relationships stay alive without willpower.',
     tldrInside: '4 scenes your kids are silently studying, three-layer friendship system, 5 partner moves under 10 min/day, the first-minute rule',
   },
+  {
+    slug: 'recognizing-purposeful-activity',
+    title: 'Let Them Fail Forward',
+    subtitle: 'Montessori\'s case against rescuing kids from productive struggle',
+    description: 'A teacher lifts a toddler to the basin he was dragging a chair toward. His face shifts from joy to passivity in one second. Montessori documented the exact moment well-meaning help kills independence.',
+    image: '/images/cards/recognizing-purposeful-activity.webp',
+    imageAlt: 'Small shoes on the floor with toddler hands reaching toward them independently',
+    imageWidth: 679,
+    imageHeight: 1024,
+    imageAspect: 0.663,
+    topic: 'Independence',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'Efficiency is the enemy of development.',
+    tldrPayoff: 'Kids who struggle through their own conquests — shoes, chairs, spilled juice — build the confidence loop that feeds independence across every domain.',
+    tldrMove: 'The move: swap \'Here, let me do it\' for \'You\'re working on that. I\'ll wait.\'',
+    tldrInside: 'Montessori\'s chair-and-basin story, 4-row what-you-see vs. what\'s-happening table, green/amber decision rule, 4 ready-to-use script cards',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
