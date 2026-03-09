@@ -2160,6 +2160,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: swap \'Here, let me do it\' for \'You\'re working on that. I\'ll wait.\'',
     tldrInside: 'Montessori\'s chair-and-basin story, 4-row what-you-see vs. what\'s-happening table, green/amber decision rule, 4 ready-to-use script cards',
   },
+  {
+    slug: 'thought-trap-toolkit',
+    title: 'The SPOT Method',
+    subtitle: 'Three moves that teach any kid to outsmart their own negative thinking',
+    description: 'Five thought traps hijack your child\'s confidence on repeat. The SPOT method gives kids a dead-simple way to catch bad thoughts mid-flight and rewrite them with evidence.',
+    image: '/images/cards/thought-trap-toolkit.webp',
+    imageAlt: 'Stepping stones ascending from scribbled confusion to clarity, representing the SPOT method',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Mindset',
+    book: 'Change Your Brain, Change Your Grades',
+    bookSlug: 'change-your-brain-grades-amen',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'Thinking is a skill — your kid can learn to catch bad thoughts mid-flight.',
+    tldrPayoff: 'Kids trained this way handle a missed quiz question without melting down, try hard things without predicting disaster, and own mistakes without shame spirals.',
+    tldrMove: 'The move: pair a 3-step framework with five named traps so your child has language for what their brain is doing.',
+    tldrInside: '3-step SPOT method, 5 trap cards with scripts, trap notebook activity, 3 age-specific starting points',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
