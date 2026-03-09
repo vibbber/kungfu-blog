@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="strategy-id" content="1134">
-  <meta name="description" content="Your parenting runs on a tank most people never check. Here's the system that keeps your adult relationships alive — automatically — so you show up as the parent your kids deserve.">
-  <title>Your Parenting Has a Fuel Gauge (And It's Probably on Empty)</title>
+  <meta name="description" content="Your social life isn't competing with your kids for time. It's the single most powerful thing you're teaching them about how to be a happy adult.">
+  <title>Your Social Life Is the Best Parenting You're Doing</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -25,7 +25,6 @@
       padding: 40px 24px 60px;
     }
 
-    /* Header */
     .blog-header {
       text-align: center;
       margin-bottom: 48px;
@@ -60,7 +59,6 @@
       margin: 0 auto;
     }
 
-    /* Body text */
     .blog-container p {
       font-size: 16px;
       margin-bottom: 20px;
@@ -75,14 +73,6 @@
       line-height: 1.3;
     }
 
-    .blog-container h3 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1A1A2E;
-      margin: 32px 0 12px;
-    }
-
-    /* Images */
     .blog-image {
       width: 100%;
       border-radius: 12px;
@@ -99,7 +89,66 @@
       font-style: italic;
     }
 
-    /* Callout box */
+    /* TL;DR box */
+    .tldr-box {
+      background: white;
+      border: 1px solid #E0DDD6;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 28px 0 36px;
+    }
+
+    .tldr-anchor {
+      font-size: 14px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .tldr-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tldr-box ul li {
+      font-size: 14px;
+      color: #333;
+      padding: 3px 0 3px 20px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .tldr-box ul li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0;
+      color: #BDBDB5;
+      font-weight: 600;
+    }
+
+    .tldr-divider {
+      border: none;
+      border-top: 1px solid #EEEAE4;
+      margin: 10px 0;
+    }
+
+    .tldr-inside {
+      font-size: 12px;
+      color: #aaa;
+      padding-left: 20px;
+    }
+
+    .tldr-inside strong {
+      color: #999;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* Callout */
     .callout {
       background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
       color: white;
@@ -120,53 +169,49 @@
       margin-bottom: 8px;
     }
 
-    /* The "dashboard" diagnostic box */
-    .diagnostic {
-      background: white;
-      border: 2px solid #E8A598;
-      border-radius: 12px;
-      padding: 28px;
-      margin: 36px 0;
-    }
-
-    .diagnostic h3 {
-      color: #E8A598;
-      margin: 0 0 16px;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .diagnostic-grid {
+    /* What-they-learn grid */
+    .learn-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 14px;
+      margin: 28px 0;
     }
 
     @media (max-width: 500px) {
-      .diagnostic-grid { grid-template-columns: 1fr; }
+      .learn-grid { grid-template-columns: 1fr; }
     }
 
-    .diagnostic-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      background: #FFF5F3;
-      border-radius: 8px;
-      font-size: 14px;
+    .learn-card {
+      background: white;
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-top: 3px solid #E8A598;
     }
 
-    .diagnostic-item .icon {
-      font-size: 18px;
-      flex-shrink: 0;
+    .learn-card .scene {
+      font-size: 13px;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .learn-card .lesson {
+      font-size: 15px;
+      color: #1A1A2E;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .learn-card .detail {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
     }
 
     /* Layer cards */
-    .layer-section {
-      margin: 36px 0;
-    }
-
     .layer-card {
       background: white;
       border-radius: 12px;
@@ -193,8 +238,16 @@
     .layer-card.seasonal .layer-label { color: #D4A853; }
 
     .layer-card h3 {
-      margin: 0 0 12px;
       font-size: 18px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin: 0 0 12px;
+    }
+
+    .layer-card p.layer-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
     }
 
     .layer-card ul {
@@ -208,50 +261,36 @@
       line-height: 1.5;
     }
 
-    /* Before/After comparison */
-    .comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 32px 0;
-    }
-
-    @media (max-width: 500px) {
-      .comparison { grid-template-columns: 1fr; }
-    }
-
-    .comparison-col {
-      background: white;
+    /* Partner moves table */
+    .partner-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
       border-radius: 12px;
-      padding: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
 
-    .comparison-col.before {
-      border: 2px solid #E8A598;
-    }
-
-    .comparison-col.after {
-      border: 2px solid #5C8A5A;
-    }
-
-    .comparison-col h4 {
+    .partner-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 16px;
       font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      text-align: left;
     }
 
-    .comparison-col.before h4 { color: #E8A598; }
-    .comparison-col.after h4 { color: #5C8A5A; }
-
-    .comparison-col ul {
-      padding-left: 18px;
+    .partner-table tbody td {
+      padding: 12px 16px;
       font-size: 14px;
-      color: #555;
+      border-bottom: 1px solid #f0f0f0;
+      background: white;
     }
 
-    .comparison-col ul li {
-      margin-bottom: 8px;
+    .partner-table tbody tr:last-child td {
+      border-bottom: none;
     }
 
     /* Script card */
@@ -278,39 +317,7 @@
       line-height: 1.6;
     }
 
-    /* Quick-start table */
-    .quick-start {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 28px 0;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .quick-start thead th {
-      background: #5C8A5A;
-      color: white;
-      padding: 14px 16px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-align: left;
-    }
-
-    .quick-start tbody td {
-      padding: 12px 16px;
-      font-size: 14px;
-      border-bottom: 1px solid #f0f0f0;
-      background: white;
-    }
-
-    .quick-start tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Highlight box */
+    /* Highlight */
     .highlight {
       background: #FFF8F0;
       border: 1px solid #D4A853;
@@ -324,17 +331,7 @@
       color: #B8860B;
     }
 
-    /* Footer */
-    .blog-footer {
-      margin-top: 56px;
-      padding-top: 24px;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-    }
-
-    /* Emphasis text */
+    /* Pull quote */
     .pull-quote {
       font-size: 20px;
       font-weight: 600;
@@ -346,110 +343,134 @@
       border-bottom: 2px solid #E8A598;
       line-height: 1.4;
     }
-    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
-    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
-    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
-    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
-    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
-    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
-    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
-    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    .blog-footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
   </style>
 </head>
 <body>
   <div class="blog-container">
 
     <header class="blog-header">
-      <span class="tag">Relationships + Parenting</span>
-      <h1>Your Parenting Has a Fuel Gauge (And It's Probably on Empty)</h1>
-      <p class="subtitle">The system that keeps your adult relationships alive on autopilot — so you never run dry.</p>
+      <span class="tag">Relationships + Modeling</span>
+      <h1>Your Social Life Is the Best Parenting You're Doing</h1>
+      <p class="subtitle">Every time your kids see you keep a friendship alive, they're learning a skill no class can teach.</p>
     </header>
 
     <div class="tldr-box">
-      <p class="tldr-anchor">Parenthood quietly kills your social life unless you build a system.</p>
+      <p class="tldr-anchor">Your kids learn friendship by watching yours — not from anything you tell them.</p>
       <ul>
-        <li>Parents who maintain real friendships and a strong partnership bring more creative energy and emotional steadiness to their kids — every day, not just on good days.</li>
-        <li>The move: stop planning hangouts from scratch — anchor recurring rituals to fixed days so the decision is already made.</li>
+        <li>Kids who grow up seeing real adult friendships build stronger ones themselves — they greet people warmly, keep commitments, reconnect after distance, and handle social complexity without coaching.</li>
+        <li>The move: run a three-layer system — daily micro-moments, weekly anchored rituals, seasonal big resets — so your relationships stay alive without willpower.</li>
       </ul>
       <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>weekly anchored ritual examples &middot; the first-minute rule for reconnecting &middot; 5 partner moves that cost almost no time &middot; before/after grid for social time quality</div>
+      <div class="tldr-inside"><strong>Inside: </strong>4 scenes your kids are silently studying &middot; three-layer friendship system &middot; 5 partner moves under 10 min/day &middot; the first-minute rule</div>
     </div>
 
-    <p>Quick thought experiment. When was the last time you had an actual conversation with a friend? Not a group text. Not a "we should get together" that evaporated. A real talk, about something that wasn't logistics or kids.</p>
+    <p>Picture this. You're standing at the front door, and a friend you haven't seen in a while shows up. You light up. You hug them. You laugh about something before they're even inside.</p>
 
-    <p>If you have to think hard, your tank is low.</p>
+    <p>Your six-year-old is watching from the hallway. And they're learning more about friendship in that ten-second exchange than they will in a month of "use your words" coaching.</p>
 
-    <img src="/images/blog/the-refill-system/tank-gauge.webp" alt="A fuel gauge showing relationship tank levels from Exhausted to Fulfilled, with icons for partner, friends, family, and self" class="blog-image">
-    <p class="image-caption">Most parents are running somewhere between E and the first tick mark — and they don't even notice.</p>
+    <img src="/images/blog/the-refill-system/child-watching.webp" alt="A child peeking around a corner, watching their parent greet a friend warmly at the kitchen table" class="blog-image">
+    <p class="image-caption">They notice everything. Especially the things you don't think you're teaching.</p>
 
-    <p>Here's what the research says, and it's stark: the longest-running study on human wellbeing — over seven decades of data — found that the quality of your close relationships is the single strongest predictor of health and happiness. Stronger than income. Stronger than career success. Stronger than genetics.</p>
+    <p>Here's what makes this interesting. The longest-running study on human wellbeing — over seventy years of data — found that the quality of your close relationships is the single strongest predictor of health and happiness. Stronger than income. Stronger than career achievement. Stronger than genetics.</p>
 
-    <p>And here's the parenting angle: when your own emotional reserves are full, you have more patience, more warmth, more creative energy for your kids. Your adult relationships aren't stealing time from your children. They're the thing that makes you a better parent.</p>
+    <p>And children who grow up watching their parents maintain strong friendships? They build better ones themselves. Not because someone told them how. Because they saw it done, over and over, in a thousand small moments they barely remember.</p>
 
-    <p>So why does every parent's social life slowly collapse after kids arrive?</p>
+    <h2>Four Scenes Your Kids Are Silently Studying</h2>
 
-    <p>Because every hangout requires planning. And planning requires energy you already spent on sleep schedules, school forms, and convincing a four-year-old to wear shoes.</p>
+    <p>You think you're just living your life. They think it's a masterclass.</p>
 
-    <p>The fix isn't "try harder." The fix is a system.</p>
-
-    <h2>The Refill System: Three Layers That Run Themselves</h2>
-
-    <p>Think of your relationships in three layers. Each one operates at a different frequency, requires different energy, and fills a different part of your tank. You need all three.</p>
-
-    <img src="/images/blog/the-refill-system/three-layers.webp" alt="Three stacked layers: Micro-Moments (daily) at the base, Anchored Rituals (weekly) in the middle, Big Resets (seasonal) at the top, with arrows showing how daily moments build the foundation" class="blog-image">
-    <p class="image-caption">Daily micro-moments form the foundation. Without them, the bigger stuff never happens.</p>
-
-    <div class="layer-section">
-
-      <div class="layer-card daily">
-        <p class="layer-label">Layer 1 — Daily</p>
-        <h3>Micro-Moments</h3>
-        <p style="font-size:14px; color:#555; margin-bottom:12px;">These cost almost nothing. They take 2-5 minutes. They keep you feeling like a person who has a life outside of parenting.</p>
-        <ul>
-          <li>Walk with a neighbor while the kids ride bikes ahead</li>
-          <li>Voice-memo a friend during your commute instead of scrolling</li>
-          <li>Five minutes of real talk with another parent at morning drop-off</li>
-          <li>A group chat that's actually active — share one small thing daily</li>
-          <li>A two-minute check-in with your partner that isn't about the kids</li>
-        </ul>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <p class="scene">You answer the phone with warmth</p>
+        <p class="lesson">They learn: how to greet people</p>
+        <p class="detail">Your tone when a friend calls teaches them what genuine interest sounds like.</p>
       </div>
-
-      <div class="layer-card weekly">
-        <p class="layer-label">Layer 2 — Weekly</p>
-        <h3>Anchored Rituals</h3>
-        <p style="font-size:14px; color:#555; margin-bottom:12px;">The key word is "anchored." Same person, same day, same time. Remove the decision. Remove the planning. Just show up.</p>
-        <ul>
-          <li>A standing walk or workout with one friend — every Tuesday, no negotiation</li>
-          <li>Park hangs after school — whoever shows up, shows up</li>
-          <li>Recurring potluck dinner — each family brings one dish, no host pressure</li>
-          <li>Monthly call with an old friend, scheduled like a doctor's appointment (because you will cancel it otherwise)</li>
-        </ul>
+      <div class="learn-card">
+        <p class="scene">You show up on Tuesday even when tired</p>
+        <p class="lesson">They learn: commitments matter</p>
+        <p class="detail">When you keep a standing hangout, they see that relationships take priority sometimes.</p>
       </div>
-
-      <div class="layer-card seasonal">
-        <p class="layer-label">Layer 3 — Seasonal</p>
-        <h3>Big Resets</h3>
-        <p style="font-size:14px; color:#555; margin-bottom:12px;">These are the moments that remind you who you are outside of "Mom" or "Dad." Non-negotiable. Put them on the calendar in January.</p>
-        <ul>
-          <li>A night out with friends — no agenda, no guilt, no early exit</li>
-          <li>Weekend trip with another family (kids entertain each other, adults actually talk)</li>
-          <li>An annual tradition that's yours — a concert, a hike, a reunion dinner</li>
-          <li>Visiting relatives you rarely see, even if it's just overnight</li>
-        </ul>
+      <div class="learn-card">
+        <p class="scene">You come home happy after a night out</p>
+        <p class="lesson">They learn: adults can be joyful</p>
+        <p class="detail">Kids notice when you walk in the door energized. It tells them adult life has good parts too.</p>
       </div>
-
+      <div class="learn-card">
+        <p class="scene">You call someone you haven't seen in months</p>
+        <p class="lesson">They learn: friendships survive distance</p>
+        <p class="detail">Picking up the phone and reconnecting shows them relationships don't have to be perfect to be real.</p>
+      </div>
     </div>
 
-    <h2>Your Partner: From Roommates Back to Teammates</h2>
+    <img src="/images/blog/the-refill-system/kids-learning.webp" alt="Diagram showing what parents think they're doing versus what their kids are actually learning from watching" class="blog-image">
+    <p class="image-caption">What you think you're doing vs. what they're actually absorbing.</p>
 
-    <p>Parenthood has a way of turning partners into co-managers running parallel shifts. You divide and conquer — which is efficient, and also lonely. These moves pull you back onto the same side.</p>
+    <p>This reframes the whole conversation. Your social life isn't stealing time from your kids. It's one of the most important things they're watching you do.</p>
 
-    <table class="quick-start">
+    <p>So the question isn't whether to maintain your adult relationships. It's how to make it actually work with the schedule you have.</p>
+
+    <h2>The Three-Layer System</h2>
+
+    <p>Most parents try to maintain friendships through sporadic big plans that keep getting cancelled. The fix is a system that operates at three frequencies — each one low-effort, each one filling a different need.</p>
+
+    <div class="layer-card daily">
+      <p class="layer-label">Layer 1 — Daily</p>
+      <h3>Micro-Moments</h3>
+      <p class="layer-desc">Two to five minutes each. They cost almost nothing and keep you feeling like a person who has a life beyond bedtime routines.</p>
+      <ul>
+        <li>Walk with a neighbor while the kids ride bikes ahead</li>
+        <li>Voice-memo a friend during your commute instead of scrolling</li>
+        <li>Five minutes of real talk with another parent at drop-off</li>
+        <li>A group chat that's actually active — one small thing daily</li>
+      </ul>
+    </div>
+
+    <div class="layer-card weekly">
+      <p class="layer-label">Layer 2 — Weekly</p>
+      <h3>Anchored Rituals</h3>
+      <p class="layer-desc">Same person, same day, same time. The power move here is removing the decision. No planning, no texting back and forth. Just show up.</p>
+      <ul>
+        <li>A standing walk or workout with one friend — every Tuesday, non-negotiable</li>
+        <li>Park hangs after school — whoever shows up, shows up</li>
+        <li>Recurring potluck dinner — each family brings one dish, no host pressure</li>
+        <li>Monthly call with an old friend, scheduled like a doctor's appointment</li>
+      </ul>
+    </div>
+
+    <div class="layer-card seasonal">
+      <p class="layer-label">Layer 3 — Seasonal</p>
+      <h3>Big Resets</h3>
+      <p class="layer-desc">These remind you who you are outside of "Mom" or "Dad." Put them on the calendar in January and protect them like you'd protect a pediatrician appointment.</p>
+      <ul>
+        <li>A night out with friends — no agenda, no guilt, no early exit</li>
+        <li>Weekend trip with another family (kids entertain each other, adults actually talk)</li>
+        <li>An annual tradition that's yours — a concert, a hike, a reunion dinner</li>
+        <li>Visiting relatives you rarely see, even if it's just overnight</li>
+      </ul>
+    </div>
+
+    <img src="/images/blog/the-refill-system/weekly-anchors.webp" alt="A weekly calendar with colorful anchor points showing daily micro-moments, weekly rituals, and seasonal resets" class="blog-image">
+    <p class="image-caption">A week with all three layers active. Small, scattered dots that add up to a life that feels full.</p>
+
+    <h2>Your Partner: The Relationship Your Kids Study Most</h2>
+
+    <p>No relationship gets more scrutiny from your kids than the one between their parents. They're watching how you greet each other, how you handle disagreements, whether you laugh together. These five moves take almost no extra time but change what they see.</p>
+
+    <table class="partner-table">
       <thead>
         <tr>
           <th>Move</th>
           <th>What It Looks Like</th>
-          <th>Time Cost</th>
+          <th>Time</th>
         </tr>
       </thead>
       <tbody>
@@ -460,17 +481,17 @@
         </tr>
         <tr>
           <td><strong>3-5 micro-moments daily</strong></td>
-          <td>Funny text, real hello at the door, two-minute call</td>
+          <td>A real hello at the door, a funny text, a two-minute call</td>
           <td>~10 min/day</td>
         </tr>
         <tr>
-          <td><strong>Shared chore = partner time</strong></td>
-          <td>Clean up kitchen together after bedtime — side-by-side talk</td>
+          <td><strong>Shared chore as partner time</strong></td>
+          <td>Clean up the kitchen together after bedtime — side-by-side talk</td>
           <td>Already happening</td>
         </tr>
         <tr>
           <td><strong>Hack existing gaps</strong></td>
-          <td>Lunch during school hours, same cafe for an hour, extend childcare by 90 min</td>
+          <td>Lunch during school hours, same cafe for an hour, extend childcare 90 min</td>
           <td>1-2 hrs/week</td>
         </tr>
         <tr>
@@ -482,77 +503,35 @@
     </table>
 
     <div class="script-card">
-      <p class="label">The First-Minute Rule</p>
-      <p class="script">When you first see your partner (or a friend), resist the urge to immediately unload frustrations or launch into logistics. Start with warmth — a real greeting, a question about their day. Those opening seconds set the tone for everything after.</p>
+      <p class="label">Try This Tonight: The First-Minute Rule</p>
+      <p class="script">When you first see your partner (or a friend), resist the urge to unload frustrations or launch into logistics. Start with warmth — a real greeting, a question about their day. Those opening seconds set the tone for everything after. Your kids are watching how you say hello.</p>
     </div>
 
-    <h2>Making Small Minutes Count for More</h2>
+    <h2>Making Small Minutes Count</h2>
 
-    <p>You don't need more time. You need more from the time you already have.</p>
-
-    <div class="comparison">
-      <div class="comparison-col before">
-        <h4>Drains your tank</h4>
-        <ul>
-          <li>Spending face-to-face time on logistics and scheduling</li>
-          <li>4-hour marathon hangouts where you're checking the clock by hour 2</li>
-          <li>Letting small annoyances pile up into resentment</li>
-          <li>Saying "we should get together" for the third month in a row</li>
-        </ul>
-      </div>
-      <div class="comparison-col after">
-        <h4>Fills your tank</h4>
-        <ul>
-          <li>Ban logistics from face time — handle scheduling over text</li>
-          <li>90-minute visits where you're fully present, leave while it's still good</li>
-          <li>Save relational energy for conversations that actually matter</li>
-          <li>Lock in a date right now, even if it's six weeks out</li>
-        </ul>
-      </div>
-    </div>
-
-    <img src="/images/blog/the-refill-system/weekly-dots.webp" alt="A weekly calendar showing colorful dots for partner connections (green), friend moments (coral), and family moments (gold), illustrating how small daily touch-points fill a week" class="blog-image">
-    <p class="image-caption">A week with the Refill System active. Small, scattered dots — but they add up fast.</p>
+    <p>You don't need more time. You need better use of the time you already have.</p>
 
     <div class="highlight">
-      <strong>Name your constraints upfront.</strong> Friends without kids (or with older kids) may not realize how tight your schedule is. A quick "I've got until 8pm" prevents awkwardness and lets everyone relax into the time you do have.
+      <strong>Ban logistics from face time.</strong> Handle scheduling, planning, and to-do lists over text. When you're actually with someone — partner or friend — talk about ideas, feelings, something funny, anything that isn't operational. Your kids see the difference between parents who talk AT each other and parents who talk WITH each other.
     </div>
 
-    <h2>The Quarterly Check-In</h2>
-
-    <p>Systems work when they have a feedback loop. Once every few months, run a 5-minute audit.</p>
-
-    <div class="diagnostic">
-      <h3>Your Relationship Dashboard</h3>
-      <div class="diagnostic-grid">
-        <div class="diagnostic-item">
-          <span class="icon">&#9829;</span>
-          <span>When did I last connect with my partner (beyond logistics)?</span>
-        </div>
-        <div class="diagnostic-item">
-          <span class="icon">&#9734;</span>
-          <span>Who have I been meaning to call for weeks?</span>
-        </div>
-        <div class="diagnostic-item">
-          <span class="icon">&#9992;</span>
-          <span>Do I have a Big Reset on the calendar?</span>
-        </div>
-        <div class="diagnostic-item">
-          <span class="icon">&#9758;</span>
-          <span>Am I saying "we should hang out" without locking dates?</span>
-        </div>
-      </div>
+    <div class="highlight">
+      <strong>Leave before you're depleted.</strong> A 90-minute visit where you're fully present beats a 4-hour marathon where you're checking the clock. It's okay to leave while it's still good. Your kids learn: quality over quantity.
     </div>
 
-    <p>One text to a neglected friend can restart a whole relationship. One "let's do Tuesday mornings" can turn an acquaintance into your anchor. The slow fade only wins if you don't notice it happening.</p>
+    <div class="highlight">
+      <strong>Name your constraints upfront.</strong> "I've got until 8pm" prevents awkwardness and lets everyone relax into the time you have. No guilt, no slow fade toward the door.
+    </div>
 
-    <div class="pull-quote">Your kids learn how to build friendships by watching you keep yours.</div>
+    <div class="pull-quote">Your kids don't need a perfect social life to model. They need a real one.</div>
 
-    <p>Let them see you making plans. Let them see you keeping commitments. Let them see you genuinely happy to walk through the door after an evening with friends. You're not just maintaining your sanity — you're teaching them what adult relationships look like.</p>
+    <p>Let them see you making plans. Let them see you keeping commitments. Let them see you genuinely happy to walk through the door after an evening with friends.</p>
+
+    <p>When they're fourteen and navigating the chaos of their own social world, they won't remember what you told them about friendship. They'll remember what they watched you do.</p>
 
     <div class="callout">
-      <strong>The Bottom Line</strong>
-      Parental guilt will tell you that any hour away from your kids is selfish. It's not. You're a better parent when you come back filled up. That's not a nice idea — it's seven decades of research. Build the system. Fill the tank. Watch everything else get easier.
+      <strong>The Real Win</strong>
+      Parental guilt says any hour away from your kids is selfish. The research says the opposite: you're a better parent when you come back filled up. And your kids? They're learning the single most important skill for lifelong happiness — how to build and keep real relationships. That's not a side effect of your social life. That's the whole point.
     </div>
 
     <footer class="blog-footer">
