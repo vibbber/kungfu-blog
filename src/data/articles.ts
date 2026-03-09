@@ -2240,6 +2240,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop organizing toys by category in one room — distribute them by proximity to where you actually are.',
     tldrInside: 'Room-by-room setup guide, 6-row comparison table, 3-step portable play kit, Board game storage rule',
   },
+  {
+    slug: 'the-giving-trap',
+    title: 'Stop Fixing, Start Waiting',
+    subtitle: 'How doing nothing became the most powerful thing in our house',
+    description: 'The hardest parenting move is doing nothing when every instinct says fix it. Why waiting for your child to reach builds kids who connect, ask, and thrive.',
+    image: '/images/cards/the-giving-trap.webp',
+    imageAlt: 'Split visual showing hand catching blocks versus a tower standing alone',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Connection',
+    book: 'The Anatomy of Dependence',
+    bookSlug: 'anatomy-of-dependence-doi',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'The hardest parenting move is doing nothing when every instinct says fix it.',
+    tldrPayoff: 'Kids raised this way know what they need, ask for it directly, and build real trust with the people around them — at school, with friends, everywhere.',
+    tldrMove: 'The shift: let them feel the want before you fill it. Their discomfort is where the growth happens.',
+    tldrInside: 'CHECK acronym for in-the-moment decisions, playground, after-school, and bedtime scripts, trap vs responsive comparison chart, trigger awareness guide',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
