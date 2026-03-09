@@ -2200,6 +2200,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: at every checkpoint, ask them to rate themselves first — then compare notes in 10 seconds flat.',
     tldrInside: 'Rating mismatch script, 4-level rating scale, 3-step daily rhythm, 5-step fading plan',
   },
+  {
+    slug: 'the-right-coach-at-the-right-time',
+    title: 'Wrong Teacher, Wrong Time',
+    subtitle: 'The hiring mistake that kills your kid\'s motivation',
+    description: 'Your child doesn\'t need the best teacher — they need the right one for where they are right now. The three-teacher sequence that top performers all followed.',
+    image: '/images/cards/the-right-coach-at-the-right-time.webp',
+    imageAlt: 'Split illustration showing a wilting plant with the wrong teacher versus a thriving plant with the right teacher',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'The best first teacher is rarely the most skilled one.',
+    tldrPayoff: 'Kids whose first teacher makes them love the activity practice willingly, beg to go back each week, and build the internal drive that carries them through harder phases later.',
+    tldrMove: 'The move: hire for warmth and kid-friendliness first — technical skill can wait until Phase 2.',
+    tldrInside: 'Phase 1 hire/ignore checklist, 3-phase teacher progression, transition signals for when to switch, 3-question phase diagnostic',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
