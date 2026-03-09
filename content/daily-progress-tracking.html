@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Scorecard Effect: How Kids Who Track Their Own Progress Start Coaching Themselves</title>
+  <meta name="description" content="A simple daily tracking card turns behavior goals into a game kids actually want to play. Morning goals, quick check-ins, end-of-day wins — here's exactly how to set it up.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background: #FAF6F0;
+      color: #1A1A2E;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      color: #1A1A2E;
+      font-size: 2.2rem;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+    .subtitle {
+      color: #5C8A5A;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      margin: 2.5rem 0 1rem;
+      font-size: 1.5rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem 0 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .inline-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    /* Scorecard table */
+    .scorecard-wrap {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      overflow-x: auto;
+    }
+    .scorecard-wrap h3 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+    }
+    .scorecard {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .scorecard th {
+      background: #5C8A5A;
+      color: white;
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .scorecard td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #eee;
+    }
+    .scorecard tr:nth-child(even) td {
+      background: #f9f7f3;
+    }
+    .scorecard .rating-great { color: #2e7d32; font-weight: 600; }
+    .scorecard .rating-good { color: #5C8A5A; font-weight: 500; }
+    .scorecard .rating-ok { color: #E8A598; font-weight: 500; }
+    .scorecard .goal-row td {
+      background: #e8f5e9;
+      font-weight: 600;
+      color: #2e7d32;
+      border-top: 2px solid #5C8A5A;
+    }
+
+    /* Step cards */
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #5C8A5A;
+    }
+    .step-card h3 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-card .step-num {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Script boxes */
+    .script-box {
+      background: #f0f7ef;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.92rem;
+    }
+    .script-box .label {
+      font-weight: 600;
+      color: #5C8A5A;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+    .script-box em {
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Rating scale visual */
+    .rating-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .rating-cell {
+      background: #FAF6F0;
+      border: 2px solid #e0d8cc;
+      border-radius: 8px;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+    }
+    .rating-cell.active {
+      border-color: #5C8A5A;
+      background: #f0f7ef;
+    }
+    .rating-cell strong {
+      display: block;
+      color: #5C8A5A;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+    .rating-cell span {
+      font-size: 0.78rem;
+      color: #666;
+    }
+
+    /* Before/after comparison */
+    .compare-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .compare-box {
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .compare-box.before {
+      background: #fef0ec;
+      border: 2px solid #E8A598;
+    }
+    .compare-box.after {
+      background: #f0f7ef;
+      border: 2px solid #5C8A5A;
+    }
+    .compare-box h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .compare-box.before h4 { color: #c0776b; }
+    .compare-box.after h4 { color: #5C8A5A; }
+    .compare-box ul {
+      margin-left: 1.25rem;
+      font-size: 0.88rem;
+    }
+    .compare-box li { margin-bottom: 0.3rem; }
+
+    /* Troubleshoot accordion style */
+    .troubleshoot {
+      background: white;
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .troubleshoot strong {
+      color: #E8A598;
+      font-size: 0.95rem;
+    }
+    .troubleshoot .fix {
+      color: #5C8A5A;
+      font-weight: 600;
+    }
+
+    .source {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e0d8cc;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      body { padding: 1.25rem 1rem; }
+      .rating-grid { grid-template-columns: 1fr 1fr; }
+      .compare-wrap { grid-template-columns: 1fr; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>The Scorecard Effect: How Kids Who Track Their Own Progress Start Coaching Themselves</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Self-rating is the part most parents skip — and the part that actually works.</p>
+    <ul>
+      <li>Kids who rate themselves learn what good behavior actually looks like from the inside. They stop waiting for adults to tell them how they did and start adjusting mid-day on their own.</li>
+      <li>The move: at every checkpoint, ask them to rate themselves first — then compare notes in 10 seconds flat.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>Rating mismatch script &middot; 4-level rating scale &middot; 3-step daily rhythm &middot; 5-step fading plan</div>
+  </div>
+  <p class="subtitle">A daily tracking card that turns behavior goals into a game worth winning</p>
+
+  <img class="hero-img" src="/images/blog/daily-progress-tracking/hero.webp" alt="Child proudly holding up their daily progress tracking card">
+
+  <p>Your kid already keeps score. Video game levels, basketball points, who got more screen time than their sibling. Kids are natural scorekeepers. The trick is pointing that instinct at something that actually matters.</p>
+
+  <p>Daily progress tracking takes a behavior your child is working on and turns it into a score they can see, rate themselves on, and beat tomorrow. It's not a reward chart collecting dust on the fridge. It's a live scorecard they carry all day, getting quick ratings at every checkpoint.</p>
+
+  <p>And here's what makes it stick: kids who rate themselves start noticing their own behavior <em>before</em> anyone says a word.</p>
+
+  <h2>What the scorecard actually looks like</h2>
+
+  <div class="scorecard-wrap">
+    <h3>Mia's Tuesday Scorecard</h3>
+    <table class="scorecard">
+      <tr>
+        <th>Time</th>
+        <th>Stays in seat</th>
+        <th>Asks for help</th>
+        <th>Starts work on time</th>
+      </tr>
+      <tr>
+        <td>Morning block</td>
+        <td class="rating-great">Great</td>
+        <td class="rating-good">Good</td>
+        <td class="rating-great">Great</td>
+      </tr>
+      <tr>
+        <td>Before lunch</td>
+        <td class="rating-good">Good</td>
+        <td class="rating-great">Great</td>
+        <td class="rating-ok">Okay</td>
+      </tr>
+      <tr>
+        <td>Afternoon block</td>
+        <td class="rating-great">Great</td>
+        <td class="rating-good">Good</td>
+        <td class="rating-good">Good</td>
+      </tr>
+      <tr>
+        <td>End of day</td>
+        <td class="rating-great">Great</td>
+        <td class="rating-great">Great</td>
+        <td class="rating-great">Great</td>
+      </tr>
+      <tr class="goal-row">
+        <td>Total</td>
+        <td>14 / 16</td>
+        <td>13 / 16</td>
+        <td>12 / 16</td>
+      </tr>
+    </table>
+  </div>
+
+  <p>Two or three target behaviors. Four check-in points through the day. A simple rating at each one. That's it. The magic isn't in the card design — it's in the rhythm it creates.</p>
+
+  <h2>The daily rhythm: three moves</h2>
+
+  <img class="inline-img" src="/images/blog/daily-progress-tracking/cycle.webp" alt="Daily progress cycle: morning goals, midday check-ins, evening celebration">
+
+  <div class="step-card">
+    <h3><span class="step-num">1</span> Morning check-in (2 minutes)</h3>
+    <p>Set the tone before anything else happens. Review the targets, state the goal, hand over the card.</p>
+    <div class="script-box">
+      <div class="label">What to say</div>
+      "Remember, today we're tracking staying in your seat, asking for help, and starting work on time. You need 10 points to hit your goal. You got 12 yesterday — you've got this."
+    </div>
+    <p style="font-size: 0.88rem; color: #666; margin-top: 0.5rem;">Two minutes. Not a lecture. Not a warning. Just: here's what we're playing for today.</p>
+  </div>
+
+  <div class="step-card">
+    <h3><span class="step-num">2</span> Quick ratings at every transition (30 seconds each)</h3>
+    <p>End of a class period, after lunch, before recess — any natural break is a checkpoint. The critical move: let them rate themselves first.</p>
+    <div class="script-box">
+      <div class="label">What to say</div>
+      "Rate yourself for 'staying in seat' this period."<br>
+      <em>Child says "Good."</em><br>
+      "I'd say Great — you didn't move once. Mark it down. Nice."
+    </div>
+    <p style="font-size: 0.88rem; color: #666; margin-top: 0.5rem;">Thirty seconds. Rate, mark, move on. This isn't therapy — it's a score update.</p>
+  </div>
+
+  <div class="step-card">
+    <h3><span class="step-num">3</span> End-of-day checkout (5 minutes)</h3>
+    <p>Tally the scores together. Did they hit the goal? Celebrate or recalibrate — never punish.</p>
+    <div class="script-box">
+      <div class="label">If they hit the goal</div>
+      "39 points! Goal was 30. That's a great day. You earned [reward]."
+    </div>
+    <div class="script-box">
+      <div class="label">If they missed</div>
+      "26 today, goal is 30. Still some solid moments — your 'asking for help' scores were great. What's one thing you'll do differently tomorrow?"
+    </div>
+  </div>
+
+  <h2>Pick your rating scale</h2>
+  <p>Whatever clicks with your kid. The only rule: keep it to 3-4 levels so ratings take seconds, not minutes.</p>
+
+  <div class="rating-grid">
+    <div class="rating-cell active">
+      <strong>Great</strong>
+      <span>Did it on their own</span>
+    </div>
+    <div class="rating-cell">
+      <strong>Good</strong>
+      <span>One reminder</span>
+    </div>
+    <div class="rating-cell">
+      <strong>Okay</strong>
+      <span>Several reminders</span>
+    </div>
+    <div class="rating-cell">
+      <strong>Try Again</strong>
+      <span>Didn't do it yet</span>
+    </div>
+  </div>
+
+  <p style="font-size: 0.88rem; color: #666;">Alternatives: thumbs up/sideways/down, stoplight colors, smiley faces, numbers 1-5. Match it to what your kid responds to.</p>
+
+  <h2>Why self-rating is the secret weapon</h2>
+
+  <img class="inline-img" src="/images/blog/daily-progress-tracking/review.webp" alt="Parent and child reviewing a progress scorecard together at the kitchen table">
+
+  <p>The first few days, your kid will rate themselves higher than you rate them. Every time. That's expected — and it's actually the point.</p>
+
+  <p>When there's a gap between their rating and yours, you get a 10-second coaching moment:</p>
+
+  <div class="script-box">
+    <div class="label">When ratings don't match</div>
+    "I gave you 'Okay' because you needed four reminders to put your materials away. What would need to be different for 'Good' next time?"
+  </div>
+
+  <p>Over time, their self-ratings start matching yours. That's the scorecard effect in action — they've internalized what the behavior actually looks like. They're not waiting for you to tell them anymore. They're coaching themselves.</p>
+
+  <h2>Before and after</h2>
+
+  <div class="compare-wrap">
+    <div class="compare-box before">
+      <h4>Without the scorecard</h4>
+      <ul>
+        <li>Feedback only when things go wrong</li>
+        <li>Kid doesn't know where they stand</li>
+        <li>End of day = surprise consequence</li>
+        <li>"Good job today" (too vague to learn from)</li>
+      </ul>
+    </div>
+    <div class="compare-box after">
+      <h4>With the scorecard</h4>
+      <ul>
+        <li>Feedback at every checkpoint</li>
+        <li>Kid tracks their own score all day</li>
+        <li>End of day = known result, no surprises</li>
+        <li>"12 out of 16 on staying seated" (specific and buildable)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>When things go sideways</h2>
+
+  <div class="troubleshoot">
+    <strong>They never hit the goal.</strong><br>
+    <span class="fix">Lower the bar.</span> If they're averaging 8 and the goal is 15, the gap is too wide. Set it at 10 and build from there. Winning early matters more than the number.
+  </div>
+
+  <div class="troubleshoot">
+    <strong>They always hit it without trying.</strong><br>
+    <span class="fix">Raise it.</span> Add a stretch goal with a bonus reward. The scorecard should feel like a real game, not a guaranteed trophy.
+  </div>
+
+  <div class="troubleshoot">
+    <strong>They argue about every rating.</strong><br>
+    <span class="fix">Get specific.</span> "I gave you Okay because you needed four reminders. What would Good look like next time?" Make it about the play, not the player.
+  </div>
+
+  <div class="troubleshoot">
+    <strong>The whole thing feels negative.</strong><br>
+    <span class="fix">Lead with the win.</span> "You followed directions perfectly — that's 4 points. Staying seated was trickier — that's a 2. Total is 6 out of 8. Solid progress."
+  </div>
+
+  <h2>The endgame: fading the card</h2>
+
+  <p>The scorecard is a scaffold, not a lifestyle. Once behaviors are consistent, start pulling it back:</p>
+
+  <div class="step-card" style="border-left-color: #E8A598;">
+    <p><strong>Check-ins from 4x/day to 2x, then 1x.</strong> They're holding the pattern on their own.</p>
+    <p><strong>Self-tracking only.</strong> They rate themselves. You spot-check occasionally.</p>
+    <p><strong>Daily goals become weekly.</strong> Track averages instead of daily totals.</p>
+    <p><strong>Verbal check-ins replace the card.</strong> "How do you think you did with staying on task today?"</p>
+    <p><strong>Celebrate the graduation.</strong> "You don't need the card anymore. You're tracking this yourself now." That moment? That's the win.</p>
+  </div>
+
+  <p>The goal was never the card. The goal was a kid who notices their own behavior, adjusts in real time, and doesn't need you hovering over every transition. The scorecard just gets them there faster.</p>
+
+  <div class="source">
+    Published by kungfu.family
+  </div>
+
+</body>
+</html>

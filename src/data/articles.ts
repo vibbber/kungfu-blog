@@ -2180,6 +2180,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair a 3-step framework with five named traps so your child has language for what their brain is doing.',
     tldrInside: '3-step SPOT method, 5 trap cards with scripts, trap notebook activity, 3 age-specific starting points',
   },
+  {
+    slug: 'daily-progress-tracking',
+    title: 'The Scorecard Effect',
+    subtitle: 'Self-tracking kids — they stop waiting for feedback and start adjusting on their own',
+    description: 'A simple daily tracking card turns behavior goals into a game kids want to play. Morning goals, quick check-ins, self-ratings — kids who score themselves start coaching themselves.',
+    image: '/images/cards/daily-progress-tracking.webp',
+    imageAlt: 'Child placing a gold star on a colorful progress tracking chart',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'ABA in Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-09',
+    dateModified: '2026-03-09',
+    tldrAnchor: 'Self-rating is the part most parents skip — and the part that actually works.',
+    tldrPayoff: 'Kids who rate themselves learn what good behavior actually looks like from the inside. They stop waiting for adults to tell them how they did and start adjusting mid-day on their own.',
+    tldrMove: 'The move: at every checkpoint, ask them to rate themselves first — then compare notes in 10 seconds flat.',
+    tldrInside: 'Rating mismatch script, 4-level rating scale, 3-step daily rhythm, 5-step fading plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
