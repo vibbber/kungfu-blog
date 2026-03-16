@@ -2300,6 +2300,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: celebrate risk-taking mistakes, normalize knowledge gaps, and build systems for careless ones -- instead of lumping them all together.',
     tldrInside: '3 color-coded mistake categories, quick-reference table with scripts, 5-step debrief sequence, helps vs. backfires checklist',
   },
+  {
+    slug: 'the-thankfulness-toolbox',
+    title: 'Gratitude Photo Hunt',
+    subtitle: 'Most gratitude exercises fail because they ask kids to talk — hand them a camera instead',
+    description: 'Four gratitude tools that actually work with kids — starting with a phone camera scavenger hunt that turns appreciation into an adventure.',
+    image: '/images/cards/the-thankfulness-toolbox.webp',
+    imageAlt: 'Child exploring outdoors with a camera, discovering something beautiful in an ordinary moment',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Mindfulness',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Most gratitude exercises fail because they ask kids to talk.',
+    tldrPayoff: 'Kids who do the photo hunt version spot beauty unprompted, handle bad days without spiraling, and build a visual record of what they actually value — week after week.',
+    tldrMove: 'The move: hand them a camera instead of a journal — 5 minutes, 3 photos, zero forced reflection.',
+    tldrInside: '5-minute photo hunt setup, before/after praise comparison table, 2 bedtime scripts, two-week test challenge',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
