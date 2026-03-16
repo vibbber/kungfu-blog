@@ -2420,6 +2420,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace visual drills with tactile tracing. Sandpaper gives instant feedback — the child feels every curve and straight line.',
     tldrInside: '2 mechanisms explained, 5-step tracing protocol, supply table under $15, 6-step build-tonight guide',
   },
+  {
+    slug: 'ten-dressing-frames',
+    title: 'Buttons Before Bows',
+    subtitle: 'One fastener at a time — how isolation builds real independence',
+    description: 'Stop narrating every zipper pull. Montessori\'s silent demonstration method teaches kids to dress themselves faster — by showing less and saying nothing.',
+    image: '/images/cards/ten-dressing-frames.webp',
+    imageAlt: 'Top-down progression of dressing frames from simple to complex with dotted arrow path',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Independence',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'One skill per frame. No mixing. That\'s the entire Montessori dressing method.',
+    tldrPayoff: 'Kids who master each fastener in isolation crush real clothing — coats, shoes, buckles — because every skill is already locked in before they combine them.',
+    tldrMove: 'The move: isolate each fastener type on its own frame, master it, then move to real clothes as a victory lap.',
+    tldrInside: '10 frames ranked by difficulty level, 6-step silent demo walkthrough, 4 at-home substitutes for Montessori frames, 4 deeper skills dressing frames secretly build',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
