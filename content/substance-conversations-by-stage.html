@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fire Drill That Keeps Kids Off Drugs | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6B7280;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin: 28px 0 12px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .caption {
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* Script card */
+    .script-card {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .script-card .label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+
+    .script-card p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #2D4A2D;
+      margin-bottom: 0;
+    }
+
+    /* Stat callout */
+    .stat-block {
+      background: #FEF3F0;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .stat-block .big-number {
+      font-family: 'Lora', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #E8A598;
+      line-height: 1;
+    }
+
+    .stat-block .stat-label {
+      font-size: 15px;
+      color: #6B7280;
+      margin-top: 8px;
+    }
+
+    /* Stage table */
+    .stage-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .stage-table th {
+      background: #5C8A5A;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    .stage-table td {
+      background: white;
+      padding: 14px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid #F0EDE8;
+      vertical-align: top;
+    }
+
+    .stage-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .stage-table .age-col {
+      font-weight: 600;
+      color: #5C8A5A;
+      white-space: nowrap;
+      width: 90px;
+    }
+
+    /* Before/After comparison */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .compare-card {
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .compare-card.dont {
+      background: #FEF3F0;
+      border: 2px solid #E8A598;
+    }
+
+    .compare-card.do {
+      background: #EDF7ED;
+      border: 2px solid #5C8A5A;
+    }
+
+    .compare-card .compare-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .compare-card.dont .compare-label { color: #C0392B; }
+    .compare-card.do .compare-label { color: #5C8A5A; }
+
+    .compare-card p {
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .compare-card p:last-child { margin-bottom: 0; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+
+    .highlight-box h3 {
+      color: rgba(255,255,255,0.9);
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .highlight-box p {
+      color: rgba(255,255,255,0.92);
+      font-size: 15px;
+    }
+
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    /* Myth buster grid */
+    .myth-grid {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .myth-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .myth-side {
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+
+    .myth-side.myth {
+      background: #FEF3F0;
+      font-style: italic;
+      color: #8B5E5E;
+    }
+
+    .myth-side.fact {
+      background: #EDF7ED;
+      color: #2D4A2D;
+      font-weight: 500;
+    }
+
+    /* Numbers grid */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .number-card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .number-card .pct {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #5C8A5A;
+    }
+
+    .number-card .substance {
+      font-size: 12px;
+      color: #6B7280;
+      margin-top: 4px;
+    }
+
+    /* Tip list */
+    .tip-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .tip-list li {
+      padding: 12px 0 12px 32px;
+      position: relative;
+      font-size: 15px;
+      border-bottom: 1px solid #F0EDE8;
+    }
+
+    .tip-list li:last-child { border-bottom: none; }
+
+    .tip-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 16px;
+      height: 16px;
+      background: #E8A598;
+      border-radius: 50%;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E5E0D8;
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+      .myth-row { grid-template-columns: 1fr; }
+      .blog-container { padding: 24px 16px 40px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <h1>The Fire Drill That Keeps Kids Off Drugs</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">The conversation that happens when nothing is wrong is the one that matters most.</p>
+      <ul>
+        <li>Kids who get steady, low-key check-ins trust their parents enough to call when the situation gets bad. They have exit plans, ready-made lines, and a relationship that survives the teen years intact.</li>
+        <li>The move: build trust through regular family meals and casual check-ins, then use that trust when stakes get high.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>dinner table advantage research &middot; 6-point long-term conversation checklist &middot; exit plan setup advice &middot; 2 pressure rehearsal scenarios</div>
+    </div>
+    <p class="subtitle">Practice saying no before it matters. Then layer in the right conversations at the right age.</p>
+
+    <p>Here's a move you can try at dinner tonight: turn to your 8-year-old and say, <em>"What would you do if a friend dared you to do something that scared you?"</em></p>
+
+    <p>Then let them answer. Out loud. In their own words.</p>
+
+    <p>That's it. That's the single most powerful thing prevention research has found for keeping kids away from substances. Not a lecture. Not a scary documentary. A rehearsal.</p>
+
+    <img src="/images/blog/substance-conversations-by-stage/pressure-rehearsal.webp" alt="Parent and child practicing a conversation at the kitchen table" class="blog-img">
+    <p class="caption">Rehearsing resistance in a safe setting builds the muscle memory kids need under real pressure.</p>
+
+    <h2>Why rehearsal works (and lectures don't)</h2>
+
+    <p>Think of it like a fire drill. Nobody expects to learn evacuation routes while the building is actually burning. You practice the response beforehand so it becomes automatic.</p>
+
+    <p>Same principle. When a 12-year-old is standing at a party and someone holds out a vape, the question isn't whether they <em>know</em> it's bad. It's whether they have a ready-made response they can reach for without thinking. Rehearsal builds that.</p>
+
+    <p>And here's the kicker: prevention research shows that practicing resistance to one type of pressure helps kids handle other types too. The skill is transferable.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card dont">
+        <div class="compare-label">Without rehearsal</div>
+        <p>Kid freezes. Doesn't want to look weird. Goes along.</p>
+        <p>Later thinks of ten things they could have said.</p>
+      </div>
+      <div class="compare-card do">
+        <div class="compare-label">With rehearsal</div>
+        <p>Kid has a line ready. Delivers it naturally.</p>
+        <p>Moves on. Doesn't even register as a big deal.</p>
+      </div>
+    </div>
+
+    <h3>Two scenarios to practice this week</h3>
+
+    <div class="script-card">
+      <div class="label">Scenario 1</div>
+      <p>"What if someone at school showed you a pill and said it was no big deal?"</p>
+    </div>
+    <p>The key idea to land: taking someone else's medicine — even once — can make you seriously sick. That scared feeling they get? That's their brain's alert system. They always have the right to listen to it.</p>
+
+    <div class="script-card">
+      <div class="label">Scenario 2</div>
+      <p>"What would you say if a friend dared you to try something you didn't want to try?"</p>
+    </div>
+    <p>Let them come up with their own words. "Nah, I'm good" works just as well as a five-paragraph explanation. The point is having <em>something</em> ready.</p>
+
+    <h2>The four stages of the conversation</h2>
+
+    <p>Rehearsal is one tool. But the broader play is a rolling conversation that deepens as your kid grows — not one awkward Talk, but dozens of small ones matched to what they can actually absorb.</p>
+
+    <img src="/images/blog/substance-conversations-by-stage/stages-journey.webp" alt="Four stages of substance conversations from early childhood to teens" class="blog-img">
+    <p class="caption">Each stage builds on the last. Start early, keep going.</p>
+
+    <table class="stage-table">
+      <tr>
+        <th>Age</th>
+        <th>Focus</th>
+        <th>Your move</th>
+      </tr>
+      <tr>
+        <td class="age-col">3 - 6</td>
+        <td>Medicine safety, healthy habits</td>
+        <td>"See the name on this bottle? Medicine is only for the person whose name is on the label."</td>
+      </tr>
+      <tr>
+        <td class="age-col">6 - 11</td>
+        <td>Media literacy, pressure rehearsal</td>
+        <td>"That beer commercial looks fun — what are they actually trying to sell you?"</td>
+      </tr>
+      <tr>
+        <td class="age-col">11 - 14</td>
+        <td>Real numbers, brain science</td>
+        <td>"Fewer than 1 in 10 kids your age drink. It's way less common than people think."</td>
+      </tr>
+      <tr>
+        <td class="age-col">14 - 18</td>
+        <td>Goals, identity, independent judgment</td>
+        <td>"Want to make varsity? Smoking tanks your endurance."</td>
+      </tr>
+    </table>
+
+    <h2>The "everyone does it" problem</h2>
+
+    <p>Middle schoolers dramatically overestimate how many of their peers use substances. When your kid says "everyone does it," they genuinely believe that. Which is why real numbers are so powerful.</p>
+
+    <p>Here's what 8th graders actually report using in the past month:</p>
+
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="pct">~2%</div>
+        <div class="substance">Cigarettes</div>
+      </div>
+      <div class="number-card">
+        <div class="pct">~6%</div>
+        <div class="substance">Vaping (nicotine)</div>
+      </div>
+      <div class="number-card">
+        <div class="pct">~8%</div>
+        <div class="substance">Alcohol</div>
+      </div>
+      <div class="number-card">
+        <div class="pct">~2%</div>
+        <div class="substance">Got drunk</div>
+      </div>
+      <div class="number-card">
+        <div class="pct">~6%</div>
+        <div class="substance">Marijuana</div>
+      </div>
+      <div class="number-card">
+        <div class="pct">~2%</div>
+        <div class="substance">Inhalants</div>
+      </div>
+    </div>
+
+    <p>Hand your kid these numbers. Now they have a concrete comeback: <em>"Actually, fewer than 1 in 10 kids my age drink."</em> That's not a lecture — that's ammunition.</p>
+
+    <div class="stat-block">
+      <div class="big-number">3 in 10</div>
+      <div class="stat-label">kids aged 12-14 report having close friends who use substances — and the earlier they start, the higher the lifetime risk of dependency</div>
+    </div>
+
+    <h2>When they ask: "Did you ever try drugs?"</h2>
+
+    <p>This one trips up a lot of parents. The instinct is to be honest, share your story, connect through vulnerability. But here's what actually happens:</p>
+
+    <div class="compare-grid">
+      <div class="compare-card dont">
+        <div class="compare-label">What you say</div>
+        <p>"Yeah, I tried it a few times in college. It wasn't a big deal."</p>
+      </div>
+      <div class="compare-card do">
+        <div class="compare-label">What they hear</div>
+        <p>"My parent did it and turned out fine. So it must be safe."</p>
+      </div>
+    </div>
+
+    <p>One parent shared their honest story. Their kid's response? <em>"If you did it and turned out fine, why can't I?"</em></p>
+
+    <p>Instead, steer toward the bigger picture: what you know now about risk, what you wish you'd understood at their age, and what the science says about developing brains.</p>
+
+    <h2>The teen years: connect it to what they care about</h2>
+
+    <p>By 14-18, scare tactics have zero traction. What works is tying substance effects to their personal goals.</p>
+
+    <div class="myth-grid">
+      <div class="myth-row">
+        <div class="myth-side myth">"It's harmless"</div>
+        <div class="myth-side fact">It alters brain structure during a critical development window</div>
+      </div>
+      <div class="myth-row">
+        <div class="myth-side myth">"It helps me relax"</div>
+        <div class="myth-side fact">Short-term, maybe. Long-term, it compounds anxiety</div>
+      </div>
+      <div class="myth-row">
+        <div class="myth-side myth">"Everyone does it"</div>
+        <div class="myth-side fact">The actual numbers say otherwise (see above)</div>
+      </div>
+    </div>
+
+    <p>And here's the move that works best with teens: feed the need for intensity. They crave adrenaline and novelty — that's biology, not rebellion. Channel it. Rock climbing. Performing on stage. Learning a new skill at speed. Setting audacious goals. Give their dopamine system something real to work with.</p>
+
+    <img src="/images/blog/substance-conversations-by-stage/family-dinner.webp" alt="Family sharing a meal together, relaxed and connected" class="blog-img">
+    <p class="caption">Regular family meals are consistently linked to lower rates of substance use. It's not the food — it's the connection.</p>
+
+    <div class="highlight-box">
+      <h3>The dinner table advantage</h3>
+      <p>Research consistently links frequent family meals to lower rates of adolescent substance use. Not because of some magic in the food — because regular, unhurried time around a table creates space to check in, read body language, and stay connected to what's actually going on in your child's life.</p>
+      <p>The conversations that happen when nothing is wrong create the trust that makes crisis conversations possible.</p>
+    </div>
+
+    <h2>Keep the thread alive</h2>
+
+    <p>The first conversation isn't the most important one. The twentieth is. Here's how to stay in the game long-term:</p>
+
+    <ul class="tip-list">
+      <li><strong>Start early and keep going.</strong> Each stage builds on the last. There's no single "right age" for the talk — because it's not one talk.</li>
+      <li><strong>Catch shifts early.</strong> Changes in sleep, mood, friend groups, or motivation are worth noticing. Don't interrogate — just open the door.</li>
+      <li><strong>Model repair.</strong> If you overreact, come back: "I got scared and came on too strong. Can we try that again?" This teaches them ruptures aren't permanent.</li>
+      <li><strong>Use their channels.</strong> Car rides, texts, handwritten notes — the format matters less than showing up consistently in whatever channel they'll actually use.</li>
+      <li><strong>Know your own state.</strong> When you're exhausted and running on anxiety, your reactions get bigger and less helpful. Notice before you start.</li>
+      <li><strong>Set up exit plans early.</strong> "You can always call me or text a code word if you need to leave a situation." This gives them an out without losing face.</li>
+    </ul>
+
+    <footer>
+      <p>Kung Fu Parenting &middot; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

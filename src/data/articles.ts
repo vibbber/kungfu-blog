@@ -2320,6 +2320,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: hand them a camera instead of a journal — 5 minutes, 3 photos, zero forced reflection.',
     tldrInside: '5-minute photo hunt setup, before/after praise comparison table, 2 bedtime scripts, two-week test challenge',
   },
+  {
+    slug: 'substance-conversations-by-stage',
+    title: 'Practice Saying No',
+    subtitle: 'One conversation trick that transfers to every type of peer pressure',
+    description: 'The fire drill approach to substance prevention: rehearse refusal lines at the dinner table so kids deliver them without flinching at the party. Stage-by-stage scripts from age 3 to 18.',
+    image: '/images/cards/substance-conversations-by-stage.webp',
+    imageAlt: 'Speech bubble with radiating signal circles representing practiced refusal skills',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Substance Prevention',
+    book: 'The Addiction Inoculation',
+    bookSlug: 'addiction-inoculation-lahey',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'The conversation that happens when nothing is wrong is the one that matters most.',
+    tldrPayoff: 'Kids who get steady, low-key check-ins trust their parents enough to call when the situation gets bad. They have exit plans, ready-made lines, and a relationship that survives the teen years intact.',
+    tldrMove: 'The move: build trust through regular family meals and casual check-ins, then use that trust when stakes get high.',
+    tldrInside: 'dinner table advantage research, 6-point long-term conversation checklist, exit plan setup advice, 2 pressure rehearsal scenarios',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
