@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your teen doesn't need more motivation to hit their goals. They need fewer escape routes. Here's the 5-step system that turns 'I want to' into 'I did it.'">
+  <title>Stop Letting Your Teen's Goals Die on the Vine | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin: 24px 0 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin: 24px 0 36px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .mid-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+    }
+
+    /* The hook callout */
+    .hook-box {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 32px 0;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .hook-box strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 8px;
+      font-family: 'Lora', serif;
+    }
+
+    /* Step cards */
+    .step {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      border-left: 5px solid #5C8A5A;
+    }
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .step-num {
+      background: #5C8A5A;
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .step-title {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A1A2E;
+    }
+    .step p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+    .step-script {
+      background: #F0F7EF;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #3D6B3A;
+      border-left: 3px solid #5C8A5A;
+      margin-top: 8px;
+    }
+    .step-script strong {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+      color: #5C8A5A;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .compare-table th {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 14px 18px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .compare-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compare-table tr:nth-child(even) {
+      background: #F8F4ED;
+    }
+    .col-before { color: #999; }
+    .col-after { color: #3D6B3A; font-weight: 500; }
+
+    /* Trap cards */
+    .trap {
+      background: #FFF5F2;
+      border-left: 4px solid #E8A598;
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 14px;
+    }
+    .trap h4 {
+      color: #C75B48;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .trap p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0;
+    }
+
+    /* Closing section */
+    .closing-box {
+      background: #F0F7EF;
+      border: 1px solid #C5DEC3;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 36px 0;
+    }
+    .closing-box h3 {
+      color: #5C8A5A;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    .closing-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .closing-box li {
+      font-size: 15px;
+      color: #444;
+      padding: 8px 0 8px 26px;
+      position: relative;
+    }
+    .closing-box li::before {
+      content: "\2713";
+      color: #5C8A5A;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0D9CF;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .blog-container { padding: 24px 16px; }
+      .hook-box { padding: 22px 20px; font-size: 16px; }
+      .hook-box strong { font-size: 19px; }
+      .step { padding: 18px 20px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <h1>Your Teen Doesn't Need More Motivation. They Need Fewer Escape Routes.</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Writing a goal down changes the odds. Closing the exit changes everything.</p>
+      <ul>
+        <li>Teens raised on this system set specific targets, recruit their own accountability partners, and treat setbacks as data instead of verdicts.</li>
+        <li>The move: five steps in order — shrink the goal to fit reality, make it concrete, commit fully, ride natural momentum, build a crew.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5 sequenced steps with parent examples &middot; 4-row before/after comparison &middot; 3 goal-killing traps &middot; 4-point checklist for building the habit long-term</div>
+    </div>
+    <p class="subtitle">The 5-step system that turns "I want to..." into "I did it" — and why the third step is the one most families skip.</p>
+
+    <img class="hero-img" src="/images/blog/goals-that-stick/img-1.webp" alt="Illustration of a teen choosing between the committed path and the maybe path">
+
+    <p>Your kid comes home fired up. "I'm going to learn guitar." "I'm going to make varsity." "I'm going to get straight A's this semester."</p>
+
+    <p>Two weeks later: the guitar is in the closet, the running shoes are under the bed, and the textbook hasn't moved from the kitchen counter.</p>
+
+    <p>You've seen this movie before. And the natural instinct is to push: "You said you were going to do this. What happened?"</p>
+
+    <p>But the problem was never motivation. Your teen had plenty of that on day one. The problem is what happened between "I want to" and "I'm doing this" — a gap where most goals quietly die.</p>
+
+    <div class="hook-box">
+      <strong>The commitment gap is where goals go to die.</strong>
+      Motivation gets your teen started. Structure keeps them going.<br>
+      These five steps are the structure.
+    </div>
+
+    <h2>The 5 Steps (In Order, For a Reason)</h2>
+
+    <img class="mid-img" src="/images/blog/goals-that-stick/img-2.webp" alt="Five stepping stones representing the goal-setting system">
+
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title">Reality-Check It</div>
+      </div>
+      <p>Before your teen commits, help them map out what the goal will actually cost. Time, energy, what they'll have to say no to. If the price is too steep, don't scrap the goal — shrink it.</p>
+      <p>A smaller goal they actually finish is worth ten ambitious ones they drop.</p>
+      <div class="step-script">
+        <strong>Try this</strong>
+        Your daughter wants to make the travel soccer team. Cost: 4 practices a week, weekend tournaments, less time with friends. Too much? Scale down: try out for the rec league first, build from there.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title">Make It Concrete</div>
+      </div>
+      <p>A goal that lives only in your teen's head stays fuzzy. Writing it down — paper, notes app, whiteboard — forces specificity. "Get healthier" becomes "Run a 5K by June." That precision is what makes it real enough to act on.</p>
+      <div class="step-script">
+        <strong>Try this</strong>
+        Your son says "I want to be better at guitar." Help him get specific: "Learn 3 full songs by spring break." Now there's a target and a deadline.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title">Close the Exit</div>
+      </div>
+      <p>This is the step most families skip — and it's the most important one.</p>
+      <p>There's a moment between "I'll try" and "I'm doing this" where everything changes. Help your teen cross that line. Once they've reality-checked and made it concrete, it's time to stop hedging. Full commitment unlocks effort, creativity, and resilience that half-hearted attempts never will.</p>
+      <div class="step-script">
+        <strong>Try this</strong>
+        Your teen keeps saying "maybe I'll sign up for the coding class." Help them register, pay the fee, tell their friends. Once the exit is closed, they stop debating and start doing.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title">Catch the Wave</div>
+      </div>
+      <p>Some moments carry natural momentum — a new school year, a birthday, moving to a new place, bouncing back from a setback. These are windows where change feels possible. Help your teen ride that energy.</p>
+      <p>But warn them: the feeling fades. Sticking with it when the wave passes is the real work.</p>
+      <div class="step-script">
+        <strong>Try this</strong>
+        Your teen just switched schools and is fired up to "start fresh." Channel that into something specific now, while the energy is there. In three weeks the novelty wears off, but the habit is already forming.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <div class="step-title">Build a Crew</div>
+      </div>
+      <p>Goals are harder alone. Help your teen find people working toward the same thing — or who simply believe in them. A workout partner, a study group, a mentor, even a parent who checks in without nagging.</p>
+      <p>The more connections around a goal, the stickier it gets.</p>
+      <div class="step-script">
+        <strong>Try this</strong>
+        Your daughter wants to read more. She joins a book club with two friends, picks a book a month, and suddenly reading isn't a chore — it's a social thing.
+      </div>
+    </div>
+
+    <h2>Before vs. After: What Changes</h2>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Without the system</th>
+          <th>With the system</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-before">"I want to get fit" (vague, dies in a week)</td>
+          <td class="col-after">"Run a 5K by June" (specific, written down, shared)</td>
+        </tr>
+        <tr>
+          <td class="col-before">"Maybe I'll try coding" (hedging, no commitment)</td>
+          <td class="col-after">Registered, fee paid, friends know (exit closed)</td>
+        </tr>
+        <tr>
+          <td class="col-before">Sets goal on a random Tuesday (no momentum)</td>
+          <td class="col-after">Launches at the start of semester (catches the wave)</td>
+        </tr>
+        <tr>
+          <td class="col-before">Works alone, quits when it gets boring</td>
+          <td class="col-after">Study group meets Thursdays (crew keeps it alive)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3 Traps That Kill Teen Goals</h2>
+
+    <img class="mid-img" src="/images/blog/goals-that-stick/img-3.webp" alt="Illustration of a teen journaling goals with a supportive friend nearby">
+
+    <div class="trap">
+      <h4>Trap 1: Believing the Story Others Wrote</h4>
+      <p>"Not a math person." "Too shy." "Not athletic." If your teen has been labeled, those stories quietly cap their goals before they start. Help them separate what they've been told from what they're actually capable of. Other people's assessments are opinions frozen in time — not facts.</p>
+    </div>
+
+    <div class="trap">
+      <h4>Trap 2: The "Already Ruined" Mindset</h4>
+      <p>One bad week and your teen thinks the whole thing is blown. Skipped practice for a month? Why bother going back? This all-or-nothing thinking kills more goals than lack of ability ever will. Help them see: falling off doesn't mean starting over. It just means getting back on.</p>
+    </div>
+
+    <div class="trap">
+      <h4>Trap 3: Climbing the Wrong Mountain</h4>
+      <p>Sometimes the goal itself is the problem — it matters to you, or their friends, or some version of themselves that isn't real. Every so often, help them step back and ask: "Do I still want what's at the top of this?" Adjusting direction early beats arriving somewhere you never wanted to be.</p>
+    </div>
+
+    <div class="closing-box">
+      <h3>Building the Goal-Setting Habit for Life</h3>
+      <ul>
+        <li><strong>Start small and stack wins.</strong> A teen who sets and hits a modest goal aims bigger next time. Swing-for-the-fences failures don't build that muscle.</li>
+        <li><strong>Debrief every finished goal.</strong> Hit or miss, talk about what worked and what didn't. Every goal becomes a learning rep.</li>
+        <li><strong>Model it yourself.</strong> Let your teen see you set a goal, struggle with it, and follow through (or adjust). They learn more from watching than from lectures.</li>
+        <li><strong>Separate identity from outcome.</strong> "You didn't hit the goal" is very different from "You're a quitter." Keep goals as something your teen does — not something they are.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>Original strategy by Kung Fu &middot; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

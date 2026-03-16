@@ -2380,6 +2380,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: replace praise with proof — one small promise kept, then another, then another.',
     tldrInside: '6-row deposit vs. withdrawal table, Running Low vs. Well-Funded checklist, 4-step method with exact phrases to use, long-term account maintenance tips',
   },
+  {
+    slug: 'goals-that-stick',
+    title: 'Goals That Actually Happen',
+    subtitle: 'The system that turns "I want to" into "I did it" — for teens',
+    description: 'Your teen doesn\'t need more motivation to hit their goals. They need fewer escape routes. Here\'s the 5-step system that turns \'I want to\' into \'I did it.\'',
+    image: '/images/cards/goals-that-stick.webp',
+    imageAlt: 'Warm illustration of a teen notebook with a rewritten goal transforming from vague to specific',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Goal Setting',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Writing a goal down changes the odds. Closing the exit changes everything.',
+    tldrPayoff: 'Teens raised on this system set specific targets, recruit their own accountability partners, and treat setbacks as data instead of verdicts.',
+    tldrMove: 'The move: five steps in order — shrink the goal to fit reality, make it concrete, commit fully, ride natural momentum, build a crew.',
+    tldrInside: '5 sequenced steps with parent examples, 4-row before/after comparison, 3 goal-killing traps, 4-point checklist for building the habit long-term',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
