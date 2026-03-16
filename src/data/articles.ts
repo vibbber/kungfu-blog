@@ -2260,6 +2260,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: let them feel the want before you fill it. Their discomfort is where the growth happens.',
     tldrInside: 'CHECK acronym for in-the-moment decisions, playground, after-school, and bedtime scripts, trap vs responsive comparison chart, trigger awareness guide',
   },
+  {
+    slug: 'teaching-resilient-thinking',
+    title: 'Programming Resilient Self-Talk',
+    subtitle: 'From "I\'m a disaster" to "let me grab a towel" — the shift that changes everything',
+    description: 'Your out-loud reactions to everyday frustrations are programming your child\'s inner voice. Here\'s how to install flexible thinking with the SPACE method, age-specific exercises, and the 3:1 ratio.',
+    image: '/images/cards/teaching-resilient-thinking.webp',
+    imageAlt: 'Two coffee cups with contrasting thought bubbles showing the shift from catastrophic to resilient self-talk',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Resilience',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Your child\'s self-talk during setbacks is a recording of how you handle yours.',
+    tldrPayoff: 'Kids with resilient thinking patterns hold their own socially, push through academic frustration, and regulate without needing you in the room.',
+    tldrMove: 'The move: audit your own out-loud reactions, then teach three age-specific exercises that build flexible thinking as a default.',
+    tldrInside: '3 thinking dimensions with example phrases, SPACE reframing conversation walkthrough, "What Else Is True?" pivot for older kids, 4 ways to amplify the 3:1 positivity ratio',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
