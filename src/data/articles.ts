@@ -2400,6 +2400,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: five steps in order — shrink the goal to fit reality, make it concrete, commit fully, ride natural momentum, build a crew.',
     tldrInside: '5 sequenced steps with parent examples, 4-row before/after comparison, 3 goal-killing traps, 4-point checklist for building the habit long-term',
   },
+  {
+    slug: 'sandpaper-letters-method',
+    title: 'Sandpaper Letters',
+    subtitle: 'Four-year-olds writing at third-grade level — no worksheets, no drills',
+    description: 'Cut 26 letters from sandpaper, glue them to cardboard, and watch your four-year-old explode into fluent writing in six weeks. The Montessori method that trains letter shapes through touch.',
+    image: '/images/cards/sandpaper-letters-method.webp',
+    imageAlt: 'Child tracing a sandpaper letter mounted on a card with fingertips',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Early Learning',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Touch teaches letter shapes faster than sight alone.',
+    tldrPayoff: 'Kids trained this way hit third-grade handwriting at age four — and they think they are playing, not practicing.',
+    tldrMove: 'The shift: replace visual drills with tactile tracing. Sandpaper gives instant feedback — the child feels every curve and straight line.',
+    tldrInside: '2 mechanisms explained, 5-step tracing protocol, supply table under $15, 6-step build-tonight guide',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
