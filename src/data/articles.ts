@@ -2360,6 +2360,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: turn everyday moments — conflicts, errands, drawing time — into perspective-taking reps.',
     tldrInside: 'The Movie Scene conflict de-escalator, Emotion Detective for public outings, Floor and Ceiling physical perspective game, 4 daily habits that transfer skills to real life',
   },
+  {
+    slug: 'inner-confidence-account',
+    title: 'The Confidence Deposit',
+    subtitle: 'One tiny promise kept tonight — the start of unshakeable self-worth',
+    description: 'Your teen doesn\'t need more praise. They need one tiny kept promise. Here\'s how the Inner Confidence Account builds real self-trust from the inside out.',
+    image: '/images/cards/inner-confidence-account.webp',
+    imageAlt: 'Glowing coin dropping into a glass jar representing confidence deposits',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Self-Esteem',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'The gap between what you tell your teen and what they believe about themselves — that\'s the problem.',
+    tldrPayoff: 'Teens with a strong internal track record don\'t need validation from peers, don\'t avoid hard things, and can handle setbacks without spiraling.',
+    tldrMove: 'The move: replace praise with proof — one small promise kept, then another, then another.',
+    tldrInside: '6-row deposit vs. withdrawal table, Running Low vs. Well-Funded checklist, 4-step method with exact phrases to use, long-term account maintenance tips',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
