@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 60-Second Trick That Turns Sibling Fights Into Problem-Solving | Kung Fu Parenting</title>
+  <meta name="description" content="Five empathy games that give kids ages 4-12 the ability to see beyond themselves — starting with one technique that defuses conflicts in under a minute.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+    }
+    .wrapper { max-width: 800px; margin: 0 auto; padding: 24px; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    .hero-text {
+      padding: 32px 0 0;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      line-height: 1.25;
+      color: #1A1A2E;
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 44px 0 16px;
+    }
+    p { margin-bottom: 16px; font-size: 16px; }
+
+    /* The core technique card */
+    .technique-card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin: 24px 0;
+      border: 1px solid #e0ddd5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .technique-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      color: #5C8A5A;
+      margin-bottom: 12px;
+    }
+    .technique-card p { font-size: 15px; color: #444; }
+
+    /* Script box */
+    .script {
+      background: #FAF6F0;
+      border-left: 4px solid #E8A598;
+      padding: 20px 24px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .script .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #E8A598;
+      margin-bottom: 10px;
+    }
+    .script p {
+      font-style: italic;
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .script p:last-child { margin-bottom: 0; }
+
+    /* Why it works callout */
+    .why-box {
+      background: #EBF5EB;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .why-box strong { color: #5C8A5A; }
+
+    /* Game grid */
+    .game-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .game-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 26px; }
+    }
+    .game-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #e0ddd5;
+    }
+    .game-card .game-num {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .game-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+    .game-card .when {
+      font-size: 12px;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .game-card p { font-size: 14px; color: #555; margin-bottom: 0; }
+
+    /* Steps */
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      background: #5C8A5A;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Image sections */
+    .blog-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    /* Before/After table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    .compare-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare-table th:first-child { border-radius: 8px 0 0 0; }
+    .compare-table th:last-child { border-radius: 0 8px 0 0; }
+    .compare-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0ddd5;
+    }
+    .compare-table tr:nth-child(even) td { background: #FAF6F0; }
+    .compare-table tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+    .compare-table tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+    /* Stat */
+    .stat-callout {
+      text-align: center;
+      padding: 24px;
+      margin: 28px 0;
+      background: #EBF5EB;
+      border-radius: 12px;
+    }
+    .stat-callout .number {
+      font-family: 'Lora', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #5C8A5A;
+      display: block;
+    }
+    .stat-callout .desc {
+      font-size: 15px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    /* Tip */
+    .parent-tip {
+      background: #FFF8F0;
+      border: 1px solid #E8A598;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .parent-tip strong { color: #c97a6d; }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 2px solid #e0ddd5;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="/images/blog/outsiders-view-empathy-games/movie-scene.webp" alt="Two kids acting out a scene like movie directors, laughing on the couch">
+    <div class="hero-text">
+      <span class="hero-tag">Ages 4-12</span>
+      <h1>The 60-Second Trick That Turns Sibling Fights Into Problem-Solving</h1>
+      <div class="tldr-box">
+        <p class="tldr-anchor">Empathy isn't something kids are born with. It's trained.</p>
+        <ul>
+          <li>Kids who get this practice handle sibling fights without an adult referee, pick up on body language their peers miss, and show up for friends when it counts.</li>
+          <li>The move: turn everyday moments — conflicts, errands, drawing time — into perspective-taking reps.</li>
+        </ul>
+        <hr class="tldr-divider">
+        <div class="tldr-inside"><strong>Inside: </strong>The Movie Scene conflict de-escalator &middot; Emotion Detective for public outings &middot; Floor and Ceiling physical perspective game &middot; 4 daily habits that transfer skills to real life</div>
+      </div>
+      <p class="hero-sub">Your kids are screaming at each other over a marker. You say five words. Sixty seconds later, they're calmly inventing solutions. Here's the game.</p>
+    </div>
+  </div>
+
+  <!-- Open -->
+  <p>Two kids, one marker, total meltdown. You've been here. The old playbook says separate them, lecture about sharing, wait for the next eruption in twenty minutes.</p>
+
+  <p>But there's a faster move. You say: <em>"Let's pretend this is a movie."</em></p>
+
+  <p>That's it. Five words. And something shifts immediately -- because you just handed your child a superpower they didn't know they had.</p>
+
+  <!-- The Movie Scene Technique -->
+  <h2>The Movie Scene</h2>
+
+  <p>Here's the full play. When two kids are locked in a conflict -- screaming, crying, arms crossed -- you step in and reframe the entire situation as fiction.</p>
+
+  <div class="technique-card">
+    <h3>How to Run It</h3>
+    <ol class="steps">
+      <li>Say: "Let's watch this like a movie. Who are the characters? Let's call them Alex and Sam."</li>
+      <li>Retell what happened using the fictional names: "So Alex grabbed Sam's marker without asking, and now Sam is really mad."</li>
+      <li>Ask perspective questions: "Why is Sam so upset? What does Alex want?"</li>
+      <li>Hand them the director's chair: "If you were directing this movie, how would you help these two solve it?"</li>
+      <li>Let them write the ending: "What could Alex say? What could Sam do instead of yelling?"</li>
+    </ol>
+  </div>
+
+  <div class="script">
+    <div class="label">Exact words to use</div>
+    <p>"Let's pretend we're watching this like a movie. Who are the characters?"</p>
+    <p>"Okay, so in this scene, Alex grabbed Sam's marker without asking, and now Sam is really mad. Why do you think Sam is so upset?"</p>
+    <p>"If you were directing this movie, how would you help these two characters solve this problem?"</p>
+  </div>
+
+  <div class="why-box">
+    <p><strong>Why it works:</strong> Fictional names + mental distance = emotional cooling. When kids retell their own conflict as something happening to someone else, they stop defending and start problem-solving. The brain shifts from threat mode to creative mode. And here's the feedback loop: understanding how others think helps kids understand their own reactions, which makes them more curious about other perspectives.</p>
+  </div>
+
+  <!-- Before/After -->
+  <table class="compare-table">
+    <tr>
+      <th>Without the Movie Scene</th>
+      <th>With the Movie Scene</th>
+    </tr>
+    <tr>
+      <td>"She took my marker!" (defending)</td>
+      <td>"Alex grabbed Sam's marker" (observing)</td>
+    </tr>
+    <tr>
+      <td>Escalating emotions</td>
+      <td>Emotional distance from fictional names</td>
+    </tr>
+    <tr>
+      <td>Parent imposes solution</td>
+      <td>Kids invent the solution</td>
+    </tr>
+    <tr>
+      <td>Same fight again in 20 minutes</td>
+      <td>Kids build a reusable skill</td>
+    </tr>
+  </table>
+
+  <!-- The deeper skill -->
+  <h2>This Is Empathy Training in Disguise</h2>
+
+  <p>The Movie Scene works because it trains perspective-taking -- the ability to step outside your own viewpoint and imagine someone else's internal world. And perspective-taking isn't some soft, nice-to-have skill. It's predictive.</p>
+
+  <div class="stat-callout">
+    <span class="number">64%</span>
+    <span class="desc">Kids with empathy skills are 64% more likely to step in and defend a bullied peer</span>
+  </div>
+
+  <p>Empathy doesn't develop automatically. It requires practice. The Movie Scene is one game. Here are four more that build the same muscle from different angles.</p>
+
+  <!-- Emotion Detective -->
+  <h2>Four More Games, Same Superpower</h2>
+
+  <img class="blog-img" src="/images/blog/outsiders-view-empathy-games/emotion-detective.webp" alt="A curious child at a park observing people's body language">
+
+  <div class="game-grid">
+    <div class="game-card">
+      <span class="game-num">1</span>
+      <h3>Emotion Detective</h3>
+      <div class="when">Grocery store, park, anywhere</div>
+      <p>Point to someone nearby: "What do you think that person is feeling?" Look for clues together -- smiling? Walking fast? Shoulders slumped? Name the emotion, then ask: "What made you guess that?" Turns every outing into empathy reps.</p>
+    </div>
+    <div class="game-card">
+      <span class="game-num">2</span>
+      <h3>Floor and Ceiling</h3>
+      <div class="when">When kids insist they're "right"</div>
+      <p>Everyone lies on the floor -- what do you see? Now stand on chairs -- what do you see? Dust under the couch vs. tops of shelves. Neither view is wrong. "That's how opinions work too." Physical proof that different perspectives are both valid.</p>
+    </div>
+    <div class="game-card">
+      <span class="game-num">3</span>
+      <h3>Draw It Twice</h3>
+      <div class="when">Quiet afternoon activity</div>
+      <p>Put an object in the center of the table. Each person draws it from where they sit. Then switch seats and draw it again. Compare: same object, totally different drawings. "When people disagree, sometimes they're both right -- different angles."</p>
+    </div>
+    <div class="game-card">
+      <span class="game-num">4</span>
+      <h3>Build a Cozy Spot</h3>
+      <div class="when">Ages 4-8, anytime</div>
+      <p>Pick a stuffed animal. Build it a "home" from tissues, fabric scraps, a small box. "What would make this toy comfortable?" Check on it over the next few days. Caring for something -- even imaginary -- is empathy practice with zero emotional stakes.</p>
+    </div>
+  </div>
+
+  <img class="blog-img" src="/images/blog/outsiders-view-empathy-games/floor-ceiling.webp" alt="Split view showing a room from floor level and from standing on a chair">
+
+  <!-- Make it stick -->
+  <h2>Making It Stick Beyond Game Time</h2>
+
+  <p>Games are the training wheels. Here's how the skill transfers to real life:</p>
+
+  <div class="technique-card">
+    <h3>Four Habits That Lock It In</h3>
+    <table class="compare-table">
+      <tr>
+        <th>Habit</th>
+        <th>What It Sounds Like</th>
+      </tr>
+      <tr>
+        <td><strong>Model repair</strong></td>
+        <td>"I yelled at you, and that wasn't fair. I was stressed about work, but you didn't deserve that. I'm sorry."</td>
+      </tr>
+      <tr>
+        <td><strong>Name their wins</strong></td>
+        <td>"You noticed Emma might be sad because no one picked her. That's empathy -- you just did something really smart."</td>
+      </tr>
+      <tr>
+        <td><strong>Ask before solving</strong></td>
+        <td>"What do you think was going on for them?" (before jumping to fix it)</td>
+      </tr>
+      <tr>
+        <td><strong>Pause during stories</strong></td>
+        <td>"Why do you think the character did that? What were they feeling?"</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Parent tip -->
+  <div class="parent-tip">
+    <p><strong>Use the same trick on yourself.</strong> When your kid is driving you crazy, mentally zoom out. Imagine you're watching the situation from across the room. Ask: "If I saw this on video, what would I notice?" That shift from reactive to observer -- what Harvard negotiator William Ury calls "going to the balcony" -- often reveals the whole picture instead of just your frustration.</p>
+  </div>
+
+  <p>Five games. One underlying skill. The kind of thing that changes how your kid navigates friendships, handles conflict, and shows up for other people -- starting tonight, with a marker and two fictional characters named Alex and Sam.</p>
+
+  <footer>
+    Kung Fu Parenting &middot; kungfu.family
+  </footer>
+
+</div>
+</body>
+</html>

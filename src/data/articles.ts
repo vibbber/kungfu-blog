@@ -2340,6 +2340,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: build trust through regular family meals and casual check-ins, then use that trust when stakes get high.',
     tldrInside: 'dinner table advantage research, 6-point long-term conversation checklist, exit plan setup advice, 2 pressure rehearsal scenarios',
   },
+  {
+    slug: 'outsiders-view-empathy-games',
+    title: 'The Movie Scene Method',
+    subtitle: 'Sibling fights to problem-solving — in 60 seconds flat',
+    description: 'Five empathy games that give kids ages 4-12 the ability to see beyond themselves — starting with one technique that defuses conflicts in under a minute.',
+    image: '/images/cards/outsiders-view-empathy-games.webp',
+    imageAlt: 'Warm illustration of kids in director chairs with a movie clapperboard, learning empathy through play',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Empathy',
+    book: '10 Mindful Minutes',
+    bookSlug: '10-mindful-minutes-hawn',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Empathy isn\'t something kids are born with. It\'s trained.',
+    tldrPayoff: 'Kids who get this practice handle sibling fights without an adult referee, pick up on body language their peers miss, and show up for friends when it counts.',
+    tldrMove: 'The move: turn everyday moments — conflicts, errands, drawing time — into perspective-taking reps.',
+    tldrInside: 'The Movie Scene conflict de-escalator, Emotion Detective for public outings, Floor and Ceiling physical perspective game, 4 daily habits that transfer skills to real life',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
