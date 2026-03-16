@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="29">
+  <title>Say Less, Teach More: Montessori's 3-Word Rule</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Lora', Georgia, serif;
+      color: #5C8A5A;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      text-align: center;
+      padding: 48px 0 32px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: #6b7c93;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* --- Sections --- */
+    section {
+      margin: 40px 0;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    /* --- Blog image --- */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    /* --- Comparison table --- */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .compare-table thead th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .compare-table thead th:first-child {
+      background: #f5e0dc;
+      color: #9e4a3a;
+    }
+
+    .compare-table thead th:last-child {
+      background: #d7edd5;
+      color: #3a6e38;
+    }
+
+    .compare-table td {
+      padding: 16px 20px;
+      vertical-align: top;
+      font-size: 1rem;
+      background: white;
+      border-bottom: 1px solid #f0ece6;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compare-table td:first-child {
+      color: #8a6060;
+      border-right: 2px solid #f0ece6;
+    }
+
+    .compare-table td:last-child {
+      color: #3d6e3a;
+      font-weight: 500;
+    }
+
+    /* --- Criterion cards --- */
+    .criterion {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 5px solid;
+    }
+
+    .criterion.c1 { border-color: #5C8A5A; }
+    .criterion.c2 { border-color: #6B8DD6; }
+    .criterion.c3 { border-color: #E8A598; }
+
+    .criterion .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .criterion.c1 .label { color: #5C8A5A; }
+    .criterion.c2 .label { color: #6B8DD6; }
+    .criterion.c3 .label { color: #E8A598; }
+
+    .criterion h3 {
+      font-size: 1.3rem;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+    }
+
+    .criterion p {
+      margin-bottom: 0;
+    }
+
+    /* --- Script box --- */
+    .script-box {
+      background: #f4f8f3;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 12px 0;
+      font-size: 1.05rem;
+    }
+
+    .script-box .scene {
+      color: #6b7c93;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .script-box .words {
+      font-weight: 600;
+      color: #5C8A5A;
+      font-size: 1.15rem;
+    }
+
+    /* --- Quick-check strip --- */
+    .quick-check {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 560px) {
+      .quick-check { grid-template-columns: 1fr; }
+    }
+
+    .qc-card {
+      background: white;
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .qc-card .qc-num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .qc-card:nth-child(1) .qc-num { color: #5C8A5A; }
+    .qc-card:nth-child(2) .qc-num { color: #6B8DD6; }
+    .qc-card:nth-child(3) .qc-num { color: #E8A598; }
+
+    .qc-card .qc-q {
+      font-size: 0.9rem;
+      color: #6b7c93;
+    }
+
+    /* --- Pull quote --- */
+    .pull-quote {
+      background: linear-gradient(135deg, #5C8A5A, #7aa878);
+      color: white;
+      border-radius: 14px;
+      padding: 36px;
+      text-align: center;
+      margin: 32px 0;
+    }
+
+    .pull-quote blockquote {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .pull-quote cite {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    /* --- Source --- */
+    .source {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #8795a1;
+      font-style: italic;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e8e4de;
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Say Less, Teach More</h1>
+    <p class="tagline">Montessori discovered that the fewer words you use, the faster kids learn. Here are her three filters for every lesson.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">Montessori found that fewer words produce faster learning — every time.</p>
+    <ul>
+      <li>Kids who learn this way absorb new concepts on the first try, stay focused longer, and start teaching themselves without being prompted.</li>
+      <li>The move: run every lesson through three filters — concise, simple, objective — before you open your mouth.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>3 filters with script examples &middot; 5-scenario before/after table &middot; 3-second pre-speech check</div>
+  </div>
+
+  <img class="blog-img" src="/images/blog/three-criteria-lesson/say-less.webp" alt="Parent teaching a child with minimal words while longer explanations fade away">
+
+  <section>
+    <p>Your kid picks up a new toy. You want to teach them something about it. So you start talking. And talking. You explain what it is, where it came from, what it does, how it connects to something you saw last week, and by the time you finish your sentence, they've already walked away.</p>
+
+    <p>Maria Montessori noticed this over a hundred years ago. She watched teachers deliver beautiful, elaborate lessons — and watched children zone out every single time. Then she tried something radical: she stripped almost everything away.</p>
+
+    <p>The result? Kids learned <em>faster</em>. Not a little faster. Dramatically faster.</p>
+
+    <p>She boiled it down to three criteria. Every lesson — whether you're teaching colors, shapes, letters, or how to tie shoes — gets run through these three filters before a single word leaves your mouth.</p>
+  </section>
+
+  <img class="blog-img" src="/images/blog/three-criteria-lesson/three-filters.webp" alt="Three filter layers — Concise, Simple, Objective — distilling cluttered words into a single clear beam">
+
+  <section>
+    <h2>The Three Filters</h2>
+
+    <div class="criterion c1">
+      <div class="label">Filter 1</div>
+      <h3>Concise</h3>
+      <p>Cut away every unnecessary word. Montessori quoted Dante here: "Let all thy words be counted." If you can say it in three words, don't use twelve.</p>
+
+      <div class="script-box">
+        <div class="scene">Teaching your child the color red:</div>
+        <div class="words">"This is red."</div>
+      </div>
+
+      <p style="font-size:0.9rem; color:#6b7c93; margin-top:8px;">Not "Now look at this, sweetie, can you see what color it is? It's a beautiful color, isn't it?" By the time you finish that sentence, the moment is gone.</p>
+    </div>
+
+    <div class="criterion c2">
+      <div class="label">Filter 2</div>
+      <h3>Simple</h3>
+      <p>State only the essential truth. No analysis, no elaboration, no building up to a conclusion. The child can absorb the whole thing directly.</p>
+
+      <div class="script-box">
+        <div class="scene">Teaching your child what a square is:</div>
+        <div class="words">"This is a square."</div>
+      </div>
+
+      <p style="font-size:0.9rem; color:#6b7c93; margin-top:8px;">Not "This is a line, and this is another line, and they make four lines, and four lines make a square." A child recognizes a square without needing to count to four. That's geometry class, not shape recognition.</p>
+    </div>
+
+    <div class="criterion c3">
+      <div class="label">Filter 3</div>
+      <h3>Objective</h3>
+      <p>Your personality disappears. You're not performing, not connecting, not riffing. Only the object you're teaching about should remain in the child's attention.</p>
+
+      <div class="script-box">
+        <div class="scene">Teaching your child the color blue:</div>
+        <div class="words">[Hold up blue tablet] "This is blue."</div>
+      </div>
+
+      <p style="font-size:0.9rem; color:#6b7c93; margin-top:8px;">Not "Look at the sky! What color is my apron? And these cherries?" Each comparison drags in <em>your</em> associations, not the child's direct experience of blue.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Before and After</h2>
+
+    <p>Here's what this looks like in practice across five everyday teaching moments:</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>What most parents say</th>
+          <th>After the 3 filters</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Okay so this is called a triangle — see, it has one, two, three sides and three pointy corners..."</td>
+          <td>"This is a triangle."</td>
+        </tr>
+        <tr>
+          <td>"Feel this! Isn't it rough? Like sandpaper! Remember when Daddy was sanding the table?"</td>
+          <td>[Child touches sandpaper] "Rough."</td>
+        </tr>
+        <tr>
+          <td>"This one is biiiiig and this one is teeny tiny little! Which one do you think is bigger?"</td>
+          <td>[Place both] "This is big. This is small."</td>
+        </tr>
+        <tr>
+          <td>"Can you hear that? That's a really loud sound! Like a drum! Boom boom boom!"</td>
+          <td>[Make sound] "Loud." [Make sound] "Soft."</td>
+        </tr>
+        <tr>
+          <td>"This letter is an A — it's the first letter of the alphabet and it's in your name!"</td>
+          <td>[Trace letter] "A."</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>The 3-Second Check</h2>
+
+    <p>Before you open your mouth, run your lesson through these three questions. It takes about three seconds.</p>
+
+    <div class="quick-check">
+      <div class="qc-card">
+        <span class="qc-num">1</span>
+        <span class="qc-q">Can I cut any words?</span>
+      </div>
+      <div class="qc-card">
+        <span class="qc-num">2</span>
+        <span class="qc-q">Am I stating only the truth?</span>
+      </div>
+      <div class="qc-card">
+        <span class="qc-num">3</span>
+        <span class="qc-q">Is it about the object, not me?</span>
+      </div>
+    </div>
+
+    <p>If the answer to all three is yes, speak. If not, keep trimming.</p>
+
+    <p>The hardest part isn't learning the filters. It's resisting the urge to be interesting. You want to connect, to elaborate, to make it a moment. Montessori's counterintuitive insight: the less of <em>you</em> there is in the lesson, the more space there is for the <em>child</em> to actually learn.</p>
+  </section>
+
+  <div class="pull-quote">
+    <blockquote>"To give a ray of light and to go on our way."</blockquote>
+    <cite>Maria Montessori, on the teacher's role</cite>
+  </div>
+
+  <p class="source">Published by kungfu.family</p>
+
+</body>
+</html>

@@ -2440,6 +2440,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: isolate each fastener type on its own frame, master it, then move to real clothes as a victory lap.',
     tldrInside: '10 frames ranked by difficulty level, 6-step silent demo walkthrough, 4 at-home substitutes for Montessori frames, 4 deeper skills dressing frames secretly build',
   },
+  {
+    slug: 'three-criteria-lesson',
+    title: 'Three Filters for Every Lesson',
+    subtitle: 'The 3-second check before you open your mouth',
+    description: 'Montessori discovered that fewer words produce faster learning. Run every lesson through three filters — concise, simple, objective — and watch your kid absorb concepts on the first try.',
+    image: '/images/cards/three-criteria-lesson.webp',
+    imageAlt: 'Three filter layers distilling cluttered words into a single clear lesson',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Teaching',
+    book: 'The Montessori Method',
+    bookSlug: 'montessori-method-1912',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'Montessori found that fewer words produce faster learning — every time.',
+    tldrPayoff: 'Kids who learn this way absorb new concepts on the first try, stay focused longer, and start teaching themselves without being prompted.',
+    tldrMove: 'The move: run every lesson through three filters — concise, simple, objective — before you open your mouth.',
+    tldrInside: '3 filters with script examples, 5-scenario before/after table, 3-second pre-speech check',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
