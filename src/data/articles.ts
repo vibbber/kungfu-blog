@@ -2280,6 +2280,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: audit your own out-loud reactions, then teach three age-specific exercises that build flexible thinking as a default.',
     tldrInside: '3 thinking dimensions with example phrases, SPACE reframing conversation walkthrough, "What Else Is True?" pivot for older kids, 4 ways to amplify the 3:1 positivity ratio',
   },
+  {
+    slug: 'mistakes-as-fuel',
+    title: 'The Mistake Playbook',
+    subtitle: 'Careless, clueless, or courageous — the response that changes everything',
+    description: 'Most parents treat every mistake the same way. But there are three distinct types — and each one needs a completely different response. A framework you can tape to your fridge.',
+    image: '/images/cards/mistakes-as-fuel.webp',
+    imageAlt: 'Color-coded sticky notes showing three types of mistakes with different parental responses',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Growth Mindset',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-03-16',
+    dateModified: '2026-03-16',
+    tldrAnchor: 'The growth mindset trick nobody talks about: match the mistake type.',
+    tldrPayoff: 'Kids raised this way don\'t crumble after a bad grade or a rejection -- they know how to diagnose what happened, extract the lesson, and move forward with a plan.',
+    tldrMove: 'The shift: celebrate risk-taking mistakes, normalize knowledge gaps, and build systems for careless ones -- instead of lumping them all together.',
+    tldrInside: '3 color-coded mistake categories, quick-reference table with scripts, 5-step debrief sequence, helps vs. backfires checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
