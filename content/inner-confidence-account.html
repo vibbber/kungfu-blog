@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your teen doesn't need more praise. They need one tiny kept promise. Here's how the Inner Confidence Account works.">
-  <title>The Smallest Promise Your Teen Keeps Tonight Changes Everything | Kung Fu</title>
+  <meta name="description" content="That weird hobby your teen won't stop talking about? It's building something no amount of praise ever could. Here's the science of the inner confidence account.">
+  <title>Your Teen's Weird Hobby Is Their Secret Weapon | Kung Fu</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -22,7 +22,6 @@
       padding: 24px 20px 60px;
     }
 
-    /* Hero */
     .hero-img {
       width: 100%;
       border-radius: 16px;
@@ -60,7 +59,14 @@
       color: #2D2D3A;
     }
 
-    /* Callout box */
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    /* Core idea callout */
     .callout {
       background: #5C8A5A;
       color: white;
@@ -86,101 +92,105 @@
       margin-bottom: 0;
     }
 
-    /* Inline image */
-    .inline-img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 28px 0;
-      display: block;
-    }
-
-    /* Deposit / Withdrawal table */
-    .dw-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin: 24px 0 32px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-    .dw-table thead th {
-      padding: 14px 18px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-align: left;
-    }
-    .dw-table thead th:first-child {
-      background: #EDF7ED;
-      color: #3A6B38;
-    }
-    .dw-table thead th:last-child {
-      background: #FEF3F0;
-      color: #B04A3A;
-    }
-    .dw-table td {
-      padding: 14px 18px;
-      font-size: 14px;
-      background: white;
-      border-bottom: 1px solid #F0ECE4;
-      vertical-align: top;
-    }
-    .dw-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Step cards */
-    .step-grid {
+    /* Two-column comparison */
+    .compare-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin: 24px 0 32px;
     }
-    .step-card {
+    .compare-col {
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .compare-col.drain {
+      background: #FEF3F0;
+      border: 1px solid #F0C4B8;
+    }
+    .compare-col.fuel {
+      background: #EDF7ED;
+      border: 1px solid #C0DFC0;
+    }
+    .compare-col h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .compare-col.drain h4 { color: #B04A3A; }
+    .compare-col.fuel h4 { color: #3A6B38; }
+    .compare-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .compare-col ul li {
+      font-size: 14px;
+      padding: 5px 0;
+      color: #444;
+      padding-left: 20px;
+      position: relative;
+    }
+    .compare-col.drain ul li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: #D46B5C;
+      font-weight: bold;
+    }
+    .compare-col.fuel ul li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: #5C8A5A;
+      font-weight: bold;
+    }
+
+    /* Deposit cards */
+    .deposit-strip {
       background: white;
       border-radius: 12px;
-      padding: 20px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      border-top: 4px solid #5C8A5A;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 16px;
+      align-items: start;
     }
-    .step-card.full-width {
-      grid-column: 1 / -1;
-    }
-    .step-num {
-      display: inline-block;
+    .dep-num {
       background: #5C8A5A;
       color: white;
-      width: 28px;
-      height: 28px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      text-align: center;
-      line-height: 28px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .step-card h3 {
-      font-family: 'Lora', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 16px;
-      color: #1A1A2E;
-      margin-bottom: 8px;
+      font-weight: 700;
+      margin-top: 2px;
     }
-    .step-card p {
+    .dep-body h3 {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: #1A1A2E;
+      margin-bottom: 4px;
+    }
+    .dep-body p {
       font-size: 14px;
       color: #555;
-      margin-bottom: 0;
+      margin-bottom: 6px;
     }
-    .step-card .script {
+    .dep-script {
       background: #F5F0E8;
       border-left: 3px solid #E8A598;
       padding: 10px 14px;
       border-radius: 0 6px 6px 0;
-      margin-top: 10px;
-      font-style: italic;
-      font-size: 14px;
+      font-size: 13px;
       color: #4A4A5A;
+      margin-top: 8px;
     }
+    .dep-script strong { color: #5C8A5A; }
 
     /* Accent box */
     .accent-box {
@@ -198,46 +208,39 @@
     .accent-box p {
       color: white;
       font-size: 15px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .accent-box p:last-child { margin-bottom: 0; }
 
-    /* Before/After */
-    .before-after {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+    /* Quick-start table */
+    .qs-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 24px 0 32px;
-    }
-    .ba-col {
-      padding: 20px;
       border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-    .ba-col.before {
-      background: #FEF3F0;
-      border: 1px solid #F0C4B8;
-    }
-    .ba-col.after {
-      background: #EDF7ED;
-      border: 1px solid #C0DFC0;
-    }
-    .ba-col h4 {
-      font-size: 12px;
+    .qs-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 18px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-align: left;
     }
-    .ba-col.before h4 { color: #B04A3A; }
-    .ba-col.after h4 { color: #3A6B38; }
-    .ba-col ul {
-      list-style: none;
-      padding: 0;
-    }
-    .ba-col ul li {
+    .qs-table td {
+      padding: 14px 18px;
       font-size: 14px;
-      padding: 4px 0;
+      background: white;
+      border-bottom: 1px solid #F0ECE4;
+      vertical-align: top;
       color: #444;
     }
+    .qs-table tr:last-child td { border-bottom: none; }
+    .qs-table td:first-child { font-weight: 600; color: #1A1A2E; }
 
     footer {
       margin-top: 48px;
@@ -251,8 +254,8 @@
 
     @media (max-width: 600px) {
       h1 { font-size: 26px; }
-      .step-grid { grid-template-columns: 1fr; }
-      .before-after { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .deposit-strip { grid-template-columns: 36px 1fr; }
       .blog-container { padding: 16px 14px 40px; }
     }
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
@@ -268,157 +271,183 @@
 <body>
   <div class="blog-container">
 
-    <img class="hero-img" src="/images/blog/inner-confidence-account/hero.webp" alt="Teen radiating inner confidence through small daily wins">
+    <img class="hero-img" src="/images/blog/inner-confidence-account/hero.webp" alt="Teen absorbed in a passion project, radiating quiet confidence">
 
-    <h1>The Smallest Promise Your Teen Keeps Tonight Changes Everything</h1>
-    <p class="subtitle">Forget praise. Forget pep talks. Confidence is built with one ridiculously tiny commitment at a time.</p>
-
+    <h1>Your Teen's Weird Hobby Is Their Secret Weapon</h1>
     <div class="tldr-box">
-      <p class="tldr-anchor">The gap between what you tell your teen and what they believe about themselves — that's the problem.</p>
+      <p class="tldr-anchor">Your teen's obsessive hobby is quietly building something no amount of praise can.</p>
       <ul>
-        <li>Teens with a strong internal track record don't need validation from peers, don't avoid hard things, and can handle setbacks without spiraling.</li>
-        <li>The move: replace praise with proof — one small promise kept, then another, then another.</li>
+        <li>Teens making regular deposits hold their own in friend groups, make values-based decisions, and recover from setbacks without spiraling.</li>
+        <li>The shift: stop asking if the hobby is useful — every session where they get better at something they chose is a confidence deposit.</li>
       </ul>
       <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>6-row deposit vs. withdrawal table &middot; Running Low vs. Well-Funded checklist &middot; 4-step method with exact phrases to use &middot; long-term account maintenance tips</div>
+      <div class="tldr-inside"><strong>Inside: </strong>6 deposit types with deposit/withdrawal pairs &middot; two-column diagnostic &middot; start-small action box &middot; weekly starter moves</div>
     </div>
+    <p class="subtitle">The thing they're obsessed with that nobody else gets? That's building real confidence. Here's why.</p>
 
-    <p>Here's something most parents get backwards about confidence: they try to pump it in from the outside. More praise. More trophies. More "you're amazing, sweetie." And it bounces right off, because your teen can feel the gap between what you're saying and what they actually believe about themselves.</p>
+    <p>Your kid spends three hours tinkering with circuit boards. Or filling sketchbooks with characters nobody asked for. Or teaching themselves to ferment hot sauce in the garage.</p>
 
-    <p>Real confidence doesn't come from what other people say about you. It comes from what you know about yourself. Specifically: do you keep your word to yourself?</p>
+    <p>And you're wondering: <em>shouldn't they be doing something... useful?</em></p>
 
-    <p>That's the whole game. And it starts tonight, with something almost comically small.</p>
+    <p>Here's the twist. That obsessive, self-directed, nobody-asked-me-to-do-this energy? It's one of the most powerful confidence-builders that exists. Not because the hobby itself matters, but because of what happens inside a teenager who gets progressively better at something they chose for themselves.</p>
+
+    <p>That feeling of growing competence &mdash; of noticing you can do something today you couldn't do last month &mdash; is rocket fuel for self-worth.</p>
+
+    <h2>Why Hobbies Hit Different Than Praise</h2>
+
+    <p>Most parents try to build confidence from the outside in. Compliments. Encouragement. "You're so smart." "You can do anything."</p>
+
+    <p>It bounces off. Teens know when they're being managed.</p>
+
+    <p>Real confidence is an inside job. Psychologists who study self-efficacy have found that it's built through one mechanism above all others: <strong>repeated experiences of following through.</strong> Not being told you're great. Proving it to yourself, one small win at a time.</p>
 
     <div class="callout">
-      <p>Self-confidence works like a savings account.<br>Every kept promise is a deposit. Every broken one is a withdrawal.<br>The balance determines how your teen shows up in the world.</p>
-      <p class="small">This isn't motivational fluff. Decades of self-efficacy research show that small, kept commitments create a feedback loop where each success makes the next one more likely.</p>
+      <p>Self-confidence works like a savings account.<br>Every follow-through is a deposit. Every broken self-promise is a withdrawal.<br>The balance determines how your teen shows up in the world.</p>
+      <p class="small">This is the Inner Confidence Account &mdash; and your teen's hobby is making deposits every single session.</p>
     </div>
 
-    <h2>What a Low Balance Looks Like vs. a Healthy One</h2>
+    <img class="inline-img" src="/images/blog/inner-confidence-account/deposits.webp" alt="The confidence account: six types of deposits that build self-worth">
 
-    <p>Before you do anything, read these two columns. You'll know instantly where your teen stands.</p>
+    <h2>The 6 Deposits (Your Teen's Hobby Covers More Than You Think)</h2>
 
-    <div class="before-after">
-      <div class="ba-col before">
-        <h4>Running Low</h4>
+    <p>The confidence account takes six types of deposits. A good hobby quietly hits several of them at once.</p>
+
+    <div class="deposit-strip">
+      <div class="dep-num">1</div>
+      <div class="dep-body">
+        <h3>Honor Your Own Word</h3>
+        <p>Every time your teen says "I'm going to finish this level / sketch / recipe" and then does it, they're proving to themselves that their word means something. That internal track record compounds.</p>
+        <div class="dep-script"><strong>Deposit:</strong> "I'll read for 10 minutes before bed" &mdash; and actually doing it.<br><strong>Withdrawal:</strong> Telling yourself you'll practice, then spending the evening scrolling.</div>
+      </div>
+    </div>
+
+    <div class="deposit-strip">
+      <div class="dep-num">2</div>
+      <div class="dep-body">
+        <h3>Do Something for Someone Else</h3>
+        <p>The fastest escape from a spiral of worry and comparison? Focus outward. Help a friend. Leave a note for a sibling. Tutor a classmate. The mood shift is almost instant.</p>
+        <div class="dep-script"><strong>Deposit:</strong> Helping a younger kid who looks lost on their first day.<br><strong>Withdrawal:</strong> Staying isolated and absorbed in your own worries.</div>
+      </div>
+    </div>
+
+    <div class="deposit-strip">
+      <div class="dep-num">3</div>
+      <div class="dep-body">
+        <h3>Cut Yourself Some Slack</h3>
+        <p>Confident people don't make fewer mistakes. They recover differently. Hobby work teaches this naturally &mdash; the failed sketch, the collapsed sourdough, the code that won't compile. You learn to say "what can I try differently?" instead of "what's wrong with me?"</p>
+        <div class="dep-script"><strong>Deposit:</strong> "That conversation was awkward. Next time I'll listen more."<br><strong>Withdrawal:</strong> "I'm terrible at talking to people. Everyone thinks I'm weird."</div>
+      </div>
+    </div>
+
+    <div class="deposit-strip">
+      <div class="dep-num">4</div>
+      <div class="dep-body">
+        <h3>Be Straight with Yourself</h3>
+        <p>Honesty isn't just about not lying. It's admitting when you're struggling instead of pretending everything's fine. When you're honest, you don't carry the weight of maintaining a false version of yourself.</p>
+        <div class="dep-script"><strong>Deposit:</strong> Telling your parent what actually happened, even when it's uncomfortable.<br><strong>Withdrawal:</strong> Leaving out key details so you look better than the situation was.</div>
+      </div>
+    </div>
+
+    <div class="deposit-strip">
+      <div class="dep-num">5</div>
+      <div class="dep-body">
+        <h3>Recharge on Purpose</h3>
+        <p>Not as a reward. As a regular practice. Shooting baskets alone, walking the dog, sketching in a notebook. When stress piles up and you never decompress, everything feels harder than it actually is.</p>
+        <div class="dep-script"><strong>Deposit:</strong> Taking 20 minutes after school to do something that genuinely relaxes you.<br><strong>Withdrawal:</strong> Pushing through exhaustion until you snap or shut down.</div>
+      </div>
+    </div>
+
+    <div class="deposit-strip">
+      <div class="dep-num">6</div>
+      <div class="dep-body">
+        <h3>Develop What Makes You <em>You</em></h3>
+        <p>This is the big one. Investing time in something you're genuinely drawn to &mdash; not what school values, not what friends are into. The activity matters less than the experience of getting better at something that feels like yours.</p>
+        <div class="dep-script"><strong>Deposit:</strong> Spending time on a hobby you love, even if nobody else gets it.<br><strong>Withdrawal:</strong> Dropping interests because they don't seem impressive enough to post about.</div>
+      </div>
+    </div>
+
+    <h2>The Real Diagnostic: Where's Your Teen's Balance?</h2>
+
+    <img class="inline-img" src="/images/blog/inner-confidence-account/contrast.webp" alt="Inner-driven confidence vs outer-driven validation">
+
+    <div class="compare-grid">
+      <div class="compare-col drain">
+        <h4>Running on Empty</h4>
         <ul>
-          <li>Folds when friends push toward bad choices</li>
-          <li>Puts themselves down constantly</li>
-          <li>Obsesses over how others see them</li>
-          <li>Wears a tough front to mask insecurity</li>
-          <li>Avoids anything new or challenging</li>
-          <li>Gets resentful when a sibling or friend succeeds</li>
+          <li>Folds under social pressure from friends</li>
+          <li>Frequently puts themselves down</li>
+          <li>Obsesses over how others perceive them</li>
+          <li>Puts on a tough front to mask insecurity</li>
+          <li>Avoids challenges out of fear</li>
+          <li>Gets resentful when a friend succeeds</li>
         </ul>
       </div>
-      <div class="ba-col after">
-        <h4>Well-Funded</h4>
+      <div class="compare-col fuel">
+        <h4>Well-Funded Account</h4>
         <ul>
-          <li>Holds their ground under social pressure</li>
+          <li>Holds their ground when pushed toward bad choices</li>
           <li>Doesn't need the popular group to feel okay</li>
-          <li>Approaches each day with optimism</li>
-          <li>Makes decisions from their own values</li>
-          <li>Sets goals without being told</li>
-          <li>Genuinely celebrates other people's wins</li>
+          <li>Approaches the day with optimism</li>
+          <li>Makes decisions based on values, not the crowd</li>
+          <li>Sets goals and works toward them unprompted</li>
+          <li>Genuinely celebrates when others succeed</li>
         </ul>
       </div>
     </div>
 
-    <p>The left column isn't a personality flaw. It's a balance problem. And balances can be rebuilt.</p>
+    <p>Notice something? The "well-funded" column describes a teenager who has a strong internal reference point. They're not checking with the crowd before deciding how to feel. They already know, because they've built evidence &mdash; deposit by deposit &mdash; that they can trust themselves.</p>
 
-    <h2>The 6 Deposits That Actually Work</h2>
+    <h2>Tonight: One Deposit</h2>
 
-    <p>Each of these is a specific, repeatable action. Not a vibe. Not a mindset shift. A thing your teen can do today and feel the difference by the end of the week.</p>
+    <div class="accent-box">
+      <h3>Start Absurdly Small</h3>
+      <p>Don't aim for transformation. Aim for one kept promise. "I'll put my phone in another room during homework tonight." That's it. One deposit.</p>
+      <p>Once small commitments feel natural, stretch a little. Say no to something you usually cave on. Try something slightly intimidating. Each follow-through builds on the last.</p>
+      <p>A month of small, consistent deposits changes more than one dramatic gesture ever will.</p>
+    </div>
 
-    <img class="inline-img" src="/images/blog/inner-confidence-account/deposits.webp" alt="Visual comparison of confidence deposits versus withdrawals">
-
-    <table class="dw-table">
+    <table class="qs-table">
       <thead>
         <tr>
-          <th>Deposit</th>
-          <th>Withdrawal</th>
+          <th>Deposit Type</th>
+          <th>Starter Move (Try This Week)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>1. Honor your own word.</strong> Say "I'll read for 10 minutes before bed" and actually do it.</td>
-          <td>Tell yourself you'll practice guitar, then spend the evening scrolling.</td>
+          <td>Honor Your Word</td>
+          <td>Pick one tiny self-promise per day and keep it. Just one.</td>
         </tr>
         <tr>
-          <td><strong>2. Do something for someone else.</strong> Text a friend who's been quiet. Help a younger kid at school.</td>
-          <td>Stay isolated, absorbed in your own worries day after day.</td>
+          <td>Help Someone</td>
+          <td>Text a friend who's been quiet. Ask how they're doing.</td>
         </tr>
         <tr>
-          <td><strong>3. Cut yourself slack after mistakes.</strong> "That was awkward. Next time I'll listen more."</td>
-          <td>"I'm terrible at talking to people. Everyone thinks I'm weird."</td>
+          <td>Self-Forgiveness</td>
+          <td>Next mistake, ask "what can I try differently?" and stop there.</td>
         </tr>
         <tr>
-          <td><strong>4. Be straight with yourself and others.</strong> Tell your parent what actually happened, even when uncomfortable.</td>
-          <td>Leave out key details so you look better than the situation was.</td>
+          <td>Honesty</td>
+          <td>Share one uncomfortable truth instead of the polished version.</td>
         </tr>
         <tr>
-          <td><strong>5. Recharge on purpose.</strong> Take 20 minutes after school to do something that genuinely relaxes you.</td>
-          <td>Push through exhaustion until you snap at someone or shut down.</td>
+          <td>Recharge</td>
+          <td>Block 20 minutes after school for something genuinely relaxing.</td>
         </tr>
         <tr>
-          <td><strong>6. Develop what makes you <em>you</em>.</strong> Spend time on a hobby you love, even if nobody else gets it.</td>
-          <td>Drop interests because they don't seem impressive enough to post about.</td>
+          <td>Your Thing</td>
+          <td>Spend time on the hobby that lights you up. No justification needed.</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>How to Start: The One-Promise Method</h2>
+    <p>The compounding effect is real. Each deposit makes the next one easier. And that weird hobby your teen won't shut up about? Every session is a deposit they're making without even knowing it.</p>
 
-    <p>Don't hand your teen this list and say "do all six." That's a withdrawal in disguise (an unkept promise waiting to happen). Instead, use the one-promise method.</p>
-
-    <img class="inline-img" src="/images/blog/inner-confidence-account/stairs.webp" alt="Small stepping stones building upward, each glowing brighter">
-
-    <div class="step-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>Pick something absurdly small</h3>
-        <p>Not "I'll transform my life." More like "I'll put my phone in another room while I do homework tonight."</p>
-        <div class="script">"What's one tiny thing you could promise yourself tonight and actually keep?"</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>Keep it. That's it.</h3>
-        <p>No fanfare. No reward chart. They just... do the thing they said they'd do. The deposit is automatic.</p>
-        <div class="script">"You said you'd do it, and you did. That's real."</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>Stack the wins</h3>
-        <p>Once small commitments feel natural, stretch slightly. Say no to something they usually cave on. Try something mildly intimidating.</p>
-        <div class="script">"What would be a slightly bigger version of that promise?"</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <h3>Celebrate the follow-through, not the result</h3>
-        <p>"You said you'd do it and you did" matters more than "you got an A." The kept commitment IS the deposit, regardless of outcome.</p>
-        <div class="script">"I noticed you stuck with what you said. That builds something."</div>
-      </div>
-    </div>
-
-    <div class="accent-box">
-      <h3>The Compounding Effect</h3>
-      <p>A month of small, consistent deposits changes more than one dramatic gesture ever could. Confidence doesn't come from a single breakthrough moment. It comes from the quiet accumulation of proof that you can trust yourself.</p>
-      <p>If the account feels empty right now? That's just the starting point. Every deposit counts.</p>
-    </div>
-
-    <h2>The Part Most Parents Miss</h2>
-
-    <p>Confidence doesn't always crash overnight. Sometimes it drains gradually through months of not following through, avoiding hard things, or letting negative self-talk run unchecked. By the time you notice, the account is already low.</p>
-
-    <p>The fix isn't a big talk. It's building deposits into daily life as a regular practice, not an emergency intervention. And there's one more thing that matters more than any technique:</p>
-
-    <p><strong>Model it yourself.</strong> Let your teen see you keep promises to yourself. Let them watch you handle a setback without spiraling. Invest in things that matter to you. They're watching more than listening.</p>
-
-    <p>Tonight, pick a tiny promise. Keep it. That's the first deposit. The account is open.</p>
+    <p>Let them keep going.</p>
 
     <footer>
-      <p>Informed by developmental research on self-efficacy and adolescent confidence-building. Published by kungfu.family</p>
+      <p>Published by kungfu.family</p>
     </footer>
-
   </div>
 </body>
 </html>

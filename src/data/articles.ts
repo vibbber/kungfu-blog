@@ -2480,6 +2480,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: replace \'Good job!\' with \'How did that feel?\' — let them own the win instead of borrowing yours.',
     tldrInside: 'what-scares-you vs. what-it-builds table, letting-go timeline from age 3 to 16, 2 stat cards on crime rates and legal protections, 3 core rules for when doubt hits',
   },
+  {
+    slug: 'inner-confidence-account',
+    title: 'Your Teen\'s Hidden Account',
+    subtitle: 'Every hobby session is a deposit — here\'s why that changes everything',
+    description: 'That weird hobby your teen won\'t stop talking about? It\'s building something no amount of praise ever could. Here\'s the science of the inner confidence account.',
+    image: '/images/cards/inner-confidence-account.webp',
+    imageAlt: 'Illustrated passbook with creative doodles spilling out, representing a teen\'s inner confidence account',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Self-Worth',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-03-17',
+    dateModified: '2026-03-17',
+    tldrAnchor: 'Your teen\'s obsessive hobby is quietly building something no amount of praise can.',
+    tldrPayoff: 'Teens making regular deposits hold their own in friend groups, make values-based decisions, and recover from setbacks without spiraling.',
+    tldrMove: 'The shift: stop asking if the hobby is useful — every session where they get better at something they chose is a confidence deposit.',
+    tldrInside: '6 deposit types with deposit/withdrawal pairs, two-column diagnostic, start-small action box, weekly starter moves',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
