@@ -2520,6 +2520,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: create a head start through family routine, then let recognition and competence feed each other.',
     tldrInside: '5-stage table with what each stage creates, the \'special\' label — why local beats global, 3 lines that tell you the shift happened, 4 ways to start the snowball tonight',
   },
+  {
+    slug: 'skill-launch-sequence',
+    title: 'The Hidden Launchpad',
+    subtitle: 'World-class performers all had these 5 things at home first',
+    description: 'Researchers studied elite performers across music, math, and sport. The same 5 family conditions appeared every time — none involved spotting giftedness early.',
+    image: '/images/cards/skill-launch-sequence.webp',
+    imageAlt: 'A rocket blueprint diagram showing 5 stages of launch preparation',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-03-17',
+    dateModified: '2026-03-17',
+    tldrAnchor: 'A guitar leaning against the couch mattered more than any lesson plan.',
+    tldrPayoff: 'Kids raised this way build curiosity that survives the hard parts, become local stars in their own world, and internalize practice as routine — not punishment.',
+    tldrMove: 'The move: start with what you already love in the house, add a warm teacher, install daily practice early, then let recognition do the rest.',
+    tldrInside: '5 numbered conditions with action examples, comparison table for choosing first teacher, before/after on framing lessons, \'enforce time not quality\' warning',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
