@@ -2500,6 +2500,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop asking if the hobby is useful — every session where they get better at something they chose is a confidence deposit.',
     tldrInside: '6 deposit types with deposit/withdrawal pairs, two-column diagnostic, start-small action box, weekly starter moves',
   },
+  {
+    slug: 'the-momentum-effect',
+    title: 'The Hidden Snowball',
+    subtitle: 'Why world-class kids weren\'t born special — they were built by five quiet stages',
+    description: 'Researchers studied concert pianists, Olympic swimmers, and world-class mathematicians. None were discovered. Every one was built by a five-stage flywheel their parents set in motion.',
+    image: '/images/cards/the-momentum-effect.webp',
+    imageAlt: 'A layered snowball rolling downhill, growing larger through five stages',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-03-17',
+    dateModified: '2026-03-17',
+    tldrAnchor: 'None of the world-class performers studied looked exceptional before adolescence.',
+    tldrPayoff: 'Kids who hit this cycle practice because they want to, feel genuinely skilled at something peers can\'t do, and build an identity around achievement — not because they were pushed, but because momentum carried them.',
+    tldrMove: 'The move: create a head start through family routine, then let recognition and competence feed each other.',
+    tldrInside: '5-stage table with what each stage creates, the \'special\' label — why local beats global, 3 lines that tell you the shift happened, 4 ways to start the snowball tonight',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
