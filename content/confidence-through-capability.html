@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="strategy-id" content="58">
-  <meta name="description" content="Your kid doesn't need more praise. They need to crack an egg, miss a bus, and figure it out. Here's the capability ladder that builds real confidence.">
-  <title>The Confidence Kids Actually Keep | Kung Fu Parenting</title>
+  <meta name="description" content="That knot in your stomach when they bike away alone? That's not a warning. It's the sound of confidence being built. Why the scary moments are the ones that matter most.">
+  <title>The Scary Part Is the Point | Kung Fu Parenting</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,345 +15,319 @@
       font-family: 'Inter', -apple-system, sans-serif;
       background: #FAF6F0;
       color: #1A1A2E;
-      line-height: 1.7;
+      line-height: 1.75;
       padding: 0;
     }
 
     .blog-container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 24px 60px;
+      padding: 0 24px 60px;
     }
 
-    /* --- Hero --- */
-    .hero {
+    /* Hero */
+    .hero-img {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 0 0 16px 16px;
+    }
+
+    .hero-text {
       text-align: center;
-      margin-bottom: 48px;
+      padding: 40px 20px 32px;
     }
 
-    .hero-tag {
+    .hero-text .tag {
       display: inline-block;
       background: #5C8A5A;
       color: white;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 16px;
+      padding: 5px 16px;
       border-radius: 20px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      line-height: 1.15;
-      color: #1A1A2E;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 16px;
     }
 
-    .hero .subtitle {
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero-sub {
       font-size: 18px;
       color: #666;
+      font-style: italic;
       max-width: 560px;
       margin: 0 auto;
-      line-height: 1.6;
     }
 
-    /* --- Prose --- */
-    .prose p {
-      font-size: 17px;
-      margin-bottom: 20px;
-      color: #2C2C3E;
-    }
-
-    .prose strong {
-      color: #1A1A2E;
-      font-weight: 600;
-    }
-
-    /* --- Section Headings --- */
-    .section-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: #1A1A2E;
-      margin: 48px 0 20px;
-      line-height: 1.25;
-    }
-
-    .section-subheading {
-      font-size: 20px;
-      font-weight: 600;
+    /* Sections */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 26px;
       color: #5C8A5A;
-      margin: 36px 0 14px;
+      margin: 40px 0 16px;
+      line-height: 1.3;
     }
 
-    /* --- Images --- */
-    .blog-image {
-      width: 100%;
-      border-radius: 12px;
-      margin: 32px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
+      color: #333;
     }
 
-    .image-caption {
-      text-align: center;
-      font-size: 13px;
-      color: #888;
-      margin-top: -20px;
-      margin-bottom: 32px;
-      font-style: italic;
-    }
-
-    /* --- Callout --- */
-    .callout {
+    /* Pullquote */
+    .pullquote {
       background: #5C8A5A;
       color: white;
       padding: 28px 32px;
       border-radius: 12px;
-      margin: 36px 0;
+      margin: 32px 0;
       text-align: center;
     }
-
-    .callout p {
-      font-size: 20px;
+    .pullquote p {
+      font-family: 'Lora', serif;
+      font-size: 22px;
       font-weight: 600;
-      line-height: 1.5;
+      color: white;
       margin: 0;
+      line-height: 1.4;
+    }
+    .pullquote .attr {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      opacity: 0.8;
+      margin-top: 10px;
+      display: block;
     }
 
-    .callout .callout-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      opacity: 0.85;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    /* --- Ladder Table --- */
-    .ladder-table {
+    /* Fear/Growth flip table */
+    .flip-table {
       width: 100%;
       border-collapse: separate;
-      border-spacing: 0 6px;
-      margin: 28px 0 36px;
+      border-spacing: 0;
+      margin: 24px 0 32px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
-
-    .ladder-table th {
-      background: #5C8A5A;
-      color: white;
-      padding: 12px 16px;
-      text-align: left;
+    .flip-table thead th {
+      padding: 14px 20px;
       font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
     }
-
-    .ladder-table th:first-child {
-      border-radius: 8px 0 0 8px;
+    .flip-table thead th:first-child {
+      background: #FEF3F0;
+      color: #C0392B;
+      text-align: left;
     }
-
-    .ladder-table th:last-child {
-      border-radius: 0 8px 8px 0;
+    .flip-table thead th:last-child {
+      background: #EDF7ED;
+      color: #5C8A5A;
+      text-align: left;
     }
-
-    .ladder-table td {
-      padding: 14px 16px;
-      background: white;
+    .flip-table td {
+      padding: 14px 20px;
       font-size: 15px;
+      border-bottom: 1px solid #eee;
       vertical-align: top;
     }
-
-    .ladder-table tr td:first-child {
-      border-radius: 8px 0 0 8px;
-      font-weight: 600;
-      color: #5C8A5A;
-      white-space: nowrap;
+    .flip-table tr:last-child td { border-bottom: none; }
+    .flip-table td:first-child {
+      background: #FFFBF9;
+      color: #8B4513;
+    }
+    .flip-table td:last-child {
+      background: #F8FBF8;
+      color: #2D5A2D;
+      font-weight: 500;
     }
 
-    .ladder-table tr td:last-child {
-      border-radius: 0 8px 8px 0;
+    /* In-blog image */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 32px 0;
+      display: block;
     }
 
-    .ladder-table td.skill-name {
-      font-weight: 600;
-      color: #1A1A2E;
-    }
-
-    /* --- Step Cards --- */
-    .step-cards {
+    /* Milestone cards */
+    .milestone-track {
       display: grid;
-      gap: 12px;
-      margin: 28px 0 36px;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin: 24px 0 32px;
+      position: relative;
     }
-
-    .step-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
+    .milestone-track::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #E8A598, #5C8A5A);
+      border-radius: 2px;
+    }
+    .milestone {
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      gap: 20px;
+      padding: 16px 0;
+      position: relative;
     }
-
-    .step-number {
-      background: #E8A598;
-      color: white;
-      width: 36px;
-      height: 36px;
+    .milestone-dot {
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      background: #5C8A5A;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 16px;
-      flex-shrink: 0;
+      margin-top: 4px;
+      margin-left: 18px;
+      z-index: 1;
+      border: 3px solid #FAF6F0;
     }
-
-    .step-content h4 {
-      font-size: 16px;
+    .milestone-content {
+      flex: 1;
+    }
+    .milestone-age {
+      font-size: 12px;
+      font-weight: 700;
+      color: #E8A598;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+    .milestone-title {
+      font-family: 'Lora', serif;
+      font-size: 17px;
       font-weight: 600;
       color: #1A1A2E;
       margin-bottom: 4px;
     }
-
-    .step-content p {
+    .milestone-desc {
       font-size: 14px;
       color: #555;
-      line-height: 1.6;
       margin: 0;
+      line-height: 1.6;
     }
-
-    .step-content .script {
-      background: #F4F1EB;
-      padding: 8px 12px;
-      border-radius: 6px;
-      margin-top: 8px;
-      font-size: 14px;
-      color: #5C8A5A;
+    .milestone-fear {
+      font-size: 13px;
+      color: #B8860B;
       font-style: italic;
-      border-left: 3px solid #5C8A5A;
+      margin: 4px 0 0;
     }
 
-    /* --- Before/After --- */
-    .compare-grid {
+    /* Script box */
+    .script-box {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .script-box h3 {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      color: #5C8A5A;
+      margin-bottom: 16px;
+    }
+    .script-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+      align-items: baseline;
+    }
+    .script-row:last-child { margin-bottom: 0; }
+    .script-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .label-dont { background: #FEF3F0; color: #C0392B; }
+    .label-do { background: #EDF7ED; color: #5C8A5A; }
+    .script-text {
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* Stats row */
+    .stats-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      margin: 28px 0 36px;
+      margin: 28px 0;
     }
-
-    .compare-col {
-      border-radius: 10px;
+    .stat-card {
+      background: white;
+      border-radius: 12px;
       padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-
-    .compare-col.before {
-      background: #FEF3F0;
-      border: 1px solid #E8A598;
+    .stat-number {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #5C8A5A;
     }
-
-    .compare-col.after {
-      background: #EDF7ED;
-      border: 1px solid #5C8A5A;
-    }
-
-    .compare-col h4 {
+    .stat-label {
       font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-      font-weight: 700;
+      color: #777;
+      margin-top: 4px;
     }
 
-    .compare-col.before h4 { color: #C0392B; }
-    .compare-col.after h4 { color: #5C8A5A; }
-
-    .compare-col ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .compare-col li {
-      font-size: 14px;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      line-height: 1.5;
-    }
-
-    .compare-col li:last-child { border-bottom: none; }
-
-    /* --- Warm Box --- */
-    .warm-box {
-      background: #FFF9E6;
-      border: 1px solid #F0C674;
-      border-radius: 10px;
-      padding: 24px;
-      margin: 32px 0;
-    }
-
-    .warm-box h3 {
-      font-size: 16px;
-      color: #B8860B;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .warm-box p, .warm-box li {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.65;
-    }
-
-    .warm-box ul {
-      padding-left: 18px;
-      margin-top: 8px;
-    }
-
-    .warm-box li {
-      margin-bottom: 8px;
-    }
-
-    /* --- Closer --- */
-    .closer {
+    /* Bottom CTA */
+    .bottom-box {
       background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
       color: white;
       padding: 32px;
       border-radius: 12px;
-      margin: 48px 0 0;
+      margin: 40px 0 20px;
       text-align: center;
     }
-
-    .closer p {
-      font-size: 19px;
-      font-weight: 500;
-      line-height: 1.6;
+    .bottom-box h3 {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .bottom-box p {
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
       margin: 0;
-      max-width: 600px;
+      max-width: 560px;
       margin: 0 auto;
     }
 
     footer {
-      margin-top: 48px;
+      margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid #DDD;
+      border-top: 1px solid #ddd;
       font-size: 12px;
       color: #999;
       text-align: center;
     }
 
-    /* --- Mobile --- */
-    @media (max-width: 640px) {
-      .hero h1 { font-size: 30px; }
-      .section-heading { font-size: 24px; }
-      .compare-grid { grid-template-columns: 1fr; }
-      .blog-container { padding: 24px 16px 40px; }
-      .callout { padding: 24px 20px; }
-      .callout p { font-size: 18px; }
-      .ladder-table { font-size: 14px; }
-      .ladder-table td, .ladder-table th { padding: 10px 12px; }
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+      .stats-row { grid-template-columns: 1fr; }
+      .pullquote p { font-size: 18px; }
+      .flip-table td, .flip-table thead th { padding: 10px 14px; font-size: 14px; }
     }
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
     .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
@@ -367,289 +341,222 @@
 </head>
 <body>
 
+<img src="/images/blog/confidence-through-capability/hero.webp" alt="A child confidently cooking alone in a sunlit kitchen" class="hero-img">
+
 <div class="blog-container">
 
-  <!-- Hero -->
-  <div class="hero">
-    <span class="hero-tag">Independence + Confidence</span>
-    <h1>The Confidence Kids Actually Keep</h1>
+  <div class="hero-text">
+    <span class="tag">Confidence</span>
+    <h1>The Scary Part Is the Point</h1>
     <div class="tldr-box">
-      <p class="tldr-anchor">Confidence isn't built by gold stars. It's built by cracking eggs and missing buses.</p>
+      <p class="tldr-anchor">Confidence doesn't come from praise. It comes from doing hard things.</p>
       <ul>
-        <li>Kids raised on real-world skills handle rejection, navigate airports solo, and manage their own appointments -- without needing you.</li>
-        <li>The move: start earlier than feels comfortable, let them struggle, and ask 'How did that feel?' instead of 'Great job!'</li>
+        <li>Kids who cook, navigate, make phone calls, and travel without a parent hovering develop lower anxiety and stronger self-regulation — measurably, within weeks.</li>
+        <li>The shift: replace 'Good job!' with 'How did that feel?' — let them own the win instead of borrowing yours.</li>
       </ul>
       <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>Age-by-age skill tables across 3 domains &middot; 3 word-for-word scripts &middot; before/after grid on unsupervised time &middot; 'But is it safe?' myth-buster with crime stats</div>
+      <div class="tldr-inside"><strong>Inside: </strong>what-scares-you vs. what-it-builds table &middot; letting-go timeline from age 3 to 16 &middot; 2 stat cards on crime rates and legal protections &middot; 3 core rules for when doubt hits</div>
     </div>
-    <p class="subtitle">It doesn't come from gold stars. It comes from cracking an egg, missing a bus, and figuring it out anyway.</p>
+    <p class="hero-sub">That knot in your stomach when they ride off alone? Don't fight it. It means the confidence machine is working.</p>
   </div>
 
-  <!-- Opening -->
-  <div class="prose">
-    <p>A seven-year-old stands at the kitchen counter. She's cracking an egg into a bowl. Shells everywhere. Yolk on the counter. She doesn't look at you for approval. She grabs another egg.</p>
+  <p>Your seven-year-old wants to bike to the park alone. Your stomach drops. You run the scenarios: the intersection, the stranger, the fall. Every cell in your body says <em>not yet</em>.</p>
 
-    <p>That moment -- total focus, zero performance -- is where real confidence lives. Not in the "great job!" you were about to say. Not in the trophy on the shelf. In the quiet knowledge that <strong>she can handle this</strong>.</p>
-  </div>
+  <p>Here's the thing nobody tells you: that feeling isn't a warning sign. It's the exact sensation of confidence being built — theirs <em>and</em> yours.</p>
 
-  <img src="/images/blog/confidence-through-capability/kitchen-independence.webp" alt="A child confidently cooking alone at a kitchen counter" class="blog-image">
-  <p class="image-caption">The face of a kid who doesn't need your help.</p>
+  <p>Developmental research keeps landing on the same finding: children who regularly handle real-world tasks on their own — cooking, navigating, buying things, solving problems without a parent hovering — develop stronger self-regulation, lower anxiety, and greater resilience. Not because the tasks are hard. Because the tasks are <em>real</em>.</p>
 
-  <div class="prose">
-    <p>Here's what developmental research keeps finding, decade after decade: children who regularly do real things -- cook, navigate, manage money, talk to strangers in shops -- develop stronger self-regulation, lower anxiety, and more resilience than kids who are shielded from those experiences.</p>
+  <h2>The Flip</h2>
 
-    <p>Not a little more. <strong>Measurably more.</strong> In clinical studies, kids who started structured daily independent activities showed significant reductions in anxiety within weeks. Their parents felt more confident, too.</p>
-  </div>
+  <p>Every parenting fear has a mirror image. The moment that scares you is the exact moment something clicks for your kid. Look at the flip:</p>
 
-  <div class="callout">
-    <p class="callout-label">The core idea</p>
-    <p>Capability is the engine of confidence. Every skill your child masters is one less thing they need you for -- and one more reason they trust themselves.</p>
-  </div>
-
-  <!-- The Ladder -->
-  <h2 class="section-heading">The Capability Ladder</h2>
-
-  <div class="prose">
-    <p>Independence isn't one big leap. It's a ladder. Each rung builds on the last, and every new skill unlocks the next one. Here's what it looks like, age by age:</p>
-  </div>
-
-  <img src="/images/blog/confidence-through-capability/independence-ladder.webp" alt="Visual ladder showing a child's independence journey from tying shoes to solo travel" class="blog-image">
-  <p class="image-caption">From tying shoes to boarding passes -- every rung matters.</p>
-
-  <h3 class="section-subheading">Home Base</h3>
-
-  <table class="ladder-table">
+  <table class="flip-table">
     <thead>
       <tr>
-        <th>Age</th>
-        <th>Skill</th>
-        <th>Why It Matters</th>
+        <th>What scares you</th>
+        <th>What it builds in them</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>3-4</td>
-        <td class="skill-name">Self-care basics</td>
-        <td>Getting dressed, cleaning spills, putting things away. Set up kid-height shelves and step back.</td>
+        <td>They miss the bus</td>
+        <td>They learn to problem-solve under pressure</td>
       </tr>
       <tr>
-        <td>4-5</td>
-        <td class="skill-name">Kitchen helper</td>
-        <td>Stirring, measuring, pouring. Baking from a box mix is the gateway drug.</td>
+        <td>The recipe fails spectacularly</td>
+        <td>They learn that failure isn't permanent</td>
       </tr>
       <tr>
-        <td>8-10</td>
-        <td class="skill-name">Laundry, start to finish</td>
-        <td>Sort, wash, dry, fold, put away. Their clothes first. Frame it as team, not punishment.</td>
+        <td>They get lost in the store</td>
+        <td>They learn to ask strangers for help</td>
       </tr>
       <tr>
-        <td>10-12</td>
-        <td class="skill-name">Cook a full meal</td>
-        <td>Plan it, shop for it, cook it, serve it. Bonus: that's one night off for you.</td>
+        <td>They call and say "I don't know what to do"</td>
+        <td>They learn to name the problem before solving it</td>
+      </tr>
+      <tr>
+        <td>Nobody sits with them at lunch</td>
+        <td>They learn they can survive discomfort</td>
+      </tr>
+      <tr>
+        <td>They spend their money on something stupid</td>
+        <td>They learn what "not worth it" actually feels like</td>
       </tr>
     </tbody>
   </table>
 
-  <h3 class="section-subheading">Getting Around</h3>
+  <p>The pattern holds every time: struggle followed by success wires confidence. Struggle followed by rescue wires helplessness.</p>
 
-  <table class="ladder-table">
-    <thead>
-      <tr>
-        <th>Age</th>
-        <th>Skill</th>
-        <th>Why It Matters</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>7-9</td>
-        <td class="skill-name">Walk or bike the neighborhood</td>
-        <td>To the park, a friend's house. Start with routes you've done together.</td>
-      </tr>
-      <tr>
-        <td>11-14</td>
-        <td class="skill-name">Bike for real transportation</td>
-        <td>Not recreation -- actually getting to school or activities. E-bikes expand range dramatically.</td>
-      </tr>
-      <tr>
-        <td>12-15</td>
-        <td class="skill-name">Solo air or train travel</td>
-        <td>Navigating gates, handling delays, managing luggage. Massive confidence builder.</td>
-      </tr>
-      <tr>
-        <td>15-16</td>
-        <td class="skill-name">Learn to drive</td>
-        <td>The single biggest independence unlock. Jobs, social life, errands -- all without needing you.</td>
-      </tr>
-    </tbody>
-  </table>
+  <img src="/images/blog/confidence-through-capability/let-go.webp" alt="A child biking down a tree-lined street while a parent watches from a porch" class="blog-img">
 
-  <h3 class="section-subheading">Social Skills</h3>
+  <h2>The Timeline of Letting Go</h2>
 
-  <table class="ladder-table">
-    <thead>
-      <tr>
-        <th>Age</th>
-        <th>Skill</th>
-        <th>Why It Matters</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>5-8</td>
-        <td class="skill-name">Store errands</td>
-        <td>Find an item a few aisles away. Buy something at a register. Handle money, talk to cashiers.</td>
-      </tr>
-      <tr>
-        <td>8-10</td>
-        <td class="skill-name">Phone calls</td>
-        <td>Ordering takeout, calling a relative. Many young adults can't do this because they never practiced.</td>
-      </tr>
-      <tr>
-        <td>13-15</td>
-        <td class="skill-name">Get a job or volunteer</td>
-        <td>Babysitting, yard work, camp counselor. Teens need to feel useful -- school rarely provides that.</td>
-      </tr>
-      <tr>
-        <td>14-16</td>
-        <td class="skill-name">Manage appointments</td>
-        <td>Schedule their own haircut, doctor visit. Once driving, they go solo. One less thing on your calendar.</td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Most parents wait too long. If you're wondering whether they're ready, they probably were six months ago. Here's what the research-backed progression looks like — and what that scary-proud moment feels like at each stage:</p>
 
-  <!-- The hard part -->
-  <h2 class="section-heading">When They Say "I Can't"</h2>
-
-  <div class="prose">
-    <p>Your kid says "I'm scared." Your instinct says pull them back. But here's what the research on childhood anxiety consistently shows: the most effective approach isn't avoidance. It's graduated, supported exposure. Kids who regularly face manageable challenges develop a fundamentally different relationship with uncertainty.</p>
-  </div>
-
-  <div class="step-cards">
-    <div class="step-card">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h4>Acknowledge the feeling</h4>
-        <p>Don't dismiss it. Don't fix it. Just name it.</p>
-        <div class="script">"I know it feels big."</div>
+  <div class="milestone-track">
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 3-5</div>
+        <div class="milestone-title">They pour their own cereal. Badly.</div>
+        <p class="milestone-desc">Milk on the counter. Cheerios on the floor. They beam like they've conquered Everest. Set up kid-height shelves, smaller containers, accessible supplies — then step back.</p>
+        <p class="milestone-fear">Your fear: the mess. The growth: "I can feed myself."</p>
       </div>
     </div>
-    <div class="step-card">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h4>Nudge toward the next small step</h4>
-        <p>Not the whole thing. Just the next piece.</p>
-        <div class="script">"Let's try it and see what happens."</div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 5-8</div>
+        <div class="milestone-title">They buy something at the store. Alone.</div>
+        <p class="milestone-desc">Send them a few aisles away to find an item. Later, they handle the register while you hang back. Talking to cashiers, counting money — foundational social muscles.</p>
+        <p class="milestone-fear">Your fear: they'll freeze up. The growth: "I can talk to adults."</p>
       </div>
     </div>
-    <div class="step-card">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h4>Let them own the win</h4>
-        <p>After they do it, resist the urge to praise. Ask instead:</p>
-        <div class="script">"How did that feel?"</div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 7-9</div>
+        <div class="milestone-title">They walk to the park without you.</div>
+        <p class="milestone-desc">Start with routes you've done together. A watch or basic phone gives a check-in option without the distraction of a smartphone. Gradually extend the range.</p>
+        <p class="milestone-fear">Your fear: the intersection. The growth: "I can navigate the world."</p>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 8-10</div>
+        <div class="milestone-title">They make a phone call to a stranger.</div>
+        <p class="milestone-desc">Ordering takeout. Calling a relative. Making a reservation. Many young adults struggle with phone calls because they never practiced as kids. Start with low-stakes calls.</p>
+        <p class="milestone-fear">Your fear: awkwardness. The growth: "I can handle conversations."</p>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 10-12</div>
+        <div class="milestone-title">They cook dinner for the family.</div>
+        <p class="milestone-desc">Plan, shop for ingredients, cook, serve. Once or twice a week. Bonus: that's one night you don't have to think about dinner.</p>
+        <p class="milestone-fear">Your fear: the knife, the stove. The growth: "I can take care of other people."</p>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 12-15</div>
+        <div class="milestone-title">They fly solo.</div>
+        <p class="milestone-desc">Airlines offer unaccompanied minor programs starting around age 5. Navigating gates, handling delays, managing luggage — a massive confidence lever.</p>
+        <p class="milestone-fear">Your fear: everything. The growth: "I can go anywhere."</p>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="milestone-dot"></div>
+      <div class="milestone-content">
+        <div class="milestone-age">Ages 14-16</div>
+        <div class="milestone-title">They plan an adventure. No adults.</div>
+        <p class="milestone-desc">A hike, a camping trip, an afternoon at the beach — planned and executed by teens without you. This is where real judgment develops.</p>
+        <p class="milestone-fear">Your fear: the unknown. The growth: "I trust myself."</p>
       </div>
     </div>
   </div>
 
-  <div class="prose">
-    <p>That third step is the one that matters most. When you ask "how did that feel?" instead of saying "great job!" -- you're handing ownership of the experience back to them. The confidence becomes <strong>theirs</strong>, not a reflection of your approval.</p>
-  </div>
+  <img src="/images/blog/confidence-through-capability/solo-travel.webp" alt="A teenager confidently standing at an airport gate with a backpack" class="blog-img">
 
-  <!-- Unsupervised time -->
-  <h2 class="section-heading">The Secret Ingredient: Unsupervised Time</h2>
+  <h2>What to Say When They're Scared</h2>
 
-  <div class="prose">
-    <p>Skills are one half. The other half is time without adults managing everything. Boredom, problem-solving, negotiating with peers -- none of that happens when a grown-up is running the show.</p>
-  </div>
+  <p>They'll say "I can't" or "I'm scared." That's not a stop sign. It means the challenge is real — which means the growth will be too. Here's the script:</p>
 
-  <div class="compare-grid">
-    <div class="compare-col before">
-      <h4>Supervised default</h4>
-      <ul>
-        <li>Adult solves conflicts between kids</li>
-        <li>Schedule filled with structured activities</li>
-        <li>Boredom = parent's problem to fix</li>
-        <li>Kid waits for instructions</li>
-      </ul>
+  <div class="script-box">
+    <h3>The Moment They Hesitate</h3>
+    <div class="script-row">
+      <span class="script-label label-dont">Skip</span>
+      <span class="script-text">"You'll be fine!" (dismisses the feeling)</span>
     </div>
-    <div class="compare-col after">
-      <h4>Unsupervised growth</h4>
-      <ul>
-        <li>Kids negotiate, argue, resolve it themselves</li>
-        <li>Open blocks where they figure out what to do</li>
-        <li>Boredom = starting line for creativity</li>
-        <li>Kid takes initiative because nobody else will</li>
-      </ul>
+    <div class="script-row">
+      <span class="script-label label-dont">Skip</span>
+      <span class="script-text">"Great job!" after they do it (makes it about your approval)</span>
+    </div>
+    <div class="script-row">
+      <span class="script-label label-do">Say</span>
+      <span class="script-text">"I know it feels big. Let's try it and see what happens."</span>
+    </div>
+    <div class="script-row">
+      <span class="script-label label-do">After</span>
+      <span class="script-text">"How did that feel?" (lets them own the win)</span>
     </div>
   </div>
 
-  <div class="prose">
-    <p><strong>Outdoor free play</strong> from age 4-5. <strong>Home alone</strong> for short stretches by 7-8 (most kids are ready earlier than you think). <strong>Sleepaway camp</strong> before 10 if possible -- being away from parents for multiple days is a qualitatively different experience. And by the teen years, <strong>adventures with friends, no adults</strong> -- a hike, a beach day, a camping trip they planned themselves.</p>
-  </div>
+  <p>Notice what's not on the list: praise. "Good job" makes it about you. "How did that feel?" makes it about them. That's the difference between borrowed confidence and the kind they keep.</p>
 
-  <img src="/images/blog/confidence-through-capability/solo-adventure.webp" alt="A confident teenager at an airport gate, ready for solo travel" class="blog-image">
-  <p class="image-caption">The kid who missed a bus at 9 is the teenager who navigates an airport at 14.</p>
+  <h2>But Is It Even Safe?</h2>
 
-  <!-- Fear section -->
-  <div class="warm-box">
-    <h3>But is it safe?</h3>
-    <p>The most common objection: "Things are more dangerous now." They're not. Violent crime rates have fallen substantially since the early 1990s. Your child's physical environment is statistically safer than the one you grew up in. The perception of danger went up because of constant media coverage -- not because of actual risk.</p>
-    <p style="margin-top: 12px;"><strong>Something small will go wrong</strong> -- a missed bus, a scraped knee, a failed recipe, an awkward interaction. That's not a flaw in the plan. That's the plan. Constant supervision doesn't eliminate risk. It just delays the learning until the stakes are higher.</p>
-  </div>
+  <p>The fear feels modern, but the data says otherwise.</p>
 
-  <!-- Five rules -->
-  <h2 class="section-heading">Five Rules for Building the Habit</h2>
-
-  <div class="step-cards">
-    <div class="step-card">
-      <div class="step-number">1</div>
-      <div class="step-content">
-        <h4>Start earlier than feels comfortable</h4>
-        <p>If you're wondering whether they're ready, they probably were ready six months ago.</p>
-      </div>
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-number">50%+</div>
+      <div class="stat-label">Drop in violent crime since early 1990s peaks</div>
     </div>
-    <div class="step-card">
-      <div class="step-number">2</div>
-      <div class="step-content">
-        <h4>Let them struggle</h4>
-        <p>Struggle + success = confidence gets wired. Struggle + rescue = they learn to wait for rescue.</p>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-number">3</div>
-      <div class="step-content">
-        <h4>Notice capability, not compliance</h4>
-        <p>Instead of "good job," try:</p>
-        <div class="script">"You figured that out yourself." / "You handled that."</div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-number">4</div>
-      <div class="step-content">
-        <h4>Add responsibility, don't just subtract screens</h4>
-        <p>Reducing screen time? Fill the gap with real-world skills, not more adult-run activities.</p>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-number">5</div>
-      <div class="step-content">
-        <h4>Model imperfection</h4>
-        <p>Let them see you try things, mess up, and recover. Narrate your problem-solving out loud.</p>
-      </div>
+    <div class="stat-card">
+      <div class="stat-number">Multiple states</div>
+      <div class="stat-label">Have enacted laws protecting parents who grant age-appropriate independence</div>
     </div>
   </div>
 
-  <!-- Closer -->
-  <div class="closer">
-    <p>Every capable thing your child does without you is a deposit in a confidence account that will carry them through adolescence and beyond. Start now. Start small. Keep going.</p>
+  <p>The perception of danger went up because media coverage went up — not because actual risk increased. By every major statistical measure, your child's physical environment is safer than the one you grew up in.</p>
+
+  <p>And the real risk? It's not the scraped knee or the missed bus. It's a kid who reaches 18 and has never called to make their own appointment, never cooked a meal, never navigated a new place alone — and now has to do all of it at once with nobody to practice on.</p>
+
+  <div class="pullquote">
+    <p>Every capable thing your child does without you is a deposit in a confidence account that will carry them through adolescence and beyond.</p>
+  </div>
+
+  <h2>The Three Rules</h2>
+
+  <div class="script-box">
+    <h3>When Doubt Creeps In, Remember</h3>
+    <div class="script-row">
+      <span class="script-label label-do">1</span>
+      <span class="script-text"><strong>Start earlier than feels comfortable.</strong> If you're wondering if they're ready, they probably were ready six months ago.</span>
+    </div>
+    <div class="script-row">
+      <span class="script-label label-do">2</span>
+      <span class="script-text"><strong>Let them struggle.</strong> Struggle + success = confidence. Struggle + rescue = learned helplessness.</span>
+    </div>
+    <div class="script-row">
+      <span class="script-label label-do">3</span>
+      <span class="script-text"><strong>Notice capability, not compliance.</strong> Not "good job" but "you figured that out yourself."</span>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <h3>Start Tonight</h3>
+    <p>Pick one thing your kid can do that you're currently doing for them. Hand it over. Feel the knot in your stomach. Watch them figure it out. That's the feeling of confidence being built — theirs and yours.</p>
   </div>
 
   <footer>
-    <p>Kung Fu Parenting &middot; Published by kungfu.family</p>
+    <p>Kung Fu Parenting &mdash; kungfu.family</p>
   </footer>
 
 </div>
-
 </body>
 </html>

@@ -2460,6 +2460,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: run every lesson through three filters — concise, simple, objective — before you open your mouth.',
     tldrInside: '3 filters with script examples, 5-scenario before/after table, 3-second pre-speech check',
   },
+  {
+    slug: 'confidence-through-capability',
+    title: 'The Letting-Go Timeline',
+    subtitle: 'Why your fear is the signal — not the warning',
+    description: 'That knot in your stomach when they bike away alone? It\'s not a warning — it\'s the sound of confidence being built. The science of why scary moments matter most.',
+    image: '/images/cards/confidence-through-capability.webp',
+    imageAlt: 'Timeline illustration showing independence milestones from cereal to airplane with warm sage and peach tones',
+    imageWidth: 848,
+    imageHeight: 1264,
+    imageAspect: 0.671,
+    topic: 'Independence',
+    book: '10 Rules for Raising Kids in a High-Tech Age',
+    bookSlug: '10-rules-raising-kids-high-tech-twenge',
+    datePublished: '2026-03-17',
+    dateModified: '2026-03-17',
+    tldrAnchor: 'Confidence doesn\'t come from praise. It comes from doing hard things.',
+    tldrPayoff: 'Kids who cook, navigate, make phone calls, and travel without a parent hovering develop lower anxiety and stronger self-regulation — measurably, within weeks.',
+    tldrMove: 'The shift: replace \'Good job!\' with \'How did that feel?\' — let them own the win instead of borrowing yours.',
+    tldrInside: 'what-scares-you vs. what-it-builds table, letting-go timeline from age 3 to 16, 2 stat cards on crime rates and legal protections, 3 core rules for when doubt hits',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
