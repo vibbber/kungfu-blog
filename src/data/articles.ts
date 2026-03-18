@@ -2580,6 +2580,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: instead of explaining the answer, set up a situation where they stumble into it. The \'I got it!\' moment does the rest.',
     tldrInside: '3 Tell vs. Ask side-by-side swaps, 4-stage discovery staircase, 5 engine-running principles, 1 litmus test for when engagement drops',
   },
+  {
+    slug: 'momentum-engine',
+    title: 'The Boredom Flip',
+    subtitle: 'When your kid zones out at practice — the fix that sounds wrong but works',
+    description: 'When your child zones out during practice, your instinct says lower the bar. The research says the opposite. Here\'s how to flip boredom into unstoppable drive.',
+    image: '/images/cards/momentum-engine.webp',
+    imageAlt: 'A colorful difficulty dial showing the sweet spot between too easy and too hard for child practice sessions',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Motivation',
+    book: 'Bring Up Genius!',
+    bookSlug: 'bring-up-genius-polgar',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'Most parents lower the bar when kids disengage. The research says raise it.',
+    tldrPayoff: 'Kids working at the right level finish practice more energized than when they started — the mental equivalent of a good workout.',
+    tldrMove: 'The move: use the energy test — if they\'re drained after practice, the calibration is off.',
+    tldrInside: 'instinct flip table, 6 moves with scripts, praise do/don\'t grid, energy test box',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
