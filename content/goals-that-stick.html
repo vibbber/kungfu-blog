@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your teen doesn't need more motivation to hit their goals. They need fewer escape routes. Here's the 5-step system that turns 'I want to' into 'I did it.'">
-  <title>Stop Letting Your Teen's Goals Die on the Vine | Kung Fu Parenting</title>
+  <meta name="description" content="The biggest predictor of whether your teen hits their goal isn't willpower — it's who they're doing it with. Here's how to help them build a goal crew.">
+  <title>Your Teen's Friends Are a Better Goal Engine Than Your Nagging | Kung Fu Parenting</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -42,14 +42,6 @@
       line-height: 1.3;
     }
 
-    h3 {
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: #1A1A2E;
-      margin: 24px 0 10px;
-    }
-
     p {
       font-size: 16px;
       margin-bottom: 16px;
@@ -64,22 +56,30 @@
       line-height: 1.5;
     }
 
-    .hero-img {
+    .hero-img, .mid-img {
       width: 100%;
       border-radius: 16px;
       margin: 24px 0 36px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
-
     .mid-img {
-      width: 100%;
       border-radius: 12px;
       margin: 28px 0;
       box-shadow: 0 3px 14px rgba(0,0,0,0.06);
     }
 
-    /* The hook callout */
-    .hook-box {
+    /* TLDR box */
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+    /* Insight callout */
+    .insight-box {
       background: #5C8A5A;
       color: #fff;
       padding: 28px 32px;
@@ -89,15 +89,54 @@
       line-height: 1.6;
       text-align: center;
     }
-    .hook-box strong {
+    .insight-box strong {
       display: block;
       font-size: 22px;
       margin-bottom: 8px;
       font-family: 'Lora', serif;
     }
 
-    /* Step cards */
-    .step {
+    /* Solo vs Crew grid */
+    .versus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .versus-card {
+      border-radius: 14px;
+      padding: 22px 24px;
+    }
+    .versus-solo {
+      background: #FFF5F2;
+      border: 1px solid #E8A598;
+    }
+    .versus-crew {
+      background: #F0F7EF;
+      border: 1px solid #B5D6B2;
+    }
+    .versus-card h4 {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+    .versus-solo h4 { color: #C75B48; }
+    .versus-crew h4 { color: #3D6B3A; }
+    .versus-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .versus-card li {
+      font-size: 14px;
+      color: #555;
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+    .versus-solo li::before { content: '\2717'; position: absolute; left: 0; color: #E8A598; font-weight: 700; }
+    .versus-crew li::before { content: '\2713'; position: absolute; left: 0; color: #5C8A5A; font-weight: 700; }
+
+    /* Foundation steps */
+    .foundation {
       background: #fff;
       border-radius: 14px;
       padding: 24px 28px;
@@ -105,13 +144,13 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       border-left: 5px solid #5C8A5A;
     }
-    .step-header {
+    .foundation-header {
       display: flex;
       align-items: center;
       gap: 14px;
       margin-bottom: 10px;
     }
-    .step-num {
+    .foundation-num {
       background: #5C8A5A;
       color: #fff;
       width: 38px;
@@ -124,18 +163,18 @@
       font-size: 16px;
       flex-shrink: 0;
     }
-    .step-title {
+    .foundation-title {
       font-family: 'Lora', serif;
       font-size: 20px;
       font-weight: 600;
       color: #1A1A2E;
     }
-    .step p {
+    .foundation p {
       font-size: 15px;
       color: #444;
       margin-bottom: 10px;
     }
-    .step-script {
+    .foundation-script {
       background: #F0F7EF;
       border-radius: 8px;
       padding: 14px 16px;
@@ -144,7 +183,7 @@
       border-left: 3px solid #5C8A5A;
       margin-top: 8px;
     }
-    .step-script strong {
+    .foundation-script strong {
       display: block;
       font-size: 12px;
       text-transform: uppercase;
@@ -153,8 +192,8 @@
       color: #5C8A5A;
     }
 
-    /* Comparison table */
-    .compare-table {
+    /* Crew playbook table */
+    .crew-table {
       width: 100%;
       border-collapse: collapse;
       margin: 24px 0;
@@ -163,7 +202,7 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
-    .compare-table th {
+    .crew-table th {
       background: #5C8A5A;
       color: #fff;
       padding: 14px 18px;
@@ -171,19 +210,15 @@
       font-weight: 600;
       font-size: 14px;
     }
-    .compare-table td {
+    .crew-table td {
       padding: 12px 18px;
       border-bottom: 1px solid #eee;
       vertical-align: top;
+      font-size: 14px;
+      color: #444;
     }
-    .compare-table tr:last-child td {
-      border-bottom: none;
-    }
-    .compare-table tr:nth-child(even) {
-      background: #F8F4ED;
-    }
-    .col-before { color: #999; }
-    .col-after { color: #3D6B3A; font-weight: 500; }
+    .crew-table tr:last-child td { border-bottom: none; }
+    .crew-table tr:nth-child(even) { background: #F8F4ED; }
 
     /* Trap cards */
     .trap {
@@ -205,7 +240,7 @@
       margin-bottom: 0;
     }
 
-    /* Closing section */
+    /* Closing */
     .closing-box {
       background: #F0F7EF;
       border: 1px solid #C5DEC3;
@@ -219,22 +254,9 @@
       font-size: 20px;
       margin-bottom: 14px;
     }
-    .closing-box ul {
-      list-style: none;
-      padding: 0;
-    }
-    .closing-box li {
+    .closing-box p {
       font-size: 15px;
       color: #444;
-      padding: 8px 0 8px 26px;
-      position: relative;
-    }
-    .closing-box li::before {
-      content: "\2713";
-      color: #5C8A5A;
-      font-weight: 700;
-      position: absolute;
-      left: 0;
     }
 
     footer {
@@ -249,176 +271,188 @@
     @media (max-width: 600px) {
       h1 { font-size: 28px; }
       .blog-container { padding: 24px 16px; }
-      .hook-box { padding: 22px 20px; font-size: 16px; }
-      .hook-box strong { font-size: 19px; }
-      .step { padding: 18px 20px; }
+      .versus-grid { grid-template-columns: 1fr; }
+      .insight-box { padding: 22px 20px; font-size: 16px; }
+      .insight-box strong { font-size: 19px; }
+      .foundation { padding: 18px 20px; }
     }
-    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
-    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
-    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
-    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
-    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
-    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
-    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
-    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
   </style>
 </head>
 <body>
   <div class="blog-container">
 
-    <h1>Your Teen Doesn't Need More Motivation. They Need Fewer Escape Routes.</h1>
+    <h1>Your Teen's Friends Are a Better Goal Engine Than Your Nagging</h1>
 
     <div class="tldr-box">
-      <p class="tldr-anchor">Writing a goal down changes the odds. Closing the exit changes everything.</p>
+      <p class="tldr-anchor">Willpower fades. Social infrastructure doesn't.</p>
       <ul>
-        <li>Teens raised on this system set specific targets, recruit their own accountability partners, and treat setbacks as data instead of verdicts.</li>
-        <li>The move: five steps in order — shrink the goal to fit reality, make it concrete, commit fully, ride natural momentum, build a crew.</li>
+        <li>Teens who build a goal crew — even just one partner or checker — stick with commitments weeks after solo goal-setters have quietly quit.</li>
+        <li>The move: help your teen recruit a crew around their goal, then lay 4 foundations so the crew has something solid to rally around.</li>
       </ul>
       <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>5 sequenced steps with parent examples &middot; 4-row before/after comparison &middot; 3 goal-killing traps &middot; 4-point checklist for building the habit long-term</div>
-    </div>
-    <p class="subtitle">The 5-step system that turns "I want to..." into "I did it" — and why the third step is the one most families skip.</p>
-
-    <img class="hero-img" src="/images/blog/goals-that-stick/img-1.webp" alt="Illustration of a teen choosing between the committed path and the maybe path">
-
-    <p>Your kid comes home fired up. "I'm going to learn guitar." "I'm going to make varsity." "I'm going to get straight A's this semester."</p>
-
-    <p>Two weeks later: the guitar is in the closet, the running shoes are under the bed, and the textbook hasn't moved from the kitchen counter.</p>
-
-    <p>You've seen this movie before. And the natural instinct is to push: "You said you were going to do this. What happened?"</p>
-
-    <p>But the problem was never motivation. Your teen had plenty of that on day one. The problem is what happened between "I want to" and "I'm doing this" — a gap where most goals quietly die.</p>
-
-    <div class="hook-box">
-      <strong>The commitment gap is where goals go to die.</strong>
-      Motivation gets your teen started. Structure keeps them going.<br>
-      These five steps are the structure.
+      <div class="tldr-inside"><strong>Inside: </strong>Solo vs. crew comparison&middot; 4-type crew playbook table&middot; 4 foundation steps with parent scripts&middot; 3 goal-killing traps</div>
     </div>
 
-    <h2>The 5 Steps (In Order, For a Reason)</h2>
+    <p class="subtitle">Why the most powerful goal-setting tool for teenagers isn't a planner, an app, or a pep talk. It's other people.</p>
 
-    <img class="mid-img" src="/images/blog/goals-that-stick/img-2.webp" alt="Five stepping stones representing the goal-setting system">
+    <img class="hero-img" src="/images/blog/goals-that-stick/img-1.webp" alt="Teens working together on goals around a table with notebooks and laptops">
 
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">1</div>
-        <div class="step-title">Reality-Check It</div>
-      </div>
-      <p>Before your teen commits, help them map out what the goal will actually cost. Time, energy, what they'll have to say no to. If the price is too steep, don't scrap the goal — shrink it.</p>
-      <p>A smaller goal they actually finish is worth ten ambitious ones they drop.</p>
-      <div class="step-script">
-        <strong>Try this</strong>
-        Your daughter wants to make the travel soccer team. Cost: 4 practices a week, weekend tournaments, less time with friends. Too much? Scale down: try out for the rec league first, build from there.
-      </div>
+    <p>Picture two versions of your kid deciding to train for a 5K.</p>
+
+    <p>Version one: they download a running app, set the alarm for 6 AM, and head out alone. Day one goes great. Day four, it's raining. Day seven, they sleep through the alarm. By day ten, the app sends a sad little notification that nobody opens.</p>
+
+    <p>Version two: they text three friends and say, "Let's do this 5K together." Now it's Thursday at 4 PM and someone is waiting at the track. Skipping isn't just lazy — it's letting people down. Week three rolls around and they're still showing up. Not because they're more disciplined. Because the social wiring won't let them quit.</p>
+
+    <p>That's the crew effect. And it's the most underrated force in teen goal-setting.</p>
+
+    <div class="insight-box">
+      <strong>Goals are harder alone. Full stop.</strong>
+      The more connections your teen has around a goal, the stickier it gets.<br>
+      Your job isn't to be the enforcer. It's to help them build the crew.
     </div>
 
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">2</div>
-        <div class="step-title">Make It Concrete</div>
-      </div>
-      <p>A goal that lives only in your teen's head stays fuzzy. Writing it down — paper, notes app, whiteboard — forces specificity. "Get healthier" becomes "Run a 5K by June." That precision is what makes it real enough to act on.</p>
-      <div class="step-script">
-        <strong>Try this</strong>
-        Your son says "I want to be better at guitar." Help him get specific: "Learn 3 full songs by spring break." Now there's a target and a deadline.
-      </div>
-    </div>
+    <h2>Solo Goals vs. Crew Goals</h2>
 
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">3</div>
-        <div class="step-title">Close the Exit</div>
+    <img class="mid-img" src="/images/blog/goals-that-stick/img-2.webp" alt="Visual comparison of solo effort versus crew effort pushing toward a goal">
+
+    <div class="versus-grid">
+      <div class="versus-card versus-solo">
+        <h4>Going Solo</h4>
+        <ul>
+          <li>Motivation depends entirely on mood</li>
+          <li>No one notices when you skip</li>
+          <li>Setbacks feel like personal failure</li>
+          <li>Quitting is private and painless</li>
+          <li>The goal competes with everything else for attention</li>
+        </ul>
       </div>
-      <p>This is the step most families skip — and it's the most important one.</p>
-      <p>There's a moment between "I'll try" and "I'm doing this" where everything changes. Help your teen cross that line. Once they've reality-checked and made it concrete, it's time to stop hedging. Full commitment unlocks effort, creativity, and resilience that half-hearted attempts never will.</p>
-      <div class="step-script">
-        <strong>Try this</strong>
-        Your teen keeps saying "maybe I'll sign up for the coding class." Help them register, pay the fee, tell their friends. Once the exit is closed, they stop debating and start doing.
+      <div class="versus-card versus-crew">
+        <h4>With a Crew</h4>
+        <ul>
+          <li>Showing up becomes a social commitment</li>
+          <li>Someone asks "where were you?"</li>
+          <li>Setbacks become shared problem-solving</li>
+          <li>Quitting means leaving people behind</li>
+          <li>The goal becomes part of the social calendar</li>
+        </ul>
       </div>
     </div>
 
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">4</div>
-        <div class="step-title">Catch the Wave</div>
-      </div>
-      <p>Some moments carry natural momentum — a new school year, a birthday, moving to a new place, bouncing back from a setback. These are windows where change feels possible. Help your teen ride that energy.</p>
-      <p>But warn them: the feeling fades. Sticking with it when the wave passes is the real work.</p>
-      <div class="step-script">
-        <strong>Try this</strong>
-        Your teen just switched schools and is fired up to "start fresh." Channel that into something specific now, while the energy is there. In three weeks the novelty wears off, but the habit is already forming.
-      </div>
-    </div>
+    <p>Notice: the crew version doesn't require more willpower. It requires less. The social structure does the heavy lifting that self-discipline can't sustain.</p>
 
-    <div class="step">
-      <div class="step-header">
-        <div class="step-num">5</div>
-        <div class="step-title">Build a Crew</div>
-      </div>
-      <p>Goals are harder alone. Help your teen find people working toward the same thing — or who simply believe in them. A workout partner, a study group, a mentor, even a parent who checks in without nagging.</p>
-      <p>The more connections around a goal, the stickier it gets.</p>
-      <div class="step-script">
-        <strong>Try this</strong>
-        Your daughter wants to read more. She joins a book club with two friends, picks a book a month, and suddenly reading isn't a chore — it's a social thing.
-      </div>
-    </div>
+    <h2>The Crew Playbook</h2>
 
-    <h2>Before vs. After: What Changes</h2>
+    <p>Not every goal crew looks the same. Here are four types of support people your teen can recruit — and they only need one or two to change the odds dramatically.</p>
 
-    <table class="compare-table">
+    <table class="crew-table">
       <thead>
         <tr>
-          <th>Without the system</th>
-          <th>With the system</th>
+          <th>Crew Role</th>
+          <th>What They Do</th>
+          <th>Example</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="col-before">"I want to get fit" (vague, dies in a week)</td>
-          <td class="col-after">"Run a 5K by June" (specific, written down, shared)</td>
+          <td><strong>The Partner</strong></td>
+          <td>Works on the same goal alongside them</td>
+          <td>A friend who also wants to learn guitar — they practice together Wednesdays</td>
         </tr>
         <tr>
-          <td class="col-before">"Maybe I'll try coding" (hedging, no commitment)</td>
-          <td class="col-after">Registered, fee paid, friends know (exit closed)</td>
+          <td><strong>The Checker</strong></td>
+          <td>Asks how it's going (without nagging)</td>
+          <td>A parent who says "How's the running?" with curiosity, not judgment</td>
         </tr>
         <tr>
-          <td class="col-before">Sets goal on a random Tuesday (no momentum)</td>
-          <td class="col-after">Launches at the start of semester (catches the wave)</td>
+          <td><strong>The Mentor</strong></td>
+          <td>Has already done it and can shortcut the learning curve</td>
+          <td>An older cousin who ran track and can share a training plan</td>
         </tr>
         <tr>
-          <td class="col-before">Works alone, quits when it gets boring</td>
-          <td class="col-after">Study group meets Thursdays (crew keeps it alive)</td>
+          <td><strong>The Believer</strong></td>
+          <td>Simply thinks your teen can do it — and says so</td>
+          <td>A teacher who says "You'd be great at this" and means it</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>3 Traps That Kill Teen Goals</h2>
+    <p>Your teen's book club, study group, workout partner, or even a group chat where they share progress — these are all crew structures. The format matters less than the connection.</p>
 
-    <img class="mid-img" src="/images/blog/goals-that-stick/img-3.webp" alt="Illustration of a teen journaling goals with a supportive friend nearby">
+    <h2>But Crews Need a Foundation</h2>
+
+    <p>A crew amplifies whatever goal it's built around. Which means the goal itself needs to be solid. Four quick moves lay that foundation before the crew ever assembles.</p>
+
+    <img class="mid-img" src="/images/blog/goals-that-stick/img-3.webp" alt="A teenager journaling goals with thought bubbles showing concrete targets">
+
+    <div class="foundation">
+      <div class="foundation-header">
+        <div class="foundation-num">1</div>
+        <div class="foundation-title">Reality-Check It</div>
+      </div>
+      <p>Help your teen map the real cost — time, energy, what they'll say no to. If the price is too steep, shrink the goal. A smaller goal they finish beats ten ambitious ones they drop.</p>
+      <div class="foundation-script">
+        <strong>Say this</strong>
+        "Travel soccer means 4 practices a week plus weekends. That sound right to you? If it's too much, what about rec league first?"
+      </div>
+    </div>
+
+    <div class="foundation">
+      <div class="foundation-header">
+        <div class="foundation-num">2</div>
+        <div class="foundation-title">Make It Concrete</div>
+      </div>
+      <p>A goal that lives only in your teen's head stays fuzzy. Writing it down forces specificity. "Get healthier" becomes "Run a 5K by June." That precision is what makes it real enough to rally a crew around.</p>
+      <div class="foundation-script">
+        <strong>Say this</strong>
+        "You said you want to be better at guitar. What does 'better' look like? Three full songs by spring break? Now we have a target."
+      </div>
+    </div>
+
+    <div class="foundation">
+      <div class="foundation-header">
+        <div class="foundation-num">3</div>
+        <div class="foundation-title">Close the Exit</div>
+      </div>
+      <p>There's a moment between "I'll try" and "I'm doing this." Help your teen cross that line. Register, pay the fee, tell friends. Full commitment unlocks a kind of effort that hedging never will.</p>
+      <div class="foundation-script">
+        <strong>Say this</strong>
+        "You keep saying 'maybe' about the coding class. Want to just sign up? Once you're in, you'll stop debating and start building."
+      </div>
+    </div>
+
+    <div class="foundation">
+      <div class="foundation-header">
+        <div class="foundation-num">4</div>
+        <div class="foundation-title">Catch the Wave</div>
+      </div>
+      <p>New school year, birthday, fresh start after a setback — these moments carry natural momentum. Help your teen channel that energy into something specific while it's hot. The feeling fades; the habit stays.</p>
+      <div class="foundation-script">
+        <strong>Say this</strong>
+        "You're fired up about the new school. Let's pick one thing to lock in this week while you're feeling it."
+      </div>
+    </div>
+
+    <h2>3 Traps That Kill Goals Before the Crew Can Help</h2>
 
     <div class="trap">
       <h4>Trap 1: Believing the Story Others Wrote</h4>
-      <p>"Not a math person." "Too shy." "Not athletic." If your teen has been labeled, those stories quietly cap their goals before they start. Help them separate what they've been told from what they're actually capable of. Other people's assessments are opinions frozen in time — not facts.</p>
+      <p>"Not a math person." "Too shy." "Not athletic." If your teen has been labeled, those stories cap their goals before they start. Help them see: other people's assessments are opinions frozen in time, not facts.</p>
     </div>
 
     <div class="trap">
       <h4>Trap 2: The "Already Ruined" Mindset</h4>
-      <p>One bad week and your teen thinks the whole thing is blown. Skipped practice for a month? Why bother going back? This all-or-nothing thinking kills more goals than lack of ability ever will. Help them see: falling off doesn't mean starting over. It just means getting back on.</p>
+      <p>One bad week and your teen thinks the whole thing is blown. This all-or-nothing thinking kills more goals than lack of ability ever will. Falling off doesn't mean starting over — it just means getting back on.</p>
     </div>
 
     <div class="trap">
       <h4>Trap 3: Climbing the Wrong Mountain</h4>
-      <p>Sometimes the goal itself is the problem — it matters to you, or their friends, or some version of themselves that isn't real. Every so often, help them step back and ask: "Do I still want what's at the top of this?" Adjusting direction early beats arriving somewhere you never wanted to be.</p>
+      <p>Sometimes the goal matters to you, or their friends, but not actually to them. Every so often: "Do you still want what's at the top of this?" Adjusting direction early beats arriving somewhere they never wanted to be.</p>
     </div>
 
     <div class="closing-box">
-      <h3>Building the Goal-Setting Habit for Life</h3>
-      <ul>
-        <li><strong>Start small and stack wins.</strong> A teen who sets and hits a modest goal aims bigger next time. Swing-for-the-fences failures don't build that muscle.</li>
-        <li><strong>Debrief every finished goal.</strong> Hit or miss, talk about what worked and what didn't. Every goal becomes a learning rep.</li>
-        <li><strong>Model it yourself.</strong> Let your teen see you set a goal, struggle with it, and follow through (or adjust). They learn more from watching than from lectures.</li>
-        <li><strong>Separate identity from outcome.</strong> "You didn't hit the goal" is very different from "You're a quitter." Keep goals as something your teen does — not something they are.</li>
-      </ul>
+      <h3>The One Thing to Remember</h3>
+      <p>Your teen doesn't need more discipline. They need more people. A workout partner who shows up on Tuesdays. A book club that picks a new title each month. A friend who texts "did you practice?" A parent who asks with curiosity, not surveillance.</p>
+      <p>Help them build that crew, give the goal a solid foundation, and then do the hardest part of all: step back and let the social engine run.</p>
     </div>
 
     <footer>

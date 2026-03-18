@@ -2620,6 +2620,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: catch yourself comparing, then name one specific effort your kid made today — out loud, to their face.',
     tldrInside: '3 hidden achievement traps, word-for-word scripts, 2 real-world scenarios, one-week praise audit',
   },
+  {
+    slug: 'goals-that-stick',
+    title: 'The Accountability Shortcut',
+    subtitle: 'One friend changes everything — the social science of teen goal-setting',
+    description: 'The biggest predictor of whether your teen hits their goal isn\'t willpower — it\'s who they\'re doing it with. Here\'s how to help them build a goal crew.',
+    image: '/images/cards/goals-that-stick.webp',
+    imageAlt: 'Phone screen showing an accountability text thread between teens supporting each other\'s goals',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Goals',
+    book: 'The 7 Habits of Highly Effective Teens',
+    bookSlug: '7-habits-effective-teens',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'Willpower fades. Social infrastructure doesn\'t.',
+    tldrPayoff: 'Teens who build a goal crew — even just one partner or checker — stick with commitments weeks after solo goal-setters have quietly quit.',
+    tldrMove: 'The move: help your teen recruit a crew around their goal, then lay 4 foundations so the crew has something solid to rally around.',
+    tldrInside: 'Solo vs. crew comparison, 4-type crew playbook table, 4 foundation steps with parent scripts, 3 goal-killing traps',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
