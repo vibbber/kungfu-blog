@@ -2560,6 +2560,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: pair daily practice with genuine, low-key performance moments that make your child feel known for what they do.',
     tldrInside: 'recognition loop mechanics, 3 rules for locking practice, parent action vs. child experience table, first teacher selection criteria',
   },
+  {
+    slug: 'staircase-method',
+    title: 'The Slow Staircase',
+    subtitle: 'Why extraordinary kids have patient parents — and how staying easy builds unstoppable learners',
+    description: 'The parents raising extraordinary kids aren\'t pushing harder. They\'re staying easy longer. Here\'s the four-stage staircase that makes mastery feel like play.',
+    image: '/images/cards/staircase-method.webp',
+    imageAlt: 'Warm illustration of building blocks ascending through clouds forming a gentle staircase',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Skill Development',
+    book: 'Bring Up Genius!',
+    bookSlug: 'bring-up-genius-polgar',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'Kids don\'t quit hard things. They quit things that stopped being fun too early.',
+    tldrPayoff: 'Kids who learn this way practice without being told, bounce back from losses, and eventually teach themselves new skills on their own.',
+    tldrMove: 'The move: stay at the easy level longer than feels right — hundreds of reps after they\'ve \'got it\' — so the foundation becomes automatic.',
+    tldrInside: '4-stage staircase framework, 3 instead-of/try-this swaps, 5 motivation fuel principles, litmus test for when something\'s off',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
