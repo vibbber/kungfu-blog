@@ -2540,6 +2540,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: start with what you already love in the house, add a warm teacher, install daily practice early, then let recognition do the rest.',
     tldrInside: '5 numbered conditions with action examples, comparison table for choosing first teacher, before/after on framing lessons, \'enforce time not quality\' warning',
   },
+  {
+    slug: 'skill-launch-sequence',
+    title: 'Identity, Not Practice',
+    subtitle: 'The moment a hobby becomes who your child is — and why that changes everything',
+    description: 'The hidden phase that locks in a skill for life isn\'t practice or talent — it\'s when the activity becomes part of who your child is. Here\'s how to engineer that shift.',
+    image: '/images/cards/skill-launch-sequence.webp',
+    imageAlt: 'Illustration of a child silhouette filled with piano keys, representing skill becoming identity',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Talent Development',
+    book: 'Developing Talent in Young People',
+    bookSlug: 'benjamin-bloom-developing-talents',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'Practice doesn\'t make skills stick. Being seen does.',
+    tldrPayoff: 'Kids who get recognized early — at family dinners, school shows, in their peer group — internalize the skill as part of who they are. That\'s self-sustaining fuel.',
+    tldrMove: 'The move: pair daily practice with genuine, low-key performance moments that make your child feel known for what they do.',
+    tldrInside: 'recognition loop mechanics, 3 rules for locking practice, parent action vs. child experience table, first teacher selection criteria',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

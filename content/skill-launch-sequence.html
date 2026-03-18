@@ -4,50 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="strategy-id" content="132">
-  <title>The 5 Conditions That Were Always There Before the Talent Showed Up</title>
-  <meta name="description" content="Researchers studied world-class performers and found the same 5 family conditions every time. None of them involved spotting giftedness early.">
+  <title>The Moment Your Kid Becomes "The Piano Kid"</title>
+  <meta name="description" content="The hidden phase that locks in a skill for life isn't practice or talent — it's when the activity becomes part of who your child is. Here's how to engineer that shift.">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
+      font-family: 'Inter', sans-serif;
       background: #FAF6F0;
       color: #1A1A2E;
-      line-height: 1.75;
-      padding: 24px 20px;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .blog-container {
       max-width: 800px;
       margin: 0 auto;
+      padding: 40px 24px 60px;
     }
-    h1, h2, h3, h4 { font-family: 'Georgia', serif; }
-    a { color: #5C8A5A; }
 
-    /* Header */
-    .blog-header {
-      margin-bottom: 36px;
-      padding-bottom: 24px;
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .hero .age-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      font-size: 17px;
+      color: #6B7280;
+      max-width: 580px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    /* Body text */
+    .body-text {
+      font-size: 16px;
+      margin-bottom: 24px;
+      color: #333;
+    }
+    .body-text strong {
+      color: #1A1A2E;
+    }
+
+    /* Section headers */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
       border-bottom: 2px solid #E8A598;
     }
-    .blog-header h1 {
-      font-size: 30px;
+
+    h3 {
+      font-family: 'Lora', serif;
+      font-size: 19px;
       color: #1A1A2E;
-      line-height: 1.3;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    .blog-header .subtitle {
-      font-size: 17px;
-      color: #6B7B7B;
-      font-style: italic;
-      line-height: 1.5;
+      margin: 28px 0 12px;
     }
 
-    /* Prose */
-    .prose p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .prose strong { color: #1A1A2E; }
-
-    /* Images */
+    /* Blog images */
     .blog-img {
       width: 100%;
       border-radius: 12px;
@@ -55,77 +91,27 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
 
-    /* Callout boxes */
-    .finding-box {
+    /* Callout box */
+    .callout {
       background: #5C8A5A;
-      color: #fff;
+      color: white;
       padding: 24px 28px;
       border-radius: 12px;
       margin: 32px 0;
       text-align: center;
     }
-    .finding-box .label {
-      font-size: 11px;
+    .callout .label {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       opacity: 0.85;
       margin-bottom: 8px;
     }
-    .finding-box p {
+    .callout p {
+      font-family: 'Lora', serif;
       font-size: 19px;
       font-weight: 600;
       line-height: 1.5;
-    }
-
-    /* Condition cards */
-    .condition {
-      margin: 36px 0;
-    }
-    .condition-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-    .condition-num {
-      background: #E8A598;
-      color: #fff;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 18px;
-      flex-shrink: 0;
-      font-family: sans-serif;
-    }
-    .condition-title {
-      font-size: 22px;
-      color: #5C8A5A;
-      font-weight: 700;
-    }
-
-    /* Action strip */
-    .action-strip {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 14px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      border-left: 4px solid #5C8A5A;
-    }
-    .action-strip h4 {
-      font-size: 15px;
-      color: #5C8A5A;
-      margin-bottom: 6px;
-      font-family: sans-serif;
-    }
-    .action-strip p {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 0;
     }
 
     /* Comparison table */
@@ -136,122 +122,146 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-      margin: 20px 0;
+      margin: 24px 0;
+      font-size: 14px;
     }
     .compare-table th {
       background: #5C8A5A;
-      color: #fff;
+      color: white;
       padding: 12px 16px;
       text-align: left;
-      font-size: 13px;
-      font-family: sans-serif;
+      font-weight: 600;
     }
     .compare-table td {
-      background: #fff;
+      background: white;
       padding: 12px 16px;
-      border-bottom: 1px solid #eee;
-      font-size: 14px;
+      border-bottom: 1px solid #f0ece6;
       vertical-align: top;
     }
     .compare-table tr:last-child td { border-bottom: none; }
-    .go { color: #5C8A5A; font-weight: 600; }
-    .wait { color: #999; }
+    .check { color: #5C8A5A; font-weight: 700; }
+    .cross { color: #C0392B; font-weight: 700; }
 
-    /* Warning strip */
-    .watch-out {
-      background: #FEF3F0;
+    /* Step cards */
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 16px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       border-left: 4px solid #E8A598;
-      border-radius: 0 10px 10px 0;
-      padding: 18px 20px;
+    }
+    .step-card .step-num {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .step-card h4 {
+      display: inline;
+      font-size: 16px;
+      color: #1A1A2E;
+    }
+    .step-card p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* Script box */
+    .script-box {
+      background: #F5F0FF;
+      border-left: 4px solid #9B59B6;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
       margin: 16px 0;
     }
-    .watch-out h4 {
-      color: #C0392B;
-      font-size: 14px;
-      font-family: sans-serif;
-      margin-bottom: 4px;
-    }
-    .watch-out p { font-size: 14px; color: #555; margin: 0; }
-
-    /* Before/After */
-    .before-after {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin: 20px 0;
-    }
-    .ba-card {
-      border-radius: 10px;
-      padding: 18px;
-    }
-    .ba-before {
-      background: #FEF3F0;
-      border: 1px solid #E8A598;
-    }
-    .ba-after {
-      background: #EDF7ED;
-      border: 1px solid #5C8A5A;
-    }
-    .ba-card .ba-label {
+    .script-box .script-label {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-family: sans-serif;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .ba-before .ba-label { color: #C0392B; }
-    .ba-after .ba-label { color: #5C8A5A; }
-    .ba-card p { font-size: 14px; margin: 0; }
-    @media (max-width: 500px) {
-      .before-after { grid-template-columns: 1fr; }
-    }
-
-    /* Long game box */
-    .long-game {
-      background: #F5F0FF;
-      border: 1px solid #9B59B6;
-      padding: 24px;
-      border-radius: 10px;
-      margin: 36px 0;
-    }
-    .long-game h3 {
+      letter-spacing: 1px;
       color: #8E44AD;
-      font-size: 18px;
-      margin-bottom: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
-    .long-game ul {
-      margin-left: 20px;
-    }
-    .long-game li {
-      margin-bottom: 10px;
+    .script-box p {
+      font-family: 'Lora', serif;
+      font-style: italic;
       font-size: 15px;
-    }
-
-    /* Closer */
-    .closer {
-      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
-      color: #fff;
-      padding: 28px;
-      border-radius: 12px;
-      margin: 36px 0;
-      text-align: center;
-    }
-    .closer p {
-      font-size: 18px;
-      font-weight: 500;
+      color: #333;
       line-height: 1.6;
     }
 
+    /* Warning */
+    .warning-box {
+      background: #FEF3F0;
+      border-left: 4px solid #E74C3C;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+    .warning-box h4 {
+      color: #C0392B;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .warning-box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Insight strip */
+    .insight-strip {
+      background: #EDF7ED;
+      border: 1px solid #c8dfc8;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 13px;
+      color: #3A6B3A;
+    }
+    .insight-strip strong {
+      color: #2d5a2d;
+    }
+
+    /* Bottom box */
+    .bottom-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+    .bottom-box h3 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .bottom-box p {
+      font-size: 16px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    /* Footer */
     footer {
-      margin-top: 48px;
+      margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid #ddd;
       font-size: 12px;
       color: #999;
       text-align: center;
     }
-    footer .source { font-style: italic; }
     .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
     .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
     .tldr-box ul { list-style: none; padding: 0; margin: 0; }
@@ -263,204 +273,258 @@
   </style>
 </head>
 <body>
+<div class="blog-container">
 
-  <article>
-    <header class="blog-header">
-      <h1>The 5 Conditions That Were Always There Before the Talent Showed Up</h1>
-      <p class="subtitle">Researchers kept finding the same family setup behind world-class performers. It had nothing to do with spotting giftedness early.</p>
-    </header>
+  <div class="hero">
+    <span class="age-tag">Ages 3 - 12</span>
+    <h1>The Moment Your Kid Becomes<br>"The Piano Kid"</h1>
+    <p class="subtitle">Talent doesn't make skills stick. Identity does. Here's the phase most parents skip.</p>
+  </div>
 
-    <div class="tldr-box">
-      <p class="tldr-anchor">A guitar leaning against the couch mattered more than any lesson plan.</p>
-      <ul>
-        <li>Kids raised this way build curiosity that survives the hard parts, become local stars in their own world, and internalize practice as routine — not punishment.</li>
-        <li>The move: start with what you already love in the house, add a warm teacher, install daily practice early, then let recognition do the rest.</li>
-      </ul>
-      <hr class="tldr-divider">
-      <div class="tldr-inside"><strong>Inside: </strong>5 numbered conditions with action examples &middot; comparison table for choosing first teacher &middot; before/after on framing lessons &middot; 'enforce time not quality' warning</div>
-    </div>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Practice doesn't make skills stick. Being seen does.</p>
+    <ul>
+      <li>Kids who get recognized early — at family dinners, school shows, in their peer group — internalize the skill as part of who they are. That's self-sustaining fuel.</li>
+      <li>The move: pair daily practice with genuine, low-key performance moments that make your child feel known for what they do.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>recognition loop mechanics &middot; 3 rules for locking practice &middot; parent action vs. child experience table &middot; first teacher selection criteria</div>
+  </div>
 
-    <img src="/images/blog/skill-launch-sequence/hero.webp" alt="A warm living room filled with instruments, art supplies, and a child exploring freely" class="blog-img">
+  <p class="body-text">
+    There's a seven-year-old at every holiday dinner who gets asked to play something on the piano. She grins, hops off her chair, and plays "Fur Elise" for grandma. Grandma tears up. Uncle Dave says <em>"She's going to be famous."</em> The kid floats back to the table six inches taller.
+  </p>
 
-    <section class="prose">
-      <p>Here is the part nobody talks about when they profile a prodigy on the news: <strong>the family conditions were in place years before anyone noticed the kid was good.</strong></p>
+  <p class="body-text">
+    That moment right there? That's more important than the piano lessons, the practice schedule, and the teacher combined. That's the moment the activity stops being <strong>something she does</strong> and starts being <strong>who she is</strong>.
+  </p>
 
-      <p>Not tiger-parent conditions. Not flash-card-at-18-months conditions. Something quieter. A guitar leaning against the couch. A ball in the backyard. A parent who genuinely loved the thing before the child ever touched it.</p>
+  <p class="body-text">
+    Researchers studying world-class performers across music, sports, and academics found the same thing every time: the families that produced elite talent followed a specific five-phase sequence. And the phase that locked everything in place wasn't the one you'd guess.
+  </p>
 
-      <p>When researchers studied hundreds of world-class performers across music, sports, math, and science, the same five conditions kept appearing. Not in some families. In virtually all of them. And the families rarely realized they were doing anything special.</p>
-    </section>
+  <img src="/images/blog/skill-launch-sequence/family-performance.webp" alt="A child playing piano for delighted family members in a warm living room" class="blog-img">
 
-    <div class="finding-box">
-      <div class="label">The Research Finding</div>
-      <p>Exceptional skill doesn't start with exceptional talent. It starts with five specific family conditions &mdash; and the sequence matters more than any single step.</p>
-    </div>
+  <div class="callout">
+    <div class="label">The Research Finding</div>
+    <p>Exceptional skill doesn't start with exceptional talent. It starts with a specific sequence of family conditions &mdash; and the critical lock-in moment is when the child begins to see the activity as part of who they are.</p>
+  </div>
 
-    <img src="/images/blog/skill-launch-sequence/sequence.webp" alt="Five connected phases of the skill launch sequence" class="blog-img">
+  <h2>The Five Phases (and Which One Actually Matters Most)</h2>
 
-    <!-- CONDITION 1 -->
-    <section class="condition">
-      <div class="condition-header">
-        <div class="condition-num">1</div>
-        <div class="condition-title">The Activity Was Already in the House</div>
-      </div>
+  <p class="body-text">
+    Every family that produced a high-level performer moved through the same five phases. Most did it without any plan at all. Here's the sequence:
+  </p>
 
-      <section class="prose">
-        <p>Not placed there strategically. Not bought because someone read an article about early enrichment. It was there because the <em>parents</em> loved it. Musical parents had instruments because they played. Athletic parents went to the pool because they swam. The child absorbed what was already in the air.</p>
-      </section>
+  <img src="/images/blog/skill-launch-sequence/five-phases.webp" alt="Five ascending phases: Fill the Home, Start Lessons, Lock In Practice, Recognition Loop, Level Up" class="blog-img">
 
-      <div class="action-strip">
-        <h4>What this looks like in practice</h4>
-        <p>Background music while you cook. A sketchpad on the kitchen table. A soccer ball by the back door. The activity belongs to the family's life, not to "the child's development program."</p>
-      </div>
+  <div class="step-card">
+    <span class="step-num">1</span>
+    <h4>Fill the Home</h4>
+    <p>The activity is ambient before anyone introduces it. Background music while cooking. A ball in the backyard. A sketchpad on the kitchen table. The parents aren't engineering anything &mdash; they're living their own interests. The child absorbs what's already there.</p>
+  </div>
 
-      <div class="action-strip">
-        <h4>Then let them mess around with it</h4>
-        <p>Before any instruction: a toddler banging on keys, a kid kicking a ball against the garage, a child drawing on every surface. This unstructured play builds the kind of curiosity that survives the boring parts later.</p>
-      </div>
+  <div class="step-card">
+    <span class="step-num">2</span>
+    <h4>Start Lessons as "Just Something We Do"</h4>
+    <p>Lessons are framed as normal, not special. "Every kid should try this," not "You're gifted." All siblings take lessons too. And the first teacher? Chosen for warmth, not credentials.</p>
+  </div>
 
-      <div class="before-after">
-        <div class="ba-card ba-before">
-          <div class="ba-label">Instead of this</div>
-          <p>"We signed her up for violin because it looks good on applications."</p>
-        </div>
-        <div class="ba-card ba-after">
-          <div class="ba-label">This</div>
-          <p>"She kept picking up my guitar, so we figured &mdash; why not get her a small one?"</p>
-        </div>
-      </div>
-    </section>
+  <div class="step-card">
+    <span class="step-num">3</span>
+    <h4>Lock In the Practice Habit</h4>
+    <p>Daily practice gets installed before the schedule fills up. Parents enforce time, not quality &mdash; showing up is the only requirement. The quality follows the quantity.</p>
+  </div>
 
-    <!-- CONDITION 2 -->
-    <section class="condition">
-      <div class="condition-header">
-        <div class="condition-num">2</div>
-        <div class="condition-title">Lessons Were Framed as Normal</div>
-      </div>
+  <div class="step-card" style="border-left-color: #5C8A5A; border-left-width: 5px;">
+    <span class="step-num" style="background: #5C8A5A;">4</span>
+    <h4>The Recognition Loop</h4>
+    <p><strong>This is the one.</strong> The child performs for family, gets praise at school, earns "local star" status. The activity becomes their identity. Everything that came before was building to this. Everything after is powered by it.</p>
+  </div>
 
-      <section class="prose">
-        <p>Not "you're gifted and need special training." Just "this is something kids do." The message was matter-of-fact. All the siblings took lessons too. No one was singled out as the chosen one.</p>
+  <div class="step-card">
+    <span class="step-num">5</span>
+    <h4>Level Up</h4>
+    <p>The first teacher runs out of things to teach. Time for a more advanced instructor. But by now the child's identity is locked in &mdash; they want the challenge.</p>
+  </div>
 
-        <p>Most families who produced high performers started lessons by age 5 or 6. The key: it felt like going to school, not entering a talent pipeline.</p>
-      </section>
+  <h2>Why the Recognition Loop Changes Everything</h2>
 
-      <img src="/images/blog/skill-launch-sequence/teacher.webp" alt="A warm, patient teacher working with a young student" class="blog-img">
+  <p class="body-text">
+    Practice habits can be broken. Teachers can be quit. Even a home full of instruments doesn't guarantee anything. But once a child thinks of themselves as <strong>"the kid who plays piano"</strong> or <strong>"the one who's really good at swimming"</strong> &mdash; that's self-sustaining fuel.
+  </p>
 
-      <div class="action-strip">
-        <h4>The first teacher's only job: make your child love the activity</h4>
-        <p>Technical skill is irrelevant at this stage. Find someone patient, warm, and genuinely enthusiastic about working with young kids. Someone who makes lessons feel like play.</p>
-      </div>
+  <p class="body-text">
+    Here's what the research found happening in these families:
+  </p>
 
-      <table class="compare-table">
-        <tr>
-          <th>First Teacher Needs</th>
-          <th>Can Wait for Later</th>
-        </tr>
-        <tr>
-          <td class="go">Genuine warmth with young kids</td>
-          <td class="wait">Advanced technical ability</td>
-        </tr>
-        <tr>
-          <td class="go">Makes learning feel like play</td>
-          <td class="wait">Professional performance experience</td>
-        </tr>
-        <tr>
-          <td class="go">Gives kids chances to show off</td>
-          <td class="wait">Impressive credentials</td>
-        </tr>
-        <tr>
-          <td class="go">Honest enough to say "they've outgrown me"</td>
-          <td class="wait">A grand development plan</td>
-        </tr>
-      </table>
-    </section>
+  <table class="compare-table">
+    <tr>
+      <th>What Parents Did</th>
+      <th>What the Child Experienced</th>
+    </tr>
+    <tr>
+      <td>Asked the child to play for visiting relatives</td>
+      <td>Felt pride, attention, being "special" at something</td>
+    </tr>
+    <tr>
+      <td>Showed genuine enthusiasm at small progress</td>
+      <td>Connected effort with positive attention</td>
+    </tr>
+    <tr>
+      <td>Mentioned the child's skill to other adults in earshot</td>
+      <td>Heard themselves described as talented &mdash; started believing it</td>
+    </tr>
+    <tr>
+      <td>Put them in recitals, demos, school performances</td>
+      <td>Became "the kid who does this" in their peer group</td>
+    </tr>
+  </table>
 
-    <!-- CONDITION 3 -->
-    <section class="condition">
-      <div class="condition-header">
-        <div class="condition-num">3</div>
-        <div class="condition-title">Practice Was Installed Before the Schedule Filled Up</div>
-      </div>
+  <div class="insight-strip">
+    <strong>The shift:</strong> The child goes from "a kid who takes lessons" to "the kid who plays piano." That's not a semantic difference. That's an identity change. And identity is the most powerful force in human behavior &mdash; people act in accordance with who they believe they are.
+  </div>
 
-      <section class="prose">
-        <p>This one is sneaky. The families that got this right established daily practice as a routine <em>before</em> homework, sports leagues, and birthday parties started competing for time.</p>
+  <h2>How to Build the Loop (Without Turning Into a Stage Parent)</h2>
 
-        <p>Practice first, everything else after. That is the difference between "something we always do" and "something we squeeze in."</p>
-      </section>
+  <p class="body-text">
+    The recognition loop works because it's <em>genuine</em>. The families who pulled this off weren't performing enthusiasm. They actually cared. The trick is creating natural opportunities for your child's ability to be seen.
+  </p>
 
-      <div class="action-strip">
-        <h4>Stay involved early on</h4>
-        <p>You don't need to teach anything. Sit in on lessons, check the teacher's notes, listen from the next room. About a third of families in the research had a parent taking notes at early lessons. Most stepped back around age 10 as the child internalized the habit.</p>
-      </div>
+  <h3>Create performance moments</h3>
 
-      <div class="watch-out">
-        <h4>Enforce time, not quality</h4>
-        <p>You probably can't judge whether your child is practicing well &mdash; that's the teacher's job. What you <em>can</em> enforce is showing up. A set amount of time every day, non-negotiable, like brushing teeth. The quality follows the quantity.</p>
-      </div>
-    </section>
+  <div class="script-box">
+    <div class="script-label">Words that work</div>
+    <p>"Grandma hasn't heard you play yet &mdash; want to show her that song you learned?"</p>
+  </div>
+  <div class="script-box">
+    <div class="script-label">Words that work</div>
+    <p>"Your teacher said you nailed that last piece. I told Dad and he wants to hear it after dinner."</p>
+  </div>
 
-    <!-- CONDITION 4 -->
-    <section class="condition">
-      <div class="condition-header">
-        <div class="condition-num">4</div>
-        <div class="condition-title">Progress Got Noticed</div>
-      </div>
+  <div class="warning-box">
+    <h4>Not this</h4>
+    <p>"You're going to perform for everyone at Thanksgiving whether you like it or not." Forced performance kills the loop. The child should feel invited, not conscripted.</p>
+  </div>
 
-      <section class="prose">
-        <p>When the child learned something new, the family noticed. They asked the child to demonstrate for grandparents. They celebrated at dinner. They made the child's growing ability a source of genuine family pride &mdash; not performance pressure.</p>
+  <h3>Make it their thing, not your thing</h3>
 
-        <p>The child didn't need to be the best in the world. They needed to be the best in <em>their</em> world &mdash; the family, the classroom, the neighborhood. That local recognition built the activity into their identity.</p>
-      </section>
+  <p class="body-text">
+    The goal is for your child to feel ownership. They don't need to be the best in the world. They need to be the best in <em>their</em> world &mdash; the family, the classroom, the neighborhood. That's enough to make the activity part of their identity.
+  </p>
 
-      <div class="before-after">
-        <div class="ba-card ba-before">
-          <div class="ba-label">"A kid who takes piano lessons"</div>
-          <p>External activity. Could be dropped any time. Competes with everything else for attention.</p>
-        </div>
-        <div class="ba-card ba-after">
-          <div class="ba-label">"The kid who plays piano"</div>
-          <p>Part of who they are. Self-reinforcing. The child practices because it's what they do, not what they have to do.</p>
-        </div>
-      </div>
-    </section>
+  <table class="compare-table">
+    <tr>
+      <th><span class="check">Identity-building</span></th>
+      <th><span class="cross">Pressure-building</span></th>
+    </tr>
+    <tr>
+      <td>"You're getting so good at this."</td>
+      <td>"You need to practice more if you want to be the best."</td>
+    </tr>
+    <tr>
+      <td>Hanging their art on the fridge proudly</td>
+      <td>Comparing their work to other kids'</td>
+    </tr>
+    <tr>
+      <td>Letting them pick what to perform</td>
+      <td>Choosing their recital piece for them</td>
+    </tr>
+    <tr>
+      <td>"You're our little musician!"</td>
+      <td>"With all the money we spend on lessons, you better practice."</td>
+    </tr>
+  </table>
 
-    <!-- CONDITION 5 -->
-    <section class="condition">
-      <div class="condition-header">
-        <div class="condition-num">5</div>
-        <div class="condition-title">They Moved Up When the Time Came</div>
-      </div>
+  <h2>The Phase Before the Loop: Locking In Practice</h2>
 
-      <section class="prose">
-        <p>The warm first teacher eventually runs out of things to teach. Sometimes the teacher says so. Sometimes you notice your child isn't being challenged anymore. The families that produced top performers didn't let comfort keep their kid at a level below their ability.</p>
+  <img src="/images/blog/skill-launch-sequence/practice-routine.webp" alt="A child practicing at an instrument in morning light, focused and content" class="blog-img">
 
-        <p>In about half the cases studied, the teacher made the referral. In the other half, parents initiated the move. The timing varies &mdash; a few years with a first teacher, sometimes more. The signal: when lessons stop producing visible growth, it's time.</p>
-      </section>
+  <p class="body-text">
+    Recognition only works if there's something to recognize. Phase 3 &mdash; the practice habit &mdash; is what gives the recognition loop something to feed on.
+  </p>
 
-      <div class="watch-out">
-        <h4>Chemistry still matters at every level</h4>
-        <p>Even as teachers get more serious and demanding, the relationship has to work. If a new teacher is crushing your child's enjoyment &mdash; harsh methods, bad personality fit, teaching through fear &mdash; trust your instincts and find someone else. A child who dreads lessons won't become a child who practices willingly.</p>
-      </div>
-    </section>
+  <p class="body-text">
+    The families who did this well had three things in common:
+  </p>
 
-    <!-- Long game -->
-    <section class="long-game">
-      <h3>The Patience Multiplier</h3>
-      <ul>
-        <li><strong>Follow their energy, not your plan.</strong> The activity that sticks will be the one they gravitate toward. Your job is access, not destination.</li>
-        <li><strong>Don't skip to condition 5.</strong> Parents who rush to elite instruction before the child has a practice habit and genuine love for the activity often burn them out.</li>
-        <li><strong>Siblings are an asset.</strong> When all the kids participate, it normalizes the activity and removes "chosen one" pressure.</li>
-        <li><strong>Expect the dip.</strong> Every child hits a period where they want to quit &mdash; usually around the transition from "this is fun" to "this is hard." Gentle persistence through this phase is one of the biggest predictors of long-term development.</li>
-      </ul>
-    </section>
+  <div class="step-card">
+    <span class="step-num">1</span>
+    <h4>Practice came first in the day</h4>
+    <p>Before homework, before screens, before everything else. Kids who practice early treat it as normal. Kids who practice late treat it as optional.</p>
+  </div>
 
-    <div class="closer">
-      <p>These families didn't set out to produce world-class performers. They loved an activity, made it available, found a kind teacher, showed up for practice, celebrated progress, and upgraded instruction when the time was right.<br><br><strong>Five conditions. That's the whole sequence.</strong></p>
-    </div>
+  <div class="step-card">
+    <span class="step-num">2</span>
+    <h4>A parent was nearby (not teaching)</h4>
+    <p>Sitting in on lessons. Checking the teacher's notes. Listening from the next room. You don't need to know anything about the activity. You just need to show it matters to you.</p>
+  </div>
 
-    <footer>
-      <p class="source">Strategy #132 &mdash; Published by kungfu.family</p>
-    </footer>
-  </article>
+  <div class="step-card">
+    <span class="step-num">3</span>
+    <h4>They enforced time, not quality</h4>
+    <p>Twenty minutes at the piano, every day, no exceptions. Whether those twenty minutes were brilliant or terrible wasn't their problem &mdash; that was the teacher's domain. The parent's only job: make sure the kid shows up.</p>
+  </div>
 
+  <div class="insight-strip">
+    <strong>Research note:</strong> About a third of families had a parent sitting in on early lessons taking notes. Others monitored from nearby. Most stepped back from direct supervision around age 10 as the child internalized the habit.
+  </div>
+
+  <h2>The First Teacher Trap</h2>
+
+  <p class="body-text">
+    Parents who search for the most qualified teacher for a five-year-old are solving the wrong problem. The first teacher's only job is to make your child love the activity. That requires warmth, patience, and a gift for making learning feel like play.
+  </p>
+
+  <table class="compare-table">
+    <tr>
+      <th>First Teacher Must Have</th>
+      <th>Can Wait for Teacher #2</th>
+    </tr>
+    <tr>
+      <td><span class="check">Genuine warmth with young kids</span></td>
+      <td>Advanced technical ability</td>
+    </tr>
+    <tr>
+      <td><span class="check">Makes learning feel like play</span></td>
+      <td>Professional credentials</td>
+    </tr>
+    <tr>
+      <td><span class="check">Gives kids chances to perform</span></td>
+      <td>A grand development plan</td>
+    </tr>
+    <tr>
+      <td><span class="check">Will say "they've outgrown me"</span></td>
+      <td>Personal performance career</td>
+    </tr>
+  </table>
+
+  <p class="body-text">
+    The majority of world-class performers started with local, convenient teachers who were good with children &mdash; not experts. Many were described as average in their own skill but extraordinary at making kids excited about learning.
+  </p>
+
+  <h2>When to Level Up</h2>
+
+  <p class="body-text">
+    Phase 5 happens naturally when the identity is locked in. Watch for the signal: your child has outgrown their teacher. Sometimes the teacher says so. Sometimes you notice progress has plateaued. Don't let comfort keep them at a level below their ability.
+  </p>
+
+  <div class="warning-box">
+    <h4>Chemistry still matters at every level</h4>
+    <p>Even as teachers get more serious and demanding, the relationship has to work. If a new teacher's style is crushing your child's enjoyment &mdash; harsh methods, a bad personality fit, teaching through fear &mdash; trust your instincts and find someone else. A child who dreads lessons won't become a child who practices willingly.</p>
+  </div>
+
+  <div class="bottom-box">
+    <h3>The Bottom Line</h3>
+    <p>
+      Skills stick when they become identity. Fill the home, find a warm teacher, lock in practice, then create natural moments for your child's ability to be <em>seen</em>. Once they're "the piano kid" or "the swimming kid" &mdash; once it's who they are, not just what they do &mdash; the rest takes care of itself.
+    </p>
+  </div>
+
+  <footer>
+    <p>Strategy #132 &middot; Published by kungfu.family</p>
+  </footer>
+
+</div>
 </body>
 </html>
