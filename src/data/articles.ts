@@ -2600,6 +2600,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: use the energy test — if they\'re drained after practice, the calibration is off.',
     tldrInside: 'instinct flip table, 6 moves with scripts, praise do/don\'t grid, energy test box',
   },
+  {
+    slug: 'the-effort-lens',
+    title: 'Beyond the Trophy',
+    subtitle: 'Why the kid who lost is already planning next year\'s win',
+    description: 'Your kid\'s volcano didn\'t win. What you say next determines whether they quit science or plan something bigger. The Effort Lens builds kids who bounce back faster and dream bigger.',
+    image: '/images/cards/the-effort-lens.webp',
+    imageAlt: 'A blurred trophy on a shelf with a vibrant notebook in the foreground',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Motivation',
+    book: 'The Artist\'s Way for Parents',
+    bookSlug: 'the-artists-way-for-parents-cameron',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'Most parents accidentally teach kids that love depends on winning.',
+    tldrPayoff: 'Kids who hear effort praised treat setbacks like data. They experiment more, avoid perfectionism, and stay curious years longer than kids chasing trophies.',
+    tldrMove: 'The shift: catch yourself comparing, then name one specific effort your kid made today — out loud, to their face.',
+    tldrInside: '3 hidden achievement traps, word-for-word scripts, 2 real-world scenarios, one-week praise audit',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

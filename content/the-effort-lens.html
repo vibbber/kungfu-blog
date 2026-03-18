@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="1038">
+  <title>The Four Words That Make Kids Unstoppable</title>
+  <meta name="description" content="Your kid's volcano didn't win. What you say next determines whether they quit science or plan something bigger. The Effort Lens is the parenting move that builds kids who bounce back faster and dream bigger.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    h1, h2, h3 { font-family: 'Lora', serif; }
+    h1 {
+      font-size: 38px;
+      line-height: 1.2;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #6B7280;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+    h2 {
+      font-size: 26px;
+      color: #5C8A5A;
+      margin: 44px 0 18px;
+      line-height: 1.3;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 36px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* Script callout */
+    .script-callout {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #2D4A2D;
+      line-height: 1.6;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .compare-table th {
+      padding: 14px 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    .compare-table th.avoid { background: #FEF3F0; color: #C0392B; }
+    .compare-table th.try { background: #EDF7ED; color: #5C8A5A; }
+    .compare-table td {
+      padding: 14px 20px;
+      font-size: 15px;
+      vertical-align: top;
+      border-bottom: 1px solid #F0ECE4;
+      background: white;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* Step cards */
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin: 20px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .step-num {
+      background: #E8A598;
+      color: white;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .step-body h3 {
+      font-size: 17px;
+      color: #5C8A5A;
+      margin-bottom: 4px;
+    }
+    .step-body p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #4A4A5A;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 36px 0;
+    }
+    .highlight-box p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Scenario cards */
+    .scenario-card {
+      background: #FFFDF5;
+      border: 1px solid #E8D8B8;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 18px 0;
+    }
+    .scenario-card h3 {
+      font-size: 17px;
+      color: #5C8A5A;
+      margin-bottom: 8px;
+    }
+    .scenario-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+      color: #4A4A5A;
+    }
+
+    /* Trap grid */
+    .trap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .trap-item {
+      background: #FEF3F0;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+    .trap-item .icon { font-size: 28px; margin-bottom: 8px; }
+    .trap-item h4 {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: #C0392B;
+      margin-bottom: 6px;
+    }
+    .trap-item p { font-size: 13px; margin-bottom: 0; color: #6B4A4A; }
+
+    /* Long-term list */
+    .longterm-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .longterm-list li {
+      padding: 14px 18px 14px 48px;
+      margin-bottom: 10px;
+      background: white;
+      border-radius: 10px;
+      position: relative;
+      font-size: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .longterm-list li::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 14px;
+      height: 14px;
+      background: #E8A598;
+      border-radius: 50%;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0DCD4;
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 28px; }
+      .trap-grid { grid-template-columns: 1fr; }
+      .blog-container { padding: 24px 16px 40px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <h1>The Four Words That Make Kids Unstoppable</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">Most parents accidentally teach kids that love depends on winning.</p>
+      <ul>
+        <li>Kids who hear effort praised treat setbacks like data. They experiment more, avoid perfectionism, and stay curious years longer than kids chasing trophies.</li>
+        <li>The shift: catch yourself comparing, then name one specific effort your kid made today — out loud, to their face.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>3 hidden achievement traps &middot; word-for-word scripts &middot; 2 real-world scenarios &middot; one-week praise audit</div>
+    </div>
+    <p class="subtitle">Her volcano didn't win. She was already planning next year's. Here's what her parents did differently.</p>
+
+    <img class="hero-img" src="/images/blog/the-effort-lens/volcano-process.webp" alt="Child's hands building a science project volcano, surrounded by earlier failed attempts and colorful mixture cups">
+
+    <p>Picture this: science fair night. Your daughter's baking-soda volcano sits between a robotic arm and a hydroponic garden built by a kid who clearly had an engineer for a parent. No ribbon. No honorable mention. In the parking lot, other parents are comparing results.</p>
+
+    <p>On the drive home, you skip the consolation speech. Instead, you say:</p>
+
+    <div class="script-callout">
+      "You tested three different mixtures before you found the one that worked. That's what real scientists do."
+    </div>
+
+    <p>She grins. She's already talking about next year's project.</p>
+
+    <p>That's the Effort Lens. And it's the difference between raising a kid who folds when things get hard and a kid who treats setbacks like fuel.</p>
+
+    <h2>What Actually Happens in Their Brain</h2>
+
+    <p>Decades of motivation research boil down to something surprisingly simple: the type of praise you use literally rewires how your child responds to difficulty.</p>
+
+    <p>Kids who hear "You're so smart!" learn that ability is fixed -- you either have it or you don't. When they hit a wall, they interpret struggle as evidence that they've reached their limit. So they stop trying.</p>
+
+    <p>Kids who hear "You worked so hard on that!" learn that effort is the engine. When they hit a wall, they push. They experiment. They come back tomorrow with a new approach.</p>
+
+    <img class="inline-img" src="/images/blog/the-effort-lens/two-paths.webp" alt="Diagram showing two diverging paths: outcome praise leading to anxiety and avoidance versus effort praise leading to resilience and curiosity">
+
+    <p>Same kid. Same brain. Totally different trajectory -- based on which four words you choose.</p>
+
+    <h2>The Three Traps Most Parents Don't See</h2>
+
+    <p>Before you can use the Effort Lens, you have to spot the patterns that block it. Most parents are running at least one of these without realizing.</p>
+
+    <div class="trap-grid">
+      <div class="trap-item">
+        <div class="icon">&#127919;</div>
+        <h4>The Spotlight</h4>
+        <p>Measuring your kid against some ideal image. The prodigy. The all-rounder. When the spotlight is the goal, just showing up feels pointless.</p>
+      </div>
+      <div class="trap-item">
+        <div class="icon">&#128200;</div>
+        <h4>The Scoreboard</h4>
+        <p>Constantly comparing families. Who placed higher, who got in, who's ahead. Turns every activity into a contest and drains the joy out of learning.</p>
+      </div>
+      <div class="trap-item">
+        <div class="icon">&#9203;</div>
+        <h4>The Treadmill</h4>
+        <p>Stacking activities, raising the bar, rewarding wins with attention while ignoring daily effort. Your kid learns: "I'm only loved when I'm producing."</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <p>Noticing your child practiced for twenty minutes matters more than cheering when they bring home a trophy.</p>
+    </div>
+
+    <h2>The Swap: What to Say Instead</h2>
+
+    <p>This isn't about never celebrating wins. It's about making sure effort gets at least as much airtime. Here's the cheat sheet:</p>
+
+    <table class="compare-table">
+      <tr>
+        <th class="avoid">Instead of this</th>
+        <th class="try">Try this</th>
+      </tr>
+      <tr>
+        <td>"You won! You're the best!"</td>
+        <td>"I noticed you kept going even when that section was really hard."</td>
+      </tr>
+      <tr>
+        <td>"You got an A -- I'm so proud!"</td>
+        <td>"You practiced every single day this week."</td>
+      </tr>
+      <tr>
+        <td>"You're a natural!"</td>
+        <td>"Tell me about what you worked on -- I want to hear all of it."</td>
+      </tr>
+      <tr>
+        <td>"She's not as good as you."</td>
+        <td>Compliment other kids' efforts genuinely. Show there's room for everyone.</td>
+      </tr>
+    </table>
+
+    <h2>The Refocus Method (When You Catch Yourself Slipping)</h2>
+
+    <p>You're scrolling another family's highlights. You're replaying rankings in your head. You feel the knot. Here's what to do with it:</p>
+
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Notice the pull</h3>
+        <p>Don't judge it. Just name it. "I'm comparing again." That's the whole step.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Ask the honest question</h3>
+        <p>What am I avoiding in my own family right now? Fixating on someone else's results is almost always a way to dodge something closer to home.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Name one effort</h3>
+        <p>Think of one thing your kid did today that took real work. Not a result. The work itself. Maybe they sat with a math problem for ten minutes before asking for help.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3>Say it out loud</h3>
+        <p>Go tell them. Be specific. Not "good job" -- exactly what you saw.</p>
+      </div>
+    </div>
+
+    <div class="script-callout">
+      "I saw you go back and try that piece again after you got frustrated. That's the kind of thing that makes people get really good at things."
+    </div>
+
+    <img class="inline-img" src="/images/blog/the-effort-lens/parent-child-moment.webp" alt="A parent and child sitting together on the floor, the child showing what they built, the parent leaning in with genuine interest">
+
+    <h2>This Plays Out Everywhere</h2>
+
+    <div class="scenario-card">
+      <h3>The kid who loves building things</h3>
+      <p>A dad who grew up under relentless academic pressure catches himself starting the old script: "But with your grades, you could..." He stops. Asks his son to show him what he's building instead. The kid lights up in a way grades never produced.</p>
+    </div>
+
+    <div class="scenario-card">
+      <h3>The writer who can't write anymore</h3>
+      <p>A young woman celebrated for her writing as a teenager describes the aftermath: she can't enjoy writing anymore because every draft has to live up to that early praise. Being celebrated too soon stole the freedom to be a beginner -- the very thing creative growth requires.</p>
+    </div>
+
+    <h2>Making This Stick</h2>
+
+    <ul class="longterm-list">
+      <li><strong>Redirect dinner talk.</strong> When conversation drifts to rankings, gently steer to "What was hard today?" and "What did you try?"</li>
+      <li><strong>Model it yourself.</strong> "I rewrote that email four times before it felt right." Kids learn what you value by watching what you celebrate in your own life.</li>
+      <li><strong>Let them see you lose gracefully.</strong> "That didn't work out, but I learned something." They're always watching.</li>
+      <li><strong>Audit your praise for one week.</strong> Mental tally: outcomes vs. effort. Most parents are surprised by the ratio.</li>
+      <li><strong>Protect their right to be beginners.</strong> Resist fast-tracking mastery. Let them be bad at something for a while. That's where the real learning lives.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>The kid whose parents praise effort doesn't just bounce back from losing. She plans what she'll build next. That's the difference.</p>
+    </div>
+
+    <footer>
+      <p>Published by kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>
