@@ -2640,6 +2640,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: help your teen recruit a crew around their goal, then lay 4 foundations so the crew has something solid to rally around.',
     tldrInside: 'Solo vs. crew comparison, 4-type crew playbook table, 4 foundation steps with parent scripts, 3 goal-killing traps',
   },
+  {
+    slug: 'breaking-skills-into-steps',
+    title: 'Backward Chaining Method',
+    subtitle: 'Discouraged kids become confident finishers — one reversed step at a time',
+    description: 'The counterintuitive trick that gives kids the thrill of "I did it!" on day one. Teach the last step first, then work backward — and watch routines click into place.',
+    image: '/images/cards/breaking-skills-into-steps.webp',
+    imageAlt: 'Toothbrush in cup with checkmark representing backward chaining method',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Skill Building',
+    book: 'ABA in Schools',
+    bookSlug: 'aba-schools-carr-2023',
+    datePublished: '2026-03-18',
+    dateModified: '2026-03-18',
+    tldrAnchor: 'The secret to teaching routines is where you let your kid start.',
+    tldrPayoff: 'Kids who finish tasks themselves on day one stay motivated for weeks. They brush teeth, get dressed, and pack bags without you standing over them.',
+    tldrMove: 'The move: start at the last step so your kid gets \'I did it!\' immediately, then work backward through the whole sequence.',
+    tldrInside: '6-level help spectrum from \'just wait\' to \'guide\', 4-step error correction, 3 chaining strategy cards, environmental cue swaps for dropping reminders',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
