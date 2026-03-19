@@ -2780,6 +2780,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: run a total correction blackout while every adult quietly raises their own standard. Hold it for months.',
     tldrInside: '5-rule blackout protocol, swap sheet for 5 common habits, 4-phase timeline (weeks to months), 4 pitfall cards with recovery moves',
   },
+  {
+    slug: 'color-your-childs-space',
+    title: 'Warm Rooms, Calm Kids',
+    subtitle: 'The counterintuitive color science that explains why blue bedrooms backfire',
+    description: 'Most parents paint a hyper kid\'s room blue to calm them down. The science says that\'s backwards. Warm tones settle wired kids, cool tones energize quiet ones — and you don\'t need to repaint.',
+    image: '/images/cards/color-your-childs-space.webp',
+    imageAlt: 'Cozy terracotta bedroom corner with warm lamp light creating a calming atmosphere for children',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Environment',
+    book: 'The Education of the Child',
+    bookSlug: 'steiner-education-of-the-child',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'You don\'t need to repaint. Start with a pillowcase.',
+    tldrPayoff: 'Kids who get consistent color exposure — even from bedding and backpacks — show steadier energy and smoother transitions over 2-3 weeks.',
+    tldrMove: 'The move: swap curtains, bedding, and throw pillows to the right temperature for your child — warm for wired, cool for quiet.',
+    tldrInside: '6-item swap list ranked by impact, READ Method for getting started, 4 room-by-room examples including shared spaces, Seasonal and age-based adjustment guide',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

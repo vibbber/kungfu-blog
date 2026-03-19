@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your instinct about what color to paint your kid's room is probably backwards. Here's why warm rooms calm wired kids and cool rooms energize quiet ones.">
+  <title>You Painted the Wrong Color | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    h1, h2, h3 { font-family: 'Lora', serif; }
+    h1 {
+      font-size: 2.2rem;
+      color: #5C8A5A;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #6B7280;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 32px;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 32px;
+    }
+    p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+    h2 {
+      color: #5C8A5A;
+      font-size: 1.6rem;
+      margin: 2.5rem 0 1rem;
+    }
+    .paradox-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 24px;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .paradox-box .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    .paradox-box .main {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Side-by-side cards */
+    .match-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 600px) {
+      .match-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 1.8rem; }
+    }
+    .match-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .match-card .band {
+      padding: 14px 20px;
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .match-card.warm .band { background: linear-gradient(135deg, #D4725C, #E8A598); }
+    .match-card.cool .band { background: linear-gradient(135deg, #4A90A4, #6BB5A0); }
+    .match-card .body {
+      background: white;
+      padding: 20px;
+    }
+    .match-card .signs {
+      font-size: 0.9rem;
+      color: #6B7280;
+      margin-bottom: 12px;
+    }
+    .match-card .signs strong { color: #1A1A2E; }
+    .match-card .colors {
+      background: #FAF6F0;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+    .match-card .colors .label {
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-bottom: 4px;
+    }
+    .match-card .arrow-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: #6B7280;
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .pill.warm-pill { background: #FDEAE6; color: #B85C4A; }
+    .pill.cool-pill { background: #E0F0F0; color: #2E7D7B; }
+    .pill.calm-pill { background: #E0F0F0; color: #2E7D7B; }
+    .pill.energy-pill { background: #FEF3CD; color: #8B6914; }
+
+    /* Blog images */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9CA3AF;
+      margin-top: -1.2rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* Quick-start table */
+    .quick-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .quick-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .quick-table th:first-child { border-radius: 8px 0 0 0; }
+    .quick-table th:last-child { border-radius: 0 8px 0 0; }
+    .quick-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .quick-table tr:nth-child(even) td { background: #F9FAFB; }
+    .quick-table tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+    .quick-table tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+    /* Instinct trap callout */
+    .trap-box {
+      background: #FFF7ED;
+      border-left: 4px solid #E8A598;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 2rem 0;
+    }
+    .trap-box h3 {
+      color: #B85C4A;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .trap-box p { margin-bottom: 0; font-size: 0.95rem; }
+
+    /* Steps */
+    .step-cards {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .step-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-letter {
+      background: #E8A598;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .step-card h4 {
+      color: #5C8A5A;
+      font-family: 'Lora', serif;
+      margin-bottom: 4px;
+    }
+    .step-card p { margin-bottom: 0; font-size: 0.95rem; color: #4B5563; }
+
+    /* Room ideas */
+    .room-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .room-grid { grid-template-columns: 1fr; }
+    }
+    .room-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 3px solid #E8A598;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .room-card h4 {
+      color: #5C8A5A;
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .room-card p { margin-bottom: 0; font-size: 0.9rem; color: #4B5563; }
+
+    /* Closing */
+    .closing-box {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 28px 24px;
+      border-radius: 12px;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .closing-box p {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #E5E7EB;
+      font-size: 0.8rem;
+      color: #9CA3AF;
+      text-align: center;
+    }
+  .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+  .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+  .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+  .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+  .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+  .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+  .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+  .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>You Painted the Wrong Color</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">You don't need to repaint. Start with a pillowcase.</p>
+    <ul>
+      <li>Kids who get consistent color exposure — even from bedding and backpacks — show steadier energy and smoother transitions over 2-3 weeks.</li>
+      <li>The move: swap curtains, bedding, and throw pillows to the right temperature for your child — warm for wired, cool for quiet.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>6-item swap list ranked by impact &middot; READ Method for getting started &middot; 4 room-by-room examples including shared spaces &middot; Seasonal and age-based adjustment guide</div>
+  </div>
+  <p class="subtitle">Why your instincts about room color are probably backwards -- and how to use that to your advantage</p>
+
+  <img class="hero-img" src="/images/blog/color-your-childs-space/color-comparison.webp" alt="Split comparison: a warm coral room with a calm child reading, and a cool teal room with an energized child jumping">
+
+  <p>Your kid bounces off the walls every evening. So you paint their room a soothing ocean blue. Makes sense, right? Cool, calm, settled.</p>
+
+  <p>Except now bedtime is worse.</p>
+
+  <p>Here is the thing nobody tells you about color: the shade on the wall is not the one doing the work. Your child's visual system generates the <em>opposite</em> response. Blue walls trigger warmth. Warm walls trigger coolness. The eye compensates, the same way your body shivers in the cold -- it pushes back against what surrounds it.</p>
+
+  <p>Which means that blue room just activated your already-wired kid.</p>
+
+  <div class="paradox-box">
+    <div class="label">The Counterintuitive Rule</div>
+    <div class="main">Warm rooms calm wired kids.<br>Cool rooms energize quiet kids.</div>
+  </div>
+
+  <h2>Match the Color to the Child</h2>
+
+  <p>First, figure out which direction your child leans most of the time. Not on their wildest day or their sleepiest -- the general pattern over a typical week.</p>
+
+  <div class="match-grid">
+    <div class="match-card warm">
+      <div class="band">THE WIRED CHILD</div>
+      <div class="body">
+        <div class="signs">
+          <strong>Looks like:</strong> Restless, easily overwhelmed, emotionally reactive, trouble winding down, sensory overload
+        </div>
+        <div class="colors">
+          <div class="label">Surround them with warm tones</div>
+          Coral, terracotta, warm peach, soft red-orange
+        </div>
+        <div class="arrow-row">
+          <span class="pill warm-pill">Warm room</span>
+          <span>produces</span>
+          <span class="pill calm-pill">Cool internal response</span>
+        </div>
+      </div>
+    </div>
+    <div class="match-card cool">
+      <div class="band">THE QUIET CHILD</div>
+      <div class="body">
+        <div class="signs">
+          <strong>Looks like:</strong> Low motivation, slow to engage, hard to get moving, passive, needs lots of prompting
+        </div>
+        <div class="colors">
+          <div class="label">Surround them with cool tones</div>
+          Soft blue, teal, sage, cool aqua
+        </div>
+        <div class="arrow-row">
+          <span class="pill cool-pill">Cool room</span>
+          <span>produces</span>
+          <span class="pill energy-pill">Warm internal response</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>If your child is truly 50/50 -- sometimes wired, sometimes flat, no clear pattern -- go neutral warm: soft peach, sandy beige. That gives a gentle settling effect without overcorrecting.</p>
+
+  <img class="blog-img" src="/images/blog/color-your-childs-space/warm-bedroom.webp" alt="A warm terracotta bedroom with a child reading peacefully on the bed">
+  <p class="img-caption">A terracotta accent wall and warm peach bedding. The room feels cozy. The nervous system quietly cools down.</p>
+
+  <div class="trap-box">
+    <h3>The Instinct Trap</h3>
+    <p>Your gut says: put the hyper kid in blue, put the sluggish kid in orange. This is exactly backwards. Those colors reinforce the existing pattern instead of balancing it. The wall color triggers the <em>opposite</em> internal response -- so warm tones for the wired kid, cool tones for the flat kid.</p>
+  </div>
+
+  <h2>You Do Not Need to Repaint</h2>
+
+  <p>Seriously. Before you touch a paint can, start with what you can swap in an afternoon.</p>
+
+  <table class="quick-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Wired child (go warm)</th>
+        <th>Quiet child (go cool)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bedding</td>
+        <td>Warm peach duvet</td>
+        <td>Aqua-patterned duvet</td>
+      </tr>
+      <tr>
+        <td>Curtains</td>
+        <td>Coral or terracotta</td>
+        <td>Teal or sage green</td>
+      </tr>
+      <tr>
+        <td>Throw pillows</td>
+        <td>Soft red-orange, clay</td>
+        <td>Cool blue, mint</td>
+      </tr>
+      <tr>
+        <td>Rug</td>
+        <td>Warm jute or sienna</td>
+        <td>Slate blue or seafoam</td>
+      </tr>
+      <tr>
+        <td>Lampshade</td>
+        <td>Soft coral</td>
+        <td>Pale teal</td>
+      </tr>
+      <tr>
+        <td>Pajamas</td>
+        <td>Peach, coral tones</td>
+        <td>Teal, bright aqua</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>That last row is not a joke. Pajamas, backpacks, lunch boxes -- these surround your child for hours at a stretch. A wired kid in a soft coral hoodie. A sluggish kid in a bright teal jacket. Small, consistent exposure adds up.</p>
+
+  <img class="blog-img" src="/images/blog/color-your-childs-space/cool-bedroom.webp" alt="A cool teal bedroom with a child happily playing with building blocks">
+  <p class="img-caption">Teal walls, aqua patterns, sage bookshelf. The room feels fresh. The nervous system gently wakes up.</p>
+
+  <h2>The READ Method</h2>
+
+  <p>A four-step process to get this right without overthinking it.</p>
+
+  <div class="step-cards">
+    <div class="step-card">
+      <div class="step-letter">R</div>
+      <div>
+        <h4>Read your child's energy pattern</h4>
+        <p>Watch them over a typical week. Mostly wired and buzzing, or mostly flat and slow? Most kids lean one direction.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-letter">E</div>
+      <div>
+        <h4>Evaluate their main spaces</h4>
+        <p>Bedroom, play area, wherever they spend the most time. What colors dominate now? Are they accidentally reinforcing the pattern you want to balance?</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-letter">A</div>
+      <div>
+        <h4>Adjust with what you have</h4>
+        <p>Bedding, curtains, throw pillows, a rug, artwork. Fast wins you can try before committing to anything bigger.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-letter">D</div>
+      <div>
+        <h4>Document what shifts</h4>
+        <p>Give it 2-3 weeks. Is bedtime easier? Are mornings smoother? Energy more balanced? Color is a nudge, not magic -- but consistent nudges add up.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Room by Room</h2>
+
+  <div class="room-grid">
+    <div class="room-card">
+      <h4>Wired child's bedroom</h4>
+      <p>Terracotta accent wall behind the bed. Warm peach bedding. Soft coral lampshade. Cozy and inviting -- the nervous system quietly cools down.</p>
+    </div>
+    <div class="room-card">
+      <h4>Quiet child's bedroom</h4>
+      <p>Teal or soft blue accent wall. Aqua-patterned duvet. Sage-green bookshelf. Fresh and alive -- the system gently wakes up.</p>
+    </div>
+    <div class="room-card">
+      <h4>Shared play area</h4>
+      <p>Use zones. A warm-toned reading nook for the child who needs settling. A cool-toned building corner for the one who needs sparking.</p>
+    </div>
+    <div class="room-card">
+      <h4>Clothing and everyday items</h4>
+      <p>Pajamas, backpacks, lunch boxes -- they surround your child for hours. Think of them as portable color exposure.</p>
+    </div>
+  </div>
+
+  <h2>The Long Game</h2>
+
+  <p>Three things worth remembering as your child grows.</p>
+
+  <p><strong>Energy patterns shift.</strong> A three-year-old tornado may become a mellow seven-year-old. What works now might need updating in a year or two. Stay observant.</p>
+
+  <p><strong>Layer, do not overhaul.</strong> Add a colored throw blanket this week. Swap the curtains next month. Gradual is fine -- and easier to course-correct if you notice something is off.</p>
+
+  <p><strong>Watch for seasons.</strong> Some kids run hotter in summer and flatter in winter. Swap bedding and accessories seasonally if you notice a pattern. Two sets of pillow covers and you are covered.</p>
+
+  <div class="closing-box">
+    <p>The colors surrounding your child are already doing something.<br>You are just choosing what.</p>
+  </div>
+
+  <footer>
+    <p>Kung Fu Parenting &middot; kungfu.family</p>
+  </footer>
+
+</body>
+</html>
