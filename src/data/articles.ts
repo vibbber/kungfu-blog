@@ -2680,6 +2680,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: swap \'don\'t think about it\' for \'oh, there\'s that thought again\' — and move on.',
     tldrInside: 'Suppress vs. Observe visual breakdown, Ready-to-use challenge script, 2 follow-up scripts for real worries, 4 common mistakes to avoid',
   },
+  {
+    slug: 'the-clean-kid-trap',
+    title: 'Immune Training Ground',
+    subtitle: 'Mud, animals, and fermented foods — the real prescription for fewer sick days',
+    description: 'The dirtiest kids are often the healthiest. Here\'s why over-sanitizing backfires and 5 easy shifts to build your child\'s immune system through microbe exposure.',
+    image: '/images/cards/the-clean-kid-trap.webp',
+    imageAlt: 'Backyard scene with muddy boots, a dog, and a garden — the immune training ground for healthy kids',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Health',
+    book: 'No Such Thing as Bad Weather',
+    bookSlug: 'no-such-thing-as-bad-weather-mcgurk',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'Dirt under fingernails isn\'t negligence. It\'s immune training.',
+    tldrPayoff: 'Kids who get regular soil and animal exposure early develop fewer allergies, stronger gut health, and less asthma through adolescence.',
+    tldrMove: 'The move: rain boots and mud clothes daily, plain soap only, fermented foods at breakfast, antibiotics as last resort.',
+    tldrInside: 'sanitized vs. microbe-friendly swap table, 5 numbered shift cards, pediatrician script for antibiotic conversations',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
