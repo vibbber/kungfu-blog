@@ -2760,6 +2760,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: give a fixed weekly amount, never tie it to chores, and refuse to rescue when it runs out.',
     tldrInside: 'sample envelope breakdown, allowance vs. extra job pay table, 5-line rescue-proof script, week-by-week progression chart',
   },
+  {
+    slug: 'the-silent-upgrade',
+    title: 'Stop Correcting, Start Modeling',
+    subtitle: 'Why your lectures backfire — and what works instead',
+    description: 'The most effective way to fix your kid\'s bad habits? Stop correcting them entirely. Run a total correction blackout while every adult quietly raises their own standard.',
+    image: '/images/cards/the-silent-upgrade.webp',
+    imageAlt: 'Split illustration contrasting a parent lecturing a child versus a parent calmly modeling good behavior',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'Nurtured by Love',
+    bookSlug: 'nurtured-by-love-suzuki',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'The most effective behavior fix requires you to say absolutely nothing.',
+    tldrPayoff: 'Kids stop the rough language, the messiness, the quitting — not because they were told to, but because the household standard shifted beneath them.',
+    tldrMove: 'The move: run a total correction blackout while every adult quietly raises their own standard. Hold it for months.',
+    tldrInside: '5-rule blackout protocol, swap sheet for 5 common habits, 4-phase timeline (weeks to months), 4 pitfall cards with recovery moves',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
