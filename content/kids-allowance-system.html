@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="1534">
+  <title>Let Your Kid Go Broke | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#FAF6F0;color:#1A1A2E;line-height:1.7;padding:0;margin:0}
+    .container{max-width:800px;margin:0 auto;padding:24px 20px 60px}
+    h1{font-family:'Lora',serif;font-size:2.4em;color:#1A1A2E;line-height:1.2;margin-bottom:12px}
+    h2{font-family:'Lora',serif;font-size:1.6em;color:#5C8A5A;margin:40px 0 16px;line-height:1.3}
+    h3{font-family:'Lora',serif;font-size:1.2em;color:#1A1A2E;margin:24px 0 10px}
+    p{margin-bottom:16px;font-size:1.05em}
+    .subtitle{font-size:1.2em;color:#666;font-family:'Lora',serif;font-style:italic;margin-bottom:32px;line-height:1.5}
+    .hero-line{font-size:1.35em;font-family:'Lora',serif;font-weight:600;color:#5C8A5A;text-align:center;padding:28px 20px;margin:32px 0;border-top:2px solid #E8A598;border-bottom:2px solid #E8A598}
+    img{width:100%;border-radius:12px;margin:24px 0;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+    .card{background:white;border-radius:12px;padding:24px;margin:20px 0;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    .card h3{margin-top:0}
+
+    /* Comparison table */
+    .compare-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;margin:20px 0;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+    .compare-table th{background:#5C8A5A;color:white;padding:14px 18px;text-align:left;font-weight:600;font-size:0.95em}
+    .compare-table td{padding:12px 18px;border-bottom:1px solid #eee;font-size:0.95em;vertical-align:top}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even){background:#f9f7f3}
+    .compare-table tr:nth-child(odd){background:white}
+    .no{color:#c0392b;font-weight:600}
+    .yes{color:#5C8A5A;font-weight:600}
+
+    /* Step cards */
+    .step{display:flex;gap:16px;align-items:flex-start;background:white;border-radius:12px;padding:20px;margin:14px 0;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .step-num{width:40px;height:40px;background:#5C8A5A;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;flex-shrink:0}
+    .step-content{flex:1}
+    .step-content strong{display:block;margin-bottom:4px;font-size:1.05em}
+    .step-content p{margin-bottom:0;font-size:0.95em;color:#444}
+
+    /* Dialogue */
+    .dialogue{margin:20px 0}
+    .line{padding:10px 16px;border-radius:10px;margin:8px 0;font-size:0.95em;max-width:85%}
+    .line.parent{background:#e8f5e9;border-left:3px solid #5C8A5A;margin-right:auto}
+    .line.kid{background:#e3f2fd;border-left:3px solid #42a5f5;margin-left:auto;text-align:right;border-left:none;border-right:3px solid #42a5f5}
+    .line strong{font-size:0.85em;text-transform:uppercase;letter-spacing:0.5px;color:#888;display:block;margin-bottom:2px}
+
+    /* Envelope */
+    .envelope{background:#FFFBF0;border:2px dashed #E8A598;border-radius:12px;padding:20px 24px;margin:20px 0;font-family:'Lora',serif}
+    .envelope .name{font-weight:700;font-size:1.1em;margin-bottom:12px;color:#5C8A5A}
+    .envelope .row{display:flex;justify-content:space-between;padding:4px 0;font-size:0.95em}
+    .envelope .total{border-top:2px solid #ddd;margin-top:8px;padding-top:8px;font-weight:700;font-size:1.05em}
+    .envelope .note{font-style:italic;color:#888;font-size:0.85em;margin-top:10px}
+
+    /* Callout */
+    .callout{background:linear-gradient(135deg,#5C8A5A,#4a7848);color:white;border-radius:12px;padding:28px;margin:32px 0;text-align:center}
+    .callout p{color:white;font-family:'Lora',serif;font-size:1.2em;font-weight:600;margin-bottom:0;line-height:1.5}
+
+    /* Warning */
+    .warning{background:#fff3f0;border-left:4px solid #E8A598;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+    .warning strong{color:#c0392b}
+
+    footer{margin-top:48px;padding-top:20px;border-top:1px solid #ddd;font-size:0.8em;color:#999;text-align:center}
+    @media(max-width:600px){
+      h1{font-size:1.8em}
+      .container{padding:16px 14px 40px}
+      .step{flex-direction:column;gap:10px}
+      .line{max-width:95%}
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Let Your Kid Go Broke</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Allowance is a learning tool, not a paycheck for chores.</p>
+      <ul>
+        <li>Kids who feel &ldquo;broke&rdquo; at seven become adults who track spending, delay gratification, and handle money without drama.</li>
+        <li>The move: give a fixed weekly amount, never tie it to chores, and refuse to rescue when it runs out.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>sample envelope breakdown &middot; allowance vs. extra job pay table &middot; 5-line rescue-proof script &middot; week-by-week progression chart</div>
+    </div>
+
+    <p class="subtitle">The allowance system that teaches money skills no lecture ever could</p>
+
+    <p>Your seven-year-old blows her entire allowance on candy before Tuesday. She has nothing left for the rest of the week. She is upset. You are tempted to slip her a few dollars.</p>
+
+    <p><strong>Don't.</strong></p>
+
+    <p>What just happened is the single most effective financial education available to a child. She felt what "gone" means while the stakes are a handful of dollars, not a maxed-out credit card.</p>
+
+    <div class="hero-line">Broke at 7 beats broke at 27. Every time.</div>
+
+    <img src="/images/blog/kids-allowance-system/before-after.webp" alt="A child learning about money at age 7 grows into a financially confident adult at 27">
+
+    <h2>The Four Rules</h2>
+
+    <p>This system is dead simple. Four rules, zero exceptions. The magic is in what you <em>don't</em> do.</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>Allowance is NOT payment for chores</strong>
+        <p>Chores happen because everyone contributes to the household. Allowance is a fixed amount your child gets to <em>learn with</em>. Tie them together and your kid can quit any time: "I don't need the money, so I'm not doing dishes."</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>Same day, same time, every single week</strong>
+        <p>Saturday morning. An envelope with their name. Itemized so they can see what it covers. Consistency teaches reliability before a single dollar gets spent.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <strong>Don't force them to save</strong>
+        <p>Counterintuitive, but children learn to save only after they know what broke feels like. Mandatory savings robs them of the lesson that actually sticks.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <strong>Let them spend it however they want</strong>
+        <p>Candy, toys, saving it, losing it. As long as it is legal and safe, it is their call. When it is gone, it is gone.</p>
+      </div>
+    </div>
+
+    <h2>The Weekly Envelope</h2>
+
+    <p>Start around age five or six. Including necessities like lunch money forces them to budget for needs before wants.</p>
+
+    <img src="/images/blog/kids-allowance-system/envelope.webp" alt="A child's weekly allowance envelope on a kitchen table">
+
+    <div class="envelope">
+      <div class="name">MAYA'S WEEKLY ENVELOPE</div>
+      <div class="row"><span>Allowance</span><span>$4.00</span></div>
+      <div class="row"><span>Lunch money</span><span>$15.00</span></div>
+      <div class="row total"><span>Total</span><span>$19.00</span></div>
+      <div class="note">This is yours to manage. Make it last!</div>
+    </div>
+
+    <h2>Allowance vs. Chore Pay: Know the Difference</h2>
+
+    <table class="compare-table">
+      <tr>
+        <th></th>
+        <th>Allowance</th>
+        <th>Extra Job Pay</th>
+      </tr>
+      <tr>
+        <td><strong>What is it?</strong></td>
+        <td>Fixed weekly learning budget</td>
+        <td>Payment for work beyond normal chores</td>
+      </tr>
+      <tr>
+        <td><strong>Tied to chores?</strong></td>
+        <td><span class="no">Never</span></td>
+        <td><span class="yes">Yes — specific extra tasks</span></td>
+      </tr>
+      <tr>
+        <td><strong>Can they lose it?</strong></td>
+        <td>No — it arrives every week</td>
+        <td>Only available when extra work is offered</td>
+      </tr>
+      <tr>
+        <td><strong>What it teaches</strong></td>
+        <td>Budgeting, trade-offs, patience</td>
+        <td>Earning, initiative, work ethic</td>
+      </tr>
+    </table>
+
+    <h2>When They Run Out (And They Will)</h2>
+
+    <p>This is the moment the system works. Your job: stay warm, stay firm, do not rescue.</p>
+
+    <div class="dialogue">
+      <div class="line parent"><strong>Parent</strong>"I know that feeling. I always wish my paycheck covered more too."</div>
+      <div class="line kid"><strong>Kid</strong>"Can I get more?"</div>
+      <div class="line parent"><strong>Parent</strong>"Your next envelope comes Saturday. If you want, you could see if anyone has an extra job you could do for pay."</div>
+      <div class="line kid"><strong>Kid</strong>"That's not fair!"</div>
+      <div class="line parent"><strong>Parent</strong>"I hear you. And Saturday will be here before you know it."</div>
+    </div>
+
+    <div class="warning">
+      <strong>The one rule that makes or breaks this system:</strong> No advances. No bailouts. No "just this once." The discomfort IS the lesson. Rescue them now, and you are teaching them that money magically reappears when it runs out.
+    </div>
+
+    <img src="/images/blog/kids-allowance-system/money-cycle.webp" alt="The weekly money cycle: get envelope, spend, run out, learn">
+
+    <h2>The Learning Cycle</h2>
+
+    <p>Here is what actually happens over the first few weeks:</p>
+
+    <table class="compare-table">
+      <tr>
+        <th>Week</th>
+        <th>What They Do</th>
+        <th>What They Learn</th>
+      </tr>
+      <tr>
+        <td><strong>1-2</strong></td>
+        <td>Blow it all immediately</td>
+        <td>"Gone" is a real feeling</td>
+      </tr>
+      <tr>
+        <td><strong>3-4</strong></td>
+        <td>Slow down spending slightly</td>
+        <td>Maybe I should think first</td>
+      </tr>
+      <tr>
+        <td><strong>5-8</strong></td>
+        <td>Start setting some aside</td>
+        <td>Saving = future power</td>
+      </tr>
+      <tr>
+        <td><strong>Ongoing</strong></td>
+        <td>Make deliberate choices</td>
+        <td>Trade-offs are life. I can handle them.</td>
+      </tr>
+    </table>
+
+    <p>No lecture produces this. No chore chart. No "when I was your age" story. They learn it by living it, one envelope at a time.</p>
+
+    <h2>Why This Works</h2>
+
+    <div class="card">
+      <h3>Loss aversion is the best teacher alive</h3>
+      <p>Behavioral economics research shows that the pain of losing something you had is far more powerful than any abstract lesson about saving. A child who feels the sting of an empty wallet on Wednesday remembers it the following Saturday in a way that a hundred conversations about "being careful with money" never achieve.</p>
+    </div>
+
+    <div class="card">
+      <h3>Thousands of micro-decisions before adulthood</h3>
+      <p>A child who starts at six and gets a weekly envelope until eighteen makes roughly 600 spending decisions with real consequences. By the time they are managing a real paycheck, the muscle is already built.</p>
+    </div>
+
+    <div class="callout">
+      <p>The goal is not to teach them to save.<br>The goal is to let them go broke — safely — while the amounts are tiny.<br>Then watch them figure it out on their own.</p>
+    </div>
+
+    <footer>
+      <p>Published by kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

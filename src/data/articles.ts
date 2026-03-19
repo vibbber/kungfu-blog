@@ -2740,6 +2740,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: catch "be careful" before it leaves your mouth and replace it with a question that makes your kid think.',
     tldrInside: '5 specific replacement phrases, 6-type risky play framework, 5-item checklist for staying close without hovering',
   },
+  {
+    slug: 'kids-allowance-system',
+    title: 'No Bailout Allowance',
+    subtitle: 'Let them spend it, lose it, and figure it out — while the stakes are still tiny',
+    description: 'A four-rule allowance system that teaches kids to budget, delay gratification, and handle money — by letting them go broke on purpose at age seven.',
+    image: '/images/cards/kids-allowance-system.webp',
+    imageAlt: 'Split illustration of a child learning money management now and a confident young adult handling finances later',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Independence',
+    book: 'Parenting with Love and Logic',
+    bookSlug: 'parenting-with-love-and-logic',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'Allowance is a learning tool, not a paycheck for chores.',
+    tldrPayoff: 'Kids who feel "broke" at seven become adults who track spending, delay gratification, and handle money without drama.',
+    tldrMove: 'The move: give a fixed weekly amount, never tie it to chores, and refuse to rescue when it runs out.',
+    tldrInside: 'sample envelope breakdown, allowance vs. extra job pay table, 5-line rescue-proof script, week-by-week progression chart',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
