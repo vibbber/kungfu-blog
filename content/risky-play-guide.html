@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stop saying 'be careful' — swap two words and watch your kid build the risk-assessment skills that prevent real danger in adolescence.">
+  <title>The Two Words That Are Making Your Kid Less Safe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.75;
+      padding: 0;
+      margin: 0;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      aspect-ratio: 16/9;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Typography */
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: #6B7280;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin: 44px 0 18px;
+    }
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* The swap table */
+    .swap-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      margin: 24px 0 32px;
+    }
+    .swap-table th {
+      padding: 14px 20px;
+      text-align: left;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+    }
+    .swap-table th.old {
+      background: #E8A598;
+      color: #1A1A2E;
+      width: 38%;
+    }
+    .swap-table th.new {
+      background: #5C8A5A;
+      color: white;
+    }
+    .swap-table td {
+      padding: 13px 20px;
+      font-size: 1rem;
+      background: white;
+      border-bottom: 1px solid #f0ece4;
+    }
+    .swap-table tr:last-child td { border-bottom: none; }
+    .swap-table td:first-child {
+      color: #9B7A7A;
+      text-decoration: line-through;
+      font-style: italic;
+    }
+    .swap-table td:last-child {
+      color: #1A1A2E;
+      font-weight: 500;
+    }
+
+    /* Six types grid */
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .type-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #5C8A5A;
+    }
+    .type-card .emoji {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .type-card h4 {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+    }
+    .type-card p {
+      font-size: 0.92rem;
+      margin: 0;
+      color: #4A5568;
+      line-height: 1.55;
+    }
+
+    /* In-blog image */
+    .blog-img {
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 32px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    .blog-img img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Role checklist */
+    .role-section {
+      background: white;
+      border-radius: 14px;
+      padding: 28px 28px 20px;
+      margin: 28px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .role-section h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      color: #5C8A5A;
+      margin-bottom: 16px;
+    }
+    .check-list {
+      list-style: none;
+      padding: 0;
+    }
+    .check-list li {
+      padding: 10px 0 10px 32px;
+      position: relative;
+      font-size: 1rem;
+      border-bottom: 1px solid #f5f0ea;
+      line-height: 1.6;
+    }
+    .check-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 4px;
+      top: 10px;
+      color: #5C8A5A;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .check-list li:last-child { border-bottom: none; }
+
+    /* Research note */
+    .research-note {
+      background: #f0ece4;
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin: 32px 0;
+      font-size: 0.95rem;
+      color: #4A5568;
+      line-height: 1.7;
+    }
+    .research-note strong {
+      color: #5C8A5A;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #e0dcd4;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9CA3AF;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+      .type-grid { grid-template-columns: 1fr; }
+      .blog-container { padding: 16px 14px 40px; }
+      .callout { padding: 22px 20px; }
+      .callout p { font-size: 1.15rem; }
+    }
+  .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+   .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+   .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+   .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+   .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+   .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+   .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+   .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+
+    <div class="hero">
+      <img src="/images/blog/risky-play-guide/hero.webp" alt="A confident child climbing high in a sunlit tree">
+    </div>
+
+    <h1>The Two Words That Are Making Your Kid Less Safe</h1>
+    <div class="tldr-box">
+      <p class="tldr-anchor">A child who never practices fear arrives at adolescence unprepared.</p>
+      <ul>
+        <li>Kids with regular risky play experience lower anxiety, sharper body awareness, and the judgment to tell the difference between a thrill and actual danger.</li>
+        <li>The shift: catch "be careful" before it leaves your mouth and replace it with a question that makes your kid think.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5 specific replacement phrases &middot; 6-type risky play framework &middot; 5-item checklist for staying close without hovering</div>
+    </div>
+    <p class="subtitle">You say them a dozen times a day. They feel protective. They're actually training your child to stop thinking for themselves.</p>
+
+    <p>"Be careful."</p>
+
+    <p>It rolls out reflexively. Your kid reaches for a high branch, steps toward a puddle, picks up a stick. <em>Be careful.</em> It feels like love. It feels like your job.</p>
+
+    <p>But here's the thing: "be careful" doesn't teach your child <em>how</em> to be careful. It just tells them that you're worried. And over time, that worry becomes their inner voice — not assessing risk, just avoiding it.</p>
+
+    <div class="callout">
+      <p>The goal isn't "as safe as possible."<br>It's "as safe as <em>necessary</em>."</p>
+    </div>
+
+    <p>That distinction changes everything. Because a child who never practices handling manageable fear — a high branch, a fast hill, a wobbly balance beam — arrives at adolescence with zero risk-assessment skills and a whole menu of genuinely dangerous choices to make.</p>
+
+    <h2>The Language Swap</h2>
+
+    <p>Researchers studying risky play (notably Ellen Sandseter's work) found that children who regularly encounter manageable risk develop better judgment, lower anxiety, and stronger self-awareness. The mechanism is straightforward: small doses of fear in safe conditions train the brain to respond to stress without panicking.</p>
+
+    <p>The first practical shift is the words you use. Instead of a blanket "be careful" that shuts down thinking, try <strong>awareness questions</strong> that turn it on:</p>
+
+    <table class="swap-table">
+      <tr>
+        <th class="old">Stop saying</th>
+        <th class="new">Start asking</th>
+      </tr>
+      <tr>
+        <td>"Be careful!"</td>
+        <td>"Notice where your foot is."</td>
+      </tr>
+      <tr>
+        <td>"Be careful!"</td>
+        <td>"What's your plan?"</td>
+      </tr>
+      <tr>
+        <td>"Be careful!"</td>
+        <td>"What is your body telling you?"</td>
+      </tr>
+      <tr>
+        <td>"Be careful!"</td>
+        <td>"Do you feel steady?"</td>
+      </tr>
+      <tr>
+        <td>"Be careful!"</td>
+        <td>"What do you notice about the water?"</td>
+      </tr>
+    </table>
+
+    <p>See the difference? Every "be careful" is a command that removes your child from the equation. Every awareness question puts them back in charge of their own body. The child who hears "what's your plan?" learns to <em>make</em> plans. The child who only hears "be careful" learns to wait for permission.</p>
+
+    <div class="blog-img">
+      <img src="/images/blog/risky-play-guide/hover-vs-calm.webp" alt="Side-by-side illustration: anxious hovering parent versus calm, present parent">
+    </div>
+
+    <h2>Six Kinds of Risk Your Kid Actually Needs</h2>
+
+    <p>Risky play isn't random recklessness. Researchers have identified six distinct types, each building a different capability:</p>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <h4>Great Heights</h4>
+        <p>Climbing trees, rocks, jungle gyms. The child experiences fear, excitement, and eventual mastery — all in one activity.</p>
+      </div>
+      <div class="type-card">
+        <h4>High Speed</h4>
+        <p>Biking fast downhill, swinging high, sledding. Controlled thrills that wire body awareness and spatial judgment.</p>
+      </div>
+      <div class="type-card">
+        <h4>Dangerous Tools</h4>
+        <p>Saws, knives, hammers (age-appropriate, supervised). Nothing builds focus and responsibility like real consequences.</p>
+      </div>
+      <div class="type-card">
+        <h4>Dangerous Elements</h4>
+        <p>Playing near fire, water, cliffs. Learning to respect natural forces through direct experience, not lectures.</p>
+      </div>
+      <div class="type-card">
+        <h4>Rough-and-Tumble</h4>
+        <p>Wrestling, play fighting. Releases stress hormones, stimulates growth factors, and calibrates social boundaries.</p>
+      </div>
+      <div class="type-card">
+        <h4>Getting Lost</h4>
+        <p>Exploring ahead of you, hiding in the park. Builds navigation, self-trust, and the confidence to find their way back.</p>
+      </div>
+    </div>
+
+    <p>You don't need all six every day. But if your child's week is completely void of any of these, their risk muscle isn't getting exercise.</p>
+
+    <div class="blog-img">
+      <img src="/images/blog/risky-play-guide/tools.webp" alt="A focused child using a hand saw at a workbench while a calm parent watches from nearby">
+    </div>
+
+    <h2>Your Job: Close, Not Controlling</h2>
+
+    <p>This doesn't mean walking away. It means changing what you do when you're right there.</p>
+
+    <div class="role-section">
+      <h3>The Risky Play Stance</h3>
+      <ul class="check-list">
+        <li>Stay close enough to help if genuinely needed — far enough to let them figure it out</li>
+        <li>Before intervening, pause: is there real danger here, or is this my anxiety talking?</li>
+        <li>If real danger: help them navigate out. If not: switch to awareness language</li>
+        <li>You're present, not controlling — there's a massive difference</li>
+        <li>Notice your own fear response. Your anxiety about risk might need its own attention</li>
+      </ul>
+    </div>
+
+    <div class="research-note">
+      <strong>The Research</strong>
+      Studies on risky play (Sandseter et al.) show it is positively correlated with psychological well-being, physical confidence, independence, and self-awareness. Children who regularly engage in manageable risk become better at assessing danger and making informed decisions — the exact skills they'll need when the stakes get real in adolescence.
+    </div>
+
+    <p>Tonight, when your kid starts climbing something or running somewhere or picking up something sharp, catch the "be careful" before it leaves your mouth. Replace it with a question. Watch what happens when they actually think about the answer.</p>
+
+    <p>That's not reckless parenting. That's building the kid who can handle what's coming.</p>
+
+    <footer>
+      <p>Kung Fu &mdash; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

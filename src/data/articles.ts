@@ -2720,6 +2720,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: respond to disruption with exaggerated helplessness, reset the stage, and let the child decide when the game is done.',
     tldrInside: 'YIELD method (5 steps), before/after table with 4 scenarios, 3 script cards, 3 ground rules for safety and follow-through',
   },
+  {
+    slug: 'risky-play-guide',
+    title: 'Risk-Proof Your Kid',
+    subtitle: 'Why the safest children are the ones who practice danger',
+    description: 'Two words every parent says dozens of times a day are quietly training kids to stop assessing risk. The five replacement questions that build real judgment — plus six types of play your kid needs.',
+    image: '/images/cards/risky-play-guide.webp',
+    imageAlt: 'A confident child scaling a climbing wall, embodying the practiced danger that builds real safety',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Play',
+    book: 'The Parenting Handbook',
+    bookSlug: 'parenting-handbook',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'A child who never practices fear arrives at adolescence unprepared.',
+    tldrPayoff: 'Kids with regular risky play experience lower anxiety, sharper body awareness, and the judgment to tell the difference between a thrill and actual danger.',
+    tldrMove: 'The shift: catch "be careful" before it leaves your mouth and replace it with a question that makes your kid think.',
+    tldrInside: '5 specific replacement phrases, 6-type risky play framework, 5-item checklist for staying close without hovering',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
