@@ -2660,6 +2660,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: start at the last step so your kid gets \'I did it!\' immediately, then work backward through the whole sequence.',
     tldrInside: '6-level help spectrum from \'just wait\' to \'guide\', 4-step error correction, 3 chaining strategy cards, environmental cue swaps for dropping reminders',
   },
+  {
+    slug: 'the-thought-suppression-experiment',
+    title: 'Pink Elephant Paradox',
+    subtitle: 'Why \'don\'t think about it\' backfires',
+    description: 'Telling your brain not to think something guarantees it thinks it more. One 30-second experiment teaches your teen why — and gives them a better way to handle anxious thoughts.',
+    image: '/images/cards/the-thought-suppression-experiment.webp',
+    imageAlt: 'A playful pink elephant floating among thought bubbles representing the thought suppression paradox',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Anxiety',
+    book: 'Stuff That Sucks',
+    bookSlug: 'stuff-that-sucks',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'One cognitive paradox explains why \'stop worrying\' has never worked on anyone.',
+    tldrPayoff: 'Kids who get this stop white-knuckling anxious thoughts, self-correct when they catch themselves suppressing, and treat their brain like a normal brain — not a broken one.',
+    tldrMove: 'The shift: swap \'don\'t think about it\' for \'oh, there\'s that thought again\' — and move on.',
+    tldrInside: 'Suppress vs. Observe visual breakdown, Ready-to-use challenge script, 2 follow-up scripts for real worries, 4 common mistakes to avoid',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
