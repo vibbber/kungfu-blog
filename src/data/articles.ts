@@ -2700,6 +2700,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: rain boots and mud clothes daily, plain soap only, fermented foods at breakfast, antibiotics as last resort.',
     tldrInside: 'sanitized vs. microbe-friendly swap table, 5 numbered shift cards, pediatrician script for antibiotic conversations',
   },
+  {
+    slug: 'helpless-parent-move',
+    title: 'Surrender to Win',
+    subtitle: 'Power struggles end when you stop pulling rank and start playing fool',
+    description: 'Your kid keeps doing that annoying thing. What if the fix isn\'t stopping them — but losing to them on purpose? The counterintuitive move that ends power struggles in days.',
+    image: '/images/cards/helpless-parent-move.webp',
+    imageAlt: 'White flag planted in a pile of couch cushions — surrendering to win the parenting power struggle',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'Raising Our Children, Raising Ourselves',
+    bookSlug: 'raising-our-children-aldort',
+    datePublished: '2026-03-19',
+    dateModified: '2026-03-19',
+    tldrAnchor: 'Fighting a kid\'s behavior feeds it. Playing with it ends it.',
+    tldrPayoff: 'Kids get their agency need met through laughter instead of conflict. Cushion-throwing, shoe-hiding, light-switching — each one resolved in weeks, not months, with zero lectures.',
+    tldrMove: 'The move: respond to disruption with exaggerated helplessness, reset the stage, and let the child decide when the game is done.',
+    tldrInside: 'YIELD method (5 steps), before/after table with 4 scenarios, 3 script cards, 3 ground rules for safety and follow-through',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
