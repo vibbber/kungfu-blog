@@ -2880,6 +2880,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop sanitizing family history. "We had hard times and we made it" is the sentence that builds resilience.',
     tldrInside: 'the oscillating narrative pattern, 9-question quiz from Emory research, 3 sanitized-to-honest rewrites, 5-step storytelling practice',
   },
+  {
+    slug: 'absurd-chain-memory-trick',
+    title: 'Story Chain Memorization',
+    subtitle: 'Ancient orators used it for speeches — your kid can use it for vocab tests.',
+    description: 'Your kid remembers 3 out of 15 words. Ten minutes of laughing later, they nail all 15. Here\'s the memory trick that makes it happen.',
+    image: '/images/cards/absurd-chain-memory-trick.webp',
+    imageAlt: 'Whimsical storybook chain curving upward with absurd connected scenes illustrating the memory chain technique',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Learning',
+    book: 'The NLP Toolkit',
+    bookSlug: 'nlp-toolkit-churches',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'Ancient orators memorized speeches with vivid story chains. Kids can too.',
+    tldrPayoff: 'Kids who chain-story their lists remember 15 out of 15 instead of 3, hold onto material for weeks, and start asking to study this way.',
+    tldrMove: 'The move: instead of re-reading the list, co-create one ridiculous story where each item causes the next scene.',
+    tldrInside: 'Before/after recall comparison, 8-word vocab chain demo, 4 rules for sticky images, 5 subjects it works for, tonight\'s challenge prompt',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
