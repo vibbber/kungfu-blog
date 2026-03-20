@@ -2840,6 +2840,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: describe the roles in general terms and let him identify what he sees — he\'s the expert on his world.',
     tldrInside: '8 color-coded role cards with behavioral tells, gets-vs-costs breakdown for each role, 4 conversation rewrites, the Anchor role as a north star',
   },
+  {
+    slug: 'the-boy-box',
+    title: 'The Invisible Cage',
+    subtitle: 'How praise builds a box around your son — and how to open the door',
+    description: 'Your son gets hundreds of messages a week about who he\'s supposed to be. Here\'s the one-sentence redirect that cuts through all of it — zero confrontation, maximum impact.',
+    image: '/images/cards/the-boy-box.webp',
+    imageAlt: 'Illustration of a birdcage with an origami bird flying free, representing breaking out of restrictive masculinity norms',
+    imageWidth: 1376,
+    imageHeight: 768,
+    imageAspect: 1.792,
+    topic: 'Identity',
+    book: 'Masterminds and Wingmen',
+    bookSlug: 'masterminds-and-wingmen-wiseman',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'There\'s a box your son is being pushed into — and he can feel it tightening.',
+    tldrPayoff: 'Boys who hear a different voice at home stay curious longer, ask for help when stuck, and don\'t need to mock other kids to feel secure.',
+    tldrMove: 'The move: don\'t correct the relative — just steer the spotlight onto who your son actually is.',
+    tldrInside: 'Inside-the-box vs. outside-the-box breakdown, 4 redirect scripts for real scenarios, ages 10-14 squeeze timeline, 4 things to start this week',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
