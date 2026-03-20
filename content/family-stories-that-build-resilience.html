@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A 9-question family history quiz that predicts your child's resilience — backed by Emory University research. Take it tonight at dinner.">
+  <title>The 9-Question Quiz That Predicts Your Child's Resilience</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif; background: #FAF6F0; color: #1A1A2E; line-height: 1.7; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
+
+    /* Hero */
+    .hero { text-align: center; margin-bottom: 40px; }
+    .hero h1 { font-family: 'Lora', 'Georgia', serif; font-size: 34px; color: #1A1A2E; line-height: 1.25; margin-bottom: 12px; }
+    .hero .deck { font-size: 18px; color: #5C8A5A; font-weight: 500; max-width: 600px; margin: 0 auto 24px; }
+
+    /* Prose */
+    p { margin-bottom: 18px; font-size: 16.5px; }
+    p.lead { font-size: 18px; line-height: 1.75; }
+
+    /* Section headings */
+    h2 { font-family: 'Lora', 'Georgia', serif; color: #5C8A5A; font-size: 24px; margin: 40px 0 16px; }
+    h3 { color: #1A1A2E; font-size: 18px; margin-bottom: 10px; }
+
+    /* Images */
+    .blog-img { width: 100%; border-radius: 12px; margin: 28px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+
+    /* Quiz card */
+    .quiz-box { background: white; border-radius: 14px; padding: 28px 28px 20px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .quiz-box h3 { font-family: 'Lora', 'Georgia', serif; color: #5C8A5A; font-size: 20px; margin-bottom: 16px; text-align: center; }
+    .quiz-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #f0ece4; }
+    .quiz-item:last-child { border-bottom: none; }
+    .quiz-num { background: #E8A598; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .quiz-text { font-size: 15.5px; line-height: 1.55; }
+
+    /* Score card */
+    .score-card { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0; }
+    .score-tier { background: white; border-radius: 10px; padding: 16px; text-align: center; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+    .score-tier .range { font-size: 22px; font-weight: 700; color: #5C8A5A; }
+    .score-tier .label { font-size: 13px; color: #666; margin-top: 4px; }
+    .score-tier.highlight { background: #5C8A5A; }
+    .score-tier.highlight .range { color: white; }
+    .score-tier.highlight .label { color: rgba(255,255,255,0.85); }
+
+    /* Insight box */
+    .insight { background: #5C8A5A; color: white; padding: 24px; border-radius: 12px; margin: 28px 0; text-align: center; }
+    .insight .tag { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; margin-bottom: 8px; }
+    .insight p { font-size: 20px; font-weight: 600; margin: 0; color: white; }
+
+    /* Category prompts */
+    .prompt-section { margin: 28px 0; }
+    .prompt-category { background: #E8A598; color: white; padding: 6px 14px; border-radius: 20px; display: inline-block; font-size: 13px; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .prompt-grid { display: grid; gap: 10px; }
+    .prompt { background: white; border-radius: 10px; padding: 16px 20px; font-size: 15.5px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); line-height: 1.5; }
+    .prompt::before { content: '\201C'; color: #E8A598; font-size: 22px; font-weight: 700; margin-right: 4px; }
+
+    /* Steps */
+    .steps { background: white; border-radius: 14px; padding: 28px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .step { display: flex; gap: 16px; margin-bottom: 22px; align-items: flex-start; }
+    .step:last-child { margin-bottom: 0; }
+    .step-num { background: #E8A598; color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+    .step h4 { color: #5C8A5A; margin-bottom: 4px; font-size: 16px; }
+    .step p { margin: 0; font-size: 15px; }
+
+    /* Before/After */
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .compare-col { border-radius: 10px; padding: 20px; }
+    .compare-col.before { background: #f5eded; }
+    .compare-col.after { background: #eef5ee; }
+    .compare-col h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .compare-col.before h4 { color: #b07070; }
+    .compare-col.after h4 { color: #5C8A5A; }
+    .compare-col p { font-size: 14.5px; margin-bottom: 8px; }
+    .compare-col p:last-child { margin-bottom: 0; }
+
+    /* Footer */
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e0dcd4; font-size: 12px; color: #999; text-align: center; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .score-card { grid-template-columns: 1fr; }
+      .compare { grid-template-columns: 1fr; }
+      .container { padding: 20px 16px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <h1>The 9-Question Quiz That Predicts Your Child's Resilience</h1>
+    <p class="deck">Researchers at Emory University found one thing that reliably predicts how well kids handle adversity. It takes five minutes at dinner to build it.</p>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The shape of a family story matters more than the content.</p>
+    <ul>
+      <li>Kids raised on oscillating narratives — good times, hard times, recovery — develop a built-in framework for surviving their own struggles.</li>
+      <li>The shift: stop sanitizing family history. "We had hard times and we made it" is the sentence that builds resilience.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>the oscillating narrative pattern &middot; 9-question quiz from Emory research &middot; 3 sanitized-to-honest rewrites &middot; 5-step storytelling practice</div>
+  </div>
+
+  <p class="lead">Here is a strange question: Can your child tell you how their grandparents met?</p>
+
+  <p>It sounds trivial. But psychologists Marshall Duke and Robyn Fivush at Emory University spent years studying what makes some children bounce back from hardship while others crumble. They tested self-esteem scales, temperament profiles, family income, school quality. Then they tried something almost absurdly simple: they asked kids questions about their family history.</p>
+
+  <p>The results were not close. Children who could answer questions about where their grandparents grew up, what challenges their parents faced, and how their family weathered hard times showed significantly higher self-esteem, stronger sense of identity, and greater resilience under stress.</p>
+
+  <p>Not therapy. Not enrichment programs. Family stories, told casually over dinner.</p>
+
+  <img src="/images/blog/family-stories-that-build-resilience/family-storytelling.webp" alt="A family gathered around a dinner table sharing stories across generations" class="blog-img">
+
+  <h2>Take the Quiz</h2>
+
+  <p>These nine questions come from the work of Duke and Fivush at Emory University. Try them with your child tonight -- no prep, no pressure. Just see how many they can answer.</p>
+
+  <div class="quiz-box">
+    <h3>The Family History Quiz</h3>
+    <div class="quiz-item">
+      <div class="quiz-num">1</div>
+      <div class="quiz-text">Where did your grandparents grow up? What was their neighborhood like?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">2</div>
+      <div class="quiz-text">How did Mom and Dad (or your parents) meet?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">3</div>
+      <div class="quiz-text">Where does our family name come from? Does it mean anything?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">4</div>
+      <div class="quiz-text">Was there a time our family went through something really hard? What happened?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">5</div>
+      <div class="quiz-text">Did anyone in our family ever have to start over -- move somewhere new, change careers, rebuild?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">6</div>
+      <div class="quiz-text">What is the bravest thing a family member ever did?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">7</div>
+      <div class="quiz-text">What traditions does our family have? Where did they start?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">8</div>
+      <div class="quiz-text">What are we known for as a family?</div>
+    </div>
+    <div class="quiz-item">
+      <div class="quiz-num">9</div>
+      <div class="quiz-text">What is the funniest thing that ever happened at a family gathering?</div>
+    </div>
+  </div>
+
+  <div class="score-card">
+    <div class="score-tier">
+      <div class="range">0 - 3</div>
+      <div class="label">Time to start telling stories</div>
+    </div>
+    <div class="score-tier highlight">
+      <div class="range">4 - 6</div>
+      <div class="label">Good foundation -- keep going</div>
+    </div>
+    <div class="score-tier">
+      <div class="range">7 - 9</div>
+      <div class="label">Your child knows who they are</div>
+    </div>
+  </div>
+
+  <p>The score itself is less important than what happens during the conversation. The act of telling and hearing these stories is the thing that builds resilience. The quiz is just the door in.</p>
+
+  <h2>Why This Works: The Oscillating Narrative</h2>
+
+  <p>Duke and Fivush discovered something specific about which stories matter most. Not the triumphant ones. Not the tragic ones. The ones that oscillate.</p>
+
+  <div class="insight">
+    <div class="tag">The Pattern</div>
+    <p>"Things were good, then something hard happened, and we pulled through together."</p>
+  </div>
+
+  <p>This particular shape -- good times, then difficulty, then recovery -- teaches children three things at once: that struggle is normal, that it is survivable, and that they come from people who survive it. No pep talk delivers that. The story does the work.</p>
+
+  <img src="/images/blog/family-stories-that-build-resilience/oscillating-narrative.webp" alt="Diagram showing the oscillating narrative pattern — ups and downs trending upward toward resilience" class="blog-img">
+
+  <h2>How to Tell Stories That Stick</h2>
+
+  <p>Most parents instinctively edit the hard parts out. "Grandma had a great life" is easier than explaining the year she spent rebuilding after the fire. But the edited version is the one that does not build resilience.</p>
+
+  <div class="compare">
+    <div class="compare-col before">
+      <h4>Sanitized Version</h4>
+      <p>"Grandpa always worked hard and did well."</p>
+      <p>"We moved here because it was a nice town."</p>
+      <p>"Everything worked out fine."</p>
+    </div>
+    <div class="compare-col after">
+      <h4>Oscillating Version</h4>
+      <p>"Grandpa lost his first business. He was scared. Then he started again and built something even better."</p>
+      <p>"We moved because Dad lost his job. It was rough. But we found this place and made it ours."</p>
+      <p>"It was really hard for a while. And then we figured it out."</p>
+    </div>
+  </div>
+
+  <p>The second column is not darker. It is more honest. And honesty is what gives children a framework for their own struggles: <em>This is hard, but hard things are part of our story, and we get through them.</em></p>
+
+  <h2>Build a 5-Minute Storytelling Habit</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h4>Pick One Recurring Moment</h4>
+        <p>Sunday dinner, the drive to practice, bedtime. Consistency matters more than length. Five minutes is plenty.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h4>Start with One Question from the Quiz</h4>
+        <p>Do not dump nine stories at once. Pick one question, tell your piece, then let the conversation breathe.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h4>Include the Struggle</h4>
+        <p>Every good family story has a moment where things got hard. That is the part your child needs to hear. Not to scare them -- to show them what their people are made of.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <h4>Call the Elders</h4>
+        <p>Grandparents, great-aunts, family friends -- they carry stories nobody else knows. Record a conversation. These become priceless.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div>
+        <h4>Let Your Child Add Their Chapter</h4>
+        <p>Ask: "What would you add to our family story? What do you think we are really good at?" Their answer tells you what has landed -- and makes them part of the narrative.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Your family story does not need to be dramatic. It does not need to be unusual. It just needs to be told -- with the hard parts left in -- so your child knows exactly who they come from, and what that means about who they can become.</p>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</div>
+</body>
+</html>

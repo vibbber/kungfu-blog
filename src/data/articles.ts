@@ -2860,6 +2860,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: don\'t correct the relative — just steer the spotlight onto who your son actually is.',
     tldrInside: 'Inside-the-box vs. outside-the-box breakdown, 4 redirect scripts for real scenarios, ages 10-14 squeeze timeline, 4 things to start this week',
   },
+  {
+    slug: 'family-stories-that-build-resilience',
+    title: 'Dinner Table Resilience',
+    subtitle: '5 minutes of family storytelling — the Emory finding that outperformed every other predictor',
+    description: 'A 9-question family history quiz from Emory University predicts how well kids handle adversity. Take it tonight at dinner — no prep, no pressure.',
+    image: '/images/cards/family-stories-that-build-resilience.webp',
+    imageAlt: 'Illustration of a family gathered around a dinner table sharing stories, seen from above with warm lighting and speech bubbles',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Resilience',
+    book: '9 Ways to a Resilient Child',
+    bookSlug: '9-ways-to-a-resilient-child',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'The shape of a family story matters more than the content.',
+    tldrPayoff: 'Kids raised on oscillating narratives — good times, hard times, recovery — develop a built-in framework for surviving their own struggles.',
+    tldrMove: 'The shift: stop sanitizing family history. "We had hard times and we made it" is the sentence that builds resilience.',
+    tldrInside: 'the oscillating narrative pattern, 9-question quiz from Emory research, 3 sanitized-to-honest rewrites, 5-step storytelling practice',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
