@@ -2900,6 +2900,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: instead of re-reading the list, co-create one ridiculous story where each item causes the next scene.',
     tldrInside: 'Before/after recall comparison, 8-word vocab chain demo, 4 rules for sticky images, 5 subjects it works for, tonight\'s challenge prompt',
   },
+  {
+    slug: 'warmth-and-structure',
+    title: 'The Illusion of Control',
+    subtitle: 'Why the smartest parents let their kids "decide" — and how three scripts make it automatic',
+    description: 'The best parenting move isn\'t saying yes or no — it\'s designing choices so clever your kid thinks they\'re running the show. Three scripts that make it automatic.',
+    image: '/images/cards/warmth-and-structure.webp',
+    imageAlt: 'Split steering wheel concept showing shared control between parent and child',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Discipline',
+    book: '13 Things Mentally Strong Parents Don\'t Do',
+    bookSlug: '13-things-mentally-strong-parents-morin',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'Your child needs a leader, not a buddy.',
+    tldrPayoff: 'Kids who feel led — not controlled — develop self-discipline that sticks, handle frustration without melting down, and navigate social pressure on their own.',
+    tldrMove: 'The move: hold the line with warmth — explain the rule, offer a choice, skip the guilt trip.',
+    tldrInside: '3 situation-specific scripts, 5-point drift check, side-by-side authority comparison, 4 long-game plays',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
