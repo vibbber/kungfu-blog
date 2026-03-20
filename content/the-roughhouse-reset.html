@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forget expensive activities. The best playground in the world is your living room floor — and you're the main attraction.">
+  <title>Get On the Floor: Why 10 Minutes of Roughhousing Beats Every After-School Activity</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      margin: 0 -24px 40px;
+      position: relative;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,26,46,0.85));
+      padding: 40px 32px 28px;
+    }
+    .hero-overlay h1 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      font-size: 32px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .hero-overlay .subtitle {
+      color: #E8A598;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Sections */
+    h2 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      font-size: 24px;
+      margin: 40px 0 16px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      color: #2a2a3e;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      color: #fff;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Step cards */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .step-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #E8A598;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .step-card h3 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+    .step-card p {
+      font-size: 14px;
+      margin: 0;
+      color: #555;
+    }
+
+    /* Comparison table */
+    .compare {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin: 24px 0;
+    }
+    .compare th {
+      padding: 14px 18px;
+      font-size: 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare th:first-child {
+      background: #d4d4d4;
+      color: #555;
+    }
+    .compare th:last-child {
+      background: #5C8A5A;
+      color: #fff;
+    }
+    .compare td {
+      padding: 12px 18px;
+      font-size: 14px;
+      background: #fff;
+      border-bottom: 1px solid #f0ece6;
+      vertical-align: top;
+    }
+    .compare tr:last-child td { border-bottom: none; }
+
+    /* Activity grid */
+    .activity-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0;
+    }
+    .activity-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .activity-card h3 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .activity-card p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+    }
+
+    /* In-blog image */
+    .blog-img {
+      margin: 32px -24px;
+    }
+    .blog-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .blog-img .caption {
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+      padding: 8px 24px 0;
+    }
+
+    /* Wind-down box */
+    .winddown {
+      background: linear-gradient(135deg, #E8A598 0%, #d4917e 100%);
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+    .winddown h3 {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .winddown p {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .winddown p:last-child { margin-bottom: 0; }
+
+    /* Laughter rules */
+    .laughter-rules {
+      background: #fff;
+      border-left: 4px solid #5C8A5A;
+      padding: 20px 24px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+    }
+    .laughter-rules h3 {
+      font-family: 'Lora', serif;
+      color: #5C8A5A;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+    .laughter-rules ul {
+      list-style: none;
+      padding: 0;
+    }
+    .laughter-rules li {
+      font-size: 14px;
+      color: #555;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .laughter-rules li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 8px;
+      height: 8px;
+      background: #E8A598;
+      border-radius: 50%;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding: 24px 0;
+      border-top: 1px solid #e0dcd6;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero-overlay h1 { font-size: 24px; }
+      .activity-grid { grid-template-columns: 1fr; }
+      h2 { font-size: 21px; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="/images/blog/the-roughhouse-reset/hero.webp" alt="Parent and children roughhousing joyfully on the living room floor">
+    <div class="hero-overlay">
+      <h1>Get On the Floor</h1>
+      <span class="subtitle">Why 10 minutes of roughhousing beats every after-school activity</span>
+    </div>
+  </div>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">The parent who gets on the floor wins the connection game.</p>
+    <ul>
+      <li>Kids who roughhouse with a parent show stronger impulse control, deeper trust, and the kind of full-body laughter that no organized activity can match.</li>
+      <li>The shift: stop scheduling connection — just clear some floor space and let them attack.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4-step wrestle sequence &middot; the laughter test for any activity &middot; 4 equipment-free play ideas &middot; ritual rules with a clear off-switch</div>
+  </div>
+
+  <p>Your kid just got home from school. They're bouncing off the walls. Shoes still half-on, backpack dropped in the hallway, already swinging from the doorframe.</p>
+
+  <p>Here's what works: push the coffee table out of the way, throw some cushions down, and get on the floor. Lie there. You are now the mountain.</p>
+
+  <p>Watch what happens. Within seconds, they're on you. Climbing, pushing, trying to flip you over. The shrieking starts. The laughter comes in waves. Ten minutes later, they're calm, you're both grinning, and nobody spent a dollar.</p>
+
+  <div class="callout">
+    <p>The best playground in the world is your living room floor.<br>You're the main attraction.</p>
+  </div>
+
+  <h2>The Daily Wrestle: A 4-Step Setup</h2>
+
+  <p>This isn't complicated. You don't need a plan. But if you want to nail it every time, here's the sequence:</p>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Clear the Zone</h3>
+        <p>Push furniture aside. Scatter cushions as crash pads. Six feet of floor space is all you need.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Be the Mountain</h3>
+        <p>Lie or kneel on the floor. You're the obstacle. They scramble over you, try to push you down, pile on top. Toss them gently onto cushions. Let them win most of the time.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Follow the Laughter</h3>
+        <p>Everyone laughing? Perfect. Someone not laughing? Dial it back. Laughter is your compass -- it means they feel safe, excited, and connected.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Wind It Down</h3>
+        <p>Don't just stop. Collapse in a heap together. Catch your breath in a pile. This cooldown prevents the post-play meltdown.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The Laughter Test</h2>
+
+  <p>Before you sign up for another after-school class, ask one question: will it produce more laughter than twenty minutes of wrestling on the floor?</p>
+
+  <p>Physical play generates the full-body, uncontrollable, tears-running-down kind. Screens rarely do that. Structured activities sometimes do. But nothing matches the raw hilarity of a parent and child in a pile on the carpet.</p>
+
+  <div class="blog-img">
+    <img src="/images/blog/the-roughhouse-reset/compare.webp" alt="Comparison of structured activities vs. free roughhousing at home">
+  </div>
+
+  <table class="compare">
+    <tr>
+      <th>Organized Activity</th>
+      <th>Roughhouse Play</th>
+    </tr>
+    <tr>
+      <td>Costs money (fees, gear, transport)</td>
+      <td>Free -- your floor and your body</td>
+    </tr>
+    <tr>
+      <td>Fixed schedule, someone else's rules</td>
+      <td>Happens when the mood strikes</td>
+    </tr>
+    <tr>
+      <td>Child learns from an instructor</td>
+      <td>Child learns from a parent they adore</td>
+    </tr>
+    <tr>
+      <td>Connection with peers</td>
+      <td>Deep connection with you</td>
+    </tr>
+    <tr>
+      <td>Can feel like a chore</td>
+      <td>Never feels like a chore</td>
+    </tr>
+  </table>
+
+  <p>This isn't anti-activity. Some structured pursuits are wonderful. But if the schedule is packed and the evenings are dull, cut one class and add one daily wrestle. You'll know within a week which one they prefer.</p>
+
+  <h2>Zero Equipment, Maximum Joy</h2>
+
+  <p>You don't need to buy anything. You already have everything required for the four best activities in childhood:</p>
+
+  <div class="activity-grid">
+    <div class="activity-card">
+      <h3>Cushion Crash Course</h3>
+      <p>Strip the sofa cushions. Scatter them on the floor. Balance, jump, topple, crash. Stand on one while siblings try to knock you off.</p>
+    </div>
+    <div class="activity-card">
+      <h3>Den Building</h3>
+      <p>Blankets, overturned chairs, a few pillows. Kids design it, build it, inhabit it. Architecture, engineering, and imagination in one messy afternoon.</p>
+    </div>
+    <div class="activity-card">
+      <h3>Backyard Campfire</h3>
+      <p>Kids gather fuel, learn to stack kindling, watch the flames. Wrap potatoes in foil and throw them in. Sit around it as evening comes.</p>
+    </div>
+    <div class="activity-card">
+      <h3>Water Ambush</h3>
+      <p>A hose, some old containers, a warm day. The garden becomes a battlefield of shrieking joy. Let them soak you -- getting drenched is what makes it memorable.</p>
+    </div>
+  </div>
+
+  <div class="blog-img">
+    <img src="/images/blog/the-roughhouse-reset/winddown.webp" alt="Parent and children collapsed in a happy pile after roughhousing">
+    <div class="caption">The wind-down is part of the game -- collapsing together teaches kids that high energy has a natural end point.</div>
+  </div>
+
+  <div class="winddown">
+    <h3>The Wind-Down Matters</h3>
+    <p>Don't skip the cooldown. After the wild part, collapse together. Lie in a pile. Catch your breath. Count to ten slowly.</p>
+    <p>This teaches kids that high energy has a natural end point. Five minutes of winding down prevents the meltdown that follows sudden stops. The whole cycle -- burst, play, settle -- is what builds emotional regulation.</p>
+  </div>
+
+  <div class="laughter-rules">
+    <h3>Make It a Ritual, Not a One-Off</h3>
+    <ul>
+      <li><strong>Same time each day.</strong> After school, before dinner -- when it's predictable, kids self-regulate in anticipation.</li>
+      <li><strong>Teach them to play with each other.</strong> Once they learn the rules from you, siblings pick it up. You've given them a free, portable activity for life.</li>
+      <li><strong>Respect the off-switch.</strong> Tears, real anger, someone saying "stop" -- these end it instantly. Wild play with clear rules is part of the gift.</li>
+      <li><strong>Watch for the invitation.</strong> When your child brings you a pillow, tugs your hand toward the floor, or climbs on your back uninvited -- that's the request. Say yes.</li>
+    </ul>
+  </div>
+
+  <div class="callout">
+    <p>The wildest, most joyful moments of childhood don't happen at organized events.<br>They happen on your living room floor, with you at the bottom of the pile.</p>
+  </div>
+
+  <footer>
+    <p>kungfu.family</p>
+  </footer>
+
+</body>
+</html>

@@ -2800,6 +2800,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: swap curtains, bedding, and throw pillows to the right temperature for your child — warm for wired, cool for quiet.',
     tldrInside: '6-item swap list ranked by impact, READ Method for getting started, 4 room-by-room examples including shared spaces, Seasonal and age-based adjustment guide',
   },
+  {
+    slug: 'the-roughhouse-reset',
+    title: 'Floor Time Wins',
+    subtitle: 'Why the wildest 10 minutes of the day build the deepest bond',
+    description: 'Forget expensive after-school activities. Ten minutes of roughhousing on the living room floor builds more connection, laughter, and self-regulation than any organized program.',
+    image: '/images/cards/the-roughhouse-reset.webp',
+    imageAlt: 'Cozy aftermath of roughhousing — cushions and blankets piled on the living room floor',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Play',
+    book: 'The Idle Parent',
+    bookSlug: 'the-idle-parent-hodgkinson',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'The parent who gets on the floor wins the connection game.',
+    tldrPayoff: 'Kids who roughhouse with a parent show stronger impulse control, deeper trust, and the kind of full-body laughter that no organized activity can match.',
+    tldrMove: 'The shift: stop scheduling connection — just clear some floor space and let them attack.',
+    tldrInside: '4-step wrestle sequence, the laughter test for any activity, 4 equipment-free play ideas, ritual rules with a clear off-switch',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
