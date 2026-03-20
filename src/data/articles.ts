@@ -2820,6 +2820,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: stop scheduling connection — just clear some floor space and let them attack.',
     tldrInside: '4-step wrestle sequence, the laughter test for any activity, 4 equipment-free play ideas, ritual rules with a clear off-switch',
   },
+  {
+    slug: 'your-sons-social-playbook',
+    title: 'Friend Group Power Map',
+    subtitle: '8 hidden roles your son plays — and what each one costs him',
+    description: 'Every boy\'s friend group has a hidden power structure with 8 predictable roles. Here\'s what your son gets from each one, what it costs him, and how to talk about it without shutting him down.',
+    image: '/images/cards/your-sons-social-playbook.webp',
+    imageAlt: 'Bird\'s-eye view of colored chairs arranged in a circle showing friend group power dynamics',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Social Skills',
+    book: 'Masterminds and Wingmen',
+    bookSlug: 'masterminds-and-wingmen-wiseman',
+    datePublished: '2026-03-20',
+    dateModified: '2026-03-20',
+    tldrAnchor: 'Boys\' friend groups run on a status economy most parents never see.',
+    tldrPayoff: 'Kids raised to read group dynamics hold their own under social pressure, pick better friends, and don\'t sacrifice their identity just to stay included.',
+    tldrMove: 'The move: describe the roles in general terms and let him identify what he sees — he\'s the expert on his world.',
+    tldrInside: '8 color-coded role cards with behavioral tells, gets-vs-costs breakdown for each role, 4 conversation rewrites, the Anchor role as a north star',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

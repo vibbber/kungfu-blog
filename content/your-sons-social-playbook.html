@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 8 Roles Boys Play in Every Friend Group (and What Each One Costs Them)</title>
+  <meta name="description" content="Every boy's friend group has a hidden power structure. Here are the 8 roles, what your son gets from each one, and exactly how to talk about it without shutting him down.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    h1, h2, h3 { font-family: 'Lora', serif; }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      color: #666;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .opening {
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .opening p {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 20px;
+    }
+
+    p { margin-bottom: 16px; font-size: 16px; }
+
+    /* Role cards */
+    .roles-grid {
+      display: grid;
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .role {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 5px solid #5C8A5A;
+    }
+
+    .role.high-cost { border-left-color: #C0392B; }
+    .role.mixed { border-left-color: #E8A598; }
+
+    .role-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .role h3 {
+      font-size: 20px;
+      color: #1A1A2E;
+    }
+
+    .cost-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .cost-tag.red { background: #FEF3F0; color: #C0392B; }
+    .cost-tag.amber { background: #FFF8F0; color: #D4820A; }
+    .cost-tag.green { background: #EDF7ED; color: #5C8A5A; }
+
+    .role .tagline {
+      font-style: italic;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .role .tells {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .role .tells strong {
+      color: #5C8A5A;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .role .tells ul {
+      margin-left: 18px;
+      color: #444;
+    }
+
+    .role .tells li {
+      margin-bottom: 4px;
+    }
+
+    .trade-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .trade-gets {
+      background: #F4FAF4;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .trade-costs {
+      background: #FEF3F0;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .trade-gets strong, .trade-costs strong {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .trade-gets strong { color: #5C8A5A; }
+    .trade-costs strong { color: #C0392B; }
+
+    /* Warning callout */
+    .callout-warning {
+      background: #FEF3F0;
+      border: 2px solid #E8A598;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 36px 0;
+    }
+
+    .callout-warning h3 {
+      color: #C0392B;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .callout-warning p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .callout-warning p:last-child { margin-bottom: 0; }
+
+    /* Script cards */
+    .script-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0 28px;
+      font-size: 15px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .script-table th {
+      background: #5C8A5A;
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .script-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #EEE;
+      vertical-align: top;
+    }
+
+    .script-table tr:last-child td { border-bottom: none; }
+
+    .script-table tr:nth-child(even) td { background: #FAFAF7; }
+    .script-table tr:nth-child(odd) td { background: white; }
+
+    .script-table .dont { color: #C0392B; }
+    .script-table .do { color: #5C8A5A; }
+
+    /* Conversation image */
+    .mid-img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    /* Key insight box */
+    .insight-box {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      text-align: center;
+      margin: 36px 0;
+    }
+
+    .insight-box h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .insight-box p {
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: white;
+    }
+
+    /* Action steps */
+    .action-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 28px;
+    }
+
+    .action-list li {
+      background: white;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .action-list .num {
+      background: #5C8A5A;
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .action-list li strong { color: #1A1A2E; }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .trade-row { grid-template-columns: 1fr; }
+      body { padding: 16px 14px 40px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <img src="/images/blog/your-sons-social-playbook/hero.webp" alt="Boys in a friend group, each occupying a different social position" class="hero-img">
+
+  <h1>The 8 Roles Boys Play in Every Friend Group</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Boys' friend groups run on a status economy most parents never see.</p>
+    <ul>
+      <li>Kids raised to read group dynamics hold their own under social pressure, pick better friends, and don't sacrifice their identity just to stay included.</li>
+      <li>The move: describe the roles in general terms and let him identify what he sees — he's the expert on his world.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>8 color-coded role cards with behavioral tells &middot; gets-vs-costs breakdown for each role &middot; 4 conversation rewrites &middot; the Anchor role as a north star</div>
+  </div>
+  <p class="subtitle">Your son is doing social math every single day. Here's the cheat sheet.</p>
+
+  <div class="opening">
+    <p>Your son comes home and laughs off a story about his friends roasting him at lunch. He says it's fine. They're just joking. But something about the way he tells it makes you wonder -- is this actually fine?</p>
+    <p>Here's what's happening: every boy's friend group has a hidden power structure. Not a conspiracy -- just the natural way groups organize. And every boy in the group has figured out, mostly unconsciously, which role keeps him safe, included, and relevant.</p>
+    <p>Once you can see the roles, your son's behavior stops being mysterious.</p>
+  </div>
+
+  <h2>The Playbook: 8 Roles, 8 Trade-Offs</h2>
+
+  <p>Each role has a price tag. Some are worth it. Some aren't. Scan these and notice which ones sound familiar.</p>
+
+  <div class="roles-grid">
+
+    <div class="role high-cost">
+      <div class="role-header">
+        <h3>The Shot Caller</h3>
+        <span class="cost-tag red">High Cost</span>
+      </div>
+      <p class="tagline">Sets the tone for the whole group.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Decides what's funny, who's in, what happens next</li>
+          <li>Quick to spot insecurity in others -- and use it</li>
+          <li>Adults find him charming and impressive</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Control. The group follows his lead without question.</div>
+        <div class="trade-costs"><strong>Costs</strong> Can never show vulnerability. Relationships built on influence, not trust.</div>
+      </div>
+    </div>
+
+    <div class="role high-cost">
+      <div class="role-header">
+        <h3>The Right Hand</h3>
+        <span class="cost-tag red">High Cost</span>
+      </div>
+      <p class="tagline">The Shot Caller's closest ally and intel pipeline.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>More socially fluent -- people genuinely like talking to him</li>
+          <li>Collects information and feeds it to the top</li>
+          <li>Rarely challenges the Shot Caller publicly</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> High status without the spotlight pressure.</div>
+        <div class="trade-costs"><strong>Costs</strong> No independent identity. If the Shot Caller falls, he falls too.</div>
+      </div>
+    </div>
+
+    <div class="role high-cost">
+      <div class="role-header">
+        <h3>The Enforcer</h3>
+        <span class="cost-tag red">High Cost</span>
+      </div>
+      <p class="tagline">The physical presence who backs up the group's power.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Often bigger or taller than the other boys</li>
+          <li>Loyal to a fault -- takes the blame without question</li>
+          <li>Gets pushed into confrontations by boys who won't do their own dirty work</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> A seat at the table he might not earn through social skills alone.</div>
+        <div class="trade-costs"><strong>Costs</strong> Genuine respect. Valued for what he does, not who he is.</div>
+      </div>
+    </div>
+
+    <div class="role mixed">
+      <div class="role-header">
+        <h3>The Comic</h3>
+        <span class="cost-tag amber">Mixed</span>
+      </div>
+      <p class="tagline">Makes everything lighter. Everyone wants him around.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Breaks tension with humor, often at his own expense</li>
+          <li>Instinctively puts people at ease</li>
+          <li>Can't stop performing once he gets going</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Belonging and safety without playing power games.</div>
+        <div class="trade-costs"><strong>Costs</strong> Nobody takes him seriously -- including about things that matter.</div>
+      </div>
+    </div>
+
+    <div class="role mixed">
+      <div class="role-header">
+        <h3>The Moral Compass</h3>
+        <span class="cost-tag amber">Mixed</span>
+      </div>
+      <p class="tagline">The one who worries about consequences.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Follows rules, thinks things through</li>
+          <li>Gets used as a cover because adults trust him</li>
+          <li>Sometimes does something reckless to prove he's not boring</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Extra trust from teachers and parents.</div>
+        <div class="trade-costs"><strong>Costs</strong> Gets cut out when plans are happening. Risk of being labeled a snitch.</div>
+      </div>
+    </div>
+
+    <div class="role high-cost">
+      <div class="role-header">
+        <h3>The Punching Bag</h3>
+        <span class="cost-tag red">High Cost</span>
+      </div>
+      <p class="tagline">Loved by the group, relentlessly roasted by them.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Target of constant jokes -- done "with love"</li>
+          <li>If outsiders come after him, the group defends him fiercely</li>
+          <li>Laughs along because protesting would make things worse</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Friends -- technically. Included and protected from outsiders.</div>
+        <div class="trade-costs"><strong>Costs</strong> Self-worth. Learns to accept poor treatment as the price of belonging.</div>
+      </div>
+    </div>
+
+    <div class="role high-cost">
+      <div class="role-header">
+        <h3>The Orbit</h3>
+        <span class="cost-tag red">High Cost</span>
+      </div>
+      <p class="tagline">Circles the group but never quite gets in.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Hovers at the edges, misreading when he's welcome</li>
+          <li>May try to buy his way in -- offering rides, money, games</li>
+          <li>Parents sometimes make it worse by providing more things to offer</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Very little. Occasional access that feels like friendship but isn't.</div>
+        <div class="trade-costs"><strong>Costs</strong> Everything. Being used, not included. Self-image takes the hit.</div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <h3>The Anchor</h3>
+        <span class="cost-tag green">Healthy</span>
+      </div>
+      <p class="tagline">Respected because he's genuinely secure in who he is.</p>
+      <div class="tells">
+        <strong>What you'll notice</strong>
+        <ul>
+          <li>Handles criticism without falling apart or lashing out</li>
+          <li>Steps in when someone is targeted -- quietly, not performatively</li>
+          <li>Comfortable with boys from all different social circles</li>
+        </ul>
+      </div>
+      <div class="trade-row">
+        <div class="trade-gets"><strong>Gets</strong> Genuine respect and real friendships built on trust.</div>
+        <div class="trade-costs"><strong>Costs</strong> Can be lonely. Gets pushback for doing the right thing.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="insight-box">
+    <h3>The Shift That Matters</h3>
+    <p>In middle school, these roles are rigid -- always on, always enforced. As boys mature, the roles become situational, surfacing mainly during conflict or social stress.</p>
+  </div>
+
+  <h2>How to Actually Talk About This</h2>
+
+  <p>You've spotted the pattern. Now what? The conversation matters more than the diagnosis. Get it wrong, and your son shuts down for months. Get it right, and he starts telling you things you never expected.</p>
+
+  <img src="/images/blog/your-sons-social-playbook/conversation.webp" alt="Parent and son having a genuine conversation" class="mid-img">
+
+  <div class="callout-warning">
+    <h3>The One Rule: Never Label Him</h3>
+    <p>Even if you're certain he's the Punching Bag or the Orbit, telling him will feel like an attack. He'll shut down instantly and the conversation is over -- possibly for a long time.</p>
+    <p>Also: avoid words like "clique" or "crew." Boys associate those with judgmental adults, and you'll lose the conversation before it starts.</p>
+  </div>
+
+  <table class="script-table">
+    <thead>
+      <tr>
+        <th>Instead of this...</th>
+        <th>Try this</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="dont">"You're the one they always make fun of."</td>
+        <td class="do">"I read about how friend groups work -- these roles sounded interesting. Do any of them sound familiar from what you've seen?"</td>
+      </tr>
+      <tr>
+        <td class="dont">"Those aren't real friends."</td>
+        <td class="do">"It sounds like being funny keeps things chill, but it might be hard when you actually want people to take you seriously."</td>
+      </tr>
+      <tr>
+        <td class="dont">"You need to stand up for yourself."</td>
+        <td class="do">"What do you think would happen if you said something about it?"</td>
+      </tr>
+      <tr>
+        <td class="dont">"You're the class clown."</td>
+        <td class="do">"You're really good at reading a room. I bet people rely on that."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The trick is to describe the roles in general terms and let him identify what he sees. He's the expert on his social world. Let him lead.</p>
+
+  <h2>What You Can Do This Week</h2>
+
+  <ul class="action-list">
+    <li>
+      <span class="num">1</span>
+      <div><strong>Watch for role lock-in.</strong> If your son seems stuck in a position that costs him more than it gives, that's worth a conversation. Not about the role itself -- about how he feels with his friends.</div>
+    </li>
+    <li>
+      <span class="num">2</span>
+      <div><strong>Diversify his social world.</strong> Boys with connections across multiple groups -- sports, neighborhood, family friends -- are less trapped by the dynamics of any single one.</div>
+    </li>
+    <li>
+      <span class="num">3</span>
+      <div><strong>Model the Anchor.</strong> How you handle disagreements, stand up for people, and stay grounded under pressure teaches him more than any lecture ever will.</div>
+    </li>
+    <li>
+      <span class="num">4</span>
+      <div><strong>Name the trade-offs, not the role.</strong> "It sounds like being the go-to guy has some downsides" opens doors. "You're the enforcer" slams them shut.</div>
+    </li>
+  </ul>
+
+  <p>Every friend group has a structure. That's normal. The warning sign isn't that roles exist -- it's when your son consistently sacrifices his wellbeing just to keep his spot.</p>
+
+  <p>Now you can see it. And that changes everything.</p>
+
+  <footer>
+    <p>Strategy #500 &middot; Kung Fu Parenting</p>
+  </footer>
+
+</body>
+</html>
