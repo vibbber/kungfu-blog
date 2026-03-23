@@ -2920,6 +2920,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: hold the line with warmth — explain the rule, offer a choice, skip the guilt trip.',
     tldrInside: '3 situation-specific scripts, 5-point drift check, side-by-side authority comparison, 4 long-game plays',
   },
+  {
+    slug: 'focus-foundation',
+    title: 'The 3:30 PM Fix',
+    subtitle: 'After-school meltdowns — it\'s not attitude, it\'s fuel',
+    description: 'That after-school meltdown isn\'t a behavior problem — it\'s a blood sugar problem. Three nutrition shifts that transform your child\'s focus, mood, and self-control.',
+    image: '/images/cards/focus-foundation.webp',
+    imageAlt: 'A ready-to-go after-school snack plate with protein-rich foods next to a dropped backpack on a kitchen counter',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Nutrition',
+    book: 'Brain Brilliance',
+    bookSlug: 'brain-brilliance-lucinda-miller',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-23',
+    tldrAnchor: 'A child\'s mood tracks with mealtimes more than most parents realize.',
+    tldrPayoff: 'Kids on steady fuel sit through class without fidgeting, transition between activities without tears, and actually finish homework before dinner.',
+    tldrMove: 'The move: three principles — protein-anchor every meal, eat fiber before carbs, move gently after eating.',
+    tldrInside: 'spike-and-crash vs steady-fuel table, 3 meal-order step cards, full-day timeline from 7AM to 6PM, start-tonight checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
