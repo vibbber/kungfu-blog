@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your gifted child has five intensity dials. Most kids sit at medium. Yours? Cranked to eleven on at least one. Here's how to figure out which ones and what to do about it.">
+  <title>Your Kid Has Five Volume Dials. Which Ones Are Cranked? | Kung Fu Parenting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #5C8A5A;
+      margin-bottom: 16px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: #555;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .insight-block {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .insight-block p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Intensity quick-ref table */
+    .intensity-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .intensity-table thead th {
+      background: #5C8A5A;
+      color: white;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .intensity-table tbody td {
+      padding: 14px 16px;
+      font-size: 15px;
+      border-bottom: 1px solid #EDE8E0;
+      vertical-align: top;
+    }
+
+    .intensity-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .intensity-table tbody tr:nth-child(odd) {
+      background: white;
+    }
+
+    .intensity-table tbody tr:nth-child(even) {
+      background: #F7F3ED;
+    }
+
+    .intensity-table .dial-name {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Spot-it cards */
+    .spot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    @media (max-width: 600px) {
+      .spot-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+
+    .spot-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-top: 4px solid;
+    }
+
+    .spot-card.thinking { border-color: #5C8A5A; }
+    .spot-card.imagination { border-color: #7B68AE; }
+    .spot-card.feeling { border-color: #E8A598; }
+    .spot-card.sensory { border-color: #D4874E; }
+    .spot-card.movement { border-color: #4A90B8; }
+
+    .spot-card h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .spot-card .telltale {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .spot-card .superpower {
+      font-size: 13px;
+      color: #5C8A5A;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    /* Reframe table */
+    .reframe-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .reframe-table thead th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .reframe-table thead th:first-child {
+      background: #E8A598;
+      color: white;
+    }
+
+    .reframe-table thead th:last-child {
+      background: #5C8A5A;
+      color: white;
+    }
+
+    .reframe-table tbody td {
+      padding: 12px 16px;
+      font-size: 15px;
+      border-bottom: 1px solid #EDE8E0;
+    }
+
+    .reframe-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .reframe-table tbody tr:nth-child(odd) { background: white; }
+    .reframe-table tbody tr:nth-child(even) { background: #F7F3ED; }
+
+    /* DIAL steps */
+    .dial-steps {
+      margin: 24px 0;
+    }
+
+    .dial-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .dial-letter {
+      background: #E8A598;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+      font-family: 'Lora', serif;
+    }
+
+    .dial-step h4 {
+      font-size: 16px;
+      color: #5C8A5A;
+      margin-bottom: 4px;
+    }
+
+    .dial-step p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* Script box */
+    .script-box {
+      background: #FFFDF5;
+      border: 2px solid #E8A598;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .script-box h3 {
+      color: #E8A598;
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+
+    .script-box .them {
+      font-size: 15px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .script-box .you {
+      font-size: 15px;
+      color: #1A1A2E;
+      margin-bottom: 0;
+      padding-left: 16px;
+      border-left: 3px solid #5C8A5A;
+    }
+
+    .closing-block {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 12px;
+      margin: 36px 0;
+      text-align: center;
+    }
+
+    .closing-block p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .closing-block p.small {
+      font-size: 15px;
+      font-weight: 400;
+      margin-top: 12px;
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #DDD;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Your Kid Has Five Volume Dials. Which Ones Are Cranked?</h1>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">She's not 'too much.' She's wired to experience specific parts of life at higher resolution.</p>
+      <ul>
+        <li>Kids whose parents know their intensity profile navigate new schools, friendships, and puberty without the bewilderment that comes from being constantly misunderstood.</li>
+        <li>The move: use the DIAL method — one week of observation turns scattered frustration into a usable map of your child's wiring.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>5 color-coded spot-your-kid cards &middot; 5-row frustration-to-lens reframe table &middot; 4-step DIAL profiling method &middot; when-to-worry clinical checklist</div>
+    </div>
+
+    <p class="lead">She melts down over a shirt tag. He cannot stop bouncing. She asks questions that leave adults speechless. None of this is random. It's wiring.</p>
+
+    <p>Here's something that changes everything once you see it: your gifted child's brain has five intensity channels. Most kids run all five near the middle. Yours? One to three of those channels are turned way, way up.</p>
+
+    <p>That's not a behavior problem. That's not a diagnosis. That's the actual neurological architecture of a gifted mind, documented since the 1960s when psychologist Kazimierz Dabrowski first mapped these patterns. He called them "overexcitabilities." A better word: <strong>intensities</strong>.</p>
+
+    <p>Once you know which dials are cranked in your kid, every confusing behavior suddenly has an explanation. And better than that, it has a response that actually works.</p>
+
+    <img src="/images/blog/intensity-profile-guide/five-dials.webp" alt="Five intensity dials: Thinking, Imagination, Feeling, Senses, Movement" class="blog-img">
+
+    <h2>The Five Dials, at a Glance</h2>
+
+    <table class="intensity-table">
+      <thead>
+        <tr>
+          <th>Dial</th>
+          <th>What It Looks Like</th>
+          <th>The Gift Inside It</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dial-name">Thinking</td>
+          <td>Relentless questions, rabbit holes, gets annoyed by simple answers</td>
+          <td>Intellectual passion, problem-solving drive</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Imagination</td>
+          <td>Elaborate inner worlds, drifts mid-conversation, worries about fictional scenarios</td>
+          <td>Creative processing, original thinking</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Feeling</td>
+          <td>Full-volume emotions, absorbs others' moods, physical symptoms from feelings</td>
+          <td>Deep empathy, emotional leadership</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Senses</td>
+          <td>Tag-cutting, noise sensitivity, food texture battles</td>
+          <td>Artistic eye, musical ear, aesthetic depth</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Movement</td>
+          <td>Can't sit still, talks fast, throws body into every emotion</td>
+          <td>Athletic drive, physical energy, competitive fire</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Most gifted kids light up one to three of these. Rarely all five. And the combination matters: a child high in both Thinking and Feeling processes the world very differently from one who's high in Movement and Senses.</p>
+
+    <div class="insight-block">
+      <p>Your child isn't "too much." They're wired to experience specific parts of life at a higher resolution than most people. That wiring is permanent, and it's an asset once you learn to work with it.</p>
+    </div>
+
+    <h2>Spot Your Kid in 30 Seconds</h2>
+
+    <p>Read these cards. If one makes you think "that is exactly my child," you've found a hot dial.</p>
+
+    <div class="spot-grid">
+      <div class="spot-card thinking">
+        <h4>Thinking</h4>
+        <p class="telltale">Goes down research rabbit holes for hours. Asks "but what was before the Big Bang?" Spots patterns adults miss. Gets genuinely annoyed at "because I said so."</p>
+        <p class="superpower">Superpower: Figures things out instead of being told.</p>
+      </div>
+      <div class="spot-card imagination">
+        <h4>Imagination</h4>
+        <p class="telltale">Invents elaborate worlds and stays in them. Stares into space, then returns with a fully formed idea. Uses metaphors before having the vocabulary for them.</p>
+        <p class="superpower">Superpower: Sees what doesn't exist yet.</p>
+      </div>
+      <div class="spot-card feeling">
+        <h4>Feeling</h4>
+        <p class="telltale">Elated one moment, devastated the next, with genuine depth in both. Picks up your stress before you say a word. Gets stomachaches when anxious.</p>
+        <p class="superpower">Superpower: Reads any room instantly.</p>
+      </div>
+      <div class="spot-card sensory">
+        <h4>Senses</h4>
+        <p class="telltale">Tags must be cut. Certain foods are rejected on texture alone. Notices the humming fridge that nobody else hears. Melts in crowded, bright spaces.</p>
+        <p class="superpower">Superpower: Experiences beauty at a level most people never reach.</p>
+      </div>
+    </div>
+
+    <div class="spot-card movement" style="margin-bottom: 28px;">
+      <h4>Movement</h4>
+      <p class="telltale">Bounces, taps, paces while concentrating, and actually focuses better that way. Talks at a pace others can't follow. Throws themselves into every emotion physically: jumping, stomping, running. Needs less sleep but never seems tired.</p>
+      <p class="superpower">Superpower: Outworks and out-energizes everyone in the room.</p>
+    </div>
+
+    <h2>The Reframe That Changes Everything</h2>
+
+    <img src="/images/blog/intensity-profile-guide/reframe.webp" alt="Before: What you see vs. After: What's actually happening" class="blog-img">
+
+    <p>Once you know the dial, you stop fighting the behavior and start supporting the wiring. Here's what that sounds like:</p>
+
+    <table class="reframe-table">
+      <thead>
+        <tr>
+          <th>Instead of thinking...</th>
+          <th>Try this lens...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Why can't she just sit still?"</td>
+          <td>Her Movement dial is high. She needs to move before she can focus.</td>
+        </tr>
+        <tr>
+          <td>"He's so dramatic about everything."</td>
+          <td>His Feeling dial is cranked. The emotions are genuinely that big.</td>
+        </tr>
+        <tr>
+          <td>"She's being ridiculous about this shirt."</td>
+          <td>Her Senses dial is hot. That tag actually hurts.</td>
+        </tr>
+        <tr>
+          <td>"He never pays attention."</td>
+          <td>His Imagination dial is running. He's processing, just not visibly.</td>
+        </tr>
+        <tr>
+          <td>"She argues about everything."</td>
+          <td>Her Thinking dial is up. She needs the real reason, not just compliance.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Map Your Child's Profile: The DIAL Method</h2>
+
+    <p>One week. Four steps. You'll walk away with a usable picture of your kid's wiring.</p>
+
+    <img src="/images/blog/intensity-profile-guide/dial-method.webp" alt="The DIAL method: Document, Identify, Adjust, Let them in" class="blog-img">
+
+    <div class="dial-steps">
+      <div class="dial-step">
+        <div class="dial-letter">D</div>
+        <div>
+          <h4>Document What You See</h4>
+          <p>For one week, jot down moments when your child's reaction seems way bigger than the situation. Note which of the five channels was active.</p>
+        </div>
+      </div>
+
+      <div class="dial-step">
+        <div class="dial-letter">I</div>
+        <div>
+          <h4>Identify the Pattern</h4>
+          <p>Look at your notes. Which one or two channels show up most? Those are the hot dials. Most gifted children have one to three that clearly stand out.</p>
+        </div>
+      </div>
+
+      <div class="dial-step">
+        <div class="dial-letter">A</div>
+        <div>
+          <h4>Adjust Your Lens</h4>
+          <p>Pick one behavior that currently frustrates you. Reframe it: "Their [channel] is running high right now." This shifts you from correction mode to support mode.</p>
+        </div>
+      </div>
+
+      <div class="dial-step">
+        <div class="dial-letter">L</div>
+        <div>
+          <h4>Let Them In On It</h4>
+          <p>Share what you've noticed. "I think your brain has some really strong settings. Want to figure out together which ones are yours?" Gifted kids feel immediate relief when their experience gets a name.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>When Someone Calls Your Kid "Too Much"</h2>
+
+    <p>It'll happen. Teachers, relatives, coaches. Here's a script that works:</p>
+
+    <div class="script-box">
+      <h3>Ready-Made Response</h3>
+      <p class="them">"She just needs to calm down." "He's always so wound up." "Why does everything have to be such a big deal?"</p>
+      <p class="you">"She's wired to feel things more strongly than most kids. We're working on tools to manage that, but the intensity itself isn't going anywhere, and honestly, it's part of what makes her remarkable. What would help is if we didn't treat it as something she's doing wrong."</p>
+    </div>
+
+    <h2>The Long Game</h2>
+
+    <p>These intensities don't fade. But they transform. Here's what to expect:</p>
+
+    <table class="intensity-table">
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>What Happens</th>
+          <th>What to Do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dial-name">New environments</td>
+          <td>Starting school, moving, puberty all amplify every intensity temporarily</td>
+          <td>Expect regression. Don't panic. It passes.</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Self-awareness</td>
+          <td>A child who can say "My feeling channel is really loud right now" is halfway to managing it</td>
+          <td>Give them the vocabulary early.</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Your own wiring</td>
+          <td>Strong genetic component. You probably share at least one intensity.</td>
+          <td>Narrate your own coping out loud. Model it.</td>
+        </tr>
+        <tr>
+          <td class="dial-name">Growth</td>
+          <td>What looks like chaos at six becomes creative productivity at twelve and brilliance at twenty-five</td>
+          <td>Revisit the profile as they grow. Update your strategies.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>One important note: Movement intensity can look like ADHD. Feeling intensity can look like anxiety. Sensory intensity can resemble sensory processing disorder. Before pursuing a clinical diagnosis for a gifted child, consult someone who understands giftedness. Medicating a condition your child doesn't have won't help, and it may blunt the very wiring that makes them exceptional.</p>
+
+    <div class="closing-block">
+      <p>These intensities aren't problems to solve. They're the engine of your child's giftedness.</p>
+      <p class="small">Your job is to help them learn to drive, not to take the engine apart.</p>
+    </div>
+
+    <footer>
+      <p>kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>

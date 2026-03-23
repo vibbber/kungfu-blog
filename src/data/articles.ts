@@ -2980,6 +2980,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: never let them see it wrong — study the correct spelling before the pencil touches paper.',
     tldrInside: 'correct-after-error vs prevent-before-writing comparison, 60-second Visual Lock technique, 4-step error damage control, progress timeline from first week to lifelong payoff',
   },
+  {
+    slug: 'intensity-profile-guide',
+    title: 'Five Intensity Dials',
+    subtitle: 'Why your "too much" kid is wired differently — and which channels are cranked',
+    description: 'Your gifted child has five intensity dials. Most kids sit at medium. Yours? Cranked to eleven on at least one. Here\'s how to figure out which ones and what to do about it.',
+    image: '/images/cards/intensity-profile-guide.webp',
+    imageAlt: 'Five colored intensity slider dials representing thinking, imagination, feeling, senses, and movement channels',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Gifted',
+    book: 'The Gifted Kids Workbook',
+    bookSlug: 'gifted-kids-workbook-boorman',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-23',
+    tldrAnchor: 'She\'s not \'too much.\' She\'s wired to experience specific parts of life at higher resolution.',
+    tldrPayoff: 'Kids whose parents know their intensity profile navigate new schools, friendships, and puberty without the bewilderment that comes from being constantly misunderstood.',
+    tldrMove: 'The move: use the DIAL method — one week of observation turns scattered frustration into a usable map of your child\'s wiring.',
+    tldrInside: '5 color-coded spot-your-kid cards, 5-row frustration-to-lens reframe table, 4-step DIAL profiling method, when-to-worry clinical checklist',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
