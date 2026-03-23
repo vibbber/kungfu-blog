@@ -2960,6 +2960,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: say it once, physically relax, wait 30-90 seconds -- then nudge, don\'t repeat.',
     tldrInside: 'DROP method with word-for-word scripts, what-parents-do vs. what-works table, 2 full scenarios with dialogue, how to brief grandparents and teachers',
   },
+  {
+    slug: 'zero-error-spelling',
+    title: 'Spelling Without Errors',
+    subtitle: 'One wrong image lasts forever — how to make sure they only store the right one',
+    description: 'Your child\'s brain photographs every word it sees. Misspellings create permanent competing images. Here\'s the technique that ensures they only ever store the right one.',
+    image: '/images/cards/zero-error-spelling.webp',
+    imageAlt: 'Two polaroid photographs side by side — one showing a correctly spelled word, the other faded with a red X',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Learning',
+    book: 'Home Education',
+    bookSlug: 'charlotte-mason-home-education-1906',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-23',
+    tldrAnchor: 'Spelling is not about rules. It\'s about which photograph the brain stored first.',
+    tldrPayoff: 'Kids who learn this way don\'t need spelling drills. They recall words the way you recall a friend\'s face — instantly, without thinking, from a single clean image.',
+    tldrMove: 'The shift: never let them see it wrong — study the correct spelling before the pencil touches paper.',
+    tldrInside: 'correct-after-error vs prevent-before-writing comparison, 60-second Visual Lock technique, 4-step error damage control, progress timeline from first week to lifelong payoff',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your child's brain photographs every word it sees. Misspellings create permanent competing images. Here's the technique that ensures they only ever store the right one.">
+  <title>Your Kid's Brain Is a Camera — And Misspellings Are Permanent Photobombers | Kung Fu</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: #5C8A5A;
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Lora', 'Georgia', serif;
+      font-size: 36px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Body text */
+    p { margin-bottom: 18px; font-size: 17px; }
+    h2 {
+      font-family: 'Lora', 'Georgia', serif;
+      color: #5C8A5A;
+      font-size: 26px;
+      margin: 40px 0 16px;
+    }
+    h3 {
+      font-family: 'Lora', 'Georgia', serif;
+      color: #5C8A5A;
+      font-size: 20px;
+      margin: 28px 0 12px;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Inline image */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .img-caption {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      margin-top: -20px;
+      margin-bottom: 28px;
+    }
+
+    /* Comparison table */
+    .vs-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .vs-table thead th {
+      padding: 14px 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .vs-table thead th:first-child {
+      background: #F5E0DB;
+      color: #C0392B;
+    }
+    .vs-table thead th:last-child {
+      background: #D4EDDA;
+      color: #2D6A2E;
+    }
+    .vs-table td {
+      padding: 12px 20px;
+      font-size: 15px;
+      vertical-align: top;
+      border-bottom: 1px solid #EEE;
+    }
+    .vs-table tr:last-child td { border-bottom: none; }
+    .vs-table td:first-child { background: #FDF0ED; }
+    .vs-table td:last-child { background: #F0FAF0; }
+
+    /* Step cards */
+    .step-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .step-card .step-num {
+      display: inline-block;
+      background: #E8A598;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .step-card h4 {
+      display: inline;
+      color: #1A1A2E;
+      font-size: 17px;
+    }
+    .step-card p {
+      margin: 10px 0 0;
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* Script box */
+    .script-box {
+      background: #F3F0E8;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 12px 0 0;
+      font-style: italic;
+      font-size: 15px;
+      color: #333;
+      border-left: 3px solid #5C8A5A;
+    }
+    .script-box .label {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #5C8A5A;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* Alert box */
+    .alert-box {
+      background: #FFF8E7;
+      border: 1px solid #F0C674;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .alert-box h4 {
+      color: #B8860B;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .alert-box ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .alert-box li {
+      font-size: 15px;
+      margin: 6px 0;
+      color: #444;
+    }
+
+    /* Timeline */
+    .timeline {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: white;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .timeline h3 {
+      color: white;
+      opacity: 0.9;
+      margin-top: 0;
+    }
+    .tl-item {
+      display: flex;
+      gap: 14px;
+      margin: 14px 0;
+      align-items: baseline;
+    }
+    .tl-label {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      min-width: 100px;
+      opacity: 0.85;
+    }
+    .tl-desc { font-size: 16px; }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #E0DCD4;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .container { padding: 24px 16px; }
+      .callout p { font-size: 17px; }
+      .vs-table td, .vs-table thead th { padding: 10px 12px; font-size: 13px; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <span class="hero-tag">Spelling Mastery</span>
+      <h1>Your Kid's Brain Is a Camera. Misspellings Are Permanent Photobombers.</h1>
+      <div class="tldr-box">
+        <p class="tldr-anchor">Spelling is not about rules. It's about which photograph the brain stored first.</p>
+        <ul>
+          <li>Kids who learn this way don't need spelling drills. They recall words the way you recall a friend's face — instantly, without thinking, from a single clean image.</li>
+          <li>The shift: never let them see it wrong — study the correct spelling before the pencil touches paper.</li>
+        </ul>
+        <hr class="tldr-divider">
+        <div class="tldr-inside"><strong>Inside: </strong>correct-after-error vs prevent-before-writing comparison &middot; 60-second Visual Lock technique &middot; 4-step error damage control &middot; progress timeline from first week to lifelong payoff</div>
+      </div>
+      <p class="hero-sub">The technique that makes spelling effortless — by making sure they never see it wrong in the first place.</p>
+      <img class="hero-img" src="/images/blog/zero-error-spelling/brain-camera.webp" alt="A child's brain photographing a word, storing a perfect visual image">
+    </div>
+
+    <p>Here's something wild: your child's brain takes a snapshot of every word it sees. Not a rough sketch — a full photograph. Letter by letter, shape by shape, burned into visual memory.</p>
+
+    <p>And here's the part that changes everything: <strong>once a misspelled version gets photographed, it never fully goes away.</strong></p>
+
+    <p>Even after correction. Even after practice. The wrong image sits there, competing with the right one. That nagging "wait, is it one L or two?" feeling that follows adults around for decades? That's a bad photograph taken in third grade, still causing interference.</p>
+
+    <div class="callout">
+      <p>Spelling is not about memorizing rules. It's about making sure the only photograph your child's brain ever takes is the correct one.</p>
+    </div>
+
+    <h2>Why "Practice and Correct" Is Working Against You</h2>
+
+    <p>The standard spelling workflow — dictate words, let kids attempt them, mark the errors, have them write corrections — feels logical. It's also doing damage with every red mark.</p>
+
+    <img class="blog-img" src="/images/blog/zero-error-spelling/wrong-vs-right.webp" alt="Comparison: wrong way creates competing images, right way stores only the correct image">
+    <p class="img-caption">Two approaches, two very different outcomes in visual memory.</p>
+
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Correct-After-Error</th>
+          <th>Prevent-Before-Writing</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Child writes "necesary"</td>
+          <td>Child studies "necessary" first</td>
+        </tr>
+        <tr>
+          <td>Brain photographs the wrong spelling</td>
+          <td>Brain photographs only the right spelling</td>
+        </tr>
+        <tr>
+          <td>Teacher corrects it</td>
+          <td>Child confirms the mental image</td>
+        </tr>
+        <tr>
+          <td>Now TWO images compete forever</td>
+          <td>ONE clean image, no competition</td>
+        </tr>
+        <tr>
+          <td>Lifelong hesitation on that word</td>
+          <td>Instant, confident recall</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The correction doesn't erase the mistake. It just adds a second photograph. Now the brain has to choose between two every time that word comes up. That's not learning — that's installing permanent doubt.</p>
+
+    <h2>The Visual Lock: Four Steps, Total Confidence</h2>
+
+    <p>This is the actual technique. It takes about 60 seconds per word and it's borderline magical.</p>
+
+    <img class="blog-img" src="/images/blog/zero-error-spelling/visual-lock.webp" alt="A child with eyes closed, visualizing a word clearly in their mind">
+    <p class="img-caption">The visual lock: eyes closed, word crystal clear.</p>
+
+    <div class="step-card">
+      <span class="step-num">1</span>
+      <h4>Scan and Flag</h4>
+      <p>Before any writing happens, your child reads through the passage and flags every word they're not 100% sure about. No guessing allowed.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">2</span>
+      <h4>Photograph It</h4>
+      <p>For each flagged word, run the visual lock:</p>
+      <div class="script-box">
+        <span class="label">Say this</span>
+        "Look at the word carefully. Now close your eyes. Can you see it? Spell it to me with your eyes still closed. Now open — were you right?"
+      </div>
+      <p>Repeat until the mental image is sharp. They'll know when it clicks.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">3</span>
+      <h4>Confirm and Clear</h4>
+      <p>Write the tricky words on a whiteboard. Let your child study them. Then erase them. They write from memory, not from copying. Copying trains the hand; this trains the brain.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">4</span>
+      <h4>Write From Clean Memory</h4>
+      <p>Now dictation begins. Every word they write comes from a verified mental photograph. No guessing, no competing images, no doubt.</p>
+    </div>
+
+    <div class="alert-box">
+      <h4>When a mistake slips through anyway</h4>
+      <ul>
+        <li><strong>Cover or erase it immediately</strong> — don't leave it visible</li>
+        <li><strong>Don't discuss the mistake</strong> — attention strengthens the wrong image</li>
+        <li><strong>Flash the correct spelling</strong> — let them photograph it again</li>
+        <li><strong>Move on fast</strong> — the less airtime the error gets, the weaker its trace</li>
+      </ul>
+    </div>
+
+    <h2>Why This Actually Works</h2>
+
+    <p>Spelling is a visual skill, not an auditory one. Think about how you spell a tricky word right now — you don't sound it out. You see it. You picture the word in your mind and check if it "looks right."</p>
+
+    <p>That's exactly what this technique builds: a library of clean, high-resolution mental photographs. One image per word. No competitors. No static. Just instant, confident recall.</p>
+
+    <p>Kids who learn this way don't struggle with spelling. They don't need to. The right answer is the only image they have.</p>
+
+    <div class="timeline">
+      <h3>What This Looks Like Over Time</h3>
+      <div class="tl-item">
+        <span class="tl-label">This week</span>
+        <span class="tl-desc">An extra minute studying words before writing — and nailing every single one.</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">This month</span>
+        <span class="tl-desc">The visual lock becomes automatic. They start catching uncertain words on their own.</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">This year</span>
+        <span class="tl-desc">Spelling accuracy that looks effortless — because there are no competing images to fight.</span>
+      </div>
+      <div class="tl-item">
+        <span class="tl-label">For life</span>
+        <span class="tl-desc">No more "is it -ence or -ance?" They only ever saw it one way. Confidence is total.</span>
+      </div>
+    </div>
+
+    <p>The best part? You can start tonight. Pick one word your kid always gets wrong. Run the visual lock. Watch them nail it. Then never go back to red-pen corrections again.</p>
+
+    <footer>
+      <p>Kung Fu Parenting &mdash; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>
