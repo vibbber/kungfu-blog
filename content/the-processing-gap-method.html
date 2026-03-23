@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="270">
+  <title>Your Kid Isn't Ignoring You. They're Buffering.</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    h1, h2, h3 { font-family: 'Lora', serif; }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.2;
+      color: #1A1A2E;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #6B7280;
+      font-style: italic;
+      font-family: 'Lora', serif;
+      margin-bottom: 40px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #5C8A5A;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+
+    .callout {
+      background: #5C8A5A;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin: 36px 0;
+      text-align: center;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+    .callout small {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.85;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .comparison-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+
+    /* Before/After Table */
+    .ba-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .ba-table th {
+      padding: 14px 20px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+    }
+    .ba-table th:first-child {
+      background: #F3E8E5;
+      color: #C0392B;
+    }
+    .ba-table th:last-child {
+      background: #E8F0E8;
+      color: #5C8A5A;
+    }
+    .ba-table td {
+      padding: 14px 20px;
+      font-size: 14px;
+      vertical-align: top;
+      border-bottom: 1px solid #F0ECE6;
+      background: white;
+    }
+    .ba-table tr:last-child td { border-bottom: none; }
+
+    /* DROP Steps */
+    .drop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    @media (max-width: 550px) {
+      .drop-grid { grid-template-columns: 1fr; }
+    }
+    .drop-card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-top: 4px solid #E8A598;
+    }
+    .drop-card .letter {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      background: #E8A598;
+      color: white;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .drop-card h3 {
+      font-size: 17px;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+    .drop-card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 0;
+    }
+    .drop-card .script {
+      background: #F5FAF5;
+      border-left: 3px solid #5C8A5A;
+      padding: 10px 14px;
+      margin-top: 10px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 14px;
+      color: #5C8A5A;
+    }
+
+    .drop-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0 32px;
+    }
+
+    /* Scenario cards */
+    .scenario {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .scenario h3 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #E8A598;
+      margin-bottom: 16px;
+    }
+    .scenario .line {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .scenario .line:last-child { margin-bottom: 0; }
+    .scenario .label {
+      font-weight: 600;
+      min-width: 60px;
+      flex-shrink: 0;
+      color: #1A1A2E;
+    }
+    .scenario .silence {
+      color: #5C8A5A;
+      font-weight: 600;
+      font-style: italic;
+    }
+    .scenario .result {
+      background: #F5FAF5;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #555;
+      border-left: 3px solid #5C8A5A;
+    }
+
+    /* Tip strip */
+    .tip-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .tip {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      font-size: 14px;
+      color: #555;
+    }
+    .tip strong {
+      display: block;
+      color: #5C8A5A;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .closing {
+      background: linear-gradient(135deg, #5C8A5A, #4A7A4A);
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin-top: 48px;
+      text-align: center;
+    }
+    .closing p {
+      color: white;
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .closing small {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E0DCD6;
+      font-size: 12px;
+      color: #999;
+      text-align: center;
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <h1>Your Kid Isn't Ignoring You. They're Buffering.</h1>
+
+  <div class="tldr-box">
+    <p class="tldr-anchor">That spinning wheel on your laptop? That's your kid's brain after you give an instruction.</p>
+    <ul>
+      <li>Kids given processing room walk themselves through transitions, handle requests without blowing up, and develop faster processing over time as the pattern becomes familiar.</li>
+      <li>The move: say it once, physically relax, wait 30-90 seconds -- then nudge, don't repeat.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>DROP method with word-for-word scripts &middot; what-parents-do vs. what-works table &middot; 2 full scenarios with dialogue &middot; how to brief grandparents and teachers</div>
+  </div>
+
+  <p class="subtitle">The one parenting move that turns automatic "no" into effortless "okay"</p>
+
+  <img src="/images/blog/the-processing-gap-method/buffering-brain.webp" alt="Child's brain shown as a loading progress bar" class="hero-img">
+
+  <p>You know that spinning wheel on your laptop? The one that shows up when you click something and the system hasn't caught up yet?</p>
+
+  <p>Now picture yourself clicking the same button twelve more times while it's still loading. You know what happens: everything freezes harder.</p>
+
+  <p>That's what repeating an instruction does to a child whose brain processes language at its own pace. Every additional "Did you hear me?" is another click on a page that was already loading.</p>
+
+  <p>The fix is almost absurdly simple. You stop clicking.</p>
+
+  <h2>What "No" Actually Means</h2>
+
+  <p>Here's the thing speech therapists and occupational therapists have known for decades: many children -- especially those with ADHD, autism, or auditory processing differences -- say "no" before the instruction has even finished registering. It's not defiance. It's a placeholder. Their brain is still converting your words into a plan of action, and while it works, the default output is rejection.</p>
+
+  <p>If you wait -- genuinely wait, in silence -- a huge percentage of those "no" responses quietly reverse themselves.</p>
+
+  <div class="callout">
+    Your child's refusal is a timing problem, not a respect problem.
+    <small>Silence is the fastest way to close the gap.</small>
+  </div>
+
+  <h2>Repeat vs. Wait: A Side-by-Side</h2>
+
+  <img src="/images/blog/the-processing-gap-method/repeat-vs-wait.webp" alt="Comparison diagram: repeating instructions vs waiting in silence" class="comparison-img">
+
+  <table class="ba-table">
+    <tr>
+      <th>What Parents Usually Do</th>
+      <th>What Actually Works</th>
+    </tr>
+    <tr>
+      <td>"Put your shoes on."</td>
+      <td>"Put your shoes on."</td>
+    </tr>
+    <tr>
+      <td>Child says "No." Parent repeats louder.</td>
+      <td>Child says "No." Parent says nothing.</td>
+    </tr>
+    <tr>
+      <td>"I said put your shoes on. Now."</td>
+      <td>Parent relaxes body, steps back, waits.</td>
+    </tr>
+    <tr>
+      <td>Child digs in. Everyone escalates.</td>
+      <td>30-90 seconds later, child reaches for shoes.</td>
+    </tr>
+    <tr>
+      <td style="color:#C0392B; font-weight:600;">Result: meltdown, power struggle, late departure</td>
+      <td style="color:#5C8A5A; font-weight:600;">Result: shoes on, no drama, everyone calm</td>
+    </tr>
+  </table>
+
+  <p>The difference isn't technique. It's restraint. You delivered the instruction correctly the first time. The only thing left to do is let it land.</p>
+
+  <h2>The DROP Method</h2>
+
+  <p>Four steps. The hardest part is the middle two, where you do absolutely nothing.</p>
+
+  <img src="/images/blog/the-processing-gap-method/drop-method.webp" alt="The DROP method: four stepping stones showing Deliver, Release, Observe, Prompt" class="drop-img">
+
+  <div class="drop-grid">
+    <div class="drop-card">
+      <span class="letter">D</span>
+      <h3>Deliver Once</h3>
+      <p>One sentence. Clear and calm. Then close your mouth.</p>
+      <div class="script">"Hey, it's time to put your shoes on."</div>
+    </div>
+    <div class="drop-card">
+      <span class="letter">R</span>
+      <h3>Release the Pressure</h3>
+      <p>When the "no" comes, do not react. No eye roll, no sigh. Physically relax your own body. Step back. You're clearing the runway so their brain can land the instruction.</p>
+    </div>
+    <div class="drop-card">
+      <span class="letter">O</span>
+      <h3>Observe the Shift</h3>
+      <p>Watch quietly. You're looking for a change -- a glance, a posture shift, a pause. That's the signal the instruction has registered. Could be 30 seconds. Could be several minutes. Every word you add during this window resets the clock.</p>
+    </div>
+    <div class="drop-card">
+      <span class="letter">P</span>
+      <h3>Prompt Gently</h3>
+      <p>Once you see the shift, offer something light. Not a repeat -- a nudge.</p>
+      <div class="script">"Ready to get those shoes on?"</div>
+    </div>
+  </div>
+
+  <h2>Watch It Work</h2>
+
+  <div class="scenario">
+    <h3>Dinner Transition</h3>
+    <div class="line"><span class="label">Parent:</span> "Time to wash your hands for dinner."</div>
+    <div class="line"><span class="label">Child:</span> (doesn't look up from blocks) "No."</div>
+    <div class="line"><span class="label">Parent:</span> <span class="silence">Says nothing. Steps back. Watches.</span></div>
+    <div class="result">About a minute passes. Child finishes placing a block, looks up, seems to notice the parent for the first time.<br><br><strong>Parent:</strong> "Dinner's almost ready -- want to go wash up?"<br><strong>Child:</strong> "Okay." (gets up, goes to sink)</div>
+  </div>
+
+  <div class="scenario">
+    <h3>Homework Kickoff</h3>
+    <div class="line"><span class="label">Parent:</span> "Let's get started on your reading."</div>
+    <div class="line"><span class="label">Child:</span> "No! I don't want to!"</div>
+    <div class="line"><span class="label">Parent:</span> <span class="silence">Sits down nearby. Opens own book. Says nothing.</span></div>
+    <div class="result">After a couple of minutes, the agitation settles. Child glances at the parent. Body loosens.<br><br><strong>Parent:</strong> "Which book are we on?"<br><strong>Child:</strong> (reaches for the book)</div>
+  </div>
+
+  <p>Notice what the parent does during the gap: <em>something calm</em>. They don't hover. They don't stare. They just exist nearby, doing their own thing. That's the move.</p>
+
+  <h2>Making It Stick</h2>
+
+  <div class="tip-strip">
+    <div class="tip">
+      <strong>Start small</strong>
+      Practice during calm moments, not emergencies. Low-stakes reps build the muscle memory.
+    </div>
+    <div class="tip">
+      <strong>Know your trigger</strong>
+      Most parents feel a jaw tighten or a surge right before repeating. That sensation is your cue to go silent instead.
+    </div>
+    <div class="tip">
+      <strong>Brief other adults</strong>
+      "Give them extra time after instructions -- they process slowly but they get there." One sentence saves grandparents a lot of frustration.
+    </div>
+  </div>
+
+  <div class="tip-strip">
+    <div class="tip">
+      <strong>Track conditions</strong>
+      Some kids process faster in quiet rooms. Others need a visual cue alongside the verbal one. Notice what shortens the gap and create more of it.
+    </div>
+    <div class="tip">
+      <strong>Celebrate the turnaround</strong>
+      When they come around, say "Thanks for getting that done" -- not "See, you can listen!" Reinforce the completion, not the delay.
+    </div>
+  </div>
+
+  <div class="closing">
+    <p>They're not ignoring you. Their brain is working on it.</p>
+    <small>The less you say, the faster they hear you.</small>
+  </div>
+
+  <footer>
+    <p>Published by kungfu.family</p>
+  </footer>
+
+</body>
+</html>

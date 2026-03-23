@@ -2940,6 +2940,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: three principles — protein-anchor every meal, eat fiber before carbs, move gently after eating.',
     tldrInside: 'spike-and-crash vs steady-fuel table, 3 meal-order step cards, full-day timeline from 7AM to 6PM, start-tonight checklist',
   },
+  {
+    slug: 'the-processing-gap-method',
+    title: 'Stop Clicking Refresh',
+    subtitle: 'Your kid\'s "no" is a loading screen — not a locked door',
+    description: 'That automatic "no" isn\'t defiance — it\'s your child\'s brain buffering. The DROP method gives you a 90-second move that turns resistance into willing cooperation.',
+    image: '/images/cards/the-processing-gap-method.webp',
+    imageAlt: 'A browser progress bar with a child silhouette, representing the concept of a child\'s brain loading and processing an instruction',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Behavior',
+    book: 'The Elephant in the Playroom',
+    bookSlug: 'elephant-in-the-playroom-brodey',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-23',
+    tldrAnchor: 'That spinning wheel on your laptop? That\'s your kid\'s brain after you give an instruction.',
+    tldrPayoff: 'Kids given processing room walk themselves through transitions, handle requests without blowing up, and develop faster processing over time as the pattern becomes familiar.',
+    tldrMove: 'The move: say it once, physically relax, wait 30-90 seconds -- then nudge, don\'t repeat.',
+    tldrInside: 'DROP method with word-for-word scripts, what-parents-do vs. what-works table, 2 full scenarios with dialogue, how to brief grandparents and teachers',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
