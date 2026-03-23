@@ -3000,6 +3000,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: use the DIAL method — one week of observation turns scattered frustration into a usable map of your child\'s wiring.',
     tldrInside: '5 color-coded spot-your-kid cards, 5-row frustration-to-lens reframe table, 4-step DIAL profiling method, when-to-worry clinical checklist',
   },
+  {
+    slug: 'when-your-child-lies-with-an-innocent-face',
+    title: 'The Horse That Was a Dog',
+    subtitle: 'Your child isn\'t lying — their imagination just outruns their eyes',
+    description: 'Your child\'s wild imagination isn\'t a lying problem — it\'s a perception skill that needs training. Three fun games teach truthful seeing without crushing creativity.',
+    image: '/images/cards/when-your-child-lies-with-an-innocent-face.webp',
+    imageAlt: 'Split-frame illustration showing a dog through a window transforming into a horse in a child\'s imagination',
+    imageWidth: 1024,
+    imageHeight: 1024,
+    imageAspect: 1,
+    topic: 'Behavior',
+    book: 'Formation of Character',
+    bookSlug: 'charlotte-mason-formation-of-character',
+    datePublished: '2026-03-23',
+    dateModified: '2026-03-23',
+    tldrAnchor: 'Your child isn\'t lying. Their imagination is just faster than their eyes.',
+    tldrPayoff: 'Kids who get this training catch their own inventions, deliver messages accurately, and tell you what really happened at the park — all without losing an ounce of creative fire.',
+    tldrMove: 'The move: stop treating it as a honesty problem and start training it as a perception skill.',
+    tldrInside: 'fear-driven vs. imagination-driven comparison, 3 games with parent scripts, quick-reference response table, right kind of stories to feed imagination',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
