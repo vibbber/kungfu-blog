@@ -3100,6 +3100,26 @@ export const articles: Article[] = [
     tldrMove: 'The shift: treat the evaluation like an investigation — rule out physical causes, verify credentials, and demand true independence.',
     tldrInside: '5-step CLEAR framework, 4 blind-spot cards, pause-vs-trust grid for vetting evaluators, credential-checking script you can use verbatim',
   },
+  {
+    slug: 'food-talk-that-protects-body-image',
+    title: 'Food Words That Last Forever',
+    subtitle: 'Six sentences shaping how your kid sees their body',
+    description: 'The way you talk about food shapes your child\'s body image for life. Six specific phrase swaps that shift from appearance-based to function-based food talk — with age-adapted scripts.',
+    image: '/images/cards/food-talk-that-protects-body-image.webp',
+    imageAlt: 'Child with two thought bubbles — one showing a mirror, one showing a running figure — representing appearance vs function-based food talk',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Nutrition',
+    book: 'Growing Up Keto',
+    bookSlug: 'growing-up-keto-sullivan',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    tldrAnchor: 'Your food vocabulary is shaping how your kid sees their own body.',
+    tldrPayoff: 'Kids who hear \'that gives you steady energy\' instead of \'that\'ll make you gain weight\' grow up listening to their body rather than fighting it.',
+    tldrMove: 'The move: catch yourself before any appearance comment and pivot to function — what the food does, how the body feels.',
+    tldrInside: '6 phrase swaps with exact wording, scripts for kids under 7, tweens, and teens, 3 brain-damage patterns from bad food talk, grandparent briefing one-liner',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();

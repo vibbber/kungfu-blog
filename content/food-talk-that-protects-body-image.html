@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="strategy-id" content="340">
+  <title>Six Sentences That Shape How Your Kid Feels About Food Forever</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 16px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      color: #1A1A2E;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .hero .subtitle {
+      font-size: 18px;
+      color: #6B7280;
+      font-family: 'Lora', serif;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Body text */
+    p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+
+    /* Section headings */
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      color: #5C8A5A;
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+
+    /* The swap table */
+    .swap-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 24px 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .swap-table thead th {
+      padding: 14px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .swap-table thead th:first-child {
+      background: #FEF0ED;
+      color: #C0392B;
+      text-align: left;
+    }
+    .swap-table thead th:last-child {
+      background: #EDF7ED;
+      color: #5C8A5A;
+      text-align: left;
+    }
+    .swap-table td {
+      padding: 16px 20px;
+      font-size: 16px;
+      vertical-align: top;
+      line-height: 1.55;
+      border-bottom: 1px solid #f0ece6;
+    }
+    .swap-table tr:last-child td { border-bottom: none; }
+    .swap-table td:first-child {
+      background: #FFFBF9;
+      color: #999;
+      font-style: italic;
+      text-decoration: line-through;
+      width: 45%;
+    }
+    .swap-table td:last-child {
+      background: #F7FBF7;
+      font-style: italic;
+      color: #2C3E50;
+      width: 55%;
+    }
+
+    /* Callout box */
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .callout p {
+      font-family: 'Lora', serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 0;
+      line-height: 1.5;
+      color: #fff;
+    }
+
+    /* Script cards */
+    .script-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #E8A598;
+    }
+    .script-card .label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #E8A598;
+      margin-bottom: 8px;
+    }
+    .script-card .script {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #2C3E50;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .script-card .note {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    /* In-blog image */
+    .blog-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+    }
+
+    /* Step cards for the "how" */
+    .step-row {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+    .step-card {
+      flex: 1;
+      min-width: 220px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .step-card .step-num {
+      display: inline-block;
+      background: #5C8A5A;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .step-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+    }
+    .step-card p {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 0;
+    }
+
+    /* Warning */
+    .warning {
+      background: #FEF3F0;
+      border-left: 4px solid #E8A598;
+      padding: 18px 22px;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+    }
+    .warning strong {
+      color: #C0392B;
+    }
+    .warning p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #E5E1DA;
+      text-align: center;
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .container { padding: 20px 16px 40px; }
+      .swap-table td, .swap-table thead th { padding: 12px 14px; font-size: 14px; }
+      .step-row { flex-direction: column; }
+    }
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <img src="/images/blog/food-talk-that-protects-body-image/hero.webp" alt="Parent and child having a warm conversation about food and energy at the kitchen table">
+      <h1>Six Sentences That Shape How Your Kid Feels About Food Forever</h1>
+      <p class="subtitle">Swap these phrases and watch your child build a relationship with food that actually lasts.</p>
+    </div>
+
+    <div class="tldr-box">
+      <p class="tldr-anchor">Your food vocabulary is shaping how your kid sees their own body.</p>
+      <ul>
+        <li>Kids who hear 'that gives you steady energy' instead of 'that'll make you gain weight' grow up listening to their body rather than fighting it.</li>
+        <li>The move: catch yourself before any appearance comment and pivot to function — what the food does, how the body feels.</li>
+      </ul>
+      <hr class="tldr-divider">
+      <div class="tldr-inside"><strong>Inside: </strong>6 phrase swaps with exact wording &middot; scripts for kids under 7, tweens, and teens &middot; 3 brain-damage patterns from bad food talk &middot; grandparent briefing one-liner</div>
+    </div>
+
+    <!-- Opening -->
+    <div class="section">
+      <p>There's a sentence rattling around in most parents' heads right now. Something like: <em>"Should you really be eating that?"</em> or <em>"You look great since you started eating better!"</em></p>
+
+      <p>Both sound harmless. Both land like grenades in a kid's brain.</p>
+
+      <p>Here's what the research keeps showing: the exact words you use around food predict whether your child grows up trusting their body or fighting it. Not the food itself. Not the nutrition plan. The <em>words</em>.</p>
+
+      <p>And the fix is surprisingly simple. Six sentences, swapped out for better ones. That's the whole move.</p>
+    </div>
+
+    <!-- The Swap Table -->
+    <div class="section">
+      <h2>The Six Swaps</h2>
+      <p>Every swap follows one rule: talk about what food <strong>does</strong>, not what it <strong>changes about how your kid looks</strong>.</p>
+
+      <table class="swap-table">
+        <thead>
+          <tr>
+            <th>Instead of this...</th>
+            <th>Say this</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"You look so much thinner!"</td>
+            <td>"You seem like you've got so much more energy at practice."</td>
+          </tr>
+          <tr>
+            <td>"That food is going to make you gain weight."</td>
+            <td>"That one might leave you feeling low on energy later &mdash; you'll know when you notice it."</td>
+          </tr>
+          <tr>
+            <td>"You look great &mdash; keep it up!"</td>
+            <td>"I've noticed you're sleeping better and you're in a great mood &mdash; do you feel a difference?"</td>
+          </tr>
+          <tr>
+            <td>"I'm really disappointed you ate that."</td>
+            <td>"Some foods leave you feeling wiped out about an hour later &mdash; did you notice anything?"</td>
+          </tr>
+          <tr>
+            <td>"That's not allowed on our plan."</td>
+            <td>"Your body will tell you how that one sits. Let's pay attention together."</td>
+          </tr>
+          <tr>
+            <td>"That's bad for you."</td>
+            <td>"Some foods give you steady energy. Some give a quick burst then a crash. Neither makes you a bad person."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Print this. Stick it on the fridge. Refer to it mid-sentence if you have to. The left column seeds body image problems. The right column builds something called <strong>interoceptive awareness</strong> &mdash; your kid's ability to read their own body's signals. That's the skill that lasts decades.</p>
+    </div>
+
+    <div class="callout">
+      <p>Every food conversation should be about function, never appearance.<br>How does this food make your body <em>work</em>? That's the only question that matters.</p>
+    </div>
+
+    <!-- Why this works -->
+    <div class="section">
+      <h2>Why the Right Column Works</h2>
+
+      <img class="blog-img" src="/images/blog/food-talk-that-protects-body-image/two-paths.webp" alt="Two paths: appearance-focused language leads to body distrust, function-focused language leads to body confidence">
+
+      <p>The left column does three things to a kid's brain, all of them bad:</p>
+
+      <div class="step-row">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Ties food to looks</h3>
+          <p>Your child learns that eating is about how their body <em>appears</em> to others.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Adds moral weight</h3>
+          <p>"Good" and "bad" food makes <em>them</em> feel good or bad as a person.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Builds secrecy</h3>
+          <p>Judgment about food choices teaches kids to eat in hiding.</p>
+        </div>
+      </div>
+
+      <p>The right column flips all of this. When you say "did you notice how that made you feel?", you're handing your child a compass. They stop looking at you for permission and start listening to their own body. That's the difference between a kid who sneaks food and a kid who genuinely prefers the stuff that makes them feel good.</p>
+    </div>
+
+    <!-- Age-adapted scripts -->
+    <div class="section">
+      <h2>What This Sounds Like at Every Age</h2>
+
+      <img class="blog-img" src="/images/blog/food-talk-that-protects-body-image/age-progression.webp" alt="Three children of different ages connecting food to running fast, playing sports, and studying with focus">
+
+      <div class="script-card">
+        <div class="label">Under 7</div>
+        <div class="script">"This food helps you run fast and climb high. This one helps your brain do puzzles."</div>
+        <div class="note">No numbers, no restrictions. Just connect food to what their body can do.</div>
+      </div>
+
+      <div class="script-card">
+        <div class="label">Tweens (8-12)</div>
+        <div class="script">"Different foods give your body different kinds of fuel. Some keep you going through a whole soccer game, and some run out by halftime. You can start noticing which is which."</div>
+        <div class="note">They're ready for awareness, not tracking. Let them observe.</div>
+      </div>
+
+      <div class="script-card">
+        <div class="label">Teens (13+)</div>
+        <div class="script">"You're old enough to understand how different foods affect your energy, focus, and mood. I want you to have that knowledge so you can make your own calls. What questions do you have?"</div>
+        <div class="note">Your role shifts from gatekeeper to consultant. Hand over the steering wheel.</div>
+      </div>
+    </div>
+
+    <!-- The hardest part -->
+    <div class="section">
+      <h2>The Part Nobody Talks About: You</h2>
+
+      <p>Here's the uncomfortable truth. If you say all the right things to your kid but then mutter "I look terrible" in the mirror, or announce you need to lose 5 pounds, or visibly panic about what you ate at dinner &mdash; none of the scripts above matter. Kids absorb the framework you live in, not the one you preach.</p>
+
+      <p>So this works in two directions:</p>
+
+      <div class="step-row">
+        <div class="step-card">
+          <div class="step-num">&uarr;</div>
+          <h3>Talk to them in function terms</h3>
+          <p>Energy, mood, sleep, strength &mdash; never weight or appearance.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">&larr;</div>
+          <h3>Talk to yourself the same way</h3>
+          <p>Catch "I look..." and pivot to "I feel..."</p>
+        </div>
+      </div>
+
+      <p>And while you're at it: brief the grandparents. Extended family delivers some of the most damaging body comments with the best intentions. A quick "we talk about food in terms of energy, not weight" goes a long way.</p>
+    </div>
+
+    <!-- Warning -->
+    <div class="warning">
+      <p><strong>Watch for red flags.</strong> If you notice food anxiety, secretive eating, excessive restriction, or body preoccupation in your child, seek guidance from a professional who specializes in eating disorders. Your pediatrician can provide referrals.</p>
+    </div>
+
+    <!-- Closing -->
+    <div class="callout">
+      <p>Nobody's body is a problem to be solved.<br>Food is fuel, not a report card. Teach that, and the rest follows.</p>
+    </div>
+
+    <footer>
+      <p>Published by Kung Fu &middot; kungfu.family</p>
+    </footer>
+
+  </div>
+</body>
+</html>
