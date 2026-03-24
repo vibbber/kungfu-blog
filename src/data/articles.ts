@@ -3060,6 +3060,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: turn new food into a four-step investigation — looking and touching count as wins, biting is optional.',
     tldrInside: '4 stages each with a script box, setup tips including food choice and timing, go/stop readiness signals, 5 ground rules plus when to get professional help',
   },
+  {
+    slug: 'wired-at-bedtime-fix',
+    title: 'Sleep Starts at Breakfast',
+    subtitle: 'The morning-to-midnight system that ends night waking',
+    description: 'Night waking is usually a blood sugar problem, not a sleep problem. A slow-carb bedtime snack plus a 6-step daytime system stops the 2am wake-ups within two weeks.',
+    image: '/images/cards/wired-at-bedtime-fix.webp',
+    imageAlt: 'A sunrise-to-moon timeline arc showing the morning-to-midnight sleep system for children',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Sleep',
+    book: 'Brain Brilliance',
+    bookSlug: 'brain-brilliance-lucinda-miller',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    tldrAnchor: 'Sleep doesn\'t start at bedtime. It starts at breakfast.',
+    tldrPayoff: 'Kids on this system fall asleep faster, stay asleep longer, and stop needing you at 3am. Focus and mood improve within two weeks.',
+    tldrMove: 'Morning light plus protein breakfast sets the clock, then a 6-step sequence from tryptophan foods to magnesium baths carries them through to solid sleep.',
+    tldrInside: '6-step morning-to-midnight protocol, 6 bedtime snack combos, wake-up pattern decoder, before-and-after starter plan',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
