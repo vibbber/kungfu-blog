@@ -3020,6 +3020,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: stop treating it as a honesty problem and start training it as a perception skill.',
     tldrInside: 'fear-driven vs. imagination-driven comparison, 3 games with parent scripts, quick-reference response table, right kind of stories to feed imagination',
   },
+  {
+    slug: 'the-threshold-guiding-son-into-manhood',
+    title: 'A Son\'s Unspoken Question',
+    subtitle: 'Every boy wonders if he has what it takes — here\'s how to answer it',
+    description: 'Most cultures solved the boy-to-man transition centuries ago. A three-phase proving ground — letting go, real challenges, and a declaration from men he respects — answers the question your son can\'t articulate.',
+    image: '/images/cards/the-threshold-guiding-son-into-manhood.webp',
+    imageAlt: 'Silhouette of a boy standing at a threshold looking toward dawn light',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Rites of Passage',
+    book: 'Family Revision',
+    bookSlug: 'family-revision-pryor',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    tldrAnchor: 'Boys carry an unspoken question about manhood that modern life never answers.',
+    tldrPayoff: 'Sons who go through this arrive at adulthood with proof they can handle hard things — they don\'t quit under pressure, they serve without being asked, and they carry a specific memory of the night men told them: you\'re ready.',
+    tldrMove: 'The move: build a three-phase proving ground — letting go, real challenges, and a declaration from men he respects.',
+    tldrInside: '3-phase framework with step-by-step details, challenge design table across 3 dimensions, 5 word-for-word scripts for key moments, ceremony-only vs. proving-ground comparison',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
