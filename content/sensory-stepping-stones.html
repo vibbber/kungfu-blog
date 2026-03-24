@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turn picky eating into a science experiment. Four simple stages that help your child explore new foods through curiosity — no pressure, no bribes, no battles.">
+  <title>The Food Detective Game: How to Turn Picky Eating Into an Adventure</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FAF6F0;
+      color: #1A1A2E;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-img {
+      width: calc(100% + 48px);
+      margin: 0 -24px;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      color: #1A1A2E;
+      margin: 36px 0 8px;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #6B7B6B;
+      margin-bottom: 32px;
+      font-style: italic;
+      font-family: 'Lora', serif;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 24px;
+      color: #5C8A5A;
+      margin: 40px 0 16px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .opening {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .callout {
+      background: #5C8A5A;
+      color: #fff;
+      padding: 20px 24px;
+      border-radius: 10px;
+      margin: 28px 0;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .callout strong { color: #FAF6F0; }
+
+    .inline-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 28px 0;
+      display: block;
+    }
+
+    /* Stage cards */
+    .stages {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+
+    .stage {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      border-left: 5px solid #5C8A5A;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .stage-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #5C8A5A;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .stage-head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .stage-name {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 19px;
+      color: #5C8A5A;
+    }
+
+    .stage-goal {
+      font-size: 13px;
+      color: #8A8A8A;
+      margin-left: 48px;
+      margin-top: -6px;
+      margin-bottom: 12px;
+    }
+
+    .stage p { font-size: 15px; margin-bottom: 12px; }
+
+    .script {
+      background: #F0F7F0;
+      border-left: 4px solid #5C8A5A;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 12px 0;
+      font-size: 15px;
+    }
+
+    .script .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #5C8A5A;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .script em {
+      font-style: italic;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 20px 0 28px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .compare-table th {
+      padding: 14px 18px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+    .compare-table th:first-child { background: #FDEDEC; color: #C0392B; }
+    .compare-table th:last-child { background: #EDF7ED; color: #5C8A5A; }
+
+    .compare-table td {
+      padding: 12px 18px;
+      font-size: 14px;
+      vertical-align: top;
+      background: #fff;
+      border-bottom: 1px solid #f0ece6;
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* Signals grid */
+    .signals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0 28px;
+    }
+
+    .signal-card {
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .signal-card.go {
+      background: #EDF7ED;
+      border-left: 4px solid #5C8A5A;
+    }
+
+    .signal-card.stop {
+      background: #FDEDEC;
+      border-left: 4px solid #E8A598;
+    }
+
+    .signal-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    /* Tips list */
+    .tips {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 24px 24px 28px;
+      margin: 20px 0 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .tips li {
+      margin-bottom: 14px;
+      font-size: 15px;
+      padding-left: 4px;
+    }
+
+    .tips li:last-child { margin-bottom: 0; }
+
+    /* Closing */
+    .closer {
+      background: linear-gradient(135deg, #5C8A5A 0%, #4A7A4A 100%);
+      color: #fff;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 32px 0;
+    }
+
+    .closer h2 {
+      color: #fff;
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .closer p, .closer li {
+      font-size: 15px;
+      color: #E8F5E8;
+    }
+
+    .closer ul { padding-left: 20px; margin-top: 12px; }
+    .closer li { margin-bottom: 10px; }
+
+    footer {
+      text-align: center;
+      padding: 24px 0;
+      border-top: 2px solid #E8A598;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .signals { grid-template-columns: 1fr; }
+      .compare-table { font-size: 13px; }
+      .stage { padding: 18px; }
+    }
+
+    .tldr-box { background: white; border: 1px solid #E0DDD6; border-radius: 10px; padding: 18px 22px; margin: 28px 0 36px; }
+    .tldr-anchor { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #5C8A5A; margin-bottom: 8px; line-height: 1.5; }
+    .tldr-box ul { list-style: none; padding: 0; margin: 0; }
+    .tldr-box ul li { font-family: 'Inter', sans-serif; font-size: 14px; color: #333; padding: 3px 0 3px 20px; position: relative; line-height: 1.55; }
+    .tldr-box ul li::before { content: '\2192'; position: absolute; left: 0; color: #BDBDB5; font-weight: 600; }
+    .tldr-divider { border: none; border-top: 1px solid #EEEAE4; margin: 10px 0; }
+    .tldr-inside { font-family: 'Inter', sans-serif; font-size: 12px; color: #aaa; padding-left: 20px; }
+    .tldr-inside strong { color: #999; font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <img class="hero-img" src="/images/blog/sensory-stepping-stones/hero.webp" alt="Parent and child examining food together with curiosity at a kitchen table">
+
+  <h1>The Food Detective Game</h1>
+  <div class="tldr-box">
+    <p class="tldr-anchor">Feeding therapy distilled into a game any parent can run at home.</p>
+    <ul>
+      <li>Kids who play the food detective game grow a 'tried it' list they're proud of, eat wider than before, and stop melting down at unfamiliar plates.</li>
+      <li>The move: turn new food into a four-step investigation — looking and touching count as wins, biting is optional.</li>
+    </ul>
+    <hr class="tldr-divider">
+    <div class="tldr-inside"><strong>Inside: </strong>4 stages each with a script box &middot; setup tips including food choice and timing &middot; go/stop readiness signals &middot; 5 ground rules plus when to get professional help</div>
+  </div>
+  <p class="tagline">Four stages that turn "I won't eat that" into "Wait, let me check it out."</p>
+
+  <p class="opening">My daughter once screamed at a blueberry. Not because it touched her mouth. Because it was on her plate. That was the moment I realized we weren't dealing with pickiness. We were dealing with a nervous system that had classified unfamiliar food as a genuine threat.</p>
+
+  <p>Here's what changed everything: we stopped trying to get her to eat, and started playing detective instead.</p>
+
+  <h2>Why "Just Try One Bite" Backfires</h2>
+
+  <p>Kids who freak out around new food aren't being difficult. Their sensory system is firing alarm bells. An unfamiliar texture, smell, or color triggers the same fight-or-flight response you'd feel if someone put a spider in your hand.</p>
+
+  <p>Forcing a bite into that state does the opposite of what you want:</p>
+
+  <table class="compare-table">
+    <tr>
+      <th>Forcing a Bite</th>
+      <th>Sensory Stepping Stones</th>
+    </tr>
+    <tr>
+      <td>Triggers fight-or-flight</td>
+      <td>Builds familiarity gradually</td>
+    </tr>
+    <tr>
+      <td>Creates negative food memories</td>
+      <td>Creates neutral or positive ones</td>
+    </tr>
+    <tr>
+      <td>Next attempt is even harder</td>
+      <td>Each session makes the next easier</td>
+    </tr>
+    <tr>
+      <td>Child feels trapped</td>
+      <td>Child stays in control</td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>The research:</strong> Feeding therapy studies show kids need 10-14 neutral exposures before accepting a new food. An "exposure" isn't a bite. It's any calm interaction — looking, touching, smelling. Every peaceful session counts toward that number.
+  </div>
+
+  <h2>The Setup (90 Seconds of Prep That Matters)</h2>
+
+  <p>Don't do this at dinner. Don't do it when they're hungry. Pick a calm, low-stakes moment — Saturday morning, just the two of you, kitchen table.</p>
+
+  <ul class="tips">
+    <li><strong>Let them choose the food.</strong> Offer 3-4 options. Their sense of control is your biggest asset.</li>
+    <li><strong>Start mild.</strong> Plain pasta, sweet potato, a simple cracker. Skip bold flavors for now.</li>
+    <li><strong>Put a "safety cup" of water on the table.</strong> Knowing they can spit and rinse removes the fear of being trapped with a bad taste.</li>
+  </ul>
+
+  <img class="inline-img" src="/images/blog/sensory-stepping-stones/stepping-stones.webp" alt="Diagram showing four stepping stones: Look, Touch, Smell, Taste">
+
+  <h2>The Four Stages</h2>
+  <p>Move at your child's pace. All four in one session? Great. Stuck on Stage 1 for three weeks? Also great. Both are real progress.</p>
+
+  <div class="stages">
+
+    <div class="stage">
+      <div class="stage-head">
+        <span class="stage-num">1</span>
+        <span class="stage-name">Look</span>
+      </div>
+      <p class="stage-goal">Goal: child observes the food without distress</p>
+      <p>Put the food on the table. Don't push it toward them. Start talking about it like you're both examining something interesting.</p>
+      <div class="script">
+        <span class="label">Say this</span>
+        <em>"Let's check this out. What does it remind you of? I think the color is kind of cool — what do you think?"</em>
+      </div>
+      <p>Even "it looks weird" counts as engagement. They're looking. They're thinking. Their nervous system is collecting data through the safest channel: eyes.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head">
+        <span class="stage-num">2</span>
+        <span class="stage-name">Touch</span>
+      </div>
+      <p class="stage-goal">Goal: child voluntarily handles the food</p>
+      <p>Pick it up yourself first. Then invite them in.</p>
+      <div class="script">
+        <span class="label">Say this</span>
+        <em>"Want to pick it up? I'm curious — is it squishy or firm? Warm or cool? Sticky or dry?"</em>
+      </div>
+      <p>Let them squeeze it, break it, poke it. Messy is perfect. Hands are a safe channel — the more sensory data their brain gets through touch, the less threatening the food becomes to a riskier channel (mouth).</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head">
+        <span class="stage-num">3</span>
+        <span class="stage-name">Smell</span>
+      </div>
+      <p class="stage-goal">Goal: food comes close to their face</p>
+      <p>The bridge between touching and tasting. Not a bite — just contact.</p>
+      <div class="script">
+        <span class="label">Say this</span>
+        <em>"Think you could give it a tiny sniff? Or just touch it to your lip for a second? You don't have to bite. The cup is right there."</em>
+      </div>
+      <p>If they do it, ask what they noticed. Warm or cold? Smooth or rough? Strong smell or mild? You're keeping their analytical brain engaged, which dampens the fear response.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-head">
+        <span class="stage-num">4</span>
+        <span class="stage-name">Taste</span>
+      </div>
+      <p class="stage-goal">Goal: a small, voluntary bite</p>
+      <p>Only when they're genuinely willing — not performing for you.</p>
+      <div class="script">
+        <span class="label">Say this</span>
+        <em>"If you want, try the tiniest bite. You can spit it out the second you want — see the cup? No big deal either way."</em>
+      </div>
+      <p>If they bite: "You did it — how was it?" Calm celebration, not fireworks. Over-excitement adds pressure next time. If they spit it out? Still counts. Their mouth got new data, and nothing bad happened. That's a win.</p>
+    </div>
+
+  </div>
+
+  <img class="inline-img" src="/images/blog/sensory-stepping-stones/hands-exploring.webp" alt="Child's hands exploring food texture on a cutting board">
+
+  <h2>Reading the Room</h2>
+  <p>The hardest part: knowing when to gently encourage versus when to stop. Here's the cheat sheet:</p>
+
+  <div class="signals">
+    <div class="signal-card go">
+      <strong>Keep going</strong>
+      Pausing. Looking at you for reassurance. Moving slowly. Asking questions. Saying "maybe" or "I don't know." They're processing — give them time.
+    </div>
+    <div class="signal-card stop">
+      <strong>Stop here</strong>
+      Turning away. Pushing food away. Going quiet. Shaking their head. Whining or escalating. Their nervous system hit its limit today. End on a high note.
+    </div>
+  </div>
+
+  <h2>The Rules That Make It Work</h2>
+
+  <ul class="tips">
+    <li><strong>Celebrate every stage.</strong> Getting through "Look" is real progress for a kid who usually won't sit near new food. Name it: "You really looked at it closely — that took guts."</li>
+    <li><strong>Never force, bribe, or guilt.</strong> No "just one bite for me." No dessert bargaining. Pressure creates negative associations that compound.</li>
+    <li><strong>Rejected food? Rotate it out.</strong> Try something different next session. Wait a month before bringing the same food back.</li>
+    <li><strong>Vomiting = one-year break.</strong> The sensory memory is too intense. Reintroducing too soon triggers the same response.</li>
+    <li><strong>Same time, same place, same setup.</strong> When everything else is predictable, the new food is the only variable. That makes it manageable.</li>
+  </ul>
+
+  <div class="closer">
+    <h2>Playing the Long Game</h2>
+    <p>This isn't a one-session fix. It's a system that compounds. Here's how to keep building:</p>
+    <ul>
+      <li><strong>Start a "tried it" list together.</strong> Even spit-out foods go on it. Watching the list grow gives your kid visible proof of their own bravery.</li>
+      <li><strong>Bridge from accepted foods.</strong> If they eat plain pasta, try pasta with a thin coat of butter. Small variations expand the zone without triggering alarm.</li>
+      <li><strong>Involve them in cooking.</strong> Washing, stirring, arranging food on a plate — that's sensory exposure (sight, smell, touch) with zero pressure to eat. It counts toward those 10-14 exposures.</li>
+      <li><strong>Expect regression.</strong> Illness, stress, new school — these shrink the menu temporarily. Go back to the stages with accepted foods to rebuild, then re-expand.</li>
+      <li><strong>Know when to get help.</strong> Fewer than 10 foods, losing weight, or extreme gagging/vomiting? Work with a pediatric feeding therapist alongside this method.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>kungfu.family</p>
+  </footer>
+
+</body>
+</html>

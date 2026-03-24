@@ -3040,6 +3040,26 @@ export const articles: Article[] = [
     tldrMove: 'The move: build a three-phase proving ground — letting go, real challenges, and a declaration from men he respects.',
     tldrInside: '3-phase framework with step-by-step details, challenge design table across 3 dimensions, 5 word-for-word scripts for key moments, ceremony-only vs. proving-ground comparison',
   },
+  {
+    slug: 'sensory-stepping-stones',
+    title: 'The Blueberry Breakthrough',
+    subtitle: 'From screaming at food to exploring it — a sensory approach that compounds',
+    description: 'Turn picky eating into a science experiment. Four simple stages that help your child explore new foods through curiosity — no pressure, no bribes, no battles.',
+    image: '/images/cards/sensory-stepping-stones.webp',
+    imageAlt: 'A blueberry on a plate with concentric ripples radiating outward, symbolizing the sensory approach to food exploration',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Nutrition',
+    book: 'The Disconnected Kids Nutrition Plan',
+    bookSlug: 'disconnected-kids-nutrition-plan-melillo',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    tldrAnchor: 'Feeding therapy distilled into a game any parent can run at home.',
+    tldrPayoff: 'Kids who play the food detective game grow a \'tried it\' list they\'re proud of, eat wider than before, and stop melting down at unfamiliar plates.',
+    tldrMove: 'The move: turn new food into a four-step investigation — looking and touching count as wins, biting is optional.',
+    tldrInside: '4 stages each with a script box, setup tips including food choice and timing, go/stop readiness signals, 5 ground rules plus when to get professional help',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
