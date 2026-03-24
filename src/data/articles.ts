@@ -3080,6 +3080,26 @@ export const articles: Article[] = [
     tldrMove: 'Morning light plus protein breakfast sets the clock, then a 6-step sequence from tryptophan foods to magnesium baths carries them through to solid sleep.',
     tldrInside: '6-step morning-to-midnight protocol, 6 bedtime snack combos, wake-up pattern decoder, before-and-after starter plan',
   },
+  {
+    slug: 'the-second-opinion-trap',
+    title: 'The Second Opinion Trap',
+    subtitle: 'Late talker evaluations — why more doctors don\'t mean better answers',
+    description: 'Most parents think getting a second opinion protects their child. But if the second evaluator read the first report, you\'re just hearing the first opinion twice. Here\'s how to get evaluations you can trust.',
+    image: '/images/cards/the-second-opinion-trap.webp',
+    imageAlt: 'Magnifying glass revealing duplicate clipboards representing contaminated second opinions',
+    imageWidth: 1408,
+    imageHeight: 768,
+    imageAspect: 1.833,
+    topic: 'Speech & Language',
+    book: 'The Einstein Syndrome',
+    bookSlug: 'einstein-syndrome-sowell',
+    datePublished: '2026-03-24',
+    dateModified: '2026-03-24',
+    tldrAnchor: 'Diagnostic labels stick. Getting it right the first time matters more than getting it fast.',
+    tldrPayoff: 'Kids whose early evaluations are accurate avoid being tracked into the wrong services, misread by teachers who saw the file first, and boxed in by a label that doesn\'t fit.',
+    tldrMove: 'The shift: treat the evaluation like an investigation — rule out physical causes, verify credentials, and demand true independence.',
+    tldrInside: '5-step CLEAR framework, 4 blind-spot cards, pause-vs-trust grid for vetting evaluators, credential-checking script you can use verbatim',
+  },
 ];
 
 export const topics = [...new Set(articles.map(a => a.topic))].sort();
