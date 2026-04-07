@@ -1,327 +1,444 @@
 ---
-import Base from '../layouts/Base.astro';
-import { articles, topics } from '../data/articles';
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 ---
+<!DOCTYPE html>
 
-<Base
-  title="Kung Fu Family — Parenting Strategies from Books"
-  description="Evidence-based parenting strategies extracted from research and books. Practical techniques for raising children with purpose."
->
-
-  <!-- Top bar -->
-  <header class="topbar">
-    <a href="/" class="logo">Kung Fu <span>Family</span></a>
-    <span class="article-count">{articles.length} articles</span>
-  </header>
-
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <nav class="sidebar-nav">
-        <div class="sidebar-section">
-          <div class="sidebar-label">TOPIC</div>
-          <button class="sidebar-item active" data-filter="topic" data-value="">All</button>
-          {topics.map(t => (
-            <button class="sidebar-item" data-filter="topic" data-value={t}>{t}</button>
-          ))}
-        </div>
-      </nav>
-    </aside>
-
-    <!-- Masonry grid -->
-    <main class="masonry-container">
-      <div class="masonry" id="masonry">
-        {articles.map(a => (
-          <a
-            href={`/${a.slug}`}
-            class="card"
-            data-topic={a.topic}
-          >
-            <div class="card-image" style={`aspect-ratio: ${a.imageAspect}`}>
-              <img src={a.image} alt={a.imageAlt} loading="lazy" width={a.imageWidth} height={a.imageHeight} />
-            </div>
-            <div class="card-content">
-              <span class="card-topic">{a.topic}</span>
-              <h2 class="card-title">{a.title}</h2>
-              <p class="card-subtitle">{a.subtitle}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-    </main>
-  </div>
-
-  <!-- Mobile filter bar -->
-  <div class="mobile-filters">
-    <div class="mobile-filter-scroll">
-      <button class="mobile-chip active" data-filter="topic" data-value="">All</button>
-      {topics.map(t => (
-        <button class="mobile-chip" data-filter="topic" data-value={t}>{t}</button>
-      ))}
-    </div>
-  </div>
-
-  <style>
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250, 250, 248, 0.97);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-    .logo span { color: var(--text); }
-
-    .article-count {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .layout {
-      display: flex;
-      min-height: calc(100vh - 53px);
-    }
-
-    .sidebar {
-      width: 180px;
-      flex-shrink: 0;
-      border-right: 1px solid var(--border);
-      padding: 20px 0;
-      position: sticky;
-      top: 53px;
-      height: calc(100vh - 53px);
-      overflow-y: auto;
-    }
-
-    .sidebar-section {
-      margin-bottom: 24px;
-    }
-
-    .sidebar-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      color: var(--text-muted);
-      padding: 0 20px;
-      margin-bottom: 6px;
-    }
-
-    .sidebar-item {
-      display: block;
-      width: 100%;
-      text-align: left;
-      padding: 8px 20px;
-      font-size: 14px;
-      color: var(--text-secondary);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s;
-    }
-
-    .sidebar-item:hover {
-      background: var(--bg-hover);
-      color: var(--text);
-    }
-
-    .sidebar-item.active {
-      color: var(--accent);
-      font-weight: 600;
-      background: var(--accent-light);
-    }
-
-    .masonry-container {
-      flex: 1;
-      padding: 24px;
-    }
-
-    .masonry {
-      column-count: 4;
-      column-gap: 24px;
-    }
-
-    .card {
-      display: block;
-      position: relative;
-      -webkit-column-break-inside: avoid;
-      page-break-inside: avoid;
-      break-inside: avoid;
-      margin-bottom: 24px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      border: 1px solid var(--border);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    }
-
-    .card-image {
-      overflow: hidden;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-
-    .card:hover .card-image img {
-      transform: scale(1.03);
-    }
-
-    .card-content {
-      padding: 16px 20px 20px;
-    }
-
-    .card-topic {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-
-    .card-subtitle {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    .card.hidden {
-      display: none;
-    }
-
-    .mobile-filters {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(250, 250, 248, 0.97);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid var(--border);
-      padding: 10px 0;
-      z-index: 100;
-    }
-
-    .mobile-filter-scroll {
-      display: flex;
-      gap: 8px;
-      padding: 0 12px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .mobile-filter-scroll::-webkit-scrollbar { display: none; }
-
-    .mobile-chip {
-      flex-shrink: 0;
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s;
-    }
-
-    .mobile-chip.active {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    @media (max-width: 1200px) {
-      .masonry {
-        column-count: 3;
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kung Fu Family | Parenting that feels like magic</title>
+<script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script is:inline id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#faf9f6",
+                      "on-primary-fixed": "#00201c",
+                      "on-primary-fixed-variant": "#005047",
+                      "secondary-container": "#fe6d59",
+                      "secondary-fixed-dim": "#ffb4a8",
+                      "primary-fixed-dim": "#85d5c7",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#bec9c5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#f0bd8b",
+                      "surface-variant": "#e3e2df",
+                      "surface": "#faf9f6",
+                      "surface-container-high": "#e9e8e5",
+                      "surface-bright": "#faf9f6",
+                      "on-tertiary-container": "#fffbff",
+                      "tertiary-container": "#966c41",
+                      "surface-container": "#efeeeb",
+                      "on-secondary-fixed-variant": "#8b190f",
+                      "primary-fixed": "#a1f2e2",
+                      "secondary": "#ac3224",
+                      "on-background": "#1b1c1a",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1b1c1a",
+                      "outline": "#6e7976",
+                      "tertiary": "#7b542b",
+                      "secondary-fixed": "#ffdad4",
+                      "on-tertiary-fixed-variant": "#623f18",
+                      "primary-container": "#2d8175",
+                      "inverse-surface": "#2f312f",
+                      "inverse-on-surface": "#f2f1ee",
+                      "tertiary-fixed": "#ffdcbd",
+                      "surface-container-highest": "#e3e2df",
+                      "on-secondary-fixed": "#410000",
+                      "surface-container-low": "#f4f3f0",
+                      "on-secondary-container": "#6d0100",
+                      "on-surface-variant": "#3e4946",
+                      "surface-tint": "#066a5f",
+                      "on-error": "#ffffff",
+                      "primary": "#00685c",
+                      "on-tertiary-fixed": "#2c1600",
+                      "on-primary-container": "#f4fffb",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dbdad7",
+                      "inverse-primary": "#85d5c7",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style is:global>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .golden-hour {
+            background: linear-gradient(135deg, #00685c 0%, #2d8175 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/70 backdrop-blur-3xl shadow-[0_0_40px_rgba(27,28,26,0.06)]">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 md:py-6 max-w-[1440px] mx-auto gap-3">
+<a href="/" class="flex items-center">
+<img src="/images/logo.png" alt="Kung Fu Family" class="h-12 w-auto"/>
+</a>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-stone-600 dark:text-stone-400 hover:text-teal-800 transition-colors duration-300 font-label" href="#how">How it works</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-teal-800 transition-colors duration-300 font-label" href="#depth">Research</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-teal-800 transition-colors duration-300 font-label" href="#testimonials">Testimonials</a>
+</div>
+<a href="https://app.kungfu.family" class="bg-primary text-on-primary px-5 md:px-8 py-2.5 md:py-3 rounded-full hover:scale-105 active:scale-95 transition-transform font-label font-semibold inline-block whitespace-nowrap text-sm md:text-base text-center">Try it free</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-32 pb-24 overflow-hidden flex items-center">
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 w-2/3 h-full bg-primary-fixed/20 -z-10 rounded-bl-[10rem]"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-fixed/30 -z-10 rounded-full blur-[100px]"></div>
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-7">
+<span class="inline-block px-4 py-2 bg-surface-container-high text-on-surface-variant text-sm font-semibold rounded-full mb-8 uppercase tracking-widest font-label">Your personalized parenting companion</span>
+<h1 class="font-headline text-7xl lg:text-8xl text-on-surface leading-[1.1] mb-10">
+                Parenting that feels like <span class="italic text-primary">magic.</span>
+</h1>
+<p class="text-xl lg:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12 font-light">
+                Mornings that work. Tantrums that melt. The quiet thrill of knowing what to do.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a href="https://app.kungfu.family" class="bg-primary text-on-primary px-10 py-5 rounded-xl text-lg font-semibold hover:shadow-xl transition-all font-label inline-block text-center">Try it free</a>
+<div class="flex items-center gap-3 text-on-surface-variant font-medium text-lg font-label">
+                    Research-backed • Personalized • Free to start
+                </div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img class="w-full aspect-[4/5] object-cover" data-alt="tender moment between parent and toddler in a sun-drenched minimalist nursery with warm golden hour lighting and soft textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNsaKsdDBtwfGkj9PJav1fg6FQAcEzezo9mDzYJ4h4BnqRr7uRZZOTScWly6A7GM11dRvi_pBH-l1pVOmAQZBmV1PybXDqG0COREjZDqxJeOOZVwp0bUPkiSsqz6pP-eAY0u1iodJdHeV1L0EWxhHM7VZp00TUlqjkzTfcKJlA_64Oaj3RtsotdCVV5goLoORpinpJ-JF-Ivk-5E9-69FIW6cXsB9xM-4CVG2o4K7fogH605VjL8nWpdW6QS6V6YbCqxG5ZGV9A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-primary-fixed/40 to-transparent"></div>
+</div>
+<!-- Insight Orb Floating -->
+<div class="absolute -bottom-12 -left-12 z-20 glass-card p-8 rounded-xl shadow-2xl border border-white/30 max-w-[240px]">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">lightbulb</span>
+<span class="font-label font-bold text-sm uppercase tracking-tighter">Your Match</span>
+</div>
+<p class="text-sm italic font-headline text-on-surface mb-2">"12 approaches matched for spirited kids with big emotions and tough transitions."</p>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-32 bg-surface-container-low overflow-hidden" id="how">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 lg:order-1">
+<!-- App Mockup Floating -->
+<div class="relative z-10 w-full max-w-sm mx-auto">
+<div class="bg-surface-container-lowest rounded-[3rem] p-6 shadow-[0_40px_80px_rgba(0,0,0,0.08)] border-8 border-on-surface/5">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h4 class="font-headline text-xl">Mia's Profile</h4>
+<p class="text-xs text-on-surface-variant">4 years old • Spirited temperament</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center text-xs">☀️</div>
+</div>
+<div class="space-y-6">
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] px-2 py-1 bg-surface-container rounded-full font-bold">High energy</span>
+<span class="text-[10px] px-2 py-1 bg-surface-container rounded-full font-bold">Intense emotions</span>
+<span class="text-[10px] px-2 py-1 bg-surface-container rounded-full font-bold">Slow to transition</span>
+<span class="text-[10px] px-2 py-1 bg-primary-fixed/30 text-primary rounded-full font-bold">Creative thinker</span>
+</div>
+<div class="space-y-3">
+<div class="p-4 bg-primary-fixed/20 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<p class="text-xs font-bold">12 approaches matched</p>
+<p class="text-[10px] opacity-60">Optimized for spirited kids</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+<div>
+<p class="text-xs font-bold">Temperament Profile</p>
+<p class="text-[10px] opacity-60">Deeply empathetic</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative back elements -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/50 -z-10 rounded-full blur-3xl"></div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="section-label text-primary font-bold tracking-widest uppercase text-sm mb-4 block">How it works</span>
+<h2 class="font-headline text-5xl mb-8">Not luck. Knowing <span class="italic">your</span> kid.</h2>
+<p class="text-lg text-on-surface-variant mb-4 leading-relaxed">
+                    Kung Fu Family learns your child — temperament, triggers, strengths — then matches you with approaches proven to work for kids like yours.
+                </p>
+<p class="text-lg text-on-surface-variant mb-12 leading-relaxed">No guessing. No conflicting advice. Just clarity.</p>
+<ul class="space-y-8">
+<li class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">1</div>
+<div>
+<h5 class="font-bold text-xl mb-2 font-headline">Tell us about your child.</h5>
+<p class="text-on-surface-variant">One short conversation.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center font-bold">2</div>
+<div>
+<h5 class="font-bold text-xl mb-2 font-headline">Get your playbook.</h5>
+<p class="text-on-surface-variant">AI-matched to kids like yours.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed-dim text-on-primary-fixed rounded-full flex items-center justify-center font-bold">3</div>
+<div>
+<h5 class="font-bold text-xl mb-2 font-headline">Try it tonight.</h5>
+<p class="text-on-surface-variant">See the difference by morning.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Where the Magic Comes From Section -->
+<section class="py-32 relative" id="depth">
+<div class="max-w-7xl mx-auto px-12">
+<div class="text-center mb-24">
+<p class="section-label text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Where the magic comes from</p>
+<div class="text-center mb-12">
+<h3 class="font-headline text-[8rem] lg:text-[10rem] text-primary leading-none font-bold mb-4 tracking-tighter">
+        1,500+
+    </h3>
+<p class="font-label text-primary font-bold tracking-[0.25em] uppercase text-xl lg:text-2xl mt-4">
+        Research-backed strategies
+    </p>
+</div>
+<div class="max-w-4xl mx-auto mt-12">
+<h2 class="font-headline text-4xl lg:text-5xl mb-6">Decades of research. <br/><span class="italic">Distilled for tonight.</span></h2>
+<p class="max-w-2xl mx-auto text-xl text-on-surface-variant font-light">We read the parenting books so you don't have to. Every approach is pulled from peer-reviewed research and proven methodologies — then matched to your child's temperament, triggers, and strengths.</p>
+</div>
+<div class="mt-8">
+<p class="text-on-surface-variant font-medium">Sourced from 80+ evidence-based frameworks and clinical studies</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Pillar 1 -->
+<div class="glass-card p-12 rounded-xl border border-white/20 shadow-sm hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-4xl text-primary mb-8 block">menu_book</span>
+<h4 class="font-headline text-2xl mb-4 group-hover:text-primary transition-colors">Peer-reviewed</h4>
+<p class="text-on-surface-variant leading-relaxed">Sourced from published research and expert-authored frameworks.</p>
+</div>
+<!-- Pillar 2 -->
+<div class="glass-card p-12 rounded-xl border border-white/20 shadow-sm hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8 block">balance</span>
+<h4 class="font-headline text-2xl mb-4 group-hover:text-secondary transition-colors">Methodology-tested</h4>
+<p class="text-on-surface-variant leading-relaxed">Every approach verified for clarity, safety, and practical applicability.</p>
+</div>
+<!-- Pillar 3 -->
+<div class="glass-card p-12 rounded-xl border border-white/20 shadow-sm hover:shadow-xl transition-all group">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-8 block">favorite</span>
+<h4 class="font-headline text-2xl mb-4 group-hover:text-tertiary transition-colors">Family-proven</h4>
+<p class="text-on-surface-variant leading-relaxed">Refined through real-world use by parents facing the same moments.</p>
+</div>
+</div>
+<div class="mt-20 text-center">
+<p class="text-lg text-on-surface-variant">Curious before you download? Start with <a class="text-primary font-semibold border-b-2 border-primary/20 hover:border-primary transition-colors" href="/browse">150+ free articles at kungfu.family</a> — the same research, already distilled.</p>
+</div>
+</div>
+</section>
+<!-- Good Days Section -->
+<section class="py-32 bg-on-surface text-surface-container overflow-hidden">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<p class="section-label text-primary-fixed font-bold tracking-widest uppercase text-sm mb-4 block">Good days</p>
+<h2 class="font-headline text-5xl lg:text-6xl mb-12 leading-tight">You know the feeling.<br/><span class="text-primary-fixed">Everything clicks.</span></h2>
+<div class="space-y-12">
+<div class="border-l-4 border-primary-container pl-8">
+<h4 class="font-headline text-2xl mb-2">Mornings that flow</h4>
+<p class="text-surface-variant/80 text-lg">Shoes on the first ask. Song at breakfast. Out the door laughing.</p>
+</div>
+<div class="border-l-4 border-secondary-container pl-8">
+<h4 class="font-headline text-2xl mb-2">Meltdowns that don't</h4>
+<p class="text-surface-variant/80 text-lg">You see it coming. You know what to say. 90 seconds later, they're grinning in your lap.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<img class="w-full aspect-square object-cover rounded-full opacity-60" data-alt="abstract warm blurred background representing soft morning sunlight through linen curtains with golden dust particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa-nKJD6dUh7RS5YrJZqKhsW5P4PNGhTQ8i-t7DBdV8QaX8g9x5ECNJpc6ufbEkNyY9wTXmmj0lP_jTrXi25uQ6drEyJKuYu8Lnst_73S8hDv2XuNxr4TD8e9Me-ZNZyKHc3cCUD6yfuVCDrr6cF3mvVvD13aaHKAqfwGphGPcZ3zhyHHk9x2FHdJ8uLSQcHcneCCbwQhBhEx2L7tlIZDlLEb2YjWplWSpPZirj84biX54Lduvk432oj51ZnalIC2zQIDSGOO-vw"/>
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<p class="font-headline text-3xl italic text-center leading-relaxed">
+                        "Piano. Math. A drawing on the fridge. A kindness no one asked for. They're flourishing."
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Parents who found it Section -->
+<section class="py-32" id="testimonials">
+<div class="max-w-7xl mx-auto px-12">
+<p class="section-label text-primary text-center font-bold tracking-widest uppercase text-sm mb-4 block">Parents who found it</p>
+<h2 class="font-headline text-4xl text-center mb-24">The moment they stopped guessing.</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Quote 1 -->
+<div class="bg-surface-container-low p-10 rounded-xl relative shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+<span class="font-headline text-7xl text-primary opacity-20 absolute top-4 left-6 italic">“</span>
+<p class="text-lg relative z-10 mb-8 italic">Honestly, I was so tired of the generic 'one size fits all' advice. This actually feels like it's written for my daughter specifically. Mornings aren't a battleground anymore, which is huge for us.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-200"></div>
+<div>
+<p class="font-bold font-label">— Parent of a spirited 4-year-old</p>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-surface-container-low p-10 rounded-xl relative shadow-[0_10px_30px_rgba(0,0,0,0.02)] lg:mt-12">
+<span class="font-headline text-7xl text-secondary opacity-20 absolute top-4 left-6 italic">“</span>
+<p class="text-lg relative z-10 mb-8 italic">I didn't think something like this would actually work, but we're literally laughing on the way to school now. It sounds like magic but it's really just finally having the right tools for my kids' personalities.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-200"></div>
+<div>
+<p class="font-bold font-label">— Parent of two, ages 3 and 6</p>
+</div>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-surface-container-low p-10 rounded-xl relative shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+<span class="font-headline text-7xl text-tertiary opacity-20 absolute top-4 left-6 italic">“</span>
+<p class="text-lg relative z-10 mb-8 italic">It’s basically like having a pro in your pocket who actually knows your kid. Not just 'a kid', but *my* kid. Those rare good days? They're starting to just be our normal everyday now.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-stone-200"></div>
+<div>
+<p class="font-bold font-label">— First-time parent of a sensitive toddler</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-[1440px] mx-auto px-6 mb-12">
+<div class="golden-hour rounded-xl lg:rounded-[4rem] py-32 px-12 relative overflow-hidden text-center text-on-primary">
+<div class="absolute inset-0 opacity-20 mix-blend-overlay">
+<img class="w-full h-full object-cover" data-alt="misty forest at dawn with golden sunlight filtering through trees representing clarity and peace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB52ne5V_5nmd9wTB_7MAOUQWOudgy9KsywDqe69dTnzaBoqPhS6V5DoOkvQPclGC-f2YhUM0EbnSQ7YisRFwMxsDilST_UTbrA3747Yyt5orRim7UY2zmtaHhbtzTTA-JW-b3FunWztM94B9A08o1dnNX9BFqpimwRyR2_c14JSGxrdabD9uWwgK1YBgrcf05ke3od2EWDRTG4AiuS7AJBnoiXlUPYPPDEYEFP5sGGa4OsTJ8H7V4bRr5Zl7rarXp_Ps_Z43z6IA"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h2 class="font-headline text-6xl lg:text-7xl mb-10 leading-tight">Your family's <span class="italic underline decoration-primary-fixed decoration-2 underline-offset-8">best chapter</span> starts tonight.</h2>
+<p class="text-xl lg:text-2xl mb-12 opacity-90 font-light">One short conversation. A playbook made for your kid. The first good day by morning.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a href="https://app.kungfu.family" class="bg-surface-container-lowest text-primary px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all font-label inline-block">Try it free</a>
+</div>
+<p class="mt-8 text-sm opacity-70 font-label uppercase tracking-widest">Free to start • No credit card required • No email wall</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 py-24 px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 max-w-7xl mx-auto">
+<div class="space-y-8">
+<img src="/images/logo.png" alt="Kung Fu Family" class="h-14 w-auto"/>
+<p class="text-stone-500 text-sm leading-relaxed">Parenting that feels like magic.</p>
+</div>
+<div>
+<h6 class="font-label font-bold uppercase tracking-widest text-xs mb-8">Ecosystem</h6>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="#how">How it works</a></li>
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="#depth">Research</a></li>
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="#testimonials">Testimonials</a></li>
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="https://app.kungfu.family">Try it free</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label font-bold uppercase tracking-widest text-xs mb-8">Resources</h6>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="/legal/privacy-policy">Privacy Policy</a></li>
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="/legal/terms-of-service">Terms of Service</a></li>
+<li><a class="text-stone-500 hover:text-teal-700 hover:translate-x-1 transition-transform duration-200 inline-block" href="/browse">Free Articles</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-label font-bold uppercase tracking-widest text-xs mb-8">Stay Connected</h6>
+<p class="text-sm text-stone-500 mb-6">Receive insights on development and mindful living.</p>
+<form id="subscribe-form" class="space-y-3">
+<div class="flex gap-2">
+<input id="subscribe-email" name="email" required class="bg-white border-none rounded-lg px-4 py-2 w-full text-sm" placeholder="Email Address" type="email"/>
+<button type="submit" class="bg-primary text-on-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-size="flexible"></div>
+<p id="subscribe-msg" class="text-xs text-stone-500 hidden"></p>
+</form>
+<script is:inline>
+  (function () {
+    const form = document.getElementById('subscribe-form');
+    const emailEl = document.getElementById('subscribe-email');
+    const msg = document.getElementById('subscribe-msg');
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = emailEl.value.trim();
+      const tokenEl = form.querySelector('input[name="cf-turnstile-response"]');
+      const token = tokenEl ? tokenEl.value : '';
+      if (!token) {
+        msg.textContent = 'Please complete the captcha.';
+        msg.classList.remove('hidden');
+        return;
       }
-    }
-
-    @media (max-width: 768px) {
-      .sidebar { display: none; }
-      .mobile-filters { display: block; }
-      .masonry-container { padding: 16px 16px 80px; }
-      .masonry {
-        column-count: 2;
-        column-gap: 16px;
+      msg.textContent = 'Sending...';
+      msg.classList.remove('hidden');
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, token }),
+        });
+        if (res.ok) {
+          msg.textContent = "Thanks! You're on the list.";
+          form.reset();
+          if (window.turnstile) window.turnstile.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          msg.textContent = data.error || 'Something went wrong. Try again.';
+        }
+      } catch {
+        msg.textContent = 'Network error. Try again.';
       }
-      .card {
-        margin-bottom: 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .masonry {
-        column-count: 1;
-      }
-    }
-  </style>
-
-  <script>
-    const cards = document.querySelectorAll('.card') as NodeListOf<HTMLElement>;
-    let currentFilter = '';
-
-    function applyFilter(value: string) {
-      currentFilter = value;
-      cards.forEach(card => {
-        const match = !value || card.dataset.topic === value;
-        card.classList.toggle('hidden', !match);
-      });
-    }
-
-    document.querySelectorAll('.sidebar-item').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const el = btn as HTMLElement;
-        const value = el.dataset.value || '';
-
-        document.querySelectorAll('.sidebar-item').forEach(b => b.classList.remove('active'));
-        el.classList.add('active');
-
-        applyFilter(value);
-      });
     });
-
-    document.querySelectorAll('.mobile-chip').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const el = btn as HTMLElement;
-        const value = el.dataset.value || '';
-
-        document.querySelectorAll('.mobile-chip').forEach(b => b.classList.remove('active'));
-        el.classList.add('active');
-
-        applyFilter(value);
-      });
-    });
-  </script>
-
-</Base>
+  })();
+</script>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-24 pt-12 border-t border-stone-200 text-center">
+<p class="text-stone-400 text-sm">© 2026 Kung Fu Family. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
