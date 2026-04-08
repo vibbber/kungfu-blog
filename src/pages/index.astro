@@ -11,6 +11,14 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png"/>
 <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26GSN41VYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-26GSN41VYC');
+</script>
 <script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
