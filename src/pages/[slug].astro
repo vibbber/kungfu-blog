@@ -114,8 +114,13 @@ scopedStyles = scopedStyles.replace(/([^{}]+)\{([^}]*)\}/g, (match, selector, bo
     );
   }
 
-  // Triple each class in the selector to bump specificity past 0,2,0.
-  const newSelector = selector.replace(/\.([a-zA-Z_][\w-]*)/g, '.$1.$1.$1');
+  // Triple each per-article class in the selector to bump specificity past
+  // the design-system override's attribute-selector rules (0,2,0). Skip the
+  // `.article-content` scope prefix that our own pipeline added — tripling
+  // it would also beat bare-element rules we intentionally keep at 0,1,1.
+  const newSelector = selector.replace(/\.([a-zA-Z_][\w-]*)/g, (_m, cls) =>
+    cls === 'article-content' ? '.' + cls : '.' + cls + '.' + cls + '.' + cls,
+  );
 
   return newSelector + '{' + newBody + '}';
 });
