@@ -453,6 +453,20 @@
   letter-spacing: 0.06em !important;
 }
 
+/* Round the corners of the header row (and any other tr of th's) so the
+   floating row treatment reads as a pill, not a sharp banner. */
+.article-content table tr th:first-child,
+.article-content .compare-table tr th:first-child {
+  border-top-left-radius: var(--radius-md) !important;
+  border-bottom-left-radius: var(--radius-md) !important;
+}
+
+.article-content table tr th:last-child,
+.article-content .compare-table tr th:last-child {
+  border-top-right-radius: var(--radius-md) !important;
+  border-bottom-right-radius: var(--radius-md) !important;
+}
+
 .article-content table td,
 .article-content .compare-table td {
   background: var(--surface-container-lowest) !important;
