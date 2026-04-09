@@ -382,9 +382,19 @@
   background: var(--surface-container-lowest) !important;
   border: none !important;
   border-radius: var(--radius-lg) !important;
-  padding: 1.75rem !important;
   margin: 1.25rem 0 !important;
   box-shadow: var(--ambient) !important;
+}
+
+/* Zero-specificity padding fallback so per-article asymmetric padding wins.
+   Required when a step card hosts an absolutely-positioned .num badge and
+   reserves left padding to clear it (e.g., montessori-isolation-technique
+   has .step-card { padding: 20px 24px 20px 76px }). */
+:where(.article-content .step),
+:where(.article-content .step-card),
+:where(.article-content .step-item),
+:where(.article-content .step-row) {
+  padding: 1.75rem;
 }
 
 .article-content .step-num,
