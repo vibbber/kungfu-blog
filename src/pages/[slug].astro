@@ -85,6 +85,22 @@ for (const [from, to] of Object.entries(paletteRemap)) {
   webpContent = webpContent.split(from).join(to);
 }
 
+// Preserve deliberately dark/gradient card backgrounds from per-article CSS.
+// The design-system override uses [class*="-box"] / [class*="-card"] selectors
+// to force soft-white cards, which wins on specificity over a plain class
+// selector like .highlight-box. For backgrounds that are clearly a deliberate
+// visual feature (gradient, or primary/secondary palette fill), add !important
+// so the per-article intent survives. Also applies to paired `color` rules so
+// text stays readable on the dark surface.
+scopedStyles = scopedStyles.replace(
+  /(background(?:-color)?\s*:\s*[^;}]*(?:linear-gradient|#00685c|#2d8175|#ac3224|#fe6d59)[^;}]*)(;|(?=\}))/gi,
+  (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
+);
+scopedStyles = scopedStyles.replace(
+  /(color\s*:\s*(?:white|#fff|#ffffff|rgba\(\s*255[^)]*\))[^;}]*)(;|(?=\}))/gi,
+  (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
+);
+
 // DESIGN.md forbids corner radii under 16px. Bump any small radius value in
 // the per-article CSS and inline styles up to 16px so nothing reads "clinical".
 const bumpRadius = (css: string) =>
