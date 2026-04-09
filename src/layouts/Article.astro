@@ -45,7 +45,9 @@ const jsonLd = {
 
   <!-- Header -->
   <header class="site-header">
-    <a href="/" class="logo">Kung Fu <span>Family</span></a>
+    <a href="/" class="logo" aria-label="Kung Fu Family">
+      <img src="/images/logo.png" alt="Kung Fu Family" />
+    </a>
   </header>
 
   <slot />
@@ -63,14 +65,14 @@ const jsonLd = {
     }
 
     .logo {
-      font-family: 'Noto Serif', Georgia, serif;
-      font-size: 1.35rem;
-      color: var(--accent);
-      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
     }
 
-    .logo span {
-      color: var(--text);
+    .logo img {
+      height: 48px;
+      width: auto;
+      display: block;
     }
   </style>
 </Base>
