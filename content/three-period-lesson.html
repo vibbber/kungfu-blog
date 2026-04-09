@@ -18,11 +18,13 @@
     .hero {
       position: relative;
       width: 100%;
-      min-height: 85vh;
+      aspect-ratio: 16 / 10;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       overflow: hidden;
+      border-radius: 2rem;
+      margin-bottom: 2rem;
     }
 
     .hero-img {
@@ -32,6 +34,9 @@
       height: 100%;
       object-fit: cover;
       object-position: center 40%;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
     }
 
     .hero-overlay {
@@ -41,39 +46,39 @@
         to bottom,
         rgba(0,0,0,0.1) 0%,
         rgba(0,0,0,0.3) 40%,
-        rgba(0,0,0,0.75) 100%
+        rgba(0,0,0,0.78) 100%
       );
     }
 
     .hero-text {
       position: relative;
       z-index: 1;
-      padding: 0 48px 64px;
-      max-width: 900px;
+      padding: 0 32px 32px;
+      max-width: 100%;
     }
 
     .hero h1 {
-      font-size: 4.5rem;
+      font-size: clamp(2rem, 5vw, 3.25rem);
       font-weight: 700;
       color: #FFFDF9;
       line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
       text-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
 
     .hero .subtitle {
-      font-size: 1.35rem;
-      color: rgba(255,253,249,0.85);
+      font-size: 1.1rem;
+      color: rgba(255,253,249,0.9);
       font-style: italic;
       line-height: 1.4;
       max-width: 600px;
     }
 
     .hero .meta {
-      margin-top: 24px;
-      font-size: 0.85rem;
-      color: rgba(255,253,249,0.5);
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: rgba(255,253,249,0.6);
     }
 
     .content {
