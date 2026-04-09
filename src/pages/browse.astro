@@ -136,6 +136,8 @@ import { articles, topics } from '../data/articles';
     .layout {
       display: flex;
       min-height: calc(100vh - 53px);
+      max-width: 1440px;
+      margin: 0 auto;
     }
 
     .sidebar {
@@ -193,7 +195,7 @@ import { articles, topics } from '../data/articles';
     .masonry-container {
       flex: 1;
       padding: 40px 48px 80px;
-      max-width: 1440px;
+      min-width: 0;
     }
 
     .masonry {
