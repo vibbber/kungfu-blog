@@ -13,7 +13,11 @@ import { articles, topics } from '../data/articles';
     <a href="/browse" class="logo" aria-label="Kung Fu Family">
       <img src="/images/logo.png" alt="Kung Fu Family" />
     </a>
-    <span class="article-count">{articles.length} articles</span>
+    <nav class="topnav">
+      <a href="/">Home</a>
+      <a href="/browse" class="active">Blog</a>
+      <a href="https://app.kungfu.family" class="cta">App</a>
+    </nav>
   </header>
 
   <div class="layout">
@@ -90,6 +94,39 @@ import { articles, topics } from '../data/articles';
     .article-count {
       font-size: 13px;
       color: var(--text-muted);
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .topnav a {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+    }
+    .topnav a:hover,
+    .topnav a.active {
+      color: var(--accent);
+    }
+    .topnav a.cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.55rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+    .topnav a.cta:hover {
+      color: #fff;
+      filter: brightness(1.08);
+    }
+    @media (max-width: 640px) {
+      .topnav { gap: 16px; }
+      .topnav a { font-size: 0.9rem; }
+      .topnav a.cta { padding: 0.45rem 1rem; }
     }
 
     .layout {
