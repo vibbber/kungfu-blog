@@ -10,7 +10,9 @@ import { articles, topics } from '../data/articles';
 
   <!-- Top bar -->
   <header class="topbar">
-    <a href="/" class="logo">Kung Fu <span>Family</span></a>
+    <a href="/browse" class="logo" aria-label="Kung Fu Family">
+      <img src="/images/logo.png" alt="Kung Fu Family" />
+    </a>
     <span class="article-count">{articles.length} articles</span>
   </header>
 
@@ -76,12 +78,14 @@ import { articles, topics } from '../data/articles';
     }
 
     .logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.4rem;
-      color: var(--accent);
-      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
     }
-    .logo span { color: var(--text); }
+    .logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
 
     .article-count {
       font-size: 13px;
