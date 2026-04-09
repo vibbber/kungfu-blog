@@ -220,9 +220,23 @@
   border-top: none !important;
   border-bottom: none !important;
   border-radius: var(--radius-lg) !important;
-  padding: 2rem !important;
   margin: 1.75rem 0 !important;
   box-shadow: var(--ambient) !important;
+}
+
+/* Padding fallback only — zero specificity so per-article padding wins.
+   Critical for cards using asymmetric padding to host absolutely-positioned
+   number badges (e.g., .step-card { padding: 20px 24px 20px 76px } with a
+   `.num` child positioned at left: 18px). */
+:where(.article-content [class*="-card"]),
+:where(.article-content [class*="-box"]),
+:where(.article-content .card),
+:where(.article-content .box),
+:where(.article-content .prose),
+:where(.article-content .section),
+:where(.article-content .scenario),
+:where(.article-content .situation) {
+  padding: 2rem;
 }
 
 /* Nested elements inside cards shouldn't inherit massive padding */
