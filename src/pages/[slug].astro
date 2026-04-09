@@ -86,20 +86,39 @@ for (const [from, to] of Object.entries(paletteRemap)) {
 }
 
 // Preserve deliberately dark/gradient card backgrounds from per-article CSS.
-// The design-system override uses [class*="-box"] / [class*="-card"] selectors
-// to force soft-white cards, which wins on specificity over a plain class
-// selector like .highlight-box. For backgrounds that are clearly a deliberate
-// visual feature (gradient, or primary/secondary palette fill), add !important
-// so the per-article intent survives. Also applies to paired `color` rules so
-// text stays readable on the dark surface.
-scopedStyles = scopedStyles.replace(
-  /(background(?:-color)?\s*:\s*[^;}]*(?:linear-gradient|#00685c|#2d8175|#ac3224|#fe6d59)[^;}]*)(;|(?=\}))/gi,
-  (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
-);
-scopedStyles = scopedStyles.replace(
-  /(color\s*:\s*(?:white|#fff|#ffffff|rgba\(\s*255[^)]*\))[^;}]*)(;|(?=\}))/gi,
-  (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
-);
+// The design-system override uses selectors like .article-content [class*="-box"]
+// (specificity 0,2,0) which beats a plain class selector like .highlight-box
+// (0,1,0) even when both have !important — specificity trumps source order.
+// For rule blocks that contain a deliberately dark background (gradient or
+// primary/secondary palette fill) or white text, we (a) add !important to the
+// color/background declarations, and (b) bump selector specificity by tripling
+// each class in the selector (.highlight-box → .highlight-box.highlight-box
+// .highlight-box, specificity 0,3,0), guaranteeing they beat the design-system
+// override for elements the author deliberately styled dark.
+scopedStyles = scopedStyles.replace(/([^{}]+)\{([^}]*)\}/g, (match, selector, body) => {
+  const hasDarkBg = /background(?:-color)?\s*:[^;}]*(?:linear-gradient|#00685c|#2d8175|#ac3224|#fe6d59)/i.test(body);
+  const hasWhiteColor = /color\s*:\s*(?:white|#fff|#ffffff|rgba\(\s*255)/i.test(body);
+  if (!hasDarkBg && !hasWhiteColor) return match;
+
+  let newBody = body;
+  if (hasDarkBg) {
+    newBody = newBody.replace(
+      /(background(?:-color)?\s*:\s*[^;}]*(?:linear-gradient|#00685c|#2d8175|#ac3224|#fe6d59)[^;}]*?)(\s*;|\s*(?=$))/gi,
+      (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
+    );
+  }
+  if (hasWhiteColor) {
+    newBody = newBody.replace(
+      /(color\s*:\s*(?:white|#fff|#ffffff|rgba\(\s*255[^)]*\))[^;}]*?)(\s*;|\s*(?=$))/gi,
+      (_m, decl, end) => (decl.includes('!important') ? decl + end : decl + ' !important' + end)
+    );
+  }
+
+  // Triple each class in the selector to bump specificity past 0,2,0.
+  const newSelector = selector.replace(/\.([a-zA-Z_][\w-]*)/g, '.$1.$1.$1');
+
+  return newSelector + '{' + newBody + '}';
+});
 
 // DESIGN.md forbids corner radii under 16px. Bump any small radius value in
 // the per-article CSS and inline styles up to 16px so nothing reads "clinical".
