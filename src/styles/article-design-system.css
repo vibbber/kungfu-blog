@@ -65,7 +65,7 @@
 .article-content h5,
 .article-content h6 {
   font-family: var(--serif) !important;
-  color: var(--on-surface) !important;
+  color: inherit !important;
   text-align: left !important;
   line-height: 1.2 !important;
   font-weight: 600 !important;
@@ -81,7 +81,7 @@
   font-size: clamp(1.5rem, 3vw, 1.875rem) !important;
   margin-top: 4rem !important;
   margin-bottom: 1rem !important;
-  color: var(--on-surface) !important;
+  color: inherit !important;
   border: none !important;
 }
 
@@ -93,7 +93,7 @@
 
 .article-content p {
   font-family: var(--sans) !important;
-  color: var(--on-surface) !important;
+  color: inherit !important;
   font-size: 17px !important;
   line-height: 1.75 !important;
   margin-bottom: 1.125rem !important;
@@ -108,7 +108,7 @@
 
 .article-content strong,
 .article-content b {
-  color: var(--on-surface) !important;
+  color: inherit !important;
   font-weight: 600 !important;
 }
 
@@ -126,7 +126,7 @@
 .article-content li {
   margin-bottom: 0.5rem !important;
   line-height: 1.7 !important;
-  color: var(--on-surface) !important;
+  color: inherit !important;
 }
 
 /* ---------- Header / hero ---------- */
@@ -223,7 +223,6 @@
   padding: 2rem !important;
   margin: 1.75rem 0 !important;
   box-shadow: var(--ambient) !important;
-  color: var(--on-surface) !important;
 }
 
 /* Nested elements inside cards shouldn't inherit massive padding */
