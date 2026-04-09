@@ -16,7 +16,7 @@ import { articles, topics } from '../data/articles';
     <nav class="topnav">
       <a href="/">Home</a>
       <a href="/browse" class="active">Blog</a>
-      <a href="https://app.kungfu.family" class="cta">App</a>
+      <a href="https://app.kungfu.family" class="cta">Try it free</a>
     </nav>
   </header>
 
@@ -113,15 +113,18 @@ import { articles, topics } from '../data/articles';
       color: var(--accent);
     }
     .topnav a.cta {
-      background: var(--accent);
+      background: #00685c;
       color: #fff;
-      padding: 0.55rem 1.25rem;
+      padding: 0.65rem 1.5rem;
       border-radius: 9999px;
       font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.2s ease, filter 0.2s ease;
     }
     .topnav a.cta:hover {
       color: #fff;
-      filter: brightness(1.08);
+      transform: scale(1.05);
+      filter: brightness(1.05);
     }
     @media (max-width: 640px) {
       .topnav { gap: 16px; }
