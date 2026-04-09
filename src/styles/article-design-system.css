@@ -432,10 +432,11 @@
   border-collapse: separate !important;
   border-spacing: 0 0.5rem !important;
   border: none !important;
-  border-radius: var(--radius-md) !important;
-  overflow: hidden !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
   margin: 2rem 0 !important;
   background: transparent !important;
+  box-shadow: none !important;
 }
 
 .article-content table th,
