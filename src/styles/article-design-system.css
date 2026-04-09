@@ -1,0 +1,567 @@
+/*
+ * Scientific Sanctuary — Article Design System
+ * Global override applied AFTER each article's embedded <style> block.
+ * Do not edit content/*.html to achieve visual unification; edit this file.
+ */
+
+.article-content {
+  /* Tokens */
+  --primary: #00685c;
+  --primary-container: #2d8175;
+  --primary-fixed-dim: #85d5c7;
+  --secondary: #ac3224;
+  --secondary-container: #fe6d59;
+  --on-primary: #ffffff;
+  --surface: #faf9f6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f3f0;
+  --surface-container: #efeeeb;
+  --surface-container-high: #e9e8e5;
+  --surface-container-highest: #e3e2df;
+  --on-surface: #1b1c1a;
+  --on-surface-variant: #43474e;
+  --outline-variant: #bec9c5;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-pill: 9999px;
+
+  --sans: 'Inter', system-ui, sans-serif;
+  --serif: 'Noto Serif', Georgia, serif;
+
+  --ambient: 0 0 40px rgba(27, 28, 26, 0.06);
+}
+
+/* ---------- Uniform article container ---------- */
+/* Per-article scoped styles set body{max-width,background,padding}; the */
+/* pipeline rewrites `body` to `.article-content`, so widths drift. Force a */
+/* single canvas — !important required to outrank equally-specific rules. */
+.article-content,
+.article-content .container,
+.article-content .blog-container {
+  max-width: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 2.5rem 1.5rem !important;
+  background: transparent !important;
+  color: var(--on-surface) !important;
+  font-family: var(--sans) !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+.article-content .container,
+.article-content .blog-container {
+  padding: 0 !important;
+}
+
+/* ---------- Typography ---------- */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-family: var(--serif) !important;
+  color: var(--on-surface) !important;
+  text-align: left !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+}
+
+.article-content h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem) !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.article-content h2 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem) !important;
+  margin-top: 4rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--on-surface) !important;
+  border: none !important;
+}
+
+.article-content h3 {
+  font-size: 1.25rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.article-content p {
+  font-family: var(--sans) !important;
+  color: var(--on-surface) !important;
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+  margin-bottom: 1.125rem !important;
+}
+
+.article-content a {
+  color: var(--primary) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-decoration-thickness: 1px !important;
+}
+
+.article-content strong,
+.article-content b {
+  color: var(--on-surface) !important;
+  font-weight: 600 !important;
+}
+
+.article-content em,
+.article-content i {
+  font-style: italic !important;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.7 !important;
+  color: var(--on-surface) !important;
+}
+
+/* ---------- Header / hero ---------- */
+.article-content header,
+.article-content .hero {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  padding: 0 0 2rem 0 !important;
+  margin-bottom: 2.5rem !important;
+  text-align: left !important;
+}
+
+.article-content .subtitle,
+.article-content .lead {
+  font-family: var(--sans) !important;
+  font-size: 1.125rem !important;
+  color: var(--on-surface-variant) !important;
+  max-width: none !important;
+  margin: 0 !important;
+  font-style: normal !important;
+  text-align: left !important;
+  line-height: 1.6 !important;
+}
+
+.article-content .lead {
+  margin-bottom: 2rem !important;
+  font-size: 1.2rem !important;
+}
+
+/* ---------- Topic badges, tags, pills ---------- */
+.article-content .topic-badge,
+.article-content .tag,
+.article-content .age-tag,
+.article-content .badge,
+.article-content .label {
+  display: inline-block !important;
+  background: var(--surface-container-high) !important;
+  color: var(--primary) !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: var(--radius-pill) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+/* ---------- Images ---------- */
+.article-content .blog-img,
+.article-content .hero-img,
+.article-content .inline-img,
+.article-content .section-img,
+.article-content .blog-image,
+.article-content img {
+  width: 100% !important;
+  border-radius: var(--radius-lg) !important;
+  margin: 2rem 0 !important;
+  box-shadow: var(--ambient) !important;
+  border: none !important;
+  display: block !important;
+}
+
+.article-content .img-caption,
+.article-content .blog-img-caption,
+.article-content .caption,
+.article-content figcaption {
+  font-family: var(--sans) !important;
+  font-size: 0.875rem !important;
+  color: var(--on-surface-variant) !important;
+  text-align: center !important;
+  margin-top: -1rem !important;
+  margin-bottom: 2rem !important;
+  font-style: italic !important;
+}
+
+/* ---------- Generic card / box pattern ---------- */
+.article-content [class*="-card"],
+.article-content [class*="-box"],
+.article-content .card,
+.article-content .box,
+.article-content .prose,
+.article-content .section,
+.article-content .scenario,
+.article-content .situation {
+  background: var(--surface-container-lowest) !important;
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 2rem !important;
+  margin: 1.75rem 0 !important;
+  box-shadow: var(--ambient) !important;
+  color: var(--on-surface) !important;
+}
+
+/* Nested elements inside cards shouldn't inherit massive padding */
+.article-content [class*="-card"] [class*="-card"],
+.article-content [class*="-box"] [class*="-box"] {
+  padding: 1.25rem !important;
+  border-radius: var(--radius-md) !important;
+  margin: 1rem 0 !important;
+  box-shadow: none !important;
+}
+
+/* ---------- TL;DR ---------- */
+.article-content .tldr-box {
+  background: var(--surface-container) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 2rem !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 2rem 0 !important;
+}
+
+.article-content .tldr-anchor {
+  color: var(--primary) !important;
+  font-family: var(--serif) !important;
+  font-weight: 600 !important;
+  font-size: 1.125rem !important;
+  margin-bottom: 0.75rem !important;
+  display: block !important;
+}
+
+.article-content .tldr-divider {
+  display: none !important;
+}
+
+.article-content .tldr-inside {
+  font-family: var(--sans) !important;
+  color: var(--on-surface) !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* ---------- Key insight / callout / mantra — golden-hour gradient ---------- */
+.article-content .key-insight,
+.article-content [class*="insight"],
+.article-content .callout,
+.article-content [class*="callout"],
+.article-content .mantra,
+.article-content [class*="closing"],
+.article-content .pull-quote {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 2.5rem !important;
+  margin: 2.5rem 0 !important;
+  text-align: left !important;
+  box-shadow: 0 0 60px rgba(0, 104, 92, 0.15) !important;
+}
+
+.article-content .key-insight *,
+.article-content [class*="insight"] *,
+.article-content .callout *,
+.article-content [class*="callout"] *,
+.article-content .mantra *,
+.article-content [class*="closing"] *,
+.article-content .pull-quote * {
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.article-content .key-insight .label,
+.article-content [class*="insight"] .label,
+.article-content .callout .label {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  padding: 0 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.article-content .key-insight p,
+.article-content [class*="insight"] p,
+.article-content .mantra p,
+.article-content [class*="closing"] p,
+.article-content .pull-quote p {
+  font-family: var(--serif) !important;
+  font-size: 1.375rem !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+/* ---------- Script / dialogue blocks ---------- */
+.article-content .script,
+.article-content .script-box,
+.article-content .script-card,
+.article-content [class*="script"] {
+  background: var(--surface-container-high) !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.5rem 1.75rem !important;
+  margin: 1.5rem 0 !important;
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  color: var(--on-surface) !important;
+  box-shadow: none !important;
+}
+
+.article-content .script p,
+.article-content .script-box p,
+.article-content .script-card p,
+.article-content [class*="script"] p {
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  color: var(--on-surface) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.article-content .script-label,
+.article-content .say-this,
+.article-content .kid-says,
+.article-content .parent,
+.article-content .kid {
+  font-family: var(--sans) !important;
+  font-style: normal !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+  display: block !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ---------- Step / numbered lists ---------- */
+.article-content .step,
+.article-content .step-card,
+.article-content .step-item,
+.article-content .step-row {
+  background: var(--surface-container-lowest) !important;
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 1.75rem !important;
+  margin: 1.25rem 0 !important;
+  box-shadow: var(--ambient) !important;
+}
+
+.article-content .step-num,
+.article-content .step-letter,
+.article-content .num,
+.article-content .letter {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-pill) !important;
+  font-family: var(--sans) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  margin-right: 0.75rem !important;
+  flex-shrink: 0 !important;
+  border: none !important;
+}
+
+.article-content .step-title {
+  font-family: var(--serif) !important;
+  font-size: 1.15rem !important;
+  color: var(--on-surface) !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- Tables ---------- */
+.article-content table,
+.article-content .compare-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 0.5rem !important;
+  border: none !important;
+  border-radius: var(--radius-md) !important;
+  overflow: hidden !important;
+  margin: 2rem 0 !important;
+  background: transparent !important;
+}
+
+.article-content table th,
+.article-content .compare-table th {
+  background: var(--surface-container) !important;
+  color: var(--on-surface) !important;
+  font-family: var(--sans) !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  padding: 1rem 1.25rem !important;
+  border: none !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+.article-content table td,
+.article-content .compare-table td {
+  background: var(--surface-container-lowest) !important;
+  color: var(--on-surface) !important;
+  padding: 1rem 1.25rem !important;
+  border: none !important;
+  font-family: var(--sans) !important;
+}
+
+.article-content table tr td:first-child,
+.article-content .compare-table tr td:first-child {
+  border-top-left-radius: var(--radius-md) !important;
+  border-bottom-left-radius: var(--radius-md) !important;
+}
+
+.article-content table tr td:last-child,
+.article-content .compare-table tr td:last-child {
+  border-top-right-radius: var(--radius-md) !important;
+  border-bottom-right-radius: var(--radius-md) !important;
+}
+
+/* Before/after cells */
+.article-content .cell-do,
+.article-content .after,
+.article-content .new,
+.article-content .say,
+.article-content .green {
+  background: rgba(0, 104, 92, 0.08) !important;
+  color: var(--on-surface) !important;
+}
+
+.article-content .cell-dont,
+.article-content .before,
+.article-content .old {
+  background: var(--surface-container-high) !important;
+  color: var(--on-surface-variant) !important;
+}
+
+/* ---------- Checklist ---------- */
+.article-content .checklist {
+  background: var(--surface-container-low) !important;
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 2rem !important;
+  margin: 2rem 0 !important;
+  list-style: none !important;
+  box-shadow: none !important;
+}
+
+.article-content .checklist li,
+.article-content .check-item {
+  list-style: none !important;
+  padding-left: 2rem !important;
+  position: relative !important;
+  margin-bottom: 0.9rem !important;
+  color: var(--on-surface) !important;
+}
+
+.article-content .checklist li::before,
+.article-content .check-item::before {
+  content: "✓" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+.article-content .check-box {
+  background: var(--surface-container-low) !important;
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 2rem !important;
+  margin: 2rem 0 !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Footer ---------- */
+.article-content footer {
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  padding: 3rem 0 0 0 !important;
+  margin-top: 4rem !important;
+  text-align: left !important;
+  color: var(--on-surface-variant) !important;
+  font-size: 0.9rem !important;
+}
+
+/* ---------- Neutralize hard lines everywhere ---------- */
+.article-content hr {
+  border: none !important;
+  height: 1px !important;
+  background: var(--outline-variant) !important;
+  opacity: 0.3 !important;
+  margin: 3rem 0 !important;
+}
+
+.article-content blockquote {
+  background: var(--surface-container-low) !important;
+  border: none !important;
+  border-left: none !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 1.75rem 2rem !important;
+  margin: 2rem 0 !important;
+  font-family: var(--serif) !important;
+  font-style: italic !important;
+  color: var(--on-surface) !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .article-content,
+  .article-content .container,
+  .article-content .blog-container {
+    padding: 1.5rem 1.125rem !important;
+  }
+
+  .article-content [class*="-card"],
+  .article-content [class*="-box"],
+  .article-content .key-insight,
+  .article-content .callout,
+  .article-content .mantra {
+    padding: 1.5rem !important;
+  }
+
+  .article-content h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .article-content h2 {
+    font-size: 1.4rem !important;
+    margin-top: 3rem !important;
+  }
+}

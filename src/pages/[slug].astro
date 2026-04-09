@@ -3,6 +3,7 @@ import Article from '../layouts/Article.astro';
 import { articles, type Article as ArticleType } from '../data/articles';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import articleDesignSystem from '../styles/article-design-system.css?raw';
 
 export async function getStaticPaths() {
   return articles.map(article => ({
@@ -31,7 +32,7 @@ const styleMatch = rawHtml.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
 const embeddedStyles = styleMatch ? styleMatch[1] : '';
 
 // Replace .png/.jpg/.jpeg with .webp in image paths
-const webpContent = bodyContent
+let webpContent = bodyContent
   .replace(/\.(png|jpg|jpeg)"/g, '.webp"')
   .replace(/\.(png|jpg|jpeg)'/g, ".webp'");
 
@@ -39,15 +40,65 @@ const webpContent = bodyContent
 // 1. Strip universal * reset (Base.astro already has one)
 // 2. Replace :root and body with scoped .article-content class
 // 3. Scope bare element selectors (h2, h3, footer, etc.) to .article-content
-const scopedStyles = embeddedStyles
+// 4. Remap legacy palette hex codes to Sanctuary tokens. 768+ bespoke class
+//    selectors use sage/coral accents that can't be reached via selector-based
+//    overrides, so we surgically rewrite the colors at injection time.
+const paletteRemap: Record<string, string> = {
+  // Sage greens → primary
+  '#5c8a5a': '#00685c',
+  '#5C8A5A': '#00685c',
+  '#4a7a4a': '#00685c',
+  '#4A7A4A': '#00685c',
+  '#edf7ed': '#efeeeb',
+  '#EDF7ED': '#efeeeb',
+  // Coral / alert reds → secondary-container / secondary
+  '#e8a598': '#fe6d59',
+  '#E8A598': '#fe6d59',
+  '#fef3f0': '#f4f3f0',
+  '#FEF3F0': '#f4f3f0',
+  '#c0392b': '#ac3224',
+  '#C0392B': '#ac3224',
+  // Legacy dark blue text → on-surface charcoal
+  '#1a1a2e': '#1b1c1a',
+  '#1A1A2E': '#1b1c1a',
+  // Legacy cream background → surface
+  '#faf6f0': '#faf9f6',
+  '#FAF6F0': '#faf9f6',
+  // Legacy warm neutrals → sanctuary neutrals
+  '#e0ddd6': '#e3e2df',
+  '#E0DDD6': '#e3e2df',
+  '#bdbdb5': '#bec9c5',
+  '#BDBDB5': '#bec9c5',
+  '#eeeae4': '#efeeeb',
+  '#EEEAE4': '#efeeeb',
+};
+
+let scopedStyles = embeddedStyles
   .replace(/\*,?\s*\*::before,?\s*\*::after\s*\{[^}]*\}/g, '')
   .replace(/:root\s*\{/g, '.article-content {')
   .replace(/^\s*body\s*\{/gm, '.article-content {')
   .replace(/^(\s*)(h[1-6]|footer|header|nav|main|section|article|aside|p|ul|ol|li|table|blockquote|figure|figcaption|a)\s*\{/gm, '$1.article-content $2 {');
+
+for (const [from, to] of Object.entries(paletteRemap)) {
+  scopedStyles = scopedStyles.split(from).join(to);
+  // Also remap legacy hexes in inline style="" attributes on body elements.
+  webpContent = webpContent.split(from).join(to);
+}
+
+// DESIGN.md forbids corner radii under 16px. Bump any small radius value in
+// the per-article CSS and inline styles up to 16px so nothing reads "clinical".
+const bumpRadius = (css: string) =>
+  css.replace(/border-radius:\s*([0-9]+(?:\.[0-9]+)?)px/gi, (match, n) => {
+    const v = parseFloat(n);
+    return v > 0 && v < 16 ? 'border-radius: 16px' : match;
+  });
+scopedStyles = bumpRadius(scopedStyles);
+webpContent = bumpRadius(webpContent);
 ---
 
 <Article article={article}>
   {scopedStyles && <Fragment set:html={`<style>${scopedStyles}</style>`} />}
+  <Fragment set:html={`<style>${articleDesignSystem}</style>`} />
   <div class="article-content">
     <Fragment set:html={webpContent} />
   </div>
