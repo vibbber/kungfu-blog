@@ -5,7 +5,7 @@ title: Sub-Processors
 
 # Sub-Processors
 
-**Last Updated:** [LAUNCH DATE]
+**Last Updated:** April 1, 2026
 
 This page lists the third-party service providers ("sub-processors") that process data on behalf of Vibbber Tech FCZO in connection with the Kung Fu Family platform.
 

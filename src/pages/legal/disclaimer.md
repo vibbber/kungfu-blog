@@ -5,7 +5,7 @@ title: Medical & Parenting Disclaimer
 
 # Medical & Parenting Disclaimer
 
-**Effective Date:** [LAUNCH DATE]
+**Effective Date:** April 1, 2026
 
 ---
 

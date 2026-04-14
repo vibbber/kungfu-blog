@@ -5,8 +5,8 @@ title: Cookie Policy
 
 # Cookie Policy
 
-**Effective Date:** [LAUNCH DATE]
-**Last Updated:** [LAUNCH DATE]
+**Effective Date:** April 1, 2026
+**Last Updated:** April 1, 2026
 
 This Cookie Policy explains how Vibbber Tech FCZO ("Vibbber Tech," "we," "us," or "our") uses cookies and similar technologies on the Kung Fu Family platform, including app.kungfu.family and kungfu.family (the "Service").
 

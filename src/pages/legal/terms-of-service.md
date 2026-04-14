@@ -5,8 +5,8 @@ title: Terms of Service
 
 # Terms of Service
 
-**Effective Date:** [LAUNCH DATE]
-**Last Updated:** [LAUNCH DATE]
+**Effective Date:** April 1, 2026
+**Last Updated:** April 1, 2026
 
 These Terms of Service ("Terms") govern your use of the Kung Fu Family platform, including the application at app.kungfu.family and the website at kungfu.family (collectively, the "Service"), operated by Vibbber Tech FCZO ("Vibbber Tech," "we," "us," or "our").
 

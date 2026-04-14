@@ -5,8 +5,8 @@ title: Privacy Policy
 
 # Privacy Policy
 
-**Effective Date:** [LAUNCH DATE]
-**Last Updated:** [LAUNCH DATE]
+**Effective Date:** April 1, 2026
+**Last Updated:** April 1, 2026
 
 Vibbber Tech FCZO ("Vibbber Tech," "we," "us," or "our") operates the Kung Fu Family platform, including the application at app.kungfu.family and the website at kungfu.family (collectively, the "Service"). This Privacy Policy explains how we collect, use, store, share, and protect your information when you use our Service.
 
