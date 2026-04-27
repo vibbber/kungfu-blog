@@ -11,13 +11,26 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png"/>
 <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"/>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26GSN41VYC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- Analytics: only on production hostname (skips localhost + Netlify previews) -->
+<script is:inline>
+  if (location.hostname === 'kungfu.family') {
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-26GSN41VYC';
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-26GSN41VYC');
 
-  gtag('config', 'G-26GSN41VYC');
+    var ez = document.createElement('script');
+    ez.defer = true;
+    ez.src = 'https://api.ezy.ai/ezy-connect/v4/connect.min.js?site=kungfu.family&v=4.2.0&token=aa662a700012c5be41298337b61c6241076998d0f14d1fce50e986631ba8d844&sig=cyH4ht_LlF2VnnZSqhFsjw1n6IOtdu6qT6WDuDmVerM';
+    ez.dataset.api = 'https://api.ezy.ai';
+    ez.dataset.site = 'kungfu.family';
+    ez.dataset.token = 'aa662a700012c5be41298337b61c6241076998d0f14d1fce50e986631ba8d844';
+    document.head.appendChild(ez);
+  }
 </script>
 <script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -131,14 +144,17 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
 <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-primary-fixed/20 -z-10 md:rounded-bl-[10rem]"></div>
 <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-fixed/30 -z-10 rounded-full blur-[100px]"></div>
 <div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-7">
+<div class="lg:col-span-6">
 <span class="inline-block px-4 py-2 bg-black/5 backdrop-blur-sm text-on-surface-variant text-sm font-semibold rounded-full mb-8 uppercase tracking-widest font-label">Your personalized parenting companion</span>
-<h1 class="font-headline text-7xl lg:text-8xl text-on-surface leading-[1.1] mb-10">
+<h1 class="font-headline text-6xl lg:text-7xl text-on-surface leading-[1.1] mb-10">
                 Parenting that feels like <span class="italic text-primary">magic.</span>
 </h1>
 <p class="text-xl lg:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12 font-light">
                 Mornings that work. Tantrums that melt. The quiet thrill of knowing what to do.
             </p>
+<div class="lg:hidden mb-12 relative z-10 rounded-xl overflow-hidden shadow-2xl">
+<video class="w-full aspect-video object-cover" src="/video/hero.mp4" poster="/video/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" controls></video>
+</div>
 <div class="flex flex-col sm:flex-row gap-6">
 <a href="https://app.kungfu.family" class="bg-primary text-on-primary px-10 py-5 rounded-xl text-lg font-semibold hover:shadow-xl transition-all font-label inline-block text-center">Try it free</a>
 <div class="flex items-center gap-3 text-on-surface-variant font-medium text-lg font-label">
@@ -146,13 +162,12 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
                 </div>
 </div>
 </div>
-<div class="lg:col-span-5 relative">
-<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-<img class="w-full aspect-[4/5] object-cover" data-alt="tender moment between parent and toddler in a sun-drenched minimalist nursery with warm golden hour lighting and soft textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNsaKsdDBtwfGkj9PJav1fg6FQAcEzezo9mDzYJ4h4BnqRr7uRZZOTScWly6A7GM11dRvi_pBH-l1pVOmAQZBmV1PybXDqG0COREjZDqxJeOOZVwp0bUPkiSsqz6pP-eAY0u1iodJdHeV1L0EWxhHM7VZp00TUlqjkzTfcKJlA_64Oaj3RtsotdCVV5goLoORpinpJ-JF-Ivk-5E9-69FIW6cXsB9xM-4CVG2o4K7fogH605VjL8nWpdW6QS6V6YbCqxG5ZGV9A"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-primary-fixed/40 to-transparent"></div>
+<div class="hidden lg:block lg:col-span-6 relative">
+<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl rotate-2">
+<video class="w-full aspect-video object-cover" src="/video/hero.mp4" poster="/video/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" controls></video>
 </div>
 <!-- Insight Orb Floating -->
-<div class="absolute -bottom-12 -left-12 z-20 glass-card p-8 rounded-xl shadow-2xl border border-white/30 max-w-[240px]">
+<div class="hidden absolute -bottom-12 -left-12 z-20 glass-card p-8 rounded-xl shadow-2xl border border-white/30 max-w-[240px]">
 <div class="flex items-center gap-4 mb-4">
 <span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">lightbulb</span>
 <span class="font-label font-bold text-sm uppercase tracking-tighter">Your Match</span>
